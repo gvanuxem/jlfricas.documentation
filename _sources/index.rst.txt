@@ -1,21 +1,21 @@
 |PACKAGE_NAME| |PACKAGE_VERSION|
 ================================
 
-|FriCAS| is an advanced computer algebra system.
+|FriCAS| is an advanced computer algebra system. This work in progress repository
+include a small interface to `Julia <https://julialang.org/>`_.
 
 It is freely available under a
 `modified BSD license
-<https://github.com/fricas/fricas/blob/master/LICENSE.txt>`_.
+<https://github.com/gvanuxem/jlfricas/blob/master/LICENSE.txt>`_.
 
-|FriCAS| is a fork (2007) of the `Axiom <http://axiom-developer.org/>`_
+`FriCAS <https://fricas.org/>`_ is a fork (2007) of the `Axiom <http://axiom-developer.org/>`_
 computer algebra system.
 
 * |git repository|
 * |home page|
-* |mailing list|
 * Bug reports: |PACKAGE_BUGREPORT| or
-  `Issues at GitHub <https://github.com/fricas/fricas/issues>`_
-* |PACKAGE_BOOK| (official version)
+  `Official FriCAS issues at GitHub <https://github.com/fricas/fricas/issues>`_
+* `FriCAS Book <https://fricas.github.io/book.pdf>`_ (official version)
 
 .. toctree::
    :maxdepth: 1
