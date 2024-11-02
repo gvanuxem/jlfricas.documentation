@@ -1,0 +1,112 @@
+.. index:: JuliaStringUtilities
+
+.. _l4a756c6961537472696e675574696c6974696573:
+
+JuliaStringUtilities
+====================
+
+:viewcode:`jutils.spad line 294 <jutils.spad#L294>` :editcode:`[edit on github] <jutils.spad#L294>`
+
+
+This package provides Julia facilities that operate on strings.
+
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c4c61746578:
+
+.. index::
+   pair: JuliaStringUtilities; jlLatex
+
+:spadfun:`jlLatex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlLatex(str)``\  returns the String corresponding to a Julia LaTeX expression, that is, "L"str"" if your Julia support it (LaTeXStrings package). Convenience function.
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c5265676578:
+
+.. index::
+   pair: JuliaStringUtilities; jlRegex
+
+:spadfun:`jlRegex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlRegex(str)``\  returns the String corresponding to a Julia regular expression, that is, "r"str"". Convenience function.
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c52656765784d617463683f:
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch?
+
+:spadfun:`jlRegexMatch?`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  jlRegexMatch(regex,\ ``s``\ ) checks if the regular expression matches in \ ``s``\ .
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c52656765784d61746368:
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch
+
+:spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`AssociationList <l4173736f63696174696f6e4c697374>`\ (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) 
+  \ ``jlRegexMatch(regex, s)``\  returns the matched regular expressions in \ ``s``\ .
+
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch
+
+:spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ ``jlRegexMatch(regex, s)``\  returns the matched regular expressions in \ ``s``\ .
+
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch
+
+:spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlRegexMatch(regex, s)``\  returns the matched regular expression in \ ``s``\ .
+
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch
+
+:spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`AssociationList <l4173736f63696174696f6e4c697374>`\ (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) 
+  \ ``jlRegexMatch(regex, s, i)``\  returns the matched regular expressions in \ ``s``\ , starting at index \ ``i``\ .
+
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch
+
+:spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ ``jlRegexMatch(regex, s, i)``\  returns the matched regular expressions in \ ``s``\ , starting at index \ ``i``\ .
+
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexMatch
+
+:spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlRegexMatch(regex, s, i)``\  returns the matched regular expression in \ ``s``\ , starting at index \ ``i``\ .
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c52656765785265706c616365:
+
+.. index::
+   pair: JuliaStringUtilities; jlRegexReplace
+
+:spadfun:`jlRegexReplace`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlRegexReplace(regex,subst,str)``\  will replace captured regular expression in \ ``str``\  with \ ``subst``\ . More information in String documentation of Julia. For example: jlRegexReplace(jlRegex(\ ``"!"``\ ), jlSubstitute(" you"), "hey!")
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c53706c6974:
+
+.. index::
+   pair: JuliaStringUtilities; jlSplit
+
+:spadfun:`jlSplit`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ ``jlSplit(str, delims)``\  split \ ``str``\  with delimiter(\ ``s``\ ) delims (a string or a regular expression). Equivalent to jlSplit(\ ``str``\ , delims, 0).
+
+
+.. index::
+   pair: JuliaStringUtilities; jlSplit
+
+:spadfun:`jlSplit`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ ``jlSplit(str, delims, n)``\  split \ ``str``\  with delimiter(\ ``s``\ ) \ ``delims``\  (a string or a regular expression). Return a list of size \ ``n``\ . Parse entirely \ ``str``\  if \ ``n``\  = 0.
+
+.. _l4a756c6961537472696e675574696c6974696573-6a6c53756273746974757465:
+
+.. index::
+   pair: JuliaStringUtilities; jlSubstitute
+
+:spadfun:`jlSubstitute`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlSubstitute(str)``\  returns the String corresponding to a Julia subtitute expression, that is, "s"str""". Convenience function.
+
+

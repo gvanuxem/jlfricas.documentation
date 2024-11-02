@@ -1,0 +1,838 @@
+.. index:: JuliaFloat64Matrix
+
+.. _l4a756c6961466c6f617436344d6174726978:
+
+JuliaFloat64Matrix
+==================
+
+:viewcode:`jarray.spad line 274 <jarray.spad#L274>` :editcode:`[edit on github] <jarray.spad#L274>`
+
+
+This domain provides a fast \ ``JuliaFloat64``\  matrix type with no bound checking on elt\ ``'s``\ . Minimum index is 1.
+
+
+.. _l4a756c6961466c6f617436344d6174726978-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-2a:
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (%, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (%, \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (\ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , %) -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-2b:
+
+\ :ref:`+ <l4d617472697843617465676f7279-2b>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-2d:
+
+\ :ref:`- <l4d617472697843617465676f7279-2d>`\ \: % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`- <l4d617472697843617465676f7279-2d>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-2f:
+
+\ :ref:`/ <l4d617472697843617465676f7279-2f>`\ \: (%, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-5e:
+
+\ :ref:`^ <l4d617472697843617465676f7279-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`^ <l4d617472697843617465676f7279-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-616e746973796d6d65747269633f:
+
+\ :ref:`antisymmetric? <l4d617472697843617465676f7279-616e746973796d6d65747269633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-616e793f:
+
+\ :ref:`any? <l486f6d6f67656e656f7573416767726567617465-616e793f>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-617272617932:
+
+\ :ref:`array2 <l54776f44696d656e73696f6e616c417272617943617465676f7279-617272617932>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-626c6f636b436f6e636174:
+
+\ :ref:`blockConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b436f6e636174>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-626c6f636b53706c6974:
+
+\ :ref:`blockSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b53706c6974>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`blockSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b53706c6974>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-636f65726365:
+
+.. index::
+   pair: JuliaFloat64Matrix; coerce
+
+:spadfun:`coerce`\: % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
+  \ ``coerce(m)``\  coerces a copy of \ ``m``\  to a Matrix(DoubleFloat).
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+\ :ref:`coerce <l4d617472697843617465676f7279-636f65726365>`\ \: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-636f6c536c696365:
+
+\ :ref:`colSlice <l54776f44696d656e73696f6e616c417272617943617465676f7279-636f6c536c696365>`\ \: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-636f6c756d6e:
+
+\ :ref:`column <l54776f44696d656e73696f6e616c417272617943617465676f7279-636f6c756d6e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-636f6c756d6e5370616365:
+
+\ :ref:`columnSpace <l4d617472697843617465676f7279-636f6c756d6e5370616365>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-636f707921:
+
+.. index::
+   pair: JuliaFloat64Matrix; copy!
+
+:spadfun:`copy!`\: (%, %) -> % 
+  \ ``copy!(b,a)``\  copies efficiently a to \ ``b``\ .No check are done on arrays dimensions.
+
+.. _l4a756c6961466c6f617436344d6174726978-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-636f756e74:
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-64657465726d696e616e74:
+
+\ :ref:`determinant <l4d617472697843617465676f7279-64657465726d696e616e74>`\ \: % -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-646961676f6e616c3f:
+
+\ :ref:`diagonal? <l4d617472697843617465676f7279-646961676f6e616c3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-646961676f6e616c4d6174726978:
+
+.. index::
+   pair: JuliaFloat64Matrix; diagonalMatrix
+
+:spadfun:`diagonalMatrix`\: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> % 
+  \ ``diagonalMatrix(v)``\  returns a diagonal matrix with elements of \ ``v``\ .
+
+
+\ :ref:`diagonalMatrix <l4d617472697843617465676f7279-646961676f6e616c4d6174726978>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`diagonalMatrix <l4d617472697843617465676f7279-646961676f6e616c4d6174726978>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-656c74:
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6576616c:
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+  from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ )
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+  from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-65766572793f:
+
+\ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-657871756f:
+
+\ :ref:`exquo <l4d617472697843617465676f7279-657871756f>`\ \: (%, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> Union(%, failed) 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-66696c6c21:
+
+\ :ref:`fill! <l54776f44696d656e73696f6e616c417272617943617465676f7279-66696c6c21>`\ \: (%, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-68617368:
+
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6861736855706461746521:
+
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-686f72697a436f6e636174:
+
+\ :ref:`horizConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a436f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`horizConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a436f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-686f72697a53706c6974:
+
+\ :ref:`horizSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a53706c6974>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`horizSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a53706c6974>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6964656e74697479:
+
+.. index::
+   pair: JuliaFloat64Matrix; identity
+
+:spadfun:`identity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ ``identity(n)``\  returns a \ ``n``\  by \ ``n``\  identity matrix.\ ``S``\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-696e7665727365:
+
+\ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6a6c4170706c79:
+
+.. index::
+   pair: JuliaFloat64Matrix; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``jlApply(func, x)``\  apply \ ``func``\  to argument \ ``x``\ .
+
+
+.. index::
+   pair: JuliaFloat64Matrix; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  \ ``jlApply(func, x)``\  apply \ ``func``\  to argument \ ``x``\ .
+
+
+.. index::
+   pair: JuliaFloat64Matrix; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApply(func, x)``\  apply \ ``func``\  to argument \ ``x``\ .
+
+
+.. index::
+   pair: JuliaFloat64Matrix; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  \ ``jlApply(func, x, val)``\  apply \ ``func``\  to arguments \ ``x``\  and val.
+
+.. _l4a756c6961466c6f617436344d6174726978-6a6c417070726f783f:
+
+.. index::
+   pair: JuliaFloat64Matrix; jlApprox?
+
+:spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.
+
+.. _l4a756c6961466c6f617436344d6174726978-6a6c446973706c6179:
+
+.. index::
+   pair: JuliaFloat64Matrix; jlDisplay
+
+:spadfun:`jlDisplay`\: % -> \ :ref:`Void <l566f6964>`\  
+  jldisplay(\ ``m``\ ) pretty prints \ ``m``\  (\ ``à``\  la Julia).
+
+.. _l4a756c6961466c6f617436344d6174726978-6a6c566563746f72:
+
+.. index::
+   pair: JuliaFloat64Matrix; jlVector
+
+:spadfun:`jlVector`\: % -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  \ ``jlVector(m)``\  returns reference to the internal vector representation.
+
+.. _l4a756c6961466c6f617436344d6174726978-6a756c69614d5072696e74:
+
+.. index::
+   pair: JuliaFloat64Matrix; juliaMPrint
+
+:spadfun:`juliaMPrint`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``juliaMPrint(b)``\  defines whether or not FriCAS uses the printing version of Julia for matrices instead of its OutputForm version. Returns previous value. By default it is the Julia version.
+
+.. _l4a756c6961466c6f617436344d6174726978-6b726f6e65636b65725f70726f6431:
+
+\ :ref:`kronecker_prod1 <l4d617472697843617465676f7279-6b726f6e65636b65725f70726f6431>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , Union(\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , one)) -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6b726f6e65636b657250726f64756374:
+
+\ :ref:`kroneckerProduct <l4d617472697843617465676f7279-6b726f6e65636b657250726f64756374>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`kroneckerProduct <l4d617472697843617465676f7279-6b726f6e65636b657250726f64756374>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6b726f6e65636b657253756d:
+
+\ :ref:`kroneckerSum <l4d617472697843617465676f7279-6b726f6e65636b657253756d>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`kroneckerSum <l4d617472697843617465676f7279-6b726f6e65636b657253756d>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6c6973744f664c69737473:
+
+\ :ref:`listOfLists <l54776f44696d656e73696f6e616c417272617943617465676f7279-6c6973744f664c69737473>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d617021:
+
+\ :ref:`map! <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d617021>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d6170:
+
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: ((\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: ((\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %, %, \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d6174726978:
+
+\ :ref:`matrix <l4d617472697843617465676f7279-6d6174726978>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`matrix <l4d617472697843617465676f7279-6d6174726978>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d6178:
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: ((\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6d6178436f6c496e646578:
+
+\ :ref:`maxColIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6178436f6c496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d6178526f77496e646578:
+
+\ :ref:`maxRowIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6178526f77496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d656d6265723f:
+
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6d656d62657273:
+
+\ :ref:`members <l486f6d6f67656e656f7573416767726567617465-6d656d62657273>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6d696e:
+
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6d696e436f6c496e646578:
+
+\ :ref:`minColIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d696e436f6c496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d696e6f72646574:
+
+\ :ref:`minordet <l4d617472697843617465676f7279-6d696e6f72646574>`\ \: % -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d696e526f77496e646578:
+
+\ :ref:`minRowIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d696e526f77496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-6e636f6c73:
+
+\ :ref:`ncols <l54776f44696d656e73696f6e616c417272617943617465676f7279-6e636f6c73>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6e6577:
+
+\ :ref:`new <l54776f44696d656e73696f6e616c417272617943617465676f7279-6e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6e72616e64:
+
+.. index::
+   pair: JuliaFloat64Matrix; nrand
+
+:spadfun:`nrand`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``nrand(m,n)``\  returns a normally distributed Julia matrix of size (\ ``m``\ ,\ ``n``\ ) with \ ``mean=0``\  and standard \ ``deviation=1``\ .
+
+.. _l4a756c6961466c6f617436344d6174726978-6e726f7773:
+
+\ :ref:`nrows <l54776f44696d656e73696f6e616c417272617943617465676f7279-6e726f7773>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6e756c6c697479:
+
+\ :ref:`nullity <l4d617472697843617465676f7279-6e756c6c697479>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-6e756c6c5370616365:
+
+\ :ref:`nullSpace <l4d617472697843617465676f7279-6e756c6c5370616365>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7061727473:
+
+\ :ref:`parts <l54776f44696d656e73696f6e616c417272617943617465676f7279-7061727473>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-506661666669616e:
+
+\ :ref:`Pfaffian <l4d617472697843617465676f7279-506661666669616e>`\ \: % -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-706f736974697665446566696e6974653f:
+
+.. index::
+   pair: JuliaFloat64Matrix; positiveDefinite?
+
+:spadfun:`positiveDefinite?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``positiveDefinite?(m)``\  tests wether or not \ ``m``\  is positive definite. Use a Cholesky factorisation.
+
+.. _l4a756c6961466c6f617436344d6174726978-706f736974697665506f776572:
+
+\ :ref:`positivePower <l4d617472697843617465676f7279-706f736974697665506f776572>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-71656c74:
+
+\ :ref:`qelt <l54776f44696d656e73696f6e616c417272617943617465676f7279-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-716e6577:
+
+\ :ref:`qnew <l54776f44696d656e73696f6e616c417272617943617465676f7279-716e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-71736574656c7421:
+
+\ :ref:`qsetelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-72616e6b:
+
+\ :ref:`rank <l4d617472697843617465676f7279-72616e6b>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-726f77:
+
+\ :ref:`row <l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-726f77456368656c6f6e:
+
+\ :ref:`rowEchelon <l4d617472697843617465676f7279-726f77456368656c6f6e>`\ \: % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-726f77536c696365:
+
+\ :ref:`rowSlice <l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77536c696365>`\ \: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-7363616c61724d6174726978:
+
+\ :ref:`scalarMatrix <l4d617472697843617465676f7279-7363616c61724d6174726978>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-736574436f6c756d6e21:
+
+\ :ref:`setColumn! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574436f6c756d6e21>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-736574656c7421:
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-736574526f7721:
+
+\ :ref:`setRow! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574526f7721>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7365747375624d617472697821:
+
+\ :ref:`setsubMatrix! <l54776f44696d656e73696f6e616c417272617943617465676f7279-7365747375624d617472697821>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-736b657750617274:
+
+.. index::
+   pair: JuliaFloat64Matrix; skewPart
+
+:spadfun:`skewPart`\: % -> % 
+  \ ``skewPart(m)``\  returns the skew part of \ ``m``\  (\ ``m``\  - \ ``m'``\ )\ ``/2``\ .
+
+.. _l4a756c6961466c6f617436344d6174726978-736d616c6c65723f:
+
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+.. _l4a756c6961466c6f617436344d6174726978-7371756172653f:
+
+\ :ref:`square? <l4d617472697843617465676f7279-7371756172653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-737175617265546f70:
+
+\ :ref:`squareTop <l54776f44696d656e73696f6e616c417272617943617465676f7279-737175617265546f70>`\ \: % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7375624d6174726978:
+
+\ :ref:`subMatrix <l54776f44696d656e73696f6e616c417272617943617465676f7279-7375624d6174726978>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-73776170436f6c756d6e7321:
+
+\ :ref:`swapColumns! <l54776f44696d656e73696f6e616c417272617943617465676f7279-73776170436f6c756d6e7321>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-73776170526f777321:
+
+\ :ref:`swapRows! <l54776f44696d656e73696f6e616c417272617943617465676f7279-73776170526f777321>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-73796d6d65747269633f:
+
+\ :ref:`symmetric? <l4d617472697843617465676f7279-73796d6d65747269633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-73796d6d65747269635061727421:
+
+.. index::
+   pair: JuliaFloat64Matrix; symmetricPart!
+
+:spadfun:`symmetricPart!`\: % -> % 
+  \ ``symmetricPart!(m)``\  overwites \ ``m``\  with the symmetric part of \ ``m``\  (\ ``m``\  + \ ``m'``\ )\ ``/2``\  to save memory space and returns \ ``m``\ .
+
+.. _l4a756c6961466c6f617436344d6174726978-73796d6d657472696350617274:
+
+.. index::
+   pair: JuliaFloat64Matrix; symmetricPart
+
+:spadfun:`symmetricPart`\: % -> % 
+  \ ``symmetricPart(m)``\  returns the symmetric part of \ ``m``\  (\ ``m``\  + \ ``m'``\ )\ ``/2``\ .
+
+.. _l4a756c6961466c6f617436344d6174726978-7472616e73706f736521:
+
+.. index::
+   pair: JuliaFloat64Matrix; transpose!
+
+:spadfun:`transpose!`\: (%, %) -> % 
+  \ ``transpose!(b, a)``\  stores transposed a in \ ``b``\ .
+
+.. _l4a756c6961466c6f617436344d6174726978-7472616e73706f7365:
+
+\ :ref:`transpose <l54776f44696d656e73696f6e616c417272617943617465676f7279-7472616e73706f7365>`\ \: % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`transpose <l4d617472697843617465676f7279-7472616e73706f7365>`\ \: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7572616e643031:
+
+.. index::
+   pair: JuliaFloat64Matrix; urand01
+
+:spadfun:`urand01`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``urand01(m,n)``\  returns a uniform(0\$NNI..1) Julia matrix of size (\ ``m``\ ,\ ``n``\ ).
+
+.. _l4a756c6961466c6f617436344d6174726978-7572616e64:
+
+.. index::
+   pair: JuliaFloat64Matrix; urand
+
+:spadfun:`urand`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> % 
+  \ ``urand(m,n,x)``\  returns a uniform(0\$NNI..\ ``x``\ ) Julia matrix of size (\ ``m``\ ,\ ``n``\ ).
+
+.. _l4a756c6961466c6f617436344d6174726978-76657274436f6e636174:
+
+\ :ref:`vertConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-76657274436f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`vertConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-76657274436f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7665727453706c6974:
+
+\ :ref:`vertSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-7665727453706c6974>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`vertSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-7665727453706c6974>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7a65726f3f:
+
+\ :ref:`zero? <l4d617472697843617465676f7279-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+.. _l4a756c6961466c6f617436344d6174726978-7a65726f:
+
+\ :ref:`zero <l4d617472697843617465676f7279-7a65726f>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ )
+
+
+\ :ref:`Aggregate <l416767726567617465>`\  
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`Comparable <l436f6d70617261626c65>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`Hashable <l4861736861626c65>`\  if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
+
+\ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) if \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ 
+
+\ :ref:`JuliaMatrixCategory <l4a756c69614d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) 
+
+\ :ref:`JuliaType <l4a756c696154797065>`\  
+
+\ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) 
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
+
+\ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) 
+

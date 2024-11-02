@@ -1,0 +1,1334 @@
+.. index:: JuliaWSMatrix
+
+.. _l4a756c696157534d6174726978:
+
+JuliaWSMatrix E
+===============
+
+:viewcode:`jwsagg.spad line 352 <jwsagg.spad#L352>` :editcode:`[edit on github] <jwsagg.spad#L352>`
+
+* E: \ :ref:`JuliaWSRing <l4a756c6961575352696e67>`\ 
+
+
+Julia Wolfram Symbolic matrices using Wolfram Symbolic Transport Protocol.
+
+
+.. _l4a756c696157534d6174726978-23:
+
+\ :ref:`# <l4a756c69615753416767726567617465-23>`\ \: % -> \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\  
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-2a:
+
+.. index::
+   pair: JuliaWSMatrix; *
+
+:spadfun:`\*`\: (%, %) -> % 
+  \ ``a * b``\  is the matrix multiplication, not the element-wise multiplication. \ ``WS``\  error if dimensions are incompatible.
+
+
+.. index::
+   pair: JuliaWSMatrix; *
+
+:spadfun:`\*`\: (%, E) -> % 
+  \ ``x * r``\  is the right scalar multiple of the scalar \ ``r``\  and the matrix \ ``x``\ .
+
+
+.. index::
+   pair: JuliaWSMatrix; *
+
+:spadfun:`\*`\: (%, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  \ ``x * c``\  is the product of the matrix \ ``x``\  and the column vector \ ``c``\ . Error: if the dimensions are incompatible.
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (%, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+.. index::
+   pair: JuliaWSMatrix; *
+
+:spadfun:`\*`\: (E, %) -> % 
+  \ ``r*x``\  is the left scalar multiple of the scalar \ ``r``\  and the matrix \ ``x``\ .
+
+
+.. index::
+   pair: JuliaWSMatrix; *
+
+:spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  \ ``n*a``\  scale the matrix a by \ ``n``\ .
+
+
+.. index::
+   pair: JuliaWSMatrix; *
+
+:spadfun:`\*`\: (\ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, %) -> % 
+  \ ``r * x``\  is the product of the row vector \ ``r``\  and the matrix \ ``x``\ . Error: if the dimensions are incompatible.
+
+
+\ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (\ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, %) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-2b:
+
+.. index::
+   pair: JuliaWSMatrix; +
+
+:spadfun:`+`\: (%, %) -> % 
+  \ ``a + b``\  is the matrix addition. \ ``WS``\  error if dimensions are incompatible.
+
+.. _l4a756c696157534d6174726978-2d:
+
+.. index::
+   pair: JuliaWSMatrix; -
+
+:spadfun:`-`\: % -> % 
+  \ ``-a``\  negates each elements of the matrix a.
+
+
+.. index::
+   pair: JuliaWSMatrix; -
+
+:spadfun:`-`\: (%, %) -> % 
+  \ ``a - b``\  is the matrix substraction. \ ``WS``\  error if dimensions are incompatible.
+
+.. _l4a756c696157534d6174726978-2f:
+
+\ :ref:`/ <l4d617472697843617465676f7279-2f>`\ \: (%, E) -> % if E has \ :ref:`Field <l4669656c64>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c696157534d6174726978-5e:
+
+\ :ref:`^ <l4d617472697843617465676f7279-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if E has \ :ref:`Field <l4669656c64>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+.. index::
+   pair: JuliaWSMatrix; ^
+
+:spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``a^n``\  is the matrix power by the non negative integer \ ``n``\ .
+
+
+.. index::
+   pair: JuliaWSMatrix; ^
+
+:spadfun:`^`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  \ ``a^n``\  is the matrix power by the positive integer \ ``n``\ .
+
+.. _l4a756c696157534d6174726978-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c696157534d6174726978-616363756d756c617465:
+
+\ :ref:`accumulate <l4a756c69615753416767726567617465-616363756d756c617465>`\ \: % -> % if \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E has \ :ref:`JuliaWSNumber <l4a756c696157534e756d626572>`\ 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-61646a6f696e74:
+
+.. index::
+   pair: JuliaWSMatrix; adjoint
+
+:spadfun:`adjoint`\: % -> % 
+  \ ``adjoint(m)``\  returns the adjoint of \ ``m``\ , i.e. the conjugate transposition of \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-61646a7567617465:
+
+.. index::
+   pair: JuliaWSMatrix; adjugate
+
+:spadfun:`adjugate`\: % -> % 
+  \ ``adjugate(m)``\  returns the adjugate of square \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-616e746973796d6d65747269633f:
+
+.. index::
+   pair: JuliaWSMatrix; antisymmetric?
+
+:spadfun:`antisymmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``antisymmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and antisymmetric (i.e. \ ``m[i, j] = -m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+
+.. _l4a756c696157534d6174726978-616e793f:
+
+\ :ref:`any? <l486f6d6f67656e656f7573416767726567617465-616e793f>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-617070656e64:
+
+\ :ref:`append <l4a756c69615753416767726567617465-617070656e64>`\ \: (%, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-617272617932:
+
+\ :ref:`array2 <l54776f44696d656e73696f6e616c417272617943617465676f7279-617272617932>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  E -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-626c6f636b436f6e636174:
+
+\ :ref:`blockConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b436f6e636174>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-626c6f636b53706c6974:
+
+\ :ref:`blockSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b53706c6974>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`blockSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b53706c6974>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-63686f6c65736b79:
+
+.. index::
+   pair: JuliaWSMatrix; cholesky
+
+:spadfun:`cholesky`\: % -> Record(l: %, u: %) 
+  \ ``cholesky(m)``\  computes the Cholesky decomposition of the square matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-636f65726365:
+
+\ :ref:`coerce <l4a756c69615753416767726567617465-636f65726365>`\ \: % -> \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+\ :ref:`coerce <l4d617472697843617465676f7279-636f65726365>`\ \: \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`coerce <l4a756c69615753416767726567617465-636f65726365>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-636f6c536c696365:
+
+\ :ref:`colSlice <l54776f44696d656e73696f6e616c417272617943617465676f7279-636f6c536c696365>`\ \: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-636f6c756d6e:
+
+.. index::
+   pair: JuliaWSMatrix; column
+
+:spadfun:`column`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``column(mat,i)``\  returns the \ ``i``\ -th column.
+
+
+\ :ref:`column <l54776f44696d656e73696f6e616c417272617943617465676f7279-636f6c756d6e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-636f6c756d6e5370616365:
+
+\ :ref:`columnSpace <l4d617472697843617465676f7279-636f6c756d6e5370616365>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E if E has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a756c696157534d6174726978-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-636f756e74:
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (E, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-64656c657465:
+
+\ :ref:`delete <l4a756c69615753416767726567617465-64656c657465>`\ \: (%, \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-64657465726d696e616e74:
+
+\ :ref:`determinant <l4d617472697843617465676f7279-64657465726d696e616e74>`\ \: % -> E if E has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-646961676f6e616c3f:
+
+.. index::
+   pair: JuliaWSMatrix; diagonal?
+
+:spadfun:`diagonal?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``diagonal?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and diagonal (i.e. all entries of \ ``m``\  not on the diagonal are zero) and \ ``false``\  otherwise.
+
+.. _l4a756c696157534d6174726978-646961676f6e616c:
+
+.. index::
+   pair: JuliaWSMatrix; diagonal
+
+:spadfun:`diagonal`\: % -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  \ ``diagonal(m)``\  returns the diagonal elements of \ ``m``\  as a vector.
+
+.. _l4a756c696157534d6174726978-646961676f6e616c4d6174726978:
+
+.. index::
+   pair: JuliaWSMatrix; diagonalMatrix
+
+:spadfun:`diagonalMatrix`\: \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  E -> % 
+  \ ``diagonalMatrix(l)``\  returns a diagonal matrix with elements of \ ``l``\  as diagonal elements.
+
+
+\ :ref:`diagonalMatrix <l4d617472697843617465676f7279-646961676f6e616c4d6174726978>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`diagonalMatrix <l4d617472697843617465676f7279-646961676f6e616c4d6174726978>`\ \: \ :ref:`List <l4c697374>`\  E -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-646966666572656e636573:
+
+\ :ref:`differences <l4a756c69615753416767726567617465-646966666572656e636573>`\ \: % -> % if \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E has \ :ref:`JuliaWSNumber <l4a756c696157534e756d626572>`\ 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-64696d656e73696f6e73:
+
+\ :ref:`dimensions <l4a756c69615753416767726567617465-64696d656e73696f6e73>`\ \: % -> \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\  
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-656967656e53797374656d:
+
+.. index::
+   pair: JuliaWSMatrix; eigenSystem
+
+:spadfun:`eigenSystem`\: % -> Record(values: \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ , vectors: \ :ref:`JuliaWSMatrix <l4a756c696157534d6174726978>`\  \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ ) 
+  \ ``eigenSystem(m)``\  computes the spectral decomposition of the square matrix \ ``m``\ . It returns in a Record, the eigenvalues, selector 'values', and the eigenvectors selector 'vectors'.
+
+.. _l4a756c696157534d6174726978-656967656e76616c756573:
+
+.. index::
+   pair: JuliaWSMatrix; eigenvalues
+
+:spadfun:`eigenvalues`\: % -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  
+  \ ``eigenvalues(m)``\  returns the eigenvalues of the square matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-656967656e766563746f7273:
+
+.. index::
+   pair: JuliaWSMatrix; eigenvectors
+
+:spadfun:`eigenvectors`\: % -> \ :ref:`JuliaWSMatrix <l4a756c696157534d6174726978>`\  \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  
+  \ ``eigenvectors(m)``\  returns the eigenvectors of the square matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-656c74:
+
+\ :ref:`elt <l4a756c69615753416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+.. index::
+   pair: JuliaWSMatrix; elt
+
+:spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  \ ``elt(mat, m, n)``\  returns the element (\ ``m``\ ,\ ``n``\ ) of the matrix \ ``mat``\ .
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-6576616c:
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, E, E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (E, E)
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  E, \ :ref:`List <l4c697374>`\  E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (E, E)
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+.. _l4a756c696157534d6174726978-65766572793f:
+
+\ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-657871756f:
+
+\ :ref:`exquo <l4d617472697843617465676f7279-657871756f>`\ \: (%, E) -> Union(%, failed) if E has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-65787472616374:
+
+\ :ref:`extract <l4a756c69615753416767726567617465-65787472616374>`\ \: (%, \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-66696c6c21:
+
+\ :ref:`fill! <l54776f44696d656e73696f6e616c417272617943617465676f7279-66696c6c21>`\ \: (%, E) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6669727374:
+
+\ :ref:`first <l4a756c69615753416767726567617465-6669727374>`\ \: % -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-67656e6572616c697a6564496e7665727365:
+
+.. index::
+   pair: JuliaWSMatrix; generalizedInverse
+
+:spadfun:`generalizedInverse`\: % -> % 
+  \ ``generalizedInverse(m)``\  computes the pseudo inverse of \ ``m``\  also knows as Moore-Penrose inverse.
+
+.. _l4a756c696157534d6174726978-68617368:
+
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if E has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a756c696157534d6174726978-6861736855706461746521:
+
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if E has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a756c696157534d6174726978-6865726d697469616e3f:
+
+.. index::
+   pair: JuliaWSMatrix; hermitian?
+
+:spadfun:`hermitian?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``hermitian?(m)``\  checks whether or not \ ``m``\  is hermitian.
+
+.. _l4a756c696157534d6174726978-68657373656e62657267:
+
+.. index::
+   pair: JuliaWSMatrix; hessenberg
+
+:spadfun:`hessenberg`\: % -> Record(p: %, h: %) 
+  \ ``hessenberg(m)``\  computes the Hessenberg decomposition of the square matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-686f72697a436f6e636174:
+
+\ :ref:`horizConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a436f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`horizConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a436f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-686f72697a53706c6974:
+
+\ :ref:`horizSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a53706c6974>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`horizSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a53706c6974>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-696e73657274:
+
+\ :ref:`insert <l4a756c69615753416767726567617465-696e73657274>`\ \: (%, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-696e74657273656374696f6e:
+
+\ :ref:`intersection <l4a756c69615753416767726567617465-696e74657273656374696f6e>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-696e7665727365:
+
+.. index::
+   pair: JuliaWSMatrix; inverse
+
+:spadfun:`inverse`\: % -> % 
+  \ ``inverse(m)``\  computes the inverse of \ ``m``\ . For example: \example{m:=jWSMatrix("\{\{a, b\}, \{b, a\}\}")@JWSMAT(JWSEXPR)} \example{inverse m}
+
+
+\ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) if E has \ :ref:`Field <l4669656c64>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-696e76657274496643616e:
+
+.. index::
+   pair: JuliaWSMatrix; invertIfCan
+
+:spadfun:`invertIfCan`\: % -> Union(%, failed) if E has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  \ ``invertIfCan(m)``\  returns the inverse of the matrix \ ``m``\ . If the matrix is not invertible, "failed" is returned. Error: if the matrix is not square.
+
+.. _l4a756c696157534d6174726978-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a756c69614f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c4576616c:
+
+\ :ref:`jlEval <l4a756c696157534f626a656374-6a6c4576616c>`\ \: % -> % 
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c48656164:
+
+\ :ref:`jlHead <l4a756c696157534f626a656374-6a6c48656164>`\ \: % -> \ :ref:`JuliaWSSymbol <l4a756c6961575353796d626f6c>`\  
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c4964:
+
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c4e756d65726963:
+
+\ :ref:`jlNumeric <l4a756c696157534f626a656374-6a6c4e756d65726963>`\ \: % -> % 
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+
+\ :ref:`jlNumeric <l4a756c696157534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c526566:
+
+\ :ref:`jlRef <l4a756c69614f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c726566:
+
+\ :ref:`jlref <l4a756c69614f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c53796d626f6c6963:
+
+\ :ref:`jlSymbolic <l4a756c696157534f626a656374-6a6c53796d626f6c6963>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c696157534d6174726978-6a6c54797065:
+
+\ :ref:`jlType <l4a756c69614f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6a6f696e:
+
+\ :ref:`join <l4a756c69615753416767726567617465-6a6f696e>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-6a6f7264616e:
+
+.. index::
+   pair: JuliaWSMatrix; jordan
+
+:spadfun:`jordan`\: % -> Record(s: %, j: %) 
+  \ ``jordan(m)``\  computes the Jordan decomposition of of the square matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-6a5753416767726567617465:
+
+\ :ref:`jWSAggregate <l4a756c69615753416767726567617465-6a5753416767726567617465>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-6a5753496e74657270726574:
+
+\ :ref:`jWSInterpret <l4a756c696157534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c696157534d6174726978-6a57534d6174726978:
+
+.. index::
+   pair: JuliaWSMatrix; jWSMatrix
+
+:spadfun:`jWSMatrix`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jWSMatrix(str)``\  constructs \ ``str``\  as a JuliaWSMatrix. \ ``str``\  must be in the \ ``WS``\  language (\ ``WS``\  list of \ ``WS``\  list(\ ``s``\ )).
+
+.. _l4a756c696157534d6174726978-6b726f6e65636b65725f70726f6431:
+
+\ :ref:`kronecker_prod1 <l4d617472697843617465676f7279-6b726f6e65636b65725f70726f6431>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , Union(E, one)) -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6b726f6e65636b657250726f64756374:
+
+\ :ref:`kroneckerProduct <l4d617472697843617465676f7279-6b726f6e65636b657250726f64756374>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`kroneckerProduct <l4d617472697843617465676f7279-6b726f6e65636b657250726f64756374>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6b726f6e65636b657253756d:
+
+\ :ref:`kroneckerSum <l4d617472697843617465676f7279-6b726f6e65636b657253756d>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`kroneckerSum <l4d617472697843617465676f7279-6b726f6e65636b657253756d>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6c617374:
+
+\ :ref:`last <l4a756c69615753416767726567617465-6c617374>`\ \: % -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a756c696157534d6174726978-6c656e677468:
+
+\ :ref:`length <l4a756c69615753416767726567617465-6c656e677468>`\ \: % -> \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\  
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-6c696e656172536f6c7665:
+
+.. index::
+   pair: JuliaWSMatrix; linearSolve
+
+:spadfun:`linearSolve`\: (%, %) -> % 
+  \ ``linearSolve(mat, b)``\  finds \ ``x``\ , solution of the equation \ ``mat``\  * \ ``x``\  = \ ``b``\ .
+
+.. _l4a756c696157534d6174726978-6c6973744f664c69737473:
+
+\ :ref:`listOfLists <l54776f44696d656e73696f6e616c417272617943617465676f7279-6c6973744f664c69737473>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  E 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6c75:
+
+.. index::
+   pair: JuliaWSMatrix; lu
+
+:spadfun:`lu`\: % -> Record(lu: %, p: %, c: %) 
+  \ ``lu(m)``\  computes the lU decomposition of the matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-6d617021:
+
+\ :ref:`map! <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d617021>`\ \: (E -> E, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d6170:
+
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: ((E, E) -> E, %, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: ((E, E) -> E, %, %, E) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: (E -> E, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d6174726978:
+
+\ :ref:`matrix <l4d617472697843617465676f7279-6d6174726978>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> E) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+.. index::
+   pair: JuliaWSMatrix; matrix
+
+:spadfun:`matrix`\: \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E -> % 
+  \ ``matrix(vec)``\  returns \ ``vec``\  as a matrix (inplace coercion).
+
+
+\ :ref:`matrix <l4d617472697843617465676f7279-6d6174726978>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  E -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d617472697846756e6374696f6e:
+
+.. index::
+   pair: JuliaWSMatrix; matrixFunction
+
+:spadfun:`matrixFunction`\: (\ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ , %) -> \ :ref:`JuliaWSMatrix <l4a756c696157534d6174726978>`\  \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  
+  \ ``matrixFunction(func, m)``\  applies the matrix function \ ``func``\ , if available, to the matrix \ ``m``\ . Note that it is not an element-wise operation. For example: \example{m := jWSMatrix("\{\{1.2, 1.7\},\{1.12, -2.1\}\}")@JWSMAT(JWSREAL)} \example{matrixFunction("Sqrt", m)}
+
+.. _l4a756c696157534d6174726978-6d6178:
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> E if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> E 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-6d6178436f6c496e646578:
+
+\ :ref:`maxColIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6178436f6c496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d6178526f77496e646578:
+
+\ :ref:`maxRowIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6178526f77496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d656d6265723f:
+
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (E, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-6d656d62657273:
+
+\ :ref:`members <l486f6d6f67656e656f7573416767726567617465-6d656d62657273>`\ \: % -> \ :ref:`List <l4c697374>`\  E 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-6d696e:
+
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> E if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a756c696157534d6174726978-6d696e436f6c496e646578:
+
+\ :ref:`minColIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d696e436f6c496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d696e6f72646574:
+
+\ :ref:`minordet <l4d617472697843617465676f7279-6d696e6f72646574>`\ \: % -> E if E has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d696e6f7273:
+
+.. index::
+   pair: JuliaWSMatrix; minors
+
+:spadfun:`minors`\: % -> % 
+  \ ``minors(m)``\  returns the minors of \ ``m``\ .
+
+
+.. index::
+   pair: JuliaWSMatrix; minors
+
+:spadfun:`minors`\: (%, \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+  \ ``minors(m,i)``\  returns the \ ``i``\ -th minors of \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-6d696e526f77496e646578:
+
+\ :ref:`minRowIndex <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d696e526f77496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-6d757461626c653f:
+
+\ :ref:`mutable? <l4a756c69614f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6e636f6c73:
+
+\ :ref:`ncols <l54776f44696d656e73696f6e616c417272617943617465676f7279-6e636f6c73>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6e6577:
+
+\ :ref:`new <l54776f44696d656e73696f6e616c417272617943617465676f7279-6e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , E) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6e6f726d:
+
+.. index::
+   pair: JuliaWSMatrix; norm
+
+:spadfun:`norm`\: % -> E 
+  \ ``norm(m)``\  returns the norm of \ ``m``\ , i.e. the value of the maximum singular values of \ ``m``\ .
+
+
+.. index::
+   pair: JuliaWSMatrix; norm
+
+:spadfun:`norm`\: (%, \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ ) -> E 
+  \ ``norm(m, type)``\  returns the type norm of \ ``m``\ . For example, norm(\ ``m``\ ,2) returns the usual norm, norm(\ ``m``\ , "Infinity") or norm(\ ``m``\ , "Frobenius") returns their respective norms. See documentation for information.
+
+.. _l4a756c696157534d6174726978-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a756c69614f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-6e726f7773:
+
+\ :ref:`nrows <l54776f44696d656e73696f6e616c417272617943617465676f7279-6e726f7773>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6e756c6c697479:
+
+\ :ref:`nullity <l4d617472697843617465676f7279-6e756c6c697479>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if E has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-6e756c6c5370616365:
+
+.. index::
+   pair: JuliaWSMatrix; nullSpace
+
+:spadfun:`nullSpace`\: % -> \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  \ ``nullSpace(m)``\  returns the list of vector
+
+
+\ :ref:`nullSpace <l4d617472697843617465676f7279-6e756c6c5370616365>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E if E has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-70617274:
+
+\ :ref:`part <l4a756c69615753416767726567617465-70617274>`\ \: (%, \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-7061727473:
+
+\ :ref:`parts <l54776f44696d656e73696f6e616c417272617943617465676f7279-7061727473>`\ \: % -> \ :ref:`List <l4c697374>`\  E 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7065726d616e656e74:
+
+.. index::
+   pair: JuliaWSMatrix; permanent
+
+:spadfun:`permanent`\: % -> E 
+  \ ``permanent(m)``\  returns the permanent of \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-506661666669616e:
+
+\ :ref:`Pfaffian <l4d617472697843617465676f7279-506661666669616e>`\ \: % -> E if E has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-706f736974697665446566696e6974653f:
+
+.. index::
+   pair: JuliaWSMatrix; positiveDefinite?
+
+:spadfun:`positiveDefinite?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``positiveDefinite?(m)``\  checks whether or not \ ``m``\  is positive definite.
+
+.. _l4a756c696157534d6174726978-706f736974697665506f776572:
+
+\ :ref:`positivePower <l4d617472697843617465676f7279-706f736974697665506f776572>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-70726570656e64:
+
+\ :ref:`prepend <l4a756c69615753416767726567617465-70726570656e64>`\ \: (%, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-71656c74:
+
+\ :ref:`qelt <l4a756c69615753416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+.. index::
+   pair: JuliaWSMatrix; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  \ ``qelt(mat, m, n)``\  returns the element (\ ``m``\ ,\ ``n``\ ) of the matrix \ ``mat``\ . No checks are done at the FriCAS level.
+
+.. _l4a756c696157534d6174726978-716e6577:
+
+\ :ref:`qnew <l54776f44696d656e73696f6e616c417272617943617465676f7279-716e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7172:
+
+.. index::
+   pair: JuliaWSMatrix; qr
+
+:spadfun:`qr`\: % -> Record(q: %, r: %) 
+  \ ``qr(m)``\  computes the \ ``QR``\  decomposition of the matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-71736574656c7421:
+
+.. index::
+   pair: JuliaWSMatrix; qsetelt!
+
+:spadfun:`qsetelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  \ ``qsetelt!(mat,n,m,elt)``\  returns matrix \ ``mat``\  with element (\ ``n``\ ,\ ``m``\ ) replaced by the element \ ``elt``\ .
+
+
+\ :ref:`qsetelt! <l4a756c69615753416767726567617465-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-71736574656c74:
+
+.. index::
+   pair: JuliaWSMatrix; qsetelt
+
+:spadfun:`qsetelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  \ ``qsetelt(mat,n,m,elt)``\  returns a new matrix with element (\ ``n``\ ,\ ``m``\ ) replaced by the element \ ``elt``\ .
+
+
+\ :ref:`qsetelt <l4a756c69615753416767726567617465-71736574656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-72616e646f6d436f6d706c65784d6174726978:
+
+.. index::
+   pair: JuliaWSMatrix; randomComplexMatrix
+
+:spadfun:`randomComplexMatrix`\: (\ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSComplex <l4a756c69615753436f6d706c6578>`\ , \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> \ :ref:`JuliaWSMatrix <l4a756c696157534d6174726978>`\  \ :ref:`JuliaWSComplex <l4a756c69615753436f6d706c6578>`\  
+  \ ``randomComplexMatrix(range, dims)``\  returns a random matrix with random complex numbers in the \ ``range``\  \ ``range``\  and dims dimensions. \example{range:=jWSList("\{1+I\}")@JWSLIST(JWSCPLX)} \example{randomComplexMatrix(range,jWSList("\{3,3\}")\$JWSLIST(JWSINT))@JWSMAT(JWSCPLX)}
+
+.. _l4a756c696157534d6174726978-72616e646f6d5265616c4d6174726978:
+
+.. index::
+   pair: JuliaWSMatrix; randomRealMatrix
+
+:spadfun:`randomRealMatrix`\: (\ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSReal <l4a756c696157535265616c>`\ , \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> \ :ref:`JuliaWSMatrix <l4a756c696157534d6174726978>`\  \ :ref:`JuliaWSReal <l4a756c696157535265616c>`\  
+  \ ``randomRealMatrix(range, dims)``\  returns a random matrix with random numbers in the \ ``range``\  \ ``range``\  and dims dimensions. \example{range := jWSList("\{-5,5\}")\$JWSLIST(JWSREAL)} \example{randomRealMatrix(range,jWSList("\{3,3\}")\$JWSLIST(JWSINT))@JWSMAT(JWSREAL)}
+
+.. _l4a756c696157534d6174726978-72616e6b:
+
+\ :ref:`rank <l4d617472697843617465676f7279-72616e6b>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if E has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-72656d6f76654475706c696361746573:
+
+\ :ref:`removeDuplicates <l4a756c69615753416767726567617465-72656d6f76654475706c696361746573>`\ \: % -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-7265706c61636550617274:
+
+\ :ref:`replacePart <l4a756c69615753416767726567617465-7265706c61636550617274>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-72657374:
+
+\ :ref:`rest <l4a756c69615753416767726567617465-72657374>`\ \: % -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-72657665727365:
+
+\ :ref:`reverse <l4a756c69615753416767726567617465-72657665727365>`\ \: % -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`reverse <l4a756c69615753416767726567617465-72657665727365>`\ \: (%, \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`reverse <l4a756c69615753416767726567617465-72657665727365>`\ \: (%, \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-726966666c65:
+
+\ :ref:`riffle <l4a756c69615753416767726567617465-726966666c65>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`riffle <l4a756c69615753416767726567617465-726966666c65>`\ \: (%, %, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-726f77:
+
+.. index::
+   pair: JuliaWSMatrix; row
+
+:spadfun:`row`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``row(mat,i)``\  returns the \ ``i``\ -th row.
+
+
+\ :ref:`row <l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-726f77456368656c6f6e:
+
+\ :ref:`rowEchelon <l4d617472697843617465676f7279-726f77456368656c6f6e>`\ \: % -> % if E has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-726f77536c696365:
+
+\ :ref:`rowSlice <l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77536c696365>`\ \: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-7363616c61724d6174726978:
+
+\ :ref:`scalarMatrix <l4d617472697843617465676f7279-7363616c61724d6174726978>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , E) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7363687572:
+
+.. index::
+   pair: JuliaWSMatrix; schur
+
+:spadfun:`schur`\: % -> Record(q: %, t: %) 
+  schurm) computes the Schur decomposition of of the square matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-736574436f6c756d6e21:
+
+\ :ref:`setColumn! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574436f6c756d6e21>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-736574656c7421:
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l4a756c69615753416767726567617465-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-736574656c74:
+
+.. index::
+   pair: JuliaWSMatrix; setelt
+
+:spadfun:`setelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  \ ``setelt(mat,n,m,elt)``\  returns a new matrix with element (\ ``n``\ ,\ ``m``\ ) replaced by the element \ ``elt``\ .
+
+
+\ :ref:`setelt <l4a756c69615753416767726567617465-736574656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-736574496e74657273656374696f6e:
+
+\ :ref:`setIntersection <l4a756c69615753416767726567617465-736574496e74657273656374696f6e>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-736574526f7721:
+
+\ :ref:`setRow! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574526f7721>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7365747375624d617472697821:
+
+\ :ref:`setsubMatrix! <l54776f44696d656e73696f6e616c417272617943617465676f7279-7365747375624d617472697821>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c696157534d6174726978-736d616c6c65723f:
+
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+  from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+.. _l4a756c696157534d6174726978-736f7274:
+
+\ :ref:`sort <l4a756c69615753416767726567617465-736f7274>`\ \: % -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-736f727465643f:
+
+\ :ref:`sorted? <l4a756c69615753416767726567617465-736f727465643f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-7371756172653f:
+
+.. index::
+   pair: JuliaWSMatrix; square?
+
+:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``square?(m)``\  returns \ ``true``\  if \ ``m``\  is a square matrix (i.e. if \ ``m``\  has the same number of rows as columns) and \ ``false``\  otherwise.
+
+.. _l4a756c696157534d6174726978-737175617265546f70:
+
+\ :ref:`squareTop <l54776f44696d656e73696f6e616c417272617943617465676f7279-737175617265546f70>`\ \: % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-737472696e67:
+
+\ :ref:`string <l4a756c69614f626a65637454797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c696157534d6174726978-7375624d6174726978:
+
+\ :ref:`subMatrix <l54776f44696d656e73696f6e616c417272617943617465676f7279-7375624d6174726978>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-737664:
+
+.. index::
+   pair: JuliaWSMatrix; svd
+
+:spadfun:`svd`\: % -> Record(S: %, sv: %, V: %) 
+  \ ``svd(m)``\  computes the singular value decomposition of the matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-73766476616c73:
+
+.. index::
+   pair: JuliaWSMatrix; svdvals
+
+:spadfun:`svdvals`\: % -> \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  E 
+  \ ``svdvals(m)``\  returns the singular values of the matrix \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-73776170436f6c756d6e7321:
+
+\ :ref:`swapColumns! <l54776f44696d656e73696f6e616c417272617943617465676f7279-73776170436f6c756d6e7321>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-73776170526f777321:
+
+\ :ref:`swapRows! <l54776f44696d656e73696f6e616c417272617943617465676f7279-73776170526f777321>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-73796d6d65747269633f:
+
+.. index::
+   pair: JuliaWSMatrix; symmetric?
+
+:spadfun:`symmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``symmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and symmetric (i.e. \ ``m[i, j] = m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+
+.. _l4a756c696157534d6174726978-74616b65:
+
+\ :ref:`take <l4a756c69615753416767726567617465-74616b65>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+
+\ :ref:`take <l4a756c69615753416767726567617465-74616b65>`\ \: (%, \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-746f537472696e67:
+
+\ :ref:`toString <l4a756c696157534f626a656374-746f537472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+
+.. index::
+   pair: JuliaWSMatrix; toString
+
+:spadfun:`toString`\: (%, \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ ) -> \ :ref:`String <l537472696e67>`\  
+  \ ``toString(mat, form)``\  returns the string representation of \ ``mat``\  with \ ``WS``\  language format form.
+
+.. _l4a756c696157534d6174726978-746f74616c:
+
+\ :ref:`total <l4a756c69615753416767726567617465-746f74616c>`\ \: % -> \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E if \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E has \ :ref:`JuliaWSNumber <l4a756c696157534e756d626572>`\ 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-7472616365:
+
+.. index::
+   pair: JuliaWSMatrix; trace
+
+:spadfun:`trace`\: % -> E 
+  \ ``trace(m)``\  returns the trace of \ ``m``\ .
+
+.. _l4a756c696157534d6174726978-7472616e73706f7365:
+
+.. index::
+   pair: JuliaWSMatrix; transpose
+
+:spadfun:`transpose`\: % -> % 
+  \ ``transpose(m)``\  returns the tranposition of \ ``m``\ .
+
+
+\ :ref:`transpose <l4d617472697843617465676f7279-7472616e73706f7365>`\ \: \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-756e696f6e:
+
+\ :ref:`union <l4a756c69615753416767726567617465-756e696f6e>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E
+
+.. _l4a756c696157534d6174726978-76657274436f6e636174:
+
+\ :ref:`vertConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-76657274436f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`vertConcat <l54776f44696d656e73696f6e616c417272617943617465676f7279-76657274436f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7665727453706c6974:
+
+\ :ref:`vertSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-7665727453706c6974>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`vertSplit <l54776f44696d656e73696f6e616c417272617943617465676f7279-7665727453706c6974>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7a65726f3f:
+
+\ :ref:`zero? <l4d617472697843617465676f7279-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+.. _l4a756c696157534d6174726978-7a65726f:
+
+\ :ref:`zero <l4d617472697843617465676f7279-7a65726f>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E)
+
+
+\ :ref:`Aggregate <l416767726567617465>`\  
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`Comparable <l436f6d70617261626c65>`\  if E has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`Evalable <l4576616c61626c65>`\  E if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`Hashable <l4861736861626c65>`\  if E has \ :ref:`Hashable <l4861736861626c65>`\ 
+
+\ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E 
+
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (E, E) if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+\ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\  
+
+\ :ref:`JuliaType <l4a756c696154797065>`\  
+
+\ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E 
+
+\ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\  
+
+\ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) 
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
+
+\ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E, \ :ref:`JuliaWSVector <l4a756c69615753566563746f72>`\  E) 
+

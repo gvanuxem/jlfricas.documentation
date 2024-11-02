@@ -1,0 +1,45 @@
+.. index:: JuliaFloat64VectorFunctions2
+
+.. _l4a756c6961466c6f61743634566563746f7246756e6374696f6e7332:
+
+JuliaFloat64VectorFunctions2
+============================
+
+:viewcode:`jarray.spad line 223 <jarray.spad#L223>` :editcode:`[edit on github] <jarray.spad#L223>`
+
+
+This package provides operations which all take as arguments JuliaFloat64Vector and functions from \ ``JuliaFloat64``\  to \ ``JuliaFloat64``\ . The operations all iterate over their vector argument and either return a value of type JuliaFloat64Vector or a \ ``JuliaFloat64``\ .
+
+
+.. _l4a756c6961466c6f61743634566563746f7246756e6374696f6e7332-6d6170:
+
+.. index::
+   pair: JuliaFloat64VectorFunctions2; map
+
+:spadfun:`map`\: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  \ ``map(f, v)``\  applies the function \ ``f``\  to every element of the vector \ ``v``\  producing a new vector containing the values.
+
+
+.. index::
+   pair: JuliaFloat64VectorFunctions2; map
+
+:spadfun:`map`\: (\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> Union(\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , failed), \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> Union(\ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , failed) 
+  \ ``map(f, v)``\  applies the function \ ``f``\  to every element of the vector \ ``v``\  producing a new vector containing the values or \ ``"failed"``\ .
+
+.. _l4a756c6961466c6f61743634566563746f7246756e6374696f6e7332-726564756365:
+
+.. index::
+   pair: JuliaFloat64VectorFunctions2; reduce
+
+:spadfun:`reduce`\: ((\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
+  \ ``reduce(func, vec, ident)``\  combines the elements in \ ``vec``\  using the binary function \ ``func``\ . Argument ident is returned if \ ``vec``\  is empty.
+
+.. _l4a756c6961466c6f61743634566563746f7246756e6374696f6e7332-7363616e:
+
+.. index::
+   pair: JuliaFloat64VectorFunctions2; scan
+
+:spadfun:`scan`\: ((\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  
+  \ ``scan(func, vec, ident)``\  creates a new vector whose elements are the result of applying reduce to the binary function \ ``func``\ , increasing initial subsequences of the vector \ ``vec``\ , and the element ident.
+
+

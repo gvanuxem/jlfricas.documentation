@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JuliaWSUtilityFunctions &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KernelFunctions2(R, S)" href="KernelFunctions2.html" />
+    <link rel="prev" title="JuliaWSNumericalSpecialFunctions R" href="JuliaWSNumericalSpecialFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="KernelFunctions2.html" title="KernelFunctions2(R, S)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JuliaWSNumericalSpecialFunctions.html" title="JuliaWSNumericalSpecialFunctions R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JuliaWSUtilityFunctions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="juliawsutilityfunctions">
+<span id="l4a756c696157535574696c69747946756e6374696f6e73"></span><span id="index-0"></span><h1>JuliaWSUtilityFunctions<a class="headerlink" href="#juliawsutilityfunctions" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/jwsutils.spad#L1">jwsutils.spad line 1</a> <a class="extlink-editcode reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/jwsutils.spad#L1">[edit on github]</a></p>
+<p>Julia Wolfram Symbolic utility functions using Wolfram Symbolic Transport Protocol.</p>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-676175737369616e4d6174726978"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">gaussianMatrix</span>: <a class="reference internal" href="JuliaWSReal.html#l4a756c696157535265616c"><span class="std std-ref">JuliaWSReal</span></a> -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSReal.html#l4a756c696157535265616c"><span class="std std-ref">JuliaWSReal</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gaussianMatrix(r)</span></code> returns the Gaussian matrix with radius <code class="docutils literal notranslate"><span class="pre">r</span></code>. For example: example{gaussianMatrix “2.2”}</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-68616e6b656c4d6174726978"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">hankelMatrix</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelMatrix(n)</span></code> returns the square Hankel matrix with integer coefficients.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-68696c626572744d6174726978"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">hilbertMatrix</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSRational.html#l4a756c69615753526174696f6e616c"><span class="std std-ref">JuliaWSRational</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hilbertMatrix(n)</span></code> returns the square Hilbert matrix.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-6964656e746974794d6174726978"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">identityMatrix</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">identityMatrix(n)</span></code> returns the identity matrix of size <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-6a6c57534578706f7274"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">jlWSExport</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a>) -&gt; <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSExport(file.ext,</span> <span class="pre">obj)</span></code> exports the object obj to the file file.ext. The extension ext will determine the saved format. A <code class="docutils literal notranslate"><span class="pre">WS</span></code> expression for example can be exported in an image file, it will be saved in the <code class="docutils literal notranslate"><span class="pre">WS</span></code> ‘StandardForm’ whereas in FriCAS it is outputted in <code class="docutils literal notranslate"><span class="pre">WS</span></code> ‘OutputForm<code class="docutils literal notranslate"><span class="pre">':</span></code> example{x:=jWSExpr(x);jlWSExport(“legendreP.png”, legendreP(7, x))}</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-6a6c57534578706f7274537472696e67"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">jlWSExportString</span>: (<a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a>, <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a>) -&gt; <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSExportString(expr,</span> <span class="pre">jWSString(format))</span></code> returns the string representation of <code class="docutils literal notranslate"><span class="pre">expr</span></code> in the format form. Use toString or string to obtain the FriCAS String. For example: example{jWSExpr &quot;Probability[x &lt; 0, x \[Distributed] NormalDistribution[]]&quot;} example{jWSExpr &quot;Probability[x &lt; 1, x \[Distributed] NormalDistribution[]]&quot;} example{string jlWSExportString(%,jWSString “TeX”)}</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-6a6c5753506c6f74"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">jlWSPlot</span>: (<a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a>, <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a>) -&gt; <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSPlot(expr,</span> <span class="pre">options)</span></code> is the <code class="docutils literal notranslate"><span class="pre">WS</span></code> plot function. Since it should be run in a Wolfram notebook or any other supported graphical interfaces, the Wolfram Jupyter “plugin” for example, it is left to the user for testing purposes. The following uses the jlWSExport function: example{x:=jWSExpr(x);opt:=jWSList [x,-5,5]} example{jlWSExport(“sin.png”, jlWSPlot(sin(x),opt))}</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-72616e6765"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">range</span>: (<a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a>, <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a>) -&gt; <a class="reference internal" href="JuliaWSList.html#l4a756c696157534c697374"><span class="std std-ref">JuliaWSList</span></a> <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">range(n,m)</span></code> returns a <code class="docutils literal notranslate"><span class="pre">WS</span></code> agg that ranges from <code class="docutils literal notranslate"><span class="pre">n</span></code> to <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">range</span>: (<a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a>, <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a>, <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a>) -&gt; <a class="reference internal" href="JuliaWSList.html#l4a756c696157534c697374"><span class="std std-ref">JuliaWSList</span></a> <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">range(n,m,d)</span></code> returns a <code class="docutils literal notranslate"><span class="pre">WS</span></code> agg that ranges from <code class="docutils literal notranslate"><span class="pre">n</span></code> to <code class="docutils literal notranslate"><span class="pre">m</span></code> with step <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">range</span>: <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSList.html#l4a756c696157534c697374"><span class="std std-ref">JuliaWSList</span></a> <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">range(n)</span></code> returns a <code class="docutils literal notranslate"><span class="pre">WS</span></code> agg that ranges from 1 to <code class="docutils literal notranslate"><span class="pre">n</span></code>. For example: example{range(10)&#64;JWSLIST(JWSINT)}</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-7365656452616e646f6d"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">seedRandom</span>: <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">seedRandom(n)</span></code> reseed the random number generator with <code class="docutils literal notranslate"><span class="pre">n</span></code> as seed. Returns the random generator state.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-7572616e643031436f6d706c6578"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">urand01Complex</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSComplex.html#l4a756c69615753436f6d706c6578"><span class="std std-ref">JuliaWSComplex</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01Complex(rows,cols)</span></code> returns a Julia <code class="docutils literal notranslate"><span class="pre">WS</span></code> matrix with uniformly distributed random complex elements in the unit square. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">urand01Complex</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSVector.html#l4a756c69615753566563746f72"><span class="std std-ref">JuliaWSVector</span></a> <a class="reference internal" href="JuliaWSComplex.html#l4a756c69615753436f6d706c6578"><span class="std std-ref">JuliaWSComplex</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01Complex(n)</span></code> returns a Julia <code class="docutils literal notranslate"><span class="pre">WS</span></code> vector with uniformly distributed random complex elements in the unit square. Convenience function.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-7572616e6430315265616c"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">urand01Real</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSReal.html#l4a756c696157535265616c"><span class="std std-ref">JuliaWSReal</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01Real(rows,cols)</span></code> returns a Julia <code class="docutils literal notranslate"><span class="pre">WS</span></code> matrix with uniformly distributed random elements in the range 0..1. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">urand01Real</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="JuliaWSVector.html#l4a756c69615753566563746f72"><span class="std std-ref">JuliaWSVector</span></a> <a class="reference internal" href="JuliaWSReal.html#l4a756c696157535265616c"><span class="std std-ref">JuliaWSReal</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01Real(n)</span></code> returns a Julia <code class="docutils literal notranslate"><span class="pre">WS</span></code> vector with uniformly distributed random elements in the range 0..1. Convenience function.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-76616e6465726d6f6e64654d6174726978"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">vandermondeMatrix</span>: (<a class="reference internal" href="JuliaWSList.html#l4a756c696157534c697374"><span class="std std-ref">JuliaWSList</span></a> <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a>, <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a>) -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">vandermondeMatrix(lvars,</span> <span class="pre">m)</span></code> returns a Vandermonde matrix with nodes from <code class="docutils literal notranslate"><span class="pre">lvars</span></code> and <code class="docutils literal notranslate"><span class="pre">m</span></code> columns.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">vandermondeMatrix</span>: <a class="reference internal" href="JuliaWSList.html#l4a756c696157534c697374"><span class="std std-ref">JuliaWSList</span></a> <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a> -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSExpression.html#l4a756c6961575345787072657373696f6e"><span class="std std-ref">JuliaWSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">vandermondeMatrix(lvars)</span></code> returns a Vandermonde matrix with nodes from <code class="docutils literal notranslate"><span class="pre">lvars</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c696157535574696c69747946756e6374696f6e73-7a65726f4d6174726978"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">zeroMatrix</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="JuliaWSMatrix.html#l4a756c696157534d6174726978"><span class="std std-ref">JuliaWSMatrix</span></a> <a class="reference internal" href="JuliaWSInteger.html#l4a756c69615753496e7465676572"><span class="std std-ref">JuliaWSInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">zeroMatrix(m,</span> <span class="pre">n)</span></code> returns an <code class="docutils literal notranslate"><span class="pre">m</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> zero matrix.</p>
+</dd>
+</dl>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="KernelFunctions2.html" title="KernelFunctions2(R, S)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JuliaWSNumericalSpecialFunctions.html" title="JuliaWSNumericalSpecialFunctions R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JuliaWSUtilityFunctions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

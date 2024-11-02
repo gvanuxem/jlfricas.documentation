@@ -1,0 +1,193 @@
+.. index:: JuliaObjectAggregate
+
+.. _l4a756c69614f626a656374416767726567617465:
+
+JuliaObjectAggregate
+====================
+
+:viewcode:`jobject.spad line 127 <jobject.spad#L127>` :editcode:`[edit on github] <jobject.spad#L127>`
+
+
+Category for arbitrary Julia aggregates.
+
+
+.. _l4a756c69614f626a656374416767726567617465-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-636f65726365:
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-656c74:
+
+.. index::
+   pair: JuliaObjectAggregate; elt
+
+:spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``elt(obj, ind)``\  returns the element at index ind of \ ``obj``\ . It can be used, for example, with a Tuple or a Vector.
+
+
+.. index::
+   pair: JuliaObjectAggregate; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> % 
+  \ ``elt(obj, sym)``\  returns the property \ ``sym``\  of \ ``obj``\ . For example: \example{ret := jlApply("svd",jobject("rand(4,4)")); ret.U}
+
+.. _l4a756c69614f626a656374416767726567617465-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a756c69614f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6a6c4964:
+
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6a6c526566:
+
+\ :ref:`jlRef <l4a756c69614f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6a6c726566:
+
+\ :ref:`jlref <l4a756c69614f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6a6c54797065:
+
+\ :ref:`jlType <l4a756c69614f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6d757461626c653f:
+
+\ :ref:`mutable? <l4a756c69614f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a756c69614f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-71656c74:
+
+.. index::
+   pair: JuliaObjectAggregate; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``qelt(obj, ind)``\  returns the element at index ind of \ ``obj``\ . It can be used, for example, with a Tuple or a Vector.
+
+
+.. index::
+   pair: JuliaObjectAggregate; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> % 
+  \ ``qelt(obj, sym)``\  returns the property \ ``sym``\  of \ ``obj``\ . No checks are done regarding the existence of the \ ``sym``\  property. If it does not exist, Julia throws an error.
+
+.. _l4a756c69614f626a656374416767726567617465-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a756c69614f626a656374416767726567617465-737472696e67:
+
+\ :ref:`string <l4a756c69614f626a65637454797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`Aggregate <l416767726567617465>`\  
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\  
+
+\ :ref:`JuliaType <l4a756c696154797065>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+

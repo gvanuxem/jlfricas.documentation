@@ -1,0 +1,49 @@
+.. index:: JuliaVectorFunctions2
+
+.. _l4a756c6961566563746f7246756e6374696f6e7332:
+
+JuliaVectorFunctions2(A, B)
+===========================
+
+:viewcode:`jobject.spad line 1269 <jobject.spad#L1269>` :editcode:`[edit on github] <jobject.spad#L1269>`
+
+* A: \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
+
+* B: \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
+
+
+This package provides operations which all take as arguments Julia vectors of elements of some type \ ``A``\  and functions from \ ``A``\  to another of type \ ``B``\ . The operations all iterate over their vector argument and either return a value of type \ ``B``\  or a vector over \ ``B``\ .
+
+
+.. _l4a756c6961566563746f7246756e6374696f6e7332-6d6170:
+
+.. index::
+   pair: JuliaVectorFunctions2; map
+
+:spadfun:`map`\: (A -> B, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  A) -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  B 
+  \ ``map(f, v)``\  applies the function \ ``f``\  to every element of the vector \ ``v``\  producing a new vector containing the values.
+
+
+.. index::
+   pair: JuliaVectorFunctions2; map
+
+:spadfun:`map`\: (A -> Union(B, failed), \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  A) -> Union(\ :ref:`JuliaVector <l4a756c6961566563746f72>`\  B, failed) 
+  \ ``map(f, v)``\  applies the function \ ``f``\  to every element of the vector \ ``v``\  producing a new vector containing the values or \ ``"failed"``\ .
+
+.. _l4a756c6961566563746f7246756e6374696f6e7332-726564756365:
+
+.. index::
+   pair: JuliaVectorFunctions2; reduce
+
+:spadfun:`reduce`\: ((A, B) -> B, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  A, B) -> B 
+  \ ``reduce(func, vec, ident)``\  combines the elements in \ ``vec``\  using the binary function \ ``func``\ . Argument ident is returned if \ ``vec``\  is empty.
+
+.. _l4a756c6961566563746f7246756e6374696f6e7332-7363616e:
+
+.. index::
+   pair: JuliaVectorFunctions2; scan
+
+:spadfun:`scan`\: ((A, B) -> B, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  A, B) -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  B 
+  \ ``scan(func, vec, ident)``\  creates a new vector whose elements are the result of applying reduce to the binary function \ ``func``\ , increasing initial subsequences of the vector \ ``vec``\ , and the element ident.
+
+

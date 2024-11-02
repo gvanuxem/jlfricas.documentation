@@ -1,0 +1,243 @@
+.. index:: JuliaObjDynamicLinker
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572:
+
+JuliaObjDynamicLinker
+=====================
+
+:viewcode:`jutils.spad line 426 <jutils.spad#L426>` :editcode:`[edit on github] <jutils.spad#L426>`
+
+
+Generic Julia objects used for dynamically linking shared libraries.
+
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-636f65726365:
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a646c696e6b:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jdlink
+
+:spadfun:`jdlink`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jdlink(lib)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adress to symbols in it using jlDlSym. It is up to the user to unload the shared object when it is no longer necessary using jlDlClose. \example{jdlink "libopenlibm"} Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a756c69614f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c434170706c79:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlCApply
+
+:spadfun:`jlDlCApply`\: (%, \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlCApply(func,x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . The Julia type of \ ``x``\  must be compatible with the Libdl Julia module. Type of the returned value is assumed to be the same than the type of \ ``x``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrt))} \example{jlDlCApply(squareRoot,jobject("2."))}
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlCApply
+
+:spadfun:`jlDlCApply`\: (%, \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlCApply(func,x,y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . Type of the returned value is assumed to be the same than the type of \ ``x``\ . For example: \example{libgsl:= jlDlOpen "libgsl"} \example{ipower:=jlDlSym(libgsl, gsl_pow_int)} \example{jlDlCApply(ipower,jobject("2.0"),jobject("7"))}
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlCApply
+
+:spadfun:`jlDlCApply`\: (%, \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlCApply(func,x,y,z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . Returned value is assumed the same type than type of \ ``x``\ . Use jlDlCApply with type options if necessary. For example with GSL: \example{gsl:= jlDlOpen "libgsl"} \example{hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))} \example{jlDlCApply(hypot3,jobject("2."),jobject("7."),jobjet("9.0"))}
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlCApply
+
+:spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlCApply(func, ctype, x, xctype)``\  applies the function pointer \ ``func``\  to \ ``x``\  given its Julia \ ``C``\  type (xctype) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types). For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:= jlDlSym(libm,jsym(sqrt))} \example{jlDlCApply(squareRoot, "Cdouble" jobject("2."), "Cdouble")} \example{sinus:=jlDlSym(libm,jsym(sin))} \example{jlDlCApply(sinus,"Float64"), jobject("2."), "Float64")}
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlCApply
+
+:spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlCApply(func, ctype, x, xctype, y, xctype)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\  given their Julia \ ``C``\  type (\ ``xctype``\  and \ ``xctype``\ ) or their supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types).
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlCApply
+
+:spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlCApply(func, ctype, x, xctype, y, xctype, z, ztype)``\  applies the function pointer \ ``func``\  to \ ``x``\  given its Julia \ ``C``\  type (\ ``xctype``\ ) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types).
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c436c6f7365:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlClose
+
+:spadfun:`jlDlClose`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlDlClose(libPtr)``\  unload explicitely the shared library referenced by \ ``libPtr``\ .
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c46696e644c6962:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlFindLib
+
+:spadfun:`jlDlFindLib`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlDlFindLib(lib)``\  returns the the library \ ``lib``\ . Returns an empty string if it is not found.
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c4c697374:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlList
+
+:spadfun:`jlDlList`\: () -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlDlList()``\  returns the list of loaded shared objects by the currect processus in a JuliaObject referencing a Julia vector of strings.
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c4f70656e:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlOpen
+
+:spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
+  \ ``jlDlOpen(lib, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adress to symbols in it using jlDlSym. It is up to the user to unload the shared object when it is no longer used. 'throw' determines whether or not Julia throws an error if the library can not be loaded. \example{jlDlOpen("libopenlibm", true)}
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlOpen
+
+:spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ ) -> % 
+  \ ``jlDlOpen(lib, flags)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adress to symbols in it using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. \example{jlUsing "Libdl" -- for flags} \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW")} flags can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Libdl must be loaded or imported before using these flags.
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlOpen
+
+:spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
+  \ ``jlDlOpen(lib, flags, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adress to symbols in it using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library can not be loaded. \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW", false)} \ ``flags``\  can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Libdl must be loaded or imported before using these \ ``flags``\ .
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlOpen
+
+:spadfun:`jlDlOpen`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jlDlOpen(lib)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adress to symbols in it using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded and returns 'nothing' in this case. Use the nothing? operation on the returned value if necessary.
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c50617468:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlPath
+
+:spadfun:`jlDlPath`\: % -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlDlPath(lib)``\  returns the path of the loaded library \ ``lib``\ .
+
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlPath
+
+:spadfun:`jlDlPath`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlDlPath(lib)``\  returns the path of the library \ ``lib``\ . Julia warns if it is not found and returns an empty string.
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c446c53796d:
+
+.. index::
+   pair: JuliaObjDynamicLinker; jlDlSym
+
+:spadfun:`jlDlSym`\: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> % 
+  \ ``jlDlSym(lib, sym)``\  returns the pointer to the symbol \ ``sym``\  in the library referenced by \ ``lib``\ . See jlDlOpen. \example{lnk:=jdlink "libjulia"} \example{sym := jlDlSym(lnk,"jl_eval_string")} \example{TODO}
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c4964:
+
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c526566:
+
+\ :ref:`jlRef <l4a756c69614f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c726566:
+
+\ :ref:`jlref <l4a756c69614f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6a6c54797065:
+
+\ :ref:`jlType <l4a756c69614f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6d757461626c653f:
+
+\ :ref:`mutable? <l4a756c69614f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a756c69614f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a44796e616d69634c696e6b6572-737472696e67:
+
+\ :ref:`string <l4a756c69614f626a65637454797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\  
+
+\ :ref:`JuliaType <l4a756c696154797065>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+

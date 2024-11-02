@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JuliaRealLinearAlgebra &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JuliaStringUtilities" href="JuliaStringUtilities.html" />
+    <link rel="prev" title="JuliaPlotFunctions" href="JuliaPlotFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JuliaStringUtilities.html" title="JuliaStringUtilities"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JuliaPlotFunctions.html" title="JuliaPlotFunctions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JuliaRealLinearAlgebra</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="juliareallinearalgebra">
+<span id="l4a756c69615265616c4c696e656172416c6765627261"></span><span id="index-0"></span><h1>JuliaRealLinearAlgebra<a class="headerlink" href="#juliareallinearalgebra" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/jla.spad#L1">jla.spad line 1</a> <a class="extlink-editcode reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/jla.spad#L1">[edit on github]</a></p>
+<p>Linear Algebra functions computed using Julia and its algorithms.</p>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-636f6e646974696f6e4e756d626572"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">conditionNumber</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">conditionNumber(m,</span> <span class="pre">p)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">p</span></code>-condition number of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">conditionNumber</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">conditionNumber(m)</span></code> computes the condition number of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-636f6e64536b65656c"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">condSkeel</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">condSkeel(m)</span></code> computes the Skeel condition number of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-656967656e21"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">eigen!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(values: <a class="reference internal" href="JuliaComplexF64Vector.html#l4a756c6961436f6d706c6578463634566563746f72"><span class="std std-ref">JuliaComplexF64Vector</span></a>, vectors: <a class="reference internal" href="JuliaComplexF64Matrix.html#l4a756c6961436f6d706c65784636344d6174726978"><span class="std std-ref">JuliaComplexF64Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigen!(m)</span></code> computes the spectral decomposition of <code class="docutils literal notranslate"><span class="pre">m</span></code> but overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> to save memory space.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-656967656e"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">eigen</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(values: <a class="reference internal" href="JuliaComplexF64Vector.html#l4a756c6961436f6d706c6578463634566563746f72"><span class="std std-ref">JuliaComplexF64Vector</span></a>, vectors: <a class="reference internal" href="JuliaComplexF64Matrix.html#l4a756c6961436f6d706c65784636344d6174726978"><span class="std std-ref">JuliaComplexF64Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigen(m)</span></code> computes the spectral decomposition of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-656967656e53797374656d21"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">eigenSystem!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(values: <a class="reference internal" href="JuliaComplexF64Vector.html#l4a756c6961436f6d706c6578463634566563746f72"><span class="std std-ref">JuliaComplexF64Vector</span></a>, leftVectors: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, rightVectors: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenSystem!(m)</span></code> computes the spectral decomposition of <code class="docutils literal notranslate"><span class="pre">m</span></code> but overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> to save memory space. If the <code class="docutils literal notranslate"><span class="pre">j</span></code>-th eigenvalue (values) is real, then the left eigenvectors <code class="docutils literal notranslate"><span class="pre">u</span></code>(<code class="docutils literal notranslate"><span class="pre">j</span></code>) = column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j</span></code>), the <code class="docutils literal notranslate"><span class="pre">j</span></code>-th column of lefVectors. If the <code class="docutils literal notranslate"><span class="pre">j</span></code>-th and (<code class="docutils literal notranslate"><span class="pre">j+1</span></code>)<code class="docutils literal notranslate"><span class="pre">-st</span></code> eigenvalues form a complex conjugate pair, then the left eigenvectors are <code class="docutils literal notranslate"><span class="pre">u</span></code>(<code class="docutils literal notranslate"><span class="pre">j</span></code>) = column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j</span></code>) + %i*column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j+1</span></code>) and <code class="docutils literal notranslate"><span class="pre">u</span></code>(<code class="docutils literal notranslate"><span class="pre">j+1</span></code>) = column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j</span></code>) - %i*column((lefVectors,<code class="docutils literal notranslate"><span class="pre">j+1</span></code>). This applieas also to righVectors.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-656967656e53797374656d"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">eigenSystem</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(values: <a class="reference internal" href="JuliaComplexF64Vector.html#l4a756c6961436f6d706c6578463634566563746f72"><span class="std std-ref">JuliaComplexF64Vector</span></a>, leftVectors: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, rightVectors: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenSystem(m)</span></code> computes the spectral decomposition of <code class="docutils literal notranslate"><span class="pre">m</span></code>. If the <code class="docutils literal notranslate"><span class="pre">j</span></code>-th eigenvalue (values) is real, then the left eigenvectors <code class="docutils literal notranslate"><span class="pre">u</span></code>(<code class="docutils literal notranslate"><span class="pre">j</span></code>) = column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j</span></code>), the <code class="docutils literal notranslate"><span class="pre">j</span></code>-th column of lefVectors. If the <code class="docutils literal notranslate"><span class="pre">j</span></code>-th and (<code class="docutils literal notranslate"><span class="pre">j+1</span></code>)<code class="docutils literal notranslate"><span class="pre">-st</span></code> eigenvalues form a complex conjugate pair, then the left eigenvectors are <code class="docutils literal notranslate"><span class="pre">u</span></code>(<code class="docutils literal notranslate"><span class="pre">j</span></code>) = column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j</span></code>) + %i*column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j+1</span></code>) and <code class="docutils literal notranslate"><span class="pre">u</span></code>(<code class="docutils literal notranslate"><span class="pre">j+1</span></code>) = column(lefVectors,<code class="docutils literal notranslate"><span class="pre">j</span></code>) - %i*column((lefVectors,<code class="docutils literal notranslate"><span class="pre">j+1</span></code>). This applieas also to righVectors.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-65696776616c7321"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">eigvals!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaComplexF64Vector.html#l4a756c6961436f6d706c6578463634566563746f72"><span class="std std-ref">JuliaComplexF64Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigvals!(m)</span></code> returns the eigen values of <code class="docutils literal notranslate"><span class="pre">m</span></code> but overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> to save memory space.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-65696776616c73"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">eigvals</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaComplexF64Vector.html#l4a756c6961436f6d706c6578463634566563746f72"><span class="std std-ref">JuliaComplexF64Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigvals(m)</span></code> returns the eigen values of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-65696776656373"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">eigvecs</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaComplexF64Matrix.html#l4a756c6961436f6d706c65784636344d6174726978"><span class="std std-ref">JuliaComplexF64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigvecs(m)</span></code> returns the eigen vectors of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-657870"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">exp</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(m)</span></code> returns the matrix exponential of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6a6c5065616b466c6f7073"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">jlPeakFlops</span>: () -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlPeakFlops()</span></code> returns the peak flop rate using matrix multiplication. You can modify the number of threads used or the BLAS/LAPACK libraries used to see if that fits your needs.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6c6f67"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">log</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaComplexF64Matrix.html#l4a756c6961436f6d706c65784636344d6174726978"><span class="std std-ref">JuliaComplexF64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(m)</span></code> tries to compute the principal matrix logarithm of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Otherwise, returns a non pricipal matrix logarithm of <code class="docutils literal notranslate"><span class="pre">m</span></code> if possible.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6c6f6744657465726d696e616e74"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">logDeterminant</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logDeterminant(m)</span></code> computes the logarithm of the determinant of <code class="docutils literal notranslate"><span class="pre">m</span></code>, possibly with more accuracy and avoding nder/overflow.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6c7521"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">lu!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(LU: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, ipiv: <a class="reference internal" href="JuliaInt64Vector.html#l4a756c6961496e743634566563746f72"><span class="std std-ref">JuliaInt64Vector</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lu!(m)</span></code> computes the LU factorisation of <code class="docutils literal notranslate"><span class="pre">m</span></code> in <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6c75"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">lu</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(LU: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, L: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, U: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, ipiv: <a class="reference internal" href="JuliaInt64Vector.html#l4a756c6961496e743634566563746f72"><span class="std std-ref">JuliaInt64Vector</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lu(m)</span></code> computes the LU factorisation of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6c7552656f7264657221"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">luReorder!</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaInt64Vector.html#l4a756c6961496e743634566563746f72"><span class="std std-ref">JuliaInt64Vector</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p>luOrder(mat, ipiv) returns mat in-place reordered with ipiv pivot indices.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6c7552656f72646572"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">luReorder</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaInt64Vector.html#l4a756c6961496e743634566563746f72"><span class="std std-ref">JuliaInt64Vector</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p>luOrder(mat, ipiv) returns a copy of mat reordered with ipiv pivot indices.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6d70496e7665727365"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">mpInverse</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mpInverse(m)</span></code> returns the Moore-Penrose pseudo inverse of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6e6f726d"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">norm</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">norm(m,p)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">p</span></code>-norm of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-21">
+<dt><span class="spadfun">norm</span>: (<a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">norm(v,p)</span></code> computes th <code class="docutils literal notranslate"><span class="pre">p</span></code>-norm of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-22">
+<dt><span class="spadfun">norm</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">norm(m)</span></code> computes the 2-norm of <code class="docutils literal notranslate"><span class="pre">m</span></code>, also known as the Frobenius norm.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-23">
+<dt><span class="spadfun">norm</span>: <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">norm(v)</span></code> computes the 2-norm of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6e6f726d616c697a6521"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">normalize!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalize!(m)</span></code> destructively normalize <code class="docutils literal notranslate"><span class="pre">m</span></code> such that its norm equals to 1.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-25">
+<dt><span class="spadfun">normalize!</span>: <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalize!(v)</span></code> destructively normalize <code class="docutils literal notranslate"><span class="pre">v</span></code> such that norm(<code class="docutils literal notranslate"><span class="pre">v</span></code>) equals to 1.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6e6f726d616c697a65"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">normalize</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalize(m)</span></code> returns normalized <code class="docutils literal notranslate"><span class="pre">m</span></code> such that its norm equals to 1.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-27">
+<dt><span class="spadfun">normalize</span>: <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalize(v)</span></code> returns normalized <code class="docutils literal notranslate"><span class="pre">v</span></code> such that its norm equals to 1.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-6f70657261746f724e6f726d"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">operatorNorm</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">operatorNorm(m,p)</span></code> computes the operator norm of <code class="docutils literal notranslate"><span class="pre">m</span></code> induced by the vector <code class="docutils literal notranslate"><span class="pre">p</span></code>-norm.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">operatorNorm</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">operatorNorm(m)</span></code> computes the operator norm of <code class="docutils literal notranslate"><span class="pre">m</span></code> induced by the vector 2-norm.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-72616e6b21"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">rank!</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank!(m,</span> <span class="pre">tol)</span></code> computes rank of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Counts singular value with magnitude greater than tol but overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> to save memory space.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-72616e6b"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">rank</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank(m,</span> <span class="pre">tol)</span></code> computes rank of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Counts singular value with magnitude greater than tol.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-736f6c766521"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">solve!</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">solve!(A,B)</span></code> solves the matrix equation A*X=B. Overwrites <code class="docutils literal notranslate"><span class="pre">B</span></code> with matrix <code class="docutils literal notranslate"><span class="pre">X</span></code> and returns <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-736f6c7665"></span><dl class="simple" id="index-33">
+<dt><span class="spadfun">solve</span>: (<a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>) -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">solve(A,B)</span></code> solves the matrix equation A*X=B, and returns <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-73717274"></span><dl class="simple" id="index-34">
+<dt><span class="spadfun">sqrt</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaComplexF64Matrix.html#l4a756c6961436f6d706c65784636344d6174726978"><span class="std std-ref">JuliaComplexF64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sqrt(m)</span></code> returns the principal square root of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-73766421"></span><dl class="simple" id="index-35">
+<dt><span class="spadfun">svd!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(U: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, sv: <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a>, Vt: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">svd!(m)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">svd</span></code>(<code class="docutils literal notranslate"><span class="pre">m</span></code>) but overwites a to save memory space.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-737664"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">svd</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; Record(U: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>, sv: <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a>, Vt: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">svd(m)</span></code> computes the singular value decomposition <code class="docutils literal notranslate"><span class="pre">SVD</span></code> of <code class="docutils literal notranslate"><span class="pre">m</span></code> such that <code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">U</span></code> * diagonalMatrix(<code class="docutils literal notranslate"><span class="pre">sv</span></code>) * <code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">Vt</span></code> = <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-73766476616c7321"></span><dl class="simple" id="index-37">
+<dt><span class="spadfun">svdvals!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">svdvals!(m)</span></code> returns the singular values of <code class="docutils literal notranslate"><span class="pre">m</span></code> but overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> to save memory space.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-73766476616c73"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">svdvals</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Vector.html#l4a756c6961466c6f61743634566563746f72"><span class="std std-ref">JuliaFloat64Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">svdvals(m)</span></code> returns the singular values of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-7472616365"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">trace</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">trace(m)</span></code> computes the trace of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-7472696c21"></span><dl class="simple" id="index-40">
+<dt><span class="spadfun">tril!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tril!(m)</span></code> overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> with its upper triangular matrix counterpart. Returns <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-7472696c"></span><dl class="simple" id="index-41">
+<dt><span class="spadfun">tril</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tril(m)</span></code> returns the lower triangular matrix of <code class="docutils literal notranslate"><span class="pre">m</span></code></p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-7472697521"></span><dl class="simple" id="index-42">
+<dt><span class="spadfun">triu!</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">triu!(m)</span></code> overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> with its upper triangular matrix counterpart. Returns <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c69615265616c4c696e656172416c6765627261-74726975"></span><dl class="simple" id="index-43">
+<dt><span class="spadfun">triu</span>: <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a> -&gt; <a class="reference internal" href="JuliaFloat64Matrix.html#l4a756c6961466c6f617436344d6174726978"><span class="std std-ref">JuliaFloat64Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">triu(m)</span></code> returns the upper triangular matrix of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JuliaStringUtilities.html" title="JuliaStringUtilities"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JuliaPlotFunctions.html" title="JuliaPlotFunctions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JuliaRealLinearAlgebra</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

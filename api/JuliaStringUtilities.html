@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JuliaStringUtilities &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JuliaUtilityFunctions" href="JuliaUtilityFunctions.html" />
+    <link rel="prev" title="JuliaRealLinearAlgebra" href="JuliaRealLinearAlgebra.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JuliaUtilityFunctions.html" title="JuliaUtilityFunctions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JuliaRealLinearAlgebra.html" title="JuliaRealLinearAlgebra"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JuliaStringUtilities</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="juliastringutilities">
+<span id="l4a756c6961537472696e675574696c6974696573"></span><span id="index-0"></span><h1>JuliaStringUtilities<a class="headerlink" href="#juliastringutilities" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/jutils.spad#L294">jutils.spad line 294</a> <a class="extlink-editcode reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/jutils.spad#L294">[edit on github]</a></p>
+<p>This package provides Julia facilities that operate on strings.</p>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c4c61746578"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">jlLatex</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlLatex(str)</span></code> returns the String corresponding to a Julia LaTeX expression, that is, “L”str”” if your Julia support it (LaTeXStrings package). Convenience function.</p>
+</dd>
+</dl>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c5265676578"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">jlRegex</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegex(str)</span></code> returns the String corresponding to a Julia regular expression, that is, “r”str””. Convenience function.</p>
+</dd>
+</dl>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c52656765784d617463683f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">jlRegexMatch?</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>jlRegexMatch(regex,<code class="docutils literal notranslate"><span class="pre">s</span></code>) checks if the regular expression matches in <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c52656765784d61746368"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">jlRegexMatch</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="AssociationList.html#l4173736f63696174696f6e4c697374"><span class="std std-ref">AssociationList</span></a>(<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexMatch(regex,</span> <span class="pre">s)</span></code> returns the matched regular expressions in <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">jlRegexMatch</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexMatch(regex,</span> <span class="pre">s)</span></code> returns the matched regular expressions in <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">jlRegexMatch</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexMatch(regex,</span> <span class="pre">s)</span></code> returns the matched regular expression in <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">jlRegexMatch</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="AssociationList.html#l4173736f63696174696f6e4c697374"><span class="std std-ref">AssociationList</span></a>(<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexMatch(regex,</span> <span class="pre">s,</span> <span class="pre">i)</span></code> returns the matched regular expressions in <code class="docutils literal notranslate"><span class="pre">s</span></code>, starting at index <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">jlRegexMatch</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexMatch(regex,</span> <span class="pre">s,</span> <span class="pre">i)</span></code> returns the matched regular expressions in <code class="docutils literal notranslate"><span class="pre">s</span></code>, starting at index <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">jlRegexMatch</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexMatch(regex,</span> <span class="pre">s,</span> <span class="pre">i)</span></code> returns the matched regular expression in <code class="docutils literal notranslate"><span class="pre">s</span></code>, starting at index <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c52656765785265706c616365"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">jlRegexReplace</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRegexReplace(regex,subst,str)</span></code> will replace captured regular expression in <code class="docutils literal notranslate"><span class="pre">str</span></code> with <code class="docutils literal notranslate"><span class="pre">subst</span></code>. More information in String documentation of Julia. For example: jlRegexReplace(jlRegex(<code class="docutils literal notranslate"><span class="pre">&quot;!&quot;</span></code>), jlSubstitute(” you”), “hey!”)</p>
+</dd>
+</dl>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c53706c6974"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">jlSplit</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlSplit(str,</span> <span class="pre">delims)</span></code> split <code class="docutils literal notranslate"><span class="pre">str</span></code> with delimiter(<code class="docutils literal notranslate"><span class="pre">s</span></code>) delims (a string or a regular expression). Equivalent to jlSplit(<code class="docutils literal notranslate"><span class="pre">str</span></code>, delims, 0).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">jlSplit</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlSplit(str,</span> <span class="pre">delims,</span> <span class="pre">n)</span></code> split <code class="docutils literal notranslate"><span class="pre">str</span></code> with delimiter(<code class="docutils literal notranslate"><span class="pre">s</span></code>) <code class="docutils literal notranslate"><span class="pre">delims</span></code> (a string or a regular expression). Return a list of size <code class="docutils literal notranslate"><span class="pre">n</span></code>. Parse entirely <code class="docutils literal notranslate"><span class="pre">str</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> = 0.</p>
+</dd>
+</dl>
+<span id="l4a756c6961537472696e675574696c6974696573-6a6c53756273746974757465"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">jlSubstitute</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlSubstitute(str)</span></code> returns the String corresponding to a Julia subtitute expression, that is, “s”str”””. Convenience function.</p>
+</dd>
+</dl>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JuliaUtilityFunctions.html" title="JuliaUtilityFunctions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JuliaRealLinearAlgebra.html" title="JuliaRealLinearAlgebra"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JuliaStringUtilities</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>
