@@ -5,7 +5,7 @@
 InnerNemoExactComplexField Options
 ==================================
 
-:viewcode:`jnemo.spad line 767 <jnemo.spad#L767>` :editcode:`[edit on github] <jnemo.spad#L767>`
+:viewcode:`jnemo.spad line 768 <jnemo.spad#L768>` :editcode:`[edit on github] <jnemo.spad#L768>`
 
 * Options: \ :ref:`JuliaObject <l4a756c69614f626a656374>`\ 
 
@@ -257,7 +257,7 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; ceiling
 
 :spadfun:`ceiling`\: % -> % 
-  
+  \ ``ceiling(z)``\ 
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6368617261637465726973746963:
 
@@ -701,7 +701,7 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; floor
 
 :spadfun:`floor`\: % -> % 
-  
+  \ ``floor(z)``\ 
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-47616d6d61:
 
@@ -797,7 +797,7 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; integer?
 
 :spadfun:`integer?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integer?(x)``\  checks whether or not \ ``x``\  is an integer.
+  \ ``integer?(z)``\  checks whether or not \ ``z``\  is an integer.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-696e76:
 
@@ -996,8 +996,8 @@ InnerNemoExactComplexField Options
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6f6e653f:
 
-\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+\ :ref:`one? <l4a756c696152696e67-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6f70706f736974653f:
 
@@ -1116,8 +1116,11 @@ InnerNemoExactComplexField Options
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-726174696f6e616c3f:
 
-\ :ref:`rational? <l436f6d706c657843617465676f7279-726174696f6e616c3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ 
+.. index::
+   pair: InnerNemoExactComplexField; rational?
+
+:spadfun:`rational?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``rational?(x)``\  checks whether or not \ ``x``\  is a rational number.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-726174696f6e616c:
 
@@ -1135,7 +1138,7 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; real?
 
 :spadfun:`real?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``real?(x)``\  checks whether or not \ ``x``\  is a real number.
+  \ ``real?(z)``\  checks whether or not \ ``z``\  is a real number.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-7265616c:
 
@@ -1228,11 +1231,21 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; retractIfCan
 
 :spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\ , failed) 
-  \ ``retractIfCan(z)``\  retracts
+  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a NemoAlgebraicNumber.
 
 
-\ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , failed) 
-  from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ 
+.. index::
+   pair: InnerNemoExactComplexField; retractIfCan
+
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
+  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a Integer.
+
+
+.. index::
+   pair: InnerNemoExactComplexField; retractIfCan
+
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , failed) 
+  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a NemoRational.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-7269676874506f776572:
 
@@ -1396,7 +1409,7 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; undefined
 
 :spadfun:`undefined`\: () -> % 
-  
+  \ ``undefined()``\  returns the undefined special value.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-756e69743f:
 
@@ -1427,7 +1440,7 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; unknown
 
 :spadfun:`unknown`\: () -> % 
-  
+  \ ``unknown()``\  returns the unknown special value.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-756e7369676e6564496e66696e6974793f:
 
@@ -1439,8 +1452,8 @@ InnerNemoExactComplexField Options
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l4a756c696152696e67-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
