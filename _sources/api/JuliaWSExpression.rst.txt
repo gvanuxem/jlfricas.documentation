@@ -134,8 +134,8 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 .. _l4a756c6961575345787072657373696f6e-616273:
 
-\ :ref:`abs <l5370656369616c46756e6374696f6e43617465676f7279-616273>`\ \: % -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+\ :ref:`abs <l436f6d706c657843617465676f7279-616273>`\ \: % -> % 
+  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
 
 .. _l4a756c6961575345787072657373696f6e-61636f73:
 
@@ -384,6 +384,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`cancel`\: (%, %) -> % 
   \ ``cancel(expr, opt)``\  cancels common factors in numerators and denominators of the rational expression \ ``expr``\  with options opt, for example an Extension rule.
 
+.. _l4a756c6961575345787072657373696f6e-636174616c616e:
+
+.. index::
+   pair: JuliaWSExpression; catalan
+
+:spadfun:`catalan`\: () -> % 
+  \ ``catalan()``\  returns Catalan\ ``'s``\  contant.
+
 .. _l4a756c6961575345787072657373696f6e-6365696c696e67:
 
 .. index::
@@ -445,7 +453,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; coefficient
 
-:spadfun:`coefficient`\: (%, %, \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+:spadfun:`coefficient`\: (%, %, %) -> % 
   \ ``coefficient(p, expr, n)``\  returns the coefficient of expr^n in \ ``p``\ .
 
 .. _l4a756c6961575345787072657373696f6e-636f656666696369656e744c697374:
@@ -608,8 +616,8 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 .. _l4a756c6961575345787072657373696f6e-636f6e6a7567617465:
 
-\ :ref:`conjugate <l5370656369616c46756e6374696f6e43617465676f7279-636f6e6a7567617465>`\ \: % -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+\ :ref:`conjugate <l436f6d706c657843617465676f7279-636f6e6a7567617465>`\ \: % -> % 
+  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
 
 .. _l4a756c6961575345787072657373696f6e-636f6e76657274:
 
@@ -797,6 +805,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 \ :ref:`definingPolynomial <l4d6f6e6f67656e6963416c6765627261-646566696e696e67506f6c796e6f6d69616c>`\ \: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
 
+.. _l4a756c6961575345787072657373696f6e-646567726565:
+
+.. index::
+   pair: JuliaWSExpression; degree
+
+:spadfun:`degree`\: () -> % 
+  \ ``degree()``\  returns conversion factor from degrees to radians, \ ``π/180``\ .
+
 .. _l4a756c6961575345787072657373696f6e-64656c657465:
 
 \ :ref:`delete <l4a756c69615753416767726567617465-64656c657465>`\ \: (%, \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
@@ -825,14 +841,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; derivative
 
-:spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
+:spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , %) -> % 
   \ ``derivative(func,n)``\  returns the derivative of order \ ``n``\  of \ ``func``\ . \example{fprime:=derivative(operator('f),1)}
 
 
 .. index::
    pair: JuliaWSExpression; derivative
 
-:spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %) -> % 
+:spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , %, %) -> % 
   \ ``derivative(func, n, var)``\  returns the derivative of order \ ``n``\  of \ ``func``\  applied to var. \example{x := jWSExpr x} \example{fprimex:=derivative(operator('f),1,x)}
 
 .. _l4a756c6961575345787072657373696f6e-646966666572656e7469617465:
@@ -999,7 +1015,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; EiEn
 
-:spadfun:`EiEn`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %) -> % 
+:spadfun:`EiEn`\: (%, %) -> % 
   \ ``EiEn(n,z)``\  returns the exponential integral En(\ ``z``\ ).
 
 .. _l4a756c6961575345787072657373696f6e-656c6c697074696345:
@@ -1143,6 +1159,37 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+
+.. _l4a756c6961575345787072657373696f6e-65756c657245:
+
+.. index::
+   pair: JuliaWSExpression; eulerE
+
+:spadfun:`eulerE`\: % -> % 
+  \ ``eulerE(n)``\  returns the Euler number En.
+
+
+.. index::
+   pair: JuliaWSExpression; eulerE
+
+:spadfun:`eulerE`\: (%, %) -> % 
+  \ ``eulerE(n,z)``\  return the Euler \ ``E``\  polynomial of degree \ ``n``\ .
+
+.. _l4a756c6961575345787072657373696f6e-65756c657247616d6d61:
+
+.. index::
+   pair: JuliaWSExpression; eulerGamma
+
+:spadfun:`eulerGamma`\: () -> % 
+  \ ``eulerGamma()``\  returns the Euler\ ``'s``\  constant gamma (\ ``γ``\ ).
+
+.. _l4a756c6961575345787072657373696f6e-65756c6572506869:
+
+.. index::
+   pair: JuliaWSExpression; eulerPhi
+
+:spadfun:`eulerPhi`\: % -> % 
+  \ ``eulerPhi(n)``\  is the totient function i.e. the number of integers that are relatively prime to \ ``n``\  in the range [1,\ ``n``\ ].
 
 .. _l4a756c6961575345787072657373696f6e-6576616c:
 
@@ -1446,7 +1493,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; fibonacci
 
-:spadfun:`fibonacci`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %) -> % 
+:spadfun:`fibonacci`\: (%, %) -> % 
   \ ``fibonacci(n, x)``\  returns the Fibonacci polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
 
 .. _l4a756c6961575345787072657373696f6e-66696e64496e7374616e6365:
@@ -1603,20 +1650,28 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; gegenbauerC
 
-:spadfun:`gegenbauerC`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %) -> % 
+:spadfun:`gegenbauerC`\: (%, %) -> % 
   \ ``gegenbauerC(n,x)``\  returns the renormalized form of the Gegenbauer polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
 
 
 .. index::
    pair: JuliaWSExpression; gegenbauerC
 
-:spadfun:`gegenbauerC`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %, %) -> % 
+:spadfun:`gegenbauerC`\: (%, %, %) -> % 
   \ ``gegenbauerC(n,lambda,x)``\  returns the Gegenbauer polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
 
 .. _l4a756c6961575345787072657373696f6e-67656e657261746f72:
 
 \ :ref:`generator <l4d6f6e6f67656e6963416c6765627261-67656e657261746f72>`\ \: () -> % 
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
+
+.. _l4a756c6961575345787072657373696f6e-676f6c64656e526174696f:
+
+.. index::
+   pair: JuliaWSExpression; goldenRatio
+
+:spadfun:`goldenRatio`\: () -> % 
+  \ ``goldenRatio()``\  returns the golden ratio.
 
 .. _l4a756c6961575345787072657373696f6e-67726f65626e65724261736973:
 
@@ -2294,6 +2349,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`jWSString`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ ``jWSString(str)``\  returns \ ``str``\  as a \ ``WS``\  String.
 
+.. _l4a756c6961575345787072657373696f6e-6a57535461626c65:
+
+.. index::
+   pair: JuliaWSExpression; jWSTable
+
+:spadfun:`jWSTable`\: (%, %) -> \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  % 
+  \ ``jWSTable(expr, range)``\  applies the \ ``expr``\  to the define range.
+
+
+.. index::
+   pair: JuliaWSExpression; jWSTable
+
+:spadfun:`jWSTable`\: (%, %, %) -> \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  % 
+  \ ``jWSTable(expr, range1, range2)``\  applies the \ ``expr``\  to the define ranges.
+
 .. _l4a756c6961575345787072657373696f6e-6b656c76696e426569:
 
 \ :ref:`kelvinBei <l5370656369616c46756e6374696f6e43617465676f7279-6b656c76696e426569>`\ \: (%, %) -> % 
@@ -2338,7 +2408,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
    pair: JuliaWSExpression; key?
 
 :spadfun:`key?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  key(as,key) checks wheter or not key exist in the assoiation as.
+  \ ``key?(assoc,key)``\  checks wheter or not \ ``key``\  exist in the association \ ``assoc``\ .
 
 .. _l4a756c6961575345787072657373696f6e-6b657973:
 
@@ -2395,7 +2465,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; lambertW
 
-:spadfun:`lambertW`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %) -> % 
+:spadfun:`lambertW`\: (%, %) -> % 
   \ ``lambertW(k,z)``\  returns the \ ``k``\ -th solution to LambertW function.
 
 .. _l4a756c6961575345787072657373696f6e-6c617374:
@@ -3192,6 +3262,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`positive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``positive?(expr)``\  checks whether or not \ ``expr``\  is positive.
+
+.. _l4a756c6961575345787072657373696f6e-706f736974697665496e66696e697479:
+
+.. index::
+   pair: JuliaWSExpression; positiveInfinity
+
+:spadfun:`positiveInfinity`\: () -> % 
+  \ ``positiveInfinity()``\  returns positive infinity (∞).
 
 .. _l4a756c6961575345787072657373696f6e-706f776572457870616e64:
 
@@ -4042,15 +4120,15 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; stieltjesGamma
 
-:spadfun:`stieltjesGamma`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , %) -> % 
-  \ ``stieltjesGamma(n,a)``\  returns the generalized \ ``n``\ -th Stieltjes constant.
+:spadfun:`stieltjesGamma`\: % -> % 
+  \ ``stieltjesGamma(n)``\  returns the \ ``n``\ -th Stieltjes constant.
 
 
 .. index::
    pair: JuliaWSExpression; stieltjesGamma
 
-:spadfun:`stieltjesGamma`\: \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\  -> % 
-  \ ``stieltjesGamma(n)``\  returns the \ ``n``\ -th Stieltjes constant.
+:spadfun:`stieltjesGamma`\: (%, %) -> % 
+  \ ``stieltjesGamma(n,a)``\  returns the generalized \ ``n``\ -th Stieltjes constant.
 
 .. _l4a756c6961575345787072657373696f6e-737472696e67:
 
@@ -4129,7 +4207,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; symmetricPolynomial
 
-:spadfun:`symmetricPolynomial`\: (\ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ , \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  %) -> % 
+:spadfun:`symmetricPolynomial`\: (%, \ :ref:`JuliaWSList <l4a756c696157534c697374>`\  %) -> % 
   \ ``symmetricPolynomial(n,lvars)``\  returns the \ ``n``\ -th elementary symmetric polynomial with respect to variables in \ ``lvars``\ .
 
 .. _l4a756c6961575345787072657373696f6e-73796d6d6574726963526564756374696f6e:
