@@ -22,12 +22,12 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 .. _l5461626c65416767726567617465-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l5461626c65416767726567617465-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l5461626c65416767726567617465-616e793f:
@@ -41,7 +41,7 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 .. _l5461626c65416767726567617465-636f65726365:
 
-\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Entry has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Record(key: Key, entry: Entry) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Record(key: Key, entry: Entry) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Entry has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 .. _l5461626c65416767726567617465-636f6e737472756374:
@@ -121,11 +121,11 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 .. _l5461626c65416767726567617465-6576616c:
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Entry, Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Entry, Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Entry
 
 
@@ -133,11 +133,11 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
   from \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Entry, \ :ref:`List <l4c697374>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Entry, \ :ref:`List <l4c697374>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Entry
 
 
@@ -213,7 +213,7 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 .. _l5461626c65416767726567617465-6c61746578:
 
-\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 .. _l5461626c65416767726567617465-6c6573733f:
@@ -422,9 +422,9 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 \ :ref:`BagAggregate <l426167416767726567617465>`\  Record(key: Key, entry: Entry) 
 
-\ :ref:`BasicType <l426173696354797065>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
 
-\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Entry has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Record(key: Key, entry: Entry) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Record(key: Key, entry: Entry) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Entry has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 \ :ref:`Collection <l436f6c6c656374696f6e>`\  Record(key: Key, entry: Entry) 
 
@@ -438,7 +438,7 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (Key, Entry) 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  Entry if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`Evalable <l4576616c61626c65>`\  Entry if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry) if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: Key, entry: Entry) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry)
 
@@ -448,13 +448,13 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
 
 \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (Key, Entry) 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry) if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry) if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Record(key: Key, entry: Entry), Record(key: Key, entry: Entry)) if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: Key, entry: Entry) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry)
 
 \ :ref:`KeyedDictionary <l4b6579656444696374696f6e617279>`\ (Key, Entry) 
 
-\ :ref:`SetCategory <l53657443617465676f7279>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`SetCategory <l53657443617465676f7279>`\  if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
 

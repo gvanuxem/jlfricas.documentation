@@ -24,15 +24,30 @@ This package provides different Julia utility functions.
 .. index::
    pair: JuliaUtilityFunctions; jlApprox?
 
+:spadfun:`jlApprox?`\: (\ :ref:`JuliaComplexF32 <l4a756c6961436f6d706c6578463332>`\ , \ :ref:`JuliaComplexF32 <l4a756c6961436f6d706c6578463332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.
+
+
+.. index::
+   pair: JuliaUtilityFunctions; jlApprox?
+
 :spadfun:`jlApprox?`\: (\ :ref:`JuliaComplexF64 <l4a756c6961436f6d706c6578463634>`\ , \ :ref:`JuliaComplexF64 <l4a756c6961436f6d706c6578463634>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c426f6f6c46756e6374696f6e32463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlBoolFunction2F32
+
+:spadfun:`jlBoolFunction2F32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlBoolFunction2F32``\ 
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c426f6f6c46756e6374696f6e32463634:
 
 .. index::
    pair: JuliaUtilityFunctions; jlBoolFunction2F64
 
-:spadfun:`jlBoolFunction2F64`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , JF54) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+:spadfun:`jlBoolFunction2F64`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlBoolFunction2F64``\ 
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c446566696e65643f:
@@ -106,6 +121,110 @@ This package provides different Julia utility functions.
 
 :spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
   \ ``jlEvalString(str)``\  evaluates \ ``str``\  in Julia with no output.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e32463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32Function2F32
+
+:spadfun:`jlF32Function2F32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32Function2F32(func,x,y)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e33463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32Function3F32
+
+:spadfun:`jlF32Function3F32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32Function3F32(func, x, y, z)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e434633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionCF32Mat
+
+:spadfun:`jlF32FunctionCF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  jlF32FunctionF32Mat(func, cmat, \ ``nr``\ ) returns the output value of func applied to cmat, internally a vector, where the number of rows is \ ``nr``\ .
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e434633324d6174463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionCF32MatF32
+
+:spadfun:`jlF32FunctionCF32MatF32`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  jlF32FunctionF32Mat(func, cmat, \ ``nr``\ , \ ``p``\ ) returns the output value of func applied to cmat, internally a vector, where the number of rows is \ ``nr``\  and \ ``p``\  an additional parameter.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e43463332566563:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionCF32Vec
+
+:spadfun:`jlF32FunctionCF32Vec`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32FunctionCF32Vec(func, cvec)``\  returns the output value of \ ``func``\  applied to cvec.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e43463332566563463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionCF32VecF32
+
+:spadfun:`jlF32FunctionCF32VecF32`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  jlF32FunctionCF32Vec(func, cvec, \ ``p``\ ) returns the output value of func applied to cvec with parameter \ ``p``\ .
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionF32
+
+:spadfun:`jlF32FunctionF32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32FunctionF32(func,x)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e463332493634:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionF32I64
+
+:spadfun:`jlF32FunctionF32I64`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32FunctionF32I64(func,x,i)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e4633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionF32Mat
+
+:spadfun:`jlF32FunctionF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32FunctionF32Mat(func, mat, nr)``\  returns the output value of \ ``func``\  applied to \ ``mat``\ , internally a vector, where the number of rows is \ ``nr``\ .
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e4633324d6174463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionF32MatF32
+
+:spadfun:`jlF32FunctionF32MatF32`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  jlF32FunctionF32Mat(func, mat, \ ``nr``\ , \ ``p``\ ) returns the output value of func applied to mat, internally a vector, where the number of rows is \ ``nr``\  and \ ``p``\  an additional parameter.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e463332566563:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionF32Vec
+
+:spadfun:`jlF32FunctionF32Vec`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  jlF32FunctionCF32Vec(func, vec) returns the output value of func applied to vec.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e463332566563463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionF32VecF32
+
+:spadfun:`jlF32FunctionF32VecF32`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  jlF32FunctionCF32Vec(func, vec, \ ``p``\ ) returns the output value of func applied to vec with parameter \ ``p``\ .
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46333246756e6374696f6e493634463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlF32FunctionI64F32
+
+:spadfun:`jlF32FunctionI64F32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\  
+  \ ``jlF32FunctionI64F32(func,i,x)``\ 
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46363446756e6374696f6e32463634:
 
@@ -211,6 +330,29 @@ This package provides different Julia utility functions.
 :spadfun:`jlF64FunctionI64F64`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
   \ ``jlF64FunctionI64F64(func,i,x)``\ 
 
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e32434633324d617421:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2CF32Mat!
+
+:spadfun:`jlFunction2CF32Mat!`\: (\ :ref:`String <l537472696e67>`\ , JCF32MAT, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , JCF32MAT, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlFunction2CF32Mat(func, \ ``cmat1``\ , \ ``cmat2``\ ) applies the Julia function func to \ ``cmat2``\  that overwrites \ ``cmat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
+
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2CF32Mat!
+
+:spadfun:`jlFunction2CF32Mat!`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlFunction2CF32Mat(func, \ ``cmat1``\ , \ ``nr1``\ , \ ``cmat2``\ , \ ``nr2``\ ) applies func to the pair of matrices \ ``cmat1``\  and \ ``cmat2``\  (internally vectors). \ ``nr1``\  and \ ``nr2``\  are respectively the number of rows.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e324346333256656321:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2CF32Vec!
+
+:spadfun:`jlFunction2CF32Vec!`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, JCF32VEC) -> \ :ref:`Void <l566f6964>`\  
+  jlFunction2CF32Vec(func, \ ``cvec1``\ , \ ``cvec2``\ ) applies the Julia function func to \ ``cvec2``\  that overwrites \ ``cvec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
+
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e32434636344d617421:
 
 .. index::
@@ -233,6 +375,37 @@ This package provides different Julia utility functions.
 
 :spadfun:`jlFunction2CF64Vec!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
   jlFunction2CF64Vec(func, \ ``cvec1``\ , \ ``cvec2``\ ) applies the Julia function func to \ ``cvec2``\  that overwrites \ ``cvec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e32463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2F32
+
+:spadfun:`jlFunction2F32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunction2F32(func,x,y)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e324633324d617421:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2F32Mat!
+
+:spadfun:`jlFunction2F32Mat!`\: (\ :ref:`String <l537472696e67>`\ , JF32MAT, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , JF32MAT, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlFunction2F32Mat(func, \ ``mat1``\ , \ ``mat2``\ ) applies the Julia function func to \ ``mat2``\  that overwrites \ ``mat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
+
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2F32Mat!
+
+:spadfun:`jlFunction2F32Mat!`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlFunction2CF32Mat!(func, \ ``mat1``\ , \ ``nr1``\ , \ ``mat2``\ , \ ``nr2``\ ) applies func to the pair of matrices \ ``mat1``\  and \ ``mat2``\  (internally vectors). \ ``nr1``\  and \ ``nr2``\  are respectively the number of rows.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e3246333256656321:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction2F32Vec!
+
+:spadfun:`jlFunction2F32Vec!`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, JF32VEC) -> \ :ref:`Void <l566f6964>`\  
+  jlFunction2F32Vec(func, \ ``vec1``\ , \ ``vec2``\ ) applies the Julia function func to \ ``vec2``\  that overwrites \ ``vec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e32463634:
 
@@ -265,6 +438,14 @@ This package provides different Julia utility functions.
 :spadfun:`jlFunction2F64Vec!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
   jlFunction2F64Vec(func, \ ``vec1``\ , \ ``vec2``\ ) applies the Julia function func to \ ``vec2``\  that overwrites \ ``vec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
 
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e33463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunction3F32
+
+:spadfun:`jlFunction3F32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunction3F32(func,x,y,z)``\ 
+
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e33463634:
 
 .. index::
@@ -272,6 +453,38 @@ This package provides different Julia utility functions.
 
 :spadfun:`jlFunction3F64`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ , \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ ``jlFunction3F64(func,x,y,z)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e434633324172726179434633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionCF32ArrayCF32Mat
+
+:spadfun:`jlFunctionCF32ArrayCF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  jlFunctionF32ArrayCF32Mat(func, carray, cmat, \ ``nr``\ ) applies the function func to the matrix cmat and returns the result in carray. It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in carray.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e4346333241727261794633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionCF32ArrayF32Mat
+
+:spadfun:`jlFunctionCF32ArrayF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunctionCF32ArrayF32Mat(func, carray, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``carray``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``carray``\ . Can be used with Julia 'sqrt' for example.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e434633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionCF32Mat
+
+:spadfun:`jlFunctionCF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlFunctionF32Mat(func, cmat, \ ``nr``\ ) applies func to the matrix mat, internally a vector, where the numer of rows is \ ``nr``\ .
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e43463332566563:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionCF32Vec
+
+:spadfun:`jlFunctionCF32Vec`\: (\ :ref:`String <l537472696e67>`\ , JCF32VEC) -> \ :ref:`Void <l566f6964>`\  
+  jlF32FunctionF32Vec(func, vec) applies func to cvec.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e434636344172726179434636344d6174:
 
@@ -304,6 +517,46 @@ This package provides different Julia utility functions.
 
 :spadfun:`jlFunctionCF64Vec`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
   jlF64FunctionF64Vec(func, vec) applies func to cvec.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionF32
+
+:spadfun:`jlFunctionF32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunctionF32(func,x)``\ 
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e4633324172726179434633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionF32ArrayCF32Mat
+
+:spadfun:`jlFunctionF32ArrayCF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, JCF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunctionF32ArrayCF32Mat(func, array, cmat, nr)``\  applies the function \ ``func``\  to the matrix \ ``cmat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with Julia 'real' or 'imag' for example.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e46333241727261794633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionF32ArrayF32Mat
+
+:spadfun:`jlFunctionF32ArrayF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunctionF32ArrayF32Mat(func, array, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with Julia 'inv' for example.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e4633324d6174:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionF32Mat
+
+:spadfun:`jlFunctionF32Mat`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlFunctionF32Mat(func, mat, nr)``\  applies \ ``func``\  to the matrix \ ``mat``\ , internally a vector, where the numer of rows is \ ``nr``\ .
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e463332566563:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlFunctionF32Vec
+
+:spadfun:`jlFunctionF32Vec`\: (\ :ref:`String <l537472696e67>`\ , JF32VEC) -> \ :ref:`Void <l566f6964>`\  
+  jlFunctionF32Vector(func, vec) applies func to vec.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e463634:
 
@@ -345,6 +598,14 @@ This package provides different Julia utility functions.
 :spadfun:`jlFunctionF64Vec`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
   jlFunctionF64Vector(func, vec) applies func to vec.
 
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c49363446756e6374696f6e463332:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlI64FunctionF32
+
+:spadfun:`jlI64FunctionF32`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32 <l4a756c6961466c6f61743332>`\ ) -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
+  \ ``jlI64FunctionF32(func,x)``\ 
+
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c49363446756e6374696f6e463634:
 
 .. index::
@@ -376,37 +637,5 @@ This package provides different Julia utility functions.
 
 :spadfun:`jlUsing`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlUsing(modpack)``\  loads the module or package \ ``modpack``\  and makes its exported names available. Returns \ ``false``\  if it can not be loaded.
-
-.. _l4a756c69615574696c69747946756e6374696f6e73-6d65616e:
-
-.. index::
-   pair: JuliaUtilityFunctions; mean
-
-:spadfun:`mean`\: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
-  \ ``mean(vec)``\  returns mean of the elements of vector \ ``vec``\ .
-
-.. _l4a756c69615574696c69747946756e6374696f6e73-6d656469616e:
-
-.. index::
-   pair: JuliaUtilityFunctions; median
-
-:spadfun:`median`\: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
-  \ ``median(vec)``\  returns median of the elements of vector \ ``vec``\ .
-
-.. _l4a756c69615574696c69747946756e6374696f6e73-737464:
-
-.. index::
-   pair: JuliaUtilityFunctions; std
-
-:spadfun:`std`\: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
-  \ ``std(vec)``\  returns standard deviation (sum scaled with \ ``n``\ -1) of the elements of vector \ ``vec``\ .
-
-.. _l4a756c69615574696c69747946756e6374696f6e73-766172:
-
-.. index::
-   pair: JuliaUtilityFunctions; var
-
-:spadfun:`var`\: \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\  -> \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  
-  \ ``var(vec)``\  returns variance of the elements of vector \ ``vec``\ .
 
 

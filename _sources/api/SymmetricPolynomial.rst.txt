@@ -131,8 +131,8 @@ This domain implements symmetric polynomial
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-636f656666696369656e74:
 
-\ :ref:`coefficient <l467265654d6f64756c6543617465676f7279-636f656666696369656e74>`\ \: (%, \ :ref:`Partition <l506172746974696f6e>`\ ) -> R 
-  from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, \ :ref:`Partition <l506172746974696f6e>`\ )
+\ :ref:`coefficient <l4162656c69616e4d6f6e6f696452696e67-636f656666696369656e74>`\ \: (%, \ :ref:`Partition <l506172746974696f6e>`\ ) -> R 
+  from \ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`Partition <l506172746974696f6e>`\ )
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-636f656666696369656e7473:
 
@@ -149,16 +149,16 @@ This domain implements symmetric polynomial
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: R -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  R
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: R -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  R
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-636f6d6d757461746f72:
 
@@ -211,12 +211,12 @@ This domain implements symmetric polynomial
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-68617368:
 
-\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if \ :ref:`Partition <l506172746974696f6e>`\  has \ :ref:`Hashable <l4861736861626c65>`\  and R has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\  and \ :ref:`Partition <l506172746974696f6e>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-6861736855706461746521:
 
-\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if \ :ref:`Partition <l506172746974696f6e>`\  has \ :ref:`Hashable <l4861736861626c65>`\  and R has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\  and \ :ref:`Partition <l506172746974696f6e>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-6c61746578:
@@ -315,8 +315,8 @@ This domain implements symmetric polynomial
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-706c656e617279506f776572:
 
-\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
+\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 .. _l53796d6d6574726963506f6c796e6f6d69616c-706f6d6f706f21:
 
@@ -473,7 +473,7 @@ This domain implements symmetric polynomial
 
 \ :ref:`FullyRetractableTo <l46756c6c795265747261637461626c65546f>`\  R 
 
-\ :ref:`Hashable <l4861736861626c65>`\  if \ :ref:`Partition <l506172746974696f6e>`\  has \ :ref:`Hashable <l4861736861626c65>`\  and R has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`Hashable <l4861736861626c65>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\  and \ :ref:`Partition <l506172746974696f6e>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
 
 \ :ref:`IndexedDirectProductCategory <l496e646578656444697265637450726f6475637443617465676f7279>`\ (R, \ :ref:`Partition <l506172746974696f6e>`\ ) 
 

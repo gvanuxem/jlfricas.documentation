@@ -583,14 +583,14 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JuliaMatrix; nrand
 
-:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaComplexFloat <l4a756c6961436f6d706c6578466c6f6174>`\  if R has \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  and R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\ 
+:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaComplexFloat <l4a756c6961436f6d706c6578466c6f6174>`\  if R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\  and R has \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\ 
   \ ``nrand(m,n)``\  returns a JuliaMatrix of size (\ ``m``\ ,\ ``n``\ ) with normally distributed random numbers. \example{mat := nrand(4,4)\$JuliaMatrix(JuliaComplexFloat)} \example{qr := jlApply("qr", mat)} \example{qr.Q * qr.R}
 
 
 .. index::
    pair: JuliaMatrix; nrand
 
-:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
+:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\ 
   \ ``nrand(m,n)``\  returns a JuliaMatrix of size (\ ``m``\ ,\ ``n``\ ) with normally distributed random numbers. For example: \example{mat := nrand(4,4)\$JuliaMatrix(JuliaFloat)} \example{chol := jlApply("cholesky", mat * transpose(mat))} \example{chol.L * chol.U}
 
 .. _l4a756c69614d6174726978-6e726f7773:
@@ -807,14 +807,14 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JuliaMatrix; urand01
 
-:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaComplexFloat <l4a756c6961436f6d706c6578466c6f6174>`\  if R has \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  and R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\ 
+:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaComplexFloat <l4a756c6961436f6d706c6578466c6f6174>`\  if R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\  and R has \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\ 
   \ ``urand01(m,n)``\  returns a JuliaMatrix of size (\ ``m``\ ,\ ``n``\ ) with uniformly distributed random number contained in [0,1]. \example{mat := urand01(4,4)\$JuliaMatrix(JuliaComplexFloat)} \example{qr := jlApply("qr", mat)} \example{qr.Q * qr.R}
 
 
 .. index::
    pair: JuliaMatrix; urand01
 
-:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
+:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\ 
   \ ``urand01(m,n)``\  returns a JuliaMatrix of size (\ ``m``\ ,\ ``n``\ ) with uniformly distributed random number contained in [0,1]. \example{mat := urand01(4,4)\$JuliaMatrix(JuliaFloat)} \example{qr := jlApply("qr", mat)} \example{qr.Q * qr.R}
 
 .. _l4a756c69614d6174726978-76657274436f6e636174:

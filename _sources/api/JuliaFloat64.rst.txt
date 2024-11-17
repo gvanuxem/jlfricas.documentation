@@ -5,10 +5,10 @@
 JuliaFloat64
 ============
 
-:viewcode:`julia.spad line 93 <julia.spad#L93>` :editcode:`[edit on github] <julia.spad#L93>`
+:viewcode:`julia.spad line 377 <julia.spad#L377>` :editcode:`[edit on github] <julia.spad#L377>`
 
 
-\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  implements 64 bits floating point arithmetic using Julia \ ``Float64``\  type. Bear in mind that, like \ ``JuliaInt64``\ , the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the calculations are performed at machine level (generally in \ ``C``\  language, or even using assembly language).
+\ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  implements 64 bits floating point arithmetic using Julia \ ``Float64``\  type. Bear in mind that, like \ ``JuliaInt64``\ , the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the computation is performed at machine level (generally in \ ``C``\  language, or even using assembly language).
 
 
 .. _l4a756c6961466c6f61743634-30:
@@ -366,14 +366,6 @@ JuliaFloat64
 :spadfun:`eulerGamma`\: () -> % 
   \ ``eulerGamma()``\  returns the Euler\ ``'s``\  constant gamma (\ ``γ``\ ).
 
-.. _l4a756c6961466c6f61743634-65787031:
-
-.. index::
-   pair: JuliaFloat64; exp1
-
-:spadfun:`exp1`\: () -> % 
-  exp() returns the \ ``JuliaFloat64``\  \ ``ℯ``\  (\%\ ``e``\  or exp(1)).
-
 .. _l4a756c6961466c6f61743634-657870:
 
 \ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % 
@@ -551,14 +543,6 @@ JuliaFloat64
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %, %, %) -> % 
   \ ``jlCApply(lib, func, x, y, z)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to arguments \ ``x``\ , \ ``y``\  and \ ``z``\ . For example if you have the GNU Scientific Library (\ ``GSl``\ -2.8) installed: \example{jlCApply("libgsl.so.28",jsym(gsl_hypot3),2.0,7.0,9.0)}
 
-.. _l4a756c6961466c6f61743634-6a6c463634466f726d6174:
-
-.. index::
-   pair: JuliaFloat64; jlF64Format
-
-:spadfun:`jlF64Format`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  change the output format using Lisp format strings.
-
 .. _l4a756c6961466c6f61743634-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -624,7 +608,7 @@ JuliaFloat64
   from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 
-\ :ref:`max <l466c6f6174696e67506f696e7453797374656d-6d6178>`\ \: () -> % if % hasn't \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and % hasn't \ :ref:`arbitraryExponent <l6172626974726172794578706f6e656e74>`\ 
+\ :ref:`max <l466c6f6174696e67506f696e7453797374656d-6d6178>`\ \: () -> % if % hasn't \ :ref:`arbitraryExponent <l6172626974726172794578706f6e656e74>`\  and % hasn't \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
   from \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
 
 .. _l4a756c6961466c6f61743634-6d696e:
@@ -633,7 +617,7 @@ JuliaFloat64
   from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 
-\ :ref:`min <l466c6f6174696e67506f696e7453797374656d-6d696e>`\ \: () -> % if % hasn't \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and % hasn't \ :ref:`arbitraryExponent <l6172626974726172794578706f6e656e74>`\ 
+\ :ref:`min <l466c6f6174696e67506f696e7453797374656d-6d696e>`\ \: () -> % if % hasn't \ :ref:`arbitraryExponent <l6172626974726172794578706f6e656e74>`\  and % hasn't \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
   from \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
 
 .. _l4a756c6961466c6f61743634-6d756c74694575636c696465616e:
@@ -708,7 +692,7 @@ JuliaFloat64
 .. _l4a756c6961466c6f61743634-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 .. _l4a756c6961466c6f61743634-706f7369746976653f:
 
@@ -792,8 +776,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-73616d706c65:
 
-\ :ref:`sample <l4d61676d6157697468556e6974-73616d706c65>`\ \: % 
-  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l4a756c6961466c6f61743634-736563:
 

@@ -32,7 +32,7 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\ 
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-3e3d:
@@ -47,7 +47,7 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\ 
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-616e793f:
@@ -84,12 +84,12 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-636f6e63617421:
 
-\ :ref:`concat! <l457874656e7369626c654c696e656172416767726567617465-636f6e63617421>`\ \: (%, %) -> % 
-  from \ :ref:`ExtensibleLinearAggregate <l457874656e7369626c654c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
+\ :ref:`concat! <l556e617279526563757273697665416767726567617465-636f6e63617421>`\ \: (%, %) -> % 
+  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  Record(key: Key, entry: Entry)
 
 
-\ :ref:`concat! <l457874656e7369626c654c696e656172416767726567617465-636f6e63617421>`\ \: (%, Record(key: Key, entry: Entry)) -> % 
-  from \ :ref:`ExtensibleLinearAggregate <l457874656e7369626c654c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
+\ :ref:`concat! <l556e617279526563757273697665416767726567617465-636f6e63617421>`\ \: (%, Record(key: Key, entry: Entry)) -> % 
+  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  Record(key: Key, entry: Entry)
 
 
 \ :ref:`concat! <l556e617279526563757273697665416767726567617465-636f6e63617421>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
@@ -278,11 +278,11 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-6576616c:
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Entry, Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Entry, Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Entry
 
 
@@ -290,11 +290,11 @@ An association list is a list of key entry pairs which may be viewed as a table.
   from \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Entry, \ :ref:`List <l4c697374>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Entry, \ :ref:`List <l4c697374>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Entry
 
 
@@ -667,12 +667,12 @@ An association list is a list of key entry pairs which may be viewed as a table.
   from \ :ref:`KeyedDictionary <l4b6579656444696374696f6e617279>`\ (Key, Entry)
 
 
-\ :ref:`remove! <l44696374696f6e6172794f7065726174696f6e73-72656d6f766521>`\ \: (Record(key: Key, entry: Entry) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  from \ :ref:`DictionaryOperations <l44696374696f6e6172794f7065726174696f6e73>`\  Record(key: Key, entry: Entry)
+\ :ref:`remove! <l457874656e7369626c654c696e656172416767726567617465-72656d6f766521>`\ \: (Record(key: Key, entry: Entry) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`ExtensibleLinearAggregate <l457874656e7369626c654c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
 
 
-\ :ref:`remove! <l44696374696f6e6172794f7065726174696f6e73-72656d6f766521>`\ \: (Record(key: Key, entry: Entry), %) -> % if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
-  from \ :ref:`DictionaryOperations <l44696374696f6e6172794f7065726174696f6e73>`\  Record(key: Key, entry: Entry)
+\ :ref:`remove! <l457874656e7369626c654c696e656172416767726567617465-72656d6f766521>`\ \: (Record(key: Key, entry: Entry), %) -> % if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
+  from \ :ref:`ExtensibleLinearAggregate <l457874656e7369626c654c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-72656d6f7665:
 
@@ -734,8 +734,8 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-73656c65637421:
 
-\ :ref:`select! <l44696374696f6e6172794f7065726174696f6e73-73656c65637421>`\ \: (Record(key: Key, entry: Entry) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  from \ :ref:`DictionaryOperations <l44696374696f6e6172794f7065726174696f6e73>`\  Record(key: Key, entry: Entry)
+\ :ref:`select! <l457874656e7369626c654c696e656172416767726567617465-73656c65637421>`\ \: (Record(key: Key, entry: Entry) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`ExtensibleLinearAggregate <l457874656e7369626c654c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
 
 .. _l4173736f63696174696f6e4c697374416767726567617465-73656c656374:
 
@@ -881,7 +881,7 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 \ :ref:`BagAggregate <l426167416767726567617465>`\  Record(key: Key, entry: Entry) 
 
-\ :ref:`BasicType <l426173696354797065>`\  if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  or Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Entry has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Record(key: Key, entry: Entry) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -905,7 +905,7 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (Key, Entry) 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  Entry if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`Evalable <l4576616c61626c65>`\  Entry if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry) if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: Key, entry: Entry) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry)
 
@@ -925,7 +925,7 @@ An association list is a list of key entry pairs which may be viewed as a table.
 
 \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (Key, Entry) 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry) if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry) if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Record(key: Key, entry: Entry), Record(key: Key, entry: Entry)) if Record(key: Key, entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: Key, entry: Entry) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Entry)
 

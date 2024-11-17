@@ -83,16 +83,16 @@ A stream aggregate is a linear aggregate which possibly has an infinite number o
 
 .. _l53747265616d416767726567617465-636f6e636174:
 
-\ :ref:`concat <l556e617279526563757273697665416767726567617465-636f6e636174>`\ \: (%, %) -> % 
-  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  S
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  S
 
 
 \ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, S) -> % 
   from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  S
 
 
-\ :ref:`concat <l556e617279526563757273697665416767726567617465-636f6e636174>`\ \: (S, %) -> % 
-  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  S
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (S, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  S
 
 
 \ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
@@ -262,12 +262,12 @@ A stream aggregate is a linear aggregate which possibly has an infinite number o
 
 .. _l53747265616d416767726567617465-6669727374:
 
-\ :ref:`first <l556e617279526563757273697665416767726567617465-6669727374>`\ \: % -> S 
-  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  S
+\ :ref:`first <l496e6465786564416767726567617465-6669727374>`\ \: % -> S 
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , S)
 
 
-\ :ref:`first <l556e617279526563757273697665416767726567617465-6669727374>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  S
+\ :ref:`first <l4c696e656172416767726567617465-6669727374>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  S
 
 .. _l53747265616d416767726567617465-68617368:
 
@@ -586,12 +586,12 @@ A stream aggregate is a linear aggregate which possibly has an infinite number o
 
 .. _l53747265616d416767726567617465-736d616c6c65723f:
 
-\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`Comparable <l436f6d70617261626c65>`\  or S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
 .. _l53747265616d416767726567617465-736f727421:
 
-\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: % -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: % -> % if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  S
 
 
@@ -649,7 +649,7 @@ A stream aggregate is a linear aggregate which possibly has an infinite number o
 
 \ :ref:`Aggregate <l416767726567617465>`\  
 
-\ :ref:`BasicType <l426173696354797065>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or S has \ :ref:`Hashable <l4861736861626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or S has \ :ref:`Hashable <l4861736861626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if S has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 

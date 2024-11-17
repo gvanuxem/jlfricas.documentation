@@ -114,16 +114,16 @@ A domain for infinite sequences over a commutative ring. It is implemented as st
 
 .. _l53657175656e6365-636f6e636174:
 
-\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, %) -> % 
-  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  R
+\ :ref:`concat <l556e617279526563757273697665416767726567617465-636f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  R
 
 
 \ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, R) -> % 
   from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  R
 
 
-\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (R, %) -> % 
-  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  R
+\ :ref:`concat <l556e617279526563757273697665416767726567617465-636f6e636174>`\ \: (R, %) -> % 
+  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  R
 
 
 \ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
@@ -286,8 +286,8 @@ A domain for infinite sequences over a commutative ring. It is implemented as st
 
 .. _l53657175656e6365-6669727374:
 
-\ :ref:`first <l496e6465786564416767726567617465-6669727374>`\ \: % -> R 
-  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , R)
+\ :ref:`first <l556e617279526563757273697665416767726567617465-6669727374>`\ \: % -> R 
+  from \ :ref:`UnaryRecursiveAggregate <l556e617279526563757273697665416767726567617465>`\  R
 
 
 \ :ref:`first <l53657175656e636543617465676f7279-6669727374>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -508,12 +508,12 @@ A domain for infinite sequences over a commutative ring. It is implemented as st
 
 .. _l53657175656e6365-736d616c6c65723f:
 
-\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or R has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
   from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
 .. _l53657175656e6365-736f727421:
 
-\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: % -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and R has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: % -> % if R has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  R
 
 
@@ -579,7 +579,7 @@ A domain for infinite sequences over a commutative ring. It is implemented as st
 
 \ :ref:`Collection <l436f6c6c656374696f6e>`\  R 
 
-\ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or R has \ :ref:`Comparable <l436f6d70617261626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 

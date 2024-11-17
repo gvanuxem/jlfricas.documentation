@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JuliaFloat64Matrix" href="JuliaFloat64Matrix.html" />
-    <link rel="prev" title="JuliaFloat" href="JuliaFloat.html" /> 
+    <link rel="prev" title="JuliaFloat32Vector" href="JuliaFloat32Vector.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
@@ -29,7 +29,7 @@
           <a href="JuliaFloat64Matrix.html" title="JuliaFloat64Matrix"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="JuliaFloat.html" title="JuliaFloat"
+          <a href="JuliaFloat32Vector.html" title="JuliaFloat32Vector"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
@@ -45,8 +45,8 @@
             
   <section id="juliafloat64">
 <span id="l4a756c6961466c6f61743634"></span><span id="index-0"></span><h1>JuliaFloat64<a class="headerlink" href="#juliafloat64" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/julia.spad#L93">julia.spad line 93</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/julia.spad#L93">[edit on github]</a></p>
-<p><a class="reference internal" href="#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a> implements 64 bits floating point arithmetic using Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code> type. Bear in mind that, like <code class="docutils literal notranslate"><span class="pre">JuliaInt64</span></code>, the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the calculations are performed at machine level (generally in <code class="docutils literal notranslate"><span class="pre">C</span></code> language, or even using assembly language).</p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/julia.spad#L377">julia.spad line 377</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/julia.spad#L377">[edit on github]</a></p>
+<p><a class="reference internal" href="#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a> implements 64 bits floating point arithmetic using Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code> type. Bear in mind that, like <code class="docutils literal notranslate"><span class="pre">JuliaInt64</span></code>, the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the computation is performed at machine level (generally in <code class="docutils literal notranslate"><span class="pre">C</span></code> language, or even using assembly language).</p>
 <dl class="simple" id="l4a756c6961466c6f61743634-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -297,19 +297,15 @@
 <dt><span class="spadfun">eulerGamma</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eulerGamma()</span></code> returns the Euler<code class="docutils literal notranslate"><span class="pre">'s</span></code> constant gamma (<code class="docutils literal notranslate"><span class="pre">γ</span></code>).</p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-65787031"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">exp1</span>: () -&gt; %</dt><dd><p>exp() returns the <code class="docutils literal notranslate"><span class="pre">JuliaFloat64</span></code> <code class="docutils literal notranslate"><span class="pre">ℯ</span></code> (%<code class="docutils literal notranslate"><span class="pre">e</span></code> or exp(1)).</p>
-</dd>
-</dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-657870">
 <dt><a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279-657870"><span class="std std-ref">exp</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-5">
+<dl class="simple" id="index-4">
 <dt><span class="spadfun">exp</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">JuliaFloat64</span></code> <code class="docutils literal notranslate"><span class="pre">ℯ</span></code> (%<code class="docutils literal notranslate"><span class="pre">e</span></code> or exp(1)).</p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6578706d31"></span><dl class="simple" id="index-6">
+<span id="l4a756c6961466c6f61743634-6578706d31"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">expm1</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">expm1(x)</span></code> computes accurately e^x-1.</p>
 </dd>
 </dl>
@@ -359,57 +355,53 @@
 <dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-676364506f6c796e6f6d69616c"><span class="std std-ref">gcdPolynomial</span></a>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-676f6c64656e526174696f6e"></span><dl class="simple" id="index-7">
+<span id="l4a756c6961466c6f61743634-676f6c64656e526174696f6e"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">goldenRation</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">goldenRation()</span></code> returns the golden ratio.</p>
 </dd>
 </dl>
-<p id="index-8"><span id="l4a756c6961466c6f61743634-6861736855706461746521"></span><span class="spadfun">hashUpdate!</span>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></p>
+<p id="index-7"><span id="l4a756c6961466c6f61743634-6861736855706461746521"></span><span class="spadfun">hashUpdate!</span>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></p>
 <dl class="simple" id="l4a756c6961466c6f61743634-696e76">
 <dt><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67-696e76"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6a663634"></span><dl class="simple" id="index-9">
+<span id="l4a756c6961466c6f61743634-6a663634"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">jf64</span>: <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jf64(x)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">x</span></code> to a Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-10">
+<dl class="simple" id="index-9">
 <dt><span class="spadfun">jf64</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jf64(i)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">i</span></code> to a Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-11">
+<dl class="simple" id="index-10">
 <dt><span class="spadfun">jf64</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jf64(str)</span></code> read the string at the Common Lisp level using read-from-string. It is expected that the string represent a <code class="docutils literal notranslate"><span class="pre">CL</span></code> floating point number and not for example an integer. Convenience function.</p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6a6c4170706c79"></span><dl class="simple" id="index-12">
+<span id="l4a756c6961466c6f61743634-6a6c4170706c79"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-13">
+<dl class="simple" id="index-12">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to arguments <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-14">
+<dl class="simple" id="index-13">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to arguments <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6a6c417070726f783f"></span><dl class="simple" id="index-15">
+<span id="l4a756c6961466c6f61743634-6a6c417070726f783f"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y)</span></code> computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.</p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6a6c434170706c79"></span><dl class="simple" id="index-16">
+<span id="l4a756c6961466c6f61743634-6a6c434170706c79"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">jlCApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JuliaSymbol.html#l4a756c696153796d626f6c"><span class="std std-ref">JuliaSymbol</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlCApply(lib,</span> <span class="pre">func,</span> <span class="pre">x)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">C</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> from the library <code class="docutils literal notranslate"><span class="pre">lib</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>. For example: example{jlCApply(“libm.so.6”,jsym(sqrt),jf64(2.0))}</p>
 </dd>
 </dl>
-<dl class="simple" id="index-17">
+<dl class="simple" id="index-16">
 <dt><span class="spadfun">jlCApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JuliaSymbol.html#l4a756c696153796d626f6c"><span class="std std-ref">JuliaSymbol</span></a>, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlCApply(lib,</span> <span class="pre">func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">C</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> from the library <code class="docutils literal notranslate"><span class="pre">lib</span></code> to arguments <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. For example: example{jlCApply(“libopenlibm”, jsym(pow),2.7,3.0)} OpenLibm library is provided by Julia.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-18">
+<dl class="simple" id="index-17">
 <dt><span class="spadfun">jlCApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JuliaSymbol.html#l4a756c696153796d626f6c"><span class="std std-ref">JuliaSymbol</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlCApply(lib,</span> <span class="pre">func,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">C</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> from the library <code class="docutils literal notranslate"><span class="pre">lib</span></code> to arguments <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>. For example if you have the GNU Scientific Library (<code class="docutils literal notranslate"><span class="pre">GSl</span></code>-2.8) installed: example{jlCApply(“libgsl.so.28”,jsym(gsl_hypot3),2.0,7.0,9.0)}</p>
-</dd>
-</dl>
-<span id="l4a756c6961466c6f61743634-6a6c463634466f726d6174"></span><dl class="simple" id="index-19">
-<dt><span class="spadfun">jlF64Format</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>change the output format using Lisp format strings.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-6c61746578">
@@ -436,11 +428,11 @@
 <dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6c6f673130"></span><dl class="simple" id="index-20">
+<span id="l4a756c6961466c6f61743634-6c6f673130"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">log10</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log10(x)</span></code> computes the base 10 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6c6f6732"></span><dl class="simple" id="index-21">
+<span id="l4a756c6961466c6f61743634-6c6f6732"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">log2</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log2(x)</span></code> computes the base 2 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
@@ -455,20 +447,20 @@
 <dl class="simple" id="l4a756c6961466c6f61743634-6d6178">
 <dt><a class="reference internal" href="OrderedSet.html#l4f726465726564536574-6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
 </dd>
-<dt><a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d-6d6178"><span class="std std-ref">max</span></a>: () -&gt; % if % hasn’t <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a> and % hasn’t <a class="reference internal" href="arbitraryExponent.html#l6172626974726172794578706f6e656e74"><span class="std std-ref">arbitraryExponent</span></a></dt><dd><p>from <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a></p>
+<dt><a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d-6d6178"><span class="std std-ref">max</span></a>: () -&gt; % if % hasn’t <a class="reference internal" href="arbitraryExponent.html#l6172626974726172794578706f6e656e74"><span class="std std-ref">arbitraryExponent</span></a> and % hasn’t <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a></dt><dd><p>from <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-6d696e">
 <dt><a class="reference internal" href="OrderedSet.html#l4f726465726564536574-6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
 </dd>
-<dt><a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d-6d696e"><span class="std std-ref">min</span></a>: () -&gt; % if % hasn’t <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a> and % hasn’t <a class="reference internal" href="arbitraryExponent.html#l6172626974726172794578706f6e656e74"><span class="std std-ref">arbitraryExponent</span></a></dt><dd><p>from <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a></p>
+<dt><a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d-6d696e"><span class="std std-ref">min</span></a>: () -&gt; % if % hasn’t <a class="reference internal" href="arbitraryExponent.html#l6172626974726172794578706f6e656e74"><span class="std std-ref">arbitraryExponent</span></a> and % hasn’t <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a></dt><dd><p>from <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-6d756c74694575636c696465616e">
 <dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-6d756c74694575636c696465616e"><span class="std std-ref">multiEuclidean</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6e616e"></span><dl class="simple" id="index-22">
+<span id="l4a756c6961466c6f61743634-6e616e"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">nan</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nan()</span></code> returns the Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code> NaN (not a number) constant.</p>
 </dd>
 </dl>
@@ -476,7 +468,7 @@
 <dt><a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67-6e656761746976653f"><span class="std std-ref">negative?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67"><span class="std std-ref">OrderedRing</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6e65676174697665496e66696e697479"></span><dl class="simple" id="index-23">
+<span id="l4a756c6961466c6f61743634-6e65676174697665496e66696e697479"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">negativeInfinity</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">negativeInfinity()</span></code> returns the Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code> negtive infinity constant.</p>
 </dd>
 </dl>
@@ -484,7 +476,7 @@
 <dt><a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d-6e6f726d"><span class="std std-ref">norm</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-6e72616e64"></span><dl class="simple" id="index-24">
+<span id="l4a756c6961466c6f61743634-6e72616e64"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">nrand</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand()</span></code> returns a normally distributed random number.</p>
 </dd>
 </dl>
@@ -513,14 +505,14 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-706c656e617279506f776572">
-<dt><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572"><span class="std std-ref">plenaryPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> %</p>
+<dt><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572"><span class="std std-ref">plenaryPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-706f7369746976653f">
 <dt><a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67-706f7369746976653f"><span class="std std-ref">positive?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67"><span class="std std-ref">OrderedRing</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-706f736974697665496e66696e697479"></span><dl class="simple" id="index-25">
+<span id="l4a756c6961466c6f61743634-706f736974697665496e66696e697479"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">positiveInfinity</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">positiveInfinity()</span></code> returns the Julia <code class="docutils literal notranslate"><span class="pre">Float64</span></code> positive infinity constant.</p>
 </dd>
 </dl>
@@ -575,7 +567,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-73616d706c65">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961466c6f61743634-736563">
@@ -618,7 +610,7 @@
 <dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274"><span class="std std-ref">squareFreePart</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
 </dd>
 </dl>
-<p id="index-26"><span id="l4a756c6961466c6f61743634-737472696e67"></span><span class="spadfun">string</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+<p id="index-24"><span id="l4a756c6961466c6f61743634-737472696e67"></span><span class="spadfun">string</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 <dl class="simple" id="l4a756c6961466c6f61743634-7375627472616374496643616e">
 <dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
 </dd>
@@ -653,7 +645,7 @@
 <dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961466c6f61743634-7572616e643031"></span><dl class="simple" id="index-27">
+<span id="l4a756c6961466c6f61743634-7572616e643031"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">urand01</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01()</span></code> returns an uniformly distributed random number contained in [0,1].</p>
 </dd>
 </dl>
@@ -792,7 +784,7 @@
           <a href="JuliaFloat64Matrix.html" title="JuliaFloat64Matrix"
              >next</a> |</li>
         <li class="right" >
-          <a href="JuliaFloat.html" title="JuliaFloat"
+          <a href="JuliaFloat32Vector.html" title="JuliaFloat32Vector"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>

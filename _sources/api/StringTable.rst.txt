@@ -119,11 +119,11 @@ This domain provides tables where the keys are strings. A specialized hash funct
 
 .. _l537472696e675461626c65-6576616c:
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Entry, Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Entry, Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Entry
 
 
@@ -131,11 +131,11 @@ This domain provides tables where the keys are strings. A specialized hash funct
   from \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Entry, \ :ref:`List <l4c697374>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Entry, \ :ref:`List <l4c697374>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Entry) -> % if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Entry
 
 
@@ -424,7 +424,7 @@ This domain provides tables where the keys are strings. A specialized hash funct
 
 \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`String <l537472696e67>`\ , Entry) 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  Entry if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`Evalable <l4576616c61626c65>`\  Entry if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry) if Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry)
 
@@ -436,7 +436,7 @@ This domain provides tables where the keys are strings. A specialized hash funct
 
 \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`String <l537472696e67>`\ , Entry) 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry) if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Entry, Entry) if Entry has \ :ref:`Evalable <l4576616c61626c65>`\  Entry and Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry), Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry)) if Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: \ :ref:`String <l537472696e67>`\ , entry: Entry)
 

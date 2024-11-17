@@ -64,7 +64,7 @@ This package provides modest routines for polynomial system solving. The aim of 
 .. index::
    pair: PolynomialSetUtilitiesPackage; irreducibleFactors
 
-:spadfun:`irreducibleFactors`\: \ :ref:`List <l4c697374>`\  P -> \ :ref:`List <l4c697374>`\  P if R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+:spadfun:`irreducibleFactors`\: \ :ref:`List <l4c697374>`\  P -> \ :ref:`List <l4c697374>`\  P if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   \ ``irreducibleFactors(lp)``\  returns \ ``lf``\  such that if \ ``lp = [p1, ..., pn]``\  and \ ``lf = [f1, ..., fm]``\  then \ ``p1*p2*...*pn=0``\  means \ ``f1*f2*...*fm=0``\ , and the \ ``fi``\  are irreducible over \ ``R``\  and are pairwise distinct.
 
 .. _l506f6c796e6f6d69616c5365745574696c69746965735061636b616765-6c617a794972726564756369626c65466163746f7273:
@@ -72,7 +72,7 @@ This package provides modest routines for polynomial system solving. The aim of 
 .. index::
    pair: PolynomialSetUtilitiesPackage; lazyIrreducibleFactors
 
-:spadfun:`lazyIrreducibleFactors`\: \ :ref:`List <l4c697374>`\  P -> \ :ref:`List <l4c697374>`\  P if R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+:spadfun:`lazyIrreducibleFactors`\: \ :ref:`List <l4c697374>`\  P -> \ :ref:`List <l4c697374>`\  P if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   \ ``lazyIrreducibleFactors(lp)``\  returns \ ``lf``\  such that if \ ``lp = [p1, ..., pn]``\  and \ ``lf = [f1, ..., fm]``\  then \ ``p1*p2*...*pn=0``\  means \ ``f1*f2*...*fm=0``\ , and the \ ``fi``\  are irreducible over \ ``R``\  and are pairwise distinct. The algorithm tries to avoid factorization into irreducible factors as far as possible and makes previously use of \ ``gcd``\  techniques over \ ``R``\ .
 
 .. _l506f6c796e6f6d69616c5365745574696c69746965735061636b616765-6c696e6561723f:
@@ -120,7 +120,7 @@ This package provides modest routines for polynomial system solving. The aim of 
 .. index::
    pair: PolynomialSetUtilitiesPackage; removeIrreducibleRedundantFactors
 
-:spadfun:`removeIrreducibleRedundantFactors`\: (\ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  P) -> \ :ref:`List <l4c697374>`\  P if R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+:spadfun:`removeIrreducibleRedundantFactors`\: (\ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  P) -> \ :ref:`List <l4c697374>`\  P if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   \ ``removeIrreducibleRedundantFactors(lp, lq)``\  returns the same as \ ``irreducibleFactors(concat(lp, lq))``\  assuming that \ ``irreducibleFactors(lp)``\  returns \ ``lp``\  up to replacing some polynomial \ ``pj``\  in \ ``lp``\  by some polynomial \ ``qj``\  associated to \ ``pj``\ .
 
 .. _l506f6c796e6f6d69616c5365745574696c69746965735061636b616765-72656d6f7665526564756e64616e74466163746f7273:

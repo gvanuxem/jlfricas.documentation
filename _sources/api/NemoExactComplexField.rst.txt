@@ -5,7 +5,7 @@
 NemoExactComplexField
 =====================
 
-:viewcode:`jnemo.spad line 1134 <jnemo.spad#L1134>` :editcode:`[edit on github] <jnemo.spad#L1134>`
+:viewcode:`jnemo.spad line 1136 <jnemo.spad#L1136>` :editcode:`[edit on github] <jnemo.spad#L1136>`
 
 
 \ :ref:`NemoExactComplexField <l4e656d6f4578616374436f6d706c65784669656c64>`\  implements exact complex field arithmetic using the Nemo package. Reference: https://nemocas.github.io/Nemo.\ ``jl``\  See https://flintlib.org/doc/introduction_calcium.html for the \ ``C``\  library.
@@ -301,7 +301,7 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-636f6e646974696f6e50:
 
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
+\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-636f6e6a7567617465:
@@ -415,6 +415,10 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-646966666572656e7469617465:
 
+\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: % -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+
+
 \ :ref:`differentiate <l446966666572656e7469616c457874656e73696f6e-646966666572656e7469617465>`\ \: (%, % -> %) -> % 
   from \ :ref:`DifferentialExtension <l446966666572656e7469616c457874656e73696f6e>`\  %
 
@@ -437,7 +441,7 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-646976696465:
 
-\ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-656e756d6572617465:
@@ -471,7 +475,7 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6575636c696465616e53697a65:
 
-\ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-65756c657247616d6d61:
@@ -504,21 +508,21 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-65787072657373496465616c4d656d626572:
 
-\ :ref:`expressIdealMember <l5072696e636970616c496465616c446f6d61696e-65787072657373496465616c4d656d626572>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`expressIdealMember <l5072696e636970616c496465616c446f6d61696e-65787072657373496465616c4d656d626572>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-657874656e6465644575636c696465616e:
 
-\ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %) -> Record(coef1: %, coef2: %, generator: %) if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %) -> Record(coef1: %, coef2: %, generator: %) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 
-\ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %, %) -> Union(Record(coef1: %, coef2: %), failed) if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %, %) -> Union(Record(coef1: %, coef2: %), failed) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-666163746f72:
 
-\ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-666163746f72506f6c796e6f6d69616c:
@@ -549,26 +553,26 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-676364:
 
-\ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 
-\ :ref:`gcd <l476364446f6d61696e-676364>`\ \: \ :ref:`List <l4c697374>`\  % -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`gcd <l476364446f6d61696e-676364>`\ \: \ :ref:`List <l4c697374>`\  % -> % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-67656e657261746f72:
 
 \ :ref:`generator <l4d6f6e6f67656e6963416c6765627261-67656e657261746f72>`\ \: () -> % 
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
 
-.. _l4e656d6f4578616374436f6d706c65784669656c64-68617368:
+.. _l4e656d6f4578616374436f6d706c65784669656c64-6861736855706461746521:
 
-\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-696d6167:
@@ -718,16 +722,16 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6c636d:
 
-\ :ref:`lcm <l476364446f6d61696e-6c636d>`\ \: (%, %) -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`lcm <l476364446f6d61696e-6c636d>`\ \: (%, %) -> % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 
-\ :ref:`lcm <l476364446f6d61696e-6c636d>`\ \: \ :ref:`List <l4c697374>`\  % -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`lcm <l476364446f6d61696e-6c636d>`\ \: \ :ref:`List <l4c697374>`\  % -> % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6c636d436f6566:
 
-\ :ref:`lcmCoef <l4c6566744f726552696e67-6c636d436f6566>`\ \: (%, %) -> Record(llcm_res: %, coeff1: %, coeff2: %) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`lcmCoef <l4c6566744f726552696e67-6c636d436f6566>`\ \: (%, %) -> Record(llcm_res: %, coeff1: %, coeff2: %) if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6c656674506f776572:
@@ -766,7 +770,7 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6d756c74694575636c696465616e:
 
-\ :ref:`multiEuclidean <l4575636c696465616e446f6d61696e-6d756c74694575636c696465616e>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`multiEuclidean <l4575636c696465616e446f6d61696e-6d756c74694575636c696465616e>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6d757461626c653f:
@@ -807,8 +811,8 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6f6e653f:
 
-\ :ref:`one? <l4a756c696152696e67-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
+\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6f70706f736974653f:
 
@@ -826,7 +830,7 @@ NemoExactComplexField
 .. _l4e656d6f4578616374436f6d706c65784669656c64-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-706f736974697665496e66696e697479:
 
@@ -846,17 +850,17 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-7072696d653f:
 
-\ :ref:`prime? <l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`prime? <l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-7072696e636970616c496465616c:
 
-\ :ref:`principalIdeal <l5072696e636970616c496465616c446f6d61696e-7072696e636970616c496465616c>`\ \: \ :ref:`List <l4c697374>`\  % -> Record(coef: \ :ref:`List <l4c697374>`\  %, generator: %) if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`principalIdeal <l5072696e636970616c496465616c446f6d61696e-7072696e636970616c496465616c>`\ \: \ :ref:`List <l4c697374>`\  % -> Record(coef: \ :ref:`List <l4c697374>`\  %, generator: %) if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-71756f:
 
-\ :ref:`quo <l4575636c696465616e446f6d61696e-71756f>`\ \: (%, %) -> % if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`quo <l4575636c696465616e446f6d61696e-71756f>`\ \: (%, %) -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-72616e646f6d:
@@ -880,8 +884,8 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-72616e6b:
 
-\ :ref:`rank <l46696e69746552616e6b416c6765627261-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  from \ :ref:`FiniteRankAlgebra <l46696e69746552616e6b416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
+\ :ref:`rank <l4672616d65644d6f64756c65-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`FramedModule <l4672616d65644d6f64756c65>`\  %
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-726174696f6e616c3f:
 
@@ -934,7 +938,7 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-72656d:
 
-\ :ref:`rem <l4575636c696465616e446f6d61696e-72656d>`\ \: (%, %) -> % if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`rem <l4575636c696465616e446f6d61696e-72656d>`\ \: (%, %) -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-726570726573656e7473:
@@ -993,8 +997,8 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-73616d706c65:
 
-\ :ref:`sample <l4d61676d6157697468556e6974-73616d706c65>`\ \: % 
-  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-736563:
 
@@ -1046,7 +1050,7 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-73697a654c6573733f:
 
-\ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e:
@@ -1061,12 +1065,12 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-73717561726546726565:
 
-\ :ref:`squareFree <l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`squareFree <l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-7371756172654672656550617274:
 
-\ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-73717561726546726565506f6c796e6f6d69616c:
@@ -1157,8 +1161,8 @@ NemoExactComplexField
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-7a65726f3f:
 
-\ :ref:`zero? <l4a756c696152696e67-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
+\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -1213,7 +1217,7 @@ NemoExactComplexField
 
 \ :ref:`FullyRetractableTo <l46756c6c795265747261637461626c65546f>`\  % 
 
-\ :ref:`GcdDomain <l476364446f6d61696e>`\  if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`GcdDomain <l476364446f6d61696e>`\  if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
 
 \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\  
 
@@ -1227,7 +1231,7 @@ NemoExactComplexField
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
-\ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+\ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  % 
 
@@ -1259,7 +1263,7 @@ NemoExactComplexField
 
 \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  if % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-\ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\  if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\  if % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
 
 \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\  
 
@@ -1285,7 +1289,7 @@ NemoExactComplexField
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
 
-\ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  if % has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  or % has \ :ref:`Field <l4669656c64>`\  or % has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 \ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  
 
