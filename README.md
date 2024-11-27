@@ -24,8 +24,8 @@ If you want to visualize your data using Julia, small support is provided using 
 If you want to use [jFriCAS](https://jfricas.readthedocs.io/en/latest/) i.e. Jupyter support for FriCAS built with SBCL, make sure [hunchentoot](https://edicl.github.io/hunchentoot/) is installed. On a Debian like system you can add `hunchentoot` with <code>sudo apt install cl-hunchentoot</code> and issue, for example, <code>./configure --enable-gmp --enable-julia --enable-hunchentoot</code>.
 
 To know which categories/domains/packages are added to FriCAS issue in the
-FriCAS interpreter <code>)what things julia</code> and/or <code>)what things nemo</code> or use HyperDoc. Another source of information can be found in HTML format at [here](https://gvanuxem.github.io/jlfricas.documentation/).
-Take into account that this is absolutely not the official documentation even though it is highly based on the official FriCAS web site which can be build from the FriCAS source code (thanks to Ralf Hemmecke for its amazing work). 
+FriCAS interpreter <code>)what things julia</code> and/or <code>)what things nemo</code> or use HyperDoc. Another source of information can be found in HTML format [here](https://gvanuxem.github.io/jlfricas.documentation/).
+Take into account that this is absolutely not the official documentation even though it is highly based on the official FriCAS web site which can be built from the FriCAS source code (thanks to Ralf Hemmecke and Kurt Pagani for their amazing work). 
 
 If you want to build and install the HTML documentation,
 you need to install Sphinx. On a Debian like system, to add it, issue in a
