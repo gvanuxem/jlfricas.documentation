@@ -5,7 +5,7 @@
 NemoAlgebraicNumber
 ===================
 
-:viewcode:`jnemo.spad line 270 <jnemo.spad#L270>` :editcode:`[edit on github] <jnemo.spad#L270>`
+:viewcode:`jnemo.spad line 264 <jnemo.spad#L264>` :editcode:`[edit on github] <jnemo.spad#L264>`
 
 
 This domain allows the manipulation of Nemo algebraic numbers represented by minimal polynomials using the Nemo package for Julia (Calcium based). https://fredrikj.net/calcium/
@@ -31,10 +31,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) -> % 
-  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
-
-
 .. index::
    pair: NemoAlgebraicNumber; *
 
@@ -44,6 +40,10 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) -> % 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
+
+
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ ) -> % 
+  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ 
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -191,13 +191,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
    pair: NemoAlgebraicNumber; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`AlgebraicNumber <l416c676562726169634e756d626572>`\  
-  
-
-
-.. index::
-   pair: NemoAlgebraicNumber; coerce
-
-:spadfun:`coerce`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  
    
 
 
@@ -205,8 +198,8 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -451,16 +444,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
-.. _l4e656d6f416c676562726169634e756d626572-666163746f72506f6c796e6f6d69616c:
-
-\ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
-
-.. _l4e656d6f416c676562726169634e756d626572-666163746f7253717561726546726565506f6c796e6f6d69616c:
-
-\ :ref:`factorSquareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
-
 .. _l4e656d6f416c676562726169634e756d626572-667265654f663f:
 
 \ :ref:`freeOf? <l45787072657373696f6e537061636532-667265654f663f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -481,8 +464,8 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 .. _l4e656d6f416c676562726169634e756d626572-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e656d6f416c676562726169634e756d626572-686569676874:
 
@@ -726,7 +709,7 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 .. _l4e656d6f416c676562726169634e756d626572-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 .. _l4e656d6f416c676562726169634e756d626572-7072696d653f:
 
@@ -782,20 +765,36 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 .. _l4e656d6f416c676562726169634e756d626572-7265647563656453797374656d:
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) 
-  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
+  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
+  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
 
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
-  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ ) 
+  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ 
+
+
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
+
+
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  
+  from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ 
 
 .. _l4e656d6f416c676562726169634e756d626572-72656d:
 
@@ -858,19 +857,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e656d6f416c676562726169634e756d626572-726f6f744f66:
-
-\ :ref:`rootOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f744f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`rootOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f744f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`rootOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f744f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
 .. _l4e656d6f416c676562726169634e756d626572-726f6f744f66556e6974793f:
 
 .. index::
@@ -893,19 +879,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 :spadfun:`rootOfUnity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
   \ ``rootOfUnity(n)``\ Return the root of unity exp(2*\%pi*\%i/n).
-
-.. _l4e656d6f416c676562726169634e756d626572-726f6f74734f66:
-
-\ :ref:`rootsOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f74734f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`rootsOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f74734f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`rootsOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f74734f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
 
 .. _l4e656d6f416c676562726169634e756d626572-73616d706c65:
 
@@ -930,11 +903,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
-.. _l4e656d6f416c676562726169634e756d626572-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e:
-
-\ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
-
 .. _l4e656d6f416c676562726169634e756d626572-73717274:
 
 \ :ref:`sqrt <l5261646963616c43617465676f7279-73717274>`\ \: % -> % 
@@ -949,11 +917,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
-
-.. _l4e656d6f416c676562726169634e756d626572-73717561726546726565506f6c796e6f6d69616c:
-
-\ :ref:`squareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e656d6f416c676562726169634e756d626572-737472696e67:
 
@@ -1015,32 +978,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
-.. _l4e656d6f416c676562726169634e756d626572-7a65726f4f66:
-
-\ :ref:`zeroOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f4f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`zeroOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f4f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`zeroOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f4f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-.. _l4e656d6f416c676562726169634e756d626572-7a65726f734f66:
-
-\ :ref:`zerosOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f734f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`zerosOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f734f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
-
-\ :ref:`zerosOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f734f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
 
@@ -1051,8 +988,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`Algebra <l416c6765627261>`\  % 
 
 \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
-\ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\  
 
 \ :ref:`BasicType <l426173696354797065>`\  
 
@@ -1126,9 +1061,13 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  
 
-\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
+
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  
 
 \ :ref:`Magma <l4d61676d61>`\  
 
@@ -1139,6 +1078,8 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
+
+\ :ref:`NemoAlgebraicallyClosedField <l4e656d6f416c67656272616963616c6c79436c6f7365644669656c64>`\  
 
 \ :ref:`NemoRing <l4e656d6f52696e67>`\  
 
@@ -1158,8 +1099,6 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`noZeroDivisors <l6e6f5a65726f44697669736f7273>`\  
 
-\ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  
-
 \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\  
 
 \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\  
@@ -1178,9 +1117,11 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
+
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  
 
 \ :ref:`Ring <l52696e67>`\  
 
