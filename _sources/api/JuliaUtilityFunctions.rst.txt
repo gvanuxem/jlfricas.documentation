@@ -63,7 +63,7 @@ This package provides different Julia utility functions.
    pair: JuliaUtilityFunctions; jlDefined?
 
 :spadfun:`jlDefined?`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlDefined?(str)``\  cheks whether or not \ ``str``\  is defined in Julia.
+  \ ``jlDefined?(str)``\  checks whether or not \ ``str``\  is defined in Julia.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c4576616c537472696e67:
 
@@ -335,15 +335,8 @@ This package provides different Julia utility functions.
 .. index::
    pair: JuliaUtilityFunctions; jlFunction2CF32Mat!
 
-:spadfun:`jlFunction2CF32Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF32Matrix <l4a756c6961436f6d706c65784633324d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaComplexF32Matrix <l4a756c6961436f6d706c65784633324d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF32Mat(func, \ ``cmat1``\ , \ ``cmat2``\ ) applies the Julia function func to \ ``cmat2``\  that overwrites \ ``cmat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
-
-
-.. index::
-   pair: JuliaUtilityFunctions; jlFunction2CF32Mat!
-
 :spadfun:`jlFunction2CF32Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF32Vector <l4a756c6961436f6d706c6578463332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaComplexF32Vector <l4a756c6961436f6d706c6578463332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF32Mat(func, \ ``cmat1``\ , \ ``nr1``\ , \ ``cmat2``\ , \ ``nr2``\ ) applies func to the pair of matrices \ ``cmat1``\  and \ ``cmat2``\  (internally vectors). \ ``nr1``\  and \ ``nr2``\  are respectively the number of rows.
+  jlFunction2CF32Mat(func, \ ``cmat1``\ , \ ``cmat2``\ ) applies the Julia function func to \ ``cmat2``\  that overwrites \ ``cmat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e324346333256656321:
 
@@ -358,15 +351,8 @@ This package provides different Julia utility functions.
 .. index::
    pair: JuliaUtilityFunctions; jlFunction2CF64Mat!
 
-:spadfun:`jlFunction2CF64Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF64Matrix <l4a756c6961436f6d706c65784636344d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaComplexF64Matrix <l4a756c6961436f6d706c65784636344d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF64Mat(func, \ ``cmat1``\ , \ ``cmat2``\ ) applies the Julia function func to \ ``cmat2``\  that overwrites \ ``cmat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
-
-
-.. index::
-   pair: JuliaUtilityFunctions; jlFunction2CF64Mat!
-
 :spadfun:`jlFunction2CF64Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF64Mat(func, \ ``cmat1``\ , \ ``nr1``\ , \ ``cmat2``\ , \ ``nr2``\ ) applies func to the pair of matrices \ ``cmat1``\  and \ ``cmat2``\  (internally vectors). \ ``nr1``\  and \ ``nr2``\  are respectively the number of rows.
+  \ ``jlFunction2CF64Mat!(func, cmat1, cmat2)``\  applies the Julia function \ ``func``\  to \ ``cmat2``\  that overwrites \ ``cmat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e324346363456656321:
 
@@ -374,7 +360,7 @@ This package provides different Julia utility functions.
    pair: JuliaUtilityFunctions; jlFunction2CF64Vec!
 
 :spadfun:`jlFunction2CF64Vec!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ , \ :ref:`JuliaComplexF64Vector <l4a756c6961436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF64Vec(func, \ ``cvec1``\ , \ ``cvec2``\ ) applies the Julia function func to \ ``cvec2``\  that overwrites \ ``cvec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
+  \ ``jlFunction2CF64Vec!(func, cvec1, cvec2)``\  applies the Julia function \ ``func``\  to \ ``cvec2``\  that overwrites \ ``cvec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e32463332:
 
@@ -389,15 +375,8 @@ This package provides different Julia utility functions.
 .. index::
    pair: JuliaUtilityFunctions; jlFunction2F32Mat!
 
-:spadfun:`jlFunction2F32Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32Matrix <l4a756c6961466c6f617433324d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat32Matrix <l4a756c6961466c6f617433324d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2F32Mat(func, \ ``mat1``\ , \ ``mat2``\ ) applies the Julia function func to \ ``mat2``\  that overwrites \ ``mat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
-
-
-.. index::
-   pair: JuliaUtilityFunctions; jlFunction2F32Mat!
-
 :spadfun:`jlFunction2F32Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat32Vector <l4a756c6961466c6f61743332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat32Vector <l4a756c6961466c6f61743332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF32Mat!(func, \ ``mat1``\ , \ ``nr1``\ , \ ``mat2``\ , \ ``nr2``\ ) applies func to the pair of matrices \ ``mat1``\  and \ ``mat2``\  (internally vectors). \ ``nr1``\  and \ ``nr2``\  are respectively the number of rows.
+  \ ``jlFunction2F32Mat!(func, mat1, mat2)``\  applies the Julia function \ ``func``\  to \ ``mat2``\  that overwrites \ ``mat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e3246333256656321:
 
@@ -420,15 +399,8 @@ This package provides different Julia utility functions.
 .. index::
    pair: JuliaUtilityFunctions; jlFunction2F64Mat!
 
-:spadfun:`jlFunction2F64Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64Matrix <l4a756c6961466c6f617436344d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat64Matrix <l4a756c6961466c6f617436344d6174726978>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2F64Mat(func, \ ``mat1``\ , \ ``mat2``\ ) applies the Julia function func to \ ``mat2``\  that overwrites \ ``mat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
-
-
-.. index::
-   pair: JuliaUtilityFunctions; jlFunction2F64Mat!
-
 :spadfun:`jlFunction2F64Mat!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2CF64Mat!(func, \ ``mat1``\ , \ ``nr1``\ , \ ``mat2``\ , \ ``nr2``\ ) applies func to the pair of matrices \ ``mat1``\  and \ ``mat2``\  (internally vectors). \ ``nr1``\  and \ ``nr2``\  are respectively the number of rows.
+  \ ``jlFunction2F64Mat!(func, mat1, mat2)``\  applies the Julia function \ ``func``\  to \ ``mat2``\  that overwrites \ ``mat1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e3246363456656321:
 
@@ -436,7 +408,7 @@ This package provides different Julia utility functions.
    pair: JuliaUtilityFunctions; jlFunction2F64Vec!
 
 :spadfun:`jlFunction2F64Vec!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ , \ :ref:`JuliaFloat64Vector <l4a756c6961466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlFunction2F64Vec(func, \ ``vec1``\ , \ ``vec2``\ ) applies the Julia function func to \ ``vec2``\  that overwrites \ ``vec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
+  \ ``jlFunction2F64Vec!(func, vec1, vec2)``\  applies the Julia function \ ``func``\  to \ ``vec2``\  that overwrites \ ``vec1``\  with the result. Please note that the overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c46756e6374696f6e33463332:
 
@@ -621,6 +593,14 @@ This package provides different Julia utility functions.
 
 :spadfun:`jlImport`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlImport(modpackfunc)``\  imports the module, package or function \ ``modpackfunc``\  and makes its exported name(\ ``s``\ ) available. Returns \ ``false``\  if it can not be imported.
+
+.. _l4a756c69615574696c69747946756e6374696f6e73-6a6c496e636c756465:
+
+.. index::
+   pair: JuliaUtilityFunctions; jlInclude
+
+:spadfun:`jlInclude`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlInclude(file.jl)``\  loads and evaluates the content of the Julia file file.\ ``jl``\  in the current global scope.
 
 .. _l4a756c69615574696c69747946756e6374696f6e73-6a6c496e697469616c697a65:
 

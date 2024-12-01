@@ -114,6 +114,22 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
+.. _l4e656d6f416c676562726169634e756d626572-61627332:
+
+.. index::
+   pair: NemoAlgebraicNumber; abs2
+
+:spadfun:`abs2`\: % -> % 
+  abs(a) returns the squared absolute value of a.
+
+.. _l4e656d6f416c676562726169634e756d626572-616273:
+
+.. index::
+   pair: NemoAlgebraicNumber; abs
+
+:spadfun:`abs`\: % -> % 
+  \ ``abs(a)``\  returns the absolute value of a.
+
 .. _l4e656d6f416c676562726169634e756d626572-61636f737069:
 
 .. index::
@@ -176,6 +192,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`box <l45787072657373696f6e537061636532-626f78>`\ \: % -> % 
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
 
+.. _l4e656d6f416c676562726169634e756d626572-6365696c696e67:
+
+.. index::
+   pair: NemoAlgebraicNumber; ceiling
+
+:spadfun:`ceiling`\: % -> % 
+  \ ``ceiling(a)``\  returns the smallest integer above or equal to a.
+
 .. _l4e656d6f416c676562726169634e756d626572-6368617261637465726973746963:
 
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -191,15 +215,15 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
    pair: NemoAlgebraicNumber; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`AlgebraicNumber <l416c676562726169634e756d626572>`\  
-   
+  \ ``coerce(nan)``\  coerces \ ``nan``\  to AlgebraicNumber if it is rational.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -221,6 +245,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`commutator <l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72>`\ \: (%, %) -> % 
   from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
+
+.. _l4e656d6f416c676562726169634e756d626572-636f6e6a:
+
+.. index::
+   pair: NemoAlgebraicNumber; conj
+
+:spadfun:`conj`\: % -> % 
+  \ ``conj(a)``\  returns the complex conjugate of a.
 
 .. _l4e656d6f416c676562726169634e756d626572-636f6e6a756761746573:
 
@@ -250,6 +282,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 :spadfun:`crandom`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   random(deg, bits) returns a random algebraic number (complex) of degree up to deg and coefficients size up to bits. Requires at least degree 2.
+
+.. _l4e656d6f416c676562726169634e756d626572-6373676e:
+
+.. index::
+   pair: NemoAlgebraicNumber; csgn
+
+:spadfun:`csgn`\: % -> % 
+  \ ``csgn(a)``\  returns an extension of the real sign function equivalent to a/sqrt(\ ``a^2``\ ).
 
 .. _l4e656d6f416c676562726169634e756d626572-44:
 
@@ -444,6 +484,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
+.. _l4e656d6f416c676562726169634e756d626572-666c6f6f72:
+
+.. index::
+   pair: NemoAlgebraicNumber; floor
+
+:spadfun:`floor`\: % -> % 
+  \ ``floor(a)``\  returns the largest integer below or equal ot a.
+
 .. _l4e656d6f416c676562726169634e756d626572-667265654f663f:
 
 \ :ref:`freeOf? <l45787072657373696f6e537061636532-667265654f663f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -479,6 +527,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 :spadfun:`imag`\: % -> % 
   \ ``imag(x)``\  returns imaginary part of \ ``x``\ .
+
+.. _l4e656d6f416c676562726169634e756d626572-696d61675369676e:
+
+.. index::
+   pair: NemoAlgebraicNumber; imagSign
+
+:spadfun:`imagSign`\: % -> % 
+  \ ``imagSign(a)``\  returns the sign of the imaginary part.
 
 .. _l4e656d6f416c676562726169634e756d626572-696e74656765723f:
 
@@ -643,6 +699,21 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 \ :ref:`map <l45787072657373696f6e537061636532-6d6170>`\ \: (% -> %, \ :ref:`Kernel <l4b65726e656c>`\  %) -> % 
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
 
+.. _l4e656d6f416c676562726169634e756d626572-6d696e696d616c506f6c796e6f6d69616c:
+
+.. index::
+   pair: NemoAlgebraicNumber; minimalPolynomial
+
+:spadfun:`minimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  \ ``minimalPolynomial(an)``\  returns the minimal polynomial of \ ``an``\  over algebraic number.
+
+
+.. index::
+   pair: NemoAlgebraicNumber; minimalPolynomial
+
+:spadfun:`minimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  
+  \ ``minimalPolynomial(an)``\  returns the minimal polynomial of \ ``an``\ .
+
 .. _l4e656d6f416c676562726169634e756d626572-6d696e506f6c79:
 
 \ :ref:`minPoly <l45787072657373696f6e537061636532-6d696e506f6c79>`\ \: \ :ref:`Kernel <l4b65726e656c>`\  % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
@@ -757,6 +828,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 :spadfun:`real`\: % -> % 
   \ ``real(x)``\  returns real part of \ ``x``\ .
+
+.. _l4e656d6f416c676562726169634e756d626572-7265616c5369676e:
+
+.. index::
+   pair: NemoAlgebraicNumber; realSign
+
+:spadfun:`realSign`\: % -> % 
+  \ ``realSign(a)``\  returns the sign of the real part.
 
 .. _l4e656d6f416c676562726169634e756d626572-7265636970:
 
@@ -884,6 +963,14 @@ This domain allows the manipulation of Nemo algebraic numbers represented by min
 
 \ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e656d6f416c676562726169634e756d626572-7369676e:
+
+.. index::
+   pair: NemoAlgebraicNumber; sign
+
+:spadfun:`sign`\: % -> % 
+  \ ``sign(a)``\  returns the complex sign of a.
 
 .. _l4e656d6f416c676562726169634e756d626572-73696e7069:
 

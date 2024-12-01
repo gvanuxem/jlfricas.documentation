@@ -37,7 +37,7 @@ NemoArbField p
    pair: NemoArbField; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-   
+  * \undocumented
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -83,7 +83,7 @@ NemoArbField p
    pair: NemoArbField; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-   
+  / \undocumented
 
 .. _l4e656d6f4172624669656c64-3c3d:
 
@@ -348,7 +348,7 @@ NemoArbField p
    pair: NemoArbField; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  coerces(\ ``x``\ ) coerces \ ``x``\ .
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -363,7 +363,7 @@ NemoArbField p
    pair: NemoArbField; coerce
 
 :spadfun:`coerce`\: \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  -> % 
-  
+  coerces(\ ``x``\ ) coerces \ ``x``\ .
 
 .. _l4e656d6f4172624669656c64-636f6d6d757461746f72:
 
@@ -458,14 +458,14 @@ NemoArbField p
    pair: NemoArbField; convert
 
 :spadfun:`convert`\: % -> \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  
-  
+  \ ``convert(x)``\  converts \ ``x``\ .
 
 
 .. index::
    pair: NemoArbField; convert
 
 :spadfun:`convert`\: % -> \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  
-  
+  \ ``convert(x)``\  converts \ ``x``\ .
 
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\  
@@ -864,28 +864,42 @@ NemoArbField p
    pair: NemoArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jnrb(fl)``\  returns \ ``fl``\  as a real ball.
+  \ ``jnrb(fl)``\  returns \ ``fl``\  as a real Arb ball.
 
 
 .. index::
    pair: NemoArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnrb(fi)``\  returns \ ``fi``\  as a real ball.
+  \ ``jnrb(fi)``\  returns \ ``fi``\  as a real Arb ball.
 
 
 .. index::
    pair: NemoArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnrb(i)``\  returns \ ``i``\  as a real ball.
+  \ ``jnrb(i)``\  returns \ ``i``\  as a real Arb ball.
+
+
+.. index::
+   pair: NemoArbField; jnrb
+
+:spadfun:`jnrb`\: \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  -> % 
+  \ ``jnrb(an)``\  evaluates numerically \ ``an``\  by converting it to a real Arb field.
+
+
+.. index::
+   pair: NemoArbField; jnrb
+
+:spadfun:`jnrb`\: \ :ref:`NemoExactComplexField <l4e656d6f4578616374436f6d706c65784669656c64>`\  -> % 
+  \ ``jnrb(necf)``\  evaluates numerically \ ``necf``\  by converting it to a real Arb field.
 
 
 .. index::
    pair: NemoArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jnrb(str)``\  returns \ ``str``\  as a real ball.
+  \ ``jnrb(str)``\  evaluates \ ``str``\  by converting it to a real Arb field.
 
 .. _l4e656d6f4172624669656c64-6b656c76696e426569:
 
@@ -1228,13 +1242,6 @@ NemoArbField p
 
 \ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`Integer <l496e7465676572>`\ , failed) 
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
-
-
-.. index::
-   pair: NemoArbField; retractIfCan
-
-:spadfun:`retractIfCan`\: \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  -> Union(%, failed) 
-  
 
 .. _l4e656d6f4172624669656c64-7269656d616e6e5a657461:
 

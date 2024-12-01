@@ -8,7 +8,7 @@ JuliaObjTuple
 :viewcode:`jobject.spad line 556 <jobject.spad#L556>` :editcode:`[edit on github] <jobject.spad#L556>`
 
 
-Convenience domain for Julia Tuple, objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example.
+Convenience domain for Julia Tuples, objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example.
 
 
 .. _l4a756c69614f626a5475706c65-3d:
@@ -38,11 +38,11 @@ Convenience domain for Julia Tuple, objects that are used within Julia, and not 
 
 .. _l4a756c69614f626a5475706c65-656c74:
 
-\ :ref:`elt <l4a756c69614f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+\ :ref:`elt <l4a756c69614f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectAggregate <l4a756c69614f626a656374416767726567617465>`\ 
 
 
-\ :ref:`elt <l4a756c69614f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> % 
+\ :ref:`elt <l4a756c69614f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectAggregate <l4a756c69614f626a656374416767726567617465>`\ 
 
 .. _l4a756c69614f626a5475706c65-656d7074793f:
@@ -116,14 +116,14 @@ Convenience domain for Julia Tuple, objects that are used within Julia, and not 
    pair: JuliaObjTuple; jtuple
 
 :spadfun:`jtuple`\: \ :ref:`List <l4c697374>`\  \ :ref:`Any <l416e79>`\  -> % 
-  \ ``jtuple(lst)``\  returns a Julia tuple of the List \ ``lst``\ . \ ``lst``\  must be compatible with 1D format.
+  \ ``jtuple(lst)``\  returns a Julia Tuple from the List \ ``lst``\ . \ ``lst``\  must be compatible with 1D format.
 
 
 .. index::
    pair: JuliaObjTuple; jtuple
 
 :spadfun:`jtuple`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jtuple(str)``\  returns a Julia tuple from the Julia command \ ``str``\ .
+  \ ``jtuple(str)``\  returns a Julia Tuple from the evaluation of the Julia command \ ``str``\ .
 
 .. _l4a756c69614f626a5475706c65-6c61746578:
 
@@ -152,11 +152,11 @@ Convenience domain for Julia Tuple, objects that are used within Julia, and not 
 
 .. _l4a756c69614f626a5475706c65-71656c74:
 
-\ :ref:`qelt <l4a756c69614f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+\ :ref:`qelt <l4a756c69614f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectAggregate <l4a756c69614f626a656374416767726567617465>`\ 
 
 
-\ :ref:`qelt <l4a756c69614f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> % 
+\ :ref:`qelt <l4a756c69614f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ ) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectAggregate <l4a756c69614f626a656374416767726567617465>`\ 
 
 .. _l4a756c69614f626a5475706c65-73616d706c65:

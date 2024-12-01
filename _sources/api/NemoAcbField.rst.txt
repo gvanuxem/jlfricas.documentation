@@ -5,7 +5,7 @@
 NemoAcbField p
 ==============
 
-:viewcode:`jnball.spad line 307 <jnball.spad#L307>` :editcode:`[edit on github] <jnball.spad#L307>`
+:viewcode:`jnball.spad line 313 <jnball.spad#L313>` :editcode:`[edit on github] <jnball.spad#L313>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
@@ -37,7 +37,7 @@ NemoAcbField p
    pair: NemoAcbField; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-   
+  * \undocumented
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  p) -> % 
@@ -87,7 +87,7 @@ NemoAcbField p
    pair: NemoAcbField; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-   
+  / \undocumented
 
 .. _l4e656d6f4163624669656c64-3d:
 
@@ -346,13 +346,6 @@ NemoAcbField p
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
 
-.. index::
-   pair: NemoAcbField; coerce
-
-:spadfun:`coerce`\: \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  -> % 
-  \ ``coerce(an)``\  coerces the algebraic number \ ``an``\ .
-
-
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  p -> % 
   from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  p
 
@@ -438,13 +431,6 @@ NemoAcbField p
 
 \ :ref:`convert <l4672616d65644d6f64756c65-636f6e76657274>`\ \: % -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  p 
   from \ :ref:`FramedModule <l4672616d65644d6f64756c65>`\  \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  p
-
-
-.. index::
-   pair: NemoAcbField; convert
-
-:spadfun:`convert`\: \ :ref:`NemoExactComplexField <l4e656d6f4578616374436f6d706c65784669656c64>`\  -> % 
-  \ ``convert(z)``\  converts \ ``z``\ .
 
 
 \ :ref:`convert <l4d6f6e6f67656e6963416c6765627261-636f6e76657274>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  p -> % 
@@ -1013,42 +999,56 @@ NemoAcbField p
    pair: NemoAcbField; jncb
 
 :spadfun:`jncb`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> % 
-  
+  \ ``jncb(r,i)``\  returns \ ``r``\  and \ ``i``\  as a complex Arb ball using real and imaginary part.
 
 
 .. index::
    pair: NemoAcbField; jncb
 
 :spadfun:`jncb`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``jncb(r,i)``\  returns \ ``r``\  and \ ``i``\  as a complex Arb ball using real and imaginary part.
 
 
 .. index::
    pair: NemoAcbField; jncb
 
 :spadfun:`jncb`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  
+  \ ``jncb(strr, stri)``\  evaluates \ ``strr``\  and stri to a complex Arb field. using real and imaginary part.
 
 
 .. index::
    pair: NemoAcbField; jncb
 
 :spadfun:`jncb`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``jncb(r)``\  returns \ ``r``\  as a complex complex Arb ball.
 
 
 .. index::
    pair: NemoAcbField; jncb
 
 :spadfun:`jncb`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jncb(r)``\  returns \ ``r``\  as a complex complex Arb ball.
+
+
+.. index::
+   pair: NemoAcbField; jncb
+
+:spadfun:`jncb`\: \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  -> % 
+  \ ``jncb(an)``\  evaluates numerically \ ``an``\  by converting it to a complex Arb field.
+
+
+.. index::
+   pair: NemoAcbField; jncb
+
+:spadfun:`jncb`\: \ :ref:`NemoExactComplexField <l4e656d6f4578616374436f6d706c65784669656c64>`\  -> % 
+  \ ``jncb(necf)``\  evaluates numerically \ ``necf``\  by converting it to a complex Arb field.
 
 
 .. index::
    pair: NemoAcbField; jncb
 
 :spadfun:`jncb`\: \ :ref:`String <l537472696e67>`\  -> % 
-  
+  \ ``jncb(str)``\  evaluates \ ``str``\  to a complex Arb field.
 
 .. _l4e656d6f4163624669656c64-6b656c76696e426569:
 
