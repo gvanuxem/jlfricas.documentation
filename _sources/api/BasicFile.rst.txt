@@ -1,0 +1,62 @@
+.. index:: BasicFile
+
+.. _l426173696346696c65:
+
+BasicFile
+=========
+
+:viewcode:`fops.spad line 254 <fops.spad#L254>` :editcode:`[edit on github] <fops.spad#L254>`
+
+
+This is domain for storing and reading Spad values in files.
+
+
+.. _l426173696346696c65-636c6f736521:
+
+.. index::
+   pair: BasicFile; close!
+
+:spadfun:`close!`\: % -> \ :ref:`Void <l566f6964>`\  
+  clos! closes the file.
+
+.. _l426173696346696c65-666c757368:
+
+.. index::
+   pair: BasicFile; flush
+
+:spadfun:`flush`\: % -> \ :ref:`Void <l566f6964>`\  
+  \ ``flush passes``\  all buffered data to the operating system.
+
+.. _l426173696346696c65-6f70656e:
+
+.. index::
+   pair: BasicFile; open
+
+:spadfun:`open`\: (\ :ref:`FileName <l46696c654e616d65>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  \ ``open opens``\  the file.
+
+.. _l426173696346696c65-72656164:
+
+.. index::
+   pair: BasicFile; read
+
+:spadfun:`read`\: % -> \ :ref:`None <l4e6f6e65>`\  
+  \ ``read sequentially``\  reads one item from the file.
+
+.. _l426173696346696c65-72656164496643616e:
+
+.. index::
+   pair: BasicFile; readIfCan
+
+:spadfun:`readIfCan`\: % -> Union(\ :ref:`None <l4e6f6e65>`\ , failed) 
+  \ ``readIfCan read``\  one item from the file. otherwise returns \ ``"failed"``\ 
+
+.. _l426173696346696c65-777269746521:
+
+.. index::
+   pair: BasicFile; write!
+
+:spadfun:`write!`\: (%, \ :ref:`None <l4e6f6e65>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  write writes one item to the file.
+
+

@@ -44,43 +44,43 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 .. index::
    pair: JuliaObjectType; jlApply
 
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, obj)``\  executes the function \ ``func``\  with obj as parameter and returns the result as a FriCAS JuliaObjectType.
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter and returns the result as a FriCAS JuliaObject. For example, using JuliaMatrix(\ ``JuliaObjFloat64``\ ): \example{M:=nrand(4,4);} \example{jlApply("svd", M::JuliaMatrix(JuliaObjFloat64)).S} should be "equivalent" to svdvals(\ ``M``\ )
 
 
 .. index::
    pair: JuliaObjectType; jlApply
 
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, obj1, obj2)``\  executes the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JuliaObjectType. For example, using JuliaObject: \example{M:=nrand(4,4);jlApply("getproperty",} \indented{1}{jlApply("svd", M::JOBJECT), jsym \ ``"S"``\ )} should be "equivalent" to svdvals(\ ``M``\ )
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JuliaObject. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JuliaVector(JuliaFloat)} \example{jlApply("map", "cos", v pretend JuliaObject)}
 
 
 .. index::
    pair: JuliaObjectType; jlApply
 
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3)``\  executes the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\  as parameters and returns the result as a FriCAS JuliaObjectType.
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\  as parameters and returns the result as a FriCAS JuliaObject.
 
 
 .. index::
    pair: JuliaObjectType; jlApply
 
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3, obj4)``\  executes the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\  and \ ``obj4``\  as parameters and returns the result as a FriCAS JuliaObjectType.
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlApply(func, obj1, obj2, obj3, obj4)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\  and \ ``obj4``\  as parameters and returns the result as a FriCAS JuliaObject.
 
 
 .. index::
    pair: JuliaObjectType; jlApply
 
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5)``\  executes the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\  and \ ``obj5``\  as parameters and returns the result as a FriCAS JuliaObjectType.
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\  and \ ``obj5``\  as parameters and returns the result as a FriCAS JuliaObject.
 
 
 .. index::
    pair: JuliaObjectType; jlApply
 
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5, obj6)``\  executes the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\ , \ ``obj5``\  and \ ``obj6``\  as parameters and returns the result as a FriCAS JuliaObjectType.
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5, obj6)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\ , \ ``obj5``\  and \ ``obj6``\  as parameters and returns the result as a FriCAS JuliaObject.
 
 .. _l4a756c69614f626a65637454797065-6a6c4964:
 
@@ -125,7 +125,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JuliaObjectType; mutable?
 
 :spadfun:`mutable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``mutable?(obj)``\  checks wheter or not \ ``obj``\  is mutable.
+  \ ``mutable?(obj)``\  checks whether or not \ ``obj``\  is mutable.
 
 .. _l4a756c69614f626a65637454797065-6e6f7468696e673f:
 

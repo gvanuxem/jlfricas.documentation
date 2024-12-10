@@ -5,12 +5,12 @@
 JuliaMatrix R
 =============
 
-:viewcode:`jobject.spad line 1397 <jobject.spad#L1397>` :editcode:`[edit on github] <jobject.spad#L1397>`
+:viewcode:`jobject.spad line 1403 <jobject.spad#L1403>` :editcode:`[edit on github] <jobject.spad#L1403>`
 
 * R: \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
 
 
-This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt\ ``'s``\ . Minimum index is 1. Beware, for matrix with Nemo elements, contrary to Julia matrix, Nemo follows the convention of the \ ``C``\  libraries, it wraps and uses row major representation. See https://nemocas.github.io/Nemo.jl/stable/developer/interfaces/\#Column-major-\ ``vs``\ -row-major-matrices for more informatiions.
+This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt\ ``'s``\ . Minimum index is 1. Beware, for matrix with Nemo elements, contrary to Julia matrix, Nemo follows the convention of the \ ``C``\  libraries, it wraps and uses row major representation. See https://nemocas.github.io/Nemo.jl/stable/developer/interfaces/\#Column-major-\ ``vs``\ -row-major-matrices for more information.
 
 
 .. _l4a756c69614d6174726978-23:
@@ -350,7 +350,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
    pair: JuliaMatrix; identity
 
 :spadfun:`identity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``identity(n)``\  returns a \ ``n``\  by \ ``n``\  identity matrix.\ ``S``\ 
+  \ ``identity(n)``\  returns a \ ``n``\  by \ ``n``\  identity matrix.
 
 .. _l4a756c69614d6174726978-696e7665727365:
 
@@ -372,27 +372,27 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 .. _l4a756c69614d6174726978-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614d6174726978-6a6c417070726f783f:
@@ -401,7 +401,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
    pair: JuliaMatrix; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R hasn't \ :ref:`NemoType <l4e656d6f54797065>`\ 
-  \ ``jlApprox?(A,B)``\  computes component-wise inexact equalit with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+  \ ``jlApprox?(A,B)``\  computes component-wise inexact equality with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
 
 .. _l4a756c69614d6174726978-6a6c446973706c6179:
 
@@ -651,8 +651,16 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JuliaMatrix; radicalEigenvalues
 
-:spadfun:`radicalEigenvalues`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  if R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  or R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  
+:spadfun:`radicalEigenvalues`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  if R has \ :ref:`NemoRing <l4e656d6f52696e67>`\  and R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  or R has \ :ref:`NemoRing <l4e656d6f52696e67>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``radicalEigenvalues(mat)``\  returns a Julia vector containing the eigenvalues of \ ``mat``\ .
+
+.. _l4a756c69614d6174726978-7261646963616c456967656e76616c756573576974684d756c7469706c69636974696573:
+
+.. index::
+   pair: JuliaMatrix; radicalEigenvaluesWithMultiplicities
+
+:spadfun:`radicalEigenvaluesWithMultiplicities`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  \ :ref:`JuliaObjTuple <l4a756c69614f626a5475706c65>`\  if R has \ :ref:`NemoRing <l4e656d6f52696e67>`\  and R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  or R has \ :ref:`NemoRing <l4e656d6f52696e67>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``radicalEigenvaluesWithMultiplicities(mat)``\  returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities. The tuples are of internal type (NemoAlgebraicNumber, \ ``JuliaObjInt64``\ ).
 
 .. _l4a756c69614d6174726978-72616e6b:
 

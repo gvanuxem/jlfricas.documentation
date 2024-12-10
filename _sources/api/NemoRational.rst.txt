@@ -5,7 +5,7 @@
 NemoRational
 ============
 
-:viewcode:`jnemo.spad line 147 <jnemo.spad#L147>` :editcode:`[edit on github] <jnemo.spad#L147>`
+:viewcode:`jnemo.spad line 152 <jnemo.spad#L152>` :editcode:`[edit on github] <jnemo.spad#L152>`
 
 
 This domain allows the manipulation of Nemo fraction integers (rationals) using the Nemo package for Julia (FLINT based). https://flintlib.org/
@@ -432,27 +432,27 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 
 .. _l4e656d6f526174696f6e616c-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> % 
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4e656d6f526174696f6e616c-6a6c4964:
@@ -589,8 +589,8 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 
 .. _l4e656d6f526174696f6e616c-6f6e653f:
 
-\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+\ :ref:`one? <l4a756c696152696e67-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
 
 .. _l4e656d6f526174696f6e616c-6f70706f736974653f:
 
@@ -630,6 +630,14 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 
 \ :ref:`quo <l4575636c696465616e446f6d61696e-71756f>`\ \: (%, %) -> % 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+
+.. _l4e656d6f526174696f6e616c-72616e646f6d:
+
+.. index::
+   pair: NemoRational; random
+
+:spadfun:`random`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  \ ``random(p)``\  returns a Nemo rational with numerator and denominator having \ ``p``\  bits before before canonicalisation.
 
 .. _l4e656d6f526174696f6e616c-7265636970:
 
@@ -778,8 +786,8 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 
 .. _l4e656d6f526174696f6e616c-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l4a756c696152696e67-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
