@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
-    <script src="../_static/documentation_options.js?v=e4fb7171"></script>
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -55,7 +55,9 @@
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a756c69614f626a65637454797065-636f65726365">
+<span id="l4a756c69614f626a65637454797065-636f65726365"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(obj)</span></code> coerce <code class="docutils literal notranslate"><span class="pre">obj</span></code> ot JuliaObject. Convenience function.</p>
+</dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
@@ -63,47 +65,51 @@
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6a6c41626f7574"></span><dl class="simple" id="index-1">
+<span id="l4a756c69614f626a65637454797065-6a6c41626f7574"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">jlAbout</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlAbout(obj)</span></code> displays Julia informations about <code class="docutils literal notranslate"><span class="pre">obj</span></code> if you have About.<code class="docutils literal notranslate"><span class="pre">jl</span></code> installed in Julia. In the Julia interpreter enter in the package management mode with ‘]’ and issue: pkg&gt; add “<a class="reference external" href="https://github.com/tecosaur/About">https://github.com/tecosaur/About</a>.<code class="docutils literal notranslate"><span class="pre">jl&quot;</span></code></p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6a6c4170706c79"></span><dl class="simple" id="index-2">
+<span id="l4a756c69614f626a65637454797065-6a6c4170706c79"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with obj as parameter and returns the result as a FriCAS JuliaObject. For example, using JuliaMatrix(<code class="docutils literal notranslate"><span class="pre">JuliaObjFloat64</span></code>): example{M:=nrand(4,4);} example{jlApply(“svd”, M::JuliaMatrix(JuliaObjFloat64)).S} should be “equivalent” to svdvals(<code class="docutils literal notranslate"><span class="pre">M</span></code>)</p>
 </dd>
 </dl>
-<dl class="simple" id="index-3">
+<dl class="simple" id="index-4">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code> and <code class="docutils literal notranslate"><span class="pre">obj2</span></code> as parameters and returns the result as a FriCAS JuliaObject. For example (equivalent to map(cos, <code class="docutils literal notranslate"><span class="pre">v</span></code>)): example{v:=urand01(5)$JuliaVector(JuliaFloat)} example{jlApply(“map”, “cos”, v pretend JuliaObject)}</p>
 </dd>
 </dl>
-<dl class="simple" id="index-4">
+<dl class="simple" id="index-5">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2,</span> <span class="pre">obj3)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code>, <code class="docutils literal notranslate"><span class="pre">obj2</span></code> and <code class="docutils literal notranslate"><span class="pre">obj3</span></code> as parameters and returns the result as a FriCAS JuliaObject.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-5">
+<dl class="simple" id="index-6">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2,</span> <span class="pre">obj3,</span> <span class="pre">obj4)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code>, <code class="docutils literal notranslate"><span class="pre">obj2</span></code>, <code class="docutils literal notranslate"><span class="pre">obj3</span></code> and <code class="docutils literal notranslate"><span class="pre">obj4</span></code> as parameters and returns the result as a FriCAS JuliaObject.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-6">
+<dl class="simple" id="index-7">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2,</span> <span class="pre">obj3,</span> <span class="pre">obj4,</span> <span class="pre">obj5)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code>, <code class="docutils literal notranslate"><span class="pre">obj2</span></code>, <code class="docutils literal notranslate"><span class="pre">obj3</span></code>, <code class="docutils literal notranslate"><span class="pre">obj4</span></code> and <code class="docutils literal notranslate"><span class="pre">obj5</span></code> as parameters and returns the result as a FriCAS JuliaObject.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-7">
+<dl class="simple" id="index-8">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2,</span> <span class="pre">obj3,</span> <span class="pre">obj4,</span> <span class="pre">obj5,</span> <span class="pre">obj6)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code>, <code class="docutils literal notranslate"><span class="pre">obj2</span></code>, <code class="docutils literal notranslate"><span class="pre">obj3</span></code>, <code class="docutils literal notranslate"><span class="pre">obj4</span></code>, <code class="docutils literal notranslate"><span class="pre">obj5</span></code> and <code class="docutils literal notranslate"><span class="pre">obj6</span></code> as parameters and returns the result as a FriCAS JuliaObject.</p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6a6c4964"></span><dl class="simple" id="index-8">
+<span id="l4a756c69614f626a65637454797065-6a6c446973706c6179"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">jlDisplay</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDisplay(v)</span></code> pretty prints <code class="docutils literal notranslate"><span class="pre">v</span></code> (<code class="docutils literal notranslate"><span class="pre">à</span></code> la Julia).</p>
+</dd>
+</dl>
+<span id="l4a756c69614f626a65637454797065-6a6c4964"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">jlId</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlId(obj)</span></code> returns the Julia indexed dictionary index related to the object <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6a6c526566"></span><dl class="simple" id="index-9">
+<span id="l4a756c69614f626a65637454797065-6a6c526566"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">jlRef</span>: % -&gt; <a class="reference internal" href="SExpression.html#l5345787072657373696f6e"><span class="std std-ref">SExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRef(obj)</span></code> returns the pretty printed internal Lisp representation of the Julia object <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6a6c726566"></span><dl class="simple" id="index-10">
+<span id="l4a756c69614f626a65637454797065-6a6c726566"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">jlref</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlref(str)</span></code> evaluates the Julia command <code class="docutils literal notranslate"><span class="pre">str</span></code> and returns the corresponding FriCAS Julia object.</p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6a6c54797065"></span><dl class="simple" id="index-11">
+<span id="l4a756c69614f626a65637454797065-6a6c54797065"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">jlType</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlType(obj)</span></code> return the Julia type of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
@@ -111,15 +117,15 @@
 <dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6d757461626c653f"></span><dl class="simple" id="index-12">
+<span id="l4a756c69614f626a65637454797065-6d757461626c653f"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">mutable?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mutable?(obj)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">obj</span></code> is mutable.</p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-6e6f7468696e673f"></span><dl class="simple" id="index-13">
+<span id="l4a756c69614f626a65637454797065-6e6f7468696e673f"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">nothing?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nothing?(obj)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">obj</span></code> is nothing.</p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a65637454797065-737472696e67"></span><dl class="simple" id="index-14">
+<span id="l4a756c69614f626a65637454797065-737472696e67"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">string</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">string(obj)</span></code> returns the Julia corresponding value of the object <code class="docutils literal notranslate"><span class="pre">obj</span></code> as a string. Convenience function.</p>
 </dd>
 </dl>

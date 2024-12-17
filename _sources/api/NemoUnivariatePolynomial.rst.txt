@@ -35,7 +35,7 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
    pair: NemoUnivariatePolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  
+  \ ``p * q``\  is the product of \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -46,14 +46,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
    pair: NemoUnivariatePolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  
+  \ ``p * n``\  is the product of \ ``p``\  with a non negative integer.
 
 
 .. index::
    pair: NemoUnivariatePolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  
+  \ ``p * n``\  is the product of \ ``p``\  with a positive integer.
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, R) -> % 
@@ -64,7 +64,7 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
    pair: NemoUnivariatePolynomial; *
 
 :spadfun:`\*`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  
+  \ ``q * p``\  is the product of \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -92,14 +92,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
    pair: NemoUnivariatePolynomial; +
 
 :spadfun:`+`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
-  
+  \ ``p``\  * \ ``q``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Intger))
 
 
 .. index::
    pair: NemoUnivariatePolynomial; +
 
 :spadfun:`+`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
-  
+  \ ``q``\  * \ ``p``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Intger))
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-2d:
 
@@ -193,6 +193,10 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
+\ :ref:`coerce <l4a756c69614f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -238,6 +242,22 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-636f6e7374616e743f:
+
+.. index::
+   pair: NemoUnivariatePolynomial; constant?
+
+:spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``constant?(p)``\  checks whether or not \ ``p``\  is a constant polynomial.
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-636f6e7374616e74436f656666696369656e74:
+
+.. index::
+   pair: NemoUnivariatePolynomial; constantCoefficient
+
+:spadfun:`constantCoefficient`\: % -> R 
+  \ ``constantCoefficient(p)``\  returns the constant of \ ``p``\ .
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-636f6e737472756374:
 
 \ :ref:`construct <l496e646578656450726f6475637443617465676f7279-636f6e737472756374>`\ \: \ :ref:`List <l4c697374>`\  Record(k: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , c: R) -> % 
@@ -273,6 +293,22 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-636f734d696e696d616c506f6c796e6f6d69616c:
+
+.. index::
+   pair: NemoUnivariatePolynomial; cosMinimalPolynomial
+
+:spadfun:`cosMinimalPolynomial`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``cosMinimalPolynomial(n,p)``\  returns the minimal polynomial of 2*cos(2*π/n).
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6379636c6f746f6d6963506f6c796e6f6d69616c:
+
+.. index::
+   pair: NemoUnivariatePolynomial; cyclotomicPolynomial
+
+:spadfun:`cyclotomicPolynomial`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``cyclotomicPolynomial(n,p)``\  returns the \ ``n``\ -th cyclotomic polynomial \ ``Φn``\ .
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-44:
 
@@ -429,6 +465,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`elt <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-656c74>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  %, R) -> R if R has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-65746151457870:
+
+.. index::
+   pair: NemoUnivariatePolynomial; etaQExp
+
+:spadfun:`etaQExp`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``etaQExp(r,n,p)``\  returns the \ ``q``\ -expansion to length \ ``n``\  of the Dedekind eta function (without the leading factor \ ``q^``\ (1/ 24)) raised to the power \ ``r``\ , (\ ``q^``\ (\ ``−1/24``\ )\ ``*η``\ (\ ``q``\ ))\ ``^r``\ .
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6575636c696465616e53697a65:
 
 \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`Field <l4669656c64>`\ 
@@ -467,6 +511,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , R) -> % 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , R)
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6578616374446976696465:
+
+.. index::
+   pair: NemoUnivariatePolynomial; exactDivide
+
+:spadfun:`exactDivide`\: (%, %) -> % 
+  \ ``exactDivide(p,q)``\  divides \ ``p``\  by \ ``q``\  if the division is exact.
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-65787072657373496465616c4d656d626572:
 
 \ :ref:`expressIdealMember <l5072696e636970616c496465616c446f6d61696e-65787072657373496465616c4d656d626572>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) if R has \ :ref:`Field <l4669656c64>`\ 
@@ -500,7 +552,7 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
    pair: NemoUnivariatePolynomial; factor
 
 :spadfun:`factor`\: % -> \ :ref:`NemoFactored <l4e656d6f466163746f726564>`\  % 
-  \ ``factor(p)``\  returns the factorization of \ ``p``\ .
+  \ ``factor(p)``\  returns the factorization of \ ``p``\  using the NemoFactored domain.
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-666163746f72506f6c796e6f6d69616c:
 
@@ -606,6 +658,11 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6a6c4964:
 
 \ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -692,6 +749,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6c656e677468:
+
+.. index::
+   pair: NemoUnivariatePolynomial; length
+
+:spadfun:`length`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``length(p)``\  returns the number of coefficients in its dense representation. It includes zero coefficients.
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6c696e656172457874656e64:
 
 \ :ref:`linearExtend <l467265654d6f64756c6543617465676f7279-6c696e656172457874656e64>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> R, %) -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
@@ -743,6 +808,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`minimumDegree <l506f6c796e6f6d69616c43617465676f7279-6d696e696d756d446567726565>`\ \: (%, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d6f6e69633f:
+
+.. index::
+   pair: NemoUnivariatePolynomial; monic?
+
+:spadfun:`monic?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``monic?(p)``\  checks whether or not \ ``p``\  monic.
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d6f6e6963446976696465:
 
 \ :ref:`monicDivide <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-6d6f6e6963446976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
@@ -754,8 +827,11 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c3f:
 
-\ :ref:`monomial? <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+.. index::
+   pair: NemoUnivariatePolynomial; monomial?
+
+:spadfun:`monomial?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``monomial?(p)``\  checks whether or not \ ``p``\  is a monomial.
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c:
 
@@ -770,10 +846,26 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`monomial <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c>`\ \: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c5265637572736976653f:
+
+.. index::
+   pair: NemoUnivariatePolynomial; monomialRecursive?
+
+:spadfun:`monomialRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recurisvely (all scalar types).
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c73:
 
 \ :ref:`monomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d756c6c6f77:
+
+.. index::
+   pair: NemoUnivariatePolynomial; mullow
+
+:spadfun:`mullow`\: (%, %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``mullow(p1,p2,n)``\  is the truncated multiplication of \ ``p1``\  and \ ``p2``\  by \ ``n``\ .
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-6d756c74694575636c696465616e:
 
@@ -877,6 +969,13 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`pseudoDivide <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-70736575646f446976696465>`\ \: (%, %) -> Record(coef: R, quotient: %, remainder: %) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
   from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
+
+.. index::
+   pair: NemoUnivariatePolynomial; pseudoDivide
+
+:spadfun:`pseudoDivide`\: (%, %) -> Record(quotient: %, remainder: %) 
+  \ ``pseudoDivide(p1,p2)``\  returns pseudo-quotient and pseudo-remainder of the pseudo-division of \ ``p1``\  by \ ``p2``\ .
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-70736575646f51756f7469656e74:
 
 \ :ref:`pseudoQuotient <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-70736575646f51756f7469656e74>`\ \: (%, %) -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
@@ -967,6 +1066,21 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , failed) 
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ 
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-72657665727365:
+
+.. index::
+   pair: NemoUnivariatePolynomial; reverse
+
+:spadfun:`reverse`\: % -> % 
+  \ ``reverse the``\  coefficients of \ ``p``\  (the leading becomes the trailing) and normalise the resulting polynomial.
+
+
+.. index::
+   pair: NemoUnivariatePolynomial; reverse
+
+:spadfun:`reverse`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``reverse the``\  coefficients of \ ``p``\  (the leading becomes the trailing) and normalise the resulting polynomial. Adjust the length to \ ``n``\  so the resulting polynomial is trucated or padded with zeroes before the leading term if necessary
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-7269676874506f776572:
 
 \ :ref:`rightPower <l4d61676d6157697468556e6974-7269676874506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -1024,6 +1138,14 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-7371756172653f:
+
+.. index::
+   pair: NemoUnivariatePolynomial; square?
+
+:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``square?(p)``\  checks whether or not \ ``p``\  is a perfect square.
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-73717561726546726565:
 
 \ :ref:`squareFree <l506f6c796e6f6d69616c43617465676f7279-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
@@ -1059,6 +1181,38 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`support <l467265654d6f64756c6543617465676f7279-737570706f7274>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-7377696e6e6572746f6e44796572506f6c796e6f6d69616c:
+
+.. index::
+   pair: NemoUnivariatePolynomial; swinnertonDyerPolynomial
+
+:spadfun:`swinnertonDyerPolynomial`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``swinnertonDyerPolynomial(n, p)``\  returns the Swinnerton-Dyer polynomial \ ``Sn``\ .
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-7465726d3f:
+
+.. index::
+   pair: NemoUnivariatePolynomial; term?
+
+:spadfun:`term?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``term?(p)``\  checks whether or not \ ``p``\  is a one term polynomial.
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-7465726d5265637572736976653f:
+
+.. index::
+   pair: NemoUnivariatePolynomial; termRecursive?
+
+:spadfun:`termRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``termRecursive?(p)``\  checks whether or not \ ``p``\  as one term, recursively (all scalar types).
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-746865746151457870:
+
+.. index::
+   pair: NemoUnivariatePolynomial; thetaQExp
+
+:spadfun:`thetaQExp`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+  \ ``thetaQExp(r,n,p)``\  returns the \ ``q``\ -expansion to length \ ``n``\  of the Jacobi theta function raised to the power \ ``r``\ , \ ``ϑ``\ (\ ``q``\ )\ ``^r``\ .
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-746f74616c446567726565:
 
 \ :ref:`totalDegree <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -1073,10 +1227,29 @@ Univariate polynomial domain using the Julia Nemo package Author: \ ``G``\ . Van
 \ :ref:`totalDegreeSorted <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565536f72746564>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
 
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-747261696c696e67436f656666696369656e74:
+
+.. index::
+   pair: NemoUnivariatePolynomial; trailingCoefficient
+
+:spadfun:`trailingCoefficient`\: % -> R 
+  \ ``trailingCoefficient(p)``\  returns the trailing coefficientof \ ``p``\ .
+
+.. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-7472756e63617465:
+
+.. index::
+   pair: NemoUnivariatePolynomial; truncate
+
+:spadfun:`truncate`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``truncate(p, n)``\  return \ ``p``\  truncated to \ ``n``\  term. It\ ``'s``\  the remainder of the division by \ ``x^n``\ .
+
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-756e69743f:
 
-\ :ref:`unit? <l456e7469726552696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`EntireRing <l456e7469726552696e67>`\ 
-  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+.. index::
+   pair: NemoUnivariatePolynomial; unit?
+
+:spadfun:`unit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``unit?(p)``\  checks whether or not \ ``p``\  is invertible i.e. is a unit.
 
 .. _l4e656d6f556e6976617269617465506f6c796e6f6d69616c-756e697443616e6f6e6963616c:
 

@@ -5,7 +5,7 @@
 NemoMultivariatePolynomial(R, VarSet, InternalOrdering)
 =======================================================
 
-:viewcode:`jnpoly.spad line 195 <jnpoly.spad#L195>` :editcode:`[edit on github] <jnpoly.spad#L195>`
+:viewcode:`jnpoly.spad line 350 <jnpoly.spad#L350>` :editcode:`[edit on github] <jnpoly.spad#L350>`
 
 * R: \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
 
@@ -14,7 +14,7 @@ NemoMultivariatePolynomial(R, VarSet, InternalOrdering)
 * InternalOrdering: \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the Julia Nemo package. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial() \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z::V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate polynomials using the Julia Nemo package. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z::V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
 
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-30:
@@ -37,7 +37,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NemoMultivariatePolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  
+  \ ``p * q``\  is the product of \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -48,14 +48,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NemoMultivariatePolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  
+  * is the non negative integer multiplication.
 
 
 .. index::
    pair: NemoMultivariatePolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  
+  * is the positive integer multiplication.
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, R) -> % 
@@ -66,7 +66,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NemoMultivariatePolynomial; *
 
 :spadfun:`\*`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  
+  \ ``q * p``\  is the product of \ ``p``\  with a rational \ ``q``\  (Fraction(Intger))
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -94,14 +94,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NemoMultivariatePolynomial; +
 
 :spadfun:`+`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
-  
+  \ ``p + q``\  is the sum of a \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
 
 
 .. index::
    pair: NemoMultivariatePolynomial; +
 
 :spadfun:`+`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
-  
+  \ ``q + p``\  is the sum of a \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-2d:
 
@@ -195,6 +195,10 @@ This type is a basic representation of sparse, distributed multivariate polynomi
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
+\ :ref:`coerce <l4a756c69614f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -223,6 +227,22 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-636f6e7374616e743f:
+
+.. index::
+   pair: NemoMultivariatePolynomial; constant?
+
+:spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``constant?(p)``\  checks whether or not \ ``p``\  is a constant polynomial.
+
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-636f6e7374616e74436f656666696369656e74:
+
+.. index::
+   pair: NemoMultivariatePolynomial; constantCoefficient
+
+:spadfun:`constantCoefficient`\: % -> R 
+  \ ``constantCoefficient(p)``\  returns the constant of \ ``p``\ .
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-636f6e737472756374:
 
@@ -290,6 +310,13 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`degree <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-646567726565>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
+
+.. index::
+   pair: NemoMultivariatePolynomial; degree
+
+:spadfun:`degree`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``degree(p,i)``\  returns the degree of the \ ``i``\ -th variable.
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-646966666572656e7469617465:
 
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
@@ -344,6 +371,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R) -> % 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R)
+
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6578616374446976696465:
+
+.. index::
+   pair: NemoMultivariatePolynomial; exactDivide
+
+:spadfun:`exactDivide`\: (%, %) -> % 
+  \ ``exactDivide(p,q)``\  divides \ ``p``\  by \ ``q``\  if the division is exact.
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-657871756f:
 
@@ -460,6 +495,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6a6c4964:
 
 \ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -541,6 +581,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6c656e677468:
+
+.. index::
+   pair: NemoMultivariatePolynomial; length
+
+:spadfun:`length`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``length(p)``\  retruns the number of terms of \ ``p``\ .
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6c696e656172457874656e64:
 
 \ :ref:`linearExtend <l467265654d6f64756c6543617465676f7279-6c696e656172457874656e64>`\ \: (\ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet -> R, %) -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
@@ -586,8 +634,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c3f:
 
-\ :ref:`monomial? <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
+.. index::
+   pair: NemoMultivariatePolynomial; monomial?
+
+:spadfun:`monomial?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``monomial?(p)``\  checks whether or not \ ``p``\  is a monomial.
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c:
 
@@ -602,7 +653,22 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`monomial <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c>`\ \: (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
   from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c5265637572736976653f:
+
+.. index::
+   pair: NemoMultivariatePolynomial; monomialRecursive?
+
+:spadfun:`monomialRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recurisvely (all scalar types).
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c73:
+
+.. index::
+   pair: NemoMultivariatePolynomial; monomials
+
+:spadfun:`monomials`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  % 
+  \ ``monomials(p)``\  returns the list of non-zero monomials of \ ``p``\  includind its coefficients.
+
 
 \ :ref:`monomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
@@ -620,21 +686,6 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`mutable? <l4a756c69614f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6e6d7032736d70:
-
-.. index::
-   pair: NemoMultivariatePolynomial; nmp2smp
-
-:spadfun:`nmp2smp`\: % -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) if R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ 
-  
-
-
-.. index::
-   pair: NemoMultivariatePolynomial; nmp2smp
-
-:spadfun:`nmp2smp`\: % -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) if R hasn't \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6e6f7468696e673f:
 
@@ -681,6 +732,13 @@ This type is a basic representation of sparse, distributed multivariate polynomi
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-7072696d69746976654d6f6e6f6d69616c73:
+
+.. index::
+   pair: NemoMultivariatePolynomial; primitiveMonomials
+
+:spadfun:`primitiveMonomials`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  % 
+  \ ``primitiveMonomials(p)``\  returns the list of non-zero primitive monomials of \ ``p``\  i.e. not including its coefficients.
+
 
 \ :ref:`primitiveMonomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7072696d69746976654d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
@@ -789,6 +847,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-7371756172653f:
+
+.. index::
+   pair: NemoMultivariatePolynomial; square?
+
+:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``square?(p)``\  checks whether or not \ ``p``\  is a perfect square.
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-73717561726546726565:
 
 \ :ref:`squareFree <l506f6c796e6f6d69616c43617465676f7279-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
@@ -819,6 +885,22 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`support <l467265654d6f64756c6543617465676f7279-737570706f7274>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet 
   from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-7465726d3f:
+
+.. index::
+   pair: NemoMultivariatePolynomial; term?
+
+:spadfun:`term?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``term?(p)``\  checks whether or not \ ``p``\  is a one term polynomial.
+
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-7465726d5265637572736976653f:
+
+.. index::
+   pair: NemoMultivariatePolynomial; termRecursive?
+
+:spadfun:`termRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``termRecursive?(p)``\  checks whether or not \ ``p``\  as one term polynomial recursively on all scalar types.
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-746f74616c446567726565:
 
 \ :ref:`totalDegree <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -833,10 +915,21 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`totalDegreeSorted <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565536f72746564>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-747261696c696e67436f656666696369656e74:
+
+.. index::
+   pair: NemoMultivariatePolynomial; trailingCoefficient
+
+:spadfun:`trailingCoefficient`\: % -> R 
+  \ ``trailingCoefficient(p)``\  returns the trailing coefficientof \ ``p``\ .
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-756e69743f:
 
-\ :ref:`unit? <l456e7469726552696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`EntireRing <l456e7469726552696e67>`\ 
-  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+.. index::
+   pair: NemoMultivariatePolynomial; unit?
+
+:spadfun:`unit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``unit?(p)``\  checks whether or not \ ``p``\  is invertible i.e. is a unit.
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-756e697443616e6f6e6963616c:
 
@@ -847,6 +940,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`unitNormal <l456e7469726552696e67-756e69744e6f726d616c>`\ \: % -> Record(unit: %, canonical: %, associate: %) if R has \ :ref:`EntireRing <l456e7469726552696e67>`\ 
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-756e69766172696174653f:
+
+.. index::
+   pair: NemoMultivariatePolynomial; univariate?
+
+:spadfun:`univariate?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``univariate?(p)``\  checks whether or not \ ``p``\  is a univariate polynomial.
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-756e6976617269617465:
 

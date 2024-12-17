@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
     
-    <script src="_static/documentation_options.js?v=e4fb7171"></script>
+    <script src="_static/documentation_options.js?v=088b693c"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -125,7 +125,7 @@ make.</p>
 <li><p>FriCAS builds also using <a class="reference external" href="https://www.gnu.org/software/gcl">GCL</a>, at least build using released version
 2.6.14 works.  Build using older GCL versions no longer works.
 Note that with default setting build is likely to fail.
-Look at GCL_MEM_MULTIPLE note in Known problems section
+Look at GCL_MEM_MULTIPLE note in <a class="reference internal" href="#known-problems">Known problems</a> section
 for possible workaround.</p></li>
 </ul>
 <p>All Lisp implementations should give essentially the same
@@ -137,15 +137,14 @@ default FriCAS tries to use SBCL, since it is fast and reliable.  On
 CLISP), Clozure CL and GCL the second (about 3 times slower than
 SBCL), then ECL (about 7 times slower than SBCL) and CLISP is the
 slowest one.  Note: very old versions of ECL were much (about 4 times)
-slower, versions from about 7-10 years ago gave best performance and
-newest ECL versions are progressively slower.</p>
+slower.</p>
 <p>Some computation work much faster on 64-bit machines, especially
 when using SBCL.</p>
 </section>
 <section id="jfricas-optional">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">jFriCAS (optional)</a><a class="headerlink" href="#jfricas-optional" title="Link to this heading">¶</a></h3>
-<p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is an interface for running <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> in a <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook.
-It should be installed <strong>after</strong> <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> has been installed.</p>
+<p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is an interface for running <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> in a <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook.
+It should be installed <strong>after</strong> <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> has been installed.</p>
 <p><strong>Note:</strong> It currently only works with an <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a> image that has the
 <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a> webserver included.  See next section.</p>
 </section>
@@ -179,7 +178,7 @@ not be built.  See Section <a class="reference internal" href="#hyperdoc-and-gra
 </section>
 <section id="gmp-optional">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">GMP (optional)</a><a class="headerlink" href="#gmp-optional" title="Link to this heading">¶</a></h3>
-<p>You you use SBCL or Clozure CL the <code class="docutils literal notranslate"><span class="pre">--enable-gmp</span></code> configure option
+<p>When you use SBCL or Clozure CL the <code class="docutils literal notranslate"><span class="pre">--enable-gmp</span></code> configure option
 is available only if the development version of GMP is installed.
 Note: using GMP should work on all SBCL and Clozure CL platforms
 except for Clozure CL on Power PC.</p>
@@ -228,8 +227,8 @@ pip3 install -U Sphinx
 <section id="aldor-optional">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">Aldor (optional)</a><a class="headerlink" href="#aldor-optional" title="Link to this heading">¶</a></h3>
 <p><a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a> was originally invented to be the next generation compiler for
-<a class="reference external" href="http://axiom-developer.org/">Axiom</a> (the system that <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> forked from).  If you want to use
-<a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a> to extend the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> library, you must, of course, have <a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a>
+<a class="reference external" href="http://axiom-developer.org/">Axiom</a> (the system that <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> forked from).  If you want to use
+<a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a> to extend the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> library, you must, of course, have <a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a>
 installed, and add <code class="docutils literal notranslate"><span class="pre">--enable-aldor</span></code> to your configure options when
 you compile FriCAS.</p>
 <p>The commands below download the <a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a> git repository into
@@ -432,13 +431,13 @@ respectively).</p>
 <h3><a class="toc-backref" href="#id21" role="doc-backlink">Build extra documentation (book and website)</a><a class="headerlink" href="#build-extra-documentation-book-and-website" title="Link to this heading">¶</a></h3>
 <p>After a build of FriCAS, (suppose your build directory is under
 <code class="docutils literal notranslate"><span class="pre">$BUILD</span></code>), you can build the documentation provided at
-the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS home page</a> on your local installation.</p>
-<p>The <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS home page</a> can be built via</p>
+the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS home page</a> on your local installation.</p>
+<p>The <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS home page</a> can be built via</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd $BUILD/src/doc
 make doc
 </pre></div>
 </div>
-<p>This builds the full content of the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS home page</a> including the
+<p>This builds the full content of the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS home page</a> including the
 <a class="reference external" href="https://gvanuxem.github.io/jlfricas/book.pdf">jlFriCAS Book</a> (also known as the FriCAS User Guide) into the
 directory <code class="docutils literal notranslate"><span class="pre">src/doc/html</span></code> from which it can be committed to the
 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch of the official <a class="reference external" href="https://github.com/gvanuxem/jlfricas">jlFriCAS git repository</a>.</p>
@@ -511,7 +510,7 @@ programs), but also by <code class="docutils literal notranslate"><span class="p
 to work FriCAS needs a library <code class="docutils literal notranslate"><span class="pre">libfricas.al</span></code>.</p>
 <p>Note that building the interface temporarily needs about 2 GB extra
 disk space.  Since currently, building the Aldor interface accesses the
-build files of a previous <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> build, you need about 3 GB disk
+build files of a previous <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> build, you need about 3 GB disk
 space.</p>
 <p>If you configured FriCAS using <code class="docutils literal notranslate"><span class="pre">--enable-aldor</span></code> option, then
 <code class="docutils literal notranslate"><span class="pre">make</span></code> will also build <code class="docutils literal notranslate"><span class="pre">libfricas.al</span></code> and <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>
@@ -587,7 +586,7 @@ mkdir -p $FDIR $GITREPOS $FRICASINSTALL $JFRICASINSTALL
 </div>
 <section id="jfricas-installation">
 <h4>jFriCAS installation<a class="headerlink" href="#jfricas-installation" title="Link to this heading">¶</a></h4>
-<p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is the <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook interface to <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a>.  Of course,
+<p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is the <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook interface to <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a>.  Of course,
 <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> needs <a class="reference external" href="https://jupyter.org">Jupyter</a> in a reasonably recent version (at least 4).</p>
 <p>Install prerequisites if not yet available (needs root access, but it
 may already be installed on your system).</p>
@@ -627,7 +626,7 @@ chmod +x $FRICASINSTALL/bin/jfricas
 </div>
 <p>Start a new terminal or set the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> on the command line or inside
 your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file and start <code class="docutils literal notranslate"><span class="pre">jfricas</span></code> from any directory (after
-you have installed <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a>).</p>
+you have installed <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a>).</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>export PATH=$FRICASINSTALL/bin:$PATH
 </pre></div>
 </div>
@@ -656,7 +655,7 @@ FriCAS <code class="docutils literal notranslate"><span class="pre">.input</span
 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">.input</span></code> formats.</p>
 <p>There are two types of cells in <a class="reference external" href="https://jupyter.org">Jupyter</a>: Markdown documentation
 cells and execution cells.  With the help of <a class="reference external" href="https://jupytext.readthedocs.io">JupyText</a>, Markdown
-cells will appear inside an <code class="docutils literal notranslate"><span class="pre">.input</span></code> file as <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a>
+cells will appear inside an <code class="docutils literal notranslate"><span class="pre">.input</span></code> file as <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a>
 comments and execution cells appear without the <code class="docutils literal notranslate"><span class="pre">&quot;--</span> <span class="pre">&quot;</span></code>
 comment prefix.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>source $JFRICASINSTALL/bin/activate
@@ -742,7 +741,7 @@ you see at
 <section id="install-frimacs">
 <h3><a class="toc-backref" href="#id24" role="doc-backlink">Install frimacs</a><a class="headerlink" href="#install-frimacs" title="Link to this heading">¶</a></h3>
 <p><a class="reference external" href="https://github.com/pdo/frimacs">frimacs</a> is an <a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a> mode for FriCAS with special features to
-edit <code class="docutils literal notranslate"><span class="pre">.input</span></code> and <code class="docutils literal notranslate"><span class="pre">.spad</span></code> files as well as executing a <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a>
+edit <code class="docutils literal notranslate"><span class="pre">.input</span></code> and <code class="docutils literal notranslate"><span class="pre">.spad</span></code> files as well as executing a <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a>
 session inside an <a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a> buffer.</p>
 <p>Install as follows.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd $GITREPOS
@@ -754,7 +753,7 @@ git clone https://github.com/pdo/frimacs.git
 </pre></div>
 </div>
 <p>to your <code class="docutils literal notranslate"><span class="pre">.emacs</span></code> or <code class="docutils literal notranslate"><span class="pre">.emacs.d/init.el</span></code> file.</p>
-<p>To start a <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> session use</p>
+<p>To start a <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> session use</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>M-x run-fricas
 </pre></div>
 </div>
@@ -829,7 +828,7 @@ script to work correctly.</p>
 <p>and restart the X server (log out and log in again) in case the font
 in HyperDoc does not look pretty.</p>
 <p>That is, however, not necessary, if you do not intend to use HyperDoc
-a lot and rather look at the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> homepage in order to find
+a lot and rather look at the <a class="reference external" href="https://gvanuxem.github.io/jlfricas/">jlFriCAS</a> homepage in order to find
 relevant information.</p>
 <p>Optionally, set the PATH in <code class="docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code>:</p>
 <p>Edit the file <code class="docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code> (or whatever your shell initialization

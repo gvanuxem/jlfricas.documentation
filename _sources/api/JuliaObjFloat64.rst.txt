@@ -5,7 +5,7 @@
 JuliaObjFloat64
 ===============
 
-:viewcode:`jobject.spad line 260 <jobject.spad#L260>` :editcode:`[edit on github] <jobject.spad#L260>`
+:viewcode:`jobject.spad line 275 <jobject.spad#L275>` :editcode:`[edit on github] <jobject.spad#L275>`
 
 
 Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather, for returned value or function argument for example. Only basic arithmetic operations are supported.
@@ -176,6 +176,10 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
+\ :ref:`coerce <l4a756c69614f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -337,6 +341,11 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
 
 :spadfun:`jlApprox?`\: (%, %, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlApprox?(x,y,atol)``\  computes inexact equality comparison with absolute tolerance \ ``atol``\ . Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+
+.. _l4a756c69614f626a466c6f61743634-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614f626a466c6f61743634-6a6c463634434170706c79:
 

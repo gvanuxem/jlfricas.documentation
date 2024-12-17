@@ -5,7 +5,7 @@
 JuliaComplexFloat
 =================
 
-:viewcode:`jobject.spad line 961 <jobject.spad#L961>` :editcode:`[edit on github] <jobject.spad#L961>`
+:viewcode:`jobject.spad line 1007 <jobject.spad#L1007>` :editcode:`[edit on github] <jobject.spad#L1007>`
 
 
 JuliaFComplexloat implements arbitrary precision floating point arithmetic for complex numbers using Julia BigFloats (MPFR based). https://www.mpfr.org/
@@ -269,6 +269,10 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
   from \ :ref:`Algebra <l416c6765627261>`\  %
+
+
+\ :ref:`coerce <l4a756c69614f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -775,6 +779,11 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 :spadfun:`jlApprox?`\: (%, %, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlApprox?(x,y,atol)``\  computes inexact equality comparison with absolute tolerance \ ``atol``\ . Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+
+.. _l4a756c6961436f6d706c6578466c6f6174-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961436f6d706c6578466c6f6174-6a6c4964:
 

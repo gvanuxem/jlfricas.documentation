@@ -175,6 +175,10 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
   \ ``coerce(ni)``\  ro a \ ``JuliaInt64``\  if possible.
 
 
+\ :ref:`coerce <l4a756c69614f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -291,6 +295,16 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 \ :ref:`factorial <l436f6d62696e61746f7269616c46756e6374696f6e43617465676f7279-666163746f7269616c>`\ \: % -> % 
   from \ :ref:`CombinatorialFunctionCategory <l436f6d62696e61746f7269616c46756e6374696f6e43617465676f7279>`\ 
 
+.. _l4e656d6f496e7465676572-666163746f72506f6c796e6f6d69616c:
+
+\ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
+.. _l4e656d6f496e7465676572-666163746f7253717561726546726565506f6c796e6f6d69616c:
+
+\ :ref:`factorSquareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
 .. _l4e656d6f496e7465676572-676364:
 
 \ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % 
@@ -302,8 +316,8 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 .. _l4e656d6f496e7465676572-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
+\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e656d6f496e7465676572-696e63:
 
@@ -348,6 +362,11 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4e656d6f496e7465676572-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4e656d6f496e7465676572-6a6c4964:
@@ -608,6 +627,11 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 \ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
+.. _l4e656d6f496e7465676572-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e:
+
+\ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
 .. _l4e656d6f496e7465676572-73717561726546726565:
 
 \ :ref:`squareFree <l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
@@ -617,6 +641,11 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 \ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
+
+.. _l4e656d6f496e7465676572-73717561726546726565506f6c796e6f6d69616c:
+
+\ :ref:`squareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e656d6f496e7465676572-737472696e67:
 
@@ -772,6 +801,8 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 \ :ref:`PartialOrder <l5061727469616c4f72646572>`\  
 
 \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  
+
+\ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  
 
 \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\  
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
-    <script src="../_static/documentation_options.js?v=e4fb7171"></script>
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -45,7 +45,7 @@
             
   <section id="juliaobject">
 <span id="l4a756c69614f626a656374"></span><span id="index-0"></span><h1>JuliaObject<a class="headerlink" href="#juliaobject" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L206">jobject.spad line 206</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L206">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L214">jobject.spad line 214</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L214">[edit on github]</a></p>
 <p>Generic Julia objects i.e. objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It also supports the JuliaObjectAggregate category.</p>
 <dl class="simple" id="l4a756c69614f626a656374-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -56,14 +56,20 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c69614f626a656374-636f65726365">
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+</dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="JuliaSymbol.html#l4a756c696153796d626f6c"><span class="std std-ref">JuliaSymbol</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code>: convenience function.</p>
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(i)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">i</span></code> as a JuliaObject. Convenience function.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="JuliaSymbol.html#l4a756c696153796d626f6c"><span class="std std-ref">JuliaSymbol</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code>: convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(str)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">str</span></code> as a JuliaObject. Convenience function.</p>
 </dd>
 </dl>
@@ -111,6 +117,10 @@
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4a756c69614f626a656374-6a6c446973706c6179">
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a756c69614f626a656374-6a6c4964">
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
@@ -127,7 +137,11 @@
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c69614f626a656374-6a6f626a656374"></span><dl class="simple" id="index-3">
+<span id="l4a756c69614f626a656374-6a6f626a656374"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">jobject</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jobject(n)</span></code> return the JuliaObject representing the integer <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
 <dt><span class="spadfun">jobject</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>jlObject(string) constructs an arbirary Julia object depending on string used (evaluated by Julia). For example: example{jobject(“rand(Float64,(2,3,4))”)} a 2x3x4 array of <code class="docutils literal notranslate"><span class="pre">Float64</span></code> elements.</p>
 </dd>
 </dl>
