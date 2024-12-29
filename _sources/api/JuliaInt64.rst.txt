@@ -5,7 +5,7 @@
 JuliaInt64
 ==========
 
-:viewcode:`julia.spad line 54 <julia.spad#L54>` :editcode:`[edit on github] <julia.spad#L54>`
+:viewcode:`julia.spad line 137 <julia.spad#L137>` :editcode:`[edit on github] <julia.spad#L137>`
 
 
 This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal Lisp implementations of machine integer, usually they differ, for example Lisp MOST-POSITIVE-FIXNUM on \ ``x86_64``\  GNU/Linux is 4611686018427387903 with SBCL whereas it is 1152921504606846975 with Clozure \ ``CL``\ . They will be passed as an \ ``Int64``\  to Julia nevertheless, but returned value can not fit in a Lisp fixnum. In Julia, typemax(\ ``Int64``\ ) is 9223372036854775807 on this arch. This domain is therefore not intented to perfom "advanced" computation, it just includes basic arthmetic and is used, for example, for returned pivot vectors in linear algebra.
@@ -155,7 +155,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JuliaInt64; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  
-  
+  \ ``coerce ``\ \undocumented
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -166,7 +166,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JuliaInt64; coerce
 
 :spadfun:`coerce`\: \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  -> % 
-  
+  \ ``coerce ``\ \undocumented
 
 .. _l4a756c6961496e743634-636f6d6d757461746f72:
 
@@ -284,14 +284,6 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
 \ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
-.. _l4a756c6961496e743634-6861736855706461746521:
-
-.. index::
-   pair: JuliaInt64; hashUpdate!
-
-:spadfun:`hashUpdate!`\: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  
-  
-
 .. _l4a756c6961496e743634-696e63:
 
 \ :ref:`inc <l496e74656765724e756d62657253797374656d-696e63>`\ \: % -> % 
@@ -313,14 +305,14 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JuliaInt64; ji64
 
 :spadfun:`ji64`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``ji64``\ \undocumented
 
 
 .. index::
    pair: JuliaInt64; ji64
 
 :spadfun:`ji64`\: \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  -> % 
-  
+  \ ``ji64 ``\ \undocumented
 
 .. _l4a756c6961496e743634-6c61746578:
 
@@ -375,7 +367,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JuliaInt64; max
 
 :spadfun:`max`\: () -> % 
-  
+  \ ``max ``\ \undocumented
 
 .. _l4a756c6961496e743634-6d696e:
 
@@ -387,7 +379,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JuliaInt64; min
 
 :spadfun:`min`\: () -> % 
-  
+  \ ``min ``\ \undocumented
 
 .. _l4a756c6961496e743634-6d756c6d6f64:
 
@@ -564,7 +556,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JuliaInt64; string
 
 :spadfun:`string`\: % -> \ :ref:`String <l537472696e67>`\  
-  
+  \ ``string ``\ \undocumented
 
 .. _l4a756c6961496e743634-7375626d6f64:
 
@@ -655,6 +647,8 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
 \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  
 
 \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  
+
+\ :ref:`JuliaMachineType <l4a756c69614d616368696e6554797065>`\  
 
 \ :ref:`JuliaType <l4a756c696154797065>`\  
 

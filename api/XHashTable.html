@@ -7,11 +7,11 @@
 
     <title>XHashTable(Key, Entry) &#8212; jlFriCAS</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=088b693c"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
@@ -326,7 +326,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-1">
-<dt><span class="spadfun">table</span>: (Key -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">table(h)</span></code> creates an empty hash table that uses <code class="docutils literal notranslate"><span class="pre">h</span></code> instead of hash$Key. Note that <code class="docutils literal notranslate"><span class="pre">h</span></code> should be a mathematical function in the sense that from <code class="docutils literal notranslate"><span class="pre">k1=k2</span></code> follows <code class="docutils literal notranslate"><span class="pre">h</span></code>(<code class="docutils literal notranslate"><span class="pre">k1</span></code>)<code class="docutils literal notranslate"><span class="pre">=h</span></code>(<code class="docutils literal notranslate"><span class="pre">k2</span></code>). If that is not the case, <code class="docutils literal notranslate"><span class="pre">k1</span></code> and <code class="docutils literal notranslate"><span class="pre">k2</span></code> will internally be considered as being different keys.</p>
+<dt><span class="spadfun">table</span>: (Key -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">table(h)</span></code> creates an empty hash table that uses <code class="docutils literal notranslate"><span class="pre">h</span></code> instead of hash$Key. Note that <code class="docutils literal notranslate"><span class="pre">h</span></code> should be a mathematical function in the sense that from <code class="docutils literal notranslate"><span class="pre">k1=k2</span></code> follows <code class="docutils literal notranslate"><span class="pre">h</span></code>(<code class="docutils literal notranslate"><span class="pre">k1</span></code>)<code class="docutils literal notranslate"><span class="pre">=h</span></code>(<code class="docutils literal notranslate"><span class="pre">k2</span></code>). If that is not the case, <code class="docutils literal notranslate"><span class="pre">k1</span></code> and <code class="docutils literal notranslate"><span class="pre">k2</span></code> will internally be considered as being different keys. For XHashTable to work correctly, the function <code class="docutils literal notranslate"><span class="pre">h</span></code> must only yield non-negative values.</p>
 </dd>
 <dt><a class="reference internal" href="TableAggregate.html#l5461626c65416767726567617465-7461626c65"><span class="std std-ref">table</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(key: Key, entry: Entry) -&gt; %</dt><dd><p>from <a class="reference internal" href="TableAggregate.html#l5461626c65416767726567617465"><span class="std std-ref">TableAggregate</span></a>(Key, Entry)</p>
 </dd>

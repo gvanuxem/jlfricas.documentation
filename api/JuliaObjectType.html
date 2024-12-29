@@ -7,11 +7,11 @@
 
     <title>JuliaObjectType &#8212; jlFriCAS</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=088b693c"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
@@ -56,7 +56,7 @@
 </dd>
 </dl>
 <span id="l4a756c69614f626a65637454797065-636f65726365"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(obj)</span></code> coerce <code class="docutils literal notranslate"><span class="pre">obj</span></code> ot JuliaObject. Convenience function.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(obj)</span></code> coerce <code class="docutils literal notranslate"><span class="pre">obj</span></code> to JuliaObject. Convenience function.</p>
 </dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
@@ -74,7 +74,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code> and <code class="docutils literal notranslate"><span class="pre">obj2</span></code> as parameters and returns the result as a FriCAS JuliaObject. For example (equivalent to map(cos, <code class="docutils literal notranslate"><span class="pre">v</span></code>)): example{v:=urand01(5)$JuliaVector(JuliaFloat)} example{jlApply(“map”, “cos”, v pretend JuliaObject)}</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">obj1</span></code> and <code class="docutils literal notranslate"><span class="pre">obj2</span></code> as parameters and returns the result as a FriCAS JuliaObject. For example (equivalent to map(cos, <code class="docutils literal notranslate"><span class="pre">v</span></code>)): example{v:=urand01(5)$JuliaVector(JuliaFloat)} example{jlApply(“map”, “cos”, coerce v)}</p>
 </dd>
 </dl>
 <dl class="simple" id="index-5">

@@ -5,7 +5,7 @@
 JuliaFloat64
 ============
 
-:viewcode:`julia.spad line 377 <julia.spad#L377>` :editcode:`[edit on github] <julia.spad#L377>`
+:viewcode:`julia.spad line 409 <julia.spad#L409>` :editcode:`[edit on github] <julia.spad#L409>`
 
 
 \ :ref:`JuliaFloat64 <l4a756c6961466c6f61743634>`\  implements 64 bits floating point arithmetic using Julia \ ``Float64``\  type. Bear in mind that, like \ ``JuliaInt64``\ , the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the computation is performed at machine level (generally in \ ``C``\  language, or even using assembly language).
@@ -201,11 +201,8 @@ JuliaFloat64
   from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
 
 
-.. index::
-   pair: JuliaFloat64; atan
-
-:spadfun:`atan`\: (%, %) -> % 
-  \ ``atan(x, y)``\  computes the inverse tangent of x/y.
+\ :ref:`atan <l4a756c69614d616368696e65466c6f6174-6174616e>`\ \: (%, %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6174616e68:
 
@@ -224,11 +221,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-636174616c616e:
 
-.. index::
-   pair: JuliaFloat64; catalan
-
-:spadfun:`catalan`\: () -> % 
-  \ ``catalan()``\  return the Catalan\ ``'s``\  constant.
+\ :ref:`catalan <l4a756c69614d616368696e65466c6f6174-636174616c616e>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6365696c696e67:
 
@@ -360,11 +354,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-65756c657247616d6d61:
 
-.. index::
-   pair: JuliaFloat64; eulerGamma
-
-:spadfun:`eulerGamma`\: () -> % 
-  \ ``eulerGamma()``\  returns the Euler\ ``'s``\  constant gamma (\ ``γ``\ ).
+\ :ref:`eulerGamma <l4a756c69614d616368696e65466c6f6174-65756c657247616d6d61>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-657870:
 
@@ -372,19 +363,13 @@ JuliaFloat64
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
 
 
-.. index::
-   pair: JuliaFloat64; exp
-
-:spadfun:`exp`\: () -> % 
-  \ ``exp()``\  returns the \ ``JuliaFloat64``\  \ ``ℯ``\  (\%\ ``e``\  or exp(1)).
+\ :ref:`exp <l4a756c69614d616368696e65466c6f6174-657870>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6578706d31:
 
-.. index::
-   pair: JuliaFloat64; expm1
-
-:spadfun:`expm1`\: % -> % 
-  \ ``expm1(x)``\  computes accurately e^x-1.
+\ :ref:`expm1 <l4a756c69614d616368696e65466c6f6174-6578706d31>`\ \: % -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6578706f6e656e74:
 
@@ -450,19 +435,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-676f6c64656e526174696f6e:
 
-.. index::
-   pair: JuliaFloat64; goldenRation
-
-:spadfun:`goldenRation`\: () -> % 
-  \ ``goldenRation()``\  returns the golden ratio.
-
-.. _l4a756c6961466c6f61743634-6861736855706461746521:
-
-.. index::
-   pair: JuliaFloat64; hashUpdate!
-
-:spadfun:`hashUpdate!`\: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  
-  
+\ :ref:`goldenRation <l4a756c69614d616368696e65466c6f6174-676f6c64656e526174696f6e>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-696e76:
 
@@ -493,55 +467,39 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-6a6c4170706c79:
 
-.. index::
-   pair: JuliaFloat64; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, x)``\  applies \ ``func``\  to argument \ ``x``\ .
+\ :ref:`jlApply <l4a756c69614d616368696e65466c6f6174-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 
-.. index::
-   pair: JuliaFloat64; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, x, y)``\  applies \ ``func``\  to arguments \ ``x``\  and \ ``y``\ .
+\ :ref:`jlApply <l4a756c69614d616368696e65466c6f6174-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 
-.. index::
-   pair: JuliaFloat64; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, x, y, z)``\  applies \ ``func``\  to arguments \ ``x``\ , \ ``y``\  and \ ``z``\ .
+\ :ref:`jlApply <l4a756c69614d616368696e65466c6f6174-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6a6c417070726f783f:
 
-.. index::
-   pair: JuliaFloat64; jlApprox?
-
-:spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+\ :ref:`jlApprox? <l4a756c69614d616368696e65466c6f6174-6a6c417070726f783f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6a6c434170706c79:
 
-.. index::
-   pair: JuliaFloat64; jlCApply
-
-:spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %) -> % 
-  \ ``jlCApply(lib, func, x)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to argument \ ``x``\ . For example: \example{jlCApply("libm.so.6",jsym(sqrt),jf64(2.0))}
+\ :ref:`jlCApply <l4a756c69614d616368696e65466c6f6174-6a6c434170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 
-.. index::
-   pair: JuliaFloat64; jlCApply
-
-:spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %, %) -> % 
-  \ ``jlCApply(lib, func, x, y)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to arguments \ ``x``\  and \ ``y``\ . For example: \example{jlCApply("libopenlibm", jsym(pow),2.7,3.0)} OpenLibm library is provided by Julia.
+\ :ref:`jlCApply <l4a756c69614d616368696e65466c6f6174-6a6c434170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %, %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 
-.. index::
-   pair: JuliaFloat64; jlCApply
+\ :ref:`jlCApply <l4a756c69614d616368696e65466c6f6174-6a6c434170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %, %, %) -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
-:spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ , %, %, %) -> % 
-  \ ``jlCApply(lib, func, x, y, z)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to arguments \ ``x``\ , \ ``y``\  and \ ``z``\ . For example if you have the GNU Scientific Library installed: \example{jlCApply("libgsl",jsym(gsl_hypot3),jf64(2.0),jf64(7.0),jf64(9.0))}
+.. _l4a756c6961466c6f61743634-6a6c537472696e67:
+
+\ :ref:`jlString <l4a756c69614d616368696e65466c6f6174-6a6c537472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6c61746578:
 
@@ -578,19 +536,13 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-6c6f673130:
 
-.. index::
-   pair: JuliaFloat64; log10
-
-:spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  computes the base 10 logarithm of \ ``x``\ .
+\ :ref:`log10 <l4a756c69614d616368696e65466c6f6174-6c6f673130>`\ \: % -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6c6f6732:
 
-.. index::
-   pair: JuliaFloat64; log2
-
-:spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  computes the base 2 logarithm of \ ``x``\ .
+\ :ref:`log2 <l4a756c69614d616368696e65466c6f6174-6c6f6732>`\ \: % -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6c6f67:
 
@@ -627,11 +579,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-6e616e:
 
-.. index::
-   pair: JuliaFloat64; nan
-
-:spadfun:`nan`\: () -> % 
-  \ ``nan()``\  returns the Julia \ ``Float64``\  NaN (not a number) constant.
+\ :ref:`nan <l4a756c69614d616368696e65466c6f6174-6e616e>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6e656761746976653f:
 
@@ -640,11 +589,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-6e65676174697665496e66696e697479:
 
-.. index::
-   pair: JuliaFloat64; negativeInfinity
-
-:spadfun:`negativeInfinity`\: () -> % 
-  \ ``negativeInfinity()``\  returns the Julia \ ``Float64``\  negtive infinity constant.
+\ :ref:`negativeInfinity <l4a756c69614d616368696e65466c6f6174-6e65676174697665496e66696e697479>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6e6f726d:
 
@@ -653,11 +599,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-6e72616e64:
 
-.. index::
-   pair: JuliaFloat64; nrand
-
-:spadfun:`nrand`\: () -> % 
-  \ ``nrand()``\  returns a normally distributed random number.
+\ :ref:`nrand <l4a756c69614d616368696e65466c6f6174-6e72616e64>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-6e7468526f6f74:
 
@@ -701,11 +644,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-706f736974697665496e66696e697479:
 
-.. index::
-   pair: JuliaFloat64; positiveInfinity
-
-:spadfun:`positiveInfinity`\: () -> % 
-  \ ``positiveInfinity()``\  returns the Julia \ ``Float64``\  positive infinity constant.
+\ :ref:`positiveInfinity <l4a756c69614d616368696e65466c6f6174-706f736974697665496e66696e697479>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-707265636973696f6e:
 
@@ -831,11 +771,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-737472696e67:
 
-.. index::
-   pair: JuliaFloat64; string
-
-:spadfun:`string`\: % -> \ :ref:`String <l537472696e67>`\  
-  
+\ :ref:`string <l4a756c696154797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaType <l4a756c696154797065>`\ 
 
 .. _l4a756c6961466c6f61743634-7375627472616374496643616e:
 
@@ -883,11 +820,8 @@ JuliaFloat64
 
 .. _l4a756c6961466c6f61743634-7572616e643031:
 
-.. index::
-   pair: JuliaFloat64; urand01
-
-:spadfun:`urand01`\: () -> % 
-  \ ``urand01()``\  returns an uniformly distributed random number contained in [0,1].
+\ :ref:`urand01 <l4a756c69614d616368696e65466c6f6174-7572616e643031>`\ \: () -> % 
+  from \ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\ 
 
 .. _l4a756c6961466c6f61743634-77686f6c6550617274:
 
@@ -977,6 +911,10 @@ JuliaFloat64
 \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\  
 
 \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  
+
+\ :ref:`JuliaMachineFloat <l4a756c69614d616368696e65466c6f6174>`\  
+
+\ :ref:`JuliaMachineType <l4a756c69614d616368696e6554797065>`\  
 
 \ :ref:`JuliaType <l4a756c696154797065>`\  
 

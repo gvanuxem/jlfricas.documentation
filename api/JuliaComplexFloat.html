@@ -7,11 +7,11 @@
 
     <title>JuliaComplexFloat &#8212; jlFriCAS</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=088b693c"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
@@ -45,7 +45,7 @@
             
   <section id="juliacomplexfloat">
 <span id="l4a756c6961436f6d706c6578466c6f6174"></span><span id="index-0"></span><h1>JuliaComplexFloat<a class="headerlink" href="#juliacomplexfloat" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1007">jobject.spad line 1007</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1007">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1018">jobject.spad line 1018</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1018">[edit on github]</a></p>
 <p>JuliaFComplexloat implements arbitrary precision floating point arithmetic for complex numbers using Julia BigFloats (MPFR based). <a class="reference external" href="https://www.mpfr.org/">https://www.mpfr.org/</a></p>
 <dl class="simple" id="l4a756c6961436f6d706c6578466c6f6174-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
@@ -253,7 +253,7 @@
 </dd>
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></p>
 </dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a> has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
 </dd>
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></p>
 </dd>
@@ -507,10 +507,20 @@
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a756c6961436f6d706c6578466c6f6174-6a6c4170706c79">
+<span id="l4a756c6961436f6d706c6578466c6f6174-6a6c4170706c79"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with obj as parameter.</p>
+</dd>
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
+</dl>
+<dl class="simple" id="index-21">
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">obj1</span></code> and <code class="docutils literal notranslate"><span class="pre">obj2</span></code>.</p>
+</dd>
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-22">
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2,</span> <span class="pre">obj3)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">obj1</span></code>, <code class="docutils literal notranslate"><span class="pre">obj2</span></code> and <code class="docutils literal notranslate"><span class="pre">obj3</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
@@ -521,11 +531,11 @@
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-6a6c417070726f783f"></span><dl class="simple" id="index-20">
+<span id="l4a756c6961436f6d706c6578466c6f6174-6a6c417070726f783f"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y)</span></code> computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-21">
+<dl class="simple" id="index-24">
 <dt><span class="spadfun">jlApprox?</span>: (%, %, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y,atol)</span></code> computes inexact equality comparison with absolute tolerance <code class="docutils literal notranslate"><span class="pre">atol</span></code>. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.</p>
 </dd>
 </dl>
@@ -577,15 +587,15 @@
 <dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-6c696674"><span class="std std-ref">lift</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a></dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(<a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a>, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a>)</p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-6c6f673130"></span><dl class="simple" id="index-22">
+<span id="l4a756c6961436f6d706c6578466c6f6174-6c6f673130"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">log10</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log10(x)</span></code> computes the base 10 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-6c6f673170"></span><dl class="simple" id="index-23">
+<span id="l4a756c6961436f6d706c6578466c6f6174-6c6f673170"></span><dl class="simple" id="index-26">
 <dt><span class="spadfun">log1p</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log1p(x)</span></code> computes accurately log(1+x)</p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-6c6f6732"></span><dl class="simple" id="index-24">
+<span id="l4a756c6961436f6d706c6578466c6f6174-6c6f6732"></span><dl class="simple" id="index-27">
 <dt><span class="spadfun">log2</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log2(x)</span></code> computes the base 2 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
@@ -625,7 +635,7 @@
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-6e72616e64"></span><dl class="simple" id="index-25">
+<span id="l4a756c6961436f6d706c6578466c6f6174-6e72616e64"></span><dl class="simple" id="index-28">
 <dt><span class="spadfun">nrand</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand()</span></code> returns an normally distributed random number.</p>
 </dd>
 </dl>
@@ -665,11 +675,11 @@
 <dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-706f6c6172436f6f7264696e61746573"><span class="std std-ref">polarCoordinates</span></a>: % -&gt; Record(r: <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a>, phi: <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a>)</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-707265636973696f6e"></span><dl class="simple" id="index-26">
+<span id="l4a756c6961436f6d706c6578466c6f6174-707265636973696f6e"></span><dl class="simple" id="index-29">
 <dt><span class="spadfun">precision</span>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">precision(x)</span></code> returns the precision of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-27">
+<dl class="simple" id="index-30">
 <dt><span class="spadfun">precision</span>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">precision(x,</span> <span class="pre">p)</span></code> returns a copy of <code class="docutils literal notranslate"><span class="pre">x</span></code> with precision <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -719,7 +729,7 @@
 <dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-726174696f6e616c496643616e"><span class="std std-ref">rationalIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, failed) if <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a> has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-7265616c3f"></span><dl class="simple" id="index-28">
+<span id="l4a756c6961436f6d706c6578466c6f6174-7265616c3f"></span><dl class="simple" id="index-31">
 <dt><span class="spadfun">real?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">real?(x)</span></code> tests whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is real.</p>
 </dd>
 </dl>
@@ -845,8 +855,8 @@
 <dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c"><span class="std std-ref">squareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a> has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-737472696e67"></span><dl class="simple" id="index-29">
-<dt><span class="spadfun">string</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">string(fl)</span></code> return the strings representation of <code class="docutils literal notranslate"><span class="pre">fl</span></code>.</p>
+<dl class="simple" id="l4a756c6961436f6d706c6578466c6f6174-737472696e67">
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-737472696e67"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961436f6d706c6578466c6f6174-7375627472616374496643616e">
@@ -887,7 +897,7 @@
 <dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
 </dd>
 </dl>
-<span id="l4a756c6961436f6d706c6578466c6f6174-7572616e643031"></span><dl class="simple" id="index-30">
+<span id="l4a756c6961436f6d706c6578466c6f6174-7572616e643031"></span><dl class="simple" id="index-32">
 <dt><span class="spadfun">urand01</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01()</span></code> returns an uniformly distributed random number contained in [0,1].</p>
 </dd>
 </dl>
@@ -923,7 +933,7 @@
 <p><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></p>
-<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a> has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> if <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a> has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="JuliaFloat.html#l4a756c6961466c6f6174"><span class="std std-ref">JuliaFloat</span></a></p>

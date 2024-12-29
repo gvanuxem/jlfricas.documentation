@@ -5,7 +5,7 @@
 InnerNemoExactComplexField Options
 ==================================
 
-:viewcode:`jnemo.spad line 874 <jnemo.spad#L874>` :editcode:`[edit on github] <jnemo.spad#L874>`
+:viewcode:`jnemo.spad line 787 <jnemo.spad#L787>` :editcode:`[edit on github] <jnemo.spad#L787>`
 
 * Options: \ :ref:`JuliaObjDict <l4a756c69614f626a44696374>`\ 
 
@@ -79,14 +79,14 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  / \undocumented
 
 
 .. index::
    pair: InnerNemoExactComplexField; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  
+  / \undocumented
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-3d:
 
@@ -298,7 +298,7 @@ InnerNemoExactComplexField Options
 .. index::
    pair: InnerNemoExactComplexField; coerce
 
-:spadfun:`coerce`\: \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  -> % 
+:spadfun:`coerce`\: \ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  -> % 
   \ ``coerce(q)``\  coerces \ ``q``\ . Convenience function.
 
 
@@ -711,13 +711,18 @@ InnerNemoExactComplexField Options
 \ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6a6c4e656d6f52696e67:
+
+\ :ref:`jlNemoRing <l4e656d6f52696e67-6a6c4e656d6f52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
+
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6a6c4f7074696f6e73:
 
 .. index::
    pair: InnerNemoExactComplexField; jlOptions
 
 :spadfun:`jlOptions`\: % -> \ :ref:`JuliaObjDict <l4a756c69614f626a44696374>`\  
-  \ ``jlOptions(x)``\  returns the options set at instantion time that affect different aspects of computations using this object.
+  \ ``jlOptions(x)``\  returns the options set at instantiation time that affect different aspects of computations. See Nemo documentation.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6a6c526566:
 
@@ -740,35 +745,35 @@ InnerNemoExactComplexField Options
    pair: InnerNemoExactComplexField; jnecf
 
 :spadfun:`jnecf`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``jnecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a Nemo exact complex number where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
 
 
 .. index::
    pair: InnerNemoExactComplexField; jnecf
 
-:spadfun:`jnecf`\: (\ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ ) -> % 
-  
+:spadfun:`jnecf`\: (\ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , \ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) -> % 
+  \ ``jnecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a Nemo exact where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
 
 
 .. index::
    pair: InnerNemoExactComplexField; jnecf
 
 :spadfun:`jnecf`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jnecf(fi)``\  coerces \ ``fi``\  to a Nemo real exact number.
 
 
 .. index::
    pair: InnerNemoExactComplexField; jnecf
 
 :spadfun:`jnecf`\: \ :ref:`NemoAlgebraicNumber <l4e656d6f416c676562726169634e756d626572>`\  -> % 
-  
+  \ ``jnecf(qbar)``\  coerces \ ``qbar``\  to a Nemo exact real or complex number.
 
 
 .. index::
    pair: InnerNemoExactComplexField; jnecf
 
-:spadfun:`jnecf`\: \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  -> % 
-  
+:spadfun:`jnecf`\: \ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  -> % 
+  \ ``jnecf(nr)``\  coerces \ ``nr``\  to a Nemo exact real number.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-6c61746578:
 
@@ -1035,15 +1040,15 @@ InnerNemoExactComplexField Options
 .. index::
    pair: InnerNemoExactComplexField; retractIfCan
 
-:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
-  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a Integer.
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
+  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a NemoFraction(NemoInteger).
 
 
 .. index::
    pair: InnerNemoExactComplexField; retractIfCan
 
-:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , failed) 
-  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a NemoRational.
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
+  \ ``retractIfCan(z)``\  retracts if possible \ ``z``\  to a Integer.
 
 .. _l496e6e65724e656d6f4578616374436f6d706c65784669656c64-7269676874506f776572:
 
@@ -1343,6 +1348,8 @@ InnerNemoExactComplexField Options
 \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) 
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
+
+\ :ref:`NemoCommutativeRing <l4e656d6f436f6d6d7574617469766552696e67>`\  
 
 \ :ref:`NemoRing <l4e656d6f52696e67>`\  
 

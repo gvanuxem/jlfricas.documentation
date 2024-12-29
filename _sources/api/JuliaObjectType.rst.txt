@@ -27,7 +27,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JuliaObjectType; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  \ ``coerce(obj)``\  coerce \ ``obj``\  ot JuliaObject. Convenience function.
+  \ ``coerce(obj)``\  coerce \ ``obj``\  to JuliaObject. Convenience function.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -59,7 +59,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JuliaObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JuliaObject. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JuliaVector(JuliaFloat)} \example{jlApply("map", "cos", v pretend JuliaObject)}
+  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JuliaObject. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JuliaVector(JuliaFloat)} \example{jlApply("map", "cos", coerce v)}
 
 
 .. index::

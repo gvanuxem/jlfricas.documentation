@@ -5,7 +5,7 @@
 JuliaObject
 ===========
 
-:viewcode:`jobject.spad line 214 <jobject.spad#L214>` :editcode:`[edit on github] <jobject.spad#L214>`
+:viewcode:`jobject.spad line 212 <jobject.spad#L212>` :editcode:`[edit on github] <jobject.spad#L212>`
 
 
 Generic Julia objects i.e. objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It also supports the JuliaObjectAggregate category.
@@ -49,7 +49,7 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
    pair: JuliaObject; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce(str)``\  coerces \ ``str``\  as a JuliaObject. Convenience function.
+  \ ``coerce(str)``\  coerces \ ``str``\  as a JuliaObject. See 'jobject(String)' for more information. Convenience function.
 
 .. _l4a756c69614f626a656374-636f6e76657274:
 
@@ -115,6 +115,14 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l4a756c69614f626a656374-6a6c436f6c6c656374:
+
+.. index::
+   pair: JuliaObject; jlCollect
+
+:spadfun:`jlCollect`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  % 
+  \ ``jlCollect(obj)``\  collects element of a Julia iterator in a JuliaVector.
+
 .. _l4a756c69614f626a656374-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -146,14 +154,14 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
    pair: JuliaObject; jobject
 
 :spadfun:`jobject`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jobject(n)``\  return the JuliaObject representing the integer \ ``n``\ .
+  \ ``jobject(n)``\  returns the JuliaObject representing the integer \ ``n``\ .
 
 
 .. index::
    pair: JuliaObject; jobject
 
 :spadfun:`jobject`\: \ :ref:`String <l537472696e67>`\  -> % 
-  jlObject(string) constructs an arbirary Julia object depending on string used (evaluated by Julia). For example: \example{jobject("rand(Float64,(2,3,4))")} a 2x3x4 array of \ ``Float64``\  elements.
+  jlObject(\ ``str``\ ) constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: \example{jobject("rand(Float64,(2,3,4))")} returns a 2x3x4 array of \ ``Float64``\  elements. A Julia exception is raised if error(\ ``s``\ ) occur(\ ``s``\ ) during parsing/evalution.
 
 .. _l4a756c69614f626a656374-6c61746578:
 

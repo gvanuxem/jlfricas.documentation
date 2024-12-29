@@ -5,7 +5,7 @@
 NemoExactComplexField
 =====================
 
-:viewcode:`jnemo.spad line 1244 <jnemo.spad#L1244>` :editcode:`[edit on github] <jnemo.spad#L1244>`
+:viewcode:`jnemo.spad line 1170 <jnemo.spad#L1170>` :editcode:`[edit on github] <jnemo.spad#L1170>`
 
 
 \ :ref:`NemoExactComplexField <l4e656d6f4578616374436f6d706c65784669656c64>`\  implements exact complex field arithmetic using the Nemo package. Reference: https://nemocas.github.io/Nemo.\ ``jl``\  See https://flintlib.org/doc/introduction_calcium.html for the \ ``C``\  library.
@@ -296,7 +296,7 @@ NemoExactComplexField
 .. index::
    pair: NemoExactComplexField; coerce
 
-:spadfun:`coerce`\: \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  -> % 
+:spadfun:`coerce`\: \ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  -> % 
   
 
 
@@ -709,6 +709,11 @@ NemoExactComplexField
 \ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l4e656d6f4578616374436f6d706c65784669656c64-6a6c4e656d6f52696e67:
+
+\ :ref:`jlNemoRing <l4e656d6f52696e67-6a6c4e656d6f52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
+
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6a6c4f7074696f6e73:
 
 .. index::
@@ -744,7 +749,7 @@ NemoExactComplexField
 .. index::
    pair: NemoExactComplexField; jnecf
 
-:spadfun:`jnecf`\: (\ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ ) -> % 
+:spadfun:`jnecf`\: (\ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , \ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) -> % 
   
 
 
@@ -765,7 +770,7 @@ NemoExactComplexField
 .. index::
    pair: NemoExactComplexField; jnecf
 
-:spadfun:`jnecf`\: \ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\  -> % 
+:spadfun:`jnecf`\: \ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  -> % 
   
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-6c61746578:
@@ -1033,14 +1038,14 @@ NemoExactComplexField
 .. index::
    pair: NemoExactComplexField; retractIfCan
 
-:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoFraction <l4e656d6f4672616374696f6e>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
   
 
 
 .. index::
    pair: NemoExactComplexField; retractIfCan
 
-:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoRational <l4e656d6f526174696f6e616c>`\ , failed) 
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , failed) 
   
 
 .. _l4e656d6f4578616374436f6d706c65784669656c64-7269676874506f776572:
@@ -1341,6 +1346,8 @@ NemoExactComplexField
 \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) 
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
+
+\ :ref:`NemoCommutativeRing <l4e656d6f436f6d6d7574617469766552696e67>`\  
 
 \ :ref:`NemoRing <l4e656d6f52696e67>`\  
 

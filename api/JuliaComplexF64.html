@@ -7,11 +7,11 @@
 
     <title>JuliaComplexF64 &#8212; jlFriCAS</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=088b693c"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
@@ -45,7 +45,7 @@
             
   <section id="juliacomplexf64">
 <span id="l4a756c6961436f6d706c6578463634"></span><span id="index-0"></span><h1>JuliaComplexF64<a class="headerlink" href="#juliacomplexf64" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/julia.spad#L640">julia.spad line 640</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/julia.spad#L640">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/julia.spad#L609">julia.spad line 609</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/julia.spad#L609">[edit on github]</a></p>
 <p><a class="reference internal" href="#l4a756c6961436f6d706c6578463634"><span class="std std-ref">JuliaComplexF64</span></a> implements complex 64 bits floating point arithmetic. Only basic arithmetic is supported. Convenience domain.</p>
 <dl class="simple" id="l4a756c6961436f6d706c6578463634-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
@@ -451,8 +451,18 @@
 <dt><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67-696e76"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
 </dd>
 </dl>
-<p id="index-1"><span id="l4a756c6961436f6d706c6578463634-6a63663634"></span><span class="spadfun">jcf64</span>: (<a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; %</p>
-<p id="index-2"><span class="spadfun">jcf64</span>: <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a> -&gt; %</p>
+<span id="l4a756c6961436f6d706c6578463634-6a63663634"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">jcf64</span>: (<a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>, <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcf64(r,i)</span></code> coerce real part <code class="docutils literal notranslate"><span class="pre">r</span></code> and imaginary part <code class="docutils literal notranslate"><span class="pre">i</span></code> to a <code class="docutils literal notranslate"><span class="pre">JuliaComplexF64</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">jcf64</span>: <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcf64(r)</span></code> coerces the real part <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a756c6961436f6d706c6578463634-6a6c417070726f783f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y)</span></code> computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.</p>
+</dd>
+</dl>
 <dl class="simple" id="l4a756c6961436f6d706c6578463634-6c61746578">
 <dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
@@ -711,6 +721,10 @@
 </dl>
 <dl class="simple" id="l4a756c6961436f6d706c6578463634-73717561726546726565506f6c796e6f6d69616c">
 <dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c"><span class="std std-ref">squareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if <a class="reference internal" href="JuliaFloat64.html#l4a756c6961466c6f61743634"><span class="std std-ref">JuliaFloat64</span></a> has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a756c6961436f6d706c6578463634-737472696e67">
+<dt><a class="reference internal" href="JuliaType.html#l4a756c696154797065-737472696e67"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaType.html#l4a756c696154797065"><span class="std std-ref">JuliaType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961436f6d706c6578463634-7375627472616374496643616e">

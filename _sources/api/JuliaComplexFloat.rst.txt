@@ -5,7 +5,7 @@
 JuliaComplexFloat
 =================
 
-:viewcode:`jobject.spad line 1007 <jobject.spad#L1007>` :editcode:`[edit on github] <jobject.spad#L1007>`
+:viewcode:`jobject.spad line 1018 <jobject.spad#L1018>` :editcode:`[edit on github] <jobject.spad#L1018>`
 
 
 JuliaFComplexloat implements arbitrary precision floating point arithmetic for complex numbers using Julia BigFloats (MPFR based). https://www.mpfr.org/
@@ -334,7 +334,7 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Complex <l436f6d706c6578>`\  \ :ref:`Float <l466c6f6174>`\ 
 
 
-\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 
 
@@ -742,12 +742,33 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 .. _l4a756c6961436f6d706c6578466c6f6174-6a6c4170706c79:
 
+.. index::
+   pair: JuliaComplexFloat; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter.
+
+
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
+.. index::
+   pair: JuliaComplexFloat; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  to \ ``obj1``\  and \ ``obj2``\ .
+
+
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+.. index::
+   pair: JuliaComplexFloat; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  to \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\ .
 
 
 \ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
@@ -1221,11 +1242,8 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 .. _l4a756c6961436f6d706c6578466c6f6174-737472696e67:
 
-.. index::
-   pair: JuliaComplexFloat; string
-
-:spadfun:`string`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``string(fl)``\  return the strings representation of \ ``fl``\ .
+\ :ref:`string <l4a756c69614f626a65637454797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961436f6d706c6578466c6f6174-7375627472616374496643616e:
 
@@ -1346,7 +1364,7 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Complex <l436f6d706c6578>`\  \ :ref:`Float <l466c6f6174>`\  
 
-\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\  
 

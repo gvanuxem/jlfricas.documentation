@@ -5,7 +5,7 @@
 NemoRational
 ============
 
-:viewcode:`jnemo.spad line 158 <jnemo.spad#L158>` :editcode:`[edit on github] <jnemo.spad#L158>`
+:viewcode:`jnemo.spad line 167 <jnemo.spad#L167>` :editcode:`[edit on github] <jnemo.spad#L167>`
 
 
 This domain allows the manipulation of Nemo fraction integers (rationals) using the Nemo package for Julia (FLINT based). https://flintlib.org/
@@ -35,7 +35,7 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
    pair: NemoRational; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  * \undocumented
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) -> % 
@@ -185,7 +185,7 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
    pair: NemoRational; coerce
 
 :spadfun:`coerce`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``coerce ``\ \undocumented
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -196,7 +196,7 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
    pair: NemoRational; coerce
 
 :spadfun:`coerce`\: \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  -> % 
-  
+  \ ``coerce ``\ \undocumented
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> % if \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
@@ -469,6 +469,11 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 \ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l4e656d6f526174696f6e616c-6a6c4e656d6f52696e67:
+
+\ :ref:`jlNemoRing <l4e656d6f52696e67-6a6c4e656d6f52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
+
 .. _l4e656d6f526174696f6e616c-6a6c526566:
 
 \ :ref:`jlRef <l4a756c69614f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
@@ -490,28 +495,28 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
    pair: NemoRational; jnrat
 
 :spadfun:`jnrat`\: (\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ ) -> % 
-  
+  \ ``jnrat ``\ \undocumented
 
 
 .. index::
    pair: NemoRational; jnrat
 
 :spadfun:`jnrat`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jnrat ``\ \undocumented
 
 
 .. index::
    pair: NemoRational; jnrat
 
 :spadfun:`jnrat`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jnrat ``\ \undocumented
 
 
 .. index::
    pair: NemoRational; jnrat
 
 :spadfun:`jnrat`\: \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  -> % 
-  
+  \ ``jnrat ``\ \undocumented
 
 .. _l4e656d6f526174696f6e616c-6c61746578:
 
@@ -598,8 +603,8 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 
 .. _l4e656d6f526174696f6e616c-6f6e653f:
 
-\ :ref:`one? <l4a756c696152696e67-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
+\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l4e656d6f526174696f6e616c-6f70706f736974653f:
 
@@ -795,8 +800,8 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 
 .. _l4e656d6f526174696f6e616c-7a65726f3f:
 
-\ :ref:`zero? <l4a756c696152696e67-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`JuliaRing <l4a756c696152696e67>`\ 
+\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -920,6 +925,8 @@ This domain allows the manipulation of Nemo fraction integers (rationals) using 
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`NemoInteger <l4e656d6f496e7465676572>`\  
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
+
+\ :ref:`NemoCommutativeRing <l4e656d6f436f6d6d7574617469766552696e67>`\  
 
 \ :ref:`NemoRing <l4e656d6f52696e67>`\  
 

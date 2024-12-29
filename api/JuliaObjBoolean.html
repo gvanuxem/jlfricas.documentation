@@ -7,11 +7,11 @@
 
     <title>JuliaObjBoolean &#8212; jlFriCAS</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=088b693c"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
     <link rel="index" title="Index" href="../genindex.html" />
@@ -45,7 +45,7 @@
             
   <section id="juliaobjboolean">
 <span id="l4a756c69614f626a426f6f6c65616e"></span><span id="index-0"></span><h1>JuliaObjBoolean<a class="headerlink" href="#juliaobjboolean" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L255">jobject.spad line 255</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L255">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L259">jobject.spad line 259</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L259">[edit on github]</a></p>
 <p>Convenience domain for Julia booleans, objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example.</p>
 <dl class="simple" id="l4a756c69614f626a426f6f6c65616e-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -55,8 +55,9 @@
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<p id="index-1"><span id="l4a756c69614f626a426f6f6c65616e-636f65726365"></span><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></p>
-<dl class="simple">
+<span id="l4a756c69614f626a426f6f6c65616e-636f65726365"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(jbool)</span></code> coerces the Julia boolean value to a FriCAS Boolean.</p>
+</dd>
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
@@ -66,7 +67,10 @@
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
-<p id="index-2"><span id="l4a756c69614f626a426f6f6c65616e-6a66616c7365"></span><span class="spadfun">jfalse</span>: () -&gt; %</p>
+<span id="l4a756c69614f626a426f6f6c65616e-6a66616c7365"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">jfalse</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jfalse()</span></code> returns the Julia boolean <code class="docutils literal notranslate"><span class="pre">false</span></code> value.</p>
+</dd>
+</dl>
 <dl class="simple" id="l4a756c69614f626a426f6f6c65616e-6a6c41626f7574">
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
@@ -105,7 +109,10 @@
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
-<p id="index-3"><span id="l4a756c69614f626a426f6f6c65616e-6a74727565"></span><span class="spadfun">jtrue</span>: () -&gt; %</p>
+<span id="l4a756c69614f626a426f6f6c65616e-6a74727565"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">jtrue</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jtrue()</span></code> returns the Julia boolean <code class="docutils literal notranslate"><span class="pre">true</span></code> value.</p>
+</dd>
+</dl>
 <dl class="simple" id="l4a756c69614f626a426f6f6c65616e-6c61746578">
 <dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>

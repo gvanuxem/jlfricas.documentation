@@ -406,7 +406,7 @@ An implementation of a hash table that uses equality of the key domain to decide
    pair: XHashTable; table
 
 :spadfun:`table`\: (Key -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\ ) -> % 
-  \ ``table(h)``\  creates an empty hash table that uses \ ``h``\  instead of hash\$Key. Note that \ ``h``\  should be a mathematical function in the sense that from \ ``k1=k2``\  follows \ ``h``\ (\ ``k1``\ )\ ``=h``\ (\ ``k2``\ ). If that is not the case, \ ``k1``\  and \ ``k2``\  will internally be considered as being different keys.
+  \ ``table(h)``\  creates an empty hash table that uses \ ``h``\  instead of hash\$Key. Note that \ ``h``\  should be a mathematical function in the sense that from \ ``k1=k2``\  follows \ ``h``\ (\ ``k1``\ )\ ``=h``\ (\ ``k2``\ ). If that is not the case, \ ``k1``\  and \ ``k2``\  will internally be considered as being different keys. For XHashTable to work correctly, the function \ ``h``\  must only yield non-negative values.
 
 
 \ :ref:`table <l5461626c65416767726567617465-7461626c65>`\ \: \ :ref:`List <l4c697374>`\  Record(key: Key, entry: Entry) -> % 

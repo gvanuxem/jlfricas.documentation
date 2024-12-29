@@ -5,7 +5,7 @@
 NemoMultivariatePolynomial(R, VarSet, InternalOrdering)
 =======================================================
 
-:viewcode:`jnpoly.spad line 350 <jnpoly.spad#L350>` :editcode:`[edit on github] <jnpoly.spad#L350>`
+:viewcode:`jnpoly.spad line 597 <jnpoly.spad#L597>` :editcode:`[edit on github] <jnpoly.spad#L597>`
 
 * R: \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
 
@@ -14,7 +14,7 @@ NemoMultivariatePolynomial(R, VarSet, InternalOrdering)
 * InternalOrdering: \ :ref:`JuliaSymbol <l4a756c696153796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the Julia Nemo package. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z::V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate polynomials using the Julia pakage Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z::V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
 
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-30:
@@ -158,7 +158,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-62696e6f6d54686d45787074:
 
-\ :ref:`binomThmExpt <l46696e6974654162656c69616e4d6f6e6f696452696e67-62696e6f6d54686d45787074>`\ \: (%, %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`binomThmExpt <l46696e6974654162656c69616e4d6f6e6f696452696e67-62696e6f6d54686d45787074>`\ \: (%, %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`FiniteAbelianMonoidRing <l46696e6974654162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6368617261637465726973746963:
@@ -186,12 +186,19 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-636f656666696369656e7473:
 
+.. index::
+   pair: NemoMultivariatePolynomial; coefficients
+
+:spadfun:`coefficients`\: % -> \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  R 
+  \ ``coefficients(p)``\  returns a Julia vector of coefficients of \ ``p``\ .
+
+
 \ :ref:`coefficients <l467265654d6f64756c6543617465676f7279-636f656666696369656e7473>`\ \: % -> \ :ref:`List <l4c697374>`\  R 
   from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-636f65726365:
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
@@ -505,6 +512,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
+.. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6a6c4e656d6f52696e67:
+
+\ :ref:`jlNemoRing <l4e656d6f52696e67-6a6c4e656d6f52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
+
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-6a6c526566:
 
 \ :ref:`jlRef <l4a756c69614f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
@@ -718,7 +730,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-706c656e617279506f776572:
 
-\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e656d6f4d756c746976617269617465506f6c796e6f6d69616c-706f6d6f706f21:
@@ -979,7 +991,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  
 
-\ :ref:`Algebra <l416c6765627261>`\  % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`Algebra <l416c6765627261>`\  % 
 
 \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
@@ -1011,9 +1023,9 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
-\ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  
 
-\ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
@@ -1079,7 +1091,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) 
 
-\ :ref:`Module <l4d6f64756c65>`\  % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`Module <l4d6f64756c65>`\  % 
 
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
@@ -1087,11 +1099,13 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
+\ :ref:`NemoCommutativeRing <l4e656d6f436f6d6d7574617469766552696e67>`\  
+
 \ :ref:`NemoRing <l4e656d6f52696e67>`\  
 
 \ :ref:`NemoType <l4e656d6f54797065>`\  
 
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
@@ -1145,7 +1159,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
 
-\ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
 
 \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
