@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JLDrawFunctions Ex &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JLF32ArrayFunctions" href="JLF32ArrayFunctions.html" />
+    <link rel="prev" title="JLComplexFloatSpecialFunctions" href="JLComplexFloatSpecialFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JLF32ArrayFunctions.html" title="JLF32ArrayFunctions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JLComplexFloatSpecialFunctions.html" title="JLComplexFloatSpecialFunctions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLDrawFunctions Ex</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="jldrawfunctions-ex">
+<span id="l4a4c4472617746756e6374696f6e73"></span><span id="index-0"></span><h1>JLDrawFunctions Ex<a class="headerlink" href="#jldrawfunctions-ex" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jplot.spad#L398">jplot.spad line 398</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jplot.spad#L398">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Ex: Join(<a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a>, <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a>)</p></li>
+</ul>
+<p>JLDrawFunctions provides top level functions for drawing graphics of expressions.</p>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c436f6e746f757221"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">jlContour!</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlContour!(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> adds the surface of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code> on the existing graph window. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c436f6e746f7572"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">jlContour</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlContour(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> draws the surface of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code>. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c436f6e746f75726621"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">jlContourf!</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlContourf!(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> adds the surface of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code> on the existing graph window. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title. Fill area between contours.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c436f6e746f757266"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">jlContourf</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlContourf(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> draws the surface of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code>. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title. Fill area between contours.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c506c6f7421"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">jlPlot!</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlPlot!(f(x),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b)</span></code> adds the graph of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">f(x)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> on the existing graphic window. <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">jlPlot!</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlPlot!(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> adds the graph of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code> on the existing graph window. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c506c6f74"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">jlPlot</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlPlot(f(x),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b)</span></code> draws the graph of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">f(x)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code>. <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> appears the title.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">jlPlot</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlPlot(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> draws the graph of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code>. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c5375726661636521"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">jlSurface!</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlSurface!(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> adds the surface of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code> on the existing graph window. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c53757266616365"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">jlSurface</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlSurface(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> draws the surface of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code>. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c576972656672616d6521"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">jlWireframe!</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWireframe!(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> adds the wireframe of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code> on the existing graph window. <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span id="l4a4c4472617746756e6374696f6e73-6a6c576972656672616d65"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">jlWireframe</span>: (Ex, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWireframe(f(x,</span> <span class="pre">y),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a..b,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c..d)</span></code> draws the wireframe of <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">f(x,</span> <span class="pre">y)</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> to to <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ranges from <code class="docutils literal notranslate"><span class="pre">min(c,</span> <span class="pre">d)</span></code> to <code class="docutils literal notranslate"><span class="pre">max(c,</span> <span class="pre">d)</span></code>; <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span></code> appears as the title.</p>
+</dd>
+</dl>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JLF32ArrayFunctions.html" title="JLF32ArrayFunctions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JLComplexFloatSpecialFunctions.html" title="JLComplexFloatSpecialFunctions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLDrawFunctions Ex</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

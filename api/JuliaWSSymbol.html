@@ -45,7 +45,7 @@
             
   <section id="juliawssymbol">
 <span id="l4a756c6961575353796d626f6c"></span><span id="index-0"></span><h1>JuliaWSSymbol<a class="headerlink" href="#juliawssymbol" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jws.spad#L94">jws.spad line 94</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jws.spad#L94">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jws.spad#L91">jws.spad line 91</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jws.spad#L91">[edit on github]</a></p>
 <p>Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.</p>
 <dl class="simple" id="l4a756c6961575353796d626f6c-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -56,7 +56,7 @@
 </dd>
 </dl>
 <span id="l4a756c6961575353796d626f6c-636f65726365"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(sym)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">sym</span></code> to a FriCAS boolean. Error if <code class="docutils literal notranslate"><span class="pre">sym</span></code> is not a boolean</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(sym)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">sym</span></code> to a FriCAS boolean. <code class="docutils literal notranslate"><span class="pre">Sym</span></code> must be a Julia <code class="docutils literal notranslate"><span class="pre">WS</span></code> boolean</p>
 </dd>
 <dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
@@ -68,7 +68,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(sym)</span></code> is a convenience function to <code class="docutils literal notranslate"><span class="pre">sym</span></code> coerce to a FriCAS Symbol.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(sym)</span></code> is a convenience function to coerce <code class="docutils literal notranslate"><span class="pre">sym</span></code> to a FriCAS Symbol.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
@@ -92,17 +92,15 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961575353796d626f6c-6a6c4170706c79">
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %, %) -&gt; <a class="reference internal" href="JuliaObject.html#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961575353796d626f6c-6a6c446973706c6179">
@@ -118,13 +116,17 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961575353796d626f6c-6a6c4964">
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JuliaInt64.html#l4a756c6961496e743634"><span class="std std-ref">JuliaInt64</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961575353796d626f6c-6a6c4e756d65726963">
 <dt><a class="reference internal" href="JuliaWSObject.html#l4a756c696157534f626a656374-6a6c4e756d65726963"><span class="std std-ref">jlNumeric</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaWSObject.html#l4a756c696157534f626a656374"><span class="std std-ref">JuliaWSObject</span></a></p>
 </dd>
 <dt><a class="reference internal" href="JuliaWSObject.html#l4a756c696157534f626a656374-6a6c4e756d65726963"><span class="std std-ref">jlNumeric</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaWSObject.html#l4a756c696157534f626a656374"><span class="std std-ref">JuliaWSObject</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a756c6961575353796d626f6c-6a6c4f626a656374">
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4f626a656374"><span class="std std-ref">jlObject</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c6961575353796d626f6c-6a6c526566">
@@ -191,27 +193,31 @@
 <dt><span class="spadfun">WList</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WList()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> List symbol.</p>
 </dd>
 </dl>
-<span id="l4a756c6961575353796d626f6c-57526174696f6e616c"></span><dl class="simple" id="index-13">
+<span id="l4a756c6961575353796d626f6c-574d697373696e67"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">WMissing</span>: () -&gt; %</dt><dd><p>WSymbol() returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> Missing symbol.</p>
+</dd>
+</dl>
+<span id="l4a756c6961575353796d626f6c-57526174696f6e616c"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">WRational</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WRational()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> Rational symbol.</p>
 </dd>
 </dl>
-<span id="l4a756c6961575353796d626f6c-575265616c"></span><dl class="simple" id="index-14">
+<span id="l4a756c6961575353796d626f6c-575265616c"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">WReal</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WReal()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> Real symbol.</p>
 </dd>
 </dl>
-<span id="l4a756c6961575353796d626f6c-5752756c65"></span><dl class="simple" id="index-15">
+<span id="l4a756c6961575353796d626f6c-5752756c65"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">WRule</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WRule()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> Rule symbol.</p>
 </dd>
 </dl>
-<span id="l4a756c6961575353796d626f6c-57537472696e67"></span><dl class="simple" id="index-16">
+<span id="l4a756c6961575353796d626f6c-57537472696e67"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">WString</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WString()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> String symbol.</p>
 </dd>
 </dl>
-<span id="l4a756c6961575353796d626f6c-5753796d626f6c"></span><dl class="simple" id="index-17">
+<span id="l4a756c6961575353796d626f6c-5753796d626f6c"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">WSymbol</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WSymbol()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> Symbol symbol.</p>
 </dd>
 </dl>
-<span id="l4a756c6961575353796d626f6c-5754727565"></span><dl class="simple" id="index-18">
+<span id="l4a756c6961575353796d626f6c-5754727565"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">WTrue</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">WTrue()</span></code> returns the <code class="docutils literal notranslate"><span class="pre">WS</span></code> True symbol.</p>
 </dd>
 </dl>

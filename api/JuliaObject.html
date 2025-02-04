@@ -16,7 +16,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="JuliaObjFloat64" href="JuliaObjFloat64.html" />
+    <link rel="next" title="JuliaObjFloat32" href="JuliaObjFloat32.html" />
     <link rel="prev" title="JuliaObjDynamicLinker" href="JuliaObjDynamicLinker.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
@@ -26,7 +26,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="JuliaObjFloat64.html" title="JuliaObjFloat64"
+          <a href="JuliaObjFloat32.html" title="JuliaObjFloat32"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="JuliaObjDynamicLinker.html" title="JuliaObjDynamicLinker"
@@ -45,7 +45,7 @@
             
   <section id="juliaobject">
 <span id="l4a756c69614f626a656374"></span><span id="index-0"></span><h1>JuliaObject<a class="headerlink" href="#juliaobject" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L212">jobject.spad line 212</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L212">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L195">jobject.spad line 195</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L195">[edit on github]</a></p>
 <p>Generic Julia objects i.e. objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It also supports the JuliaObjectAggregate category.</p>
 <dl class="simple" id="l4a756c69614f626a656374-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -104,17 +104,15 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c69614f626a656374-6a6c4170706c79">
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %, %) -&gt; <a class="reference internal" href="#l4a756c69614f626a656374"><span class="std std-ref">JuliaObject</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
 <span id="l4a756c69614f626a656374-6a6c436f6c6c656374"></span><dl class="simple" id="index-4">
@@ -126,7 +124,11 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a756c69614f626a656374-6a6c4964">
-<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JuliaInt64.html#l4a756c6961496e743634"><span class="std std-ref">JuliaInt64</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a756c69614f626a656374-6a6c4f626a656374">
+<dt><a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065-6a6c4f626a656374"><span class="std std-ref">jlObject</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JuliaObjectType.html#l4a756c69614f626a65637454797065"><span class="std std-ref">JuliaObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c69614f626a656374-6a6c526566">
@@ -146,7 +148,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-6">
-<dt><span class="spadfun">jobject</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>jlObject(<code class="docutils literal notranslate"><span class="pre">str</span></code>) constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: example{jobject(“rand(Float64,(2,3,4))”)} returns a 2x3x4 array of <code class="docutils literal notranslate"><span class="pre">Float64</span></code> elements. A Julia exception is raised if error(<code class="docutils literal notranslate"><span class="pre">s</span></code>) occur(<code class="docutils literal notranslate"><span class="pre">s</span></code>) during parsing/evalution.</p>
+<dt><span class="spadfun">jobject</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jobject(str)</span></code> constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: example{jobject(“rand(Float64,(2,3,4))”)} returns a 2x3x4 array of <code class="docutils literal notranslate"><span class="pre">Float64</span></code> elements. A Julia exception is raised if error(<code class="docutils literal notranslate"><span class="pre">s</span></code>) occur(<code class="docutils literal notranslate"><span class="pre">s</span></code>) during parsing/evalution.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a756c69614f626a656374-6c61746578">
@@ -237,7 +239,7 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="JuliaObjFloat64.html" title="JuliaObjFloat64"
+          <a href="JuliaObjFloat32.html" title="JuliaObjFloat32"
              >next</a> |</li>
         <li class="right" >
           <a href="JuliaObjDynamicLinker.html" title="JuliaObjDynamicLinker"

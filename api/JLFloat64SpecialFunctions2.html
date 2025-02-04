@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JLFloat64SpecialFunctions2 &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JLFloat64VectorFunctions2" href="JLFloat64VectorFunctions2.html" />
+    <link rel="prev" title="JLFloat64SpecialFunctions" href="JLFloat64SpecialFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JLFloat64VectorFunctions2.html" title="JLFloat64VectorFunctions2"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JLFloat64SpecialFunctions.html" title="JLFloat64SpecialFunctions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLFloat64SpecialFunctions2</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="jlfloat64specialfunctions2">
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332"></span><span id="index-0"></span><h1>JLFloat64SpecialFunctions2<a class="headerlink" href="#jlfloat64specialfunctions2" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jf64sf2.spad#L1">jf64sf2.spad line 1</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jf64sf2.spad#L1">[edit on github]</a></p>
+<p>Special functions computed using <code class="docutils literal notranslate"><span class="pre">JL</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> ecosystem. They are here essentially for “completeness” purpose with <code class="docutils literal notranslate"><span class="pre">JLFloat64</span></code>. You should use the DoubleFloat<code class="docutils literal notranslate"><span class="pre">'s</span></code> special functions if available, calling <code class="docutils literal notranslate"><span class="pre">JL</span></code> functions is costly.</p>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-616972794169"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">airyAi</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyAi(z)</span></code> computes Airy <code class="docutils literal notranslate"><span class="pre">Ai</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727941695072696d65"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">airyAiPrime</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyAiPrime(z)</span></code> computes derivative of the Airy <code class="docutils literal notranslate"><span class="pre">Ai</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727941695072696d6578"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">airyAiPrimex</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyAiPrimex(z)</span></code> computes scaled derivative of the Airy <code class="docutils literal notranslate"><span class="pre">Ai</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-61697279416978"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">airyAix</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyAix(z)</span></code> computes scaled Airy <code class="docutils literal notranslate"><span class="pre">Ai</span></code> function and <code class="docutils literal notranslate"><span class="pre">k</span></code>th derivatives at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-616972794269"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">airyBi</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyBi(z)</span></code> computes Airy <code class="docutils literal notranslate"><span class="pre">Bi</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727942695072696d65"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">airyBiPrime</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyBiPrime(z)</span></code> computes derivative of the Airy <code class="docutils literal notranslate"><span class="pre">Bi</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727942695072696d6578"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">airyBiPrimex</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyBiPrimex(z)</span></code> computes scaled derivative of the Airy <code class="docutils literal notranslate"><span class="pre">Bi</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-61697279426978"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">airyBix</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">airyBix(z)</span></code> computes scaled Airy <code class="docutils literal notranslate"><span class="pre">Bi</span></code> function at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c49"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">besselI</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselI(nu,z)</span></code> computes modified Bessel function of the first kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4978"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">besselIx</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselIx(nu,z)</span></code> computes scaled modified Bessel function of the first kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a30"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">besselJ0</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselJ0(z)</span></code> computes besselj(0,<code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a31"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">besselJ1</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselJ1(z)</span></code> computes besselj(1,<code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">besselJ</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselJ(nu,z)</span></code> computes Bessel function of the first kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a78"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">besselJx</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselJx(nu,z)</span></code> computes scaled Bessel function of the first kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4b"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">besselK</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselK(nu,z)</span></code> computes modified Bessel function of the second kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4b78"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">besselKx</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselKx(nu,z)</span></code> computes scaled modified Bessel function of the second kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c5930"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">besselY0</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselY0(z)</span></code> computes bessely(0,<code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c5931"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">besselY1</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselY1(z)</span></code> computes bessely(1,<code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c59"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">besselY</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselY(nu,z)</span></code> computes Bessel function of the second kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c5978"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">besselYx</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">besselYx(nu,z)</span></code> computes scaled Bessel function of the second kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-42657461"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">Beta</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Beta(x,y)</span></code> computes beta function at <code class="docutils literal notranslate"><span class="pre">x</span></code>,<code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-4369"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">Ci</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Ci(x)</span></code> computes cosine integral <code class="docutils literal notranslate"><span class="pre">Ci</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-646177736f6e"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">dawson</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dawson(x)</span></code> computes scaled imaginary error function, a.<code class="docutils literal notranslate"><span class="pre">k</span></code>.a. Dawson function.</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-646967616d6d61"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">digamma</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">digamma(x)</span></code> computes digamma function (i.e. the derivative of loggamma at <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-4569"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">Ei</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Ei(x)</span></code> computes exponential integral <code class="docutils literal notranslate"><span class="pre">Ei</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-656c6c697074696345"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">ellipticE</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ellipticE(m)</span></code> computes complete elliptic integral of 2nd kind <code class="docutils literal notranslate"><span class="pre">E</span></code>(<code class="docutils literal notranslate"><span class="pre">m</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-656c6c69707469634b"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">ellipticK</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ellipticK(m)</span></code> computes complete elliptic integral of 1st kind <code class="docutils literal notranslate"><span class="pre">K</span></code>(<code class="docutils literal notranslate"><span class="pre">m</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657266"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">erf</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">erf(x,y)</span></code> computes accurate version of erf(<code class="docutils literal notranslate"><span class="pre">y</span></code>) - erf(<code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">erf</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">erf(x)</span></code> computes error function at <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-65726663"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">erfc</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">erfc(x)</span></code> computes complementary error function, i.e. the accurate version of 1-erf(<code class="docutils literal notranslate"><span class="pre">x</span></code>) for large <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6572666378"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">erfcx</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">erfcx(x)</span></code> computes scaled complementary error function, i.e. accurate e^(<code class="docutils literal notranslate"><span class="pre">x^2</span></code>) erfc(<code class="docutils literal notranslate"><span class="pre">x</span></code>) for large <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-65726669"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">erfi</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">erfi(x)</span></code> computes imaginary error function defined as <code class="docutils literal notranslate"><span class="pre">-i</span></code> erf(ix)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657461"></span><dl class="simple" id="index-33">
+<dt><span class="spadfun">eta</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eta(x)</span></code> computes Dirichlet eta function at <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657870696e74"></span><dl class="simple" id="index-34">
+<dt><span class="spadfun">expint</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">expint(nu,</span> <span class="pre">z)</span></code> computes exponential integral function</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657870696e7478"></span><dl class="simple" id="index-35">
+<dt><span class="spadfun">expintx</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">expintx(x)</span></code> computes scaled exponential integral function</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-47616d6d61"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">Gamma</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Gamma(a,z)</span></code> computes upper incomplete gamma function Gamma(a,<code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<dl class="simple" id="index-37">
+<dt><span class="spadfun">Gamma</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Gamma(z)</span></code> computes Gamma function Gamma(<code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-67616d6d615f696e635f696e76"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">gamma_inc_inv</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gamma_inc_inv(a,p,q)</span></code> computes inverse of incomplete gamma function ratio <code class="docutils literal notranslate"><span class="pre">P</span></code>(a,<code class="docutils literal notranslate"><span class="pre">x</span></code>) and <code class="docutils literal notranslate"><span class="pre">Q</span></code>(a,<code class="docutils literal notranslate"><span class="pre">x</span></code>) (<code class="docutils literal notranslate"><span class="pre">i</span></code>.<code class="docutils literal notranslate"><span class="pre">e</span></code> evaluates <code class="docutils literal notranslate"><span class="pre">x</span></code> given <code class="docutils literal notranslate"><span class="pre">P</span></code>(a,<code class="docutils literal notranslate"><span class="pre">x</span></code>)<code class="docutils literal notranslate"><span class="pre">=p</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code>(a,<code class="docutils literal notranslate"><span class="pre">x</span></code>)<code class="docutils literal notranslate"><span class="pre">=q</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c4831"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">hankelH1</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelH1(nu,z)</span></code> computes besselh(<code class="docutils literal notranslate"><span class="pre">nu</span></code>, 1, <code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c483178"></span><dl class="simple" id="index-40">
+<dt><span class="spadfun">hankelH1x</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelH1x(nu,z)</span></code> computes scaled besselh(<code class="docutils literal notranslate"><span class="pre">nu</span></code>, 1, <code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c4832"></span><dl class="simple" id="index-41">
+<dt><span class="spadfun">hankelH2</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelH2(nu,z)</span></code> computes besselh(<code class="docutils literal notranslate"><span class="pre">nu</span></code>, 2, <code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c483278"></span><dl class="simple" id="index-42">
+<dt><span class="spadfun">hankelH2x</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelH2x(nu,z)</span></code> computes scaled besselh(<code class="docutils literal notranslate"><span class="pre">nu</span></code>, 2, <code class="docutils literal notranslate"><span class="pre">z</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-696e76646967616d6d61"></span><dl class="simple" id="index-43">
+<dt><span class="spadfun">invdigamma</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">invdigamma(x)</span></code> computes invdigamma function (i.e. inverse of digamma function at <code class="docutils literal notranslate"><span class="pre">x</span></code> using fixed-point iteration algorithm)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-696e7665727365457266"></span><dl class="simple" id="index-44">
+<dt><span class="spadfun">inverseErf</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverseErf(x)</span></code> computes inverse function of erf()</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-696e766572736545726663"></span><dl class="simple" id="index-45">
+<dt><span class="spadfun">inverseErfc</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverseErfc(x)</span></code> computes inverse function of erfc.</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6a696e63"></span><dl class="simple" id="index-46">
+<dt><span class="spadfun">jinc</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jinc(x)</span></code> computes scaled Bessel function of the first kind divided by <code class="docutils literal notranslate"><span class="pre">x</span></code>. A.<code class="docutils literal notranslate"><span class="pre">k</span></code>.a. sombrero or besinc</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6761627362657461"></span><dl class="simple" id="index-47">
+<dt><span class="spadfun">logabsbeta</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logabsbeta(x,y)</span></code> computes accurate log(abs(beta(<code class="docutils literal notranslate"><span class="pre">x</span></code>,<code class="docutils literal notranslate"><span class="pre">y</span></code>))) for large <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6761627367616d6d61"></span><dl class="simple" id="index-48">
+<dt><span class="spadfun">logabsgamma</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logabsgamma(x)</span></code> computes accurate log(abs(gamma(<code class="docutils literal notranslate"><span class="pre">x</span></code>))) for large <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6742657461"></span><dl class="simple" id="index-49">
+<dt><span class="spadfun">logBeta</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logBeta(x,y)</span></code> computes accurate log(beta(<code class="docutils literal notranslate"><span class="pre">x</span></code>,<code class="docutils literal notranslate"><span class="pre">y</span></code>)) for large <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6765726663"></span><dl class="simple" id="index-50">
+<dt><span class="spadfun">logerfc</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logerfc(x)</span></code> computes log of the complementary error function, i.e. accurate <code class="docutils literal notranslate"><span class="pre">ln</span></code>(erfc(<code class="docutils literal notranslate"><span class="pre">x</span></code>)) for large <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f676572666378"></span><dl class="simple" id="index-51">
+<dt><span class="spadfun">logerfcx</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logerfcx(x)</span></code> computes log of the scaled complementary error function, i.e. accurate <code class="docutils literal notranslate"><span class="pre">ln</span></code>(erfcx(<code class="docutils literal notranslate"><span class="pre">x</span></code>)) for large negative <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6747616d6d61"></span><dl class="simple" id="index-52">
+<dt><span class="spadfun">logGamma</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logGamma(a,z)</span></code> computes accurate log(gamma(a,<code class="docutils literal notranslate"><span class="pre">x</span></code>)) for large arguments</p>
+</dd>
+</dl>
+<dl class="simple" id="index-53">
+<dt><span class="spadfun">logGamma</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">logGamma(x)</span></code> computes accurate log(gamma(<code class="docutils literal notranslate"><span class="pre">x</span></code>)) for large <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-706f6c7967616d6d61"></span><dl class="simple" id="index-54">
+<dt><span class="spadfun">polygamma</span>: (<a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygamma(m,x)</span></code> computes polygamma function (<code class="docutils literal notranslate"><span class="pre">i</span></code>.<code class="docutils literal notranslate"><span class="pre">e</span></code> the (<code class="docutils literal notranslate"><span class="pre">m+1</span></code>)<code class="docutils literal notranslate"><span class="pre">-</span></code>th derivative of the loggamma function at <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-7269656d616e6e5a657461"></span><dl class="simple" id="index-55">
+<dt><span class="spadfun">riemannZeta</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">riemannZeta(x)</span></code> computes Riemann zeta function at <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-5369"></span><dl class="simple" id="index-56">
+<dt><span class="spadfun">Si</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Si(x)</span></code> computes sine integral <code class="docutils literal notranslate"><span class="pre">Si</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-73706865726963616c42657373656c4a"></span><dl class="simple" id="index-57">
+<dt><span class="spadfun">sphericalBesselJ</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sphericalBesselJ(nu,z)</span></code> computes Spherical Bessel function of the first kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-73706865726963616c42657373656c59"></span><dl class="simple" id="index-58">
+<dt><span class="spadfun">sphericalBesselY</span>: (<a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>, <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a>) -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sphericalBesselY(nu,z)</span></code> computes Spherical Bessel function of the second kind of order <code class="docutils literal notranslate"><span class="pre">nu</span></code> at <code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+</dd>
+</dl>
+<span id="l4a4c466c6f617436345370656369616c46756e6374696f6e7332-74726967616d6d61"></span><dl class="simple" id="index-59">
+<dt><span class="spadfun">trigamma</span>: <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a> -&gt; <a class="reference internal" href="JLFloat64.html#l4a4c466c6f61743634"><span class="std std-ref">JLFloat64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">trigamma(x)</span></code> computes trigamma function (<code class="docutils literal notranslate"><span class="pre">i</span></code>.<code class="docutils literal notranslate"><span class="pre">e</span></code> the logarithmic second derivative of gamma at <code class="docutils literal notranslate"><span class="pre">x</span></code>)</p>
+</dd>
+</dl>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JLFloat64VectorFunctions2.html" title="JLFloat64VectorFunctions2"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JLFloat64SpecialFunctions.html" title="JLFloat64SpecialFunctions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLFloat64SpecialFunctions2</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

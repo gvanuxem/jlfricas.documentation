@@ -5,7 +5,7 @@
 JuliaObjComplexF64
 ==================
 
-:viewcode:`jobject.spad line 402 <jobject.spad#L402>` :editcode:`[edit on github] <jobject.spad#L402>`
+:viewcode:`jobject.spad line 558 <jobject.spad#L558>` :editcode:`[edit on github] <jobject.spad#L558>`
 
 
 Convenience domain for Julia \ ``ComplexF64``\ , objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported.
@@ -44,6 +44,10 @@ Convenience domain for Julia \ ``ComplexF64``\ , objects that are used within Ju
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+
+\ :ref:`\* <l4a756c69614f626a65637452696e67-2a>`\ \: (\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , %) -> % 
+  from \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
 
 
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
@@ -249,27 +253,32 @@ Convenience domain for Julia \ ``ComplexF64``\ , objects that are used within Ju
 
 .. _l4a756c69614f626a436f6d706c6578463634-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+.. index::
+   pair: JuliaObjComplexF64; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``jlApply(func, x)``\  applies the function \ ``func``\  with \ ``x``\  as parameter.
+
+
+.. index::
+   pair: JuliaObjComplexF64; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ ``jlApply(func, x, y)``\  applies the function \ ``func``\  to \ ``x``\  and \ ``y``\ .
+
+
+.. index::
+   pair: JuliaObjComplexF64; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ ``jlApply(func, x, y, z)``\  applies the function \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ .
+
+
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614f626a436f6d706c6578463634-6a6c446973706c6179:
@@ -279,7 +288,12 @@ Convenience domain for Julia \ ``ComplexF64``\ , objects that are used within Ju
 
 .. _l4a756c69614f626a436f6d706c6578463634-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a436f6d706c6578463634-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614f626a436f6d706c6578463634-6a6c526566:

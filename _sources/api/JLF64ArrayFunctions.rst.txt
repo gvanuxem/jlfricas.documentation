@@ -1,0 +1,156 @@
+.. index:: JLF64ArrayFunctions
+
+.. _l4a4c463634417272617946756e6374696f6e73:
+
+JLF64ArrayFunctions
+===================
+
+:viewcode:`jafunctions.spad line 147 <jafunctions.spad#L147>` :editcode:`[edit on github] <jafunctions.spad#L147>`
+
+
+This package provides different \ ``JL``\  utility functions for operations using CPU/GPU supported data types. Internal package.
+
+
+.. _l4a4c463634417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e21:
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, cvec1, cvec2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``cvec2``\  and overwrites \ ``cvec1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlApplyFunction!!(func, carray, cmat, \ ``nr``\ ) applies the function func to the matrix cmat and returns the result in carray. It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in carray.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, carray, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``carray``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``carray``\ . Can be used with \ ``JL``\  'sqrt' for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, cmat1, cmat2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``cmat2``\  and overwrites \ ``cmat1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' or adjoint! for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, array, cmat, nr)``\  applies the function \ ``func``\  to the matrix \ ``cmat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with \ ``JL``\  'real' or 'imag' for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, vec1, vec2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``vec2``\  and overwrites \ ``vec1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, array, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with \ ``JL``\  'inv' for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction!(func, mat1, mat2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``mat2``\  and overwrites \ ``mat1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' or transpose! for example.
+
+.. _l4a4c463634417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e:
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, cvec)``\  returns the output value of \ ``func``\  applied to cvec.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlF32FunctionF32Vec(func, vec) applies func to cvec.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, cvec, p)``\  returns the output value of \ ``func``\  applied to \ ``cvec``\  with parameter \ ``p``\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, cmat, nr)``\  returns the output value of \ ``func``\  applied to \ ``cmat``\ , internally a vector, where the number of rows is \ ``nr``\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction(func, cmat, nr)``\  applies \ ``func``\  to the matrix mat, internally a vector, where the numer of rows is \ ``nr``\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, cmat, nr, p)``\  returns the output value of \ ``func``\  applied to \ ``cmat``\ , internally a vector, where the number of rows is \ ``nr``\  and \ ``p``\  an additional parameter.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, vec)``\  returns the output value of \ ``func``\  applied to vec.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  jlFunctionF32Vector(func, vec) applies func to vec.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, vec, p)``\  returns the output value of \ ``func``\  applied to \ ``vec``\  with parameter \ ``p``\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, mat, nr)``\  returns the output value of \ ``func``\  applied to \ ``mat``\ , internally a vector, where the number of rows is \ ``nr``\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApplyFunction(func, mat, nr)``\  applies \ ``func``\  to the matrix \ ``mat``\ , internally a vector, where the numer of rows is \ ``nr``\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction
+
+:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlApplyFunction(func, mat, nr, p)``\  returns the output value of \ ``func``\  applied to \ ``mat``\ , internally a vector, where the number of rows is \ ``nr``\  and \ ``p``\  an additional parameter.
+
+

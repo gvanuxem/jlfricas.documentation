@@ -1,0 +1,263 @@
+.. index:: JLCF32LinearAlgebra
+
+.. _l4a4c434633324c696e656172416c6765627261:
+
+JLCF32LinearAlgebra
+===================
+
+:viewcode:`jla32.spad line 390 <jla32.spad#L390>` :editcode:`[edit on github] <jla32.spad#L390>`
+
+
+Linear Algebra functions computed using \ ``JL``\  and its algorithms. 32 bits version.
+
+
+.. _l4a4c434633324c696e656172416c6765627261-636f6e646974696f6e4e756d626572:
+
+.. index::
+   pair: JLCF32LinearAlgebra; conditionNumber
+
+:spadfun:`conditionNumber`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``conditionNumber(m)``\  computes the \ ``p``\ -condition number of \ ``m``\ .
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; conditionNumber
+
+:spadfun:`conditionNumber`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``conditionNumber(m)``\  computes the condition number of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-636f6e64536b65656c:
+
+.. index::
+   pair: JLCF32LinearAlgebra; condSkeel
+
+:spadfun:`condSkeel`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  condsKeel(\ ``m``\ ) computes the Skeel condition number of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-656967656e21:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigen!
+
+:spadfun:`eigen!`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> Record(values: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , vectors: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) 
+  \ ``eigen!(m)``\  computes the spectral decomposition of \ ``m``\  but overwrites \ ``m``\  to save memory space.
+
+.. _l4a4c434633324c696e656172416c6765627261-656967656e:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigen
+
+:spadfun:`eigen`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> Record(values: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , vectors: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) 
+  \ ``eigen(m)``\  computes the spectral decomposition of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-656967656e53797374656d21:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigenSystem!
+
+:spadfun:`eigenSystem!`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> Record(values: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , leftVectors: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , rightVectors: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) 
+  \ ``eigenSystem!(m)``\  computes the spectral decomposition of \ ``m``\  but overwrites \ ``m``\  to save memory space.
+
+.. _l4a4c434633324c696e656172416c6765627261-656967656e53797374656d:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigenSystem
+
+:spadfun:`eigenSystem`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> Record(values: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , leftVectors: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , rightVectors: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) 
+  \ ``eigenSystem(m)``\  computes the spectral decomposition of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-65696776616c7321:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigvals!
+
+:spadfun:`eigvals!`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  
+  \ ``eigvals!(m)``\  returns the eigen values of \ ``m``\  but overwrites \ ``m``\  to save memory space.
+
+.. _l4a4c434633324c696e656172416c6765627261-65696776616c73:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigvals
+
+:spadfun:`eigvals`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  
+  \ ``eigvals(m)``\  returns the eigen values of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-65696776656373:
+
+.. index::
+   pair: JLCF32LinearAlgebra; eigvecs
+
+:spadfun:`eigvecs`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``eigvecs(m)``\  returns the eigen vectors of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-657870:
+
+.. index::
+   pair: JLCF32LinearAlgebra; exp
+
+:spadfun:`exp`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``exp(m)``\  returns the matrix exponential of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-6c6f67:
+
+.. index::
+   pair: JLCF32LinearAlgebra; log
+
+:spadfun:`log`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``log(m)``\  tries to compute the principal matrix logarithm of \ ``m``\ . Otherwise, returns a non pricipal matrix logarithm of \ ``m``\  if possible.
+
+.. _l4a4c434633324c696e656172416c6765627261-6d70496e7665727365:
+
+.. index::
+   pair: JLCF32LinearAlgebra; mpInverse
+
+:spadfun:`mpInverse`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``mpInverse(m)``\  returns the Moore-Penrose pseudo inverse of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-6e6f726d:
+
+.. index::
+   pair: JLCF32LinearAlgebra; norm
+
+:spadfun:`norm`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``norm(m,p)``\  computes the \ ``p``\ -norm of \ ``m``\ .
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; norm
+
+:spadfun:`norm`\: (\ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``norm(v,p)``\  computes th \ ``p``\ -norm of \ ``v``\ .
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; norm
+
+:spadfun:`norm`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``norm(m)``\  computes the 2-norm of \ ``m``\ , also known as the Frobenius norm.
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; norm
+
+:spadfun:`norm`\: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``norm(v)``\  computes the 2-norm of \ ``v``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-6e6f726d616c697a6521:
+
+.. index::
+   pair: JLCF32LinearAlgebra; normalize!
+
+:spadfun:`normalize!`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``normalize!(m)``\  destructively normalize \ ``m``\  such that its norm equals to 1.
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; normalize!
+
+:spadfun:`normalize!`\: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  -> \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  
+  \ ``normalize!(v)``\  destructively normalize \ ``v``\  such that norm(\ ``v``\ ) equals to 1.
+
+.. _l4a4c434633324c696e656172416c6765627261-6e6f726d616c697a65:
+
+.. index::
+   pair: JLCF32LinearAlgebra; normalize
+
+:spadfun:`normalize`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``normalize(m)``\  returns normalized \ ``m``\  such that its norm equals to 1.
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; normalize
+
+:spadfun:`normalize`\: \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  -> \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\  
+  \ ``normalize(v)``\  returns normalized \ ``v``\  such that its norm equals to 1.
+
+.. _l4a4c434633324c696e656172416c6765627261-6f70657261746f724e6f726d:
+
+.. index::
+   pair: JLCF32LinearAlgebra; operatorNorm
+
+:spadfun:`operatorNorm`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``operatorNorm(m,p)``\  computes the operator norm of \ ``m``\  induced by the vector \ ``p``\ -norm.
+
+
+.. index::
+   pair: JLCF32LinearAlgebra; operatorNorm
+
+:spadfun:`operatorNorm`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``operatorNorm(m)``\  computes the operator norm of \ ``m``\  induced by the vector 2-norm.
+
+.. _l4a4c434633324c696e656172416c6765627261-72616e6b21:
+
+.. index::
+   pair: JLCF32LinearAlgebra; rank!
+
+:spadfun:`rank!`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``rank!(m, tol)``\  computes rank of \ ``m``\ . Counts singular value with magnitude greater than tol but overwrites \ ``m``\  to save memory space.
+
+.. _l4a4c434633324c696e656172416c6765627261-72616e6b:
+
+.. index::
+   pair: JLCF32LinearAlgebra; rank
+
+:spadfun:`rank`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``rank(m, tol)``\  computes rank of \ ``m``\ . Counts singular value with magnitude greater than tol.
+
+.. _l4a4c434633324c696e656172416c6765627261-736f6c766521:
+
+.. index::
+   pair: JLCF32LinearAlgebra; solve!
+
+:spadfun:`solve!`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``solve!(A,B)``\  solves the matrix equation A*X=B. Overwrites \ ``B``\  with matrix \ ``X``\  and returns \ ``X``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-736f6c7665:
+
+.. index::
+   pair: JLCF32LinearAlgebra; solve
+
+:spadfun:`solve`\: (\ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``solve(A,B)``\  solves the matrix equation A*X=B, and returns \ ``X``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-73717274:
+
+.. index::
+   pair: JLCF32LinearAlgebra; sqrt
+
+:spadfun:`sqrt`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  
+  \ ``sqrt(m)``\  returns the principal square root of \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-73766421:
+
+.. index::
+   pair: JLCF32LinearAlgebra; svd!
+
+:spadfun:`svd!`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> Record(U: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , sv: \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , Vt: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) 
+  \ ``svd!(m)``\  is the same as \ ``svd``\ (\ ``m``\ ) but overwites a to save memory space.
+
+.. _l4a4c434633324c696e656172416c6765627261-737664:
+
+.. index::
+   pair: JLCF32LinearAlgebra; svd
+
+:spadfun:`svd`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> Record(U: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ , sv: \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , Vt: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\ ) 
+  \ ``svd(m)``\  computes the singular value decomposition \ ``SVD``\  of \ ``m``\  such that \ ``SVD``\ .\ ``U``\  * diagonalMatrix(\ ``sv``\ ) * \ ``SVD``\ .\ ``Vt``\  = \ ``m``\ .
+
+.. _l4a4c434633324c696e656172416c6765627261-73766476616c7321:
+
+.. index::
+   pair: JLCF32LinearAlgebra; svdvals!
+
+:spadfun:`svdvals!`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\  
+  \ ``svdvals!(m)``\  returns the singular values of \ ``m``\  but overwrites \ ``m``\  to save memory space.
+
+.. _l4a4c434633324c696e656172416c6765627261-73766476616c73:
+
+.. index::
+   pair: JLCF32LinearAlgebra; svdvals
+
+:spadfun:`svdvals`\: \ :ref:`JLComplexF32Matrix <l4a4c436f6d706c65784633324d6174726978>`\  -> \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\  
+  \ ``svdvals(m)``\  returns the singular values of \ ``m``\ .
+
+

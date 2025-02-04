@@ -5,7 +5,7 @@
 NemoComplexBall
 ===============
 
-:viewcode:`jnball.spad line 575 <jnball.spad#L575>` :editcode:`[edit on github] <jnball.spad#L575>`
+:viewcode:`jnball.spad line 584 <jnball.spad#L584>` :editcode:`[edit on github] <jnball.spad#L584>`
 
 
 convenience domain to reflect Nemo AcbField(), i.e. without parameters.
@@ -52,6 +52,10 @@ convenience domain to reflect Nemo AcbField(), i.e. without parameters.
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  256, %) -> % 
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`NemoArbField <l4e656d6f4172624669656c64>`\  256
+
+
+\ :ref:`\* <l4a756c69614f626a65637452696e67-2a>`\ \: (\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , %) -> % 
+  from \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
 
 
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
@@ -952,27 +956,23 @@ convenience domain to reflect Nemo AcbField(), i.e. without parameters.
 
 .. _l4e656d6f436f6d706c657842616c6c-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4e656d6f436f6d706c657842616c6c-6a6c446973706c6179:
@@ -982,12 +982,17 @@ convenience domain to reflect Nemo AcbField(), i.e. without parameters.
 
 .. _l4e656d6f436f6d706c657842616c6c-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4e656d6f436f6d706c657842616c6c-6a6c4e656d6f52696e67:
 
 \ :ref:`jlNemoRing <l4e656d6f52696e67-6a6c4e656d6f52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
+
+.. _l4e656d6f436f6d706c657842616c6c-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4e656d6f52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`NemoRing <l4e656d6f52696e67>`\ 
 
 .. _l4e656d6f436f6d706c657842616c6c-6a6c526566:
@@ -1052,7 +1057,7 @@ convenience domain to reflect Nemo AcbField(), i.e. without parameters.
 .. index::
    pair: NemoComplexBall; jncb
 
-:spadfun:`jncb`\: \ :ref:`NemoExactComplexField <l4e656d6f4578616374436f6d706c65784669656c64>`\  -> % 
+:spadfun:`jncb`\: \ :ref:`NemoExactCalciumField <l4e656d6f457861637443616c6369756d4669656c64>`\  -> % 
   
 
 

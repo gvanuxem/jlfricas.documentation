@@ -1,0 +1,483 @@
+.. index:: JLFloat64SpecialFunctions2
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332:
+
+JLFloat64SpecialFunctions2
+==========================
+
+:viewcode:`jf64sf2.spad line 1 <jf64sf2.spad#L1>` :editcode:`[edit on github] <jf64sf2.spad#L1>`
+
+
+Special functions computed using \ ``JL``\ \ ``'s``\  ecosystem. They are here essentially for "completeness" purpose with \ ``JLFloat64``\ . You should use the DoubleFloat\ ``'s``\  special functions if available, calling \ ``JL``\  functions is costly.
+
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-616972794169:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyAi
+
+:spadfun:`airyAi`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyAi(z)``\  computes Airy \ ``Ai``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727941695072696d65:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyAiPrime
+
+:spadfun:`airyAiPrime`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyAiPrime(z)``\  computes derivative of the Airy \ ``Ai``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727941695072696d6578:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyAiPrimex
+
+:spadfun:`airyAiPrimex`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyAiPrimex(z)``\  computes scaled derivative of the Airy \ ``Ai``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-61697279416978:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyAix
+
+:spadfun:`airyAix`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyAix(z)``\  computes scaled Airy \ ``Ai``\  function and \ ``k``\ th derivatives at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-616972794269:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyBi
+
+:spadfun:`airyBi`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyBi(z)``\  computes Airy \ ``Bi``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727942695072696d65:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyBiPrime
+
+:spadfun:`airyBiPrime`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyBiPrime(z)``\  computes derivative of the Airy \ ``Bi``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6169727942695072696d6578:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyBiPrimex
+
+:spadfun:`airyBiPrimex`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyBiPrimex(z)``\  computes scaled derivative of the Airy \ ``Bi``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-61697279426978:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; airyBix
+
+:spadfun:`airyBix`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``airyBix(z)``\  computes scaled Airy \ ``Bi``\  function at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c49:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselI
+
+:spadfun:`besselI`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselI(nu,z)``\  computes modified Bessel function of the first kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4978:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselIx
+
+:spadfun:`besselIx`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselIx(nu,z)``\  computes scaled modified Bessel function of the first kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a30:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselJ0
+
+:spadfun:`besselJ0`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselJ0(z)``\  computes besselj(0,\ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a31:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselJ1
+
+:spadfun:`besselJ1`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselJ1(z)``\  computes besselj(1,\ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselJ
+
+:spadfun:`besselJ`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselJ(nu,z)``\  computes Bessel function of the first kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4a78:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselJx
+
+:spadfun:`besselJx`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselJx(nu,z)``\  computes scaled Bessel function of the first kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4b:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselK
+
+:spadfun:`besselK`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselK(nu,z)``\  computes modified Bessel function of the second kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c4b78:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselKx
+
+:spadfun:`besselKx`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselKx(nu,z)``\  computes scaled modified Bessel function of the second kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c5930:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselY0
+
+:spadfun:`besselY0`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselY0(z)``\  computes bessely(0,\ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c5931:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselY1
+
+:spadfun:`besselY1`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselY1(z)``\  computes bessely(1,\ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c59:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselY
+
+:spadfun:`besselY`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselY(nu,z)``\  computes Bessel function of the second kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-62657373656c5978:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; besselYx
+
+:spadfun:`besselYx`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``besselYx(nu,z)``\  computes scaled Bessel function of the second kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-42657461:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; Beta
+
+:spadfun:`Beta`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``Beta(x,y)``\  computes beta function at \ ``x``\ ,\ ``y``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-4369:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; Ci
+
+:spadfun:`Ci`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``Ci(x)``\  computes cosine integral \ ``Ci``\ (\ ``x``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-646177736f6e:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; dawson
+
+:spadfun:`dawson`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``dawson(x)``\  computes scaled imaginary error function, a.\ ``k``\ .a. Dawson function.
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-646967616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; digamma
+
+:spadfun:`digamma`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``digamma(x)``\  computes digamma function (i.e. the derivative of loggamma at \ ``x``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-4569:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; Ei
+
+:spadfun:`Ei`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``Ei(x)``\  computes exponential integral \ ``Ei``\ (\ ``x``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-656c6c697074696345:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; ellipticE
+
+:spadfun:`ellipticE`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``ellipticE(m)``\  computes complete elliptic integral of 2nd kind \ ``E``\ (\ ``m``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-656c6c69707469634b:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; ellipticK
+
+:spadfun:`ellipticK`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``ellipticK(m)``\  computes complete elliptic integral of 1st kind \ ``K``\ (\ ``m``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657266:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; erf
+
+:spadfun:`erf`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``erf(x,y)``\  computes accurate version of erf(\ ``y``\ ) - erf(\ ``x``\ )
+
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; erf
+
+:spadfun:`erf`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``erf(x)``\  computes error function at \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-65726663:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; erfc
+
+:spadfun:`erfc`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``erfc(x)``\  computes complementary error function, i.e. the accurate version of 1-erf(\ ``x``\ ) for large \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6572666378:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; erfcx
+
+:spadfun:`erfcx`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``erfcx(x)``\  computes scaled complementary error function, i.e. accurate e^(\ ``x^2``\ ) erfc(\ ``x``\ ) for large \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-65726669:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; erfi
+
+:spadfun:`erfi`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``erfi(x)``\  computes imaginary error function defined as \ ``-i``\  erf(ix)
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657461:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; eta
+
+:spadfun:`eta`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``eta(x)``\  computes Dirichlet eta function at \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657870696e74:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; expint
+
+:spadfun:`expint`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``expint(nu, z)``\  computes exponential integral function
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-657870696e7478:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; expintx
+
+:spadfun:`expintx`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``expintx(x)``\  computes scaled exponential integral function
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-47616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; Gamma
+
+:spadfun:`Gamma`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``Gamma(a,z)``\  computes upper incomplete gamma function \Gamma(a,\ ``z``\ )
+
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; Gamma
+
+:spadfun:`Gamma`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``Gamma(z)``\  computes Gamma function \Gamma(\ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-67616d6d615f696e635f696e76:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; gamma_inc_inv
+
+:spadfun:`gamma_inc_inv`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``gamma_inc_inv(a,p,q)``\  computes inverse of incomplete gamma function ratio \ ``P``\ (a,\ ``x``\ ) and \ ``Q``\ (a,\ ``x``\ ) (\ ``i``\ .\ ``e``\  evaluates \ ``x``\  given \ ``P``\ (a,\ ``x``\ )\ ``=p``\  and \ ``Q``\ (a,\ ``x``\ )\ ``=q``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c4831:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; hankelH1
+
+:spadfun:`hankelH1`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``hankelH1(nu,z)``\  computes besselh(\ ``nu``\ , 1, \ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c483178:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; hankelH1x
+
+:spadfun:`hankelH1x`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``hankelH1x(nu,z)``\  computes scaled besselh(\ ``nu``\ , 1, \ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c4832:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; hankelH2
+
+:spadfun:`hankelH2`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``hankelH2(nu,z)``\  computes besselh(\ ``nu``\ , 2, \ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-68616e6b656c483278:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; hankelH2x
+
+:spadfun:`hankelH2x`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``hankelH2x(nu,z)``\  computes scaled besselh(\ ``nu``\ , 2, \ ``z``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-696e76646967616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; invdigamma
+
+:spadfun:`invdigamma`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``invdigamma(x)``\  computes invdigamma function (i.e. inverse of digamma function at \ ``x``\  using fixed-point iteration algorithm)
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-696e7665727365457266:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; inverseErf
+
+:spadfun:`inverseErf`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``inverseErf(x)``\  computes inverse function of erf()
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-696e766572736545726663:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; inverseErfc
+
+:spadfun:`inverseErfc`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``inverseErfc(x)``\  computes inverse function of erfc.
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6a696e63:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; jinc
+
+:spadfun:`jinc`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jinc(x)``\  computes scaled Bessel function of the first kind divided by \ ``x``\ . A.\ ``k``\ .a. sombrero or besinc
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6761627362657461:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logabsbeta
+
+:spadfun:`logabsbeta`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logabsbeta(x,y)``\  computes accurate log(abs(beta(\ ``x``\ ,\ ``y``\ ))) for large \ ``x``\  or \ ``y``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6761627367616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logabsgamma
+
+:spadfun:`logabsgamma`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logabsgamma(x)``\  computes accurate log(abs(gamma(\ ``x``\ ))) for large \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6742657461:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logBeta
+
+:spadfun:`logBeta`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logBeta(x,y)``\  computes accurate log(beta(\ ``x``\ ,\ ``y``\ )) for large \ ``x``\  or \ ``y``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6765726663:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logerfc
+
+:spadfun:`logerfc`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logerfc(x)``\  computes log of the complementary error function, i.e. accurate \ ``ln``\ (erfc(\ ``x``\ )) for large \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f676572666378:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logerfcx
+
+:spadfun:`logerfcx`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logerfcx(x)``\  computes log of the scaled complementary error function, i.e. accurate \ ``ln``\ (erfcx(\ ``x``\ )) for large negative \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-6c6f6747616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logGamma
+
+:spadfun:`logGamma`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logGamma(a,z)``\  computes accurate log(gamma(a,\ ``x``\ )) for large arguments
+
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; logGamma
+
+:spadfun:`logGamma`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``logGamma(x)``\  computes accurate log(gamma(\ ``x``\ )) for large \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-706f6c7967616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; polygamma
+
+:spadfun:`polygamma`\: (\ :ref:`JLInt64 <l4a4c496e743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``polygamma(m,x)``\  computes polygamma function (\ ``i``\ .\ ``e``\  the (\ ``m+1``\ )\ ``-``\ th derivative of the loggamma function at \ ``x``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-7269656d616e6e5a657461:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; riemannZeta
+
+:spadfun:`riemannZeta`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``riemannZeta(x)``\  computes Riemann zeta function at \ ``x``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-5369:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; Si
+
+:spadfun:`Si`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``Si(x)``\  computes sine integral \ ``Si``\ (\ ``x``\ )
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-73706865726963616c42657373656c4a:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; sphericalBesselJ
+
+:spadfun:`sphericalBesselJ`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``sphericalBesselJ(nu,z)``\  computes Spherical Bessel function of the first kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-73706865726963616c42657373656c59:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; sphericalBesselY
+
+:spadfun:`sphericalBesselY`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``sphericalBesselY(nu,z)``\  computes Spherical Bessel function of the second kind of order \ ``nu``\  at \ ``z``\ 
+
+.. _l4a4c466c6f617436345370656369616c46756e6374696f6e7332-74726967616d6d61:
+
+.. index::
+   pair: JLFloat64SpecialFunctions2; trigamma
+
+:spadfun:`trigamma`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``trigamma(x)``\  computes trigamma function (\ ``i``\ .\ ``e``\  the logarithmic second derivative of gamma at \ ``x``\ )
+
+

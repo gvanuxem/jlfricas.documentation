@@ -5,7 +5,7 @@
 JuliaComplexFloat
 =================
 
-:viewcode:`jobject.spad line 1018 <jobject.spad#L1018>` :editcode:`[edit on github] <jobject.spad#L1018>`
+:viewcode:`jobject.spad line 1176 <jobject.spad#L1176>` :editcode:`[edit on github] <jobject.spad#L1176>`
 
 
 JuliaFComplexloat implements arbitrary precision floating point arithmetic for complex numbers using Julia BigFloats (MPFR based). https://www.mpfr.org/
@@ -52,6 +52,10 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\ , %) -> % 
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\ 
+
+
+\ :ref:`\* <l4a756c69614f626a65637452696e67-2a>`\ \: (\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , %) -> % 
+  from \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
 
 
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
@@ -746,44 +750,28 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
    pair: JuliaComplexFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter.
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+  \ ``jlApply(func, x)``\  applies the function \ ``func``\  with \ ``x``\  as parameter.
 
 
 .. index::
    pair: JuliaComplexFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  to \ ``obj1``\  and \ ``obj2``\ .
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+  \ ``jlApply(func, x, y)``\  applies the function \ ``func``\  to \ ``x``\  and \ ``y``\ .
 
 
 .. index::
    pair: JuliaComplexFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  to \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\ .
+  \ ``jlApply(func, x, y, z)``\  applies the function \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ .
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961436f6d706c6578466c6f6174-6a6c417070726f783f:
@@ -808,7 +796,12 @@ JuliaFComplexloat implements arbitrary precision floating point arithmetic for c
 
 .. _l4a756c6961436f6d706c6578466c6f6174-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c6961436f6d706c6578466c6f6174-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961436f6d706c6578466c6f6174-6a6c526566:

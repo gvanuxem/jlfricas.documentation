@@ -1,0 +1,172 @@
+.. index:: JLObjectType
+
+.. _l4a4c4f626a65637454797065:
+
+JLObjectType
+============
+
+:viewcode:`jobject.spad line 1 <jobject.spad#L1>` :editcode:`[edit on github] <jobject.spad#L1>`
+
+
+Category for arbitrary \ ``JL``\  objects, more precisely objects that are used within \ ``JL``\ .
+
+
+.. _l4a4c4f626a65637454797065-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c4f626a65637454797065-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c4f626a65637454797065-636f65726365:
+
+.. index::
+   pair: JLObjectType; coerce
+
+:spadfun:`coerce`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``coerce(obj)``\  coerce \ ``obj``\  to JLObject. Convenience function.
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+.. _l4a4c4f626a65637454797065-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a4c4f626a65637454797065-6a6c41626f7574:
+
+.. index::
+   pair: JLObjectType; jlAbout
+
+:spadfun:`jlAbout`\: % -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlAbout(obj)``\  displays \ ``JL``\  informations about \ ``obj``\  if you have About.\ ``jl``\  installed in \ ``JL``\ . In the \ ``JL``\  interpreter enter in the package management mode with ']' and issue: pkg> add "https://github.com/tecosaur/About.\ ``jl"``\ 
+
+.. _l4a4c4f626a65637454797065-6a6c4170706c79:
+
+.. index::
+   pair: JLObjectType; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(\ ``JLObjFloat64``\ ): \example{M:=nrand(4,4);} \example{jlApply("svd", M::JLMatrix(JLObjFloat64)).S} should be "equivalent" to svdvals(\ ``M``\ )
+
+
+.. index::
+   pair: JLObjectType; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JLVector(JLFloat)} \example{jlApply("map", "cos", coerce v)}
+
+
+.. index::
+   pair: JLObjectType; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\  as parameters and returns the result as a FriCAS JLObject.
+
+
+.. index::
+   pair: JLObjectType; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  \ ``jlApply(func, obj1, obj2, obj3, obj4)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\  and \ ``obj4``\  as parameters and returns the result as a FriCAS JLObject.
+
+
+.. index::
+   pair: JLObjectType; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\  and \ ``obj5``\  as parameters and returns the result as a FriCAS JLObject.
+
+.. _l4a4c4f626a65637454797065-6a6c446973706c6179:
+
+.. index::
+   pair: JLObjectType; jlDisplay
+
+:spadfun:`jlDisplay`\: % -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlDisplay(v)``\  pretty prints \ ``v``\  (\ ``à``\  la \ ``JL``\ ).
+
+.. _l4a4c4f626a65637454797065-6a6c4964:
+
+.. index::
+   pair: JLObjectType; jlId
+
+:spadfun:`jlId`\: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  \ ``jlId(obj)``\  returns the \ ``JL``\  indexed dictionary index related to the object \ ``obj``\ .
+
+.. _l4a4c4f626a65637454797065-6a6c4f626a656374:
+
+.. index::
+   pair: JLObjectType; jlObject
+
+:spadfun:`jlObject`\: () -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlObject()``\  returns the internal \ ``JL``\  name of the \ ``JL``\  module used.
+
+.. _l4a4c4f626a65637454797065-6a6c526566:
+
+.. index::
+   pair: JLObjectType; jlRef
+
+:spadfun:`jlRef`\: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  \ ``jlRef(obj)``\  returns the pretty printed internal Lisp representation of the \ ``JL``\  object \ ``obj``\ .
+
+.. _l4a4c4f626a65637454797065-6a6c726566:
+
+.. index::
+   pair: JLObjectType; jlref
+
+:spadfun:`jlref`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jlref(str)``\  evaluates the \ ``JL``\  command \ ``str``\  and returns the corresponding FriCAS \ ``JL``\  object.
+
+.. _l4a4c4f626a65637454797065-6a6c54797065:
+
+.. index::
+   pair: JLObjectType; jlType
+
+:spadfun:`jlType`\: % -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlType(obj)``\  return the \ ``JL``\  type of \ ``obj``\ .
+
+.. _l4a4c4f626a65637454797065-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a4c4f626a65637454797065-6d757461626c653f:
+
+.. index::
+   pair: JLObjectType; mutable?
+
+:spadfun:`mutable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``mutable?(obj)``\  checks whether or not \ ``obj``\  is mutable.
+
+.. _l4a4c4f626a65637454797065-6e6f7468696e673f:
+
+.. index::
+   pair: JLObjectType; nothing?
+
+:spadfun:`nothing?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``nothing?(obj)``\  checks whether or not \ ``obj``\  is nothing.
+
+.. _l4a4c4f626a65637454797065-737472696e67:
+
+.. index::
+   pair: JLObjectType; string
+
+:spadfun:`string`\: % -> \ :ref:`String <l537472696e67>`\  
+  \ ``string(obj)``\  returns the \ ``JL``\  corresponding value of the object \ ``obj``\  as a string. Convenience function.
+
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`JLType <l4a4c54797065>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+

@@ -5,7 +5,7 @@
 JuliaFloat
 ==========
 
-:viewcode:`jobject.spad line 729 <jobject.spad#L729>` :editcode:`[edit on github] <jobject.spad#L729>`
+:viewcode:`jobject.spad line 888 <jobject.spad#L888>` :editcode:`[edit on github] <jobject.spad#L888>`
 
 
 \ :ref:`JuliaFloat <l4a756c6961466c6f6174>`\  implements arbitrary precision floating point arithmetic using Julia BigFloats. Use the MPFR library: https://www.mpfr.org/
@@ -44,6 +44,10 @@ JuliaFloat
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+
+\ :ref:`\* <l4a756c69614f626a65637452696e67-2a>`\ \: (\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , %) -> % 
+  from \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
 
 
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
@@ -570,44 +574,28 @@ JuliaFloat
    pair: JuliaFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter.
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+  \ ``jlApply(func, x)``\  applies the function \ ``func``\  with \ ``x``\  as parameter.
 
 
 .. index::
    pair: JuliaFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  to \ ``obj1``\  and \ ``obj2``\ .
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+  \ ``jlApply(func, x, y)``\  applies the function \ ``func``\  to \ ``x``\  and \ ``y``\ .
 
 
 .. index::
    pair: JuliaFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  to \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\ .
+  \ ``jlApply(func, x, y, z)``\  applies the function \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ .
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961466c6f6174-6a6c417070726f783f:
@@ -632,7 +620,7 @@ JuliaFloat
 
 .. _l4a756c6961466c6f6174-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961466c6f6174-6a6c4d5046524170706c79:
@@ -656,6 +644,11 @@ JuliaFloat
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JuliaObject <l4a756c69614f626a656374>`\ , %, %, %) -> % 
   \ ``jlMPFRApply(func,x,y,z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses Julia rounding mode, default to nearest. \example{mpfr:=j lDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_fma))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val, jfloat(2), jfloat(5))} \example{jlDlClose(mpfr)}
+
+.. _l4a756c6961466c6f6174-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961466c6f6174-6a6c526566:
 

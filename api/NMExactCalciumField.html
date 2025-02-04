@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NMExactCalciumField &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NMFactored R" href="NMFactored.html" />
+    <link rel="prev" title="NMComplexField" href="NMComplexField.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="NMFactored.html" title="NMFactored R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NMComplexField.html" title="NMComplexField"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NMExactCalciumField</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="nmexactcalciumfield">
+<span id="l4e4d457861637443616c6369756d4669656c64"></span><span id="index-0"></span><h1>NMExactCalciumField<a class="headerlink" href="#nmexactcalciumfield" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L1172">jnemo.spad line 1172</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L1172">[edit on github]</a></p>
+<p><a class="reference internal" href="#l4e4d457861637443616c6369756d4669656c64"><span class="std std-ref">NMExactCalciumField</span></a> implements exact complex field arithmetic using the <code class="docutils literal notranslate"><span class="pre">NM</span></code> package. Reference: <a class="reference external" href="https://nemocas.github.io/NM">https://nemocas.github.io/NM</a>.<code class="docutils literal notranslate"><span class="pre">jl</span></code> See <a class="reference external" href="https://flintlib.org/doc/introduction_calcium.html">https://flintlib.org/doc/introduction_calcium.html</a> for the <code class="docutils literal notranslate"><span class="pre">C</span></code> library.</p>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-31">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65-2a"><span class="std std-ref">*</span></a>: (%, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x*n</span></code> is the product of <code class="docutils literal notranslate"><span class="pre">x</span></code> by the integer <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectRing.html#l4a4c4f626a65637452696e67-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectRing.html#l4a4c4f626a65637452696e67"><span class="std std-ref">JLObjectRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-2f">
+<dt><a class="reference internal" href="Field.html#l4669656c64-2f"><span class="std std-ref">/</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">/</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>/ undocumented</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">/</span>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>/ undocumented</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-3c3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572-3c3d"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-3c">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572-3c"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-3e3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572-3e3d"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-3e">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572-3e"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-5e">
+<dt><a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279-5e"><span class="std std-ref">^</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279-5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67-5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-61636f73">
+<dt><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61636f73"><span class="std std-ref">acos</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">acos</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acos(x,repr)</span></code> returns acos(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the <code class="docutils literal notranslate"><span class="pre">repr</span></code> representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :logarithm :direct</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-61636f7368">
+<dt><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279-61636f7368"><span class="std std-ref">acosh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-61636f74">
+<dt><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61636f74"><span class="std std-ref">acot</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-61636f7468">
+<dt><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279-61636f7468"><span class="std std-ref">acoth</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-61637363">
+<dt><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61637363"><span class="std std-ref">acsc</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6163736368">
+<dt><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6163736368"><span class="std std-ref">acsch</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-616c676562726169633f"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">algebraic?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">algebraic?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is algebraic.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-616e6e6968696c6174653f">
+<dt><a class="reference internal" href="Rng.html#l526e67-616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67-616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-617267756d656e74">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-617267756d656e74"><span class="std std-ref">argument</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-61736563">
+<dt><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61736563"><span class="std std-ref">asec</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6173656368">
+<dt><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6173656368"><span class="std std-ref">asech</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6173696e">
+<dt><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-6173696e"><span class="std std-ref">asin</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">asin</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asin(x,</span> <span class="pre">repr)</span></code> returns asin(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :logarithm :direct</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6173696e68">
+<dt><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6173696e68"><span class="std std-ref">asinh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6173736f6369617465733f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-6173736f6369617465733f"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67-6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6174616e">
+<dt><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-6174616e"><span class="std std-ref">atan</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">atan</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atan(x,</span> <span class="pre">repr)</span></code> returns atan(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :logarithm :direct or :arctangent</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6174616e68">
+<dt><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6174616e68"><span class="std std-ref">atanh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6261736973">
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-6261736973"><span class="std std-ref">basis</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-6365696c696e67"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">ceiling</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ceiling(z)</span></code> returns the smallest integer above or equal to <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6368617261637465726973746963">
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6368617261637465726973746963506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-6368617261637465726973746963506f6c796e6f6d69616c"><span class="std std-ref">characteristicPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f65726365">
+<dt><a class="reference internal" href="Algebra.html#l416c6765627261-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(z)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">z</span></code>. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(q)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">q</span></code>. Convenience function.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="NMAlgebraicNumber.html#l4e4d416c676562726169634e756d626572"><span class="std std-ref">NMAlgebraicNumber</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(qbar)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">qbar</span></code>. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(q)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">q</span></code>. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(pi)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">pi</span></code>. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f6d706c6578">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-636f6d706c6578"><span class="std std-ref">complex</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-636f6d706c65784e6f726d616c466f726d"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">complexNormalForm</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complexNormalForm(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> rewritten using standard transformations. See the <code class="docutils literal notranslate"><span class="pre">NM</span></code>.<code class="docutils literal notranslate"><span class="pre">jl</span></code> documentation fo more informations.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f6e646974696f6e50">
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50"><span class="std std-ref">conditionP</span></a>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> % -&gt; Union(<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %, failed) if % has <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a> and % has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a> or % has <a class="reference internal" href="FiniteFieldCategory.html#l46696e6974654669656c6443617465676f7279"><span class="std std-ref">FiniteFieldCategory</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f6e6a7567617465">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-636f6e6a7567617465"><span class="std std-ref">conjugate</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">conjugate</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">conjugate(x,</span> <span class="pre">repr)</span></code> returns conjugate(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :deep (recursively) :shallow (a new extension, <code class="docutils literal notranslate"><span class="pre">ā</span></code>, is used if there is no express simplification)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-636f6e76657274"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-636f6e76657274"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f6f7264696e61746573">
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: (%, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f73">
+<dt><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-636f73"><span class="std std-ref">cos</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-16">
+<dt><span class="spadfun">cos</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cos(x,</span> <span class="pre">repr)</span></code> returns cos(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :exponential :tangent :direct or :sine_cosine</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f7368">
+<dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-636f7368"><span class="std std-ref">cosh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f74">
+<dt><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-636f74"><span class="std std-ref">cot</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-636f7468">
+<dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-636f7468"><span class="std std-ref">coth</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-637363">
+<dt><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-637363"><span class="std std-ref">csc</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-63736368">
+<dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-63736368"><span class="std std-ref">csch</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-637369676e"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">csign</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csign(x)</span></code> is an extension of the real sign function, x/sqrt(<code class="docutils literal notranslate"><span class="pre">x^2</span></code>) unless <code class="docutils literal notranslate"><span class="pre">x</span></code> is 0 (0 in this case).</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-44">
+<dt><a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e-44"><span class="std std-ref">D</span></a>: (%, % -&gt; %) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e"><span class="std std-ref">DifferentialExtension</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e-44"><span class="std std-ref">D</span></a>: (%, % -&gt; %, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e"><span class="std std-ref">DifferentialExtension</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-646566696e696e67506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-646566696e696e67506f6c796e6f6d69616c"><span class="std std-ref">definingPolynomial</span></a>: () -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-64657269766174696f6e436f6f7264696e61746573">
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-64657269766174696f6e436f6f7264696e61746573"><span class="std std-ref">derivationCoordinates</span></a>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %, % -&gt; %) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-646966666572656e7469617465">
+<dt><a class="reference internal" href="DifferentialRing.html#l446966666572656e7469616c52696e67-646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: % -&gt; % if % has <a class="reference internal" href="DifferentialRing.html#l446966666572656e7469616c52696e67"><span class="std std-ref">DifferentialRing</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialRing.html#l446966666572656e7469616c52696e67"><span class="std std-ref">DifferentialRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e-646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, % -&gt; %) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e"><span class="std std-ref">DifferentialExtension</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e-646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, % -&gt; %, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e"><span class="std std-ref">DifferentialExtension</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="DifferentialRing.html#l446966666572656e7469616c52696e67-646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if % has <a class="reference internal" href="DifferentialRing.html#l446966666572656e7469616c52696e67"><span class="std std-ref">DifferentialRing</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialRing.html#l446966666572656e7469616c52696e67"><span class="std std-ref">DifferentialRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6469736372696d696e616e74">
+<dt><a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261-6469736372696d696e616e74"><span class="std std-ref">discriminant</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261"><span class="std std-ref">FramedAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-6469736372696d696e616e74"><span class="std std-ref">discriminant</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-646976696465">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-656e756d6572617465">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-656e756d6572617465"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % if % has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-657266"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">erf</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">erf(x)</span></code> is the error function evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-65726663"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">erfc</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">erfc(x)</span></code> is the complementary error function evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-65726669"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">erfi</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">erfi(x)</span></code> is the imaginary error function evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6575636c696465616e53697a65">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-6575636c696465616e53697a65"><span class="std std-ref">euclideanSize</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-65756c657247616d6d61"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">eulerGamma</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eulerGamma()</span></code> returns the Euler<code class="docutils literal notranslate"><span class="pre">'s</span></code> constant gamma (<code class="docutils literal notranslate"><span class="pre">γ</span></code>).</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-65787031"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">exp1</span>: () -&gt; %</dt><dd><p>exp() returns <code class="docutils literal notranslate"><span class="pre">ℯ</span></code> (exp(1)).</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-657870">
+<dt><a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279-657870"><span class="std std-ref">exp</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-23">
+<dt><span class="spadfun">exp</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp()</span></code> returns <code class="docutils literal notranslate"><span class="pre">ℯ</span></code> (exp(1)).</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-65787072657373496465616c4d656d626572">
+<dt><a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e-65787072657373496465616c4d656d626572"><span class="std std-ref">expressIdealMember</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p>from <a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-657871756f">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-657871756f"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-657874656e6465644575636c696465616e">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e"><span class="std std-ref">extendedEuclidean</span></a>: (%, %) -&gt; Record(coef1: %, coef2: %, generator: %)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e"><span class="std std-ref">extendedEuclidean</span></a>: (%, %, %) -&gt; Union(Record(coef1: %, coef2: %), failed)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-666163746f72">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-666163746f72506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c"><span class="std std-ref">factorPolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if % has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-666163746f7253717561726546726565506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c"><span class="std std-ref">factorSquareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if % has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-666c6f6f72"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">floor</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">floor(z)</span></code> returns the largest integer below or equal ot <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-47616d6d61"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">Gamma</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Gamma(x)</span></code> is the Euler Gamma function evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-676364">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-676364"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-676364"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-676364506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-676364506f6c796e6f6d69616c"><span class="std std-ref">gcdPolynomial</span></a>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-67656e657261746f72">
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-67656e657261746f72"><span class="std std-ref">generator</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6861736855706461746521">
+<dt><a class="reference internal" href="Hashable.html#l4861736861626c65-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a> if % has <a class="reference internal" href="Hashable.html#l4861736861626c65"><span class="std std-ref">Hashable</span></a></dt><dd><p>from <a class="reference internal" href="Hashable.html#l4861736861626c65"><span class="std std-ref">Hashable</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-696d6167">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-696d6167"><span class="std std-ref">imag</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-696d6167696e6172793f"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">imaginary?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">imaginary?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is imaginary.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-696d6167696e617279">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-696d6167696e617279"><span class="std std-ref">imaginary</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-696e646578">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-696e646578"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if % has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-696e66696e6974793f"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">infinity?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">infinity?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is an infinity.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-696e66696e697479"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">infinity</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">infinity(x)</span></code> returns signed infinity depending on <code class="docutils literal notranslate"><span class="pre">x</span></code> sign.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">infinity</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">infinity()</span></code> returns unsigned infinity.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-696e74656765723f"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">integer?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">integer?(z)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">z</span></code> is an integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-696e76">
+<dt><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67-696e76"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c41626f7574">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c4170706c79">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c446973706c6179">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c4964">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c4e4d52696e67">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6a6c4e4d52696e67"><span class="std std-ref">jlNMRing</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c4f626a656374">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6a6c4f626a656374"><span class="std std-ref">jlObject</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-6a6c4f7074696f6e73"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">jlOptions</span>: % -&gt; <a class="reference internal" href="JLObjDict.html#l4a4c4f626a44696374"><span class="std std-ref">JLObjDict</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlOptions(x)</span></code> returns the options used during compoutations.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c526566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c526566"><span class="std std-ref">jlRef</span></a>: % -&gt; <a class="reference internal" href="SExpression.html#l5345787072657373696f6e"><span class="std std-ref">SExpression</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c726566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c726566"><span class="std std-ref">jlref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c54797065">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-6a6e656366"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">jnecf</span>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnecf(real,cplx)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">real</span></code> and <code class="docutils literal notranslate"><span class="pre">cplx</span></code> to a <code class="docutils literal notranslate"><span class="pre">NM</span></code> exact complex number where <code class="docutils literal notranslate"><span class="pre">real</span></code> is the <code class="docutils literal notranslate"><span class="pre">real</span></code> part and <code class="docutils literal notranslate"><span class="pre">cplx</span></code> the complex part.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-33">
+<dt><span class="spadfun">jnecf</span>: (<a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnecf(real,cplx)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">real</span></code> and <code class="docutils literal notranslate"><span class="pre">cplx</span></code> to a <code class="docutils literal notranslate"><span class="pre">NM</span></code> exact where <code class="docutils literal notranslate"><span class="pre">real</span></code> is the <code class="docutils literal notranslate"><span class="pre">real</span></code> part and <code class="docutils literal notranslate"><span class="pre">cplx</span></code> the complex part.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-34">
+<dt><span class="spadfun">jnecf</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnecf(fi)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">fi</span></code> to a <code class="docutils literal notranslate"><span class="pre">NM</span></code> real exact number.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-35">
+<dt><span class="spadfun">jnecf</span>: <a class="reference internal" href="NMAlgebraicNumber.html#l4e4d416c676562726169634e756d626572"><span class="std std-ref">NMAlgebraicNumber</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnecf(qbar)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">qbar</span></code> to a <code class="docutils literal notranslate"><span class="pre">NM</span></code> exact real or complex number.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-36">
+<dt><span class="spadfun">jnecf</span>: <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnecf(nr)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">nr</span></code> to a <code class="docutils literal notranslate"><span class="pre">NM</span></code> exact real number.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c636d">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-6c636d"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-6c636d"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c636d436f6566">
+<dt><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67-6c636d436f6566"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c656674506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c6566745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c696674">
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-6c696674"><span class="std std-ref">lift</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c6f67">
+<dt><a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67"><span class="std std-ref">log</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6c6f6f6b7570">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-6c6f6f6b7570"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> if % has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6d6170">
+<dt><a class="reference internal" href="FullyEvalableOver.html#l46756c6c794576616c61626c654f766572-6d6170"><span class="std std-ref">map</span></a>: (% -&gt; %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FullyEvalableOver.html#l46756c6c794576616c61626c654f766572"><span class="std std-ref">FullyEvalableOver</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6d6178">
+<dt><a class="reference internal" href="OrderedSet.html#l4f726465726564536574-6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6d696e">
+<dt><a class="reference internal" href="OrderedSet.html#l4f726465726564536574-6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6d696e696d616c506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-6d696e696d616c506f6c796e6f6d69616c"><span class="std std-ref">minimalPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6d756c74694575636c696465616e">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-6d756c74694575636c696465616e"><span class="std std-ref">multiEuclidean</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6d757461626c653f">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d757461626c653f"><span class="std std-ref">mutable?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-6e65676174697665496e66696e697479"></span><dl class="simple" id="index-37">
+<dt><span class="spadfun">negativeInfinity</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">negativeInfinity()</span></code> returns negtive infinity.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6e6f726d">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-6e6f726d"><span class="std std-ref">norm</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6e6f7468696e673f">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6e7468526f6f74">
+<dt><a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279-6e7468526f6f74"><span class="std std-ref">nthRoot</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-6e756d6265723f"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">number?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">number?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is a number, i.e. not an infinity or an undefined value.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6f6e653f">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-7069"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">pi</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pi()</span></code> returns <code class="docutils literal notranslate"><span class="pre">π</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-706c656e617279506f776572">
+<dt><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572"><span class="std std-ref">plenaryPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-706f736974697665496e66696e697479"></span><dl class="simple" id="index-40">
+<dt><span class="spadfun">positiveInfinity</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">positiveInfinity()</span></code> returns positive infinity.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-706f77"></span><dl class="simple" id="index-41">
+<dt><span class="spadfun">pow</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pow(x,</span> <span class="pre">i,</span> <span class="pre">repr)</span></code> <code class="docutils literal notranslate"><span class="pre">x</span></code> raised to power <code class="docutils literal notranslate"><span class="pre">i</span></code> using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :arithmetic See the <code class="docutils literal notranslate"><span class="pre">NM</span></code> documentation for more information.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7072696d653f">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f"><span class="std std-ref">prime?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7072696e636970616c496465616c">
+<dt><a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e-7072696e636970616c496465616c"><span class="std std-ref">principalIdeal</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; Record(coef: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, generator: %)</dt><dd><p>from <a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-71756f">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-71756f"><span class="std std-ref">quo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-72616e646f6d">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-72616e646f6d"><span class="std std-ref">random</span></a>: () -&gt; % if % has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-42">
+<dt><span class="spadfun">random</span>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">random(depth,</span> <span class="pre">bits)</span></code> returns a random number with size of coefficients up to bits. if <code class="docutils literal notranslate"><span class="pre">depth</span></code> is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with <code class="docutils literal notranslate"><span class="pre">depth</span></code> - 1.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-43">
+<dt><span class="spadfun">random</span>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">random(depth,</span> <span class="pre">bits,</span> <span class="pre">type)</span></code> returns a random number with size of coefficients up to <code class="docutils literal notranslate"><span class="pre">bits</span></code>. if <code class="docutils literal notranslate"><span class="pre">depth</span></code> is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with <code class="docutils literal notranslate"><span class="pre">depth</span></code> - 1. <code class="docutils literal notranslate"><span class="pre">depth</span></code> is not used for rationals. type can be one of: :rational (returns a rational) :null (returns value with default settings) :special (returns a special value of a number - can throw an error if it isn<code class="docutils literal notranslate"><span class="pre">'t</span></code> a number).</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-72616e6b">
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-72616e6b"><span class="std std-ref">rank</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-726174696f6e616c3f"></span><dl class="simple" id="index-44">
+<dt><span class="spadfun">rational?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is a rational number.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-7265616c3f"></span><dl class="simple" id="index-45">
+<dt><span class="spadfun">real?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">real?(z)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">z</span></code> is a real number.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7265616c">
+<dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-7265616c"><span class="std std-ref">real</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-726564756365">
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-726564756365"><span class="std std-ref">reduce</span></a>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-726564756365"><span class="std std-ref">reduce</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7265647563656453797374656d">
+<dt><a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d"><span class="std std-ref">reducedSystem</span></a>: (<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; Record(mat: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %, vec: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %)</dt><dd><p>from <a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d"><span class="std std-ref">reducedSystem</span></a>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-726567756c6172526570726573656e746174696f6e">
+<dt><a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261-726567756c6172526570726573656e746174696f6e"><span class="std std-ref">regularRepresentation</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261"><span class="std std-ref">FramedAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-726567756c6172526570726573656e746174696f6e"><span class="std std-ref">regularRepresentation</span></a>: (%, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-72656d">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-72656d"><span class="std std-ref">rem</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-726570726573656e7473">
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-726570726573656e7473"><span class="std std-ref">represents</span></a>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65-726570726573656e7473"><span class="std std-ref">represents</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="index-46">
+<dt><span class="spadfun">retract</span>: % -&gt; <a class="reference internal" href="NMComplexBall.html#l4e4d436f6d706c657842616c6c"><span class="std std-ref">NMComplexBall</span></a></dt><dd><p>convert(<code class="docutils literal notranslate"><span class="pre">x</span></code>) converts <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> %</p>
+</dd>
+</dl>
+<dl class="simple" id="index-47">
+<dt><span class="spadfun">retractIfCan</span>: % -&gt; Union(<a class="reference internal" href="NMAlgebraicNumber.html#l4e4d416c676562726169634e756d626572"><span class="std std-ref">NMAlgebraicNumber</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(z)</span></code> retracts if possible <code class="docutils literal notranslate"><span class="pre">z</span></code> to a NMAlgebraicNumber.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-48">
+<dt><span class="spadfun">retractIfCan</span>: % -&gt; Union(<a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(z)</span></code> retracts if possible <code class="docutils literal notranslate"><span class="pre">z</span></code> to a NMFraction(NMInteger).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-49">
+<dt><span class="spadfun">retractIfCan</span>: % -&gt; Union(<a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(z)</span></code> retracts if possible <code class="docutils literal notranslate"><span class="pre">z</span></code> to a Integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-50">
+<dt><span class="spadfun">retractIfCan</span>: % -&gt; Union(<a class="reference internal" href="NMRealBall.html#l4e4d5265616c42616c6c"><span class="std std-ref">NMRealBall</span></a>, failed)</dt><dd><p>convert(<code class="docutils literal notranslate"><span class="pre">x</span></code>) converts <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7269676874506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-72696768745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-736563">
+<dt><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-736563"><span class="std std-ref">sec</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73656368">
+<dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-73656368"><span class="std std-ref">sech</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-7369676e"></span><dl class="simple" id="index-51">
+<dt><span class="spadfun">sign</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sign(x)</span></code> returns sign of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-7369676e6564496e66696e6974793f"></span><dl class="simple" id="index-52">
+<dt><span class="spadfun">signedInfinity?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">signedInfinity?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is a signed infinity.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73696e">
+<dt><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-73696e"><span class="std std-ref">sin</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-53">
+<dt><span class="spadfun">sin</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sin(x,</span> <span class="pre">repr)</span></code> return sin(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :exponential :tangent :direct</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73696e68">
+<dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-73696e68"><span class="std std-ref">sinh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73697a65">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-73697a65"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if % has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73697a654c6573733f">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-73697a654c6573733f"><span class="std std-ref">sizeLess?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c65-736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e">
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e"><span class="std std-ref">solveLinearPolynomialEquation</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, failed) if % has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73717274">
+<dt><a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279-73717274"><span class="std std-ref">sqrt</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73717561726546726565">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565"><span class="std std-ref">squareFree</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7371756172654672656550617274">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274"><span class="std std-ref">squareFreePart</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-73717561726546726565506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c"><span class="std std-ref">squareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-737472696e67">
+<dt><a class="reference internal" href="JLType.html#l4a4c54797065-737472696e67"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-74616e">
+<dt><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-74616e"><span class="std std-ref">tan</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-54">
+<dt><span class="spadfun">tan</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tan(x,</span> <span class="pre">repr)</span></code> returns tan(<code class="docutils literal notranslate"><span class="pre">x</span></code>) using one of the repr representations: :default (since ‘default’ is a FriCAS keyword use jsym(String) to coerce it) :exponential :direct or :tangent :sine_cosine</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-74616e68">
+<dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-74616e68"><span class="std std-ref">tanh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7472616365">
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-7472616365"><span class="std std-ref">trace</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-74726163654d6174726978">
+<dt><a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261-74726163654d6174726978"><span class="std std-ref">traceMatrix</span></a>: () -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261"><span class="std std-ref">FramedAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-74726163654d6174726978"><span class="std std-ref">traceMatrix</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-756e646566696e65643f"></span><dl class="simple" id="index-55">
+<dt><span class="spadfun">undefined?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">undefined?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is undefined.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-756e646566696e6564"></span><dl class="simple" id="index-56">
+<dt><span class="spadfun">undefined</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">undefined()</span></code> returns the undefined special value.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-756e69743f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69743f"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-756e697443616e6f6e6963616c">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e697443616e6f6e6963616c"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-756e69744e6f726d616c">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-756e6b6e6f776e3f"></span><dl class="simple" id="index-57">
+<dt><span class="spadfun">unknown?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unknown?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is unknown.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-756e6b6e6f776e"></span><dl class="simple" id="index-58">
+<dt><span class="spadfun">unknown</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unknown()</span></code> returns the unknown special value.</p>
+</dd>
+</dl>
+<span id="l4e4d457861637443616c6369756d4669656c64-756e7369676e6564496e66696e6974793f"></span><dl class="simple" id="index-59">
+<dt><span class="spadfun">unsignedInfinity?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unsignedInfinity?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is an unsigned infinity.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+<p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>
+<p><a class="reference internal" href="ArcTrigonometricFunctionCategory.html#l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcTrigonometricFunctionCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="canonicalsClosed.html#l63616e6f6e6963616c73436c6f736564"><span class="std std-ref">canonicalsClosed</span></a></p>
+<p><a class="reference internal" href="canonicalUnitNormal.html#l63616e6f6e6963616c556e69744e6f726d616c"><span class="std std-ref">canonicalUnitNormal</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> %</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="CommutativeStar.html#l436f6d6d7574617469766553746172"><span class="std std-ref">CommutativeStar</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> %</p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+<p><a class="reference internal" href="DifferentialExtension.html#l446966666572656e7469616c457874656e73696f6e"><span class="std std-ref">DifferentialExtension</span></a> %</p>
+<p><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
+<p><a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a></p>
+<p><a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+<p><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+<p><a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p>
+<p><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+<p><a class="reference internal" href="FramedAlgebra.html#l4672616d6564416c6765627261"><span class="std std-ref">FramedAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+<p><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> %</p>
+<p><a class="reference internal" href="FullyEvalableOver.html#l46756c6c794576616c61626c654f766572"><span class="std std-ref">FullyEvalableOver</span></a> %</p>
+<p><a class="reference internal" href="FullyLinearlyExplicitOver.html#l46756c6c794c696e6561726c794578706c696369744f766572"><span class="std std-ref">FullyLinearlyExplicitOver</span></a> %</p>
+<p><a class="reference internal" href="FullyPatternMatchable.html#l46756c6c795061747465726e4d6174636861626c65"><span class="std std-ref">FullyPatternMatchable</span></a> %</p>
+<p><a class="reference internal" href="FullyRetractableTo.html#l46756c6c795265747261637461626c65546f"><span class="std std-ref">FullyRetractableTo</span></a> %</p>
+<p><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+<p><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
+<p><a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p>
+<p><a class="reference internal" href="JLObjectRing.html#l4a4c4f626a65637452696e67"><span class="std std-ref">JLObjectRing</span></a></p>
+<p><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+<p><a class="reference internal" href="JLRing.html#l4a4c52696e67"><span class="std std-ref">JLRing</span></a></p>
+<p><a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
+<p><a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> %</p>
+<p><a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> %</p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
+<p><a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NMCommutativeRing.html#l4e4d436f6d6d7574617469766552696e67"><span class="std std-ref">NMCommutativeRing</span></a></p>
+<p><a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+<p><a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a></p>
+<p><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> %</p>
+<p><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l4e6f6e4173736f6369617469766553656d6952696e67"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+<p><a class="reference internal" href="Patternable.html#l5061747465726e61626c65"><span class="std std-ref">Patternable</span></a> %</p>
+<p><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+<p><a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
+<p><a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> %</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l53656d6947726f7570"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l53656d6952696e67"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a></p>
+<p><a class="reference internal" href="TrigonometricFunctionCategory.html#l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279"><span class="std std-ref">TrigonometricFunctionCategory</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l54776f53696465645265636970"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="NMFactored.html" title="NMFactored R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NMComplexField.html" title="NMComplexField"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NMExactCalciumField</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

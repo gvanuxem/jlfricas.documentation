@@ -44,6 +44,10 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
+\ :ref:`\* <l4a756c69614f626a65637452696e67-2a>`\ \: (\ :ref:`NemoInteger <l4e656d6f496e7465676572>`\ , %) -> % 
+  from \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
+
+
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
@@ -501,7 +505,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
    pair: JuliaWSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Complex <l436f6d706c6578>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce(gi)``\  coerce \ ``gi``\  to a JuliaWSExpression. Convenience function.
+  \ ``coerce(gi)``\  coerces \ ``gi``\  to a JuliaWSExpression. Convenience function.
 
 
 .. index::
@@ -535,6 +539,13 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`coerce`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
   \ ``coerce(z)``\  coerces the integer \ ``z``\  to a JuliaWSExpression. Convenience function.
+
+
+.. index::
+   pair: JuliaWSExpression; coerce
+
+:spadfun:`coerce`\: \ :ref:`JuliaWSSymbol <l4a756c6961575353796d626f6c>`\  -> % 
+  \ ``coerce(sym)``\  coerces \ ``sym``\  to a JuliaWSExpression.
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Kernel <l4b65726e656c>`\  % -> % 
@@ -791,6 +802,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`dedekindEta`\: % -> % 
   \ ``dedekindEta(tau)``\  computes the Dedekind modular elliptic eta.
+
+.. _l4a756c6961575345787072657373696f6e-646566696e65643f:
+
+.. index::
+   pair: JuliaWSExpression; defined?
+
+:spadfun:`defined?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``defined?(sym)``\  checks whether or not \ ``sym``\  is a \ ``WS``\  symbol.
 
 .. _l4a756c6961575345787072657373696f6e-646566696e696e67506f6c796e6f6d69616c:
 
@@ -1250,6 +1269,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`eval <l46756e6374696f6e537061636532-6576616c>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  % -> %) -> % 
   from \ :ref:`FunctionSpace2 <l46756e6374696f6e537061636532>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %)
+
+.. _l4a756c6961575345787072657373696f6e-65786163744e756d6265723f:
+
+.. index::
+   pair: JuliaWSExpression; exactNumber?
+
+:spadfun:`exactNumber?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
 
 .. _l4a756c6961575345787072657373696f6e-657870:
 
@@ -1723,6 +1750,11 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 \ :ref:`hankelH2 <l5370656369616c46756e6374696f6e43617465676f7279-68616e6b656c4832>`\ \: (%, %) -> % 
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
+.. _l4a756c6961575345787072657373696f6e-68617368:
+
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
 .. _l4a756c6961575345787072657373696f6e-6861736855706461746521:
 
 \ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
@@ -1835,6 +1867,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`insert <l4a756c69615753416767726567617465-696e73657274>`\ \: (%, %, \ :ref:`JuliaWSInteger <l4a756c69615753496e7465676572>`\ ) -> % 
   from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  %
+
+.. _l4a756c6961575345787072657373696f6e-696e74656765723f:
+
+.. index::
+   pair: JuliaWSExpression; integer?
+
+:spadfun:`integer?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
 
 .. _l4a756c6961575345787072657373696f6e-696e74656772616c:
 
@@ -2057,33 +2097,43 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 .. _l4a756c6961575345787072657373696f6e-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961575345787072657373696f6e-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a756c69614f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+
+.. index::
+   pair: JuliaWSExpression; jlDisplay
+
+:spadfun:`jlDisplay`\: (\ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ , \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\ ) -> \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  
+  \ ``jlDisplay(expr, form)``\  returns the `form` form of expr: jWSExpr "Format[Sin[\ ``x``\ ], TeXForm]" \ ``=>``\  \sin \ ``x``\ ())
+
+
+.. index::
+   pair: JuliaWSExpression; jlDisplay
+
+:spadfun:`jlDisplay`\: \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  -> \ :ref:`JuliaWSExpression <l4a756c6961575345787072657373696f6e>`\  
+  \ ``jlDisplay(expr)``\  returns the traditional form of expr: jWSExpr "Format[Sin[\ ``x``\ ]]" \ ``=>``\  sin(\ ``x``\ )
 
 .. _l4a756c6961575345787072657373696f6e-6a6c4576616c:
 
@@ -2111,6 +2161,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`jlEval`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
   \ ``jlEval(expr, param11, param2, param3)``\  evaluates expression \ ``expr``\  with \ ``param1``\ , \ ``param2``\  and \ ``param3``\  as parameters.
 
+.. _l4a756c6961575345787072657373696f6e-6a6c4772656564794576616c:
+
+.. index::
+   pair: JuliaWSExpression; jlGreedyEval
+
+:spadfun:`jlGreedyEval`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlGreedyEval(bool)``\  toogles or not to automatic arithmetic operations. Plus[a, a] can become Times[2, a] using or not Julia `weval`.
+
 .. _l4a756c6961575345787072657373696f6e-6a6c48656164:
 
 \ :ref:`jlHead <l4a756c696157534f626a656374-6a6c48656164>`\ \: % -> \ :ref:`JuliaWSSymbol <l4a756c6961575353796d626f6c>`\  
@@ -2118,7 +2176,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 .. _l4a756c6961575345787072657373696f6e-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961575345787072657373696f6e-6a6c4e756d65726963:
@@ -2129,6 +2187,11 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`jlNumeric <l4a756c696157534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c6961575345787072657373696f6e-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961575345787072657373696f6e-6a6c526566:
 
@@ -2157,6 +2220,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`jlWSAccuracy`\: % -> % 
   \ ``jlWSAccuracy(expr)``\  get accuracy of \ ``expr``\ .
+
+.. _l4a756c6961575345787072657373696f6e-6a6c5753446566696e65643f:
+
+.. index::
+   pair: JuliaWSExpression; jlWSDefined?
+
+:spadfun:`jlWSDefined?`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlWSDefined?(sym)``\  checks whether or not the symbol \ ``sym``\  is defined in the \ ``WS``\  language. For example: \example{jlWSDefied? "Sin"} \ ``=>``\  \ ``true``\ 
 
 .. _l4a756c6961575345787072657373696f6e-6a6c5753507265636973696f6e:
 
@@ -2199,6 +2270,56 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`jWSAggregate <l4a756c69615753416767726567617465-6a5753416767726567617465>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
   from \ :ref:`JuliaWSAggregate <l4a756c69615753416767726567617465>`\  %
+
+.. _l4a756c6961575345787072657373696f6e-6a575344617461:
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: % -> % 
+  \ ``jWSData(sym)``\  returns the entity(ies) associated to \ ``sym``\ (\ ``s``\ ).
+
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: (%, %) -> % 
+  \ ``jWSData(sym, prop)``\  returns the property of \ ``sym``\ .
+
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: (%, %, %) -> % 
+  \ ``jWSData(sym, prop, ann)``\  returns the annotation for the property of \ ``sym``\ .
+
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: () -> % 
+  \ ``jWSData()``\  returns the list of \ ``WS``\  symbols. Note: Currently unprintable.
+
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  \ ``jWSData(sym, prop)``\  returns the property of \ ``sym``\ .
+
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  \ ``jWSData(sym, prop, ann)``\  returns the annotation for the property of \ ``sym``\ .
+
+
+.. index::
+   pair: JuliaWSExpression; jWSData
+
+:spadfun:`jWSData`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jWSData(sym)``\  returns the entity(ies) associated to \ ``sym``\ (\ ``s``\ ).
 
 .. _l4a756c6961575345787072657373696f6e-6a5753457175616c:
 
@@ -2647,6 +2768,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`lookup`\: (%, %, %) -> % 
   \ ``lookup(assocs,keys, defaultval)``\  returns value(\ ``s``\ ) associated to key(\ ``s``\ ) if key(\ ``s``\ ) exist(\ ``s``\ ), otherwise defaultval
 
+.. _l4a756c6961575345787072657373696f6e-6d616368696e654e756d6265723f:
+
+.. index::
+   pair: JuliaWSExpression; machineNumber?
+
+:spadfun:`machineNumber?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
+
 .. _l4a756c6961575345787072657373696f6e-6d61696e4b65726e656c:
 
 \ :ref:`mainKernel <l45787072657373696f6e537061636532-6d61696e4b65726e656c>`\ \: % -> Union(\ :ref:`Kernel <l4b65726e656c>`\  %, failed) 
@@ -2827,6 +2956,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 \ :ref:`minPoly <l45787072657373696f6e537061636532-6d696e506f6c79>`\ \: \ :ref:`Kernel <l4b65726e656c>`\  % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
 
+.. _l4a756c6961575345787072657373696f6e-6d697373696e673f:
+
+.. index::
+   pair: JuliaWSExpression; missing?
+
+:spadfun:`missing?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``missing?(data)``\  checks whether or not \ ``data``\  is Missing.
+
 .. _l4a756c6961575345787072657373696f6e-6d6f64756c61724c616d626461:
 
 .. index::
@@ -2890,6 +3027,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`nthRoot <l5261646963616c43617465676f7279-6e7468526f6f74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
+
+.. _l4a756c6961575345787072657373696f6e-6e756d6265723f:
+
+.. index::
+   pair: JuliaWSExpression; number?
+
+:spadfun:`number?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
 
 .. _l4a756c6961575345787072657373696f6e-6e756d6572:
 
@@ -3471,6 +3616,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 \ :ref:`rank <l4672616d65644d6f64756c65-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
   from \ :ref:`FramedModule <l4672616d65644d6f64756c65>`\  %
 
+.. _l4a756c6961575345787072657373696f6e-726174696f6e616c3f:
+
+.. index::
+   pair: JuliaWSExpression; rational?
+
+:spadfun:`rational?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
+
 .. _l4a756c6961575345787072657373696f6e-726174696f6e616c417070726f78696d6174696f6e:
 
 .. index::
@@ -3486,10 +3639,26 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`rationalApproximation`\: (%, %) -> % 
   \ ``rationalApproximation(expr, dx)``\  try to find a rational approximation of the expression \ ``expr``\  within tolerance \ ``dx``\ .
 
+.. _l4a756c6961575345787072657373696f6e-7265616c3f:
+
+.. index::
+   pair: JuliaWSExpression; real?
+
+:spadfun:`real?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
+
 .. _l4a756c6961575345787072657373696f6e-7265616c:
 
 \ :ref:`real <l436f6d706c657843617465676f7279-7265616c>`\ \: % -> % 
   from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
+
+.. _l4a756c6961575345787072657373696f6e-7265616c4e756d657269633f:
+
+.. index::
+   pair: JuliaWSExpression; realNumeric?
+
+:spadfun:`realNumeric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \undocumented
 
 .. _l4a756c6961575345787072657373696f6e-7265636970:
 
@@ -3677,6 +3846,13 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JuliaWSExpression; retract
 
+:spadfun:`retract`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Float <l466c6f6174>`\  
+  \ ``retract(expr)``\  tries to retract \ ``expr``\  to an Expression(Integer). Throws an error otherwise.
+
+
+.. index::
+   pair: JuliaWSExpression; retract
+
 :spadfun:`retract`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
   \ ``retract(expr)``\  tries to retract \ ``expr``\  to an Expression(Integer). Throws an error otherwise.
 
@@ -3711,6 +3887,13 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`retractIfCan`\: % -> Union(\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , failed) 
   \ ``retractIfCan(expr)``\  retracts \ ``expr``\  to a DoubleFloat if it can be retracted to a Lisp machine float.
+
+
+.. index::
+   pair: JuliaWSExpression; retractIfCan
+
+:spadfun:`retractIfCan`\: % -> Union(\ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Float <l466c6f6174>`\ , failed) 
+  \ ``retractIfCan(expr)``\  tries to retract \ ``expr``\  to an Expression(Float).
 
 
 .. index::
@@ -3894,7 +4077,7 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
    pair: JuliaWSExpression; series
 
 :spadfun:`series`\: (%, %) -> % 
-  \ ``series(expr, opt)``\  returns a serie from \ ``expr``\ . \example{x:=jWSExpr(x)} \example{opt:=jWSList [x,\ ``pi``\ ()\$JWSEXPR/4,7]} \example{series(sin(a*x),opt)} \example{series(cos(x),"\{x, 0, 12\}")}
+  \ ``series(expr, opt)``\  returns a serie from \ ``expr``\ . \example{x:=jWSExpr(x);a:=jWSExpr(a);} \example{opt:=jWSList [x,\ ``pi``\ ()\$JWSEXPR/4,7]} \example{series(sin(a*x),opt)} \example{series(cos(x),"\{x, 0, 12\}")}
 
 .. _l4a756c6961575345787072657373696f6e-736574656c7421:
 
@@ -4235,6 +4418,28 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`tanh <l4879706572626f6c696346756e6374696f6e43617465676f7279-74616e68>`\ \: % -> % 
   from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4a756c6961575345787072657373696f6e-746f45787072657373696f6e:
+
+.. index::
+   pair: JuliaWSExpression; toExpression
+
+:spadfun:`toExpression`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``toExpression(expr, form)``\  converts \ ``expr``\  to a \ ``WS``\  expression and evaluates it with output in the format form.
+
+
+.. index::
+   pair: JuliaWSExpression; toExpression
+
+:spadfun:`toExpression`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ ``toExpression(expr, form, h)``\  converts \ ``expr``\  to a \ ``WS``\  expression and evaluates it with output in the format \ ``form``\  but wrap the head with \ ``h``\ . `Hold` for example.
+
+
+.. index::
+   pair: JuliaWSExpression; toExpression
+
+:spadfun:`toExpression`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``toExpression(expr)``\  converts \ ``expr``\  to a \ ``WS``\  expression and evaluates it.
 
 .. _l4a756c6961575345787072657373696f6e-746f676574686572:
 

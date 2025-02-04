@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JLFloat32VectorFunctions2 &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JLFloat64SpecialFunctions" href="JLFloat64SpecialFunctions.html" />
+    <link rel="prev" title="JLFloat32SpecialFunctions2" href="JLFloat32SpecialFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JLFloat64SpecialFunctions.html" title="JLFloat64SpecialFunctions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JLFloat32SpecialFunctions2.html" title="JLFloat32SpecialFunctions2"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLFloat32VectorFunctions2</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="jlfloat32vectorfunctions2">
+<span id="l4a4c466c6f61743332566563746f7246756e6374696f6e7332"></span><span id="index-0"></span><h1>JLFloat32VectorFunctions2<a class="headerlink" href="#jlfloat32vectorfunctions2" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jarray32.spad#L161">jarray32.spad line 161</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jarray32.spad#L161">[edit on github]</a></p>
+<p>This package provides operations which all take as arguments JLFloat32Vector and functions from <code class="docutils literal notranslate"><span class="pre">JLFloat32</span></code> to <code class="docutils literal notranslate"><span class="pre">JLFloat32</span></code>. The operations all iterate over their vector argument and either return a value of type JLFloat32Vector or a <code class="docutils literal notranslate"><span class="pre">JLFloat32</span></code>.</p>
+<span id="l4a4c466c6f61743332566563746f7246756e6374696f6e7332-6d6170"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a> -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">map</span>: (<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a> -&gt; Union(<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, failed), <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>) -&gt; Union(<a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f61743332566563746f7246756e6374696f6e7332-726564756365"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">reduce</span>: ((<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> combines the elements in <code class="docutils literal notranslate"><span class="pre">vec</span></code> using the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>. Argument ident is returned if <code class="docutils literal notranslate"><span class="pre">vec</span></code> is empty.</p>
+</dd>
+</dl>
+<span id="l4a4c466c6f61743332566563746f7246756e6374696f6e7332-7363616e"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">scan</span>: ((<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> creates a new vector whose elements are the result of applying reduce to the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>, increasing initial subsequences of the vector <code class="docutils literal notranslate"><span class="pre">vec</span></code>, and the element ident.</p>
+</dd>
+</dl>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JLFloat64SpecialFunctions.html" title="JLFloat64SpecialFunctions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JLFloat32SpecialFunctions2.html" title="JLFloat32SpecialFunctions2"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLFloat32VectorFunctions2</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

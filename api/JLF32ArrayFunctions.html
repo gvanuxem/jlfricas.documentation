@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JLF32ArrayFunctions &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JLF32LinearAlgebra" href="JLF32LinearAlgebra.html" />
+    <link rel="prev" title="JLDrawFunctions Ex" href="JLDrawFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JLF32LinearAlgebra.html" title="JLF32LinearAlgebra"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JLDrawFunctions.html" title="JLDrawFunctions Ex"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLF32ArrayFunctions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="jlf32arrayfunctions">
+<span id="l4a4c463332417272617946756e6374696f6e73"></span><span id="index-0"></span><h1>JLF32ArrayFunctions<a class="headerlink" href="#jlf32arrayfunctions" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jafunctions.spad#L1">jafunctions.spad line 1</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jafunctions.spad#L1">[edit on github]</a></p>
+<p>This package provides different <code class="docutils literal notranslate"><span class="pre">JL</span></code> utility functions for operations using CPU/GPU supported data types. Internal package.</p>
+<span id="l4a4c463332417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e21"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">cvec1,</span> <span class="pre">cvec2)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">JL</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">cvec2</span></code> and overwrites <code class="docutils literal notranslate"><span class="pre">cvec1</span></code> with the result. Please note that overwriting is done by <code class="docutils literal notranslate"><span class="pre">JL</span></code> and not FriCAS. See <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘copy!’ for example.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>jlApplyFunction!!(func, carray, cmat, <code class="docutils literal notranslate"><span class="pre">nr</span></code>) applies the function func to the matrix cmat and returns the result in carray. It is FriCAS that puts, at the <code class="docutils literal notranslate"><span class="pre">C</span></code> level, the resulting matrix in carray.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">carray,</span> <span class="pre">mat,</span> <span class="pre">nr)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to the matrix <code class="docutils literal notranslate"><span class="pre">mat</span></code> and returns the result in <code class="docutils literal notranslate"><span class="pre">carray</span></code>. It is FriCAS that puts, at the <code class="docutils literal notranslate"><span class="pre">C</span></code> level, the resulting matrix in <code class="docutils literal notranslate"><span class="pre">carray</span></code>. Can be used with <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘sqrt’ for example.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">cmat1,</span> <span class="pre">cmat2)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">JL</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">cmat2</span></code> and overwrites <code class="docutils literal notranslate"><span class="pre">cmat1</span></code> with the result. Please note that overwriting is done by <code class="docutils literal notranslate"><span class="pre">JL</span></code> and not FriCAS. See <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘copy!’ or adjoint! for example.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">array,</span> <span class="pre">cmat,</span> <span class="pre">nr)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to the matrix <code class="docutils literal notranslate"><span class="pre">cmat</span></code> and returns the result in <code class="docutils literal notranslate"><span class="pre">array</span></code>. It is FriCAS that puts, at the <code class="docutils literal notranslate"><span class="pre">C</span></code> level, the resulting matrix in <code class="docutils literal notranslate"><span class="pre">array</span></code>. Can be used with <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘real’ or ‘imag’ for example.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">vec1,</span> <span class="pre">vec2)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">JL</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">vec2</span></code> and overwrites <code class="docutils literal notranslate"><span class="pre">vec1</span></code> with the result. Please note that overwriting is done by <code class="docutils literal notranslate"><span class="pre">JL</span></code> and not FriCAS. See <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘copy!’ for example.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">array,</span> <span class="pre">mat,</span> <span class="pre">nr)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to the matrix <code class="docutils literal notranslate"><span class="pre">mat</span></code> and returns the result in <code class="docutils literal notranslate"><span class="pre">array</span></code>. It is FriCAS that puts, at the <code class="docutils literal notranslate"><span class="pre">C</span></code> level, the resulting matrix in <code class="docutils literal notranslate"><span class="pre">array</span></code>. Can be used with <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘inv’ for example.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">jlApplyFunction!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction!(func,</span> <span class="pre">mat1,</span> <span class="pre">mat2)</span></code> applies the <code class="docutils literal notranslate"><span class="pre">JL</span></code> function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">mat2</span></code> and overwrites <code class="docutils literal notranslate"><span class="pre">mat1</span></code> with the result. Please note that overwriting is done by <code class="docutils literal notranslate"><span class="pre">JL</span></code> and not FriCAS. See <code class="docutils literal notranslate"><span class="pre">JL</span></code> ‘copy!’ or transpose! for example.</p>
+</dd>
+</dl>
+<span id="l4a4c463332417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">cvec)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to cvec.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>jlF32FunctionF32Vec(func, vec) applies func to cvec.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">cvec,</span> <span class="pre">p)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to <code class="docutils literal notranslate"><span class="pre">cvec</span></code> with parameter <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">cmat,</span> <span class="pre">nr)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to <code class="docutils literal notranslate"><span class="pre">cmat</span></code>, internally a vector, where the number of rows is <code class="docutils literal notranslate"><span class="pre">nr</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">cmat,</span> <span class="pre">nr)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to the matrix mat, internally a vector, where the numer of rows is <code class="docutils literal notranslate"><span class="pre">nr</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLComplexF32Vector.html#l4a4c436f6d706c6578463332566563746f72"><span class="std std-ref">JLComplexF32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">cmat,</span> <span class="pre">nr,</span> <span class="pre">p)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to <code class="docutils literal notranslate"><span class="pre">cmat</span></code>, internally a vector, where the number of rows is <code class="docutils literal notranslate"><span class="pre">nr</span></code> and <code class="docutils literal notranslate"><span class="pre">p</span></code> an additional parameter.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">vec)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to vec.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-16">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>jlFunctionF32Vector(func, vec) applies func to vec.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">vec,</span> <span class="pre">p)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to <code class="docutils literal notranslate"><span class="pre">vec</span></code> with parameter <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-18">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">mat,</span> <span class="pre">nr)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to <code class="docutils literal notranslate"><span class="pre">mat</span></code>, internally a vector, where the number of rows is <code class="docutils literal notranslate"><span class="pre">nr</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-19">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">mat,</span> <span class="pre">nr)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to the matrix <code class="docutils literal notranslate"><span class="pre">mat</span></code>, internally a vector, where the numer of rows is <code class="docutils literal notranslate"><span class="pre">nr</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-20">
+<dt><span class="spadfun">jlApplyFunction</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApplyFunction(func,</span> <span class="pre">mat,</span> <span class="pre">nr,</span> <span class="pre">p)</span></code> returns the output value of <code class="docutils literal notranslate"><span class="pre">func</span></code> applied to <code class="docutils literal notranslate"><span class="pre">mat</span></code>, internally a vector, where the number of rows is <code class="docutils literal notranslate"><span class="pre">nr</span></code> and <code class="docutils literal notranslate"><span class="pre">p</span></code> an additional parameter.</p>
+</dd>
+</dl>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JLF32LinearAlgebra.html" title="JLF32LinearAlgebra"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JLDrawFunctions.html" title="JLDrawFunctions Ex"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JLF32ArrayFunctions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2024, FriCAS Team.
+    </div>
+  </body>
+</html>

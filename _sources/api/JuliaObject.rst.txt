@@ -5,7 +5,7 @@
 JuliaObject
 ===========
 
-:viewcode:`jobject.spad line 212 <jobject.spad#L212>` :editcode:`[edit on github] <jobject.spad#L212>`
+:viewcode:`jobject.spad line 195 <jobject.spad#L195>` :editcode:`[edit on github] <jobject.spad#L195>`
 
 
 Generic Julia objects i.e. objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It also supports the JuliaObjectAggregate category.
@@ -92,27 +92,23 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 
 .. _l4a756c69614f626a656374-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614f626a656374-6a6c436f6c6c656374:
@@ -130,7 +126,12 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 
 .. _l4a756c69614f626a656374-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614f626a656374-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614f626a656374-6a6c526566:
@@ -161,7 +162,7 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
    pair: JuliaObject; jobject
 
 :spadfun:`jobject`\: \ :ref:`String <l537472696e67>`\  -> % 
-  jlObject(\ ``str``\ ) constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: \example{jobject("rand(Float64,(2,3,4))")} returns a 2x3x4 array of \ ``Float64``\  elements. A Julia exception is raised if error(\ ``s``\ ) occur(\ ``s``\ ) during parsing/evalution.
+  \ ``jobject(str)``\  constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: \example{jobject("rand(Float64,(2,3,4))")} returns a 2x3x4 array of \ ``Float64``\  elements. A Julia exception is raised if error(\ ``s``\ ) occur(\ ``s``\ ) during parsing/evalution.
 
 .. _l4a756c69614f626a656374-6c61746578:
 

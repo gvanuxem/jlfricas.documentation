@@ -1,0 +1,668 @@
+.. index:: JLFloat32Vector
+
+.. _l4a4c466c6f61743332566563746f72:
+
+JLFloat32Vector
+===============
+
+:viewcode:`jarray32.spad line 1 <jarray32.spad#L1>` :editcode:`[edit on github] <jarray32.spad#L1>`
+
+
+This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking on elt\ ``'s``\ . Minimum index is 1.
+
+
+.. _l4a4c466c6f61743332566563746f72-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-2a:
+
+\ :ref:`\* <l566563746f7243617465676f7279-2a>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`\* <l566563746f7243617465676f7279-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`\* <l566563746f7243617465676f7279-2a>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-2b:
+
+\ :ref:`+ <l566563746f7243617465676f7279-2b>`\ \: (%, %) -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-2d:
+
+\ :ref:`- <l566563746f7243617465676f7279-2d>`\ \: % -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`- <l566563746f7243617465676f7279-2d>`\ \: (%, %) -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-3c3d:
+
+\ :ref:`<= <l5061727469616c4f72646572-3c3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-3c:
+
+\ :ref:`< <l5061727469616c4f72646572-3c>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-3e3d:
+
+\ :ref:`>= <l5061727469616c4f72646572-3e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-3e:
+
+\ :ref:`> <l5061727469616c4f72646572-3e>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-616e793f:
+
+\ :ref:`any? <l486f6d6f67656e656f7573416767726567617465-616e793f>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f65726365:
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f6e636174:
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f6e737472756374:
+
+\ :ref:`construct <l436f6c6c656374696f6e-636f6e737472756374>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f707921:
+
+.. index::
+   pair: JLFloat32Vector; copy!
+
+:spadfun:`copy!`\: (%, %) -> % 
+  \ ``copy!(b,a)``\  copies efficiently a to \ ``b``\ . No check are done on arrays dimension.
+
+.. _l4a4c466c6f61743332566563746f72-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f7079496e746f21:
+
+\ :ref:`copyInto! <l4c696e656172416767726567617465-636f7079496e746f21>`\ \: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-636f756e74:
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-63726f7373:
+
+\ :ref:`cross <l566563746f7243617465676f7279-63726f7373>`\ \: (%, %) -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-64656c657465:
+
+\ :ref:`delete <l4c696e656172416767726567617465-64656c657465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`delete <l4c696e656172416767726567617465-64656c657465>`\ \: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-646f74:
+
+\ :ref:`dot <l566563746f7243617465676f7279-646f74>`\ \: (%, %) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-656c74:
+
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+
+\ :ref:`elt <l456c7461626c65416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %)
+
+.. _l4a4c466c6f61743332566563746f72-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-656e7472696573:
+
+\ :ref:`entries <l496e6465786564416767726567617465-656e7472696573>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-656e7472793f:
+
+\ :ref:`entry? <l496e6465786564416767726567617465-656e7472793f>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6576616c:
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+  from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+  from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-65766572793f:
+
+\ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-66696c6c21:
+
+\ :ref:`fill! <l496e6465786564416767726567617465-66696c6c21>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-66696e64:
+
+\ :ref:`find <l436f6c6c656374696f6e-66696e64>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> Union(\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , failed) 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6669727374:
+
+\ :ref:`first <l496e6465786564416767726567617465-6669727374>`\ \: % -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+
+\ :ref:`first <l4c696e656172416767726567617465-6669727374>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-68617368:
+
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6861736855706461746521:
+
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-696e6465783f:
+
+\ :ref:`index? <l496e6465786564416767726567617465-696e6465783f>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-696e6469636573:
+
+\ :ref:`indices <l496e6465786564416767726567617465-696e6469636573>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-696e73657274:
+
+\ :ref:`insert <l4c696e656172416767726567617465-696e73657274>`\ \: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`insert <l4c696e656172416767726567617465-696e73657274>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6a6c4170706c79:
+
+.. index::
+   pair: JLFloat32Vector; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\  and returns a JLFloat32Vector.
+
+
+.. index::
+   pair: JLFloat32Vector; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\  and returns a \ ``JL``\  \ ``Float32``\ .
+
+
+.. index::
+   pair: JLFloat32Vector; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\ .
+
+
+.. index::
+   pair: JLFloat32Vector; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApply(func, v1, v2)``\  applies \ ``func``\  to arguments \ ``v1``\  and \ ``v2``\ .
+
+
+.. index::
+   pair: JLFloat32Vector; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlApply(func, v1, v2, v3)``\  applies \ ``func``\  to arguments \ ``v1``\ , \ ``v2``\  and \ ``v3``\ .
+
+
+.. index::
+   pair: JLFloat32Vector; jlApply
+
+:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``jlApply(func, v, val)``\  applies \ ``func``\  to arguments \ ``v``\  and val and returns a \ ``JL``\  \ ``Float32``\ .
+
+.. _l4a4c466c6f61743332566563746f72-6a6c417070726f783f:
+
+.. index::
+   pair: JLFloat32Vector; jlApprox?
+
+:spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-vise.
+
+.. _l4a4c466c6f61743332566563746f72-6a6c446973706c6179:
+
+.. index::
+   pair: JLFloat32Vector; jlDisplay
+
+:spadfun:`jlDisplay`\: % -> \ :ref:`Void <l566f6964>`\  
+  jldisplay(\ ``v``\ ) pretty prints \ ``v``\  (\ ``à``\  la \ ``JL``\ ).
+
+.. _l4a4c466c6f61743332566563746f72-6a756c6961565072696e74:
+
+.. index::
+   pair: JLFloat32Vector; juliaVPrint
+
+:spadfun:`juliaVPrint`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``juliaVPrint(b)``\  defines whether or not FriCAS uses the printing version of \ ``JL``\  for vectors instead of its OutputForm version. Returns previous value. By default it is the \ ``JL``\  version.
+
+.. _l4a4c466c6f61743332566563746f72-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6c6566745472696d:
+
+\ :ref:`leftTrim <l4c696e656172416767726567617465-6c6566745472696d>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6c656e677468:
+
+\ :ref:`length <l566563746f7243617465676f7279-6c656e677468>`\ \: % -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d617021:
+
+\ :ref:`map! <l486f6d6f67656e656f7573416767726567617465-6d617021>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d6170:
+
+\ :ref:`map <l4c696e656172416767726567617465-6d6170>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d6178:
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`max <l4f726465726564536574-6d6178>`\ \: (%, %) -> % 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d6178496e646578:
+
+\ :ref:`maxIndex <l496e6465786564416767726567617465-6d6178496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-6d656d6265723f:
+
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d656d62657273:
+
+\ :ref:`members <l486f6d6f67656e656f7573416767726567617465-6d656d62657273>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d65726765:
+
+\ :ref:`merge <l4c696e656172416767726567617465-6d65726765>`\ \: (%, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`merge <l4c696e656172416767726567617465-6d65726765>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d696e:
+
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6d696e496e646578:
+
+\ :ref:`minIndex <l496e6465786564416767726567617465-6d696e496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6e6577:
+
+\ :ref:`new <l4c696e656172416767726567617465-6e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-6e72616e64:
+
+.. index::
+   pair: JLFloat32Vector; nrand
+
+:spadfun:`nrand`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ ``nrand(n)``\  returns a normally distributed \ ``JL``\  vector of size \ ``n``\  with \ ``mean=0``\  and standard \ ``deviation=1``\ .
+
+.. _l4a4c466c6f61743332566563746f72-6f7574657250726f64756374:
+
+\ :ref:`outerProduct <l566563746f7243617465676f7279-6f7574657250726f64756374>`\ \: (%, %) -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-7061727473:
+
+\ :ref:`parts <l486f6d6f67656e656f7573416767726567617465-7061727473>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-706f736974696f6e:
+
+\ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-71656c74:
+
+\ :ref:`qelt <l456c7461626c65416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-716e6577:
+
+.. index::
+   pair: JLFloat32Vector; qnew
+
+:spadfun:`qnew`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ ``qnew(n)``\  returns an unitialized vector of dimension \ ``n``\ .
+
+.. _l4a4c466c6f61743332566563746f72-71736574656c7421:
+
+\ :ref:`qsetelt! <l456c7461626c65416767726567617465-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-726564756365:
+
+\ :ref:`reduce <l436f6c6c656374696f6e-726564756365>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`reduce <l436f6c6c656374696f6e-726564756365>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`reduce <l436f6c6c656374696f6e-726564756365>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-72656d6f7665:
+
+\ :ref:`remove <l436f6c6c656374696f6e-72656d6f7665>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`remove <l436f6c6c656374696f6e-72656d6f7665>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , %) -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-72656d6f76654475706c696361746573:
+
+\ :ref:`removeDuplicates <l436f6c6c656374696f6e-72656d6f76654475706c696361746573>`\ \: % -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-7265766572736521:
+
+\ :ref:`reverse! <l4c696e656172416767726567617465-7265766572736521>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-72657665727365:
+
+\ :ref:`reverse <l4c696e656172416767726567617465-72657665727365>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-72696768745472696d:
+
+\ :ref:`rightTrim <l4c696e656172416767726567617465-72696768745472696d>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-73656c656374:
+
+\ :ref:`select <l436f6c6c656374696f6e-73656c656374>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-736574656c7421:
+
+\ :ref:`setelt! <l456c7461626c65416767726567617465-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+
+\ :ref:`setelt! <l4c696e656172416767726567617465-736574656c7421>`\ \: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-736d616c6c65723f:
+
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-736f727421:
+
+\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-736f7274:
+
+\ :ref:`sort <l4c696e656172416767726567617465-736f7274>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`sort <l4c696e656172416767726567617465-736f7274>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-736f727465643f:
+
+\ :ref:`sorted? <l4c696e656172416767726567617465-736f727465643f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`sorted? <l4c696e656172416767726567617465-736f727465643f>`\ \: ((\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-7377617021:
+
+\ :ref:`swap! <l496e6465786564416767726567617465-7377617021>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ )
+
+.. _l4a4c466c6f61743332566563746f72-7472696d:
+
+\ :ref:`trim <l4c696e656172416767726567617465-7472696d>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-7572616e643031:
+
+.. index::
+   pair: JLFloat32Vector; urand01
+
+:spadfun:`urand01`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ ``urand01(n)``\  returns a uniformly (0\$NNI..1) distributed \ ``JL``\  vector of size \ ``n``\ .
+
+.. _l4a4c466c6f61743332566563746f72-7572616e64:
+
+.. index::
+   pair: JLFloat32Vector; urand
+
+:spadfun:`urand`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  \ ``urand(n, x)``\  returns a uniformly (0\$NNI..\ ``x``\ ) distributed \ ``JL``\  vector of size \ ``n``\ .
+
+.. _l4a4c466c6f61743332566563746f72-766563746f72:
+
+.. index::
+   pair: JLFloat32Vector; vector
+
+:spadfun:`vector`\: \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> % 
+  \ ``vector(l)``\  converts the list \ ``l``\  to a vector.
+
+.. _l4a4c466c6f61743332566563746f72-7a65726f3f:
+
+\ :ref:`zero? <l566563746f7243617465676f7279-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+.. _l4a4c466c6f61743332566563746f72-7a65726f:
+
+\ :ref:`zero <l566563746f7243617465676f7279-7a65726f>`\ \: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+
+\ :ref:`Aggregate <l416767726567617465>`\  
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`Collection <l436f6c6c656374696f6e>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+
+\ :ref:`Comparable <l436f6d70617261626c65>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+
+\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) 
+
+\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) 
+
+\ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) 
+
+\ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`FiniteLinearAggregate <l46696e6974654c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+
+\ :ref:`Hashable <l4861736861626c65>`\  if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Hashable <l4861736861626c65>`\ 
+
+\ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+
+\ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) 
+
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) if \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
+
+\ :ref:`JLVectorCategory <l4a4c566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+
+\ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+
+\ :ref:`OneDimensionalArrayAggregate <l4f6e6544696d656e73696f6e616c4172726179416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+
+\ :ref:`OrderedSet <l4f726465726564536574>`\  
+
+\ :ref:`PartialOrder <l5061727469616c4f72646572>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
+
+\ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+

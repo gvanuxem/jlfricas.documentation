@@ -5,7 +5,7 @@
 NemoFactored R
 ==============
 
-:viewcode:`jnemo.spad line 1321 <jnemo.spad#L1321>` :editcode:`[edit on github] <jnemo.spad#L1321>`
+:viewcode:`jnemo.spad line 1716 <jnemo.spad#L1716>` :editcode:`[edit on github] <jnemo.spad#L1716>`
 
 * R: Join(\ :ref:`NemoRing <l4e656d6f52696e67>`\ , \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ )
 
@@ -52,6 +52,21 @@ Nemo factored objects.
 :spadfun:`factor`\: R -> \ :ref:`Factored <l466163746f726564>`\  R 
   \ ``factor(intd)``\  returns the factorization of \ ``intd``\ . Currently its printed OutputForm can be difficult to "interpret". Use factorList(factor(\ ``intd``\ )@Factored(\%)) to have a more understandable representation.
 
+.. _l4e656d6f466163746f726564-666163746f7253717561726546726565:
+
+.. index::
+   pair: NemoFactored; factorSquareFree
+
+:spadfun:`factorSquareFree`\: R -> % 
+  \ ``factorSquareFree(intd)``\  returns the factorization of \ ``intd``\ .
+
+
+.. index::
+   pair: NemoFactored; factorSquareFree
+
+:spadfun:`factorSquareFree`\: R -> \ :ref:`Factored <l466163746f726564>`\  R 
+  \ ``factorSquareFree(intd)``\  returns the factorization of \ ``intd``\ .
+
 .. _l4e656d6f466163746f726564-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a756c69614f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -59,27 +74,23 @@ Nemo factored objects.
 
 .. _l4e656d6f466163746f726564-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4e656d6f466163746f726564-6a6c446973706c6179:
@@ -89,7 +100,12 @@ Nemo factored objects.
 
 .. _l4e656d6f466163746f726564-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4e656d6f466163746f726564-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4e656d6f466163746f726564-6a6c526566:

@@ -5,7 +5,7 @@
 JuliaMatrix R
 =============
 
-:viewcode:`jobject.spad line 1465 <jobject.spad#L1465>` :editcode:`[edit on github] <jobject.spad#L1465>`
+:viewcode:`jobject.spad line 1628 <jobject.spad#L1628>` :editcode:`[edit on github] <jobject.spad#L1628>`
 
 * R: \ :ref:`JuliaObjectRing <l4a756c69614f626a65637452696e67>`\ 
 
@@ -130,7 +130,21 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JuliaMatrix; coerce
 
+:spadfun:`coerce`\: \ :ref:`JuliaComplexF32Matrix <l4a756c6961436f6d706c65784633324d6174726978>`\  -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaObjComplexF32 <l4a756c69614f626a436f6d706c6578463332>`\  
+  \ ``coerce(x)``\ : convenience function.
+
+
+.. index::
+   pair: JuliaMatrix; coerce
+
 :spadfun:`coerce`\: \ :ref:`JuliaComplexF64Matrix <l4a756c6961436f6d706c65784636344d6174726978>`\  -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaObjComplexF64 <l4a756c69614f626a436f6d706c6578463634>`\  
+  \ ``coerce(x)``\ : convenience function.
+
+
+.. index::
+   pair: JuliaMatrix; coerce
+
+:spadfun:`coerce`\: \ :ref:`JuliaFloat32Matrix <l4a756c6961466c6f617433324d6174726978>`\  -> \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaObjFloat32 <l4a756c69614f626a466c6f61743332>`\  
   \ ``coerce(x)``\ : convenience function.
 
 
@@ -320,7 +334,21 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JuliaMatrix; factorize
 
+:spadfun:`factorize`\: \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaObjComplexF32 <l4a756c69614f626a436f6d706c6578463332>`\  -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
+
+
+.. index::
+   pair: JuliaMatrix; factorize
+
 :spadfun:`factorize`\: \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaObjComplexF64 <l4a756c69614f626a436f6d706c6578463634>`\  -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
+
+
+.. index::
+   pair: JuliaMatrix; factorize
+
+:spadfun:`factorize`\: \ :ref:`JuliaMatrix <l4a756c69614d6174726978>`\  \ :ref:`JuliaObjFloat32 <l4a756c69614f626a466c6f61743332>`\  -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
   \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
 
 
@@ -373,6 +401,13 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 .. _l4a756c69614d6174726978-696e7665727365:
 
+.. index::
+   pair: JuliaMatrix; inverse
+
+:spadfun:`inverse`\: % -> % 
+  \ ``inverse(m)``\  returns inverse matrix. Throws a Julia error if \ ``m``\  is no invertible.
+
+
 \ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) if R has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (R, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  R, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  R)
 
@@ -391,27 +426,23 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 .. _l4a756c69614d6174726978-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614d6174726978-6a6c417070726f783f:
@@ -429,7 +460,12 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 .. _l4a756c69614d6174726978-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+
+.. _l4a756c69614d6174726978-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c69614d6174726978-6a6c526566:
@@ -515,6 +551,13 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 \ :ref:`matrix <l4d617472697843617465676f7279-6d6174726978>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> R) -> % 
   from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (R, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  R, \ :ref:`JuliaVector <l4a756c6961566563746f72>`\  R)
+
+
+.. index::
+   pair: JuliaMatrix; matrix
+
+:spadfun:`matrix`\: \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  -> % 
+  
 
 
 \ :ref:`matrix <l4d617472697843617465676f7279-6d6174726978>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R -> % 
@@ -797,8 +840,8 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 .. _l4a756c69614d6174726978-737472696e67:
 
-\ :ref:`string <l4a756c69614f626a65637454797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
+\ :ref:`string <l4a756c696154797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaType <l4a756c696154797065>`\ 
 
 .. _l4a756c69614d6174726978-7375624d6174726978:
 

@@ -1,0 +1,898 @@
+.. index:: JLWSVector
+
+.. _l4a4c5753566563746f72:
+
+JLWSVector E
+============
+
+:viewcode:`jwsagg.spad line 248 <jwsagg.spad#L248>` :editcode:`[edit on github] <jwsagg.spad#L248>`
+
+* E: \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+
+\ ``JL``\  Wolfram Symbolic vectors using Wolfram Symbolic Transport Protocol.
+
+
+.. _l4a4c5753566563746f72-23:
+
+\ :ref:`# <l4a4c5753416767726567617465-23>`\ \: % -> \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-2a:
+
+.. index::
+   pair: JLWSVector; *
+
+:spadfun:`\*`\: (%, E) -> % 
+  \ ``x * r``\  is the right scalar multiple of the scalar \ ``r``\  and the vector \ ``x``\ .
+
+
+.. index::
+   pair: JLWSVector; *
+
+:spadfun:`\*`\: (E, %) -> % 
+  \ ``r*x``\  is the left scalar multiple of the scalar \ ``r``\  and the vector \ ``x``\ .
+
+
+\ :ref:`\* <l566563746f7243617465676f7279-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if E has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  E
+
+
+.. index::
+   pair: JLWSVector; *
+
+:spadfun:`\*`\: (\ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , %) -> % 
+  \ ``n*a``\  scale the vector a by \ ``n``\ .
+
+.. _l4a4c5753566563746f72-2b:
+
+.. index::
+   pair: JLWSVector; +
+
+:spadfun:`+`\: (%, %) -> % 
+  \ ``a + b``\  is the vector addition. \ ``WS``\  error if dimensions are incompatible.
+
+.. _l4a4c5753566563746f72-2d:
+
+.. index::
+   pair: JLWSVector; -
+
+:spadfun:`-`\: % -> % 
+  \ ``-a``\  negates each elements of the vector a.
+
+
+.. index::
+   pair: JLWSVector; -
+
+:spadfun:`-`\: (%, %) -> % 
+  \ ``a - b``\  is the vector substraction. \ ``WS``\  error if dimensions are incompatible.
+
+.. _l4a4c5753566563746f72-3c3d:
+
+\ :ref:`<= <l5061727469616c4f72646572-3c3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c5753566563746f72-3c:
+
+\ :ref:`< <l5061727469616c4f72646572-3c>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c5753566563746f72-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c5753566563746f72-3e3d:
+
+\ :ref:`>= <l5061727469616c4f72646572-3e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c5753566563746f72-3e:
+
+\ :ref:`> <l5061727469616c4f72646572-3e>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l4a4c5753566563746f72-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c5753566563746f72-616363756d756c617465:
+
+\ :ref:`accumulate <l4a4c5753416767726567617465-616363756d756c617465>`\ \: % -> % if E has \ :ref:`JLWSNumber <l4a4c57534e756d626572>`\ 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-616e793f:
+
+\ :ref:`any? <l486f6d6f67656e656f7573416767726567617465-616e793f>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-617070656e64:
+
+\ :ref:`append <l4a4c5753416767726567617465-617070656e64>`\ \: (%, E) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-636f65726365:
+
+\ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`coerce <l4a4c5753416767726567617465-636f65726365>`\ \: % -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+.. index::
+   pair: JLWSVector; coerce
+
+:spadfun:`coerce`\: % -> \ :ref:`JLWSMatrix <l4a4c57534d6174726978>`\  E if E has \ :ref:`JLWSRing <l4a4c575352696e67>`\ 
+  \ ``coerce(v)``\  coerces inplace \ ``v``\  to a \ ``WS``\  matrix.
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+\ :ref:`coerce <l4a4c5753416767726567617465-636f65726365>`\ \: \ :ref:`List <l4c697374>`\  E -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-636f6e636174:
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (%, E) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: (E, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`concat <l4c696e656172416767726567617465-636f6e636174>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-636f6e737472756374:
+
+\ :ref:`construct <l436f6c6c656374696f6e-636f6e737472756374>`\ \: \ :ref:`List <l4c697374>`\  E -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+.. _l4a4c5753566563746f72-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if E has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a4c5753566563746f72-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-636f7079496e746f21:
+
+\ :ref:`copyInto! <l4c696e656172416767726567617465-636f7079496e746f21>`\ \: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-636f756e74:
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (E, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-63726f7373:
+
+.. index::
+   pair: JLWSVector; cross
+
+:spadfun:`cross`\: (%, %) -> % 
+  \ ``cross(v1,v2)``\  computes the vector cross product of \ ``v1``\  and \ ``v2``\ .
+
+.. _l4a4c5753566563746f72-64656c657465:
+
+\ :ref:`delete <l4c696e656172416767726567617465-64656c657465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`delete <l4a4c5753416767726567617465-64656c657465>`\ \: (%, \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`delete <l4c696e656172416767726567617465-64656c657465>`\ \: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-646966666572656e636573:
+
+\ :ref:`differences <l4a4c5753416767726567617465-646966666572656e636573>`\ \: % -> % if E has \ :ref:`JLWSNumber <l4a4c57534e756d626572>`\ 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-64696d656e73696f6e73:
+
+\ :ref:`dimensions <l4a4c5753416767726567617465-64696d656e73696f6e73>`\ \: % -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-646f74:
+
+.. index::
+   pair: JLWSVector; dot
+
+:spadfun:`dot`\: (%, %) -> E 
+  \ ``dot(v1, v2)``\  is the dot product of \ ``v1``\  and \ ``v2``\ .
+
+.. _l4a4c5753566563746f72-656c74:
+
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+
+\ :ref:`elt <l456c7461626c65416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %)
+
+.. _l4a4c5753566563746f72-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-656e7472696573:
+
+\ :ref:`entries <l496e6465786564416767726567617465-656e7472696573>`\ \: % -> \ :ref:`List <l4c697374>`\  E 
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-656e7472793f:
+
+\ :ref:`entry? <l496e6465786564416767726567617465-656e7472793f>`\ \: (E, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-6576616c:
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, E, E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (E, E)
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  E, \ :ref:`List <l4c697374>`\  E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (E, E)
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  E) -> % if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+  from \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+.. _l4a4c5753566563746f72-65766572793f:
+
+\ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-65787472616374:
+
+\ :ref:`extract <l4a4c5753416767726567617465-65787472616374>`\ \: (%, \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-66696c6c21:
+
+\ :ref:`fill! <l496e6465786564416767726567617465-66696c6c21>`\ \: (%, E) -> % 
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-66696e64:
+
+\ :ref:`find <l436f6c6c656374696f6e-66696e64>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> Union(E, failed) 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+.. _l4a4c5753566563746f72-6669727374:
+
+\ :ref:`first <l496e6465786564416767726567617465-6669727374>`\ \: % -> E 
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+
+\ :ref:`first <l4c696e656172416767726567617465-6669727374>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-68617368:
+
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if E has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a4c5753566563746f72-6861736855706461746521:
+
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if E has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4a4c5753566563746f72-696e6465783f:
+
+\ :ref:`index? <l496e6465786564416767726567617465-696e6465783f>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-696e6469636573:
+
+\ :ref:`indices <l496e6465786564416767726567617465-696e6469636573>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-696e73657274:
+
+\ :ref:`insert <l4c696e656172416767726567617465-696e73657274>`\ \: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`insert <l4a4c5753416767726567617465-696e73657274>`\ \: (%, E, \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`insert <l4c696e656172416767726567617465-696e73657274>`\ \: (E, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-696e74657273656374696f6e:
+
+\ :ref:`intersection <l4a4c5753416767726567617465-696e74657273656374696f6e>`\ \: (%, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c4576616c:
+
+\ :ref:`jlEval <l4a4c57534f626a656374-6a6c4576616c>`\ \: % -> % 
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+.. _l4a4c5753566563746f72-6a6c48656164:
+
+\ :ref:`jlHead <l4a4c57534f626a656374-6a6c48656164>`\ \: % -> \ :ref:`JLWSSymbol <l4a4c575353796d626f6c>`\  
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+.. _l4a4c5753566563746f72-6a6c4964:
+
+\ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c4e756d65726963:
+
+\ :ref:`jlNumeric <l4a4c57534f626a656374-6a6c4e756d65726963>`\ \: % -> % 
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+
+\ :ref:`jlNumeric <l4a4c57534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+.. _l4a4c5753566563746f72-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c526566:
+
+\ :ref:`jlRef <l4a4c4f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c726566:
+
+\ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6c53796d626f6c6963:
+
+\ :ref:`jlSymbolic <l4a4c57534f626a656374-6a6c53796d626f6c6963>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+.. _l4a4c5753566563746f72-6a6c54797065:
+
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6a6f696e:
+
+\ :ref:`join <l4a4c5753416767726567617465-6a6f696e>`\ \: (%, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6a5753416767726567617465:
+
+\ :ref:`jWSAggregate <l4a4c5753416767726567617465-6a5753416767726567617465>`\ \: \ :ref:`List <l4c697374>`\  E -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6a5753496e74657270726574:
+
+\ :ref:`jWSInterpret <l4a4c57534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+.. _l4a4c5753566563746f72-6a5753566563746f72:
+
+.. index::
+   pair: JLWSVector; jWSVector
+
+:spadfun:`jWSVector`\: \ :ref:`List <l4c697374>`\  E -> % 
+  \ ``jWSVector(list)``\  constructs \ ``list``\  as a JLWSVector.
+
+
+.. index::
+   pair: JLWSVector; jWSVector
+
+:spadfun:`jWSVector`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jWSVector(str)``\  constructs \ ``str``\  as a JLWSVector. \ ``str``\  must be in the \ ``WS``\  language (list).
+
+.. _l4a4c5753566563746f72-6c617374:
+
+\ :ref:`last <l4a4c5753416767726567617465-6c617374>`\ \: % -> E 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a4c5753566563746f72-6c6566745472696d:
+
+\ :ref:`leftTrim <l4c696e656172416767726567617465-6c6566745472696d>`\ \: (%, E) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6c656e677468:
+
+\ :ref:`length <l566563746f7243617465676f7279-6c656e677468>`\ \: % -> E if E has \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\  and E has \ :ref:`Ring <l52696e67>`\ 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  E
+
+
+\ :ref:`length <l4a4c5753416767726567617465-6c656e677468>`\ \: % -> \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-6d617021:
+
+\ :ref:`map! <l486f6d6f67656e656f7573416767726567617465-6d617021>`\ \: (E -> E, %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6d6170:
+
+\ :ref:`map <l4c696e656172416767726567617465-6d6170>`\ \: ((E, E) -> E, %, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (E -> E, %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6d6178:
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> E if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+
+\ :ref:`max <l4f726465726564536574-6d6178>`\ \: (%, %) -> % if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> E 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6d6178496e646578:
+
+\ :ref:`maxIndex <l496e6465786564416767726567617465-6d6178496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-6d656d6265723f:
+
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (E, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6d656d62657273:
+
+\ :ref:`members <l486f6d6f67656e656f7573416767726567617465-6d656d62657273>`\ \: % -> \ :ref:`List <l4c697374>`\  E 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6d65726765:
+
+\ :ref:`merge <l4c696e656172416767726567617465-6d65726765>`\ \: (%, %) -> % if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`merge <l4c696e656172416767726567617465-6d65726765>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6d696e:
+
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> E if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+
+\ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+.. _l4a4c5753566563746f72-6d696e496e646578:
+
+\ :ref:`minIndex <l496e6465786564416767726567617465-6d696e496e646578>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-6d757461626c653f:
+
+\ :ref:`mutable? <l4a4c4f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6e6577:
+
+\ :ref:`new <l4c696e656172416767726567617465-6e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , E) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-6e6f726d:
+
+.. index::
+   pair: JLWSVector; norm
+
+:spadfun:`norm`\: % -> E 
+  \ ``norm(v)``\  computes the norm of the vector \ ``v``\ .
+
+.. _l4a4c5753566563746f72-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-6f7574657250726f64756374:
+
+\ :ref:`outerProduct <l566563746f7243617465676f7279-6f7574657250726f64756374>`\ \: (%, %) -> \ :ref:`Matrix <l4d6174726978>`\  E if E has \ :ref:`Ring <l52696e67>`\ 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  E
+
+.. _l4a4c5753566563746f72-70617274:
+
+\ :ref:`part <l4a4c5753416767726567617465-70617274>`\ \: (%, \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> E 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-7061727473:
+
+\ :ref:`parts <l486f6d6f67656e656f7573416767726567617465-7061727473>`\ \: % -> \ :ref:`List <l4c697374>`\  E 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-706f736974696f6e:
+
+\ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (E, %) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (E, %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-70726570656e64:
+
+\ :ref:`prepend <l4a4c5753416767726567617465-70726570656e64>`\ \: (%, E) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-71656c74:
+
+\ :ref:`qelt <l456c7461626c65416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-71736574656c7421:
+
+\ :ref:`qsetelt! <l4a4c5753416767726567617465-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`qsetelt! <l456c7461626c65416767726567617465-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-71736574656c74:
+
+\ :ref:`qsetelt <l4a4c5753416767726567617465-71736574656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-726564756365:
+
+\ :ref:`reduce <l436f6c6c656374696f6e-726564756365>`\ \: ((E, E) -> E, %) -> E 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+
+\ :ref:`reduce <l436f6c6c656374696f6e-726564756365>`\ \: ((E, E) -> E, %, E) -> E 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+
+\ :ref:`reduce <l436f6c6c656374696f6e-726564756365>`\ \: ((E, E) -> E, %, E, E) -> E 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+.. _l4a4c5753566563746f72-72656d6f7665:
+
+\ :ref:`remove <l436f6c6c656374696f6e-72656d6f7665>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+
+\ :ref:`remove <l436f6c6c656374696f6e-72656d6f7665>`\ \: (E, %) -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+.. _l4a4c5753566563746f72-72656d6f76654475706c696361746573:
+
+\ :ref:`removeDuplicates <l436f6c6c656374696f6e-72656d6f76654475706c696361746573>`\ \: % -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+.. _l4a4c5753566563746f72-7265706c61636550617274:
+
+\ :ref:`replacePart <l4a4c5753416767726567617465-7265706c61636550617274>`\ \: (%, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-72657374:
+
+\ :ref:`rest <l4a4c5753416767726567617465-72657374>`\ \: % -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-7265766572736521:
+
+\ :ref:`reverse! <l4c696e656172416767726567617465-7265766572736521>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-72657665727365:
+
+\ :ref:`reverse <l4c696e656172416767726567617465-72657665727365>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`reverse <l4a4c5753416767726567617465-72657665727365>`\ \: (%, \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`reverse <l4a4c5753416767726567617465-72657665727365>`\ \: (%, \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-726966666c65:
+
+\ :ref:`riffle <l4a4c5753416767726567617465-726966666c65>`\ \: (%, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`riffle <l4a4c5753416767726567617465-726966666c65>`\ \: (%, %, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-72696768745472696d:
+
+\ :ref:`rightTrim <l4c696e656172416767726567617465-72696768745472696d>`\ \: (%, E) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-73656c656374:
+
+\ :ref:`select <l436f6c6c656374696f6e-73656c656374>`\ \: (E -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
+
+.. _l4a4c5753566563746f72-736574656c7421:
+
+\ :ref:`setelt! <l4a4c5753416767726567617465-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`setelt! <l456c7461626c65416767726567617465-736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+
+\ :ref:`setelt! <l4c696e656172416767726567617465-736574656c7421>`\ \: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-736574656c74:
+
+\ :ref:`setelt <l4a4c5753416767726567617465-736574656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-736574496e74657273656374696f6e:
+
+\ :ref:`setIntersection <l4a4c5753416767726567617465-736574496e74657273656374696f6e>`\ \: (%, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c5753566563746f72-736d616c6c65723f:
+
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+  from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+.. _l4a4c5753566563746f72-736f727421:
+
+\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: % -> % if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`sort! <l4c696e656172416767726567617465-736f727421>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-736f7274:
+
+\ :ref:`sort <l4c696e656172416767726567617465-736f7274>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`sort <l4c696e656172416767726567617465-736f7274>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-736f727465643f:
+
+\ :ref:`sorted? <l4c696e656172416767726567617465-736f727465643f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+
+\ :ref:`sorted? <l4c696e656172416767726567617465-736f727465643f>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-737472696e67:
+
+\ :ref:`string <l4a4c4f626a65637454797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c5753566563746f72-7377617021:
+
+\ :ref:`swap! <l496e6465786564416767726567617465-7377617021>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
+
+.. _l4a4c5753566563746f72-74616b65:
+
+\ :ref:`take <l4a4c5753416767726567617465-74616b65>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+
+\ :ref:`take <l4a4c5753416767726567617465-74616b65>`\ \: (%, \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-746f537472696e67:
+
+\ :ref:`toString <l4a4c57534f626a656374-746f537472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLWSObject <l4a4c57534f626a656374>`\ 
+
+.. _l4a4c5753566563746f72-746f74616c:
+
+\ :ref:`total <l4a4c5753416767726567617465-746f74616c>`\ \: % -> E if E has \ :ref:`JLWSNumber <l4a4c57534e756d626572>`\ 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-7472616e73706f7365:
+
+.. index::
+   pair: JLWSVector; transpose
+
+:spadfun:`transpose`\: % -> % 
+  \ ``transpose(v)``\  transposes \ ``v``\ . For esoteric purpose, and if you know what you are doing. There is only one type of vector in the Wolfram language. Should not be used, and for normal purpose, does nothing.
+
+.. _l4a4c5753566563746f72-7472696d:
+
+\ :ref:`trim <l4c696e656172416767726567617465-7472696d>`\ \: (%, E) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-756e696f6e:
+
+\ :ref:`union <l4a4c5753416767726567617465-756e696f6e>`\ \: (%, %) -> % 
+  from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E
+
+.. _l4a4c5753566563746f72-766563746f72:
+
+.. index::
+   pair: JLWSVector; vector
+
+:spadfun:`vector`\: \ :ref:`JLWSList <l4a4c57534c697374>`\  E -> % 
+  \ ``vector(list)``\  returns \ ``list``\  as a vector. Inplace coercion. \example{vector(range(5)}
+
+.. _l4a4c5753566563746f72-7a65726f3f:
+
+\ :ref:`zero? <l566563746f7243617465676f7279-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if E has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  E
+
+.. _l4a4c5753566563746f72-7a65726f:
+
+\ :ref:`zero <l566563746f7243617465676f7279-7a65726f>`\ \: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % if E has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+  from \ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  E
+
+
+\ :ref:`Aggregate <l416767726567617465>`\  
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`Collection <l436f6c6c656374696f6e>`\  E 
+
+\ :ref:`Comparable <l436f6d70617261626c65>`\  if E has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if E has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , E) 
+
+\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) 
+
+\ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E) 
+
+\ :ref:`Evalable <l4576616c61626c65>`\  E if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`FiniteLinearAggregate <l46696e6974654c696e656172416767726567617465>`\  E 
+
+\ :ref:`Hashable <l4861736861626c65>`\  if E has \ :ref:`Hashable <l4861736861626c65>`\ 
+
+\ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  E 
+
+\ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E) 
+
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (E, E) if E has \ :ref:`Evalable <l4576616c61626c65>`\  E
+
+\ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\  
+
+\ :ref:`JLType <l4a4c54797065>`\  
+
+\ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  E 
+
+\ :ref:`JLWSObject <l4a4c57534f626a656374>`\  
+
+\ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E 
+
+\ :ref:`OneDimensionalArrayAggregate <l4f6e6544696d656e73696f6e616c4172726179416767726567617465>`\  E 
+
+\ :ref:`OrderedSet <l4f726465726564536574>`\  if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+\ :ref:`PartialOrder <l5061727469616c4f72646572>`\  if E has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
+
+\ :ref:`VectorCategory <l566563746f7243617465676f7279>`\  E 
+

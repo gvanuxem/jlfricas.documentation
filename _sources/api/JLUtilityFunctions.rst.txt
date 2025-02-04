@@ -1,0 +1,157 @@
+.. index:: JLUtilityFunctions
+
+.. _l4a4c5574696c69747946756e6374696f6e73:
+
+JLUtilityFunctions
+==================
+
+:viewcode:`jutils.spad line 1 <jutils.spad#L1>` :editcode:`[edit on github] <jutils.spad#L1>`
+
+
+This package provides different \ ``JL``\  utility functions.
+
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4164645061636b616765:
+
+.. index::
+   pair: JLUtilityFunctions; jlAddPackage
+
+:spadfun:`jlAddPackage`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlAddPackage(package)``\  add \ ``package``\  to \ ``JL``\  project.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c446566696e65643f:
+
+.. index::
+   pair: JLUtilityFunctions; jlDefined?
+
+:spadfun:`jlDefined?`\: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlDefined?(sym)``\  checks whether or not \ ``sym``\  is defined in \ ``JL``\ .
+
+
+.. index::
+   pair: JLUtilityFunctions; jlDefined?
+
+:spadfun:`jlDefined?`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlDefined?(str)``\  checks whether or not \ ``str``\  is defined in \ ``JL``\ .
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4576616c537472696e67:
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is a Boolean.
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Integer <l496e7465676572>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is an Integer.
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is a \ ``JLFloat32``\ .
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is a \ ``JLFloat64``\ .
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is a \ ``JLInt64``\ .
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is an Non Negative Integer.
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is an Positive Integer.
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\ , where the output is a String.
+
+
+.. index::
+   pair: JLUtilityFunctions; jlEvalString
+
+:spadfun:`jlEvalString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlEvalString(str)``\  evaluates \ ``str``\  in \ ``JL``\  with no output.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4743436f6c6c656374:
+
+.. index::
+   pair: JLUtilityFunctions; jlGCCollect
+
+:spadfun:`jlGCCollect`\: () -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlGCCollect()``\  forces a \ ``JL``\  garbage collector run.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c496d706f7274:
+
+.. index::
+   pair: JLUtilityFunctions; jlImport
+
+:spadfun:`jlImport`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlImport(modpackfunc)``\  imports the module, package or function \ ``modpackfunc``\  and makes its exported name(\ ``s``\ ) available. Returns \ ``false``\  if it can not be imported.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c496e636c756465:
+
+.. index::
+   pair: JLUtilityFunctions; jlInclude
+
+:spadfun:`jlInclude`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlInclude(file.jl)``\  loads and evaluates the content of the \ ``JL``\  file file.\ ``jl``\  in the current global scope.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c496e697469616c697a65:
+
+.. index::
+   pair: JLUtilityFunctions; jlInitialize
+
+:spadfun:`jlInitialize`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlInitialize(init)``\  initializes the \ ``JL``\  environment if \ ``init``\  is \ ``true``\ , otherwise clears the \ ``JL``\  environment. Normally, it should not be used since it is automatically called.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c52616e646f6d537472696e67:
+
+.. index::
+   pair: JLUtilityFunctions; jlRandomString
+
+:spadfun:`jlRandomString`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlRandomString(n)``\  returns a random string of \ ``n``\  characters.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c5365656421:
+
+.. index::
+   pair: JLUtilityFunctions; jlSeed!
+
+:spadfun:`jlSeed!`\: \ :ref:`JLInt64 <l4a4c496e743634>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlSeed!(n)``\  reseeds the \ ``JL``\  random number generator, if applicable.
+
+.. _l4a4c5574696c69747946756e6374696f6e73-6a6c5573696e67:
+
+.. index::
+   pair: JLUtilityFunctions; jlUsing
+
+:spadfun:`jlUsing`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``jlUsing(modpack)``\  loads the module or package \ ``modpack``\  and makes its exported names available. Returns \ ``false``\  if it can not be loaded.
+
+

@@ -5,7 +5,7 @@
 JuliaWSSymbol
 =============
 
-:viewcode:`jws.spad line 94 <jws.spad#L94>` :editcode:`[edit on github] <jws.spad#L94>`
+:viewcode:`jws.spad line 91 <jws.spad#L91>` :editcode:`[edit on github] <jws.spad#L91>`
 
 
 Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
@@ -27,7 +27,7 @@ Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
    pair: JuliaWSSymbol; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``coerce(sym)``\  coerces \ ``sym``\  to a FriCAS boolean. Error if \ ``sym``\  is not a boolean
+  \ ``coerce(sym)``\  coerces \ ``sym``\  to a FriCAS boolean. \ ``Sym``\  must be a Julia \ ``WS``\  boolean
 
 
 \ :ref:`coerce <l4a756c69614f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
@@ -49,7 +49,7 @@ Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
    pair: JuliaWSSymbol; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``coerce(sym)``\  is a convenience function to \ ``sym``\  coerce to a FriCAS Symbol.
+  \ ``coerce(sym)``\  is a convenience function to coerce \ ``sym``\  to a FriCAS Symbol.
 
 
 .. index::
@@ -84,27 +84,23 @@ Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
 
 .. _l4a756c6961575353796d626f6c-6a6c4170706c79:
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
-  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
-
-
-\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %, %) -> \ :ref:`JuliaObject <l4a756c69614f626a656374>`\  
+\ :ref:`jlApply <l4a756c69614f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961575353796d626f6c-6a6c446973706c6179:
@@ -124,7 +120,7 @@ Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
 
 .. _l4a756c6961575353796d626f6c-6a6c4964:
 
-\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlId <l4a756c69614f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JuliaInt64 <l4a756c6961496e743634>`\  
   from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961575353796d626f6c-6a6c4e756d65726963:
@@ -135,6 +131,11 @@ Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`jlNumeric <l4a756c696157534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`JuliaWSObject <l4a756c696157534f626a656374>`\ 
+
+.. _l4a756c6961575353796d626f6c-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a756c69614f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JuliaObjectType <l4a756c69614f626a65637454797065>`\ 
 
 .. _l4a756c6961575353796d626f6c-6a6c526566:
 
@@ -232,6 +233,14 @@ Julia Wolfram Symbolic symbols using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`WList`\: () -> % 
   \ ``WList()``\  returns the \ ``WS``\  List symbol.
+
+.. _l4a756c6961575353796d626f6c-574d697373696e67:
+
+.. index::
+   pair: JuliaWSSymbol; WMissing
+
+:spadfun:`WMissing`\: () -> % 
+  WSymbol() returns the \ ``WS``\  Missing symbol.
 
 .. _l4a756c6961575353796d626f6c-57526174696f6e616c:
 
