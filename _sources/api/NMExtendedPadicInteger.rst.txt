@@ -1,27 +1,31 @@
-.. index:: NMPadic2
+.. index:: NMExtendedPadicInteger
 
-.. _l4e4d506164696332:
+.. _l4e4d457874656e6465645061646963496e7465676572:
 
-NMPadic2
-========
+NMExtendedPadicInteger(p, prec)
+===============================
 
-:viewcode:`jnpadic.spad line 241 <jnpadic.spad#L241>` :editcode:`[edit on github] <jnpadic.spad#L241>`
+:viewcode:`jnpadic.spad line 43 <jnpadic.spad#L43>` :editcode:`[edit on github] <jnpadic.spad#L43>`
+
+* p: \ :ref:`Integer <l496e7465676572>`\ 
+
+* prec: \ :ref:`Integer <l496e7465676572>`\ 
 
 
-Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``i``\  = 0.., a[\ ``i``\ ] * p^i), where the a[\ ``i``\ ] lie in 0, 1, ..., (\ ``p``\  - 1).
+This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers.
 
 
-.. _l4e4d506164696332-30:
+.. _l4e4d457874656e6465645061646963496e7465676572-30:
 
 \ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
-.. _l4e4d506164696332-31:
+.. _l4e4d457874656e6465645061646963496e7465676572-31:
 
 \ :ref:`1 <l4d61676d6157697468556e6974-31>`\ \: % 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e4d506164696332-2a:
+.. _l4e4d457874656e6465645061646963496e7465676572-2a:
 
 \ :ref:`\* <l4d61676d61-2a>`\ \: (%, %) -> % 
   from \ :ref:`Magma <l4d61676d61>`\ 
@@ -32,17 +36,17 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 
 .. index::
-   pair: NMPadic2; *
+   pair: NMExtendedPadicInteger; *
 
 :spadfun:`\*`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  
+  \ ``x``\  is the multiplication of a \ ``p``\ -adic integer and a Julia Nemo Fraction integer.
 
 
 .. index::
-   pair: NMPadic2; *
+   pair: NMExtendedPadicInteger; *
 
 :spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  
+  \ ``a * x``\  is the multiplication of an Integer and a \ ``p``\ -adic integer. For example: \example{p := 1 + 2*7 + 4*7^2 + O(7,3)\$NPADICZ(7)}
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -54,17 +58,17 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 
 .. index::
-   pair: NMPadic2; *
+   pair: NMExtendedPadicInteger; *
 
 :spadfun:`\*`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  
+  \ ``x``\  is the multiplication of Julia Nemo Fraction integer and a \ ``p``\ -adic integer
 
 
 .. index::
-   pair: NMPadic2; *
+   pair: NMExtendedPadicInteger; *
 
 :spadfun:`\*`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  
+  \ ``a * x``\  is the multiplication of a NemoInteger and a \ ``p``\ -adic integer.
 
 
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
@@ -74,40 +78,40 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`\* <l4162656c69616e53656d6947726f7570-2a>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
 
-.. _l4e4d506164696332-2b:
+.. _l4e4d457874656e6465645061646963496e7465676572-2b:
 
 \ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
 
 
 .. index::
-   pair: NMPadic2; +
+   pair: NMExtendedPadicInteger; +
 
 :spadfun:`+`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  
+  \ ``x``\  is the addition of a \ ``p``\ -adic integer and a Julia Nemo Fraction integer.
 
 
 .. index::
-   pair: NMPadic2; +
+   pair: NMExtendedPadicInteger; +
 
 :spadfun:`+`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  
+  \ ``x``\  is the addition of a \ ``p``\ -adic integer and a Julia Nemo integer.
 
 
 .. index::
-   pair: NMPadic2; +
+   pair: NMExtendedPadicInteger; +
 
 :spadfun:`+`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  
+  \ ``x``\  is the addition of Julia Nemo Fraction integer and a \ ``p``\ -adic integer
 
 
 .. index::
-   pair: NMPadic2; +
+   pair: NMExtendedPadicInteger; +
 
 :spadfun:`+`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  
+  \ ``a + x``\  is the addition of a Julia Nemo Integer and a \ ``p``\ -adic Integer.
 
-.. _l4e4d506164696332-2d:
+.. _l4e4d457874656e6465645061646963496e7465676572-2d:
 
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
@@ -116,17 +120,17 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
-.. _l4e4d506164696332-2f:
+.. _l4e4d457874656e6465645061646963496e7465676572-2f:
 
 \ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
   from \ :ref:`Field <l4669656c64>`\ 
 
-.. _l4e4d506164696332-3d:
+.. _l4e4d457874656e6465645061646963496e7465676572-3d:
 
 \ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
-.. _l4e4d506164696332-5e:
+.. _l4e4d457874656e6465645061646963496e7465676572-5e:
 
 \ :ref:`^ <l456c656d656e7461727946756e6374696f6e43617465676f7279-5e>`\ \: (%, %) -> % 
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
@@ -147,37 +151,37 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`^ <l4d61676d61-5e>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`Magma <l4d61676d61>`\ 
 
-.. _l4e4d506164696332-7e3d:
+.. _l4e4d457874656e6465645061646963496e7465676572-7e3d:
 
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
-.. _l4e4d506164696332-616e6e6968696c6174653f:
+.. _l4e4d457874656e6465645061646963496e7465676572-616e6e6968696c6174653f:
 
 \ :ref:`annihilate? <l526e67-616e6e6968696c6174653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Rng <l526e67>`\ 
 
-.. _l4e4d506164696332-616e7469436f6d6d757461746f72:
+.. _l4e4d457874656e6465645061646963496e7465676572-616e7469436f6d6d757461746f72:
 
 \ :ref:`antiCommutator <l4e6f6e4173736f6369617469766553656d69526e67-616e7469436f6d6d757461746f72>`\ \: (%, %) -> % 
   from \ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\ 
 
-.. _l4e4d506164696332-617070726f78696d617465:
+.. _l4e4d457874656e6465645061646963496e7465676572-617070726f78696d617465:
 
 \ :ref:`approximate <l4e4d5061646963496e746567657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-6173736f6369617465733f:
+.. _l4e4d457874656e6465645061646963496e7465676572-6173736f6369617465733f:
 
 \ :ref:`associates? <l456e7469726552696e67-6173736f6369617465733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
-.. _l4e4d506164696332-6173736f636961746f72:
+.. _l4e4d457874656e6465645061646963496e7465676572-6173736f636961746f72:
 
 \ :ref:`associator <l4e6f6e4173736f63696174697665526e67-6173736f636961746f72>`\ \: (%, %, %) -> % 
   from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
 
-.. _l4e4d506164696332-6368617261637465726973746963:
+.. _l4e4d457874656e6465645061646963496e7465676572-6368617261637465726973746963:
 
 \ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
@@ -186,7 +190,7 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
-.. _l4e4d506164696332-636f65726365:
+.. _l4e4d457874656e6465645061646963496e7465676572-636f65726365:
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
   from \ :ref:`Algebra <l416c6765627261>`\  %
@@ -209,72 +213,72 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 
 .. index::
-   pair: NMPadic2; coerce
+   pair: NMExtendedPadicInteger; coerce
 
 :spadfun:`coerce`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  
+  \ ``coerce(x)``\  returns \ ``x``\  as the \ ``p``\ -adic completion of the \ ``NM``\  Integer.
 
-.. _l4e4d506164696332-636f6d6d757461746f72:
+.. _l4e4d457874656e6465645061646963496e7465676572-636f6d6d757461746f72:
 
 \ :ref:`commutator <l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72>`\ \: (%, %) -> % 
   from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
 
-.. _l4e4d506164696332-636f6d706c657465:
+.. _l4e4d457874656e6465645061646963496e7465676572-636f6d706c657465:
 
 \ :ref:`complete <l4e4d5061646963496e746567657243617465676f7279-636f6d706c657465>`\ \: % -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-636f6e76657274:
+.. _l4e4d457874656e6465645061646963496e7465676572-636f6e76657274:
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
 
-.. _l4e4d506164696332-646976696465:
+.. _l4e4d457874656e6465645061646963496e7465676572-646976696465:
 
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-657175616c3f:
+.. _l4e4d457874656e6465645061646963496e7465676572-657175616c3f:
 
 \ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
-.. _l4e4d506164696332-6575636c696465616e53697a65:
+.. _l4e4d457874656e6465645061646963496e7465676572-6575636c696465616e53697a65:
 
 \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-65786163743f:
+.. _l4e4d457874656e6465645061646963496e7465676572-65786163743f:
 
 \ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
-.. _l4e4d506164696332-6578616374446976696465:
+.. _l4e4d457874656e6465645061646963496e7465676572-6578616374446976696465:
 
 \ :ref:`exactDivide <l4e4d52696e67-6578616374446976696465>`\ \: (%, %) -> % 
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
-.. _l4e4d506164696332-657870:
+.. _l4e4d457874656e6465645061646963496e7465676572-657870:
 
 \ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % 
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
 
-.. _l4e4d506164696332-65787072657373496465616c4d656d626572:
+.. _l4e4d457874656e6465645061646963496e7465676572-65787072657373496465616c4d656d626572:
 
 \ :ref:`expressIdealMember <l5072696e636970616c496465616c446f6d61696e-65787072657373496465616c4d656d626572>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
   from \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\ 
 
-.. _l4e4d506164696332-657871756f:
+.. _l4e4d457874656e6465645061646963496e7465676572-657871756f:
 
 \ :ref:`exquo <l456e7469726552696e67-657871756f>`\ \: (%, %) -> Union(%, failed) 
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
-.. _l4e4d506164696332-657874656e64:
+.. _l4e4d457874656e6465645061646963496e7465676572-657874656e64:
 
 \ :ref:`extend <l4e4d5061646963496e746567657243617465676f7279-657874656e64>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-657874656e6465644575636c696465616e:
+.. _l4e4d457874656e6465645061646963496e7465676572-657874656e6465644575636c696465616e:
 
 \ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %) -> Record(coef1: %, coef2: %, generator: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
@@ -283,12 +287,12 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %, %) -> Union(Record(coef1: %, coef2: %), failed) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-666163746f72:
+.. _l4e4d457874656e6465645061646963496e7465676572-666163746f72:
 
 \ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-676364:
+.. _l4e4d457874656e6465645061646963496e7465676572-676364:
 
 \ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
@@ -297,27 +301,27 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`gcd <l476364446f6d61696e-676364>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
-.. _l4e4d506164696332-676364506f6c796e6f6d69616c:
+.. _l4e4d457874656e6465645061646963496e7465676572-676364506f6c796e6f6d69616c:
 
 \ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
-.. _l4e4d506164696332-696e76:
+.. _l4e4d457874656e6465645061646963496e7465676572-696e76:
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
-.. _l4e4d506164696332-696e7665727365:
+.. _l4e4d457874656e6465645061646963496e7465676572-696e7665727365:
 
 \ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
-.. _l4e4d506164696332-6a6c41626f7574:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c4170706c79:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c4170706c79:
 
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
@@ -338,67 +342,67 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c446973706c6179:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c44756d70:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c44756d70:
 
 \ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c4964:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c4e4d52696e67:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c4e4d52696e67:
 
 \ :ref:`jlNMRing <l4e4d52696e67-6a6c4e4d52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
-.. _l4e4d506164696332-6a6c4f626a656374:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c4f626a656374:
 
 \ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
-.. _l4e4d506164696332-6a6c526566:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c526566:
 
 \ :ref:`jlRef <l4a4c4f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c726566:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c726566:
 
 \ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6c54797065:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6c54797065:
 
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6a6e7061646963:
+.. _l4e4d457874656e6465645061646963496e7465676572-6a6e7061646963:
 
 .. index::
-   pair: NMPadic2; jnpadic
+   pair: NMExtendedPadicInteger; jnpadic
 
 :spadfun:`jnpadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  padic(\ ``x``\ ) returns \ ``x``\  as the \ ``p``\ -adic completion of the \ ``NM``\  Integer.
 
 
 .. index::
-   pair: NMPadic2; jnpadic
+   pair: NMExtendedPadicInteger; jnpadic
 
 :spadfun:`jnpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  
+  padic(\ ``x``\ ) returns \ ``x``\  as the \ ``p``\ -adic completion of the \ ``NM``\  Integer.
 
-.. _l4e4d506164696332-6c61746578:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
-.. _l4e4d506164696332-6c636d:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c636d:
 
 \ :ref:`lcm <l476364446f6d61696e-6c636d>`\ \: (%, %) -> % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
@@ -407,12 +411,12 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`lcm <l476364446f6d61696e-6c636d>`\ \: \ :ref:`List <l4c697374>`\  % -> % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
-.. _l4e4d506164696332-6c636d436f6566:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c636d436f6566:
 
 \ :ref:`lcmCoef <l4c6566744f726552696e67-6c636d436f6566>`\ \: (%, %) -> Record(llcm_res: %, coeff1: %, coeff2: %) 
   from \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\ 
 
-.. _l4e4d506164696332-6c656674506f776572:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c656674506f776572:
 
 \ :ref:`leftPower <l4d61676d6157697468556e6974-6c656674506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
@@ -421,137 +425,137 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`leftPower <l4d61676d61-6c656674506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`Magma <l4d61676d61>`\ 
 
-.. _l4e4d506164696332-6c6566745265636970:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c6566745265636970:
 
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e4d506164696332-6c69667451:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c69667451:
 
 .. index::
-   pair: NMPadic2; liftQ
+   pair: NMExtendedPadicInteger; liftQ
 
 :spadfun:`liftQ`\: % -> \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  
+  \ ``liftQ(x)``\  lift \ ``x``\  to a \ ``NM``\  Fraction \ ``NM``\  Integer.
 
-.. _l4e4d506164696332-6c6966745a:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c6966745a:
 
 .. index::
-   pair: NMPadic2; liftZ
+   pair: NMExtendedPadicInteger; liftZ
 
 :spadfun:`liftZ`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  
+  \ ``liftZ(x)``\  lift \ ``x``\  to a \ ``NM``\  Integer.
 
-.. _l4e4d506164696332-6c6f67:
+.. _l4e4d457874656e6465645061646963496e7465676572-6c6f67:
 
 \ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % 
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
 
-.. _l4e4d506164696332-6d6f64756c6f50:
+.. _l4e4d457874656e6465645061646963496e7465676572-6d6f64756c6f50:
 
 \ :ref:`moduloP <l4e4d5061646963496e746567657243617465676f7279-6d6f64756c6f50>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-6d6f64756c7573:
+.. _l4e4d457874656e6465645061646963496e7465676572-6d6f64756c7573:
 
 \ :ref:`modulus <l4e4d5061646963496e746567657243617465676f7279-6d6f64756c7573>`\ \: () -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-6d756c74694575636c696465616e:
+.. _l4e4d457874656e6465645061646963496e7465676572-6d756c74694575636c696465616e:
 
 \ :ref:`multiEuclidean <l4575636c696465616e446f6d61696e-6d756c74694575636c696465616e>`\ \: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-6d757461626c653f:
+.. _l4e4d457874656e6465645061646963496e7465676572-6d757461626c653f:
 
 \ :ref:`mutable? <l4a4c4f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6e6f7468696e673f:
+.. _l4e4d457874656e6465645061646963496e7465676572-6e6f7468696e673f:
 
 \ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d506164696332-6e7468526f6f74:
+.. _l4e4d457874656e6465645061646963496e7465676572-6e7468526f6f74:
 
 \ :ref:`nthRoot <l5261646963616c43617465676f7279-6e7468526f6f74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
 
-.. _l4e4d506164696332-4f:
+.. _l4e4d457874656e6465645061646963496e7465676572-4f:
 
 .. index::
-   pair: NMPadic2; O
+   pair: NMExtendedPadicInteger; O
 
 :spadfun:`O`\: () -> % 
-  
+  0() returns the default Big-oh from domain parameters.
 
-.. _l4e4d506164696332-6f6e653f:
+.. _l4e4d457874656e6465645061646963496e7465676572-6f6e653f:
 
 \ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e4d506164696332-6f70706f736974653f:
+.. _l4e4d457874656e6465645061646963496e7465676572-6f70706f736974653f:
 
 \ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
-.. _l4e4d506164696332-6f72646572:
+.. _l4e4d457874656e6465645061646963496e7465676572-6f72646572:
 
 \ :ref:`order <l4e4d5061646963496e746567657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-706c656e617279506f776572:
+.. _l4e4d457874656e6465645061646963496e7465676572-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
-.. _l4e4d506164696332-707265636973696f6e:
+.. _l4e4d457874656e6465645061646963496e7465676572-707265636973696f6e:
 
 .. index::
-   pair: NMPadic2; precision
+   pair: NMExtendedPadicInteger; precision
 
 :spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  
+   
 
-.. _l4e4d506164696332-7072696d653f:
+.. _l4e4d457874656e6465645061646963496e7465676572-7072696d653f:
 
 \ :ref:`prime? <l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-7072696d65:
+.. _l4e4d457874656e6465645061646963496e7465676572-7072696d65:
 
 .. index::
-   pair: NMPadic2; prime
+   pair: NMExtendedPadicInteger; prime
 
 :spadfun:`prime`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  
+  \ ``prime(x)``\  returns the modulus used for \ ``x``\ . Convenience function.
 
-.. _l4e4d506164696332-7072696e636970616c496465616c:
+.. _l4e4d457874656e6465645061646963496e7465676572-7072696e636970616c496465616c:
 
 \ :ref:`principalIdeal <l5072696e636970616c496465616c446f6d61696e-7072696e636970616c496465616c>`\ \: \ :ref:`List <l4c697374>`\  % -> Record(coef: \ :ref:`List <l4c697374>`\  %, generator: %) 
   from \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\ 
 
-.. _l4e4d506164696332-71756f:
+.. _l4e4d457874656e6465645061646963496e7465676572-71756f:
 
 \ :ref:`quo <l4575636c696465616e446f6d61696e-71756f>`\ \: (%, %) -> % 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-71756f7469656e74427950:
+.. _l4e4d457874656e6465645061646963496e7465676572-71756f7469656e74427950:
 
 \ :ref:`quotientByP <l4e4d5061646963496e746567657243617465676f7279-71756f7469656e74427950>`\ \: % -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
 
-.. _l4e4d506164696332-7265636970:
+.. _l4e4d457874656e6465645061646963496e7465676572-7265636970:
 
 \ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e4d506164696332-72656d:
+.. _l4e4d457874656e6465645061646963496e7465676572-72656d:
 
 \ :ref:`rem <l4575636c696465616e446f6d61696e-72656d>`\ \: (%, %) -> % 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-7269676874506f776572:
+.. _l4e4d457874656e6465645061646963496e7465676572-7269676874506f776572:
 
 \ :ref:`rightPower <l4d61676d6157697468556e6974-7269676874506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
@@ -560,78 +564,78 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`rightPower <l4d61676d61-7269676874506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
   from \ :ref:`Magma <l4d61676d61>`\ 
 
-.. _l4e4d506164696332-72696768745265636970:
+.. _l4e4d457874656e6465645061646963496e7465676572-72696768745265636970:
 
 \ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e4d506164696332-73616d706c65:
+.. _l4e4d457874656e6465645061646963496e7465676572-73616d706c65:
 
 \ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
-.. _l4e4d506164696332-73697a654c6573733f:
+.. _l4e4d457874656e6465645061646963496e7465676572-73697a654c6573733f:
 
 \ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-73717274:
+.. _l4e4d457874656e6465645061646963496e7465676572-73717274:
 
 \ :ref:`sqrt <l5261646963616c43617465676f7279-73717274>`\ \: % -> % 
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
 
-.. _l4e4d506164696332-73717561726546726565:
+.. _l4e4d457874656e6465645061646963496e7465676572-73717561726546726565:
 
 \ :ref:`squareFree <l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-7371756172654672656550617274:
+.. _l4e4d457874656e6465645061646963496e7465676572-7371756172654672656550617274:
 
 \ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
-.. _l4e4d506164696332-737472696e67:
+.. _l4e4d457874656e6465645061646963496e7465676572-737472696e67:
 
 \ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLType <l4a4c54797065>`\ 
 
-.. _l4e4d506164696332-7375627472616374496643616e:
+.. _l4e4d457874656e6465645061646963496e7465676572-7375627472616374496643616e:
 
 \ :ref:`subtractIfCan <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e>`\ \: (%, %) -> Union(%, failed) 
   from \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\ 
 
-.. _l4e4d506164696332-74656963686d756c6c6572:
+.. _l4e4d457874656e6465645061646963496e7465676572-74656963686d756c6c6572:
 
 .. index::
-   pair: NMPadic2; teichmuller
+   pair: NMExtendedPadicInteger; teichmuller
 
 :spadfun:`teichmuller`\: % -> % 
-  
+  \ ``++``\  teichmuller(\ ``x``\ ) computes the Teihmuller lift of \ ``x``\ . The valuation of \ ``x``\  must be non negative.
 
-.. _l4e4d506164696332-756e69743f:
+.. _l4e4d457874656e6465645061646963496e7465676572-756e69743f:
 
 \ :ref:`unit? <l456e7469726552696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
-.. _l4e4d506164696332-756e697443616e6f6e6963616c:
+.. _l4e4d457874656e6465645061646963496e7465676572-756e697443616e6f6e6963616c:
 
 \ :ref:`unitCanonical <l456e7469726552696e67-756e697443616e6f6e6963616c>`\ \: % -> % 
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
-.. _l4e4d506164696332-756e69744e6f726d616c:
+.. _l4e4d457874656e6465645061646963496e7465676572-756e69744e6f726d616c:
 
 \ :ref:`unitNormal <l456e7469726552696e67-756e69744e6f726d616c>`\ \: % -> Record(unit: %, canonical: %, associate: %) 
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
-.. _l4e4d506164696332-76616c756174696f6e:
+.. _l4e4d457874656e6465645061646963496e7465676572-76616c756174696f6e:
 
 .. index::
-   pair: NMPadic2; valuation
+   pair: NMExtendedPadicInteger; valuation
 
 :spadfun:`valuation`\: % -> % 
-  
+  \ ``valuation(x)``\ 
 
-.. _l4e4d506164696332-7a65726f3f:
+.. _l4e4d457874656e6465645061646963496e7465676572-7a65726f3f:
 
 \ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
@@ -709,7 +713,7 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
 
-\ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2 
+\ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p 
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 
