@@ -5,7 +5,7 @@
 NMAlgebraicNumber
 =================
 
-:viewcode:`jnemo.spad line 169 <jnemo.spad#L169>` :editcode:`[edit on github] <jnemo.spad#L169>`
+:viewcode:`jnemo.spad line 209 <jnemo.spad#L209>` :editcode:`[edit on github] <jnemo.spad#L209>`
 
 
 This domain allows the manipulation of \ ``NM``\  algebraic numbers represented by minimal polynomials using the \ ``NM``\  package for \ ``JL``\  (Calcium based). https://fredrikj.net/calcium/
@@ -203,6 +203,10 @@ This domain allows the manipulation of \ ``NM``\  algebraic numbers represented 
 
 .. _l4e4d416c676562726169634e756d626572-6368617261637465726973746963:
 
+\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -390,6 +394,11 @@ This domain allows the manipulation of \ ``NM``\  algebraic numbers represented 
 \ :ref:`elt <l45787072657373696f6e537061636532-656c74>`\ \: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
 
+.. _l4e4d416c676562726169634e756d626572-657175616c3f:
+
+\ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d416c676562726169634e756d626572-6575636c696465616e53697a65:
 
 \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -456,6 +465,16 @@ This domain allows the manipulation of \ ``NM``\  algebraic numbers represented 
 
 \ :ref:`even? <l45787072657373696f6e537061636532-6576656e3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
+
+.. _l4e4d416c676562726169634e756d626572-65786163743f:
+
+\ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d416c676562726169634e756d626572-6578616374446976696465:
+
+\ :ref:`exactDivide <l4e4d52696e67-6578616374446976696465>`\ \: (%, %) -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d416c676562726169634e756d626572-657870506949:
 
@@ -554,6 +573,11 @@ This domain allows the manipulation of \ ``NM``\  algebraic numbers represented 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
+.. _l4e4d416c676562726169634e756d626572-696e7665727365:
+
+\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d416c676562726169634e756d626572-69733f:
 
 \ :ref:`is? <l45787072657373696f6e537061636532-69733f>`\ \: (%, \ :ref:`BasicOperator <l42617369634f70657261746f72>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -592,6 +616,11 @@ This domain allows the manipulation of \ ``NM``\  algebraic numbers represented 
 .. _l4e4d416c676562726169634e756d626572-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d416c676562726169634e756d626572-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d416c676562726169634e756d626572-6a6c4964:
@@ -730,13 +759,6 @@ This domain allows the manipulation of \ ``NM``\  algebraic numbers represented 
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
 
 .. _l4e4d416c676562726169634e756d626572-6d696e696d616c506f6c796e6f6d69616c:
-
-.. index::
-   pair: NMAlgebraicNumber; minimalPolynomial
-
-:spadfun:`minimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  \ ``minimalPolynomial(an)``\  returns the minimal polynomial of \ ``an``\  over algebraic numbers.
-
 
 .. index::
    pair: NMAlgebraicNumber; minimalPolynomial

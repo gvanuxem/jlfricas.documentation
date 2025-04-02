@@ -16,7 +16,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="NMPadicInteger p" href="NMPadicInteger.html" />
+    <link rel="next" title="NMPadic2" href="NMPadic2.html" />
     <link rel="prev" title="NMMultivariateLaurentPolynomial(R, VarSet)" href="NMMultivariateLaurentPolynomial.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
@@ -26,7 +26,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="NMPadicInteger.html" title="NMPadicInteger p"
+          <a href="NMPadic2.html" title="NMPadic2"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="NMMultivariateLaurentPolynomial.html" title="NMMultivariateLaurentPolynomial(R, VarSet)"
@@ -45,13 +45,13 @@
             
   <section id="nmmultivariatepolynomial-r-varset-internalordering">
 <span id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c"></span><span id="index-0"></span><h1>NMMultivariatePolynomial(R, VarSet, InternalOrdering)<a class="headerlink" href="#nmmultivariatepolynomial-r-varset-internalordering" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpoly.spad#L576">jnpoly.spad line 576</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpoly.spad#L576">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpoly.spad#L558">jnpoly.spad line 558</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpoly.spad#L558">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p></li>
 <li><p>VarSet: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p></li>
 <li><p>InternalOrdering: <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a></p></li>
 </ul>
-<p>This type is a basic representation of sparse, distributed multivariate polynomials using the <code class="docutils literal notranslate"><span class="pre">JL</span></code> pakage <code class="docutils literal notranslate"><span class="pre">NM</span></code>. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[<code class="docutils literal notranslate"><span class="pre">x</span></code>,<code class="docutils literal notranslate"><span class="pre">y</span></code>,<code class="docutils literal notranslate"><span class="pre">z</span></code>] <code class="docutils literal notranslate"><span class="pre">V</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> OrderedVariableList(VarSet) <code class="docutils literal notranslate"><span class="pre">--</span></code> eventually, for later use <code class="docutils literal notranslate"><span class="pre">--</span></code> See SparseMultivariatePolynomial <code class="docutils literal notranslate"><span class="pre">--</span></code> <code class="docutils literal notranslate"><span class="pre">E</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> IndexedExponents <code class="docutils literal notranslate"><span class="pre">V</span></code> PRing <code class="docutils literal notranslate"><span class="pre">:=</span></code> <code class="docutils literal notranslate"><span class="pre">NMP</span></code>(NINT,VarSet, “lex”) <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> x::V::PRing <code class="docutils literal notranslate"><span class="pre">y</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> y::V::PRing <code class="docutils literal notranslate"><span class="pre">z</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> z::V::PRing <code class="docutils literal notranslate"><span class="pre">p:=x*2+3*y^2+17*z^13</span></code> <code class="docutils literal notranslate"><span class="pre">p^7</span></code></p>
+<p>This type is a basic representation of sparse, distributed multivariate polynomials using the <code class="docutils literal notranslate"><span class="pre">JL</span></code> pakage <code class="docutils literal notranslate"><span class="pre">NM</span></code>. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[<code class="docutils literal notranslate"><span class="pre">x</span></code>,<code class="docutils literal notranslate"><span class="pre">y</span></code>,<code class="docutils literal notranslate"><span class="pre">z</span></code>] <code class="docutils literal notranslate"><span class="pre">V</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> OrderedVariableList(VarSet) <code class="docutils literal notranslate"><span class="pre">--</span></code> eventually, for later use <code class="docutils literal notranslate"><span class="pre">--</span></code> See SparseMultivariatePolynomial <code class="docutils literal notranslate"><span class="pre">--</span></code> <code class="docutils literal notranslate"><span class="pre">E</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> IndexedExponents <code class="docutils literal notranslate"><span class="pre">V</span></code> PRing <code class="docutils literal notranslate"><span class="pre">:=</span></code> <code class="docutils literal notranslate"><span class="pre">NMP</span></code>(NINT,VarSet, “lex”) <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> x::V::PRing <code class="docutils literal notranslate"><span class="pre">y</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> y::V::PRing <code class="docutils literal notranslate"><span class="pre">z</span></code> <code class="docutils literal notranslate"><span class="pre">:=</span></code> z:f:V::PRing <code class="docutils literal notranslate"><span class="pre">p:=x*2+3*y^2+17*z^13</span></code> <code class="docutils literal notranslate"><span class="pre">p^7</span></code></p>
 <dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -155,6 +155,8 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6368617261637465726973746963">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
 </dl>
@@ -268,6 +270,14 @@
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-6469736372696d696e616e74"><span class="std std-ref">discriminant</span></a>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-646976696465">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-646976696465"><span class="std std-ref">divide</span></a>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-657175616c3f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-657175616c3f"><span class="std std-ref">equal?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6576616c">
 <dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(%, %)</p>
 </dd>
@@ -284,6 +294,10 @@
 <dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, %)</p>
 </dd>
 <dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-65786163743f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-65786163743f"><span class="std std-ref">exact?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <span id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6578616374446976696465"></span><dl class="simple" id="index-11">
@@ -342,6 +356,10 @@
 <dt><a class="reference internal" href="Hashable.html#l4861736861626c65-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a> if R has <a class="reference internal" href="Hashable.html#l4861736861626c65"><span class="std std-ref">Hashable</span></a></dt><dd><p>from <a class="reference internal" href="Hashable.html#l4861736861626c65"><span class="std std-ref">Hashable</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-696e7665727365">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-696e7665727365"><span class="std std-ref">inverse</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-697345787074">
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-697345787074"><span class="std std-ref">isExpt</span></a>: % -&gt; Union(Record(var: <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>), failed)</dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
@@ -372,6 +390,10 @@
 </dl>
 <dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c446973706c6179">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c44756d70">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c44756d70"><span class="std std-ref">jlDump</span></a>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c4964">
@@ -835,7 +857,7 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="NMPadicInteger.html" title="NMPadicInteger p"
+          <a href="NMPadic2.html" title="NMPadic2"
              >next</a> |</li>
         <li class="right" >
           <a href="NMMultivariateLaurentPolynomial.html" title="NMMultivariateLaurentPolynomial(R, VarSet)"

@@ -5,7 +5,7 @@
 Poset S
 =======
 
-:viewcode:`logic.spad line 612 <logic.spad#L612>` :editcode:`[edit on github] <logic.spad#L612>`
+:viewcode:`logic.spad line 610 <logic.spad#L610>` :editcode:`[edit on github] <logic.spad#L610>`
 
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
@@ -30,13 +30,6 @@ holds a complete set together with a structure to codify the partial order. for 
 
 .. _l506f736574-6164644172726f7721:
 
-.. index::
-   pair: Poset; addArrow!
-
-:spadfun:`addArrow!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``addArrow!(s, nm, n1, n2)``\  adds an arrow to the graph \ ``s``\ , where: \ ``n1``\  is the index of the start object \ ``n2``\  is the index of the end object This is done in a non-mutable way, that is, the original poset is not changed instead a new one is constructed.
-
-
 \ :ref:`addArrow! <l46696e6974654772617068-6164644172726f7721>`\ \: (%, Record(name: \ :ref:`String <l537472696e67>`\ , arrType: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , fromOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , toOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , xOffset: \ :ref:`Integer <l496e7465676572>`\ , yOffset: \ :ref:`Integer <l496e7465676572>`\ , map: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
@@ -52,17 +45,30 @@ holds a complete set together with a structure to codify the partial order. for 
 \ :ref:`addArrow! <l46696e6974654772617068-6164644172726f7721>`\ \: (%, \ :ref:`String <l537472696e67>`\ , S, S) -> % 
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
+.. _l506f736574-6164644172726f77:
+
+.. index::
+   pair: Poset; addArrow
+
+:spadfun:`addArrow`\: (%, S, S) -> % 
+  \ ``addArrow(s, nm, n1, n2)``\  constructs new poset by adding to the poset \ ``s``\  arrow from \ ``n1``\  to \ ``n2``\ .
+
 .. _l506f736574-6164644f626a65637421:
 
 \ :ref:`addObject! <l46696e6974654772617068-6164644f626a65637421>`\ \: (%, Record(value: S, posX: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , posY: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
 
-.. index::
-   pair: Poset; addObject!
+\ :ref:`addObject! <l46696e6974654772617068-6164644f626a65637421>`\ \: (%, S) -> % 
+  from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
-:spadfun:`addObject!`\: (%, S) -> % 
-  \ ``addObject!(s, n)``\  adds object with coordinates \ ``n``\  to the graph \ ``s``\ . This is done in a non-mutable way, that is, the original poset is not changed instead a new one is constructed.
+.. _l506f736574-6164644f626a656374:
+
+.. index::
+   pair: Poset; addObject
+
+:spadfun:`addObject`\: (%, S) -> % 
+  \ ``addObject(s, n)``\  constructs new poset by adding object \ ``n``\  to the poset \ ``s``\ .
 
 .. _l506f736574-61646a6163656e63794d6174726978:
 
@@ -98,22 +104,6 @@ holds a complete set together with a structure to codify the partial order. for 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
-
-.. _l506f736574-636f6d706c6574655265666c65786976697479:
-
-.. index::
-   pair: Poset; completeReflexivity
-
-:spadfun:`completeReflexivity`\: % -> % 
-  Reflexivity requires forall(\ ``x``\ ): x<=x This function enforces this by making sure that every element has arrow to itself. That is, the leading diagonal is \ ``true``\ .
-
-.. _l506f736574-636f6d706c6574655472616e7369746976697479:
-
-.. index::
-   pair: Poset; completeTransitivity
-
-:spadfun:`completeTransitivity`\: % -> % 
-  Transitivity requires forall(\ ``x``\ , \ ``y``\ , \ ``z``\ ): x<=y and y<=z implies x<=z This function enforces this by making sure that the composition of any two arrows is also an arrow.
 
 .. _l506f736574-636f7665724d6174726978:
 
@@ -291,14 +281,6 @@ holds a complete set together with a structure to codify the partial order. for 
 :spadfun:`isAntiChain?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``isAntiChain?(s)``\  checks if \ ``s``\  is an antichain, that is any two elements in \ ``s``\  are incomparable.
 
-.. _l506f736574-6973416e746973796d6d65747269633f:
-
-.. index::
-   pair: Poset; isAntisymmetric?
-
-:spadfun:`isAntisymmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  Antisymmetric requires forall(\ ``x``\ , \ ``y``\ ): x<=y and y<=x iff x=y Returns \ ``true``\  if this is the case for every element.
-
 .. _l506f736574-6973436861696e3f:
 
 .. index::
@@ -364,7 +346,7 @@ holds a complete set together with a structure to codify the partial order. for 
 
 .. _l506f736574-6c65:
 
-\ :ref:`le <l5072656f72646572-6c65>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+\ :ref:`le <l5072656f72646572-6c65>`\ \: (%, S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Preorder <l5072656f72646572>`\  S
 
 .. _l506f736574-6c6f6f70734172726f7773:
@@ -500,14 +482,6 @@ holds a complete set together with a structure to codify the partial order. for 
 \ :ref:`outDegree <l46696e6974654772617068-6f7574446567726565>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
-.. _l506f736574-706f776572536574537472756374757265:
-
-.. index::
-   pair: Poset; powerSetStructure
-
-:spadfun:`powerSetStructure`\: S -> % 
-  \ ``powerSetStructure(set)``\  is a constructor for a Poset where each element is a \ ``set``\  (implemented as a list) and with a subset structure. requires \ ``S``\  to be a list.
-
 .. _l506f736574-726f7574654172726f7773:
 
 \ :ref:`routeArrows <l46696e6974654772617068-726f7574654172726f7773>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -517,22 +491,6 @@ holds a complete set together with a structure to codify the partial order. for 
 
 \ :ref:`routeNodes <l46696e6974654772617068-726f7574654e6f646573>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
-
-.. _l506f736574-736574417272:
-
-.. index::
-   pair: Poset; setArr
-
-:spadfun:`setArr`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``setArr(s, la)``\  sets the list of all arrows (or edges)
-
-.. _l506f736574-73657456657274:
-
-.. index::
-   pair: Poset; setVert
-
-:spadfun:`setVert`\: (%, \ :ref:`List <l4c697374>`\  S) -> \ :ref:`Void <l566f6964>`\  
-  \ ``setVert(s, lv)``\  sets the list of all vertices (or objects)
 
 .. _l506f736574-7370616e6e696e67466f726573744172726f77:
 

@@ -5,7 +5,7 @@
 NMMultivariatePolynomial(R, VarSet, InternalOrdering)
 =====================================================
 
-:viewcode:`jnpoly.spad line 576 <jnpoly.spad#L576>` :editcode:`[edit on github] <jnpoly.spad#L576>`
+:viewcode:`jnpoly.spad line 558 <jnpoly.spad#L558>` :editcode:`[edit on github] <jnpoly.spad#L558>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -14,7 +14,7 @@ NMMultivariatePolynomial(R, VarSet, InternalOrdering)
 * InternalOrdering: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the \ ``JL``\  pakage \ ``NM``\ . It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z::V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate polynomials using the \ ``JL``\  pakage \ ``NM``\ . It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z:f:V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
 
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-30:
@@ -166,6 +166,10 @@ This type is a basic representation of sparse, distributed multivariate polynomi
   from \ :ref:`FiniteAbelianMonoidRing <l46696e6974654162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6368617261637465726973746963:
+
+\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
@@ -350,6 +354,16 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`discriminant <l506f6c796e6f6d69616c43617465676f7279-6469736372696d696e616e74>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
   from \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
 
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-646976696465:
+
+\ :ref:`divide <l4e4d52696e67-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-657175616c3f:
+
+\ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6576616c:
 
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, %, %) -> % 
@@ -382,6 +396,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R) -> % 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R)
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-65786163743f:
+
+\ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6578616374446976696465:
 
@@ -461,6 +480,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-696e7665727365:
+
+\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-697345787074:
 
 \ :ref:`isExpt <l506f6c796e6f6d69616c43617465676f7279-697345787074>`\ \: % -> Union(Record(var: \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), failed) 
@@ -505,6 +529,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c4964:

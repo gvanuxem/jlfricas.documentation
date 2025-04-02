@@ -45,7 +45,7 @@
             
   <section id="nmexactcalciumfield">
 <span id="l4e4d457861637443616c6369756d4669656c64"></span><span id="index-0"></span><h1>NMExactCalciumField<a class="headerlink" href="#nmexactcalciumfield" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L1172">jnemo.spad line 1172</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L1172">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L1213">jnemo.spad line 1213</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L1213">[edit on github]</a></p>
 <p><a class="reference internal" href="#l4e4d457861637443616c6369756d4669656c64"><span class="std std-ref">NMExactCalciumField</span></a> implements exact complex field arithmetic using the <code class="docutils literal notranslate"><span class="pre">NM</span></code> package. Reference: <a class="reference external" href="https://nemocas.github.io/NM">https://nemocas.github.io/NM</a>.<code class="docutils literal notranslate"><span class="pre">jl</span></code> See <a class="reference external" href="https://flintlib.org/doc/introduction_calcium.html">https://flintlib.org/doc/introduction_calcium.html</a> for the <code class="docutils literal notranslate"><span class="pre">C</span></code> library.</p>
 <dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
@@ -226,6 +226,8 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6368617261637465726973746963">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
 </dl>
@@ -379,6 +381,10 @@
 <dt><a class="reference internal" href="Finite.html#l46696e697465-656e756d6572617465"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % if % has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-657175616c3f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-657175616c3f"><span class="std std-ref">equal?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
 <span id="l4e4d457861637443616c6369756d4669656c64-657266"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">erf</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">erf(x)</span></code> is the error function evaluated at <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
@@ -397,6 +403,14 @@
 </dl>
 <span id="l4e4d457861637443616c6369756d4669656c64-65756c657247616d6d61"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">eulerGamma</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eulerGamma()</span></code> returns the Euler<code class="docutils literal notranslate"><span class="pre">'s</span></code> constant gamma (<code class="docutils literal notranslate"><span class="pre">γ</span></code>).</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-65786163743f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-65786163743f"><span class="std std-ref">exact?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6578616374446976696465">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6578616374446976696465"><span class="std std-ref">exactDivide</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <span id="l4e4d457861637443616c6369756d4669656c64-65787031"></span><dl class="simple" id="index-22">
@@ -499,6 +513,10 @@
 <dt><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67-696e76"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-696e7665727365">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-696e7665727365"><span class="std std-ref">inverse</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c41626f7574">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -517,6 +535,10 @@
 </dl>
 <dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c446973706c6179">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c44756d70">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c44756d70"><span class="std std-ref">jlDump</span></a>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d457861637443616c6369756d4669656c64-6a6c4964">

@@ -45,7 +45,7 @@
             
   <section id="nmfraction-r">
 <span id="l4e4d4672616374696f6e"></span><span id="index-0"></span><h1>NMFraction R<a class="headerlink" href="#nmfraction-r" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L1570">jnemo.spad line 1570</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L1570">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L1611">jnemo.spad line 1611</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L1611">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: Join(<a class="reference internal" href="NMCommutativeRing.html#l4e4d436f6d6d7574617469766552696e67"><span class="std std-ref">NMCommutativeRing</span></a>, <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>)</p></li>
 </ul>
@@ -163,6 +163,8 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-6368617261637465726973746963">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
 </dl>
@@ -257,11 +259,15 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-646976696465">
-<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-646976696465"><span class="std std-ref">divide</span></a>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-656c74">
 <dt><a class="reference internal" href="Eltable.html#l456c7461626c65-656c74"><span class="std std-ref">elt</span></a>: (%, R) -&gt; % if R has <a class="reference internal" href="Eltable.html#l456c7461626c65"><span class="std std-ref">Eltable</span></a>(R, R)</dt><dd><p>from <a class="reference internal" href="Eltable.html#l456c7461626c65"><span class="std std-ref">Eltable</span></a>(R, %)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4672616374696f6e-657175616c3f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-657175616c3f"><span class="std std-ref">equal?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-6575636c696465616e53697a65">
@@ -280,6 +286,14 @@
 <dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, R, R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
 </dd>
 <dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R) -&gt; % if R has <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4672616374696f6e-65786163743f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-65786163743f"><span class="std std-ref">exact?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4672616374696f6e-6578616374446976696465">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6578616374446976696465"><span class="std std-ref">exactDivide</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-65787072657373496465616c4d656d626572">
@@ -338,6 +352,10 @@
 <dt><a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67-696e76"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l4469766973696f6e52696e67"><span class="std std-ref">DivisionRing</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d4672616374696f6e-696e7665727365">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-696e7665727365"><span class="std std-ref">inverse</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d4672616374696f6e-6a6c41626f7574">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -356,6 +374,10 @@
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-6a6c446973706c6179">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d4672616374696f6e-6a6c44756d70">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c44756d70"><span class="std std-ref">jlDump</span></a>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-6a6c4964">
@@ -581,7 +603,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-756e69743f">
-<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69743f"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-756e69743f"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d4672616374696f6e-756e697443616e6f6e6963616c">

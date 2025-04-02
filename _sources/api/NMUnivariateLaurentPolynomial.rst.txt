@@ -5,7 +5,7 @@
 NMUnivariateLaurentPolynomial(R, x)
 ===================================
 
-:viewcode:`jnpoly.spad line 309 <jnpoly.spad#L309>` :editcode:`[edit on github] <jnpoly.spad#L309>`
+:viewcode:`jnpoly.spad line 306 <jnpoly.spad#L306>` :editcode:`[edit on github] <jnpoly.spad#L306>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -171,6 +171,10 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
   from \ :ref:`FiniteAbelianMonoidRing <l46696e6974654162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6368617261637465726973746963:
+
+\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
@@ -430,11 +434,8 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-646976696465:
 
-.. index::
-   pair: NMUnivariateLaurentPolynomial; divide
-
-:spadfun:`divide`\: (%, %) -> Record(quotient: %, remainder: %) 
-  \ ``divide(p,q)``\  returns a record (quotient, remainder) of the the Euclidean division of \ ``p``\  by \ ``q``\ .
+\ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
+  from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6469766964654578706f6e656e7473:
 
@@ -461,6 +462,11 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
 
 \ :ref:`elt <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-656c74>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  %, R) -> R if R has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
+
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-657175616c3f:
+
+\ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6575636c696465616e53697a65:
 
@@ -500,13 +506,15 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , R) -> % 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , R)
 
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-65786163743f:
+
+\ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6578616374446976696465:
 
-.. index::
-   pair: NMUnivariateLaurentPolynomial; exactDivide
-
-:spadfun:`exactDivide`\: (%, %) -> % 
-  \ ``exactDivide(p,q)``\  divides \ ``p``\  by \ ``q``\  if the division is exact.
+\ :ref:`exactDivide <l4e4d52696e67-6578616374446976696465>`\ \: (%, %) -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-65787072657373496465616c4d656d626572:
 
@@ -602,6 +610,11 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
 \ :ref:`integrate <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-696e74656772617465>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-696e7665727365:
+
+\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-697345787074:
 
 \ :ref:`isExpt <l506f6c796e6f6d69616c43617465676f7279-697345787074>`\ \: % -> Union(Record(var: \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), failed) 
@@ -646,6 +659,11 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c4964:
@@ -1207,13 +1225,6 @@ Univariate laurent polynomial domain using \ ``JL``\  AbstractAlgebra package  A
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e6976617269617465:
-
-.. index::
-   pair: NMUnivariateLaurentPolynomial; univariate
-
-:spadfun:`univariate`\: % -> \ :ref:`NMUnivariatePolynomial <l4e4d556e6976617269617465506f6c796e6f6d69616c>`\ (R, x) 
-  returns the underlying univariate polynomial used for the implementation.
-
 
 \ :ref:`univariate <l506f6c796e6f6d69616c43617465676f7279-756e6976617269617465>`\ \: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
   from \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )

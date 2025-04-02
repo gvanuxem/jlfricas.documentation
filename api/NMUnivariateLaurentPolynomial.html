@@ -45,7 +45,7 @@
             
   <section id="nmunivariatelaurentpolynomial-r-x">
 <span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c"></span><span id="index-0"></span><h1>NMUnivariateLaurentPolynomial(R, x)<a class="headerlink" href="#nmunivariatelaurentpolynomial-r-x" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpoly.spad#L309">jnpoly.spad line 309</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpoly.spad#L309">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpoly.spad#L306">jnpoly.spad line 306</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpoly.spad#L306">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p></li>
 <li><p>x: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p></li>
@@ -152,6 +152,8 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6368617261637465726973746963">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
 </dl>
@@ -305,8 +307,8 @@
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-6469736372696d696e616e74"><span class="std std-ref">discriminant</span></a>: (%, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-646976696465"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">divide</span>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divide(p,q)</span></code> returns a record (quotient, remainder) of the the Euclidean division of <code class="docutils literal notranslate"><span class="pre">p</span></code> by <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-646976696465">
+<dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6469766964654578706f6e656e7473">
@@ -323,6 +325,10 @@
 <dt><a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-656c74"><span class="std std-ref">elt</span></a>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> %, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> %) -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> % if R has <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p>from <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p>
 </dd>
 <dt><a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-656c74"><span class="std std-ref">elt</span></a>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> %, R) -&gt; R if R has <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></dt><dd><p>from <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-657175616c3f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-657175616c3f"><span class="std std-ref">equal?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6575636c696465616e53697a65">
@@ -347,8 +353,12 @@
 <dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, R)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6578616374446976696465"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">exactDivide</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exactDivide(p,q)</span></code> divides <code class="docutils literal notranslate"><span class="pre">p</span></code> by <code class="docutils literal notranslate"><span class="pre">q</span></code> if the division is exact.</p>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-65786163743f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-65786163743f"><span class="std std-ref">exact?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6578616374446976696465">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6578616374446976696465"><span class="std std-ref">exactDivide</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-65787072657373496465616c4d656d626572">
@@ -371,7 +381,7 @@
 <dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> % if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-13">
+<dl class="simple" id="index-11">
 <dt><span class="spadfun">factor</span>: % -&gt; <a class="reference internal" href="NMFactored.html#l4e4d466163746f726564"><span class="std std-ref">NMFactored</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(p)</span></code> returns the factorization of <code class="docutils literal notranslate"><span class="pre">p</span></code> using the NMFactored domain.</p>
 </dd>
 </dl>
@@ -421,6 +431,10 @@
 <dt><a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-696e74656772617465"><span class="std std-ref">integrate</span></a>: % -&gt; % if R has <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-696e7665727365">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-696e7665727365"><span class="std std-ref">inverse</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-697345787074">
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-697345787074"><span class="std std-ref">isExpt</span></a>: % -&gt; Union(Record(var: <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>), failed)</dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>
 </dd>
@@ -453,6 +467,10 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c44756d70">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c44756d70"><span class="std std-ref">jlDump</span></a>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c4964">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -477,7 +495,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6e756c70"></span><dl class="simple" id="index-14">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6e756c70"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">jnulp</span>: <a class="reference internal" href="UnivariatePolynomial.html#l556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">UnivariatePolynomial</span></a>(x, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnulp(p)</span></code> converts the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> to a <code class="docutils literal notranslate"><span class="pre">NM</span></code> univariate polynomial.</p>
 </dd>
 </dl>
@@ -549,7 +567,7 @@
 <dt><a class="reference internal" href="FiniteAbelianMonoidRing.html#l46696e6974654162656c69616e4d6f6e6f696452696e67-6d61704578706f6e656e7473"><span class="std std-ref">mapExponents</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteAbelianMonoidRing.html#l46696e6974654162656c69616e4d6f6e6f696452696e67"><span class="std std-ref">FiniteAbelianMonoidRing</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d696e696d756d446567726565"></span><dl class="simple" id="index-15">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d696e696d756d446567726565"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">minimumDegree</span>: % -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">minimumDegree(p)</span></code> returns the minimal exponent of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="FiniteAbelianMonoidRing.html#l46696e6974654162656c69616e4d6f6e6f696452696e67-6d696e696d756d446567726565"><span class="std std-ref">minimumDegree</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteAbelianMonoidRing.html#l46696e6974654162656c69616e4d6f6e6f696452696e67"><span class="std std-ref">FiniteAbelianMonoidRing</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
@@ -565,7 +583,7 @@
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-6d6f6e6963446976696465"><span class="std std-ref">monicDivide</span></a>: (%, %, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d6f6e6f6d69616c3f"></span><dl class="simple" id="index-16">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d6f6e6f6d69616c3f"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">monomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomial?(p)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">p</span></code> is a monomial.</p>
 </dd>
 </dl>
@@ -577,7 +595,7 @@
 <dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c"><span class="std std-ref">monomial</span></a>: (R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d6f6e6f6d69616c5265637572736976653f"></span><dl class="simple" id="index-17">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d6f6e6f6d69616c5265637572736976653f"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">monomialRecursive?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomialRecursive?(p)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">p</span></code> is monomial recurisvely (all scalar types).</p>
 </dd>
 </dl>
@@ -585,7 +603,7 @@
 <dt><a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">MaybeSkewPolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d756c6c6f77"></span><dl class="simple" id="index-18">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d756c6c6f77"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">mullow</span>: (%, %, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mullow(p1,p2,n)</span></code> is the truncated multiplication of <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
@@ -675,7 +693,7 @@
 <dt><a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-70736575646f52656d61696e646572"><span class="std std-ref">pseudoRemainder</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-71756f"></span><dl class="simple" id="index-19">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-71756f"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">quo</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">quo</span> <span class="pre">b</span></code> returns the quotient of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, forgetting the remainder.</p>
 </dd>
 </dl>
@@ -697,7 +715,7 @@
 <dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-726564756374756d"><span class="std std-ref">reductum</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-72656d"></span><dl class="simple" id="index-20">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-72656d"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">rem</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">rem</span> <span class="pre">b</span></code> returns the remainder of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 </dd>
 </dl>
@@ -727,11 +745,11 @@
 <dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-72657665727365"></span><dl class="simple" id="index-21">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-72657665727365"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">reverse</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reverse</span> <span class="pre">the</span></code> coefficients of <code class="docutils literal notranslate"><span class="pre">p</span></code> (the leading becomes the trailing) and normalise the resulting polynomial.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-22">
+<dl class="simple" id="index-20">
 <dt><span class="spadfun">reverse</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reverse</span> <span class="pre">the</span></code> coefficients of <code class="docutils literal notranslate"><span class="pre">p</span></code> (the leading becomes the trailing) and normalise the resulting polynomial. Adjust the length to <code class="docutils literal notranslate"><span class="pre">n</span></code> so the resulting polynomial is trucated or padded with zeroes before the leading term if necessary</p>
 </dd>
 </dl>
@@ -801,7 +819,7 @@
 <dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-737570706f7274"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7465726d5265637572736976653f"></span><dl class="simple" id="index-23">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7465726d5265637572736976653f"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">termRecursive?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">termRecursive?(p)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">p</span></code> as one term, recursively (all scalar types).</p>
 </dd>
 </dl>
@@ -815,19 +833,19 @@
 <dt><a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565536f72746564"><span class="std std-ref">totalDegreeSorted</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">MaybeSkewPolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-747261696c696e67436f656666696369656e74"></span><dl class="simple" id="index-24">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-747261696c696e67436f656666696369656e74"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">trailingCoefficient</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">trailingCoefficient(p)</span></code> returns the trailing coefficientof <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7472756e63617465"></span><dl class="simple" id="index-25">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7472756e63617465"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">truncate</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">truncate(p,</span> <span class="pre">n)</span></code> return <code class="docutils literal notranslate"><span class="pre">p</span></code> truncated to <code class="docutils literal notranslate"><span class="pre">n</span></code> term. It<code class="docutils literal notranslate"><span class="pre">'s</span></code> the remainder of the division by <code class="docutils literal notranslate"><span class="pre">x^n</span></code>.</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e69743f"></span><dl class="simple" id="index-26">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e69743f"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">unit?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unit?(p)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">p</span></code> is invertible i.e. is a unit.</p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e6974"></span><dl class="simple" id="index-27">
+<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e6974"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">unit</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unit(p)</span></code> returns unit from the factorization of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -839,9 +857,7 @@
 <dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %) if R has <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e6976617269617465"></span><dl class="simple" id="index-28">
-<dt><span class="spadfun">univariate</span>: % -&gt; <a class="reference internal" href="NMUnivariatePolynomial.html#l4e4d556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">NMUnivariatePolynomial</span></a>(R, x)</dt><dd><p>returns the underlying univariate polynomial used for the implementation.</p>
-</dd>
+<dl class="simple" id="l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e6976617269617465">
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-756e6976617269617465"><span class="std std-ref">univariate</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>
 </dd>
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-756e6976617269617465"><span class="std std-ref">univariate</span></a>: (%, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>)</p>

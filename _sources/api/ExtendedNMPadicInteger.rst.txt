@@ -5,11 +5,11 @@
 ExtendedNMPadicInteger(p, prec)
 ===============================
 
-:viewcode:`jnpadic.spad line 45 <jnpadic.spad#L45>` :editcode:`[edit on github] <jnpadic.spad#L45>`
+:viewcode:`jnpadic.spad line 43 <jnpadic.spad#L43>` :editcode:`[edit on github] <jnpadic.spad#L43>`
 
 * p: \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
-* prec: \ :ref:`JLInt64 <l4a4c496e743634>`\ 
+* prec: \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
 This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers.
@@ -31,11 +31,8 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 
-.. index::
-   pair: ExtendedNMPadicInteger; *
-
-:spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``a * x``\  is the multiplication of a Nemo integer and an integer.
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 .. index::
@@ -52,11 +49,12 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
   \ ``a * x``\  is the multiplication of an Integer and a \ ``p``\ -adic integer. For example: \example{p := 1 + 2*7 + 4*7^2 + O(7,3)\$NPADICZ(7)}
 
 
-.. index::
-   pair: ExtendedNMPadicInteger; *
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
-:spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``a * x``\  is the multiplication of an Integer and a \ ``p``\ -adic integer.
+
+\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
 .. index::
@@ -89,13 +87,6 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 .. index::
    pair: ExtendedNMPadicInteger; +
 
-:spadfun:`+`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x + a``\  is the addition of a \ ``p``\ -adic integer and an Integer.
-
-
-.. index::
-   pair: ExtendedNMPadicInteger; +
-
 :spadfun:`+`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
   \ ``x``\  is the addition of a \ ``p``\ -adic integer and a Julia Nemo Fraction integer.
 
@@ -105,13 +96,6 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 :spadfun:`+`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
   \ ``x``\  is the addition of a \ ``p``\ -adic integer and a Julia Nemo integer.
-
-
-.. index::
-   pair: ExtendedNMPadicInteger; +
-
-:spadfun:`+`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``a + x``\  is the addition of an Integer and a \ ``p``\ -adic integer. For example: \example{p := 1 + 2*7 + 4*7^2 + O(7,3)\$NPADICZ(7)}
 
 
 .. index::
@@ -136,12 +120,29 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
+.. _l457874656e6465644e4d5061646963496e7465676572-2f:
+
+\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
+  from \ :ref:`Field <l4669656c64>`\ 
+
 .. _l457874656e6465644e4d5061646963496e7465676572-3d:
 
 \ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l457874656e6465644e4d5061646963496e7465676572-5e:
+
+\ :ref:`^ <l456c656d656e7461727946756e6374696f6e43617465676f7279-5e>`\ \: (%, %) -> % 
+  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+
+
+\ :ref:`^ <l5261646963616c43617465676f7279-5e>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
+
+
+\ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+
 
 \ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
@@ -182,6 +183,10 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 .. _l457874656e6465644e4d5061646963496e7465676572-6368617261637465726973746963:
 
+\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -197,6 +202,10 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -236,18 +245,30 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
+.. _l457874656e6465644e4d5061646963496e7465676572-657175616c3f:
+
+\ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l457874656e6465644e4d5061646963496e7465676572-6575636c696465616e53697a65:
 
 \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
+.. _l457874656e6465644e4d5061646963496e7465676572-65786163743f:
+
+\ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l457874656e6465644e4d5061646963496e7465676572-6578616374446976696465:
+
+\ :ref:`exactDivide <l4e4d52696e67-6578616374446976696465>`\ \: (%, %) -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l457874656e6465644e4d5061646963496e7465676572-657870:
 
-.. index::
-   pair: ExtendedNMPadicInteger; exp
-
-:spadfun:`exp`\: % -> % 
-  \ ``exp(x)``\  computes the exponential of \ ``x``\ .
+\ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % 
+  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
 
 .. _l457874656e6465644e4d5061646963496e7465676572-65787072657373496465616c4d656d626572:
 
@@ -273,6 +294,11 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %, %) -> Union(Record(coef1: %, coef2: %), failed) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
+.. _l457874656e6465644e4d5061646963496e7465676572-666163746f72:
+
+\ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
+  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
+
 .. _l457874656e6465644e4d5061646963496e7465676572-676364:
 
 \ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % 
@@ -286,6 +312,16 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
+
+.. _l457874656e6465644e4d5061646963496e7465676572-696e76:
+
+\ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
+  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+
+.. _l457874656e6465644e4d5061646963496e7465676572-696e7665727365:
+
+\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l457874656e6465644e4d5061646963496e7465676572-6a6c41626f7574:
 
@@ -318,6 +354,11 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l457874656e6465644e4d5061646963496e7465676572-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l457874656e6465644e4d5061646963496e7465676572-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
@@ -348,19 +389,26 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l457874656e6465644e4d5061646963496e7465676572-6a7061646963:
+.. _l457874656e6465644e4d5061646963496e7465676572-6a6e7061646963:
 
 .. index::
-   pair: ExtendedNMPadicInteger; jpadic
+   pair: ExtendedNMPadicInteger; jnpadic
 
-:spadfun:`jpadic`\: \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+:spadfun:`jnpadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
   padic(\ ``x``\ ) returns \ ``x``\  as the \ ``p``\ -adic completion of the \ ``NM``\  Integer.
 
 
 .. index::
-   pair: ExtendedNMPadicInteger; jpadic
+   pair: ExtendedNMPadicInteger; jnpadic
 
-:spadfun:`jpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+:spadfun:`jnpadic`\: \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+  padic(\ ``x``\ ) returns \ ``x``\  as the \ ``p``\ -adic completion of the \ ``NM``\  Integer.
+
+
+.. index::
+   pair: ExtendedNMPadicInteger; jnpadic
+
+:spadfun:`jnpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
   padic(\ ``x``\ ) returns \ ``x``\  as the \ ``p``\ -adic completion of the \ ``NM``\  Integer.
 
 .. _l457874656e6465644e4d5061646963496e7465676572-6c61746578:
@@ -414,11 +462,8 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 .. _l457874656e6465644e4d5061646963496e7465676572-6c6f67:
 
-.. index::
-   pair: ExtendedNMPadicInteger; log
-
-:spadfun:`log`\: % -> % 
-  \ ``log(x)``\  com putes the logarithm of \ ``x``\ .
+\ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % 
+  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
 
 .. _l457874656e6465644e4d5061646963496e7465676572-6d6f64756c6f50:
 
@@ -445,6 +490,11 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l457874656e6465644e4d5061646963496e7465676572-6e7468526f6f74:
+
+\ :ref:`nthRoot <l5261646963616c43617465676f7279-6e7468526f6f74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
+
 .. _l457874656e6465644e4d5061646963496e7465676572-4f:
 
 .. index::
@@ -457,7 +507,7 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 .. index::
    pair: ExtendedNMPadicInteger; O
 
-:spadfun:`O`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , \ :ref:`JLInt64 <l4a4c496e743634>`\ ) -> % 
+:spadfun:`O`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
   0() creates the default Big-oh from domain parameters.
 
 .. _l457874656e6465644e4d5061646963496e7465676572-6f6e653f:
@@ -485,16 +535,21 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 .. index::
    pair: ExtendedNMPadicInteger; precision
 
-:spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
+:spadfun:`precision`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
    
+
+.. _l457874656e6465644e4d5061646963496e7465676572-7072696d653f:
+
+\ :ref:`prime? <l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l457874656e6465644e4d5061646963496e7465676572-7072696d65:
 
 .. index::
    pair: ExtendedNMPadicInteger; prime
 
-:spadfun:`prime`\: () -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-   
+:spadfun:`prime`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+  \ ``prime(x)``\  returns the modulus used for \ ``x``\ . Convenience function.
 
 .. _l457874656e6465644e4d5061646963496e7465676572-7072696e636970616c496465616c:
 
@@ -547,15 +602,18 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 .. _l457874656e6465644e4d5061646963496e7465676572-73717274:
 
-.. index::
-   pair: ExtendedNMPadicInteger; sqrt
+\ :ref:`sqrt <l5261646963616c43617465676f7279-73717274>`\ \: % -> % 
+  from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
 
-:spadfun:`sqrt`\: % -> % 
-  \ ``sqrt(x)``\  returns square root of \ ``x``\  if
+.. _l457874656e6465644e4d5061646963496e7465676572-73717561726546726565:
 
+\ :ref:`squareFree <l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
+  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
-\ :ref:`sqrt <l4e4d5061646963496e746567657243617465676f7279-73717274>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  p
+.. _l457874656e6465644e4d5061646963496e7465676572-7371756172654672656550617274:
+
+\ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % 
+  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l457874656e6465644e4d5061646963496e7465676572-737472696e67:
 
@@ -612,11 +670,19 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 
+\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) 
 
+\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
+
 \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
+
+\ :ref:`canonicalsClosed <l63616e6f6e6963616c73436c6f736564>`\  
+
+\ :ref:`canonicalUnitNormal <l63616e6f6e6963616c556e69744e6f726d616c>`\  
 
 \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  
 
@@ -628,9 +694,15 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
 
+\ :ref:`DivisionRing <l4469766973696f6e52696e67>`\  
+
+\ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\  
+
 \ :ref:`EntireRing <l456e7469726552696e67>`\  
 
 \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  
+
+\ :ref:`Field <l4669656c64>`\  
 
 \ :ref:`GcdDomain <l476364446f6d61696e>`\  
 
@@ -646,6 +718,8 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  
 
 \ :ref:`Magma <l4d61676d61>`\  
@@ -653,6 +727,8 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  
 
 \ :ref:`Module <l4d6f64756c65>`\  % 
+
+\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
@@ -666,6 +742,8 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
 
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+
 \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  
 
 \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\  
@@ -678,7 +756,11 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 
 \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\  
 
+\ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\  
+
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
+
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`Ring <l52696e67>`\  
 
@@ -693,6 +775,8 @@ This domain implements \ ``Zp``\ , the \ ``p``\ -adic completion of the integers
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
+
+\ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  
 
 \ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  
 

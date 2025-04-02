@@ -5,7 +5,7 @@
 NMInteger
 =========
 
-:viewcode:`jnemo.spad line 43 <jnemo.spad#L43>` :editcode:`[edit on github] <jnemo.spad#L43>`
+:viewcode:`jnemo.spad line 80 <jnemo.spad#L80>` :editcode:`[edit on github] <jnemo.spad#L80>`
 
 
 This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  package for \ ``JL``\  (FLINT based). https://flintlib.org/
@@ -149,6 +149,10 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 
 .. _l4e4d496e7465676572-6368617261637465726973746963:
 
+\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -260,6 +264,11 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
+.. _l4e4d496e7465676572-657175616c3f:
+
+\ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d496e7465676572-6575636c696465616e53697a65:
 
 \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -269,6 +278,16 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 
 \ :ref:`even? <l496e74656765724e756d62657253797374656d-6576656e3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+
+.. _l4e4d496e7465676572-65786163743f:
+
+\ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d496e7465676572-6578616374446976696465:
+
+\ :ref:`exactDivide <l4e4d52696e67-6578616374446976696465>`\ \: (%, %) -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d496e7465676572-65787072657373496465616c4d656d626572:
 
@@ -320,8 +339,8 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 
 .. _l4e4d496e7465676572-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e4d496e7465676572-696e63:
 
@@ -332,6 +351,18 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 
 \ :ref:`init <l537465705468726f756768-696e6974>`\ \: % 
   from \ :ref:`StepThrough <l537465705468726f756768>`\ 
+
+.. _l4e4d496e7465676572-696e7665727365:
+
+\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+
+.. index::
+   pair: NMInteger; inverse
+
+:spadfun:`inverse`\: % -> \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+   
 
 .. _l4e4d496e7465676572-696e766d6f64:
 
@@ -367,6 +398,11 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 .. _l4e4d496e7465676572-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d496e7465676572-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d496e7465676572-6a6c4964:
@@ -703,6 +739,14 @@ This domain allows the manipulation of \ ``NM``\  integers using the \ ``NM``\  
 
 \ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e4d496e7465676572-5a5a:
+
+.. index::
+   pair: NMInteger; ZZ
+
+:spadfun:`ZZ`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ ``ZZ(i)``\  RETURNS A Nemo integer.
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  

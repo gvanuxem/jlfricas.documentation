@@ -5,7 +5,7 @@
 FiniteCoDcpo S
 ==============
 
-:viewcode:`logic.spad line 1633 <logic.spad#L1633>` :editcode:`[edit on github] <logic.spad#L1633>`
+:viewcode:`logic.spad line 1540 <logic.spad#L1540>` :editcode:`[edit on github] <logic.spad#L1540>`
 
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
@@ -30,10 +30,6 @@ holds a complete set together with a structure to codify the partial order. for 
 
 .. _l46696e697465436f4463706f-6164644172726f7721:
 
-\ :ref:`addArrow! <l506f736574-6164644172726f7721>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  from \ :ref:`Poset <l506f736574>`\  S
-
-
 \ :ref:`addArrow! <l46696e6974654772617068-6164644172726f7721>`\ \: (%, Record(name: \ :ref:`String <l537472696e67>`\ , arrType: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , fromOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , toOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , xOffset: \ :ref:`Integer <l496e7465676572>`\ , yOffset: \ :ref:`Integer <l496e7465676572>`\ , map: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
@@ -49,13 +45,23 @@ holds a complete set together with a structure to codify the partial order. for 
 \ :ref:`addArrow! <l46696e6974654772617068-6164644172726f7721>`\ \: (%, \ :ref:`String <l537472696e67>`\ , S, S) -> % 
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
+.. _l46696e697465436f4463706f-6164644172726f77:
+
+\ :ref:`addArrow <l506f736574-6164644172726f77>`\ \: (%, S, S) -> % 
+  from \ :ref:`Poset <l506f736574>`\  S
+
 .. _l46696e697465436f4463706f-6164644f626a65637421:
 
 \ :ref:`addObject! <l46696e6974654772617068-6164644f626a65637421>`\ \: (%, Record(value: S, posX: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , posY: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
 
-\ :ref:`addObject! <l506f736574-6164644f626a65637421>`\ \: (%, S) -> % 
+\ :ref:`addObject! <l46696e6974654772617068-6164644f626a65637421>`\ \: (%, S) -> % 
+  from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
+
+.. _l46696e697465436f4463706f-6164644f626a656374:
+
+\ :ref:`addObject <l506f736574-6164644f626a656374>`\ \: (%, S) -> % 
   from \ :ref:`Poset <l506f736574>`\  S
 
 .. _l46696e697465436f4463706f-61646a6163656e63794d6174726978:
@@ -92,16 +98,6 @@ holds a complete set together with a structure to codify the partial order. for 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
-
-.. _l46696e697465436f4463706f-636f6d706c6574655265666c65786976697479:
-
-\ :ref:`completeReflexivity <l506f736574-636f6d706c6574655265666c65786976697479>`\ \: % -> % 
-  from \ :ref:`Poset <l506f736574>`\  S
-
-.. _l46696e697465436f4463706f-636f6d706c6574655472616e7369746976697479:
-
-\ :ref:`completeTransitivity <l506f736574-636f6d706c6574655472616e7369746976697479>`\ \: % -> % 
-  from \ :ref:`Poset <l506f736574>`\  S
 
 .. _l46696e697465436f4463706f-636f7665724d6174726978:
 
@@ -252,11 +248,6 @@ holds a complete set together with a structure to codify the partial order. for 
 \ :ref:`isAntiChain? <l506f736574-6973416e7469436861696e3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Poset <l506f736574>`\  S
 
-.. _l46696e697465436f4463706f-6973416e746973796d6d65747269633f:
-
-\ :ref:`isAntisymmetric? <l506f736574-6973416e746973796d6d65747269633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`Poset <l506f736574>`\  S
-
 .. _l46696e697465436f4463706f-6973436861696e3f:
 
 \ :ref:`isChain? <l506f736574-6973436861696e3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -313,7 +304,7 @@ holds a complete set together with a structure to codify the partial order. for 
 
 .. _l46696e697465436f4463706f-6c65:
 
-\ :ref:`le <l5072656f72646572-6c65>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+\ :ref:`le <l5072656f72646572-6c65>`\ \: (%, S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Preorder <l5072656f72646572>`\  S
 
 .. _l46696e697465436f4463706f-6c6f6f70734172726f7773:
@@ -433,11 +424,6 @@ holds a complete set together with a structure to codify the partial order. for 
 \ :ref:`outDegree <l46696e6974654772617068-6f7574446567726565>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
 
-.. _l46696e697465436f4463706f-706f776572536574537472756374757265:
-
-\ :ref:`powerSetStructure <l506f736574-706f776572536574537472756374757265>`\ \: S -> % 
-  from \ :ref:`Poset <l506f736574>`\  S
-
 .. _l46696e697465436f4463706f-726f7574654172726f7773:
 
 \ :ref:`routeArrows <l46696e6974654772617068-726f7574654172726f7773>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -447,16 +433,6 @@ holds a complete set together with a structure to codify the partial order. for 
 
 \ :ref:`routeNodes <l46696e6974654772617068-726f7574654e6f646573>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`FiniteGraph <l46696e6974654772617068>`\  S
-
-.. _l46696e697465436f4463706f-736574417272:
-
-\ :ref:`setArr <l506f736574-736574417272>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  from \ :ref:`Poset <l506f736574>`\  S
-
-.. _l46696e697465436f4463706f-73657456657274:
-
-\ :ref:`setVert <l506f736574-73657456657274>`\ \: (%, \ :ref:`List <l4c697374>`\  S) -> \ :ref:`Void <l566f6964>`\  
-  from \ :ref:`Poset <l506f736574>`\  S
 
 .. _l46696e697465436f4463706f-7370616e6e696e67466f726573744172726f77:
 
