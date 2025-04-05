@@ -8,7 +8,7 @@ JLF32ArrayFunctions
 :viewcode:`jafunctions.spad line 1 <jafunctions.spad#L1>` :editcode:`[edit on github] <jafunctions.spad#L1>`
 
 
-This package provides different \ ``JL``\  utility functions for operations using CPU/GPU supported data types. Internal package.
+This package provides different Julia utility functions for operations using CPU/GPU supported data types. Internal package.
 
 
 .. _l4a4c463332417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e21:
@@ -17,7 +17,7 @@ This package provides different \ ``JL``\  utility functions for operations usin
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, cvec1, cvec2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``cvec2``\  and overwrites \ ``cvec1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' for example.
+  \ ``jlApplyFunction!(func, cvec1, cvec2)``\  applies the Julia function \ ``func``\  to \ ``cvec2``\  and overwrites \ ``cvec1``\  with the result. Please note that overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
 
 
 .. index::
@@ -31,42 +31,42 @@ This package provides different \ ``JL``\  utility functions for operations usin
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, carray, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``carray``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``carray``\ . Can be used with \ ``JL``\  'sqrt' for example.
+  \ ``jlApplyFunction!(func, carray, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``carray``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``carray``\ . Can be used with Julia 'sqrt' for example.
 
 
 .. index::
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, cmat1, cmat2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``cmat2``\  and overwrites \ ``cmat1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' or adjoint! for example.
+  \ ``jlApplyFunction!(func, cmat1, cmat2)``\  applies the Julia function \ ``func``\  to \ ``cmat2``\  and overwrites \ ``cmat1``\  with the result. Please note that overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
 
 
 .. index::
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`JLComplexF32Vector <l4a4c436f6d706c6578463332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, array, cmat, nr)``\  applies the function \ ``func``\  to the matrix \ ``cmat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with \ ``JL``\  'real' or 'imag' for example.
+  \ ``jlApplyFunction!(func, array, cmat, nr)``\  applies the function \ ``func``\  to the matrix \ ``cmat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with Julia 'real' or 'imag' for example.
 
 
 .. index::
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, vec1, vec2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``vec2``\  and overwrites \ ``vec1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' for example.
+  \ ``jlApplyFunction!(func, vec1, vec2)``\  applies the Julia function \ ``func``\  to \ ``vec2``\  and overwrites \ ``vec1``\  with the result. Please note that overwriting is done by Julia and not FriCAS. See Julia 'copy!' for example.
 
 
 .. index::
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, array, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with \ ``JL``\  'inv' for example.
+  \ ``jlApplyFunction!(func, array, mat, nr)``\  applies the function \ ``func``\  to the matrix \ ``mat``\  and returns the result in \ ``array``\ . It is FriCAS that puts, at the \ ``C``\  level, the resulting matrix in \ ``array``\ . Can be used with Julia 'inv' for example.
 
 
 .. index::
    pair: JLF32ArrayFunctions; jlApplyFunction!
 
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat32Vector <l4a4c466c6f61743332566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApplyFunction!(func, mat1, mat2)``\  applies the \ ``JL``\  function \ ``func``\  to \ ``mat2``\  and overwrites \ ``mat1``\  with the result. Please note that overwriting is done by \ ``JL``\  and not FriCAS. See \ ``JL``\  'copy!' or transpose! for example.
+  \ ``jlApplyFunction!(func, mat1, mat2)``\  applies the Julia function \ ``func``\  to \ ``mat2``\  and overwrites \ ``mat1``\  with the result. Please note that overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
 
 .. _l4a4c463332417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e:
 

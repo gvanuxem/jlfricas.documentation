@@ -10,7 +10,7 @@ InnerNMExactCalciumField Options
 * Options: \ :ref:`JLObjDict <l4a4c4f626a44696374>`\ 
 
 
-\ :ref:`InnerNMExactCalciumField <l496e6e65724e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the \ ``NM``\  package Inner domain using options, see https://fredrikj.net/calcium/ca.html\#context-options for hints). Reference: https://nemocas.github.io/NM.\ ``jl``\  See https://flintlib.org/doc/introduction_calcium.html for the \ ``C``\  library.
+\ :ref:`InnerNMExactCalciumField <l496e6e65724e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo package Inner domain using options, see https://fredrikj.net/calcium/ca.html\#context-options for hints). Reference: https://nemocas.github.io/Nemo.\ ``jl``\  See https://flintlib.org/doc/introduction_calcium.html for the \ ``C``\  library.
 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-30:
@@ -352,7 +352,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; complexNormalForm
 
 :spadfun:`complexNormalForm`\: % -> % 
-  \ ``complexNormalForm(x)``\  returns \ ``x``\  rewritten using standard transformations. See the \ ``NM``\ .\ ``jl``\  documentation fo more informations.
+  \ ``complexNormalForm(x)``\  returns \ ``x``\  rewritten using standard transformations. See the Nemo.\ ``jl``\  documentation fo more informations.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-636f6e646974696f6e50:
 
@@ -725,35 +725,35 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; jinecf
 
 :spadfun:`jinecf`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``jinecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a \ ``NM``\  exact complex number where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
+  \ ``jinecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a Nemo exact complex number where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
 
 
 .. index::
    pair: InnerNMExactCalciumField; jinecf
 
 :spadfun:`jinecf`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``jinecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a \ ``NM``\  exact where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
+  \ ``jinecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a Nemo exact where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
 
 
 .. index::
    pair: InnerNMExactCalciumField; jinecf
 
 :spadfun:`jinecf`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jinecf(fi)``\  coerces \ ``fi``\  to a \ ``NM``\  real exact number.
+  \ ``jinecf(fi)``\  coerces \ ``fi``\  to a Nemo real exact number.
 
 
 .. index::
    pair: InnerNMExactCalciumField; jinecf
 
 :spadfun:`jinecf`\: \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  -> % 
-  \ ``jinecf(qbar)``\  coerces \ ``qbar``\  to a \ ``NM``\  exact real or complex number.
+  \ ``jinecf(qbar)``\  coerces \ ``qbar``\  to a Nemo exact real or complex number.
 
 
 .. index::
    pair: InnerNMExactCalciumField; jinecf
 
 :spadfun:`jinecf`\: \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``jinecf(nr)``\  coerces \ ``nr``\  to a \ ``NM``\  exact real number.
+  \ ``jinecf(nr)``\  coerces \ ``nr``\  to a Nemo exact real number.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c41626f7574:
 
@@ -812,7 +812,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; jlOptions
 
 :spadfun:`jlOptions`\: % -> \ :ref:`JLObjDict <l4a4c4f626a44696374>`\  
-  \ ``jlOptions(x)``\  returns the options set at instantiation time that affect different aspects of computations. See \ ``NM``\  documentation.
+  \ ``jlOptions(x)``\  returns the options set at instantiation time that affect different aspects of computations. See Nemo documentation.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c526566:
 
@@ -975,7 +975,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; pow
 
 :spadfun:`pow`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``pow(x, i, repr)``\  \ ``x``\  raised to power \ ``i``\  using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :arithmetic See the \ ``NM``\  documentation for more information, and InnerNMExactCalciumField for more options.
+  \ ``pow(x, i, repr)``\  \ ``x``\  raised to power \ ``i``\  using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :arithmetic See the Nemo documentation for more information, and InnerNMExactCalciumField for more options.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-7072696d653f:
 

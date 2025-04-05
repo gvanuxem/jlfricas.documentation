@@ -14,7 +14,7 @@ NMMultivariatePolynomial(R, VarSet, InternalOrdering)
 * InternalOrdering: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the \ ``JL``\  pakage \ ``NM``\ . It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z:f:V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate polynomials using the Julia pakage Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z:f:V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
 
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-30:
@@ -198,7 +198,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariatePolynomial; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  R 
-  \ ``coefficients(p)``\  returns a \ ``JL``\  vector of coefficients of \ ``p``\ .
+  \ ``coefficients(p)``\  returns a Julia vector of coefficients of \ ``p``\ .
 
 
 \ :ref:`coefficients <l467265654d6f64756c6543617465676f7279-636f656666696369656e7473>`\ \: % -> \ :ref:`List <l4c697374>`\  R 
@@ -572,7 +572,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariatePolynomial; jmp2nmp
 
 :spadfun:`jmp2nmp`\: \ :ref:`MultivariatePolynomial <l4d756c746976617269617465506f6c796e6f6d69616c>`\ (VarSet, R) -> % 
-  jnmp(\ ``p``\ ) converts the multivariate polynomial \ ``p``\  to a \ ``NM``\  multivariate polynomial.
+  jnmp(\ ``p``\ ) converts the multivariate polynomial \ ``p``\  to a Nemo multivariate polynomial.
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6c61746578:
 

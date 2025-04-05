@@ -46,7 +46,7 @@
   <section id="jlobjbigint">
 <span id="l4a4c4f626a426967496e74"></span><span id="index-0"></span><h1>JLObjBigInt<a class="headerlink" href="#jlobjbigint" title="Link to this heading">¶</a></h1>
 <p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L667">jobject.spad line 667</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L667">[edit on github]</a></p>
-<p>Convenience domain for <code class="docutils literal notranslate"><span class="pre">JL</span></code> BigInt, objects that are used within <code class="docutils literal notranslate"><span class="pre">JL</span></code>, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example. It is also not meant to replace NMInteger, which uses <code class="docutils literal notranslate"><span class="pre">GMP</span></code>, but basic arithmetic operations are supported. Use the <code class="docutils literal notranslate"><span class="pre">GMP</span></code> library: <a class="reference external" href="https://gmplib.org/">https://gmplib.org/</a></p>
+<p>Convenience domain for Julia BigInt, objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example. It is also not meant to replace NMInteger, which uses <code class="docutils literal notranslate"><span class="pre">GMP</span></code>, but basic arithmetic operations are supported. Use the <code class="docutils literal notranslate"><span class="pre">GMP</span></code> library: <a class="reference external" href="https://gmplib.org/">https://gmplib.org/</a></p>
 <dl class="simple" id="l4a4c4f626a426967496e74-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -182,11 +182,11 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a426967496e74-6a626967696e74"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">jbigint</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jbigint(z)</span></code> converts <code class="docutils literal notranslate"><span class="pre">z</span></code> to a <code class="docutils literal notranslate"><span class="pre">JL</span></code> BigInt.</p>
+<dt><span class="spadfun">jbigint</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jbigint(z)</span></code> converts <code class="docutils literal notranslate"><span class="pre">z</span></code> to a Julia BigInt.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">jbigint</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jbigint(z)</span></code> returns the string <code class="docutils literal notranslate"><span class="pre">str</span></code> evaluated in <code class="docutils literal notranslate"><span class="pre">JL</span></code> where the returned value is assumed to be a <code class="docutils literal notranslate"><span class="pre">JL</span></code> BigInt. example{jbigint “BigInt(1234567890)”}</p>
+<dt><span class="spadfun">jbigint</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jbigint(z)</span></code> returns the string <code class="docutils literal notranslate"><span class="pre">str</span></code> evaluated in Julia where the returned value is assumed to be a Julia BigInt. example{jbigint “BigInt(1234567890)”}</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a426967496e74-6a6c41626f7574">

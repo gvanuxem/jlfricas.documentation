@@ -8,7 +8,7 @@ JLFloat
 :viewcode:`jobject.spad line 888 <jobject.spad#L888>` :editcode:`[edit on github] <jobject.spad#L888>`
 
 
-\ :ref:`JLFloat <l4a4c466c6f6174>`\  implements arbitrary precision floating point arithmetic using \ ``JL``\  BigFloats. Use the MPFR library: https://www.mpfr.org/
+\ :ref:`JLFloat <l4a4c466c6f6174>`\  implements arbitrary precision floating point arithmetic using Julia BigFloats. Use the MPFR library: https://www.mpfr.org/
 
 
 .. _l4a4c466c6f6174-30:
@@ -634,21 +634,21 @@ JLFloat
    pair: JLFloat; jlMPFRApply
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %) -> % 
-  \ ``jlMPFRApply(func,x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses \ ``JL``\  rounding mode, default to nearest. \example{mpfr:=jlDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_gamma))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val)} \ ``=>``\  1.29805533264755778568117117915281161778... \example{jlDlClose(mpfr)}
+  \ ``jlMPFRApply(func,x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. \example{mpfr:=jlDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_gamma))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val)} \ ``=>``\  1.29805533264755778568117117915281161778... \example{jlDlClose(mpfr)}
 
 
 .. index::
    pair: JLFloat; jlMPFRApply
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %, %) -> % 
-  \ ``jlMPFRApply(func,x,y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses \ ``JL``\  rounding mode, default to nearest. \example{mpfr:=j lDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_pow))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val, jfloat(2))} \example{jlDlClose(mpfr)}
+  \ ``jlMPFRApply(func,x,y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. \example{mpfr:=j lDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_pow))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val, jfloat(2))} \example{jlDlClose(mpfr)}
 
 
 .. index::
    pair: JLFloat; jlMPFRApply
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %, %, %) -> % 
-  \ ``jlMPFRApply(func,x,y,z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses \ ``JL``\  rounding mode, default to nearest. \example{mpfr:=j lDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_fma))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val, jfloat(2), jfloat(5))} \example{jlDlClose(mpfr)}
+  \ ``jlMPFRApply(func,x,y,z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . It is expected that the \ ``C``\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses Julia rounding mode, default to nearest. \example{mpfr:=j lDlOpen "libmpfr"} \example{sym:= jlDlSym(mpfr,jsym(mpfr_fma))} \example{val:=jfloat("0.7");} \example{jlMPFRApply(sym,val, jfloat(2), jfloat(5))} \example{jlDlClose(mpfr)}
 
 .. _l4a4c466c6f6174-6a6c4f626a656374:
 

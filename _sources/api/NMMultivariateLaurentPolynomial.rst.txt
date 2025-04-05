@@ -12,7 +12,7 @@ NMMultivariateLaurentPolynomial(R, VarSet)
 * VarSet: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the \ ``JL``\  pakage \ ``NM``\ . It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  LPRing \ ``:=``\  NMLP(NINT,VarSet) \ ``x``\  \ ``:=``\  x::V::LPRing \ ``y``\  \ ``:=``\  y::V::LPRing \ ``z``\  \ ``:=``\  z::V::LPRing p:=x*2+3*y^2+17*z^-13 \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate polynomials using the Julia pakage Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  LPRing \ ``:=``\  NMLP(NINT,VarSet) \ ``x``\  \ ``:=``\  x::V::LPRing \ ``y``\  \ ``:=``\  y::V::LPRing \ ``z``\  \ ``:=``\  z::V::LPRing p:=x*2+3*y^2+17*z^-13 \ ``p^7``\ 
 
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-30:
@@ -203,7 +203,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  R 
-  \ ``coefficients(p)``\  returns a \ ``JL``\  vector of coefficients of \ ``p``\ .
+  \ ``coefficients(p)``\  returns a Julia vector of coefficients of \ ``p``\ .
 
 
 \ :ref:`coefficients <l467265654d6f64756c6543617465676f7279-636f656666696369656e7473>`\ \: % -> \ :ref:`List <l4c697374>`\  R 
@@ -652,7 +652,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; jmp2nmlp
 
 :spadfun:`jmp2nmlp`\: \ :ref:`MultivariatePolynomial <l4d756c746976617269617465506f6c796e6f6d69616c>`\ (VarSet, R) -> % 
-  jnmp(\ ``p``\ ) converts the multivariate polynomial \ ``p``\  to a \ ``NM``\  multivariate polynomial.
+  jnmp(\ ``p``\ ) converts the multivariate polynomial \ ``p``\  to a Nemo multivariate polynomial.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6c61746578:
 
@@ -765,7 +765,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; mapCoefficients
 
 :spadfun:`mapCoefficients`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %) -> % 
-  \ ``mapCoefficients(jmap, p)``\  applies the \ ``JL``\  map \ ``jmap``\  to the coefficients of \ ``p``\  an returns the modified Laurent polynomial. Use coerce to change the base ring.
+  \ ``mapCoefficients(jmap, p)``\  applies the Julia map \ ``jmap``\  to the coefficients of \ ``p``\  an returns the modified Laurent polynomial. Use coerce to change the base ring.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6d61704578706f6e656e7473:
 
@@ -1046,7 +1046,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; symbols
 
 :spadfun:`symbols`\: () -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``symbols()``\  returns a \ ``JL``\  vector of variables (\ ``JL``\  symbols).
+  \ ``symbols()``\  returns a Julia vector of variables (Julia symbols).
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-7465726d5265637572736976653f:
 

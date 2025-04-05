@@ -10,7 +10,7 @@ JLMatrix R
 * R: \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
 
 
-This domain provides a generic \ ``JL``\  matrix type stored in \ ``JL``\  with no bound checking on elt\ ``'s``\ . Minimum index is 1. Beware, for matrix with \ ``NM``\  elements, contrary to \ ``JL``\  matrix, \ ``NM``\  follows the convention of the \ ``C``\  libraries, it wraps and uses row major representation. See https://nemocas.github.io/NM.jl/stable/developer/interfaces/\#Column-major-\ ``vs``\ -row-major-matrices for more information.
+This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt\ ``'s``\ . Minimum index is 1. Beware, for matrix with \ ``NM``\  elements, contrary to Julia matrix, \ ``NM``\  follows the convention of the \ ``C``\  libraries, it wraps and uses row major representation. See https://nemocas.github.io/NM.jl/stable/developer/interfaces/\#Column-major-\ ``vs``\ -row-major-matrices for more information.
 
 
 .. _l4a4c4d6174726978-23:
@@ -405,7 +405,7 @@ This domain provides a generic \ ``JL``\  matrix type stored in \ ``JL``\  with 
    pair: JLMatrix; inverse
 
 :spadfun:`inverse`\: % -> % 
-  \ ``inverse(m)``\  returns inverse matrix. Throws a \ ``JL``\  error if \ ``m``\  is no invertible.
+  \ ``inverse(m)``\  returns inverse matrix. Throws a Julia error if \ ``m``\  is no invertible.
 
 
 \ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) if R has \ :ref:`Field <l4669656c64>`\ 
@@ -719,7 +719,7 @@ This domain provides a generic \ ``JL``\  matrix type stored in \ ``JL``\  with 
    pair: JLMatrix; radicalEigenvalues
 
 :spadfun:`radicalEigenvalues`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  or R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``radicalEigenvalues(mat)``\  returns a \ ``JL``\  vector containing the eigenvalues of \ ``mat``\ .
+  \ ``radicalEigenvalues(mat)``\  returns a Julia vector containing the eigenvalues of \ ``mat``\ .
 
 .. _l4a4c4d6174726978-7261646963616c456967656e76616c756573576974684d756c7469706c69636974696573:
 
@@ -727,7 +727,7 @@ This domain provides a generic \ ``JL``\  matrix type stored in \ ``JL``\  with 
    pair: JLMatrix; radicalEigenvaluesWithMultiplicities
 
 :spadfun:`radicalEigenvaluesWithMultiplicities`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObjTuple <l4a4c4f626a5475706c65>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  or R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``radicalEigenvaluesWithMultiplicities(mat)``\  returns a \ ``JL``\  vector containing \ ``JL``\  tuples of the eigenvalues and their multiplicities. The tuples are of internal type (NMAlgebraicNumber, \ ``JLObjInt64``\ ).
+  \ ``radicalEigenvaluesWithMultiplicities(mat)``\  returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities. The tuples are of internal type (NMAlgebraicNumber, \ ``JLObjInt64``\ ).
 
 .. _l4a4c4d6174726978-72616e6b:
 

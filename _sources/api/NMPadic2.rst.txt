@@ -5,10 +5,10 @@
 NMPadic2
 ========
 
-:viewcode:`jnpadic.spad line 241 <jnpadic.spad#L241>` :editcode:`[edit on github] <jnpadic.spad#L241>`
+:viewcode:`jnpadic.spad line 236 <jnpadic.spad#L236>` :editcode:`[edit on github] <jnpadic.spad#L236>`
 
 
-Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``i``\  = 0.., a[\ ``i``\ ] * p^i), where the a[\ ``i``\ ] lie in 0, 1, ..., (\ ``p``\  - 1).
+Implementation of \ ``Zp:``\  here, 2-adic numbers are represented as sum(\ ``i``\  = 0.., a[\ ``i``\ ] * p^i), where the a[\ ``i``\ ] lie in 0, 1, ..., (\ ``p``\  - 1).
 
 
 .. _l4e4d506164696332-30:
@@ -27,10 +27,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-
-
 .. index::
    pair: NMPadic2; *
 
@@ -43,10 +39,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 :spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
   
-
-
-\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -116,11 +108,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
-.. _l4e4d506164696332-2f:
-
-\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
-  from \ :ref:`Field <l4669656c64>`\ 
-
 .. _l4e4d506164696332-3d:
 
 \ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -134,10 +121,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`^ <l5261646963616c43617465676f7279-5e>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
-
-
-\ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
 
 \ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -164,8 +147,8 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 .. _l4e4d506164696332-617070726f78696d617465:
 
-\ :ref:`approximate <l4e4d5061646963496e746567657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`approximate <l4e4d50616469634e756d62657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-6173736f6369617465733f:
 
@@ -200,10 +183,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-
-
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -221,8 +200,8 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 .. _l4e4d506164696332-636f6d706c657465:
 
-\ :ref:`complete <l4e4d5061646963496e746567657243617465676f7279-636f6d706c657465>`\ \: % -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`complete <l4e4d50616469634e756d62657243617465676f7279-636f6d706c657465>`\ \: % -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-636f6e76657274:
 
@@ -271,8 +250,8 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 .. _l4e4d506164696332-657874656e64:
 
-\ :ref:`extend <l4e4d5061646963496e746567657243617465676f7279-657874656e64>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`extend <l4e4d50616469634e756d62657243617465676f7279-657874656e64>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-657874656e6465644575636c696465616e:
 
@@ -282,11 +261,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`extendedEuclidean <l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e>`\ \: (%, %, %) -> Union(Record(coef1: %, coef2: %), failed) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-
-.. _l4e4d506164696332-666163746f72:
-
-\ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
-  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e4d506164696332-676364:
 
@@ -301,11 +275,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-
-.. _l4e4d506164696332-696e76:
-
-\ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
-  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
 .. _l4e4d506164696332-696e7665727365:
 
@@ -449,13 +418,13 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 .. _l4e4d506164696332-6d6f64756c6f50:
 
-\ :ref:`moduloP <l4e4d5061646963496e746567657243617465676f7279-6d6f64756c6f50>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`moduloP <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c6f50>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-6d6f64756c7573:
 
-\ :ref:`modulus <l4e4d5061646963496e746567657243617465676f7279-6d6f64756c7573>`\ \: () -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`modulus <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c7573>`\ \: () -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-6d756c74694575636c696465616e:
 
@@ -497,13 +466,13 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 .. _l4e4d506164696332-6f72646572:
 
-\ :ref:`order <l4e4d5061646963496e746567657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`order <l4e4d50616469634e756d62657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e4d506164696332-707265636973696f6e:
 
@@ -512,11 +481,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 :spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
   
-
-.. _l4e4d506164696332-7072696d653f:
-
-\ :ref:`prime? <l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e4d506164696332-7072696d65:
 
@@ -538,8 +502,8 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 .. _l4e4d506164696332-71756f7469656e74427950:
 
-\ :ref:`quotientByP <l4e4d5061646963496e746567657243617465676f7279-71756f7469656e74427950>`\ \: % -> % 
-  from \ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2
+\ :ref:`quotientByP <l4e4d50616469634e756d62657243617465676f7279-71756f7469656e74427950>`\ \: % -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2
 
 .. _l4e4d506164696332-7265636970:
 
@@ -579,16 +543,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`sqrt <l5261646963616c43617465676f7279-73717274>`\ \: % -> % 
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
-
-.. _l4e4d506164696332-73717561726546726565:
-
-\ :ref:`squareFree <l556e69717565466163746f72697a6174696f6e446f6d61696e-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
-  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
-
-.. _l4e4d506164696332-7371756172654672656550617274:
-
-\ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % 
-  from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
 .. _l4e4d506164696332-737472696e67:
 
@@ -645,19 +599,11 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 
-\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) 
 
-\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
-
 \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
-
-\ :ref:`canonicalsClosed <l63616e6f6e6963616c73436c6f736564>`\  
-
-\ :ref:`canonicalUnitNormal <l63616e6f6e6963616c556e69744e6f726d616c>`\  
 
 \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  
 
@@ -669,15 +615,11 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
 
-\ :ref:`DivisionRing <l4469766973696f6e52696e67>`\  
-
 \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\  
 
 \ :ref:`EntireRing <l456e7469726552696e67>`\  
 
 \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\  
-
-\ :ref:`Field <l4669656c64>`\  
 
 \ :ref:`GcdDomain <l476364446f6d61696e>`\  
 
@@ -693,8 +635,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
-\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  
 
 \ :ref:`Magma <l4d61676d61>`\  
@@ -703,21 +643,17 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`Module <l4d6f64756c65>`\  % 
 
-\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
 
-\ :ref:`NMPadicIntegerCategory <l4e4d5061646963496e746567657243617465676f7279>`\  2 
+\ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  2 
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 
 \ :ref:`NMType <l4e4d54797065>`\  
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
-
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  
 
@@ -735,8 +671,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`Ring <l52696e67>`\  
 
 \ :ref:`Rng <l526e67>`\  
@@ -750,8 +684,6 @@ Implementation of \ ``Zp:``\  \ ``p``\ -adic numbers are represented as sum(\ ``
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
-
-\ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  
 
 \ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  
 
