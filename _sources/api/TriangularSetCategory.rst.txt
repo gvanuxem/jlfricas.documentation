@@ -16,7 +16,7 @@ TriangularSetCategory(R, E, V, P)
 * P: \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, E, V)
 
 
-The category of triangular sets of multivariate polynomials with coefficients in an integral domain. Let \ ``R``\  be an integral domain and \ ``V``\  a finite ordered set of variables, say \ ``X1 < X2 < ... < Xn``\ . A set \ ``S``\  of polynomials in \ ``R[X1, X2, ..., Xn]``\  is triangular if no elements of \ ``S``\  lies in \ ``R``\ , and if two distinct elements of \ ``S``\  have distinct main variables. Note that the empty set is a triangular set. A triangular set is not necessarily a (lexicographical) Groebner basis and the notion of reduction related to triangular sets is based on the recursive view of polynomials. We recall this notion here and refer to [1] for more details. A polynomial \ ``P``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\  a non-constant polynomial \ ``Q``\  if the degree of \ ``P``\  in the main variable of \ ``Q``\  is less than the main degree of \ ``Q``\ . A polynomial \ ``P``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\  a triangular set \ ``T``\  if it is reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . every polynomial of \ ``T``\ .  
+The category of triangular sets of multivariate polynomials with coefficients in an integral domain. Let \ ``R``\  be an integral domain and \ ``V``\  a finite ordered set of variables, say \ ``X1 < X2 < ... < Xn``\ . A set \ ``S``\  of polynomials in \ ``R[X1, X2, ..., Xn]``\  is triangular if no elements of \ ``S``\  lies in \ ``R``\ , and if two distinct elements of \ ``S``\  have distinct main variables. Note that the empty set is a triangular set. A triangular set is not necessarily a (lexicographical) Groebner basis and the notion of reduction related to triangular sets is based on the recursive view of polynomials. We recall this notion here and refer to [1] for more details. A polynomial \ ``P``\  is reduced with respect to a non-constant polynomial \ ``Q``\  if the degree of \ ``P``\  in the main variable of \ ``Q``\  is less than the main degree of \ ``Q``\ . A polynomial \ ``P``\  is reduced with respect to a triangular set \ ``T``\  if it is reduced with respect to every polynomial of \ ``T``\ .  
 
 
 .. _l547269616e67756c617253657443617465676f7279-23:
@@ -61,7 +61,7 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; autoReduced?
 
 :spadfun:`autoReduced?`\: (%, (P, \ :ref:`List <l4c697374>`\  P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``autoReduced?(ts, redOp?)``\  returns \ ``true``\  iff every element of \ ``ts``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\  to every other in the sense of \ ``redOp?``\ 
+  \ ``autoReduced?(ts, redOp?)``\  returns \ ``true``\  iff every element of \ ``ts``\  is reduced with respect to every other in the sense of \ ``redOp?``\ .
 
 .. _l547269616e67756c617253657443617465676f7279-6261736963536574:
 
@@ -69,7 +69,7 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; basicSet
 
 :spadfun:`basicSet`\: (\ :ref:`List <l4c697374>`\  P, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> Union(Record(bas: %, top: \ :ref:`List <l4c697374>`\  P), failed) 
-  \ ``basicSet(ps, redOp?)``\  returns \ ``[bs, ts]``\  where \ ``concat(bs, ts)``\  is \ ``ps``\  and \ ``bs``\  is a basic set in Wu Wen Tsun sense of \ ``ps``\  \ ``w``\ .\ ``r``\ .\ ``t``\  the reduction-test \ ``redOp?``\ , if no non-zero constant polynomial lie in \ ``ps``\ , otherwise \ ``"failed"``\  is returned.
+  \ ``basicSet(ps, redOp?)``\  returns \ ``[bs, ts]``\  where \ ``concat(bs, ts)``\  is \ ``ps``\  and \ ``bs``\  is a basic set in Wu Wen Tsun sense of \ ``ps``\  with respect to the reduction-test \ ``redOp?``\ , if no non-zero constant polynomial lie in \ ``ps``\ , otherwise \ ``"failed"``\  is returned.
 
 
 .. index::
@@ -230,14 +230,14 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; headReduced?
 
 :spadfun:`headReduced?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``headReduced?(ts)``\  returns \ ``true``\  iff the head of every element of \ ``ts``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\  to any other element of \ ``ts``\ .
+  \ ``headReduced?(ts)``\  returns \ ``true``\  iff the head of every element of \ ``ts``\  is reduced with respect to any other element of \ ``ts``\ .
 
 
 .. index::
    pair: TriangularSetCategory; headReduced?
 
 :spadfun:`headReduced?`\: (P, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``headReduced?(p, ts)``\  returns \ ``true``\  iff the head of \ ``p``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``ts``\ .
+  \ ``headReduced?(p, ts)``\  returns \ ``true``\  iff the head of \ ``p``\  is reduced \ ``ts``\  \ ``ts``\ .
 
 .. _l547269616e67756c617253657443617465676f7279-6865616452656d61696e646572:
 
@@ -271,14 +271,14 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; initiallyReduced?
 
 :spadfun:`initiallyReduced?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``initiallyReduced?(ts)``\  returns \ ``true``\  iff for every element \ ``p``\  of \ ``ts``\  \ ``p``\  and all its iterated initials are reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . to the other elements of \ ``ts``\  with the same main variable.
+  \ ``initiallyReduced?(ts)``\  returns \ ``true``\  iff for every element \ ``p``\  of \ ``ts``\  \ ``p``\  and all its iterated initials are reduced with respect to the other elements of \ ``ts``\  with the same main variable.
 
 
 .. index::
    pair: TriangularSetCategory; initiallyReduced?
 
 :spadfun:`initiallyReduced?`\: (P, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``initiallyReduced?(p, ts)``\  returns \ ``true``\  iff \ ``p``\  and all its iterated initials are reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . to the elements of \ ``ts``\  with the same main variable.
+  \ ``initiallyReduced?(p, ts)``\  returns \ ``true``\  iff \ ``p``\  and all its iterated initials are reduced with respect to the elements of \ ``ts``\  with the same main variable.
 
 .. _l547269616e67756c617253657443617465676f7279-696e697469616c73:
 
@@ -373,7 +373,7 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; normalized?
 
 :spadfun:`normalized?`\: (P, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``normalized?(p, ts)``\  returns \ ``true``\  iff \ ``p``\  and all its iterated initials have degree zero \ ``w``\ .\ ``r``\ .\ ``t``\ . the main variables of the polynomials of \ ``ts``\ 
+  \ ``normalized?(p, ts)``\  returns \ ``true``\  iff \ ``p``\  and all its iterated initials have degree zero with respect to the main variables of the polynomials of \ ``ts``\ .
 
 .. _l547269616e67756c617253657443617465676f7279-7061727473:
 
@@ -422,7 +422,7 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; reduced?
 
 :spadfun:`reduced?`\: (P, %, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``reduced?(p, ts, redOp?)``\  returns \ ``true``\  iff \ ``p``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . in the sense of the operation \ ``redOp?``\ , that is if for every \ ``t``\  in \ ``ts``\  \ ``redOp?(p, t)``\  holds.
+  \ ``reduced?(p, ts, redOp?)``\  returns \ ``true``\  iff \ ``p``\  is reduced with respect to \ ``ts``\  in the sense of the operation \ ``redOp?``\ , that is if for every \ ``t``\  in \ ``ts``\  \ ``redOp?(p, t)``\  holds.
 
 .. _l547269616e67756c617253657443617465676f7279-72656d61696e646572:
 
@@ -449,7 +449,7 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; removeZero
 
 :spadfun:`removeZero`\: (P, %) -> P 
-  \ ``removeZero(p, ts)``\  returns \ ``0``\  if \ ``p``\  reduces to \ ``0``\  by pseudo-division \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``ts``\  otherwise returns a polynomial \ ``q``\  computed from \ ``p``\  by removing any coefficient in \ ``p``\  reducing to \ ``0``\ .
+  \ ``removeZero(p, ts)``\  returns \ ``0``\  if \ ``p``\  reduces to \ ``0``\  by pseudo-division with respect to \ ``ts``\  otherwise returns a polynomial \ ``q``\  computed from \ ``p``\  by removing any coefficient in \ ``p``\  reducing to \ ``0``\ .
 
 .. _l547269616e67756c617253657443617465676f7279-72657374:
 
@@ -548,14 +548,14 @@ The category of triangular sets of multivariate polynomials with coefficients in
    pair: TriangularSetCategory; stronglyReduced?
 
 :spadfun:`stronglyReduced?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``stronglyReduced?(ts)``\  returns \ ``true``\  iff every element of \ ``ts``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\  to any other element of \ ``ts``\ .
+  \ ``stronglyReduced?(ts)``\  returns \ ``true``\  iff every element of \ ``ts``\  is reduced with respect to any other element of \ ``ts``\ .
 
 
 .. index::
    pair: TriangularSetCategory; stronglyReduced?
 
 :spadfun:`stronglyReduced?`\: (P, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``stronglyReduced?(p, ts)``\  returns \ ``true``\  iff \ ``p``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``ts``\ .
+  \ ``stronglyReduced?(p, ts)``\  returns \ ``true``\  iff \ ``p``\  is reduced with respect to \ ``ts``\ .
 
 .. _l547269616e67756c617253657443617465676f7279-747269616e67756c61723f:
 

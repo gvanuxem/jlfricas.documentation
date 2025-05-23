@@ -27,7 +27,7 @@ A internal package for removing redundant quasi-components and redundant branche
    pair: SquareFreeQuasiComponentPackage; algebraicSort
 
 :spadfun:`algebraicSort`\: \ :ref:`List <l4c697374>`\  TS -> \ :ref:`List <l4c697374>`\  TS 
-  \ ``algebraicSort(lts)``\  sorts \ ``lts``\  \ ``w``\ .\ ``r``\ .\ ``t``\  \ :ref:`supDimElseRittWu <l5175617369436f6d706f6e656e745061636b616765-73757044696d456c7365526974745775>`\ .
+  \ ``algebraicSort(lts)``\  sorts \ ``lts``\  with respect to \ :ref:`supDimElseRittWu? <l5175617369436f6d706f6e656e745061636b616765-73757044696d456c73655269747457753f>`\ .
 
 .. _l537175617265467265655175617369436f6d706f6e656e745061636b616765-6272616e6368496643616e:
 
@@ -59,7 +59,7 @@ A internal package for removing redundant quasi-components and redundant branche
    pair: SquareFreeQuasiComponentPackage; internalSubPolSet?
 
 :spadfun:`internalSubPolSet?`\: (\ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  P) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``internalSubPolSet?(lp1, lp2)``\  returns \ ``true``\  iff \ ``lp1``\  is a sub-set of \ ``lp2``\  assuming that these lists are sorted increasingly \ ``w``\ .\ ``r``\ .\ ``t``\ . \ :ref:`infRittWu? <l526563757273697665506f6c796e6f6d69616c43617465676f7279-696e665269747457753f>`\ .
+  \ ``internalSubPolSet?(lp1, lp2)``\  returns \ ``true``\  iff \ ``lp1``\  is a sub-set of \ ``lp2``\  assuming that these lists are sorted increasingly with respect to \ :ref:`infRittWu? <l526563757273697665506f6c796e6f6d69616c43617465676f7279-696e665269747457753f>`\ .
 
 .. _l537175617265467265655175617369436f6d706f6e656e745061636b616765-696e7465726e616c5375625175617369436f6d706f6e656e743f:
 
@@ -75,7 +75,7 @@ A internal package for removing redundant quasi-components and redundant branche
    pair: SquareFreeQuasiComponentPackage; moreAlgebraic?
 
 :spadfun:`moreAlgebraic?`\: (TS, TS) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``moreAlgebraic?(ts, us)``\  returns \ ``false``\  iff \ ``ts``\  and \ ``us``\  are both empty, or \ ``ts``\  has less elements than \ ``us``\ , or some variable is algebraic \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``us``\  and is not \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``ts``\ .
+  \ ``moreAlgebraic?(ts, us)``\  returns \ ``false``\  iff \ ``ts``\  and \ ``us``\  are both empty, or \ ``ts``\  has less elements than \ ``us``\ , or some variable is algebraic with respect to \ ``us``\  and is not with respect to \ ``ts``\ .
 
 .. _l537175617265467265655175617369436f6d706f6e656e745061636b616765-707265706172654465636f6d706f7365:
 
@@ -162,6 +162,6 @@ A internal package for removing redundant quasi-components and redundant branche
    pair: SquareFreeQuasiComponentPackage; supDimElseRittWu?
 
 :spadfun:`supDimElseRittWu?`\: (TS, TS) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``supDimElseRittWu(ts, us)``\  returns \ ``true``\  iff \ ``ts``\  has less elements than \ ``us``\  otherwise if \ ``ts``\  has higher rank than \ ``us``\  \ ``w``\ .\ ``r``\ .\ ``t``\ . Ritt and Wu ordering.
+  \ ``supDimElseRittWu?(ts, us)``\  returns \ ``true``\  iff \ ``ts``\  has less elements than \ ``us``\  otherwise if \ ``ts``\  has higher rank than \ ``us``\  with respect to Ritt and Wu ordering.
 
 

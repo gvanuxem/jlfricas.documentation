@@ -47,6 +47,14 @@ undocumented
 :spadfun:`left_ext_GCD`\: (\ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) -> Union(Record(g: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), c1: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), c2: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), cu: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), cv: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)), failed) 
   \ ``left_ext_GCD(a, b)``\  returns [\ ``g``\ , \ ``u0``\ , \ ``v0``\ , \ ``u``\ , \ ``v``\ ] where \ ``g``\  is left \ ``GCD``\  of a and \ ``b``\ , \ ``g``\  = \ ``a*u0``\  + \ ``b*v0``\  and au = - \ ``bv``\  is least common right multiple of a and \ ``b``\  when a and \ ``b``\  have least common right multiple. Otherwise left_ext_GCD(a, \ ``b``\ ) returns "failed".
 
+.. _l58506f6c796e6f6d69616c466163746f72-72646976696465:
+
+.. index::
+   pair: XPolynomialFactor; rdivide
+
+:spadfun:`rdivide`\: (\ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) -> Record(quotient: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), remainder: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) 
+  ldivide(a, \ ``b``\ ) returns [\ ``c``\ , \ ``r``\ ] such that a = \ ``c*b``\  + \ ``r``\ , \ ``r``\  is is of minimal possible degree and homogeneous part of of \ ``r``\  of maximal degree contains no terms divisible from right by leading term of \ ``b``\ .
+
 .. _l58506f6c796e6f6d69616c466163746f72-746f705f73706c6974:
 
 .. index::

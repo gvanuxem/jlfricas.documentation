@@ -5,7 +5,7 @@
 NormalizationPackage(R, E, V, P, TS)
 ====================================
 
-:viewcode:`nregset.spad line 35 <nregset.spad#L35>` :editcode:`[edit on github] <nregset.spad#L35>`
+:viewcode:`nregset.spad line 36 <nregset.spad#L36>` :editcode:`[edit on github] <nregset.spad#L36>`
 
 * R: \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
@@ -27,7 +27,7 @@ A package for computing normalized associates of univariate polynomials with coe
    pair: NormalizationPackage; normalize
 
 :spadfun:`normalize`\: (P, TS) -> \ :ref:`List <l4c697374>`\  Record(val: P, tower: TS) 
-  \ ``normalize(p, ts)``\  normalizes \ ``p``\  \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``ts``\ .
+  \ ``normalize(p, ts)``\  normalizes \ ``p``\  with respect to \ ``ts``\ .
 
 .. _l4e6f726d616c697a6174696f6e5061636b616765-6e6f726d616c697a65644173736f6369617465:
 
@@ -35,7 +35,7 @@ A package for computing normalized associates of univariate polynomials with coe
    pair: NormalizationPackage; normalizedAssociate
 
 :spadfun:`normalizedAssociate`\: (P, TS) -> P 
-  \ ``normalizedAssociate(p, ts)``\  returns a normalized polynomial \ ``n``\  \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``ts``\  such that \ ``n``\  and \ ``p``\  are associates \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``ts``\  and assuming that \ ``p``\  is invertible \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``ts``\ .
+  \ ``normalizedAssociate(p, ts)``\  returns a normalized polynomial \ ``n``\  with respect to \ ``ts``\  such that \ ``n``\  and \ ``p``\  are associates with respect to \ ``ts``\  and assuming that \ ``p``\  is invertible with respect to \ ``ts``\ .
 
 .. _l4e6f726d616c697a6174696f6e5061636b616765-6e6f726d496e7665727469626c653f:
 
@@ -59,6 +59,6 @@ A package for computing normalized associates of univariate polynomials with coe
    pair: NormalizationPackage; recip
 
 :spadfun:`recip`\: (P, TS) -> Record(num: P, den: P) 
-  \ ``recip(p, ts)``\  returns the inverse of \ ``p``\  \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``ts``\  assuming that \ ``p``\  is invertible \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``ts``\ .
+  \ ``recip(p, ts)``\  returns the inverse of \ ``p``\  with respect to \ ``ts``\  assuming that \ ``p``\  is invertible with respect to \ ``ts``\ .
 
 

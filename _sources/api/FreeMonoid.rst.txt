@@ -10,7 +10,7 @@ FreeMonoid S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-The free monoid on a set \ ``S``\  is the monoid of finite products of the form \ ``reduce(*, [si ^ ni])``\  where the \ ``si``\ \ ``'s``\  are in \ ``S``\ , and the \ ``ni``\ \ ``'s``\  are nonnegative integers. The multiplication is not commutative. When \ ``S``\  is an OrderedSet, then FreeMonoid(\ ``S``\ ) has order: for two elements \ ``x``\  and \ ``y``\  the relation \ ``x < y``\  holds if either \ ``length(x) < length(y)``\  holds or if these lengths are equal and if \ ``x``\  is smaller than \ ``y``\  \ ``w``\ .\ ``r``\ .\ ``t``\ . the lexicographical ordering induced by \ ``S``\ .
+The free monoid on a set \ ``S``\  is the monoid of finite products of the form \ ``reduce(*, [si ^ ni])``\  where the \ ``si``\ \ ``'s``\  are in \ ``S``\ , and the \ ``ni``\ \ ``'s``\  are nonnegative integers. The multiplication is not commutative. When \ ``S``\  is an OrderedSet, then FreeMonoid(\ ``S``\ ) has order: for two elements \ ``x``\  and \ ``y``\  the relation \ ``x < y``\  holds if either \ ``length(x) < length(y)``\  holds or if these lengths are equal and if \ ``x``\  is smaller than \ ``y``\  with respect to the lexicographical ordering induced by \ ``S``\ .
 
 
 .. _l467265654d6f6e6f6964-31:
@@ -165,7 +165,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; lexico
 
 :spadfun:`lexico`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
-  \ ``lexico(x, y)``\  returns \ ``true``\  iff \ ``x``\  is smaller than \ ``y``\  \ ``w``\ .\ ``r``\ .\ ``t``\ . the pure lexicographical ordering induced by \ ``S``\ .
+  \ ``lexico(x, y)``\  returns \ ``true``\  iff \ ``x``\  is smaller than \ ``y``\  with respect to the pure lexicographical ordering induced by \ ``S``\ .
 
 .. _l467265654d6f6e6f6964-6c71756f:
 

@@ -5,7 +5,7 @@
 WuWenTsunTriangularSet(R, E, V, P)
 ==================================
 
-:viewcode:`triset.spad line 1382 <triset.spad#L1382>` :editcode:`[edit on github] <triset.spad#L1382>`
+:viewcode:`triset.spad line 1391 <triset.spad#L1391>` :editcode:`[edit on github] <triset.spad#L1391>`
 
 * R: \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
@@ -16,7 +16,7 @@ WuWenTsunTriangularSet(R, E, V, P)
 * P: \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, E, V)
 
 
-A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e6572616c547269616e67756c6172536574>`\ . The only requirement for a list of polynomials to be a member of such a domain is the following: no polynomial is constant and two distinct polynomials have distinct main variables. Such a triangular set may not be auto-reduced or consistent. The \ :ref:`construct <l577557656e5473756e547269616e67756c6172536574-636f6e737472756374>`\  operation does not check the previous requirement. Triangular sets are stored as sorted lists \ ``w``\ .\ ``r``\ .\ ``t``\ . the main variables of their members. Furthermore, this domain exports operations dealing with the characteristic set method of Wu Wen Tsun and some optimizations mainly proposed by Dong Ming Wang. 
+A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e6572616c547269616e67756c6172536574>`\ . The only requirement for a list of polynomials to be a member of such a domain is the following: no polynomial is constant and two distinct polynomials have distinct main variables. Such a triangular set may not be auto-reduced or consistent. The \ :ref:`construct <l577557656e5473756e547269616e67756c6172536574-636f6e737472756374>`\  operation does not check the previous requirement. Triangular sets are stored as sorted lists with respect to the main variables of their members. Furthermore, this domain exports operations dealing with the characteristic set method of Wu Wen Tsun and some optimizations mainly proposed by Dong Ming Wang. 
 
 
 .. _l577557656e5473756e547269616e67756c6172536574-23:
@@ -84,7 +84,7 @@ A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e657261
    pair: WuWenTsunTriangularSet; characteristicSet
 
 :spadfun:`characteristicSet`\: (\ :ref:`List <l4c697374>`\  P, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , (P, P) -> P) -> Union(%, failed) 
-  \ ``characteristicSet(ps, redOp?, redOp)``\  returns a non-contradictory characteristic set of \ ``ps``\  in Wu Wen Tsun sense \ ``w``\ .\ ``r``\ .\ ``t``\  the reduction-test \ ``redOp?``\  (using \ ``redOp``\  to reduce polynomials \ ``w``\ .\ ``r``\ .\ ``t``\  a \ ``redOp?``\  basic set), if no non-zero constant polynomial appear during those reductions, else \ ``"failed"``\  is returned. The operations \ ``redOp``\  and \ ``redOp?``\  must satisfy the following conditions: \ ``redOp?(redOp(p, q), q)``\  holds for every polynomials \ ``p, q``\  and there exists an integer \ ``e``\  and a polynomial \ ``f``\  such that we have \ ``init(q)^e*p = f*q + redOp(p, q)``\ .
+  \ ``characteristicSet(ps, redOp?, redOp)``\  returns a non-contradictory characteristic set of \ ``ps``\  in Wu Wen Tsun sense with respect to the reduction-test \ ``redOp?``\  (using \ ``redOp``\  to reduce polynomials with respect to a \ ``redOp?``\  basic set), if no non-zero constant polynomial appear during those reductions, else \ ``"failed"``\  is returned. The operations \ ``redOp``\  and \ ``redOp?``\  must satisfy the following conditions: \ ``redOp?(redOp(p, q), q)``\  holds for every polynomials \ ``p, q``\  and there exists an integer \ ``e``\  and a polynomial \ ``f``\  such that we have \ ``init(q)^e*p = f*q + redOp(p, q)``\ .
 
 
 .. index::
@@ -311,7 +311,7 @@ A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e657261
    pair: WuWenTsunTriangularSet; medialSet
 
 :spadfun:`medialSet`\: (\ :ref:`List <l4c697374>`\  P, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , (P, P) -> P) -> Union(%, failed) 
-  \ ``medialSet(ps, redOp?, redOp)``\  returns \ ``bs``\  a basic set (in Wu Wen Tsun sense \ ``w``\ .\ ``r``\ .\ ``t``\  the reduction-test \ ``redOp?``\ ) of some set generating the same ideal as \ ``ps``\  (with rank not higher than any basic set of \ ``ps``\ ), if no non-zero constant polynomials appear during the computations, else \ ``"failed"``\  is returned. In the former case, \ ``bs``\  has to be understood as a candidate for being a characteristic set of \ ``ps``\ . In the original algorithm, \ ``bs``\  is simply a basic set of \ ``ps``\ .
+  \ ``medialSet(ps, redOp?, redOp)``\  returns \ ``bs``\  a basic set (in Wu Wen Tsun sense with respect to the reduction-test \ ``redOp?``\ ) of some set generating the same ideal as \ ``ps``\  (with rank not higher than any basic set of \ ``ps``\ ), if no non-zero constant polynomials appear during the computations, else \ ``"failed"``\  is returned. In the former case, \ ``bs``\  has to be understood as a candidate for being a characteristic set of \ ``ps``\ . In the original algorithm, \ ``bs``\  is simply a basic set of \ ``ps``\ .
 
 
 .. index::

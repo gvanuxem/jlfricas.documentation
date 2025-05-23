@@ -275,11 +275,11 @@
 </dd>
 </dl>
 <span id="l466163746f726564-6d6170"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">map</span>: (R -&gt; R, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(fn,</span> <span class="pre">u)</span></code> maps the function userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} across the factors of spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} and creates a new factored object. Note: this clears the information flags (sets them to “nil”) because the effect of userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} is clearly not known in general.</p>
+<dt><span class="spadfun">map</span>: (R -&gt; R, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(fn,</span> <span class="pre">u)</span></code> maps the function userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} across the factors of <code class="docutils literal notranslate"><span class="pre">u</span></code> and creates a new factored object. Note: this clears the information flags (sets them to “nil”) because the effect of userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} is clearly not known in general.</p>
 </dd>
 </dl>
 <span id="l466163746f726564-6d65726765466163746f7273"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">mergeFactors</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mergeFactors(u,</span> <span class="pre">v)</span></code> is used when the factorizations of spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} and spadvar{<code class="docutils literal notranslate"><span class="pre">v</span></code>} are known to be disjoint, e.g. resulting from a content/primitive part split. Essentially, it creates a new factored object by multiplying the units together and appending the lists of factors.</p>
+<dt><span class="spadfun">mergeFactors</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mergeFactors(u,</span> <span class="pre">v)</span></code> is used when the factorizations of <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are known to be disjoint, e.g. resulting from a content/primitive part split. Essentially, it creates a new factored object by multiplying the units together and appending the lists of factors.</p>
 </dd>
 </dl>
 <span id="l466163746f726564-6e696c466163746f72"></span><dl class="simple" id="index-9">
@@ -287,7 +287,7 @@
 </dd>
 </dl>
 <span id="l466163746f726564-6e756d6265724f66466163746f7273"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">numberOfFactors</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfFactors(u)</span></code> returns the number of factors in spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>}.</p>
+<dt><span class="spadfun">numberOfFactors</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfFactors(u)</span></code> returns the number of factors in <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l466163746f726564-6f6e653f">
@@ -311,11 +311,11 @@
 </dd>
 </dl>
 <span id="l466163746f726564-726174696f6e616c3f"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">rational?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational?(u)</span></code> tests if spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} is actually a rational number (see Fraction Integer).</p>
+<dt><span class="spadfun">rational?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational?(u)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> is actually a rational number (see Fraction Integer).</p>
 </dd>
 </dl>
 <span id="l466163746f726564-726174696f6e616c"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">rational</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational(u)</span></code> assumes spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} is actually a rational number and does the conversion to rational number (see Fraction Integer).</p>
+<dt><span class="spadfun">rational</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational(u)</span></code> assumes <code class="docutils literal notranslate"><span class="pre">u</span></code> is actually a rational number and does the conversion to rational number (see Fraction Integer).</p>
 </dd>
 </dl>
 <span id="l466163746f726564-726174696f6e616c496643616e"></span><dl class="simple" id="index-14">

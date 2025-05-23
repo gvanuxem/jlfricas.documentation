@@ -122,7 +122,7 @@ ContinuedFraction R
    pair: ContinuedFraction; approximants
 
 :spadfun:`approximants`\: % -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  R 
-  \ ``approximants(x)``\  returns the stream of approximants of the continued fraction \spadvar{\ ``x``\ }. If the continued fraction is finite, then the stream will be infinite and periodic with period 1.
+  \ ``approximants(x)``\  returns the stream of approximants of the continued fraction \ ``x``\ . If the continued fraction is finite, then the stream will be infinite and periodic with period 1.
 
 .. _l436f6e74696e7565644672616374696f6e-6173736f6369617465733f:
 
@@ -175,7 +175,7 @@ ContinuedFraction R
    pair: ContinuedFraction; complete
 
 :spadfun:`complete`\: % -> % 
-  \ ``complete(x)``\  causes all entries in \spadvar{\ ``x``\ } to be computed. Normally entries are only computed as needed. If \spadvar{\ ``x``\ } is an infinite continued fraction, a user-initiated interrupt is necessary to stop the computation.
+  \ ``complete(x)``\  causes all entries in \ ``x``\  to be computed. Normally entries are only computed as needed. If \ ``x``\  is an infinite continued fraction, a user-initiated interrupt is necessary to stop the computation.
 
 .. _l436f6e74696e7565644672616374696f6e-636f6e74696e7565644672616374696f6e:
 
@@ -190,7 +190,7 @@ ContinuedFraction R
    pair: ContinuedFraction; continuedFraction
 
 :spadfun:`continuedFraction`\: \ :ref:`Fraction <l4672616374696f6e>`\  R -> % 
-  \ ``continuedFraction(r)``\  converts the fraction \spadvar{\ ``r``\ } with components of type \ ``R``\  to a continued fraction over \ ``R``\ .
+  \ ``continuedFraction(r)``\  converts the fraction \ ``r``\  with components of type \ ``R``\  to a continued fraction over \ ``R``\ .
 
 .. _l436f6e74696e7565644672616374696f6e-636f6e76657267656e7473:
 
@@ -198,7 +198,7 @@ ContinuedFraction R
    pair: ContinuedFraction; convergents
 
 :spadfun:`convergents`\: % -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  R 
-  \ ``convergents(x)``\  returns the stream of the convergents of the continued fraction \spadvar{\ ``x``\ }. If the continued fraction is finite, then the stream will be finite.
+  \ ``convergents(x)``\  returns the stream of the convergents of the continued fraction \ ``x``\ . If the continued fraction is finite, then the stream will be finite.
 
 .. _l436f6e74696e7565644672616374696f6e-64656e6f6d696e61746f7273:
 
@@ -206,7 +206,7 @@ ContinuedFraction R
    pair: ContinuedFraction; denominators
 
 :spadfun:`denominators`\: % -> \ :ref:`Stream <l53747265616d>`\  R 
-  \ ``denominators(x)``\  returns the stream of denominators of the approximants of the continued fraction \spadvar{\ ``x``\ }. If the continued fraction is finite, then the stream will be finite.
+  \ ``denominators(x)``\  returns the stream of denominators of the approximants of the continued fraction \ ``x``\ . If the continued fraction is finite, then the stream will be finite.
 
 .. _l436f6e74696e7565644672616374696f6e-646976696465:
 
@@ -234,7 +234,7 @@ ContinuedFraction R
    pair: ContinuedFraction; extend
 
 :spadfun:`extend`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``extend(x, n)``\  causes the first \spadvar{\ ``n``\ } entries in the continued fraction \spadvar{\ ``x``\ } to be computed. Normally entries are only computed as needed.
+  \ ``extend(x, n)``\  causes the first \ ``n``\  entries in the continued fraction \ ``x``\  to be computed. Normally entries are only computed as needed.
 
 .. _l436f6e74696e7565644672616374696f6e-657874656e6465644575636c696465616e:
 
@@ -313,7 +313,7 @@ ContinuedFraction R
    pair: ContinuedFraction; numerators
 
 :spadfun:`numerators`\: % -> \ :ref:`Stream <l53747265616d>`\  R 
-  \ ``numerators(x)``\  returns the stream of numerators of the approximants of the continued fraction \spadvar{\ ``x``\ }. If the continued fraction is finite, then the stream will be finite.
+  \ ``numerators(x)``\  returns the stream of numerators of the approximants of the continued fraction \ ``x``\ . If the continued fraction is finite, then the stream will be finite.
 
 .. _l436f6e74696e7565644672616374696f6e-6f6e653f:
 
@@ -331,7 +331,7 @@ ContinuedFraction R
    pair: ContinuedFraction; partialDenominators
 
 :spadfun:`partialDenominators`\: % -> \ :ref:`Stream <l53747265616d>`\  R 
-  \ ``partialDenominators(x)``\  extracts the denominators in \spadvar{\ ``x``\ }. That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``partialDenominators(x) = [b1, b2, b3, ...]``\ .
+  \ ``partialDenominators(x)``\  extracts the denominators in \ ``x``\ . That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``partialDenominators(x) = [b1, b2, b3, ...]``\ .
 
 .. _l436f6e74696e7565644672616374696f6e-7061727469616c4e756d657261746f7273:
 
@@ -339,7 +339,7 @@ ContinuedFraction R
    pair: ContinuedFraction; partialNumerators
 
 :spadfun:`partialNumerators`\: % -> \ :ref:`Stream <l53747265616d>`\  R 
-  \ ``partialNumerators(x)``\  extracts the numerators in \spadvar{\ ``x``\ }. That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``partialNumerators(x) = [a1, a2, a3, ...]``\ .
+  \ ``partialNumerators(x)``\  extracts the numerators in \ ``x``\ . That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``partialNumerators(x) = [a1, a2, a3, ...]``\ .
 
 .. _l436f6e74696e7565644672616374696f6e-7061727469616c51756f7469656e7473:
 
@@ -347,7 +347,7 @@ ContinuedFraction R
    pair: ContinuedFraction; partialQuotients
 
 :spadfun:`partialQuotients`\: % -> \ :ref:`Stream <l53747265616d>`\  R 
-  \ ``partialQuotients(x)``\  extracts the partial quotients in \spadvar{\ ``x``\ }. That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``partialQuotients(x) = [b0, b1, b2, b3, ...]``\ .
+  \ ``partialQuotients(x)``\  extracts the partial quotients in \ ``x``\ . That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``partialQuotients(x) = [b0, b1, b2, b3, ...]``\ .
 
 .. _l436f6e74696e7565644672616374696f6e-706c656e617279506f776572:
 
@@ -388,7 +388,7 @@ ContinuedFraction R
    pair: ContinuedFraction; reducedForm
 
 :spadfun:`reducedForm`\: % -> % 
-  \ ``reducedForm(x)``\  puts the continued fraction \spadvar{\ ``x``\ } in reduced form, i.e. the function returns an equivalent continued fraction of the form \ ``continuedFraction(b0, [1, 1, 1, ...], [b1, b2, b3, ...])``\ .
+  \ ``reducedForm(x)``\  puts the continued fraction \ ``x``\  in reduced form, i.e. the function returns an equivalent continued fraction of the form \ ``continuedFraction(b0, [1, 1, 1, ...], [b1, b2, b3, ...])``\ .
 
 .. _l436f6e74696e7565644672616374696f6e-72656d:
 
@@ -455,7 +455,7 @@ ContinuedFraction R
    pair: ContinuedFraction; wholePart
 
 :spadfun:`wholePart`\: % -> R 
-  \ ``wholePart(x)``\  extracts the whole part of \spadvar{\ ``x``\ }. That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``wholePart(x) = b0``\ .
+  \ ``wholePart(x)``\  extracts the whole part of \ ``x``\ . That is, if \ ``x = continuedFraction(b0, [a1, a2, a3, ...], [b1, b2, b3, ...])``\ , then \ ``wholePart(x) = b0``\ .
 
 .. _l436f6e74696e7565644672616374696f6e-7a65726f3f:
 

@@ -525,7 +525,7 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; infRittWu?
 
 :spadfun:`infRittWu?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``infRittWu?(a, b)``\  returns \ ``true``\  if \ ``a``\  is less than \ ``b``\  \ ``w``\ .\ ``r``\ .\ ``t``\ . the Ritt and Wu Wen Tsun ordering using the refinement of Lazard.
+  \ ``infRittWu?(a, b)``\  returns \ ``true``\  if \ ``a``\  is less than \ ``b``\  with respect to the Ritt and Wu Wen Tsun ordering using the refinement of Lazard.
 
 .. _l526563757273697665506f6c796e6f6d69616c43617465676f7279-696e6974:
 
@@ -549,7 +549,7 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; initiallyReduced?
 
 :spadfun:`initiallyReduced?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``initiallyReduced?(a, b)``\  returns \ ``false``\  iff there exists an iterated initial of \ ``a``\  which is not reduced \ ``w``\ .\ ``r``\ .\ ``t``\  \ ``b``\ .
+  \ ``initiallyReduced?(a, b)``\  returns \ ``false``\  iff there exists an iterated initial of \ ``a``\  which is not reduced with respect to \ ``b``\ .
 
 
 .. index::
@@ -631,14 +631,14 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; lazyPrem
 
 :spadfun:`lazyPrem`\: (%, %) -> % 
-  \ ``lazyPrem(a, b)``\  returns the polynomial \ ``r``\  reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``b``\  and such that \ ``b``\  divides \ ``init(b)^e a - r``\  where \ ``e``\  is the number of steps of this pseudo-division.
+  \ ``lazyPrem(a, b)``\  returns the polynomial \ ``r``\  reduced with respect to \ ``b``\  and such that \ ``b``\  divides \ ``init(b)^e a - r``\  where \ ``e``\  is the number of steps of this pseudo-division.
 
 
 .. index::
    pair: RecursivePolynomialCategory; lazyPrem
 
 :spadfun:`lazyPrem`\: (%, %, V) -> % 
-  \ ``lazyPrem(a, b, v)``\  returns the polynomial \ ``r``\  reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``b``\  viewed as univariate polynomials in the variable \ ``v``\  such that \ ``b``\  divides \ ``init(b)^e a - r``\  where \ ``e``\  is the number of steps of this pseudo-division.
+  \ ``lazyPrem(a, b, v)``\  returns the polynomial \ ``r``\  reduced with respect to \ ``b``\  viewed as univariate polynomials in the variable \ ``v``\  such that \ ``b``\  divides \ ``init(b)^e a - r``\  where \ ``e``\  is the number of steps of this pseudo-division.
 
 .. _l526563757273697665506f6c796e6f6d69616c43617465676f7279-6c617a795072656d5769746844656661756c74:
 
@@ -676,7 +676,7 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; lazyResidueClass
 
 :spadfun:`lazyResidueClass`\: (%, %) -> Record(polnum: %, polden: %, power: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``lazyResidueClass(a, b)``\  returns \ ``[p, q, n]``\  where \ ``p / q^n``\  represents the residue class of \ ``a``\  modulo \ ``b``\  and \ ``p``\  is reduced \ ``w``\ .\ ``r``\ .\ ``t``\ . \ ``b``\  and \ ``q``\  is \ ``init(b)``\ .
+  \ ``lazyResidueClass(a, b)``\  returns \ ``[p, q, n]``\  where \ ``p / q^n``\  represents the residue class of \ ``a``\  modulo \ ``b``\  and \ ``p``\  is reduced with respect to \ ``b``\  and \ ``q``\  is \ ``init(b)``\ .
 
 .. _l526563757273697665506f6c796e6f6d69616c43617465676f7279-6c636d:
 
@@ -910,7 +910,7 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; normalized?
 
 :spadfun:`normalized?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``normalized?(a, b)``\  returns \ ``true``\  iff \ ``a``\  and its iterated initials have degree zero \ ``w``\ .\ ``r``\ .\ ``t``\ . the main variable of \ ``b``\ 
+  \ ``normalized?(a, b)``\  returns \ ``true``\  iff \ ``a``\  and its iterated initials have degree zero with respect to the main variable of \ ``b``\ 
 
 
 .. index::
@@ -1199,7 +1199,7 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; RittWuCompare
 
 :spadfun:`RittWuCompare`\: (%, %) -> Union(\ :ref:`Boolean <l426f6f6c65616e>`\ , failed) 
-  \ ``RittWuCompare(a,b)``\  returns \ ``"failed"``\  if \ ``a``\  and \ ``b``\  have same rank \ ``w``\ .\ ``r``\ .\ ``t``\ . Ritt and Wu Wen Tsun ordering using the refinement of Lazard, otherwise returns \ ``infRittWu?(a, b)``\ .
+  \ ``RittWuCompare(a,b)``\  returns \ ``"failed"``\  if \ ``a``\  and \ ``b``\  have same rank with respect to Ritt and Wu Wen Tsun ordering using the refinement of Lazard, otherwise returns \ ``infRittWu?(a, b)``\ .
 
 .. _l526563757273697665506f6c796e6f6d69616c43617465676f7279-73616d706c65:
 
@@ -1263,7 +1263,7 @@ A category for general multi-variate polynomials with coefficients in a ring, va
    pair: RecursivePolynomialCategory; supRittWu?
 
 :spadfun:`supRittWu?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``supRittWu?(a, b)``\  returns \ ``true``\  if \ ``a``\  is greater than \ ``b``\  \ ``w``\ .\ ``r``\ .\ ``t``\ . the Ritt and Wu Wen Tsun ordering using the refinement of Lazard.
+  \ ``supRittWu?(a, b)``\  returns \ ``true``\  if \ ``a``\  is greater than \ ``b``\  with respect to the Ritt and Wu Wen Tsun ordering using the refinement of Lazard.
 
 .. _l526563757273697665506f6c796e6f6d69616c43617465676f7279-7461696c:
 
