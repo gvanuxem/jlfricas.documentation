@@ -8,7 +8,7 @@ JLWSExpression
 :viewcode:`jwsexpr.spad line 1 <jwsexpr.spad#L1>` :editcode:`[edit on github] <jwsexpr.spad#L1>`
 
 
-Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
+Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 
 .. _l4a4c575345787072657373696f6e-30:
@@ -140,6 +140,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`abs <l436f6d706c657843617465676f7279-616273>`\ \: % -> % 
   from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
+
+.. _l4a4c575345787072657373696f6e-6163636f756e74696e67466f726d:
+
+.. index::
+   pair: JLWSExpression; accountingForm
+
+:spadfun:`accountingForm`\: % -> % 
+  \ ``accountingForm(x,n)``\  returns the accounting printed representation of \ ``x``\ .
+
+
+.. index::
+   pair: JLWSExpression; accountingForm
+
+:spadfun:`accountingForm`\: (%, %) -> % 
+  \ ``accountingForm(x,n)``\  returns the accounting printed representation of \ ``x``\  with \ ``n``\  digits of precision.
 
 .. _l4a4c575345787072657373696f6e-61636f73:
 
@@ -345,6 +360,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`barnesG`\: % -> % 
   \ ``barnesG(z)``\  computes the Barnes \ ``G``\ -function of \ ``z``\ .
+
+.. _l4a4c575345787072657373696f6e-62617365466f726d:
+
+.. index::
+   pair: JLWSExpression; baseForm
+
+:spadfun:`baseForm`\: (%, %) -> % 
+  \ ``baseForm(x, n)``\  returns the printed representation of \ ``x``\  in base \ ``b``\ .
 
 .. _l4a4c575345787072657373696f6e-6261736973:
 
@@ -818,6 +841,28 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
+.. _l4a4c575345787072657373696f6e-64617465537472696e67:
+
+.. index::
+   pair: JLWSExpression; dateString
+
+:spadfun:`dateString`\: % -> % 
+  \ ``dateString(expr)``\  returns the JLWSExpression string of the date from a \ ``WS``\  date object. For example: \example{dateString jWSExpr "Tomorrow"}
+
+
+.. index::
+   pair: JLWSExpression; dateString
+
+:spadfun:`dateString`\: (%, %) -> % 
+  \ ``dateString(expr, form)``\  returns JLWSExpression string of the date from a \ ``WS``\  date object with \ ``WS``\  format form. Fo example: \example{dateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))}
+
+
+.. index::
+   pair: JLWSExpression; dateString
+
+:spadfun:`dateString`\: () -> % 
+  \ ``dateString()``\  returns the JLWSExpression string of the local date and time. For example: \example{toString dateTime()}
+
 .. _l4a4c575345787072657373696f6e-646177736f6e:
 
 .. index::
@@ -825,6 +870,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 :spadfun:`dawson`\: % -> % 
   \ ``dawson(x)``\  computes the Dawson integral of \ ``x``\ .
+
+.. _l4a4c575345787072657373696f6e-646563696d616c466f726d:
+
+.. index::
+   pair: JLWSExpression; decimalForm
+
+:spadfun:`decimalForm`\: % -> % 
+  \ ``decimalForm(x)``\  returns the printed representation of \ ``x``\  in decimal form i.e. without scientific notation.
+
+
+.. index::
+   pair: JLWSExpression; decimalForm
+
+:spadfun:`decimalForm`\: (%, %) -> % 
+  \ ``decimalForm(x, expr)``\  returns the printed representation of \ ``x``\  in decimal form with expr as specification (number of digits of precision or a 2-list of number of digits and the number of digits after the decimal point).
 
 .. _l4a4c575345787072657373696f6e-6465636f6d706f7365:
 
@@ -1174,6 +1234,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`elt <l45787072657373696f6e537061636532-656c74>`\ \: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
   from \ :ref:`ExpressionSpace2 <l45787072657373696f6e537061636532>`\  \ :ref:`Kernel <l4b65726e656c>`\  %
+
+.. _l4a4c575345787072657373696f6e-656e67696e656572696e67466f726d:
+
+.. index::
+   pair: JLWSExpression; engineeringForm
+
+:spadfun:`engineeringForm`\: % -> % 
+  \ ``engineeringForm(x)``\  returns the printed representation of \ ``x``\  in engineering form.
+
+
+.. index::
+   pair: JLWSExpression; engineeringForm
+
+:spadfun:`engineeringForm`\: (%, %) -> % 
+  \ ``engineeringForm(x,n)``\  returns the printed representation of \ ``x``\  in engineering form with \ ``n``\  digits of precision.
 
 .. _l4a4c575345787072657373696f6e-656e756d6572617465:
 
@@ -2370,6 +2445,28 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`jWSData`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ ``jWSData(sym)``\  returns the entity(ies) associated to \ ``sym``\ (\ ``s``\ ).
 
+.. _l4a4c575345787072657373696f6e-6a5753446174654f626a656374:
+
+.. index::
+   pair: JLWSExpression; jWSDateObject
+
+:spadfun:`jWSDateObject`\: % -> % 
+  \ ``jWSDateObject(expr)``\  returns the JLWSExpression object of the date from \ ``expr``\ .
+
+
+.. index::
+   pair: JLWSExpression; jWSDateObject
+
+:spadfun:`jWSDateObject`\: (%, %) -> % 
+  \ ``jWSDateObject(date,type)``\  returns the JLWSExpression object of the \ ``date``\  and \ ``type``\ , for example "Month".
+
+
+.. index::
+   pair: JLWSExpression; jWSDateObject
+
+:spadfun:`jWSDateObject`\: () -> % 
+  \ ``jWSDateObject()``\  returns the JLWSExpression object of the local date and time.
+
 .. _l4a4c575345787072657373696f6e-6a5753457175616c:
 
 .. index::
@@ -2411,6 +2508,13 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 .. index::
    pair: JLWSExpression; jWSExpr
 
+:spadfun:`jWSExpr`\: \ :ref:`JLFloat <l4a4c466c6f6174>`\  -> % 
+  \ ``jWSExpr(r)``\  returns the JLFloat \ ``r``\  as a JLWSExpression.
+
+
+.. index::
+   pair: JLWSExpression; jWSExpr
+
 :spadfun:`jWSExpr`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
   \ ``jWSExpr(r)``\  returns the \ ``JLFloat64``\  as a JLWSExpression.
 
@@ -2426,14 +2530,14 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
    pair: JLWSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a JLWSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language Expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{jWSExpr "Today"}
+  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a JLWSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language Expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{dateString(jWSExpr "Today")}
 
 
 .. index::
    pair: JLWSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``jWSExpr(sym)``\  coerces \ ``sym``\  to a JLWSExpression.
+  \ ``jWSExpr(sym)``\  coerces \ ``sym``\  to a JLWSExpression. For example: \ ``x``\  \ ``:=``\  jWSExpr \ ``x``\ 
 
 .. _l4a4c575345787072657373696f6e-6a575347726561746572:
 
@@ -3085,6 +3189,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 :spadfun:`number?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \undocumented
 
+.. _l4a4c575345787072657373696f6e-6e756d626572466f726d:
+
+.. index::
+   pair: JLWSExpression; numberForm
+
+:spadfun:`numberForm`\: % -> % 
+  \ ``numberForm(x)``\  returns the default printed representation of \ ``x``\ .
+
+
+.. index::
+   pair: JLWSExpression; numberForm
+
+:spadfun:`numberForm`\: (%, %) -> % 
+  \ ``numberForm(x, expr)``\  returns the approximate printed representation of \ ``x``\  with expr as specification (number of digits of precision or a 2-list of number of digits and the number of digits after the decimal point).
+
 .. _l4a4c575345787072657373696f6e-6e756d6572:
 
 \ :ref:`numer <l46756e6374696f6e537061636532-6e756d6572>`\ \: % -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %) 
@@ -3299,6 +3418,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`part <l4a4c5753416767726567617465-70617274>`\ \: (%, \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> % 
   from \ :ref:`JLWSAggregate <l4a4c5753416767726567617465>`\  %
+
+.. _l4a4c575345787072657373696f6e-70657263656e74466f726d:
+
+.. index::
+   pair: JLWSExpression; percentForm
+
+:spadfun:`percentForm`\: % -> % 
+  \ ``percentForm(x)``\  returns the printed representation of \ ``x``\  in percent form. For example: \example{percentForm jWSExpr 0.50}
+
+
+.. index::
+   pair: JLWSExpression; percentForm
+
+:spadfun:`percentForm`\: (%, %) -> % 
+  \ ``percentForm(x,n)``\  returns the printed representation of \ ``x``\  in percent with \ ``n``\  digits of precision.
 
 .. _l4a4c575345787072657373696f6e-7065726d75746174696f6e:
 
@@ -4109,6 +4243,21 @@ Julia Wolfram Symbolic expressions using Wolfram Symbolic Transport Protocol.
 
 \ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4a4c575345787072657373696f6e-736369656e7469666963466f726d:
+
+.. index::
+   pair: JLWSExpression; scientificForm
+
+:spadfun:`scientificForm`\: % -> % 
+  \ ``scientificForm(x)``\  returns the printed representation of \ ``x``\  in scientific form.
+
+
+.. index::
+   pair: JLWSExpression; scientificForm
+
+:spadfun:`scientificForm`\: (%, %) -> % 
+  \ ``scientificForm(x,n)``\  returns the printed representation of \ ``x``\  in scientific form with \ ``n``\  digits of precision.
 
 .. _l4a4c575345787072657373696f6e-736563:
 
