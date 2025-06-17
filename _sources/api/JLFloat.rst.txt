@@ -5,7 +5,7 @@
 JLFloat
 =======
 
-:viewcode:`jobject.spad line 888 <jobject.spad#L888>` :editcode:`[edit on github] <jobject.spad#L888>`
+:viewcode:`jobject.spad line 930 <jobject.spad#L930>` :editcode:`[edit on github] <jobject.spad#L930>`
 
 
 \ :ref:`JLFloat <l4a4c466c6f6174>`\  implements arbitrary precision floating point arithmetic using Julia BigFloats. Use the MPFR library: https://www.mpfr.org/
@@ -35,7 +35,7 @@ JLFloat
    pair: JLFloat; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``x*i``\  is the multiplication by an integer.
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -85,7 +85,7 @@ JLFloat
    pair: JLFloat; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  
+  \ ``i/x``\  is the division of an integer by \ ``x``\ .
 
 .. _l4a4c466c6f6174-3c3d:
 
@@ -122,7 +122,7 @@ JLFloat
    pair: JLFloat; ^
 
 :spadfun:`^`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``x^q``\  is the exponentiation by a Fraction(Integer).
 
 
 \ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
@@ -291,7 +291,7 @@ JLFloat
    pair: JLFloat; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``coerce(x)``\  coerces \ ``x``\  to JLFLoat.
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -306,7 +306,7 @@ JLFloat
    pair: JLFloat; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  
+  \ ``coerce(x)``\  coerces \ ``x``\  to a JLFloat. convenience function.
 
 .. _l4a4c466c6f6174-636f6d6d757461746f72:
 
@@ -540,28 +540,28 @@ JLFloat
    pair: JLFloat; jfloat
 
 :spadfun:`jfloat`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``jfloat(x)``\  returns \ ``x``\  as a JFLoat.
 
 
 .. index::
    pair: JLFloat; jfloat
 
 :spadfun:`jfloat`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jfloat(q)``\  returns \ ``z``\  as a JFLoat.
 
 
 .. index::
    pair: JLFloat; jfloat
 
 :spadfun:`jfloat`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jfloat(z)``\  returns \ ``z``\  as a JFLoat. For example: \example{sqrt(jfloat(2)^2+7.0^2+9.^2)}
 
 
 .. index::
    pair: JLFloat; jfloat
 
 :spadfun:`jfloat`\: \ :ref:`String <l537472696e67>`\  -> % 
-  
+  \ ``jfloat(z)``\  returns \ ``z``\  as a JFLoat. For example where automatic coercions is also used: \example{sqrt(jfloat(2.0)^2+7.0^2+9.^2)}
 
 .. _l4a4c466c6f6174-6a6c41626f7574:
 

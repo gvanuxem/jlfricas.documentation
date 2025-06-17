@@ -5,7 +5,7 @@
 RectangularMatrixCategory(m, n, R, Row, Col)
 ============================================
 
-:viewcode:`matcat.spad line 706 <matcat.spad#L706>` :editcode:`[edit on github] <matcat.spad#L706>`
+:viewcode:`matcat.spad line 732 <matcat.spad#L732>` :editcode:`[edit on github] <matcat.spad#L732>`
 
 * m: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
 
@@ -32,6 +32,10 @@ RectangularMatrixCategory(m, n, R, Row, Col)
   from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-2a:
+
+\ :ref:`\* <l4d61747269784f7065726174696f6e7343617465676f7279-2a>`\ \: (%, %) -> % 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
+
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, R) -> % 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  R
@@ -68,11 +72,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-2f:
 
-.. index::
-   pair: RectangularMatrixCategory; /
-
-:spadfun:`/`\: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``m/r``\  divides the elements of \ ``m``\  by \ ``r``\ . Error: if \ ``r = 0``\ .
+\ :ref:`/ <l4d61747269784f7065726174696f6e7343617465676f7279-2f>`\ \: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-3d:
 
@@ -86,11 +87,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-616e746973796d6d65747269633f:
 
-.. index::
-   pair: RectangularMatrixCategory; antisymmetric?
-
-:spadfun:`antisymmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``antisymmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and antisymmetric (i.e. \ ``m[i, j] = -m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+\ :ref:`antisymmetric? <l4d61747269784f7065726174696f6e7343617465676f7279-616e746973796d6d65747269633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-616e793f:
 
@@ -112,11 +110,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-636f6c756d6e5370616365:
 
-.. index::
-   pair: RectangularMatrixCategory; columnSpace
-
-:spadfun:`columnSpace`\: % -> \ :ref:`List <l4c697374>`\  Col if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-  \ ``columnSpace(m)``\  returns a sublist of columns of the matrix \ ``m``\  forming a basis of its column space.
+\ :ref:`columnSpace <l4d61747269784f7065726174696f6e7343617465676f7279-636f6c756d6e5370616365>`\ \: % -> \ :ref:`List <l4c697374>`\  Col if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-636f6e76657274:
 
@@ -139,11 +134,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-646961676f6e616c3f:
 
-.. index::
-   pair: RectangularMatrixCategory; diagonal?
-
-:spadfun:`diagonal?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``diagonal?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and diagonal (i.e. all entries of \ ``m``\  not on the diagonal are zero) and \ ``false``\  otherwise.
+\ :ref:`diagonal? <l4d61747269784f7065726174696f6e7343617465676f7279-646961676f6e616c3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-656c74:
 
@@ -204,11 +196,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-657871756f:
 
-.. index::
-   pair: RectangularMatrixCategory; exquo
-
-:spadfun:`exquo`\: (%, R) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``exquo(m, r)``\  computes the exact quotient of the elements of \ ``m``\  by \ ``r``\ , returning \ ``"failed"``\  if this is not possible.
+\ :ref:`exquo <l4d61747269784f7065726174696f6e7343617465676f7279-657871756f>`\ \: (%, R) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-68617368:
 
@@ -262,11 +251,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
   \ ``map(f, a, b)``\  returns \ ``c``\ , where \ ``c``\  is such that \ ``c(i, j) = f(a(i, j), b(i, j))``\  for all \ ``i``\ , \ ``j``\ .
 
 
-.. index::
-   pair: RectangularMatrixCategory; map
-
-:spadfun:`map`\: (R -> R, %) -> % 
-  \ ``map(f, a)``\  returns \ ``b``\ , where \ ``b(i, j) = a(i, j)``\  for all \ ``i``\ , \ ``j``\ .
+\ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (R -> R, %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  R
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6d6174726978:
 
@@ -355,19 +341,13 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6e756c6c697479:
 
-.. index::
-   pair: RectangularMatrixCategory; nullity
-
-:spadfun:`nullity`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``nullity(m)``\  returns the nullity of the matrix \ ``m``\ . This is the dimension of the null space of the matrix \ ``m``\ .
+\ :ref:`nullity <l4d61747269784f7065726174696f6e7343617465676f7279-6e756c6c697479>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6e756c6c5370616365:
 
-.. index::
-   pair: RectangularMatrixCategory; nullSpace
-
-:spadfun:`nullSpace`\: % -> \ :ref:`List <l4c697374>`\  Col if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``nullSpace(m)``\ + returns a basis for the null space of the matrix \ ``m``\ .
+\ :ref:`nullSpace <l4d61747269784f7065726174696f6e7343617465676f7279-6e756c6c5370616365>`\ \: % -> \ :ref:`List <l4c697374>`\  Col if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6f70706f736974653f:
 
@@ -394,11 +374,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-72616e6b:
 
-.. index::
-   pair: RectangularMatrixCategory; rank
-
-:spadfun:`rank`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rank(m)``\  returns the rank of the matrix \ ``m``\ .
+\ :ref:`rank <l4d61747269784f7065726174696f6e7343617465676f7279-72616e6b>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-726f77:
 
@@ -410,11 +387,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-726f77456368656c6f6e:
 
-.. index::
-   pair: RectangularMatrixCategory; rowEchelon
-
-:spadfun:`rowEchelon`\: % -> % if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-  \ ``rowEchelon(m)``\  returns the row echelon form of the matrix \ ``m``\ .
+\ :ref:`rowEchelon <l4d61747269784f7065726174696f6e7343617465676f7279-726f77456368656c6f6e>`\ \: % -> % if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-73616d706c65:
 
@@ -438,11 +412,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-7371756172653f:
 
-.. index::
-   pair: RectangularMatrixCategory; square?
-
-:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``square?(m)``\  returns \ ``true``\  if \ ``m``\  is a square matrix (i.e. if \ ``m``\  has the same number of rows as columns) and \ ``false``\  otherwise.
+\ :ref:`square? <l4d61747269784f7065726174696f6e7343617465676f7279-7371756172653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-7375627472616374496643616e:
 
@@ -451,11 +422,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-73796d6d65747269633f:
 
-.. index::
-   pair: RectangularMatrixCategory; symmetric?
-
-:spadfun:`symmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``symmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and symmetric (i.e. \ ``m[i, j] = m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+\ :ref:`symmetric? <l4d61747269784f7065726174696f6e7343617465676f7279-73796d6d65747269633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-7a65726f3f:
 
@@ -496,6 +464,8 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (R, R) if R has \ :ref:`Evalable <l4576616c61626c65>`\  R
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  R 
+
+\ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col) 
 
 \ :ref:`Module <l4d6f64756c65>`\  R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
 

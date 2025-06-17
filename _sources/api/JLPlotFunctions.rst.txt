@@ -146,7 +146,7 @@ low level plotting functions using the Plots module from Julia.
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  jlPlot(\ ``x``\ ,\ ``y``\ ,\ ``z``\ ) draws a plot using elements of \ ``x``\ , \ ``y``\  and \ ``z``\  on the existing graph object.
+  \ ``jlPlot!(x,y,z)``\  draws a plot using elements of \ ``x``\ , \ ``y``\  and \ ``z``\  on the existing graph object.
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74:
 
@@ -183,7 +183,7 @@ low level plotting functions using the Plots module from Julia.
    pair: JLPlotFunctions; jlPlotTitle!
 
 :spadfun:`jlPlotTitle!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlPlotTitle!(title)``\  draws `title' as plot \ ``title``\  in the current plot. For example: jlPlotTitle! "sin(\ ``x``\ )" if you have the LatexStrings Julia package \example{jlPlotTitle! jlLatex latex sin(x)} For simple expressions \ ``title``\  will automatically be enclosed betweek \$. So use: \example{jlPlotTitle! jlLatex "sin(x)"} For normal text and equations insert dollar signs \$ as needed. \example{jlPlotTitle! jlLatex "Plot: \$sin(x)\$"}
+  \ ``jlPlotTitle!(title)``\  draws `title' as plot \ ``title``\  in the current plot. For example: jlPlotTitle! "sin(\ ``x``\ )" if you have the LaTeXStrings Julia package \example{jlPlotTitle! jlLatex latex sin(x)} For simple expressions \ ``title``\  will automatically be enclosed betweek \$. So use: \example{jlPlotTitle! jlLatex "sin(x)"} For normal text and equations insert dollar signs \$ as needed. \example{jlPlotTitle! jlLatex "Plot: \$sin(x)\$"}
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74586c6162656c21:
 

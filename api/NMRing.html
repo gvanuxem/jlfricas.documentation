@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
-    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/documentation_options.js?v=f5fb567a"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -104,7 +104,7 @@
 </dd>
 </dl>
 <span id="l4e4d52696e67-6368617261637465726973746963"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">characteristic</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>characteristic</p>
+<dt><span class="spadfun">characteristic</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">characteristic(x)</span></code> returns the characteristic of the base ring of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
@@ -125,15 +125,24 @@
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
-<p id="index-2"><span id="l4e4d52696e67-646976696465"></span><span class="spadfun">divide</span>: (%, %) -&gt; Record(quotient: %, remainder: %)</p>
-<p id="index-3"><span id="l4e4d52696e67-657175616c3f"></span><span class="spadfun">equal?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></p>
-<span id="l4e4d52696e67-65786163743f"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">exact?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exact?(x)</span></code> heck wheter or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is exact.</p>
+<span id="l4e4d52696e67-646976696465"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">divide</span>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divide(x,y)</span></code> returns a record containing both remainder and quotient.</p>
 </dd>
 </dl>
-<p id="index-5"><span id="l4e4d52696e67-6578616374446976696465"></span><span class="spadfun">exactDivide</span>: (%, %) -&gt; %</p>
+<span id="l4e4d52696e67-657175616c3f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">equal?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">equal?(x,y)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> ar equal.</p>
+</dd>
+</dl>
+<span id="l4e4d52696e67-65786163743f"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">exact?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exact?(x)</span></code> check whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is exact.</p>
+</dd>
+</dl>
+<span id="l4e4d52696e67-6578616374446976696465"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">exactDivide</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exactDivide(x,y)</span></code> returns the exact division of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code>. Throws a Julia error if it is no an exact division.</p>
+</dd>
+</dl>
 <span id="l4e4d52696e67-696e7665727365"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p>inverse</p>
+<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(x)</span></code> returns the inverse of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d52696e67-6a6c41626f7574">
@@ -331,7 +340,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2024, FriCAS Team.
+    &#169; Copyright 2007-2025, FriCAS Team.
     </div>
   </body>
 </html>

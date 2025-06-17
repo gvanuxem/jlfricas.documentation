@@ -849,28 +849,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
-.. _l4a4c575345787072657373696f6e-64617465537472696e67:
-
-.. index::
-   pair: JLWSExpression; dateString
-
-:spadfun:`dateString`\: % -> % 
-  \ ``dateString(expr)``\  returns the JLWSExpression string of the date from a \ ``WS``\  date object. For example: \example{dateString jWSExpr "Tomorrow"}
-
-
-.. index::
-   pair: JLWSExpression; dateString
-
-:spadfun:`dateString`\: (%, %) -> % 
-  \ ``dateString(expr, form)``\  returns JLWSExpression string of the date from a \ ``WS``\  date object with \ ``WS``\  format form. Fo example: \example{dateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))}
-
-
-.. index::
-   pair: JLWSExpression; dateString
-
-:spadfun:`dateString`\: () -> % 
-  \ ``dateString()``\  returns the JLWSExpression string of the local date and time. For example: \example{toString dateTime()}
-
 .. _l4a4c575345787072657373696f6e-646177736f6e:
 
 .. index::
@@ -1403,7 +1381,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; exactNumber?
 
 :spadfun:`exactNumber?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``exactNumber?(x)``\  checks whether or not \ ``x``\  is an exact number.
 
 .. _l4a4c575345787072657373696f6e-657870:
 
@@ -1700,6 +1678,35 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 :spadfun:`floor`\: % -> % 
   \ ``floor(x)``\  returns the greatest integer less than or equal to \ ``x``\ 
+
+.. _l4a4c575345787072657373696f6e-666f7572696572:
+
+.. index::
+   pair: JLWSExpression; fourier
+
+:spadfun:`fourier`\: % -> % 
+  \ ``fourier(expr)``\  returns the discrete Fourier transform from a list of numbers.
+
+
+.. index::
+   pair: JLWSExpression; fourier
+
+:spadfun:`fourier`\: (%, %) -> % 
+  \ ``fourier(expr, pos)``\  returns the elements of the discrete Fourier transform from a list of numbers with position(\ ``s``\ ) in the list pos.
+
+
+.. index::
+   pair: JLWSExpression; fourier
+
+:spadfun:`fourier`\: (\ :ref:`JLWSList <l4a4c57534c697374>`\  %, \ :ref:`JLWSList <l4a4c57534c697374>`\  %) -> \ :ref:`JLWSList <l4a4c57534c697374>`\  % 
+  \ ``fourier(list, lpos)``\  returns the elements of the discrete Fourier transform from a \ ``list``\  of numbers with position(\ ``s``\ ) in the \ ``list``\  lpos.
+
+
+.. index::
+   pair: JLWSExpression; fourier
+
+:spadfun:`fourier`\: \ :ref:`JLWSList <l4a4c57534c697374>`\  % -> \ :ref:`JLWSList <l4a4c57534c697374>`\  % 
+  \ ``fourier(list)``\  returns the discrete Fourier transform from the \ ``list``\  of numbers.
 
 .. _l4a4c575345787072657373696f6e-6672616374696f6e50617274:
 
@@ -2001,7 +2008,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; integer?
 
 :spadfun:`integer?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``integer?(i)``\  checks whteher or not \ ``i``\  is an integer.
 
 .. _l4a4c575345787072657373696f6e-696e74656772616c:
 
@@ -2075,6 +2082,35 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 :spadfun:`inverseErfc`\: % -> % 
   \ ``inverseErfc(x)``\  computes the inverse complementary error function of \ ``x``\ .
+
+.. _l4a4c575345787072657373696f6e-696e7665727365466f7572696572:
+
+.. index::
+   pair: JLWSExpression; inverseFourier
+
+:spadfun:`inverseFourier`\: % -> % 
+  \ ``inverseFourier(expr)``\  returns the discrete inverse Fourier transform from a list of numbers.
+
+
+.. index::
+   pair: JLWSExpression; inverseFourier
+
+:spadfun:`inverseFourier`\: (%, %) -> % 
+  \ ``inverseFourier(expr, pos)``\  returns the elements of the discrete inverse Fourier transform from a list of numbers with position(\ ``s``\ ) in the list pos.
+
+
+.. index::
+   pair: JLWSExpression; inverseFourier
+
+:spadfun:`inverseFourier`\: (\ :ref:`JLWSList <l4a4c57534c697374>`\  %, \ :ref:`JLWSList <l4a4c57534c697374>`\  %) -> \ :ref:`JLWSList <l4a4c57534c697374>`\  % 
+  \ ``inverseFourier(list, lpos)``\  returns the elements of the discrete inverse Fourier transform from a \ ``list``\  of numbers with position(\ ``s``\ ) in the \ ``list``\  lpos.
+
+
+.. index::
+   pair: JLWSExpression; inverseFourier
+
+:spadfun:`inverseFourier`\: \ :ref:`JLWSList <l4a4c57534c697374>`\  % -> % 
+  \ ``inverseFourier(expr)``\  returns the discrete inverse Fourier transform from a list of numbers.
 
 .. _l4a4c575345787072657373696f6e-696e766572736547616d6d61526567756c6172697a6564:
 
@@ -2453,28 +2489,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 :spadfun:`jWSData`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ ``jWSData(sym)``\  returns the entity(ies) associated to \ ``sym``\ (\ ``s``\ ).
 
-.. _l4a4c575345787072657373696f6e-6a5753446174654f626a656374:
-
-.. index::
-   pair: JLWSExpression; jWSDateObject
-
-:spadfun:`jWSDateObject`\: % -> % 
-  \ ``jWSDateObject(expr)``\  returns the JLWSExpression object of the date from \ ``expr``\ .
-
-
-.. index::
-   pair: JLWSExpression; jWSDateObject
-
-:spadfun:`jWSDateObject`\: (%, %) -> % 
-  \ ``jWSDateObject(date,type)``\  returns the JLWSExpression object of the \ ``date``\  and \ ``type``\ , for example "Month".
-
-
-.. index::
-   pair: JLWSExpression; jWSDateObject
-
-:spadfun:`jWSDateObject`\: () -> % 
-  \ ``jWSDateObject()``\  returns the JLWSExpression object of the local date and time.
-
 .. _l4a4c575345787072657373696f6e-6a5753457175616c:
 
 .. index::
@@ -2538,7 +2552,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a JLWSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language Expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{dateString(jWSExpr "Today")}
+  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a JLWSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language Expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{jlWSDateString(jWSExpr "Tomorrow")}
 
 
 .. index::
@@ -2935,7 +2949,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; machineNumber?
 
 :spadfun:`machineNumber?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``machineNumber?(expr)``\  checks whether or not \ ``expr``\  is a CPU/GPU supported number.
 
 .. _l4a4c575345787072657373696f6e-6d61696e4b65726e656c:
 
@@ -3195,7 +3209,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; number?
 
 :spadfun:`number?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``number?(expr)``\  checks whether or not \ ``expr``\  is a number.
 
 .. _l4a4c575345787072657373696f6e-6e756d626572466f726d:
 
@@ -3813,7 +3827,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; rational?
 
 :spadfun:`rational?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``rational?(q)``\  checks whether or not \ ``q``\  is a rational number.
 
 .. _l4a4c575345787072657373696f6e-726174696f6e616c417070726f78696d6174696f6e:
 
@@ -3836,7 +3850,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; real?
 
 :spadfun:`real?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``real?(x)``\  checks whether or not \ ``x``\  represents a real number.
 
 .. _l4a4c575345787072657373696f6e-7265616c:
 
@@ -3849,7 +3863,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: JLWSExpression; realNumeric?
 
 :spadfun:`realNumeric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \undocumented
+  \ ``realNumeric?(x)``\  checks whether or not \ ``x``\  represents a real value (numeric).
 
 .. _l4a4c575345787072657373696f6e-7265636970:
 

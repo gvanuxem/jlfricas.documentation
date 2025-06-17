@@ -5,7 +5,7 @@
 JLComplexFloat
 ==============
 
-:viewcode:`jobject.spad line 1176 <jobject.spad#L1176>` :editcode:`[edit on github] <jobject.spad#L1176>`
+:viewcode:`jobject.spad line 1231 <jobject.spad#L1231>` :editcode:`[edit on github] <jobject.spad#L1231>`
 
 
 JLFComplexloat implements arbitrary precision floating point arithmetic for complex numbers using Julia BigFloats (MPFR based). https://www.mpfr.org/
@@ -35,7 +35,7 @@ JLFComplexloat implements arbitrary precision floating point arithmetic for comp
    pair: JLComplexFloat; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``c*i``\  is the multiplication by an integer.
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`JLFloat <l4a4c466c6f6174>`\ ) -> % 
@@ -89,14 +89,14 @@ JLFComplexloat implements arbitrary precision floating point arithmetic for comp
    pair: JLComplexFloat; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``c/i``\  is the division by an integer.
 
 
 .. index::
    pair: JLComplexFloat; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  
+  \ ``i/c``\  is the division of and integer by \ ``c``\ .
 
 .. _l4a4c436f6d706c6578466c6f6174-3d:
 
@@ -287,7 +287,7 @@ JLFComplexloat implements arbitrary precision floating point arithmetic for comp
    pair: JLComplexFloat; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``coerce(r)``\  coerces to a JLComplexFloat.
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -306,7 +306,7 @@ JLFComplexloat implements arbitrary precision floating point arithmetic for comp
    pair: JLComplexFloat; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  
+  \ ``coerce(r)``\  coerces \ ``r``\  to a JLComplexFloat.
 
 .. _l4a4c436f6d706c6578466c6f6174-636f6d6d757461746f72:
 
@@ -723,21 +723,21 @@ JLFComplexloat implements arbitrary precision floating point arithmetic for comp
    pair: JLComplexFloat; jcfloat
 
 :spadfun:`jcfloat`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``jcfloat(r)``\  returns \ ``r``\  as a JLComplexFloat.
 
 
 .. index::
    pair: JLComplexFloat; jcfloat
 
 :spadfun:`jcfloat`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jcfloat(q)``\  returns \ ``q``\  as a JLComplexFloat.
 
 
 .. index::
    pair: JLComplexFloat; jcfloat
 
 :spadfun:`jcfloat`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  
+  \ ``jcfloat(z)``\  returns \ ``z``\  as a JLComplexFloat.
 
 .. _l4a4c436f6d706c6578466c6f6174-6a6c41626f7574:
 

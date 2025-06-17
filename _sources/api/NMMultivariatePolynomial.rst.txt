@@ -5,7 +5,7 @@
 NMMultivariatePolynomial(R, VarSet, InternalOrdering)
 =====================================================
 
-:viewcode:`jnpoly.spad line 558 <jnpoly.spad#L558>` :editcode:`[edit on github] <jnpoly.spad#L558>`
+:viewcode:`jnpoly.spad line 559 <jnpoly.spad#L559>` :editcode:`[edit on github] <jnpoly.spad#L559>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -480,6 +480,14 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-696e7465726e616c4f72646572696e67:
+
+.. index::
+   pair: NMMultivariatePolynomial; internalOrdering
+
+:spadfun:`internalOrdering`\: () -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``internalOrdering()``\  returns the internal ordering used by Nemo. It is determined at instantiation time.
+
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-696e7665727365:
 
 \ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
@@ -572,7 +580,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariatePolynomial; jmp2nmp
 
 :spadfun:`jmp2nmp`\: \ :ref:`MultivariatePolynomial <l4d756c746976617269617465506f6c796e6f6d69616c>`\ (VarSet, R) -> % 
-  jnmp(\ ``p``\ ) converts the multivariate polynomial \ ``p``\  to a Nemo multivariate polynomial.
+  \ ``jmp2nmp(p)``\  converts the multivariate polynomial \ ``p``\  to a Nemo multivariate polynomial.
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6c61746578:
 

@@ -11,6 +11,14 @@ JLWSUtilityFunctions
 Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 
 
+.. _l4a4c57535574696c69747946756e6374696f6e73-666f75726965724d6174726978:
+
+.. index::
+   pair: JLWSUtilityFunctions; fourierMatrix
+
+:spadfun:`fourierMatrix`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`JLWSMatrix <l4a4c57534d6174726978>`\  \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  \ ``fourierMatrix(n)``\  returns the \ ``n``\  \ ``x``\  \ ``n``\  Fourier matrix.
+
 .. _l4a4c57535574696c69747946756e6374696f6e73-676175737369616e4d6174726978:
 
 .. index::
@@ -43,6 +51,28 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 :spadfun:`identityMatrix`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`JLWSMatrix <l4a4c57534d6174726978>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
   \ ``identityMatrix(n)``\  returns the identity matrix of size \ ``n``\ .
 
+.. _l4a4c57535574696c69747946756e6374696f6e73-6a6c575344617465537472696e67:
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSDateString
+
+:spadfun:`jlWSDateString`\: () -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  dateString() returns the JLWSExpression string of the local date and time. For example: \example{toString dateTime()}
+
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSDateString
+
+:spadfun:`jlWSDateString`\: (\ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ , \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ ) -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  \ ``jlWSDateString(expr, form)``\  returns JLWSExpression string of the date from a \ ``WS``\  date object with \ ``WS``\  format form. Fo example: \example{jlWSDateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))}
+
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSDateString
+
+:spadfun:`jlWSDateString`\: \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  \ ``jlWSDateString(expr)``\  returns the JLWSExpression string of the date from a \ ``WS``\  date object. For example: \example{jlWSDateString jWSExpr "Tomorrow"}
+
 .. _l4a4c57535574696c69747946756e6374696f6e73-6a6c57534578706f7274:
 
 .. index::
@@ -59,6 +89,29 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 :spadfun:`jlWSExportString`\: (\ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ , \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ ) -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
   \ ``jlWSExportString(expr, jWSString(format))``\  returns the string representation of \ ``expr``\  in the format form. Use toString or string to obtain the FriCAS String. For example: \example{jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"} \example{jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"} \example{string jlWSExportString(\%,jWSString "TeX")}
 
+.. _l4a4c57535574696c69747946756e6374696f6e73-6a6c5753496d706f7274:
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSImport
+
+:spadfun:`jlWSImport`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ ) -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  jWSImport(expr, form) imports expr with format form.
+
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSImport
+
+:spadfun:`jlWSImport`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  jWSImport(expr) imports expr.
+
+.. _l4a4c57535574696c69747946756e6374696f6e73-6a6c5753496e666f726d6174696f6e:
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSInformation
+
+:spadfun:`jlWSInformation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  jWSInformation(\ ``sym``\ ) prints informations about the symbol \ ``sym``\ . For example: \example{jWSInformation sin}
+
 .. _l4a4c57535574696c69747946756e6374696f6e73-6a6c5753506c6f74:
 
 .. index::
@@ -67,27 +120,49 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 :spadfun:`jlWSPlot`\: (\ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ , \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ ) -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
   \ ``jlWSPlot(expr, options)``\  is the \ ``WS``\  plot function. Since it should be run in a Wolfram notebook or any other supported graphical interfaces, the Wolfram Jupyter "plugin" for example, it is left to the user for testing purposes. The following uses the jlWSExport function: \example{x:=jWSExpr(x);opt:=jWSList [x,-5,5]} \example{jlWSExport("sin.png", jlWSPlot(sin(x),opt))}
 
-.. _l4a4c57535574696c69747946756e6374696f6e73-72616e6765:
+.. _l4a4c57535574696c69747946756e6374696f6e73-6a6c575352616e6765:
 
 .. index::
-   pair: JLWSUtilityFunctions; range
+   pair: JLWSUtilityFunctions; jlWSRange
 
-:spadfun:`range`\: (\ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
-  \ ``range(n,m)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\ .
-
-
-.. index::
-   pair: JLWSUtilityFunctions; range
-
-:spadfun:`range`\: (\ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
-  \ ``range(n,m,d)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
+:spadfun:`jlWSRange`\: (\ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
+  \ ``jlWSRange(n,m)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\ .
 
 
 .. index::
-   pair: JLWSUtilityFunctions; range
+   pair: JLWSUtilityFunctions; jlWSRange
 
-:spadfun:`range`\: \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
-  \ ``range(n)``\  returns a \ ``WS``\  agg that ranges from 1 to \ ``n``\ . For example: \example{range(10)@JWSLIST(JWSINT)}
+:spadfun:`jlWSRange`\: (\ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ , \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\ ) -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
+  \ ``jlWSRange(n,m,d)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
+
+
+.. index::
+   pair: JLWSUtilityFunctions; jlWSRange
+
+:spadfun:`jlWSRange`\: \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  -> \ :ref:`JLWSList <l4a4c57534c697374>`\  \ :ref:`JLWSInteger <l4a4c5753496e7465676572>`\  
+  \ ``jlWSRange(n)``\  returns a \ ``WS``\  agg that ranges from 1 to \ ``n``\ . For example: \example{jlWSRange(10)@JWSLIST(JWSINT)}
+
+.. _l4a4c57535574696c69747946756e6374696f6e73-6a5753446174654f626a656374:
+
+.. index::
+   pair: JLWSUtilityFunctions; jWSDateObject
+
+:spadfun:`jWSDateObject`\: () -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  \ ``jWSDateObject()``\  returns the JLWSExpression object of the local date and time.
+
+
+.. index::
+   pair: JLWSUtilityFunctions; jWSDateObject
+
+:spadfun:`jWSDateObject`\: (\ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ , \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\ ) -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  \ ``jWSDateObject(date,type)``\  returns the JLWSExpression object of the \ ``date``\  and \ ``type``\ , for example "Month".
+
+
+.. index::
+   pair: JLWSUtilityFunctions; jWSDateObject
+
+:spadfun:`jWSDateObject`\: \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  -> \ :ref:`JLWSExpression <l4a4c575345787072657373696f6e>`\  
+  \ ``jWSDateObject(expr)``\  returns the JLWSExpression object of the date from \ ``expr``\ .
 
 .. _l4a4c57535574696c69747946756e6374696f6e73-7365656452616e646f6d:
 

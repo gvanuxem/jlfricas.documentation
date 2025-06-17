@@ -5,14 +5,14 @@
 NMMultivariateLaurentPolynomial(R, VarSet)
 ==========================================
 
-:viewcode:`jnpoly.spad line 881 <jnpoly.spad#L881>` :editcode:`[edit on github] <jnpoly.spad#L881>`
+:viewcode:`jnpoly.spad line 889 <jnpoly.spad#L889>` :editcode:`[edit on github] <jnpoly.spad#L889>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 * VarSet: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the Julia pakage Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  LPRing \ ``:=``\  NMLP(NINT,VarSet) \ ``x``\  \ ``:=``\  x::V::LPRing \ ``y``\  \ ``:=``\  y::V::LPRing \ ``z``\  \ ``:=``\  z::V::LPRing p:=x*2+3*y^2+17*z^-13 \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate Laurent polynomials using the Julia pakage Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage can be one of :lex, :deglex or :degrevlex. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  LPRing \ ``:=``\  NMLP(NINT,VarSet) \ ``x``\  \ ``:=``\  x::V::LPRing \ ``y``\  \ ``:=``\  y::V::LPRing \ ``z``\  \ ``:=``\  z::V::LPRing p:=x*2+3*y^2+17*z^-13 \ ``p^7``\ 
 
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-30:
@@ -223,28 +223,28 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`NMMultivariateLaurentPolynomial <l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c>`\ (\ :ref:`NMComplexField <l4e4d436f6d706c65784669656c64>`\ , VarSet) 
-  
+  \ ``coerce(lp)``\  coerces \ ``lp``\ .
 
 
 .. index::
    pair: NMMultivariateLaurentPolynomial; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`NMMultivariateLaurentPolynomial <l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c>`\ (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , VarSet) 
-  
+  \ ``coerce(lp)``\  coerces \ ``lp``\ .
 
 
 .. index::
    pair: NMMultivariateLaurentPolynomial; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`NMMultivariateLaurentPolynomial <l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c>`\ (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , VarSet) 
-  
+  \ ``coerce(lp)``\  coerces \ ``lp``\ .
 
 
 .. index::
    pair: NMMultivariateLaurentPolynomial; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`NMMultivariateLaurentPolynomial <l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c>`\ (\ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ , VarSet) 
-  
+  \ ``coerce(lp)``\  coerces \ ``lp``\ .
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -357,21 +357,6 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 :spadfun:`degree`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   \ ``degree(p,i)``\  returns the degree of the \ ``i``\ -th variable.
 
-.. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-64657269766174697665:
-
-.. index::
-   pair: NMMultivariateLaurentPolynomial; derivative
-
-:spadfun:`derivative`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  
-
-
-.. index::
-   pair: NMMultivariateLaurentPolynomial; derivative
-
-:spadfun:`derivative`\: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
-  
-
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-646966666572656e7469617465:
 
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
@@ -437,14 +422,6 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R) -> % 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R)
 
-.. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6576616c75617465:
-
-.. index::
-   pair: NMMultivariateLaurentPolynomial; evaluate
-
-:spadfun:`evaluate`\: (%, \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  
-
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-65786163743f:
 
 \ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -463,8 +440,8 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 .. index::
    pair: NMMultivariateLaurentPolynomial; exponent_vectors
 
-:spadfun:`exponent_vectors`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  
+:spadfun:`exponent_vectors`\: % -> JJLObject 
+  \ ``exponent_vectors(lp)``\  returns the exponent vectors.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-657871756f:
 
@@ -522,15 +499,15 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; gen?
 
 :spadfun:`gen?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-   
+  \ ``gen?(lp)``\  checks whether or not \ ``lp``\  is a generator.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-67656e:
 
 .. index::
    pair: NMMultivariateLaurentPolynomial; gen
 
-:spadfun:`gen`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  
+:spadfun:`gen`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ ``gen(i)``\  returns the \ ``i``\ -th generator.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-67656e73:
 
@@ -538,7 +515,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; gens
 
 :spadfun:`gens`\: () -> \ :ref:`JLVector <l4a4c566563746f72>`\  % 
-  
+  \ ``gens()``\  returns a vector of the generators (variables).
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-67726f756e643f:
 
@@ -646,13 +623,13 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6a6d70326e6d6c70:
+.. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6a6d70326e6d70:
 
 .. index::
-   pair: NMMultivariateLaurentPolynomial; jmp2nmlp
+   pair: NMMultivariateLaurentPolynomial; jmp2nmp
 
-:spadfun:`jmp2nmlp`\: \ :ref:`MultivariatePolynomial <l4d756c746976617269617465506f6c796e6f6d69616c>`\ (VarSet, R) -> % 
-  jnmp(\ ``p``\ ) converts the multivariate polynomial \ ``p``\  to a Nemo multivariate polynomial.
+:spadfun:`jmp2nmp`\: \ :ref:`MultivariatePolynomial <l4d756c746976617269617465506f6c796e6f6d69616c>`\ (VarSet, R) -> % 
+  \ ``jmp2nmp(p)``\  converts the multivariate polynomial \ ``p``\  to a Nemo multivariate polynomial.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6c61746578:
 
@@ -679,7 +656,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; leading_exponent_vector
 
 :spadfun:`leading_exponent_vector`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  
+  \ ``leading_exponent_vector(lp)``\  returns the of leading exponent
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6c656164696e675f6d6f6e6f6d69616c:
 
@@ -687,7 +664,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; leading_monomial
 
 :spadfun:`leading_monomial`\: % -> % 
-  
+  \ ``leading_monomial(lp)``\  returns the leading monomial.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6c656164696e675f7465726d:
 
@@ -695,7 +672,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; leading_term
 
 :spadfun:`leading_term`\: % -> % 
-  
+  \ ``leading_term(lp)``\  returns the leading term.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6c656164696e67436f656666696369656e74:
 
@@ -858,7 +835,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; numberOfVariables
 
 :spadfun:`numberOfVariables`\: () -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-   
+  \ ``numberOfVariables()``\  returns the number of variables.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-6f6e653f:
 
@@ -1062,7 +1039,7 @@ This type is a basic representation of sparse, distributed multivariate polynomi
    pair: NMMultivariateLaurentPolynomial; terms
 
 :spadfun:`terms`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  % 
-   
+  \ ``terms(lp)``\  returns the vector of terms.
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-746f74616c446567726565:
 
@@ -1110,8 +1087,8 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 .. index::
    pair: NMMultivariateLaurentPolynomial; variableIndex
 
-:spadfun:`variableIndex`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-   
+:spadfun:`variableIndex`\: % -> \ :ref:`JLObjInt64 <l4a4c4f626a496e743634>`\  
+  \ ``variableIndex(var)``\  returns the index of the variable \ ``var``\ . Julia raises an error if \ ``var``\  is not
 
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-7661726961626c6573:
 

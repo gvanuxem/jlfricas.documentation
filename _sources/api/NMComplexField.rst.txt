@@ -35,7 +35,7 @@ NMComplexField
    pair: NMComplexField; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  * \undocumented
+  \ ``x*i``\  is the multiplication by an integer.
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ ) -> % 
@@ -89,14 +89,14 @@ NMComplexField
    pair: NMComplexField; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  / \undocumented
+  \ ``x/i``\  is the division by an integer.
 
 
 .. index::
    pair: NMComplexField; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  / \undocumented
+  \ ``i/x``\  is the division of an integer by \ ``x``\ .
 
 .. _l4e4d436f6d706c65784669656c64-3d:
 
@@ -344,7 +344,7 @@ NMComplexField
    pair: NMComplexField; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(x)``\  coerces \ ``x``\ .
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -359,14 +359,14 @@ NMComplexField
    pair: NMComplexField; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(x)``\  coerces \ ``x``\ .
 
 
 .. index::
    pair: NMComplexField; coerce
 
 :spadfun:`coerce`\: \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(an)``\  coerces \ ``an``\ .
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  -> % 
@@ -377,7 +377,7 @@ NMComplexField
    pair: NMComplexField; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(str)``\  returns a NMComplexField element from evaluation in Julia of \ ``str``\ .
 
 .. _l4e4d436f6d706c65784669656c64-636f6d6d757461746f72:
 
@@ -719,7 +719,7 @@ NMComplexField
    pair: NMComplexField; exp1
 
 :spadfun:`exp1`\: () -> % 
-  exp() returns the NMComplexField \ ``ℯ``\  (exp(1)).
+  \ ``exp1()``\  returns the NMComplexField \ ``ℯ``\  (exp(1)).
 
 .. _l4e4d436f6d706c65784669656c64-657870:
 
@@ -1060,42 +1060,42 @@ NMComplexField
    pair: NMComplexField; jncf
 
 :spadfun:`jncf`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> % 
-  \ ``jncf ``\ \undocumented
+  \ ``jncf(r,i)``\  returns \ ``r``\  as real part and \ ``i``\  as imaginary part as a NMComplexField element.
 
 
 .. index::
    pair: NMComplexField; jncf
 
 :spadfun:`jncf`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``jncf ``\ \undocumented
+  \ ``jncf(r,i)``\  returns \ ``r``\  as real part and \ ``i``\  as imaginary part as a NMComplexField element.
 
 
 .. index::
    pair: NMComplexField; jncf
 
 :spadfun:`jncf`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jncf ``\ \undocumented
+  \ ``jncf(r,i)``\  returns a NMComplexField element from evaluation in Julia of \ ``r``\  and \ ``i``\ . \ ``r``\  is the real part, \ ``i``\  the imaginary one.
 
 
 .. index::
    pair: NMComplexField; jncf
 
 :spadfun:`jncf`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jncf ``\ \undocumented
+  \ ``jncf(x)``\  returns \ ``x``\  as a NMComplexField element.
 
 
 .. index::
    pair: NMComplexField; jncf
 
 :spadfun:`jncf`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jncf ``\ \undocumented
+  \ ``jncf(i)``\ returns \ ``i``\  as NMComplexField element.
 
 
 .. index::
    pair: NMComplexField; jncf
 
 :spadfun:`jncf`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jncf ``\ \undocumented
+  \ ``jncf(str)``\  returns a NMComplexField element from evaluation in Julia of \ ``str``\ .
 
 .. _l4e4d436f6d706c65784669656c64-6b656c76696e426569:
 
@@ -1356,14 +1356,14 @@ NMComplexField
    pair: NMComplexField; precision
 
 :spadfun:`precision`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``precision ``\ \undocumented
+  \ ``precision()``\  returns the actual default precision used when creating a new element.
 
 
 .. index::
    pair: NMComplexField; precision
 
 :spadfun:`precision`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``precision``\ \undocumented
+  \ ``precision(p)``\  changes the precision used for creating elements.
 
 .. _l4e4d436f6d706c65784669656c64-7072696d653f:
 

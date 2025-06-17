@@ -5,7 +5,7 @@
 NMPrimeField p
 ==============
 
-:viewcode:`jnemo.spad line 568 <jnemo.spad#L568>` :editcode:`[edit on github] <jnemo.spad#L568>`
+:viewcode:`jnemo.spad line 571 <jnemo.spad#L571>` :editcode:`[edit on github] <jnemo.spad#L571>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
@@ -37,14 +37,14 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  * \undocumented
+  * x*i is the multiplication by an integer.
 
 
 .. index::
    pair: NMPrimeField; *
 
 :spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  * \undocumented
+  \ ``x*i``\  is the multiplication by a an integer (NMInteger).
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -187,14 +187,14 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; coerce
 
 :spadfun:`coerce`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(i)``\  coerces \ ``i``\  as a NMPrimeField element.
 
 
 .. index::
    pair: NMPrimeField; coerce
 
 :spadfun:`coerce`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(i)``\  coerces \ ``i``\  as a NMPrimeField element.
 
 .. _l4e4d5072696d654669656c64-636f6d6d757461746f72:
 
@@ -411,7 +411,7 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; generator?
 
 :spadfun:`generator?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  
+  \ ``generator?(x)``\  checks whether or not of the NMPrimeField.
 
 .. _l4e4d5072696d654669656c64-67656e657261746f72:
 
@@ -525,14 +525,14 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; jnpf
 
 :spadfun:`jnpf`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnpf ``\ \undocumented
+  \ ``jnpf(i)``\  returns \ ``i``\  as a NMPrimeField element.
 
 
 .. index::
    pair: NMPrimeField; jnpf
 
 :spadfun:`jnpf`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``jnpf ``\ \undocumented
+  \ ``jnpf(i)``\  returns \ ``i``\  as a NMPrimeField element.
 
 .. _l4e4d5072696d654669656c64-6c61746578:
 
@@ -663,7 +663,7 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; order
 
 :spadfun:`order`\: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order ``\ \undocumented
+  \ ``order()``\  returns the order of the NMPrimeField.
 
 .. _l4e4d5072696d654669656c64-706c656e617279506f776572:
 
@@ -802,7 +802,7 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; sqrt
 
 :spadfun:`sqrt`\: % -> % 
-  \ ``sqrt(x)``\  returns a square root of \ ``x``\ . Throw a Julia error if there is no square root and returns 0.
+  \ ``sqrt(x)``\  returns quare root of \ ``x``\ . Throw a Julia error if there is no square root and returns 0.
 
 .. _l4e4d5072696d654669656c64-73717561726546726565:
 

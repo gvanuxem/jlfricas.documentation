@@ -35,7 +35,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``x*i``\  is the multiplication of \ ``x``\  by an integer.
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -81,14 +81,14 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  
+  \ ``x/i``\  is the division of \ ``x``\  by an integer.
 
 
 .. index::
    pair: JLObjFloat32; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  
+  \ ``i/x``\  is the division of an integer by \ ``x``\ .
 
 .. _l4a4c4f626a466c6f61743332-3c3d:
 
@@ -116,6 +116,13 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
   from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
 
 .. _l4a4c4f626a466c6f61743332-5e:
+
+.. index::
+   pair: JLObjFloat32; ^
+
+:spadfun:`^`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``x^q``\  is the exponentiation by a rational.
+
 
 \ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
@@ -192,14 +199,14 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; coerce
 
 :spadfun:`coerce`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  
+  \ ``coerce(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it). Convenience function.
 
 
 .. index::
    pair: JLObjFloat32; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``coerce(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it). Convenience function.
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -224,7 +231,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; convert
 
 :spadfun:`convert`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``convert(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it).
 
 .. _l4a4c4f626a466c6f61743332-646976696465:
 
@@ -285,14 +292,14 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; jfloat32
 
 :spadfun:`jfloat32`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  
+  \ ``jfloat32(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it).
 
 
 .. index::
    pair: JLObjFloat32; jfloat32
 
 :spadfun:`jfloat32`\: \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> % 
-  
+  \ ``jfloat32(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it).
 
 
 .. index::

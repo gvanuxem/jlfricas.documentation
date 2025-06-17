@@ -128,7 +128,7 @@ Linear Algebra functions computed using Julia and its algorithms. 64 bits versio
    pair: JLF64LinearAlgebra; lu!
 
 :spadfun:`lu!`\: \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\  -> Record(LU: \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ , ipiv: \ :ref:`JLInt64Vector <l4a4c496e743634566563746f72>`\ ) 
-  \ ``lu!(m)``\  computes the LU factorisation of \ ``m``\  in \ ``m``\ .
+  \ ``lu!(m)``\  computes in-place LU factorisation of \ ``m``\ . \ ``m``\  isoverwritten by its decomposition.
 
 .. _l4a4c4636344c696e656172416c6765627261-6c75:
 
@@ -144,7 +144,7 @@ Linear Algebra functions computed using Julia and its algorithms. 64 bits versio
    pair: JLF64LinearAlgebra; luReorder!
 
 :spadfun:`luReorder!`\: (\ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ , \ :ref:`JLInt64Vector <l4a4c496e743634566563746f72>`\ ) -> \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\  
-  luOrder(mat, ipiv) returns mat in-place reordered with ipiv pivot indices.
+  \ ``luReorder!(mat, ipiv)``\  returns \ ``mat``\  reordered in-place using the ipiv pivot indices.
 
 .. _l4a4c4636344c696e656172416c6765627261-6c7552656f72646572:
 
@@ -152,7 +152,7 @@ Linear Algebra functions computed using Julia and its algorithms. 64 bits versio
    pair: JLF64LinearAlgebra; luReorder
 
 :spadfun:`luReorder`\: (\ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ , \ :ref:`JLInt64Vector <l4a4c496e743634566563746f72>`\ ) -> \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\  
-  luOrder(mat, ipiv) returns a copy of mat reordered with ipiv pivot indices.
+  \ ``luReorder(mat, ipiv)``\  returns a copy of \ ``mat``\  reordered using the ipiv pivot indices.
 
 .. _l4a4c4636344c696e656172416c6765627261-6d70496e7665727365:
 
@@ -290,7 +290,7 @@ Linear Algebra functions computed using Julia and its algorithms. 64 bits versio
    pair: JLF64LinearAlgebra; svd
 
 :spadfun:`svd`\: \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\  -> Record(U: \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ , sv: \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , Vt: \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) 
-  \ ``svd(m)``\  computes the singular value decomposition \ ``SVD``\  of \ ``m``\  such that \ ``SVD``\ .\ ``U``\  * diagonalMatrix(\ ``sv``\ ) * \ ``SVD``\ .\ ``Vt``\  = \ ``m``\ .
+  \ ``svd(m)``\  computes the singular value decomposition \ ``SVD``\  of \ ``m``\  such that \ ``SVD``\ .\ ``U``\  * diagonalMatrix(\ ``SVD``\ .\ ``sv``\ ) * \ ``SVD``\ .\ ``Vt``\  = \ ``m``\ .
 
 .. _l4a4c4636344c696e656172416c6765627261-73766476616c7321:
 

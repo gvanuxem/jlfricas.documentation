@@ -5,7 +5,7 @@
 StreamTaylorSeriesOperations A
 ==============================
 
-:viewcode:`sttaylor.spad line 1 <sttaylor.spad#L1>` :editcode:`[edit on github] <sttaylor.spad#L1>`
+:viewcode:`sttaylor.spad line 283 <sttaylor.spad#L283>` :editcode:`[edit on github] <sttaylor.spad#L283>`
 
 * A: \ :ref:`Ring <l52696e67>`\ 
 
@@ -15,48 +15,30 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-2a:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; *
-
-:spadfun:`\*`\: (A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``r * a``\  returns the power series scalar multiplication of \ ``r``\  by \ ``a``\ : \ ``r * [a0, a1, ...] = [r * a0, r * a1, ...]``\ 
+\ :ref:`\* <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-2a>`\ \: (A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 
-.. index::
-   pair: StreamTaylorSeriesOperations; *
-
-:spadfun:`\*`\: (\ :ref:`Stream <l53747265616d>`\  A, A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``a * r``\  returns the power series scalar multiplication of \ ``a``\  by \ ``r:``\  \ ``[a0, a1, ...] * r = [a0 * r, a1 * r, ...]``\ 
+\ :ref:`\* <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-2a>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`RightModule <l52696768744d6f64756c65>`\  A
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 
-.. index::
-   pair: StreamTaylorSeriesOperations; *
-
-:spadfun:`\*`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``a * b``\  returns the power series (Cauchy) product of \ ``a``\  and \ ``b:``\  \ ``[a0, a1, ...] * [b0, b1, ...] = [c0, c1, ...]``\  where \ ``ck = sum(i + j = k, ai * bk)``\ .
+\ :ref:`\* <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-2a>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-2b:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; +
-
-:spadfun:`+`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``a + b``\  returns the power series sum of \ ``a``\  and \ ``b``\ : \ ``[a0, a1, ..] + [b0, b1, ..] = [a0 + b0, a1 + b1, ..]``\ 
+\ :ref:`+ <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-2b>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-2d:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; -
-
-:spadfun:`-`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``a - b``\  returns the power series difference of \ ``a``\  and \ ``b``\ : \ ``[a0, a1, ..] - [b0, b1, ..] = [a0 - b0, a1 - b1, ..]``\ 
+\ :ref:`- <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-2d>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 
-.. index::
-   pair: StreamTaylorSeriesOperations; -
-
-:spadfun:`-`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``- a``\  returns the power series negative of \ ``a``\ : \ ``- [a0, a1, ...] = [- a0, - a1, ...]``\ 
+\ :ref:`- <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-2d>`\ \: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-2f:
 
@@ -68,43 +50,28 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-616464696167:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; addiag
-
-:spadfun:`addiag`\: \ :ref:`Stream <l53747265616d>`\  \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``addiag(x)``\  performs diagonal addition of a stream of streams. if \ ``x``\  = \ ``[[a<0, 0>, a<0, 1>, ..], [a<1, 0>, a<1, 1>, ..], [a<2, 0>, a<2, 1>, ..], ..]``\  and \ ``addiag(x) = [b<0, b<1>, ...], then b<k> = sum(i+j=k, a<i, j>)``\ .
+\ :ref:`addiag <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-616464696167>`\ \: \ :ref:`Stream <l53747265616d>`\  \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-636f65726365:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; coerce
-
-:spadfun:`coerce`\: A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``coerce(r)``\  converts a ring element \ ``r``\  to a stream with one element.
+\ :ref:`coerce <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-636f65726365>`\ \: A -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-636f6d706f7365:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; compose
-
-:spadfun:`compose`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``compose(a, b)``\  composes the power series \ ``a``\  with the power series \ ``b``\ .
+\ :ref:`compose <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-636f6d706f7365>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`RightModule <l52696768744d6f64756c65>`\  A
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6465726976:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; deriv
-
-:spadfun:`deriv`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``deriv(a)``\  returns the derivative of the power series with respect to the power series variable. Thus \ ``deriv([a0, a1, a2, ...])``\  returns \ ``[a1, 2 a2, 3 a3, ...]``\ .
+\ :ref:`deriv <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6465726976>`\ \: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6576616c:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; eval
-
-:spadfun:`eval`\: (\ :ref:`Stream <l53747265616d>`\  A, A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``eval(a, r)``\  returns a stream of partial sums of the power series \ ``a``\  evaluated at the power series variable equal to \ ``r``\ .
+\ :ref:`eval <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6576616c>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`RightModule <l52696768744d6f64756c65>`\  A
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6576656e6c616d62657274:
 
@@ -124,11 +91,8 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-676465726976:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; gderiv
-
-:spadfun:`gderiv`\: (\ :ref:`Integer <l496e7465676572>`\  -> A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``gderiv(f, [a0, a1, a2, ..])``\  returns \ ``[f(0)*a0, f(1)*a1, f(2)*a2, ..]``\ .
+\ :ref:`gderiv <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-676465726976>`\ \: (\ :ref:`Integer <l496e7465676572>`\  -> A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-67656e6572616c5f4c616d626572745f70726f64756374:
 
@@ -148,35 +112,23 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-696e74:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; int
-
-:spadfun:`int`\: A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``int(r)``\  returns [\ ``r``\ , \ ``r+1``\ , \ ``r+2``\ , ...], where \ ``r``\  is a ring element.
+\ :ref:`int <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-696e74>`\ \: A -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-696e746567657273:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; integers
-
-:spadfun:`integers`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``integers(n)``\  returns \ ``[n, n+1, n+2, ...]``\ .
+\ :ref:`integers <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-696e746567657273>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-696e74656772617465:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; integrate
-
-:spadfun:`integrate`\: (A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(r, a)``\  returns the integral of the power series \ ``a``\  with respect to the power series variable where \ ``r``\  denotes the constant of integration. Thus \ ``integrate(a, [a0, a1, a2, ...]) = [a, a0, a1/2, a2/3, ...]``\ .
+\ :ref:`integrate <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-696e74656772617465>`\ \: (A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-696e766d756c746973656374:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; invmultisect
-
-:spadfun:`invmultisect`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``invmultisect(a, b, st)``\  substitutes \ ``x^((a+b)*n)``\  for \ ``x^n``\  and multiplies by \ ``x^b``\ .
+\ :ref:`invmultisect <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-696e766d756c746973656374>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6c616772616e6765:
 
@@ -204,11 +156,8 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6c617a79496e74656772617465:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; lazyIntegrate
-
-:spadfun:`lazyIntegrate`\: (A, () -> \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``lazyIntegrate(r, f)``\  is a version of integrate used for fixed point computations.
+\ :ref:`lazyIntegrate <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6c617a79496e74656772617465>`\ \: (A, () -> \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6d6170646976:
 
@@ -220,27 +169,18 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6d61706d756c74:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; mapmult
-
-:spadfun:`mapmult`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``mapmult([a0, a1, ..], [b0, b1, ..])``\  returns \ ``[a0*b0, a1*b1, ..]``\ .
+\ :ref:`mapmult <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6d61706d756c74>`\ \: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6d6f6e6f6d:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; monom
-
-:spadfun:`monom`\: (A, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``monom(deg, coef)``\  is a monomial of degree \ ``deg``\  with coefficient coef.
+\ :ref:`monom <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6d6f6e6f6d>`\ \: (A, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6d756c746973656374:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; multisect
-
-:spadfun:`multisect`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``multisect(a, b, st)``\  selects the coefficients of \ ``x^((a+b)*n+a)``\ , and changes them to \ ``x^n``\ .
+\ :ref:`multisect <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6d756c746973656374>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6e6c6465:
 
@@ -252,11 +192,8 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6f6464696e746567657273:
 
-.. index::
-   pair: StreamTaylorSeriesOperations; oddintegers
-
-:spadfun:`oddintegers`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``oddintegers(n)``\  returns \ ``[n, n+2, n+4, ...]``\ .
+\ :ref:`oddintegers <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279-6f6464696e746567657273>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A)
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6f64646c616d62657274:
 
@@ -306,4 +243,6 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
 :spadfun:`revert`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
   \ ``revert(a)``\  computes the inverse of a power series \ ``a``\  with respect to composition. the series should have constant coefficient 0 and invertible first order coefficient.
 
+
+\ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A) 
 

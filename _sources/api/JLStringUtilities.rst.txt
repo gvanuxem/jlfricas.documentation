@@ -5,7 +5,7 @@
 JLStringUtilities
 =================
 
-:viewcode:`jutils.spad line 122 <jutils.spad#L122>` :editcode:`[edit on github] <jutils.spad#L122>`
+:viewcode:`jutils.spad line 154 <jutils.spad#L154>` :editcode:`[edit on github] <jutils.spad#L154>`
 
 
 This package provides Julia facilities that operate on strings.
@@ -17,7 +17,7 @@ This package provides Julia facilities that operate on strings.
    pair: JLStringUtilities; jlLatex
 
 :spadfun:`jlLatex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlLatex(str)``\  returns the String corresponding to a Julia LaTeX expression, that is, "L"str"" if your Julia support it (LaTeXStrings package). Convenience function.
+  \ ``jlLatex(str)``\  returns the String corresponding to a Julia LaTeX expression, that is, "L"str"" if your Julia installation supports it (LaTeXStrings package). Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c4d6573736167655374796c6564:
 
@@ -130,7 +130,7 @@ This package provides Julia facilities that operate on strings.
    pair: JLStringUtilities; jlStyled
 
 :spadfun:`jlStyled`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  jlLatex(\ ``str``\ ) returns the String corresponding to a Julia LaTeX expression, that is, "styled_"str_"" if your Julia support it. (StyledStrings official package). Convenience function.
+  \ ``jlStyled(str)``\  returns the String corresponding to a Julia LaTeX expression, that is, "styled_"str_"" if your Julia support it. (StyledStrings official package). Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c53756273746974757465:
 
@@ -139,5 +139,13 @@ This package provides Julia facilities that operate on strings.
 
 :spadfun:`jlSubstitute`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
   \ ``jlSubstitute(str)``\  returns the String corresponding to a Julia subtitute expression, that is, "s_"str_"". Convenience function.
+
+.. _l4a4c537472696e675574696c6974696573-6a6c546f4c61746578:
+
+.. index::
+   pair: JLStringUtilities; jlToLatex
+
+:spadfun:`jlToLatex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlToLatex(str)``\  converts the string \ ``str``\  to LaTeX for supported expressions. The Julia package Latexify needs to be installed. jlToLatex("sin(sqrt(2))") \ ``=>``\  "\$\sin\left( \sqrt{2} \right)\$"
 
 

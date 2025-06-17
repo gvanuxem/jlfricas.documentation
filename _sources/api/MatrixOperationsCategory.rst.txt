@@ -1,0 +1,176 @@
+.. index:: MatrixOperationsCategory
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279:
+
+MatrixOperationsCategory(R, Row, Col)
+=====================================
+
+:viewcode:`matcat.spad line 63 <matcat.spad#L63>` :editcode:`[edit on github] <matcat.spad#L63>`
+
+* R: \ :ref:`BasicType <l426173696354797065>`\ 
+
+* Row: \ :ref:`Type <l54797065>`\ 
+
+* Col: \ :ref:`Type <l54797065>`\ 
+
+
+undocumented
+
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-2a:
+
+.. index::
+   pair: MatrixOperationsCategory; *
+
+:spadfun:`\*`\: (%, %) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+  \ ``x * y``\  is the product of the matrices \ ``x``\  and \ ``y``\ . Error: if the dimensions are incompatible.
+
+
+.. index::
+   pair: MatrixOperationsCategory; *
+
+:spadfun:`\*`\: (%, R) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+  \ ``x * r``\  is the right scalar multiple of the scalar \ ``r``\  and the matrix \ ``x``\ .
+
+
+.. index::
+   pair: MatrixOperationsCategory; *
+
+:spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  \ ``n * x``\  is an integer multiple.
+
+
+.. index::
+   pair: MatrixOperationsCategory; *
+
+:spadfun:`\*`\: (R, %) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+  \ ``r*x``\  is the left scalar multiple of the scalar \ ``r``\  and the matrix \ ``x``\ .
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-2b:
+
+.. index::
+   pair: MatrixOperationsCategory; +
+
+:spadfun:`+`\: (%, %) -> % if R has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+  \ ``x + y``\  is the sum of the matrices \ ``x``\  and \ ``y``\ . Error: if the dimensions are incompatible.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-2d:
+
+.. index::
+   pair: MatrixOperationsCategory; -
+
+:spadfun:`-`\: % -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  \ ``-x``\  returns the negative of the matrix \ ``x``\ .
+
+
+.. index::
+   pair: MatrixOperationsCategory; -
+
+:spadfun:`-`\: (%, %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  \ ``x - y``\  is the difference of the matrices \ ``x``\  and \ ``y``\ . Error: if the dimensions are incompatible.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-2f:
+
+.. index::
+   pair: MatrixOperationsCategory; /
+
+:spadfun:`/`\: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\ 
+  \ ``m/r``\  divides the elements of \ ``m``\  by \ ``r``\ . Error: if \ ``r = 0``\ .
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-616e746973796d6d65747269633f:
+
+.. index::
+   pair: MatrixOperationsCategory; antisymmetric?
+
+:spadfun:`antisymmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  \ ``antisymmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and antisymmetric (i.e. \ ``m[i, j] = -m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-636f6c756d6e5370616365:
+
+.. index::
+   pair: MatrixOperationsCategory; columnSpace
+
+:spadfun:`columnSpace`\: % -> \ :ref:`List <l4c697374>`\  Col if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+  \ ``columnSpace(m)``\  returns a sublist of columns of the matrix \ ``m``\  forming a basis of its column space.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-646961676f6e616c3f:
+
+.. index::
+   pair: MatrixOperationsCategory; diagonal?
+
+:spadfun:`diagonal?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+  \ ``diagonal?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and diagonal (i.e. all entries of \ ``m``\  not on the diagonal are zero) and \ ``false``\  otherwise.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-657871756f:
+
+.. index::
+   pair: MatrixOperationsCategory; exquo
+
+:spadfun:`exquo`\: (%, R) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  \ ``exquo(m, r)``\  computes the exact quotient of the elements of \ ``m``\  by \ ``r``\ , returning \ ``"failed"``\  if this is not possible.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-6d6170:
+
+.. index::
+   pair: MatrixOperationsCategory; map
+
+:spadfun:`map`\: (R -> R, %) -> % 
+  \ ``map(f, a)``\  returns \ ``b``\ , where \ ``b(i, j) = a(i, j)``\  for all \ ``i``\ , \ ``j``\ .
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-6e756c6c697479:
+
+.. index::
+   pair: MatrixOperationsCategory; nullity
+
+:spadfun:`nullity`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  \ ``nullity(m)``\  returns the nullity of the matrix \ ``m``\ . This is the dimension of the null space of the matrix \ ``m``\ .
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-6e756c6c5370616365:
+
+.. index::
+   pair: MatrixOperationsCategory; nullSpace
+
+:spadfun:`nullSpace`\: % -> \ :ref:`List <l4c697374>`\  Col if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  \ ``nullSpace(m)``\  returns a basis for the null space of the matrix \ ``m``\ . Note: null space is considered as vector space over quotient field of the ring.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-72616e6b:
+
+.. index::
+   pair: MatrixOperationsCategory; rank
+
+:spadfun:`rank`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  \ ``rank(m)``\  returns the rank of the matrix \ ``m``\ .
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-726f77456368656c6f6e:
+
+.. index::
+   pair: MatrixOperationsCategory; rowEchelon
+
+:spadfun:`rowEchelon`\: % -> % if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+  \ ``rowEchelon(m)``\  returns the row echelon form of the matrix \ ``m``\ .
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-7371756172653f:
+
+.. index::
+   pair: MatrixOperationsCategory; square?
+
+:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``square?(m)``\  returns \ ``true``\  if \ ``m``\  is a square matrix (i.e. if \ ``m``\  has the same number of rows as columns) and \ ``false``\  otherwise.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-73796d6d65747269633f:
+
+.. index::
+   pair: MatrixOperationsCategory; symmetric?
+
+:spadfun:`symmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``symmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and symmetric (i.e. \ ``m[i, j] = m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+
+.. _l4d61747269784f7065726174696f6e7343617465676f7279-7a65726f3f:
+
+.. index::
+   pair: MatrixOperationsCategory; zero?
+
+:spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+  \ ``zero?(m)``\  returns \ ``true``\  if \ ``m``\  is a zero matrix and \ ``false``\  otherwise
+
+

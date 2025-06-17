@@ -35,7 +35,7 @@ NMRealField
    pair: NMRealField; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  * \undocumented
+  \ ``x*i``\  is the multplication by an integer.
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -85,7 +85,7 @@ NMRealField
    pair: NMRealField; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  / \undocumented)
+  \ ``x/i``\  returns the division of an integer by \ ``x``\ .
 
 .. _l4e4d5265616c4669656c64-3c3d:
 
@@ -351,14 +351,14 @@ NMRealField
    pair: NMRealField; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(x)``\  coerces \ ``x``\ .
 
 
 .. index::
    pair: NMRealField; coerce
 
 :spadfun:`coerce`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(q)``\  coerces \ ``q``\ .
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -369,7 +369,7 @@ NMRealField
    pair: NMRealField; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(x)``\  coerces(\ ``x``\ ).
 
 .. _l4e4d5265616c4669656c64-636f6d6d757461746f72:
 
@@ -464,14 +464,14 @@ NMRealField
    pair: NMRealField; convert
 
 :spadfun:`convert`\: % -> \ :ref:`JLFloat <l4a4c466c6f6174>`\  
-  \ ``convert ``\ \undocumented
+  \ ``convert(x)``\  converts \ ``x``\  to a JLFloat.
 
 
 .. index::
    pair: NMRealField; convert
 
 :spadfun:`convert`\: % -> \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  \ ``convert ``\ \undocumented
+  \ ``convert(x)``\  converts \ ``x``\  to a NMFraction(NMInteger).
 
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\  
@@ -611,7 +611,7 @@ NMRealField
    pair: NMRealField; exp1
 
 :spadfun:`exp1`\: () -> % 
-  exp() returns the NMRealField represenation of \ ``ℯ``\  (exp(1)).
+  \ ``exp1()``\  returns the NMRealField represenation of \ ``ℯ``\  (exp(1)).
 
 .. _l4e4d5265616c4669656c64-657870:
 
@@ -901,28 +901,28 @@ NMRealField
    pair: NMRealField; jnrf
 
 :spadfun:`jnrf`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jnrf ``\ \undocumented
+  \ ``jnrf(x)``\  returns \ ``x``\  as a NMRealField element.
 
 
 .. index::
    pair: NMRealField; jnrf
 
 :spadfun:`jnrf`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnrf ``\ \undocumented
+  \ ``jnrf(q)``\  returns \ ``q``\  as a NMRealField element.
 
 
 .. index::
    pair: NMRealField; jnrf
 
 :spadfun:`jnrf`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnrf ``\ \undocumented
+  \ ``jnrf(i)``\  returns \ ``i``\  as a NMRealField element.
 
 
 .. index::
    pair: NMRealField; jnrf
 
 :spadfun:`jnrf`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jnrf ``\ \undocumented
+  \ ``jnrf(str)``\  evaluates \ ``str``\  in Julia to returns a NMRealField element.
 
 .. _l4e4d5265616c4669656c64-6b656c76696e426569:
 
@@ -1115,7 +1115,7 @@ NMRealField
    pair: NMRealField; nonNegative?
 
 :spadfun:`nonNegative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  nonnegative(\ ``v``\ ) checks whether or not \ ``x``\  is greater or equal to zero.
+  \ ``nonNegative?(v)``\  checks whether or not \ ``x``\  is greater or equal to zero.
 
 .. _l4e4d5265616c4669656c64-6e6f6e506f7369746976653f:
 
@@ -1123,7 +1123,7 @@ NMRealField
    pair: NMRealField; nonPositive?
 
 :spadfun:`nonPositive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  nonnegative(\ ``v``\ ) checks whether or not \ ``x``\  is lower or equal to zero.
+  \ ``nonPositive?(v)``\  checks whether or not \ ``x``\  is lower or equal to zero.
 
 .. _l4e4d5265616c4669656c64-6e6f6e5a65726f3f:
 
@@ -1271,7 +1271,7 @@ NMRealField
    pair: NMRealField; retractIfCan
 
 :spadfun:`retractIfCan`\: \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  -> Union(%, failed) 
-  \ ``retractIfCan ``\ \undocumented
+  \ ``retractIfCan(x)``\  retracts \ ``x``\  if possible. "failed" othewise.
 
 .. _l4e4d5265616c4669656c64-7269656d616e6e5a657461:
 

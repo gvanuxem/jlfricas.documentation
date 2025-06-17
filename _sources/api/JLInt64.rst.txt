@@ -155,7 +155,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JLInt64; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(x)``\  coerces \ ``x``\  to a SingleInteger.
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -166,7 +166,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JLInt64; coerce
 
 :spadfun:`coerce`\: \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  -> % 
-  \ ``coerce ``\ \undocumented
+  \ ``coerce(x)``\  coerces \ ``x``\ .
 
 .. _l4a4c496e743634-636f6d6d757461746f72:
 
@@ -305,14 +305,14 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JLInt64; ji64
 
 :spadfun:`ji64`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``ji64``\ \undocumented
+  \ ``ji64(x)``\  returns \ ``x``\  a a Julia \ ``Int64``\  (in Julia memory area). Error if \ ``x``\  is can not be coerced.
 
 
 .. index::
    pair: JLInt64; ji64
 
 :spadfun:`ji64`\: \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  -> % 
-  \ ``ji64 ``\ \undocumented
+  \ ``ji64(x)``\  returns \ ``x``\  a a Julia \ ``Int64``\  (in Julia memory area).
 
 .. _l4a4c496e743634-6c61746578:
 
@@ -367,7 +367,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JLInt64; max
 
 :spadfun:`max`\: () -> % 
-  \ ``max ``\ \undocumented
+  \ ``max()``\  returns the largest \ ``JLInt64``\  compatible with the underlying Common Lisp implementation.
 
 .. _l4a4c496e743634-6d696e:
 
@@ -379,7 +379,7 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
    pair: JLInt64; min
 
 :spadfun:`min`\: () -> % 
-  \ ``min ``\ \undocumented
+  \ ``min()``\  returns the smallest \ ``JLInt64``\  compatible with the underlying Common Lisp implementation.
 
 .. _l4a4c496e743634-6d756c6d6f64:
 
@@ -552,11 +552,8 @@ This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal L
 
 .. _l4a4c496e743634-737472696e67:
 
-.. index::
-   pair: JLInt64; string
-
-:spadfun:`string`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``string ``\ \undocumented
+\ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLType <l4a4c54797065>`\ 
 
 .. _l4a4c496e743634-7375626d6f64:
 

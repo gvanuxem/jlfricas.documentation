@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
-    <script src="../_static/documentation_options.js?v=088b693c"></script>
+    <script src="../_static/documentation_options.js?v=f5fb567a"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -100,7 +100,7 @@
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-6c7521"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">lu!</span>: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a> -&gt; Record(LU: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, ipiv: <a class="reference internal" href="JLInt64Vector.html#l4a4c496e743634566563746f72"><span class="std std-ref">JLInt64Vector</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lu!(m)</span></code> computes the LU factorisation of <code class="docutils literal notranslate"><span class="pre">m</span></code> in <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+<dt><span class="spadfun">lu!</span>: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a> -&gt; Record(LU: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, ipiv: <a class="reference internal" href="JLInt64Vector.html#l4a4c496e743634566563746f72"><span class="std std-ref">JLInt64Vector</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lu!(m)</span></code> computes in-place the LU factorisation of <code class="docutils literal notranslate"><span class="pre">m</span></code>. <code class="docutils literal notranslate"><span class="pre">m</span></code> isoverwritten by its decomposition.</p>
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-6c75"></span><dl class="simple" id="index-15">
@@ -108,11 +108,11 @@
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-6c7552656f7264657221"></span><dl class="simple" id="index-16">
-<dt><span class="spadfun">luReorder!</span>: (<a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, <a class="reference internal" href="JLInt64Vector.html#l4a4c496e743634566563746f72"><span class="std std-ref">JLInt64Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a></dt><dd><p>luOrder(mat, ipiv) returns mat in-place reordered with ipiv pivot indices.</p>
+<dt><span class="spadfun">luReorder!</span>: (<a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, <a class="reference internal" href="JLInt64Vector.html#l4a4c496e743634566563746f72"><span class="std std-ref">JLInt64Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">luReorder!(mat,</span> <span class="pre">ipiv)</span></code> returns <code class="docutils literal notranslate"><span class="pre">mat</span></code> reordered in-place using the ipiv pivot indices.</p>
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-6c7552656f72646572"></span><dl class="simple" id="index-17">
-<dt><span class="spadfun">luReorder</span>: (<a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, <a class="reference internal" href="JLInt64Vector.html#l4a4c496e743634566563746f72"><span class="std std-ref">JLInt64Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a></dt><dd><p>luOrder(mat, ipiv) returns a copy of mat reordered with ipiv pivot indices.</p>
+<dt><span class="spadfun">luReorder</span>: (<a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, <a class="reference internal" href="JLInt64Vector.html#l4a4c496e743634566563746f72"><span class="std std-ref">JLInt64Vector</span></a>) -&gt; <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">luReorder(mat,</span> <span class="pre">ipiv)</span></code> returns a copy of <code class="docutils literal notranslate"><span class="pre">mat</span></code> reordered using the ipiv pivot indices.</p>
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-6d70496e7665727365"></span><dl class="simple" id="index-18">
@@ -184,7 +184,7 @@
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-737664"></span><dl class="simple" id="index-35">
-<dt><span class="spadfun">svd</span>: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a> -&gt; Record(U: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, sv: <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, Vt: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">svd(m)</span></code> computes the singular value decomposition <code class="docutils literal notranslate"><span class="pre">SVD</span></code> of <code class="docutils literal notranslate"><span class="pre">m</span></code> such that <code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">U</span></code> * diagonalMatrix(<code class="docutils literal notranslate"><span class="pre">sv</span></code>) * <code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">Vt</span></code> = <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+<dt><span class="spadfun">svd</span>: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a> -&gt; Record(U: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>, sv: <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, Vt: <a class="reference internal" href="JLFloat32Matrix.html#l4a4c466c6f617433324d6174726978"><span class="std std-ref">JLFloat32Matrix</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">svd(m)</span></code> computes the singular value decomposition <code class="docutils literal notranslate"><span class="pre">SVD</span></code> of <code class="docutils literal notranslate"><span class="pre">m</span></code> such that <code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">U</span></code> * diagonalMatrix(<code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">sv</span></code>) * <code class="docutils literal notranslate"><span class="pre">SVD</span></code>.<code class="docutils literal notranslate"><span class="pre">Vt</span></code> = <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 </dd>
 </dl>
 <span id="l4a4c4633324c696e656172416c6765627261-73766476616c7321"></span><dl class="simple" id="index-36">
@@ -269,7 +269,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2024, FriCAS Team.
+    &#169; Copyright 2007-2025, FriCAS Team.
     </div>
   </body>
 </html>
