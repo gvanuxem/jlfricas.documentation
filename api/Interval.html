@@ -45,7 +45,7 @@
             
   <section id="interval-r">
 <span id="l496e74657276616c"></span><span id="index-0"></span><h1>Interval R<a class="headerlink" href="#interval-r" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/interval.spad#L41">interval.spad line 41</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/interval.spad#L41">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/interval.spad#L21">interval.spad line 21</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/interval.spad#L21">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: Join(<a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>)</p></li>
 </ul>
@@ -69,15 +69,23 @@
 </dd>
 <dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
+</dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-2b">
 <dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-2b"><span class="std std-ref">+</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-2d">
 <dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
 <dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l496e74657276616c-2f">
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-2f"><span class="std std-ref">/</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-3c3d">
@@ -112,6 +120,10 @@
 </dl>
 <dl class="simple" id="l496e74657276616c-7e3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l496e74657276616c-616273">
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-616273"><span class="std std-ref">abs</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-61636f73">
@@ -185,6 +197,8 @@
 <dl class="simple" id="l496e74657276616c-636f65726365">
 <dt><a class="reference internal" href="Algebra.html#l416c6765627261-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
 </dd>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
+</dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
@@ -195,7 +209,9 @@
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-636f6e7461696e733f">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-636f6e7461696e733f"><span class="std std-ref">contains?</span></a>: (%, R) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-636f6e7461696e733f"><span class="std std-ref">contains?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-636f6e7461696e733f"><span class="std std-ref">contains?</span></a>: (%, R) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-636f73">
@@ -222,6 +238,10 @@
 <dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-63736368"><span class="std std-ref">csch</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l496e74657276616c-6572726f723f">
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-6572726f723f"><span class="std std-ref">error?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
+</dd>
+</dl>
 <dl class="simple" id="l496e74657276616c-657870">
 <dt><a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279-657870"><span class="std std-ref">exp</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a></p>
 </dd>
@@ -241,15 +261,19 @@
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-696e66">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-696e66"><span class="std std-ref">inf</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-696e66"><span class="std std-ref">inf</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-696e74657276616c">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-696e74657276616c"><span class="std std-ref">interval</span></a>: (R, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-696e74657276616c"><span class="std std-ref">interval</span></a>: (R, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 <dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-696e74657276616c"><span class="std std-ref">interval</span></a>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
 </dd>
 <dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-696e74657276616c"><span class="std std-ref">interval</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l496e74657276616c-696e76">
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-696e76"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-6c61746578">
@@ -289,7 +313,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-6e656761746976653f">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-6e656761746976653f"><span class="std std-ref">negative?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-6e656761746976653f"><span class="std std-ref">negative?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-6e7468526f6f74">
@@ -313,11 +337,11 @@
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-706f7369746976653f">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-706f7369746976653f"><span class="std std-ref">positive?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-706f7369746976653f"><span class="std std-ref">positive?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-71696e74657276616c">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-71696e74657276616c"><span class="std std-ref">qinterval</span></a>: (R, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-71696e74657276616c"><span class="std std-ref">qinterval</span></a>: (R, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-7265636970">
@@ -375,7 +399,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-737570">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-737570"><span class="std std-ref">sup</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-737570"><span class="std std-ref">sup</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-74616e">
@@ -399,7 +423,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-7769647468">
-<dt><a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279-7769647468"><span class="std std-ref">width</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="IntervalCategory.html#l496e74657276616c43617465676f7279"><span class="std std-ref">IntervalCategory</span></a> R</p>
+<dt><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279-7769647468"><span class="std std-ref">width</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e74657276616c-7a65726f3f">
@@ -409,6 +433,7 @@
 <p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 <p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 <p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="AIntervalCategory.html#l41496e74657276616c43617465676f7279"><span class="std std-ref">AIntervalCategory</span></a> R</p>
 <p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
 <p><a class="reference internal" href="Approximate.html#l417070726f78696d617465"><span class="std std-ref">Approximate</span></a></p>
 <p><a class="reference internal" href="ArcHyperbolicFunctionCategory.html#l4172634879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">ArcHyperbolicFunctionCategory</span></a></p>

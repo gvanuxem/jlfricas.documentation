@@ -40,10 +40,18 @@ IntervalCategory R
 \ :ref:`\* <l4162656c69616e53656d6947726f7570-2a>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
 
+
+\ :ref:`\* <l41496e74657276616c43617465676f7279-2a>`\ \: (R, %) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
 .. _l496e74657276616c43617465676f7279-2b:
 
 \ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+
+
+\ :ref:`+ <l41496e74657276616c43617465676f7279-2b>`\ \: (%, R) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-2d:
 
@@ -53,6 +61,11 @@ IntervalCategory R
 
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+.. _l496e74657276616c43617465676f7279-2f:
+
+\ :ref:`/ <l41496e74657276616c43617465676f7279-2f>`\ \: (%, %) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-3c3d:
 
@@ -100,6 +113,11 @@ IntervalCategory R
 
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l496e74657276616c43617465676f7279-616273:
+
+\ :ref:`abs <l41496e74657276616c43617465676f7279-616273>`\ \: % -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-61636f73:
 
@@ -192,6 +210,10 @@ IntervalCategory R
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
+\ :ref:`coerce <l41496e74657276616c43617465676f7279-636f65726365>`\ \: % -> \ :ref:`List <l4c697374>`\  R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -206,11 +228,12 @@ IntervalCategory R
 
 .. _l496e74657276616c43617465676f7279-636f6e7461696e733f:
 
-.. index::
-   pair: IntervalCategory; contains?
+\ :ref:`contains? <l41496e74657276616c43617465676f7279-636f6e7461696e733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
-:spadfun:`contains?`\: (%, R) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(i, f)``\  returns \ ``true``\  if \ ``f``\  is contained within the interval \ ``i``\ , \ ``false``\  otherwise.
+
+\ :ref:`contains? <l41496e74657276616c43617465676f7279-636f6e7461696e733f>`\ \: (%, R) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-636f73:
 
@@ -242,6 +265,11 @@ IntervalCategory R
 \ :ref:`csch <l4879706572626f6c696346756e6374696f6e43617465676f7279-63736368>`\ \: % -> % 
   from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
 
+.. _l496e74657276616c43617465676f7279-6572726f723f:
+
+\ :ref:`error? <l41496e74657276616c43617465676f7279-6572726f723f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
 .. _l496e74657276616c43617465676f7279-657870:
 
 \ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % 
@@ -268,19 +296,13 @@ IntervalCategory R
 
 .. _l496e74657276616c43617465676f7279-696e66:
 
-.. index::
-   pair: IntervalCategory; inf
-
-:spadfun:`inf`\: % -> R 
-  \ ``inf(u)``\  returns the infinum of \ ``u``\ .
+\ :ref:`inf <l41496e74657276616c43617465676f7279-696e66>`\ \: % -> R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-696e74657276616c:
 
-.. index::
-   pair: IntervalCategory; interval
-
-:spadfun:`interval`\: (R, R) -> % 
-  \ ``interval(inf, sup)``\  creates a new interval, either \ ``[inf, sup]``\  if \ ``inf <= sup``\  or \ ``[sup, inf]``\  otherwise.
+\ :ref:`interval <l41496e74657276616c43617465676f7279-696e74657276616c>`\ \: (R, R) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 
 .. index::
@@ -295,6 +317,11 @@ IntervalCategory R
 
 :spadfun:`interval`\: R -> % 
   \ ``interval(f)``\  creates a new interval around \ ``f``\ .
+
+.. _l496e74657276616c43617465676f7279-696e76:
+
+\ :ref:`inv <l41496e74657276616c43617465676f7279-696e76>`\ \: % -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-6c61746578:
 
@@ -346,11 +373,8 @@ IntervalCategory R
 
 .. _l496e74657276616c43617465676f7279-6e656761746976653f:
 
-.. index::
-   pair: IntervalCategory; negative?
-
-:spadfun:`negative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``negative?(u)``\  returns \ ``true``\  if every element of \ ``u``\  is negative, \ ``false``\  otherwise.
+\ :ref:`negative? <l41496e74657276616c43617465676f7279-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-6e7468526f6f74:
 
@@ -379,19 +403,13 @@ IntervalCategory R
 
 .. _l496e74657276616c43617465676f7279-706f7369746976653f:
 
-.. index::
-   pair: IntervalCategory; positive?
-
-:spadfun:`positive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``positive?(u)``\  returns \ ``true``\  if every element of \ ``u``\  is positive, \ ``false``\  otherwise.
+\ :ref:`positive? <l41496e74657276616c43617465676f7279-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-71696e74657276616c:
 
-.. index::
-   pair: IntervalCategory; qinterval
-
-:spadfun:`qinterval`\: (R, R) -> % 
-  \ ``qinterval(inf, sup)``\  creates a new interval \ ``[inf, sup]``\ , without checking the ordering on the elements.
+\ :ref:`qinterval <l41496e74657276616c43617465676f7279-71696e74657276616c>`\ \: (R, R) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-7265636970:
 
@@ -464,11 +482,8 @@ IntervalCategory R
 
 .. _l496e74657276616c43617465676f7279-737570:
 
-.. index::
-   pair: IntervalCategory; sup
-
-:spadfun:`sup`\: % -> R 
-  \ ``sup(u)``\  returns the supremum of \ ``u``\ .
+\ :ref:`sup <l41496e74657276616c43617465676f7279-737570>`\ \: % -> R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-74616e:
 
@@ -497,11 +512,8 @@ IntervalCategory R
 
 .. _l496e74657276616c43617465676f7279-7769647468:
 
-.. index::
-   pair: IntervalCategory; width
-
-:spadfun:`width`\: % -> R 
-  \ ``width(u)``\  returns \ ``sup(u) - inf(u)``\ .
+\ :ref:`width <l41496e74657276616c43617465676f7279-7769647468>`\ \: % -> R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c43617465676f7279-7a65726f3f:
 
@@ -514,6 +526,8 @@ IntervalCategory R
 \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  
 
 \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  
+
+\ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R 
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 

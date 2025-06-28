@@ -1,0 +1,228 @@
+.. index:: WSUtilityFunctions
+
+.. _l57535574696c69747946756e6374696f6e73:
+
+WSUtilityFunctions
+==================
+
+:viewcode:`jwsutils.spad line 1 <jwsutils.spad#L1>` :editcode:`[edit on github] <jwsutils.spad#L1>`
+
+
+Julia Wolfram Symbolic utility functions using the MathLink Julia package.
+
+
+.. _l57535574696c69747946756e6374696f6e73-666f75726965724d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; fourierMatrix
+
+:spadfun:`fourierMatrix`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``fourierMatrix(n)``\  returns the \ ``n``\  \ ``x``\  \ ``n``\  Fourier matrix.
+
+.. _l57535574696c69747946756e6374696f6e73-676175737369616e4d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; gaussianMatrix
+
+:spadfun:`gaussianMatrix`\: \ :ref:`WSReal <l57535265616c>`\  -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSReal <l57535265616c>`\  
+  \ ``gaussianMatrix(r)``\  returns the Gaussian matrix with radius \ ``r``\ . For example: \example{gaussianMatrix "2.2"}
+
+.. _l57535574696c69747946756e6374696f6e73-68616e6b656c4d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; hankelMatrix
+
+:spadfun:`hankelMatrix`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``hankelMatrix(n)``\  returns the square Hankel matrix with integer coefficients.
+
+.. _l57535574696c69747946756e6374696f6e73-68696c626572744d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; hilbertMatrix
+
+:spadfun:`hilbertMatrix`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSRational <l5753526174696f6e616c>`\  
+  \ ``hilbertMatrix(n)``\  returns the square Hilbert matrix.
+
+.. _l57535574696c69747946756e6374696f6e73-6964656e746974794d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; identityMatrix
+
+:spadfun:`identityMatrix`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``identityMatrix(n)``\  returns the identity matrix of size \ ``n``\ .
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c575344617465537472696e67:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSDateString
+
+:spadfun:`jlWSDateString`\: () -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  dateString() returns the WSExpression string of the local date and time. For example: \example{toString dateTime()}
+
+
+.. index::
+   pair: WSUtilityFunctions; jlWSDateString
+
+:spadfun:`jlWSDateString`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSDateString(expr, form)``\  returns WSExpression string of the date from a \ ``WS``\  date object with \ ``WS``\  format form. Fo example: \example{jlWSDateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))}
+
+
+.. index::
+   pair: WSUtilityFunctions; jlWSDateString
+
+:spadfun:`jlWSDateString`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSDateString(expr)``\  returns the WSExpression string of the date from a \ ``WS``\  date object. For example: \example{jlWSDateString jWSExpr "Tomorrow"}
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSExport
+
+:spadfun:`jlWSExport`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSExport(file.ext, obj)``\  exports the object obj to the file file.ext. The extension ext will determine the saved format. A \ ``WS``\  expression for example can be exported in an image file, it will be saved in the \ ``WS``\  'StandardForm' whereas in FriCAS it is outputted in \ ``WS``\  'OutputForm\ ``':``\  \example{x:=jWSExpr(x);jlWSExport("legendreP.png", legendreP(7, x))}
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274537472696e67:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSExportString
+
+:spadfun:`jlWSExportString`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSExportString(expr, jWSString(format))``\  returns the string representation of \ ``expr``\  in the format form. Use toString or string to obtain the FriCAS String. For example: \example{jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"} \example{jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"} \example{string jlWSExportString(\%,jWSString "TeX")}
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c5753496d706f7274:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSImport
+
+:spadfun:`jlWSImport`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  jWSImport(expr, form) imports expr with format form.
+
+
+.. index::
+   pair: WSUtilityFunctions; jlWSImport
+
+:spadfun:`jlWSImport`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  jWSImport(expr) imports expr.
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c5753496e666f726d6174696f6e:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSInformation
+
+:spadfun:`jlWSInformation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  jWSInformation(\ ``sym``\ ) prints informations about the symbol \ ``sym``\ . For example: \example{jWSInformation sin}
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c5753506c6f74:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSPlot
+
+:spadfun:`jlWSPlot`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSPlot(expr, options)``\  is the \ ``WS``\  plot function. Since it should be run in a Wolfram notebook or any other supported graphical interfaces, the Wolfram Jupyter "plugin" for example, it is left to the user for testing purposes. The following uses the jlWSExport function: \example{x:=jWSExpr(x);opt:=jWSList [x,-5,5]} \example{jlWSExport("sin.png", jlWSPlot(sin(x),opt))}
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c575352616e6765:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSRange
+
+:spadfun:`jlWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``jlWSRange(n,m)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\ .
+
+
+.. index::
+   pair: WSUtilityFunctions; jlWSRange
+
+:spadfun:`jlWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``jlWSRange(n,m,d)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
+
+
+.. index::
+   pair: WSUtilityFunctions; jlWSRange
+
+:spadfun:`jlWSRange`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``jlWSRange(n)``\  returns a \ ``WS``\  agg that ranges from 1 to \ ``n``\ . For example: \example{jlWSRange(10)@WSLIST(WSINT)}
+
+.. _l57535574696c69747946756e6374696f6e73-6a5753446174654f626a656374:
+
+.. index::
+   pair: WSUtilityFunctions; jWSDateObject
+
+:spadfun:`jWSDateObject`\: () -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jWSDateObject()``\  returns the WSExpression object of the local date and time.
+
+
+.. index::
+   pair: WSUtilityFunctions; jWSDateObject
+
+:spadfun:`jWSDateObject`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jWSDateObject(date,type)``\  returns the WSExpression object of the \ ``date``\  and \ ``type``\ , for example "Month".
+
+
+.. index::
+   pair: WSUtilityFunctions; jWSDateObject
+
+:spadfun:`jWSDateObject`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jWSDateObject(expr)``\  returns the WSExpression object of the date from \ ``expr``\ .
+
+.. _l57535574696c69747946756e6374696f6e73-7365656452616e646f6d:
+
+.. index::
+   pair: WSUtilityFunctions; seedRandom
+
+:spadfun:`seedRandom`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``seedRandom(n)``\  reseeds the random number generator with \ ``n``\  as seed. Returns the random generator state.
+
+.. _l57535574696c69747946756e6374696f6e73-7572616e643031436f6d706c6578:
+
+.. index::
+   pair: WSUtilityFunctions; urand01Complex
+
+:spadfun:`urand01Complex`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSComplex <l5753436f6d706c6578>`\  
+  \ ``urand01Complex(rows,cols)``\  returns a Julia \ ``WS``\  matrix with uniformly distributed random complex elements in the unit square. Convenience function.
+
+
+.. index::
+   pair: WSUtilityFunctions; urand01Complex
+
+:spadfun:`urand01Complex`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`WSVector <l5753566563746f72>`\  \ :ref:`WSComplex <l5753436f6d706c6578>`\  
+  \ ``urand01Complex(n)``\  returns a Julia \ ``WS``\  vector with uniformly distributed random complex elements in the unit square. Convenience function.
+
+.. _l57535574696c69747946756e6374696f6e73-7572616e6430315265616c:
+
+.. index::
+   pair: WSUtilityFunctions; urand01Real
+
+:spadfun:`urand01Real`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSReal <l57535265616c>`\  
+  \ ``urand01Real(rows,cols)``\  returns a Julia \ ``WS``\  matrix with uniformly distributed random elements in the range 0..1. Convenience function.
+
+
+.. index::
+   pair: WSUtilityFunctions; urand01Real
+
+:spadfun:`urand01Real`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`WSVector <l5753566563746f72>`\  \ :ref:`WSReal <l57535265616c>`\  
+  \ ``urand01Real(n)``\  returns a Julia \ ``WS``\  vector with uniformly distributed random elements in the range 0..1. Convenience function.
+
+.. _l57535574696c69747946756e6374696f6e73-76616e6465726d6f6e64654d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; vandermondeMatrix
+
+:spadfun:`vandermondeMatrix`\: (\ :ref:`WSList <l57534c697374>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``vandermondeMatrix(lvars, m)``\  returns a Vandermonde matrix with nodes from \ ``lvars``\  and \ ``m``\  columns.
+
+
+.. index::
+   pair: WSUtilityFunctions; vandermondeMatrix
+
+:spadfun:`vandermondeMatrix`\: \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``vandermondeMatrix(lvars)``\  returns a Vandermonde matrix with nodes from \ ``lvars``\ .
+
+.. _l57535574696c69747946756e6374696f6e73-7a65726f4d6174726978:
+
+.. index::
+   pair: WSUtilityFunctions; zeroMatrix
+
+:spadfun:`zeroMatrix`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``zeroMatrix(m, n)``\  returns an \ ``m``\ -by-\ ``n``\  zero matrix.
+
+

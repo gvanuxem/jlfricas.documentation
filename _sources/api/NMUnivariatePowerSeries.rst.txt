@@ -1,0 +1,829 @@
+.. index:: NMUnivariatePowerSeries
+
+.. _l4e4d556e6976617269617465506f776572536572696573:
+
+NMUnivariatePowerSeries(R, x, prec, abs)
+========================================
+
+:viewcode:`jnseries.spad line 1 <jnseries.spad#L1>` :editcode:`[edit on github] <jnseries.spad#L1>`
+
+* R: \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+* x: \ :ref:`Symbol <l53796d626f6c>`\ 
+
+* prec: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
+
+* abs: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ 
+
+
+NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec determines the precision used which can be absolute or relative (:capped_absolute or :capped_relative). \ ``x``\  \ ``:=``\  x::NUPS(NFRAC(NINT),\ ``'x``\ ,30,"capped_relative") sin(\ ``x``\ )
+
+
+.. _l4e4d556e6976617269617465506f776572536572696573-30:
+
+\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-31:
+
+\ :ref:`1 <l4d61676d6157697468556e6974-31>`\ \: % 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-2a:
+
+\ :ref:`\* <l4d61676d61-2a>`\ \: (%, %) -> % 
+  from \ :ref:`Magma <l4d61676d61>`\ 
+
+
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+
+.. index::
+   pair: NMUnivariatePowerSeries; *
+
+:spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``s * n``\  is the product of \ ``s``\  with an integer.
+
+
+.. index::
+   pair: NMUnivariatePowerSeries; *
+
+:spadfun:`\*`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``s * n``\  is the product of \ ``s``\  with a non negative integer.
+
+
+.. index::
+   pair: NMUnivariatePowerSeries; *
+
+:spadfun:`\*`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  \ ``s * n``\  is the product of \ ``s``\  with a positive integer.
+
+
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, R) -> % 
+  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  R
+
+
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+
+\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+
+\ :ref:`\* <l4a4c4f626a65637452696e67-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
+
+
+\ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+
+\ :ref:`\* <l4162656c69616e53656d6947726f7570-2a>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % 
+  from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+
+
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (R, %) -> % 
+  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  R
+
+.. _l4e4d556e6976617269617465506f776572536572696573-2b:
+
+\ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
+  from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-2d:
+
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % 
+  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
+  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-2f:
+
+\ :ref:`/ <l4162656c69616e4d6f6e6f696452696e67-2f>`\ \: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\ 
+  from \ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-5e:
+
+\ :ref:`^ <l456c656d656e7461727946756e6374696f6e43617465676f7279-5e>`\ \: (%, %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+
+
+\ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+
+\ :ref:`^ <l4d61676d61-5e>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`Magma <l4d61676d61>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-61636f73:
+
+\ :ref:`acos <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61636f73>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-61636f7368:
+
+\ :ref:`acosh <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-61636f7368>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-61636f74:
+
+\ :ref:`acot <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61636f74>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-61636f7468:
+
+\ :ref:`acoth <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-61636f7468>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-61637363:
+
+\ :ref:`acsc <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61637363>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6163736368:
+
+\ :ref:`acsch <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6163736368>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-616e6e6968696c6174653f:
+
+\ :ref:`annihilate? <l526e67-616e6e6968696c6174653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Rng <l526e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-616e7469436f6d6d757461746f72:
+
+\ :ref:`antiCommutator <l4e6f6e4173736f6369617469766553656d69526e67-616e7469436f6d6d757461746f72>`\ \: (%, %) -> % 
+  from \ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-61736563:
+
+\ :ref:`asec <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-61736563>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6173656368:
+
+\ :ref:`asech <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6173656368>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6173696e:
+
+\ :ref:`asin <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-6173696e>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6173696e68:
+
+\ :ref:`asinh <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6173696e68>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6173736f6369617465733f:
+
+\ :ref:`associates? <l456e7469726552696e67-6173736f6369617465733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6173736f636961746f72:
+
+\ :ref:`associator <l4e6f6e4173736f63696174697665526e67-6173736f636961746f72>`\ \: (%, %, %) -> % 
+  from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6174616e:
+
+\ :ref:`atan <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-6174616e>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6174616e68:
+
+\ :ref:`atanh <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6174616e68>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6368617261637465726973746963:
+
+\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+
+\ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636861727468526f6f74:
+
+\ :ref:`charthRoot <l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+  from \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f656666696369656e74:
+
+\ :ref:`coefficient <l4162656c69616e4d6f6e6f696452696e67-636f656666696369656e74>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> R 
+  from \ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f65726365:
+
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  %
+
+
+\ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+
+\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+
+
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: R -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+  from \ :ref:`Algebra <l416c6765627261>`\  R
+
+
+.. index::
+   pair: NMUnivariatePowerSeries; coerce
+
+:spadfun:`coerce`\: \ :ref:`Variable <l5661726961626c65>`\  x -> % 
+  \ ``coerce(x)``\  converts the variable \ ``x``\  to a Nemo univariate power serie.
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f6d6d757461746f72:
+
+\ :ref:`commutator <l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72>`\ \: (%, %) -> % 
+  from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f6d706c657465:
+
+\ :ref:`complete <l506f77657253657269657343617465676f7279-636f6d706c657465>`\ \: % -> % 
+  from \ :ref:`PowerSeriesCategory <l506f77657253657269657343617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f6e737472756374:
+
+\ :ref:`construct <l496e646578656450726f6475637443617465676f7279-636f6e737472756374>`\ \: \ :ref:`List <l4c697374>`\  Record(k: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , c: R) -> % 
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f6e7374727563744f726465726564:
+
+\ :ref:`constructOrdered <l496e646578656450726f6475637443617465676f7279-636f6e7374727563744f726465726564>`\ \: \ :ref:`List <l4c697374>`\  Record(k: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , c: R) -> % 
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f73:
+
+\ :ref:`cos <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-636f73>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f7368:
+
+\ :ref:`cosh <l4879706572626f6c696346756e6374696f6e43617465676f7279-636f7368>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f74:
+
+\ :ref:`cot <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-636f74>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-636f7468:
+
+\ :ref:`coth <l4879706572626f6c696346756e6374696f6e43617465676f7279-636f7468>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-637363:
+
+\ :ref:`csc <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-637363>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-63736368:
+
+\ :ref:`csch <l4879706572626f6c696346756e6374696f6e43617465676f7279-63736368>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-44:
+
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: % -> % 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+
+
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+
+
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-646567726565:
+
+\ :ref:`degree <l506f77657253657269657343617465676f7279-646567726565>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`PowerSeriesCategory <l506f77657253657269657343617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-646966666572656e7469617465:
+
+\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: % -> % 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+
+
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+
+
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-646976696465:
+
+\ :ref:`divide <l4e4d52696e67-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-657175616c3f:
+
+\ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-65786163743f:
+
+\ :ref:`exact? <l4e4d52696e67-65786163743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6578616374446976696465:
+
+\ :ref:`exactDivide <l4e4d52696e67-6578616374446976696465>`\ \: (%, %) -> % 
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-657870:
+
+\ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-657871756f:
+
+\ :ref:`exquo <l456e7469726552696e67-657871756f>`\ \: (%, %) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-696e74656772617465:
+
+.. index::
+   pair: NMUnivariatePowerSeries; integrate
+
+:spadfun:`integrate`\: % -> % 
+  \ ``integrate(f(x))``\  returns an anti-derivative of the power series \ ``f(x)``\  with constant coefficient 0.
+
+.. _l4e4d556e6976617269617465506f776572536572696573-696e7665727365:
+
+.. index::
+   pair: NMUnivariatePowerSeries; inverse
+
+:spadfun:`inverse`\: % -> % 
+  \ ``inverse(s)``\  returns the inverse of \ ``s``\ . Throw a Julia error if no such inverse exists.
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c4964:
+
+\ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c4e4d52696e67:
+
+\ :ref:`jlNMRing <l4e4d52696e67-6a6c4e4d52696e67>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c526566:
+
+\ :ref:`jlRef <l4a4c4f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c726566:
+
+\ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6a6c54797065:
+
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c656164696e67436f656666696369656e74:
+
+\ :ref:`leadingCoefficient <l506f77657253657269657343617465676f7279-6c656164696e67436f656666696369656e74>`\ \: % -> R 
+  from \ :ref:`PowerSeriesCategory <l506f77657253657269657343617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c656164696e674d6f6e6f6d69616c:
+
+\ :ref:`leadingMonomial <l506f77657253657269657343617465676f7279-6c656164696e674d6f6e6f6d69616c>`\ \: % -> % 
+  from \ :ref:`PowerSeriesCategory <l506f77657253657269657343617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c656164696e67537570706f7274:
+
+\ :ref:`leadingSupport <l496e646578656450726f6475637443617465676f7279-6c656164696e67537570706f7274>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c656164696e675465726d:
+
+\ :ref:`leadingTerm <l496e646578656450726f6475637443617465676f7279-6c656164696e675465726d>`\ \: % -> Record(k: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , c: R) 
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c656674506f776572:
+
+\ :ref:`leftPower <l4d61676d6157697468556e6974-6c656674506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+
+\ :ref:`leftPower <l4d61676d61-6c656674506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`Magma <l4d61676d61>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c6566745265636970:
+
+\ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6c6f67:
+
+\ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6d6170:
+
+\ :ref:`map <l496e646578656450726f6475637443617465676f7279-6d6170>`\ \: (R -> R, %) -> % 
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6d6f6e6f6d69616c3f:
+
+.. index::
+   pair: NMUnivariatePowerSeries; monomial?
+
+:spadfun:`monomial?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``monomial?(f)``\  tests if \ ``f``\  is a single monomial.
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6d6f6e6f6d69616c:
+
+\ :ref:`monomial <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c>`\ \: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6d757461626c653f:
+
+\ :ref:`mutable? <l4a4c4f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6f6e653f:
+
+\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-6f70706f736974653f:
+
+\ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7069:
+
+\ :ref:`pi <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279-7069>`\ \: () -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-706c656e617279506f776572:
+
+\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-706f6c653f:
+
+\ :ref:`pole? <l506f77657253657269657343617465676f7279-706f6c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PowerSeriesCategory <l506f77657253657269657343617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7265636970:
+
+\ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-726564756374756d:
+
+\ :ref:`reductum <l496e646578656450726f6475637443617465676f7279-726564756374756d>`\ \: % -> % 
+  from \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7269676874506f776572:
+
+\ :ref:`rightPower <l4d61676d6157697468556e6974-7269676874506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+
+\ :ref:`rightPower <l4d61676d61-7269676874506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`Magma <l4d61676d61>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-72696768745265636970:
+
+\ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-73616d706c65:
+
+\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-736563:
+
+\ :ref:`sec <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-736563>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-73656368:
+
+\ :ref:`sech <l4879706572626f6c696346756e6374696f6e43617465676f7279-73656368>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-73696e:
+
+\ :ref:`sin <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-73696e>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-73696e68:
+
+\ :ref:`sinh <l4879706572626f6c696346756e6374696f6e43617465676f7279-73696e68>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-73717274:
+
+.. index::
+   pair: NMUnivariatePowerSeries; sqrt
+
+:spadfun:`sqrt`\: % -> % 
+  \ ``sqrt(f)``\  return square root of \ ``f``\  if it exists, a Julia error is thrown if \ ``f``\  has no square root.
+
+.. _l4e4d556e6976617269617465506f776572536572696573-737472696e67:
+
+\ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLType <l4a4c54797065>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7375627472616374496643616e:
+
+\ :ref:`subtractIfCan <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e>`\ \: (%, %) -> Union(%, failed) 
+  from \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-74616e:
+
+\ :ref:`tan <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279-74616e>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-74616e68:
+
+\ :ref:`tanh <l4879706572626f6c696346756e6374696f6e43617465676f7279-74616e68>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-756e69743f:
+
+\ :ref:`unit? <l456e7469726552696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-756e697443616e6f6e6963616c:
+
+\ :ref:`unitCanonical <l456e7469726552696e67-756e697443616e6f6e6963616c>`\ \: % -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-756e69744e6f726d616c:
+
+\ :ref:`unitNormal <l456e7469726552696e67-756e69744e6f726d616c>`\ \: % -> Record(unit: %, canonical: %, associate: %) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e4d556e6976617269617465506f776572536572696573-76616c756174696f6e:
+
+.. index::
+   pair: NMUnivariatePowerSeries; valuation
+
+:spadfun:`valuation`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``valuation(s)``\  returns the valuation of the given power series, the degree of the first nonzero term
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7661726961626c65:
+
+.. index::
+   pair: NMUnivariatePowerSeries; variable
+
+:spadfun:`variable`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
+  \ ``variable(f)``\  returns the (unique) power series variable of the power series \ ``f``\ .
+
+.. _l4e4d556e6976617269617465506f776572536572696573-7a65726f3f:
+
+\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+
+\ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
+
+\ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  
+
+\ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
+
+\ :ref:`AbelianProductCategory <l4162656c69616e50726f6475637443617465676f7279>`\  R 
+
+\ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  
+
+\ :ref:`Algebra <l416c6765627261>`\  % 
+
+\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+\ :ref:`Algebra <l416c6765627261>`\  R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+
+\ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+
+\ :ref:`ArcTrigonometricFunctionCategory <l417263547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) 
+
+\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+\ :ref:`BiModule <l42694d6f64756c65>`\ (R, R) 
+
+\ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
+
+\ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+
+\ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  if R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  
+
+\ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+
+\ :ref:`EntireRing <l456e7469726552696e67>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+
+\ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+
+\ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
+
+\ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+
+\ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\  
+
+\ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\  
+
+\ :ref:`JLRing <l4a4c52696e67>`\  
+
+\ :ref:`JLType <l4a4c54797065>`\  
+
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
+
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  R 
+
+\ :ref:`Magma <l4d61676d61>`\  
+
+\ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  
+
+\ :ref:`Module <l4d6f64756c65>`\  % 
+
+\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+\ :ref:`Module <l4d6f64756c65>`\  R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+
+\ :ref:`Monoid <l4d6f6e6f6964>`\  
+
+\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMRing <l4e4d52696e67>`\  
+
+\ :ref:`NMType <l4e4d54797065>`\  
+
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
+
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+
+\ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  
+
+\ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\  
+
+\ :ref:`NonAssociativeSemiRing <l4e6f6e4173736f6369617469766553656d6952696e67>`\  
+
+\ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\  
+
+\ :ref:`noZeroDivisors <l6e6f5a65726f44697669736f7273>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+
+\ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+\ :ref:`PowerSeriesCategory <l506f77657253657269657343617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) 
+
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
+
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  R 
+
+\ :ref:`Ring <l52696e67>`\  
+
+\ :ref:`Rng <l526e67>`\  
+
+\ :ref:`SemiGroup <l53656d6947726f7570>`\  
+
+\ :ref:`SemiRing <l53656d6952696e67>`\  
+
+\ :ref:`SemiRng <l53656d69526e67>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+
+\ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+
+\ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
+
+\ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  
+
+\ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  
+

@@ -16,8 +16,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="None" href="None.html" />
-    <link rel="prev" title="NMUnivariateLaurentPolynomial(R, x)" href="NMUnivariateLaurentPolynomial.html" /> 
+    <link rel="next" title="NMUnivariatePowerSeries(R, x, prec, abs)" href="NMUnivariatePowerSeries.html" />
+    <link rel="prev" title="NMUnivariateLaurentSeries(R, x, prec)" href="NMUnivariateLaurentSeries.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
@@ -26,10 +26,10 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="None.html" title="None"
+          <a href="NMUnivariatePowerSeries.html" title="NMUnivariatePowerSeries(R, x, prec, abs)"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="NMUnivariateLaurentPolynomial.html" title="NMUnivariateLaurentPolynomial(R, x)"
+          <a href="NMUnivariateLaurentSeries.html" title="NMUnivariateLaurentSeries(R, x, prec)"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
@@ -242,7 +242,7 @@
 </dd>
 </dl>
 <span id="l4e4d556e6976617269617465506f6c796e6f6d69616c-6379636c6f746f6d6963506f6c796e6f6d69616c"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">cyclotomicPolynomial</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclotomicPolynomial(n,p)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th cyclotomic polynomial <code class="docutils literal notranslate"><span class="pre">Φn</span></code>.</p>
+<dt><span class="spadfun">cyclotomicPolynomial</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclotomicPolynomial(n,p)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th cyclotomic polynomial <code class="docutils literal notranslate"><span class="pre">Φn</span></code>. For example: example{x:=x::NUP(NINT,’x)} example{cyclotomicPolynomial(15,x)}</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d556e6976617269617465506f6c796e6f6d69616c-44">
@@ -852,7 +852,7 @@
 </dd>
 </dl>
 <span id="l4e4d556e6976617269617465506f6c796e6f6d69616c-7377696e6e6572746f6e44796572506f6c796e6f6d69616c"></span><dl class="simple" id="index-30">
-<dt><span class="spadfun">swinnertonDyerPolynomial</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">swinnertonDyerPolynomial(n,</span> <span class="pre">p)</span></code> returns the Swinnerton-Dyer polynomial <code class="docutils literal notranslate"><span class="pre">Sn</span></code>.</p>
+<dt><span class="spadfun">swinnertonDyerPolynomial</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">swinnertonDyerPolynomial(n,</span> <span class="pre">p)</span></code> returns the Swinnerton-Dyer polynomial <code class="docutils literal notranslate"><span class="pre">Sn</span></code>. example{x:=x::NUP(NINT,’x)} example{swinnertonDyerPolynomial(4,x)}</p>
 </dd>
 </dl>
 <span id="l4e4d556e6976617269617465506f6c796e6f6d69616c-7465726d3f"></span><dl class="simple" id="index-31">
@@ -885,8 +885,8 @@
 <dt><span class="spadfun">truncate</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">truncate(p,</span> <span class="pre">n)</span></code> return <code class="docutils literal notranslate"><span class="pre">p</span></code> truncated to <code class="docutils literal notranslate"><span class="pre">n</span></code> term. It<code class="docutils literal notranslate"><span class="pre">'s</span></code> the remainder of the division by <code class="docutils literal notranslate"><span class="pre">x^n</span></code>.</p>
 </dd>
 </dl>
-<span id="l4e4d556e6976617269617465506f6c796e6f6d69616c-756e69743f"></span><dl class="simple" id="index-36">
-<dt><span class="spadfun">unit?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unit?(p)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">p</span></code> is invertible i.e. is a unit.</p>
+<dl class="simple" id="l4e4d556e6976617269617465506f6c796e6f6d69616c-756e69743f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69743f"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d556e6976617269617465506f6c796e6f6d69616c-756e697443616e6f6e6963616c">
@@ -1069,10 +1069,10 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="None.html" title="None"
+          <a href="NMUnivariatePowerSeries.html" title="NMUnivariatePowerSeries(R, x, prec, abs)"
              >next</a> |</li>
         <li class="right" >
-          <a href="NMUnivariateLaurentPolynomial.html" title="NMUnivariateLaurentPolynomial(R, x)"
+          <a href="NMUnivariateLaurentSeries.html" title="NMUnivariateLaurentSeries(R, x, prec)"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>

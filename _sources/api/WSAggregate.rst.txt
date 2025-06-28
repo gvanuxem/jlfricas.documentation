@@ -1,0 +1,475 @@
+.. index:: WSAggregate
+
+.. _l5753416767726567617465:
+
+WSAggregate E
+=============
+
+:viewcode:`jwsagg.spad line 1 <jwsagg.spad#L1>` :editcode:`[edit on github] <jwsagg.spad#L1>`
+
+* E: \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia package.
+
+
+.. _l5753416767726567617465-23:
+
+.. index::
+   pair: WSAggregate; #
+
+:spadfun:`#`\: % -> \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``\#(agg)``\  returns the length of \ ``agg``\ . 0 if it is a scalar, an index for example.
+
+.. _l5753416767726567617465-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l5753416767726567617465-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l5753416767726567617465-616363756d756c617465:
+
+.. index::
+   pair: WSAggregate; accumulate
+
+:spadfun:`accumulate`\: % -> % if E has \ :ref:`WSNumber <l57534e756d626572>`\ 
+  \ ``accumulate(agg)``\ 
+
+.. _l5753416767726567617465-617070656e64:
+
+.. index::
+   pair: WSAggregate; append
+
+:spadfun:`append`\: (%, E) -> % 
+  \ ``append(l, elt)``\  appends elt to the list \ ``l``\ .
+
+.. _l5753416767726567617465-636f65726365:
+
+\ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+.. index::
+   pair: WSAggregate; coerce
+
+:spadfun:`coerce`\: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``coerce(agg)``\  coerces \ ``agg``\  to a WSExpression.
+
+
+.. index::
+   pair: WSAggregate; coerce
+
+:spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  E -> % 
+  \ ``coerce(list)``\  tries to coerce \ ``list``\  as a WSAggregate.
+
+.. _l5753416767726567617465-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l5753416767726567617465-64656c657465:
+
+.. index::
+   pair: WSAggregate; delete
+
+:spadfun:`delete`\: (%, \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
+  \ ``delete(l, inds)``\  deletes element(\ ``s``\ ) of the list \ ``l``\  at index(es) inds.
+
+.. _l5753416767726567617465-646966666572656e636573:
+
+.. index::
+   pair: WSAggregate; differences
+
+:spadfun:`differences`\: % -> % if E has \ :ref:`WSNumber <l57534e756d626572>`\ 
+  \ ``differences(agg)``\ 
+
+.. _l5753416767726567617465-64696d656e73696f6e73:
+
+.. index::
+   pair: WSAggregate; dimensions
+
+:spadfun:`dimensions`\: % -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``dimensions(agg)``\  returns dimensions of \ ``agg``\ .
+
+.. _l5753416767726567617465-656c74:
+
+.. index::
+   pair: WSAggregate; elt
+
+:spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  \ ``elt(agg,i)``\  returns the \ ``i``\ -th element.
+
+.. _l5753416767726567617465-65787472616374:
+
+.. index::
+   pair: WSAggregate; extract
+
+:spadfun:`extract`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> % 
+  \ ``extract(agg, parts)``\  extracts parts of \ ``agg``\ .
+
+.. _l5753416767726567617465-6669727374:
+
+.. index::
+   pair: WSAggregate; first
+
+:spadfun:`first`\: % -> E 
+  \ ``first(agg)``\  returns the first element of \ ``agg``\ .
+
+.. _l5753416767726567617465-696e73657274:
+
+.. index::
+   pair: WSAggregate; insert
+
+:spadfun:`insert`\: (%, E, \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
+  \ ``insert(l, elt, ind)``\  inserts \ ``elt``\  to the list \ ``l``\  at index ind.
+
+.. _l5753416767726567617465-696e74657273656374696f6e:
+
+.. index::
+   pair: WSAggregate; intersection
+
+:spadfun:`intersection`\: (%, %) -> % 
+  \ ``intersection(agg1, agg2)``\  is the intersection operator.
+
+.. _l5753416767726567617465-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c4576616c:
+
+\ :ref:`jlEval <l57534f626a656374-6a6c4576616c>`\ \: % -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l5753416767726567617465-6a6c48656164:
+
+\ :ref:`jlHead <l57534f626a656374-6a6c48656164>`\ \: % -> \ :ref:`WSSymbol <l575353796d626f6c>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l5753416767726567617465-6a6c4964:
+
+\ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c4e756d65726963:
+
+\ :ref:`jlNumeric <l57534f626a656374-6a6c4e756d65726963>`\ \: % -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlNumeric <l57534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l5753416767726567617465-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c526566:
+
+\ :ref:`jlRef <l4a4c4f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c726566:
+
+\ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c53796d626f6c6963:
+
+\ :ref:`jlSymbolic <l57534f626a656374-6a6c53796d626f6c6963>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l5753416767726567617465-6a6c54797065:
+
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6f696e:
+
+.. index::
+   pair: WSAggregate; join
+
+:spadfun:`join`\: (%, %) -> % 
+  \ ``join(agg1, agg2)``\  join the two aggreagtes \ ``agg1``\  and \ ``agg2``\ .
+
+.. _l5753416767726567617465-6a5753416767726567617465:
+
+.. index::
+   pair: WSAggregate; jWSAggregate
+
+:spadfun:`jWSAggregate`\: \ :ref:`List <l4c697374>`\  E -> % 
+  \ ``jWSAggregate(list)``\  constructs agg as a WSAggregate.
+
+.. _l5753416767726567617465-6a5753496e74657270726574:
+
+\ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l5753416767726567617465-6c617374:
+
+.. index::
+   pair: WSAggregate; last
+
+:spadfun:`last`\: % -> E 
+  \ ``last(agg)``\  returns the last element of \ ``agg``\ .
+
+.. _l5753416767726567617465-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l5753416767726567617465-6c656e677468:
+
+.. index::
+   pair: WSAggregate; length
+
+:spadfun:`length`\: % -> \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``length(agg)``\  returns the length of \ ``agg``\ . 0 if it is a scalar, an index for example.
+
+.. _l5753416767726567617465-6d757461626c653f:
+
+\ :ref:`mutable? <l4a4c4f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-70617274:
+
+.. index::
+   pair: WSAggregate; part
+
+:spadfun:`part`\: (%, \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> E 
+  \ ``part(agg,i)``\  returns the \ ``i``\ -th element.
+
+.. _l5753416767726567617465-70726570656e64:
+
+.. index::
+   pair: WSAggregate; prepend
+
+:spadfun:`prepend`\: (%, E) -> % 
+  \ ``prepend(l, elt)``\  prepends elt to the list \ ``l``\ .
+
+.. _l5753416767726567617465-71656c74:
+
+.. index::
+   pair: WSAggregate; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  \ ``qelt(agg,i)``\  returns the \ ``i``\ -th element. No checks are done at the FriCAS level.
+
+.. _l5753416767726567617465-71736574656c7421:
+
+.. index::
+   pair: WSAggregate; qsetelt!
+
+:spadfun:`qsetelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  \ ``qsetelt!(l,i,elem)``\  returns \ ``l``\  with \ ``i``\ -th element replaced by \ ``elem``\ . No checks are done at the FriCAS level.
+
+.. _l5753416767726567617465-71736574656c74:
+
+.. index::
+   pair: WSAggregate; qsetelt
+
+:spadfun:`qsetelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  \ ``qsetelt(l,i,elem)``\  returns a copy of \ ``l``\  with \ ``i``\ -th element replaced by the element \ ``elem``\ . No checks are done at the FriCAS level.
+
+.. _l5753416767726567617465-72656d6f76654475706c696361746573:
+
+.. index::
+   pair: WSAggregate; removeDuplicates
+
+:spadfun:`removeDuplicates`\: % -> % 
+  \ ``removeDuplicates(agg)``\  removes duplicate elements.
+
+.. _l5753416767726567617465-7265706c61636550617274:
+
+.. index::
+   pair: WSAggregate; replacePart
+
+:spadfun:`replacePart`\: (%, %) -> % 
+  \ ``replacePart(expr, part)``\  replaces \ ``expr``\  using rule(\ ``s``\ ) expressing position(\ ``s``\ ).
+
+.. _l5753416767726567617465-72657374:
+
+.. index::
+   pair: WSAggregate; rest
+
+:spadfun:`rest`\: % -> % 
+  \ ``rest(agg)``\  returns \ ``agg``\  without the first element.
+
+.. _l5753416767726567617465-72657665727365:
+
+.. index::
+   pair: WSAggregate; reverse
+
+:spadfun:`reverse`\: % -> % 
+  \ ``reverse(agg)``\  reverses the elements of \ ``agg``\ .
+
+
+.. index::
+   pair: WSAggregate; reverse
+
+:spadfun:`reverse`\: (%, \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
+  \ ``reverse(agg, lev)``\  reverses the elements of \ ``agg``\  at level lev.
+
+
+.. index::
+   pair: WSAggregate; reverse
+
+:spadfun:`reverse`\: (%, \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
+  \ ``reverse(agg, levels)``\  reverses the elements of \ ``agg``\  using levels.
+
+.. _l5753416767726567617465-726966666c65:
+
+.. index::
+   pair: WSAggregate; riffle
+
+:spadfun:`riffle`\: (%, %) -> % 
+  \ ``riffle(agg, elts)``\  riffles (interleaves) element(\ ``s``\ ) elts i.e. insert them.
+
+
+.. index::
+   pair: WSAggregate; riffle
+
+:spadfun:`riffle`\: (%, %, %) -> % 
+  \ ``riffle(agg, elts, inds)``\  riffles (interleaves) element(\ ``s``\ ) \ ``elts``\  i.e. insert them. If inds is {min, max, \ ``n``\ } insert at position min, min+n, min+2n..max.
+
+.. _l5753416767726567617465-736574656c7421:
+
+.. index::
+   pair: WSAggregate; setelt!
+
+:spadfun:`setelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  \ ``setelt!(l,i,elem)``\  returns \ ``l``\  with \ ``i``\ -th element replaced by \ ``elem``\ .
+
+.. _l5753416767726567617465-736574656c74:
+
+.. index::
+   pair: WSAggregate; setelt
+
+:spadfun:`setelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
+  \ ``setelt(l,i,elem)``\  returns a copy of \ ``l``\  with \ ``i``\ -th element replaced by the element \ ``elem``\ .
+
+.. _l5753416767726567617465-736574496e74657273656374696f6e:
+
+.. index::
+   pair: WSAggregate; setIntersection
+
+:spadfun:`setIntersection`\: (%, %) -> % 
+  \ ``setIntersection(agg1, agg2)``\  is the intersection set operator.
+
+.. _l5753416767726567617465-736f7274:
+
+.. index::
+   pair: WSAggregate; sort
+
+:spadfun:`sort`\: % -> % 
+  \ ``sort(agg)``\  returns \ ``agg``\  in sorted order. For complex numbers, sorts them by their real part first.
+
+.. _l5753416767726567617465-736f727465643f:
+
+.. index::
+   pair: WSAggregate; sorted?
+
+:spadfun:`sorted?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``sorted?(agg)``\  checks whether \ ``agg``\  is sorted or not.
+
+.. _l5753416767726567617465-737472696e67:
+
+\ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLType <l4a4c54797065>`\ 
+
+.. _l5753416767726567617465-74616b65:
+
+.. index::
+   pair: WSAggregate; take
+
+:spadfun:`take`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ ``take(l,i)``\  returns the first \ ``i``\ -th elements.
+
+
+.. index::
+   pair: WSAggregate; take
+
+:spadfun:`take`\: (%, \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
+  \ ``take(l,i)``\  returns the first \ ``i``\ -th elements.
+
+.. _l5753416767726567617465-746f537472696e67:
+
+\ :ref:`toString <l57534f626a656374-746f537472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l5753416767726567617465-746f74616c:
+
+.. index::
+   pair: WSAggregate; total
+
+:spadfun:`total`\: % -> E if E has \ :ref:`WSNumber <l57534e756d626572>`\ 
+  \ ``total(agg)``\  returns the sum of the elements in \ ``agg``\ .
+
+.. _l5753416767726567617465-756e696f6e:
+
+.. index::
+   pair: WSAggregate; union
+
+:spadfun:`union`\: (%, %) -> % 
+  \ ``union(agg1, agg2)``\  is the union set operator. Elements are sorted on output.
+
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\  
+
+\ :ref:`JLType <l4a4c54797065>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`WSObject <l57534f626a656374>`\  
+

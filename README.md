@@ -20,7 +20,6 @@ consult <https://fricas.github.io>.
 
 To build FriCAS with Julia support, the <code>julia</code> executable needs to be available in your PATH, and a simple <code>./configure --enable-julia</code> should do the trick. We require Julia 1.7 or higher. Please see https://julialang.org/downloads/ for instructions on how to obtain Julia for your system. The required Julia packages are:
  - Suppressor
- - AbstractAlgebra
  - Nemo
  - SpecialFunctions
  - StyledStrings

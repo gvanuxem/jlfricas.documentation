@@ -5,7 +5,7 @@
 Interval R
 ==========
 
-:viewcode:`interval.spad line 41 <interval.spad#L41>` :editcode:`[edit on github] <interval.spad#L41>`
+:viewcode:`interval.spad line 21 <interval.spad#L21>` :editcode:`[edit on github] <interval.spad#L21>`
 
 * R: Join(\ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ , \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\ )
 
@@ -40,10 +40,18 @@ Interval R
 \ :ref:`\* <l4162656c69616e53656d6947726f7570-2a>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
 
+
+\ :ref:`\* <l41496e74657276616c43617465676f7279-2a>`\ \: (R, %) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
 .. _l496e74657276616c-2b:
 
 \ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+
+
+\ :ref:`+ <l41496e74657276616c43617465676f7279-2b>`\ \: (%, R) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-2d:
 
@@ -53,6 +61,11 @@ Interval R
 
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+
+.. _l496e74657276616c-2f:
+
+\ :ref:`/ <l41496e74657276616c43617465676f7279-2f>`\ \: (%, %) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-3c3d:
 
@@ -100,6 +113,11 @@ Interval R
 
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l496e74657276616c-616273:
+
+\ :ref:`abs <l41496e74657276616c43617465676f7279-616273>`\ \: % -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-61636f73:
 
@@ -192,6 +210,10 @@ Interval R
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
+\ :ref:`coerce <l41496e74657276616c43617465676f7279-636f65726365>`\ \: % -> \ :ref:`List <l4c697374>`\  R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
@@ -206,8 +228,12 @@ Interval R
 
 .. _l496e74657276616c-636f6e7461696e733f:
 
-\ :ref:`contains? <l496e74657276616c43617465676f7279-636f6e7461696e733f>`\ \: (%, R) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`contains? <l41496e74657276616c43617465676f7279-636f6e7461696e733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
+
+\ :ref:`contains? <l41496e74657276616c43617465676f7279-636f6e7461696e733f>`\ \: (%, R) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-636f73:
 
@@ -239,6 +265,11 @@ Interval R
 \ :ref:`csch <l4879706572626f6c696346756e6374696f6e43617465676f7279-63736368>`\ \: % -> % 
   from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
 
+.. _l496e74657276616c-6572726f723f:
+
+\ :ref:`error? <l41496e74657276616c43617465676f7279-6572726f723f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
+
 .. _l496e74657276616c-657870:
 
 \ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % 
@@ -265,13 +296,13 @@ Interval R
 
 .. _l496e74657276616c-696e66:
 
-\ :ref:`inf <l496e74657276616c43617465676f7279-696e66>`\ \: % -> R 
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`inf <l41496e74657276616c43617465676f7279-696e66>`\ \: % -> R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-696e74657276616c:
 
-\ :ref:`interval <l496e74657276616c43617465676f7279-696e74657276616c>`\ \: (R, R) -> % 
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`interval <l41496e74657276616c43617465676f7279-696e74657276616c>`\ \: (R, R) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 
 \ :ref:`interval <l496e74657276616c43617465676f7279-696e74657276616c>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -280,6 +311,11 @@ Interval R
 
 \ :ref:`interval <l496e74657276616c43617465676f7279-696e74657276616c>`\ \: R -> % 
   from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+
+.. _l496e74657276616c-696e76:
+
+\ :ref:`inv <l41496e74657276616c43617465676f7279-696e76>`\ \: % -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-6c61746578:
 
@@ -331,8 +367,8 @@ Interval R
 
 .. _l496e74657276616c-6e656761746976653f:
 
-\ :ref:`negative? <l496e74657276616c43617465676f7279-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`negative? <l41496e74657276616c43617465676f7279-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-6e7468526f6f74:
 
@@ -361,13 +397,13 @@ Interval R
 
 .. _l496e74657276616c-706f7369746976653f:
 
-\ :ref:`positive? <l496e74657276616c43617465676f7279-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`positive? <l41496e74657276616c43617465676f7279-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-71696e74657276616c:
 
-\ :ref:`qinterval <l496e74657276616c43617465676f7279-71696e74657276616c>`\ \: (R, R) -> % 
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`qinterval <l41496e74657276616c43617465676f7279-71696e74657276616c>`\ \: (R, R) -> % 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-7265636970:
 
@@ -440,8 +476,8 @@ Interval R
 
 .. _l496e74657276616c-737570:
 
-\ :ref:`sup <l496e74657276616c43617465676f7279-737570>`\ \: % -> R 
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`sup <l41496e74657276616c43617465676f7279-737570>`\ \: % -> R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-74616e:
 
@@ -470,8 +506,8 @@ Interval R
 
 .. _l496e74657276616c-7769647468:
 
-\ :ref:`width <l496e74657276616c43617465676f7279-7769647468>`\ \: % -> R 
-  from \ :ref:`IntervalCategory <l496e74657276616c43617465676f7279>`\  R
+\ :ref:`width <l41496e74657276616c43617465676f7279-7769647468>`\ \: % -> R 
+  from \ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R
 
 .. _l496e74657276616c-7a65726f3f:
 
@@ -484,6 +520,8 @@ Interval R
 \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  
 
 \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  
+
+\ :ref:`AIntervalCategory <l41496e74657276616c43617465676f7279>`\  R 
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 

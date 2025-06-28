@@ -5,7 +5,7 @@
 DoubleFloat
 ===========
 
-:viewcode:`sf.spad line 302 <sf.spad#L302>` :editcode:`[edit on github] <sf.spad#L302>`
+:viewcode:`sf.spad line 301 <sf.spad#L301>` :editcode:`[edit on github] <sf.spad#L301>`
 
 
 \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  is intended to make accessible hardware floating point arithmetic in \Language{}, either native double precision, or IEEE. On most machines, there will be hardware support for the arithmetic operations: \ :ref:`+ <l446f75626c65466c6f6174-2b>`\ , \ :ref:`\* <l446f75626c65466c6f6174-2a>`\ , \ :ref:`/ <l446f75626c65466c6f6174-2f>`\  and possibly also the \ :ref:`sqrt <l446f75626c65466c6f6174-73717274>`\  operation. The operations \ :ref:`exp <l446f75626c65466c6f6174-657870>`\ , \ :ref:`log <l446f75626c65466c6f6174-6c6f67>`\ , \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\ , \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\ , \ :ref:`atan <l446f75626c65466c6f6174-6174616e>`\  are normally coded in software based on minimax polynomial/rational approximations. Some general comments about the accuracy of the operations: the operations \ :ref:`+ <l446f75626c65466c6f6174-2b>`\ , \ :ref:`\* <l446f75626c65466c6f6174-2a>`\ , \ :ref:`/ <l446f75626c65466c6f6174-2f>`\  and \ :ref:`sqrt <l446f75626c65466c6f6174-73717274>`\  are expected to be fully accurate. The operations \ :ref:`exp <l446f75626c65466c6f6174-657870>`\ , \ :ref:`log <l446f75626c65466c6f6174-6c6f67>`\ , \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\ , \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\  and \ :ref:`atan <l446f75626c65466c6f6174-6174616e>`\  are not expected to be fully accurate. In particular, \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\  and \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\  will lose all precision for large arguments.   The \ :ref:`Float <l466c6f6174>`\  domain provides an alternative to the \ ``DoubleFloat``\  domain. It provides an arbitrary precision model of floating point arithmetic. This means that accuracy problems like those above are eliminated by increasing the working precision where necessary. \ :ref:`Float <l466c6f6174>`\  provides some special functions such as erf, the error function in addition to the elementary functions. The disadvantage of \ :ref:`Float <l466c6f6174>`\  is that it is much more expensive than small floats when the latter can be used.
@@ -122,8 +122,8 @@ DoubleFloat
 
 .. _l446f75626c65466c6f6174-616273:
 
-\ :ref:`abs <l4f72646572656452696e67-616273>`\ \: % -> % 
-  from \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+\ :ref:`abs <l4f7264657265644162656c69616e47726f7570-616273>`\ \: % -> % 
+  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
 
 .. _l446f75626c65466c6f6174-61636f73:
 
@@ -782,8 +782,8 @@ DoubleFloat
 
 .. _l446f75626c65466c6f6174-6e656761746976653f:
 
-\ :ref:`negative? <l4f72646572656452696e67-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+\ :ref:`negative? <l4f7264657265644162656c69616e47726f7570-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
 
 .. _l446f75626c65466c6f6174-6e6f726d:
 
@@ -854,8 +854,8 @@ DoubleFloat
 
 .. _l446f75626c65466c6f6174-706f7369746976653f:
 
-\ :ref:`positive? <l4f72646572656452696e67-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+\ :ref:`positive? <l4f7264657265644162656c69616e47726f7570-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
 
 .. _l446f75626c65466c6f6174-707265636973696f6e:
 
@@ -986,8 +986,8 @@ DoubleFloat
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
 
-\ :ref:`sign <l4f72646572656452696e67-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+\ :ref:`sign <l4f7264657265644162656c69616e47726f7570-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
 
 .. _l446f75626c65466c6f6174-73696e:
 
@@ -1253,7 +1253,11 @@ DoubleFloat
 
 \ :ref:`OrderedCancellationAbelianMonoid <l4f72646572656443616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
 
+\ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  
+
 \ :ref:`OrderedRing <l4f72646572656452696e67>`\  
+
+\ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  
 
