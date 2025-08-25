@@ -37,7 +37,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -49,7 +49,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
@@ -71,11 +71,11 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-2d:
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-2f:
@@ -132,15 +132,10 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
-.. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-636861727468526f6f74:
-
-\ :ref:`charthRoot <l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  from \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-636f656666696369656e74:
 
-\ :ref:`coefficient <l4162656c69616e4d6f6e6f696452696e67-636f656666696369656e74>`\ \: (%, E) -> R 
-  from \ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, E)
+\ :ref:`coefficient <l467265654d6f64756c6543617465676f7279-636f656666696369656e74>`\ \: (%, E) -> R 
+  from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, E)
 
 
 .. index::
@@ -163,7 +158,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-636f65726365:
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
@@ -366,8 +361,8 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-706c656e617279506f776572:
 
-\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-706f6d6f706f21:
 
@@ -394,7 +389,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7265647563656453797374656d:
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -402,7 +397,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  R
 
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -536,11 +531,11 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  
 
-\ :ref:`Algebra <l416c6765627261>`\  % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`Algebra <l416c6765627261>`\  % if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
-\ :ref:`Algebra <l416c6765627261>`\  R if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`Algebra <l416c6765627261>`\  R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`BasicType <l426173696354797065>`\  
 
@@ -566,9 +561,9 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
-\ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
-\ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
@@ -586,7 +581,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (R, E) 
 
-\ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
+\ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
@@ -594,7 +589,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  R 
 
-\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  R if R has \ :ref:`Ring <l52696e67>`\ 
 
@@ -602,7 +597,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
 
-\ :ref:`Module <l4d6f64756c65>`\  % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`Module <l4d6f64756c65>`\  % if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
@@ -610,11 +605,11 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
 
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  if R has \ :ref:`Ring <l52696e67>`\ 
 
@@ -636,7 +631,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  R 
 
@@ -652,7 +647,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
 
-\ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  if % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\ 
 
 \ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  if R has \ :ref:`Ring <l52696e67>`\ 
 

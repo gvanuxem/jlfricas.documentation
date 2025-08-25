@@ -60,8 +60,11 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
   \ ``s * n``\  is the product of \ ``s``\  with a positive integer.
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, R) -> % 
-  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  R
+.. index::
+   pair: NMUnivariatePowerSeries; *
+
+:spadfun:`\*`\: (%, R) -> % 
+  \ ``x``\  \ ``n``\  is the multiplication operation.
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -92,6 +95,13 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 \ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
 
+
+.. index::
+   pair: NMUnivariatePowerSeries; +
+
+:spadfun:`+`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  \ ``x + n``\  is the addition operation.
+
 .. _l4e4d556e6976617269617465506f776572536572696573-2d:
 
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % 
@@ -101,10 +111,34 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 \ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
+
+.. index::
+   pair: NMUnivariatePowerSeries; -
+
+:spadfun:`-`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  \ ``x - n``\  is the addition operation.
+
 .. _l4e4d556e6976617269617465506f776572536572696573-2f:
 
-\ :ref:`/ <l4162656c69616e4d6f6e6f696452696e67-2f>`\ \: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  from \ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+.. index::
+   pair: NMUnivariatePowerSeries; /
+
+:spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  \ ``x / n``\  is the division by an integer.
+
+
+.. index::
+   pair: NMUnivariatePowerSeries; /
+
+:spadfun:`/`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  \ ``x / n``\  is the division by an integer.
+
+
+.. index::
+   pair: NMUnivariatePowerSeries; /
+
+:spadfun:`/`\: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  \ ``x / n``\  is the division operation.
 
 .. _l4e4d556e6976617269617465506f776572536572696573-3d:
 
@@ -112,10 +146,6 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l4e4d556e6976617269617465506f776572536572696573-5e:
-
-\ :ref:`^ <l456c656d656e7461727946756e6374696f6e43617465676f7279-5e>`\ \: (%, %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
-
 
 \ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
@@ -211,17 +241,8 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 
 .. _l4e4d556e6976617269617465506f776572536572696573-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
-
-.. _l4e4d556e6976617269617465506f776572536572696573-636861727468526f6f74:
-
-\ :ref:`charthRoot <l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  from \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
 
 .. _l4e4d556e6976617269617465506f776572536572696573-636f656666696369656e74:
 
@@ -370,11 +391,6 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
-.. _l4e4d556e6976617269617465506f776572536572696573-646976696465:
-
-\ :ref:`divide <l4e4d52696e67-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
 .. _l4e4d556e6976617269617465506f776572536572696573-657175616c3f:
 
 \ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -392,8 +408,11 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 
 .. _l4e4d556e6976617269617465506f776572536572696573-657870:
 
-\ :ref:`exp <l456c656d656e7461727946756e6374696f6e43617465676f7279-657870>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: NMUnivariatePowerSeries; exp
+
+:spadfun:`exp`\: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  \ ``exp(s)``\  returns the exponential of the power serie \ ``s``\ .
 
 .. _l4e4d556e6976617269617465506f776572536572696573-657871756f:
 
@@ -464,8 +483,8 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 
 .. _l4e4d556e6976617269617465506f776572536572696573-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e6976617269617465506f776572536572696573-6a6c526566:
 
@@ -523,8 +542,11 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 
 .. _l4e4d556e6976617269617465506f776572536572696573-6c6f67:
 
-\ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: NMUnivariatePowerSeries; log
+
+:spadfun:`log`\: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  exp(\ ``s``\ ) returns the logarithm of the power serie \ ``s``\ .
 
 .. _l4e4d556e6976617269617465506f776572536572696573-6d6170:
 
@@ -564,15 +586,10 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 \ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
-.. _l4e4d556e6976617269617465506f776572536572696573-7069:
-
-\ :ref:`pi <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279-7069>`\ \: () -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  from \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\ 
-
 .. _l4e4d556e6976617269617465506f776572536572696573-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
 
 .. _l4e4d556e6976617269617465506f776572536572696573-706f6c653f:
 
@@ -737,8 +754,6 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 
 \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  
 
-\ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-
 \ :ref:`EntireRing <l456e7469726552696e67>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
 \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
@@ -816,8 +831,6 @@ NMUnivariatePowerSeries is the Nemo univariate power series using Julia. prec de
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
-
-\ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 \ :ref:`TrigonometricFunctionCategory <l547269676f6e6f6d657472696346756e6374696f6e43617465676f7279>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 

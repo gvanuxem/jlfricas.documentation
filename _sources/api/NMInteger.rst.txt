@@ -5,10 +5,10 @@
 NMInteger
 =========
 
-:viewcode:`jnemo.spad line 88 <jnemo.spad#L88>` :editcode:`[edit on github] <jnemo.spad#L88>`
+:viewcode:`jnemo.spad line 66 <jnemo.spad#L66>` :editcode:`[edit on github] <jnemo.spad#L66>`
 
 
-This domain allows the manipulation of Nemo integers using the Nemo package for Julia (FLINT based). https://flintlib.org/
+This domain allows the manipulation of Nemo integers using the Nemo package for Julia (FLINT based).
 
 
 .. _l4e4d496e7465676572-30:
@@ -149,10 +149,6 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 .. _l4e4d496e7465676572-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -160,13 +156,6 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
   from \ :ref:`Algebra <l416c6765627261>`\  %
-
-
-.. index::
-   pair: NMInteger; coerce
-
-:spadfun:`coerce`\: % -> \ :ref:`AlgebraicNumber <l416c676562726169634e756d626572>`\  
-  \ ``coerce(x)``\  coerces \ ``x``\ .
 
 
 .. index::
@@ -191,8 +180,8 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 .. index::
@@ -222,6 +211,13 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
+
+
+.. index::
+   pair: NMInteger; convert
+
+:spadfun:`convert`\: % -> \ :ref:`JLObjBigInt <l4a4c4f626a426967496e74>`\  
+  \ ``convert(i)``\  converts \ ``i``\ .
 
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Integer <l496e7465676572>`\  
@@ -354,10 +350,6 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 .. _l4e4d496e7465676572-696e7665727365:
 
-\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 .. index::
    pair: NMInteger; inverse
 
@@ -417,8 +409,8 @@ This domain allows the manipulation of Nemo integers using the Nemo package for 
 
 .. _l4e4d496e7465676572-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d496e7465676572-6a6c526566:
 

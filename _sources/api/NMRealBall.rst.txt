@@ -8,7 +8,7 @@ NMRealBall
 :viewcode:`jnball.spad line 315 <jnball.spad#L315>` :editcode:`[edit on github] <jnball.spad#L315>`
 
 
-convenience domain to reflect Nemo ArbField(), i.e. without parameters.
+convenience domain to reflect Nemo ArbField(256), i.e. without parameters.
 
 
 .. _l4e4d5265616c42616c6c-30:
@@ -274,10 +274,6 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
 
 .. _l4e4d5265616c42616c6c-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -302,8 +298,8 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
   
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -485,8 +481,8 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
 
 .. _l4e4d5265616c42616c6c-646976696465:
 
-\ :ref:`divide <l4e4d52696e67-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
+  from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e4d5265616c42616c6c-657175616c3f:
 
@@ -658,11 +654,6 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
-.. _l4e4d5265616c42616c6c-696e7665727365:
-
-\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
 .. _l4e4d5265616c42616c6c-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -711,8 +702,8 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
 
 .. _l4e4d5265616c42616c6c-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d5265616c42616c6c-6a6c526566:
 
@@ -955,7 +946,7 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
 .. _l4e4d5265616c42616c6c-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e4d5265616c42616c6c-706f6c794c6f67:
 
@@ -1164,8 +1155,8 @@ convenience domain to reflect Nemo ArbField(), i.e. without parameters.
 
 .. _l4e4d5265616c42616c6c-756e69743f:
 
-\ :ref:`unit? <l4e4d52696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`unit? <l456e7469726552696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
 .. _l4e4d5265616c42616c6c-756e697443616e6f6e6963616c:
 

@@ -141,7 +141,21 @@ Julia Wolfram Symbolic Object category using the Wolfram Symbol Transport Protoc
    pair: WSObject; jWSInterpret
 
 :spadfun:`jWSInterpret`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jWSInterpret(Type, Expr)``\  interprets Expr to be of type \ ``Type``\  using the Wolfram Symbolic Language. For example: \example{jWSInterpret("Number","3.2")@WSREAL} \example{jWSInterpret("Real","3.2")@WSREAL}
+  \ ``jWSInterpret(Type|Form, Expr)``\  interprets Expr to be of type Type or Form using the Wolfram Symbolic Language. For example: \example{jWSInterpret("Number","3.2")@WSREAL} \example{jWSInterpret("Real","3.2")@WSREAL} \example{jWSInterpret("Location","Lille")\$WSEXPR} See jWSExpr "\ ``\$``\ InterpreterTypes"
+
+
+.. index::
+   pair: WSObject; jWSInterpret
+
+:spadfun:`jWSInterpret`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  \ ``jWSInterpret(form1,form2,form3)``\  interprets forms.
+
+
+.. index::
+   pair: WSObject; jWSInterpret
+
+:spadfun:`jWSInterpret`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jWSInterpret(form)``\  interprets \ ``form``\ .
 
 .. _l57534f626a656374-6c61746578:
 

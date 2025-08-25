@@ -5,7 +5,7 @@
 NewSparseMultivariatePolynomial(R, VarSet)
 ==========================================
 
-:viewcode:`newpoly.spad line 1322 <newpoly.spad#L1322>` :editcode:`[edit on github] <newpoly.spad#L1322>`
+:viewcode:`newpoly.spad line 1247 <newpoly.spad#L1247>` :editcode:`[edit on github] <newpoly.spad#L1247>`
 
 * R: \ :ref:`Ring <l52696e67>`\ 
 
@@ -132,7 +132,7 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-636861727468526f6f74:
 
-\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  or % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-636f656666696369656e74:
@@ -197,7 +197,7 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-636f6e646974696f6e50:
 
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-636f6e737472756374:
@@ -221,7 +221,7 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-636f6e76657274:
 
-\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  and R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 
 
@@ -237,15 +237,11 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R
 
 
-\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
-
-
-\ :ref:`convert <l526563757273697665506f6c796e6f6d69616c43617465676f7279-636f6e76657274>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`convert <l526563757273697665506f6c796e6f6d69616c43617465676f7279-636f6e76657274>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet)
 
 
-\ :ref:`convert <l526563757273697665506f6c796e6f6d69616c43617465676f7279-636f6e76657274>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`convert <l526563757273697665506f6c796e6f6d69616c43617465676f7279-636f6e76657274>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet)
 
 
@@ -414,8 +410,8 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-67726f756e643f:
 
@@ -439,12 +435,12 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-68617368:
 
-\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\  and VarSet has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if VarSet has \ :ref:`Hashable <l4861736861626c65>`\  and R has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-6861736855706461746521:
 
-\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\  and VarSet has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if VarSet has \ :ref:`Hashable <l4861736861626c65>`\  and R has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-68656164:
@@ -789,16 +785,16 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-7061747465726e4d61746368:
 
-\ :ref:`patternMatch <l5061747465726e4d6174636861626c65-7061747465726e4d61746368>`\ \: (%, \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Float <l466c6f6174>`\ , %)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Float <l466c6f6174>`\ , %) if VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\  and R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\ 
+\ :ref:`patternMatch <l5061747465726e4d6174636861626c65-7061747465726e4d61746368>`\ \: (%, \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Float <l466c6f6174>`\ , %)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Float <l466c6f6174>`\ , %) if R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\  and VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\ 
   from \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\ 
 
 
-\ :ref:`patternMatch <l5061747465726e4d6174636861626c65-7061747465726e4d61746368>`\ \: (%, \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Integer <l496e7465676572>`\ , %)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Integer <l496e7465676572>`\ , %) if VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`patternMatch <l5061747465726e4d6174636861626c65-7061747465726e4d61746368>`\ \: (%, \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Integer <l496e7465676572>`\ , %)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (\ :ref:`Integer <l496e7465676572>`\ , %) if R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-706c656e617279506f776572:
 
-\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
+\ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c-706f6d6f706f21:
@@ -939,11 +935,11 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  VarSet
 
 
-\ :ref:`retract <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`retract <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet)
 
 
-\ :ref:`retract <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`retract <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet)
 
 
@@ -972,11 +968,11 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  VarSet
 
 
-\ :ref:`retractIfCan <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374496643616e>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> Union(%, failed) if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`retractIfCan <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374496643616e>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> Union(%, failed) if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet)
 
 
-\ :ref:`retractIfCan <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374496643616e>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> Union(%, failed) if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`retractIfCan <l526563757273697665506f6c796e6f6d69616c43617465676f7279-72657472616374496643616e>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> Union(%, failed) if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RecursivePolynomialCategory <l526563757273697665506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet)
 
 
@@ -1165,15 +1161,13 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
-\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  and R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\  if R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-
-\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 \ :ref:`EntireRing <l456e7469726552696e67>`\  if R has \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
@@ -1189,7 +1183,7 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 \ :ref:`GcdDomain <l476364446f6d61696e>`\  if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
-\ :ref:`Hashable <l4861736861626c65>`\  if R has \ :ref:`Hashable <l4861736861626c65>`\  and VarSet has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`Hashable <l4861736861626c65>`\  if VarSet has \ :ref:`Hashable <l4861736861626c65>`\  and R has \ :ref:`Hashable <l4861736861626c65>`\ 
 
 \ :ref:`IndexedDirectProductCategory <l496e646578656444697265637450726f6475637443617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet) 
 
@@ -1247,9 +1241,9 @@ A post-facto extension for SMP in order to speed up operations related to pseudo
 
 \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  VarSet 
 
-\ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\  if VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\  and R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\ 
+\ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\  if R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\  and VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Float <l466c6f6174>`\ 
 
-\ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  if VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\  and VarSet has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  VarSet, VarSet) 
 

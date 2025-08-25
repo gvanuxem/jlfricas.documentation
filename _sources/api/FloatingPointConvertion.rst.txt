@@ -5,10 +5,10 @@
 FloatingPointConvertion
 =======================
 
-:viewcode:`flopak.spad line 333 <flopak.spad#L333>` :editcode:`[edit on github] <flopak.spad#L333>`
+:viewcode:`flopak.spad line 339 <flopak.spad#L339>` :editcode:`[edit on github] <flopak.spad#L339>`
 
 
-undocumented
+This package implements convertion of arbitarary precision floating point numbers to strings.
 
 
 .. _l466c6f6174696e67506f696e74436f6e76657274696f6e-636f6e766572745f6d72:
@@ -17,7 +17,7 @@ undocumented
    pair: FloatingPointConvertion; convert_mr
 
 :spadfun:`convert_mr`\: (Record(mantissa: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`Integer <l496e7465676572>`\ ), \ :ref:`Integer <l496e7465676572>`\ , Record(default?: \ :ref:`Boolean <l426f6f6c65616e>`\ , trim_trailing_zeros?: \ :ref:`Boolean <l426f6f6c65616e>`\ , out_mode: \ :ref:`String <l537472696e67>`\ , spacing: \ :ref:`Integer <l496e7465676572>`\ , separator: \ :ref:`Character <l436861726163746572>`\ )) -> \ :ref:`String <l537472696e67>`\  
-  
+  \ ``convert_mr(f, d, mr)``\  performs convertion specified by \ ``mr``\ .
 
 .. _l466c6f6174696e67506f696e74436f6e76657274696f6e-636f6e766572745f746f5f646563696d616c:
 
@@ -25,7 +25,7 @@ undocumented
    pair: FloatingPointConvertion; convert_to_decimal
 
 :spadfun:`convert_to_decimal`\: (Record(mantissa: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`Integer <l496e7465676572>`\ ), \ :ref:`Integer <l496e7465676572>`\ ) -> Record(mantissa: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`Integer <l496e7465676572>`\ ) 
-  
+  \ ``convert_to_decimal(f, d)``\  converts \ ``f``\  to base \ ``10``\  rounding to \ ``d``\  decimal digits
 
 .. _l466c6f6174696e67506f696e74436f6e76657274696f6e-66697865645f6d72:
 
@@ -33,7 +33,7 @@ undocumented
    pair: FloatingPointConvertion; fixed_mr
 
 :spadfun:`fixed_mr`\: (Record(mantissa: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`Integer <l496e7465676572>`\ ), \ :ref:`Integer <l496e7465676572>`\ , Record(default?: \ :ref:`Boolean <l426f6f6c65616e>`\ , trim_trailing_zeros?: \ :ref:`Boolean <l426f6f6c65616e>`\ , out_mode: \ :ref:`String <l537472696e67>`\ , spacing: \ :ref:`Integer <l496e7465676572>`\ , separator: \ :ref:`Character <l436861726163746572>`\ )) -> \ :ref:`String <l537472696e67>`\  
-  
+  \ ``fixed_mr(f, d, mr)``\  is the fixed convertion.
 
 .. _l466c6f6174696e67506f696e74436f6e76657274696f6e-666c6f6174696e675f6d72:
 
@@ -41,7 +41,7 @@ undocumented
    pair: FloatingPointConvertion; floating_mr
 
 :spadfun:`floating_mr`\: (Record(mantissa: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`Integer <l496e7465676572>`\ ), \ :ref:`Integer <l496e7465676572>`\ , Record(default?: \ :ref:`Boolean <l426f6f6c65616e>`\ , trim_trailing_zeros?: \ :ref:`Boolean <l426f6f6c65616e>`\ , out_mode: \ :ref:`String <l537472696e67>`\ , spacing: \ :ref:`Integer <l496e7465676572>`\ , separator: \ :ref:`Character <l436861726163746572>`\ )) -> \ :ref:`String <l537472696e67>`\  
-  
+  fixed_mr(\ ``f``\ , \ ``d``\ , \ ``mr``\ ) is the floating convertion.
 
 .. _l466c6f6174696e67506f696e74436f6e76657274696f6e-67656e6572616c5f6d72:
 
@@ -49,6 +49,6 @@ undocumented
    pair: FloatingPointConvertion; general_mr
 
 :spadfun:`general_mr`\: (Record(mantissa: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`Integer <l496e7465676572>`\ ), \ :ref:`Integer <l496e7465676572>`\ , Record(default?: \ :ref:`Boolean <l426f6f6c65616e>`\ , trim_trailing_zeros?: \ :ref:`Boolean <l426f6f6c65616e>`\ , out_mode: \ :ref:`String <l537472696e67>`\ , spacing: \ :ref:`Integer <l496e7465676572>`\ , separator: \ :ref:`Character <l436861726163746572>`\ )) -> \ :ref:`String <l537472696e67>`\  
-  
+  \ ``general_mr(f, d, mr)``\  is the general convertion.
 
 

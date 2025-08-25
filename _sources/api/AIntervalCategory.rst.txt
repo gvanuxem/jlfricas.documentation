@@ -18,12 +18,12 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; 0
 
-:spadfun:`0`\: % if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
+:spadfun:`0`\: % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
   0 is interval(0,0).
 
 .. _l41496e74657276616c43617465676f7279-31:
 
-\ :ref:`1 <l4d61676d6157697468556e6974-31>`\ \: % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`1 <l4d61676d6157697468556e6974-31>`\ \: % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l41496e74657276616c43617465676f7279-2a:
@@ -31,18 +31,18 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; *
 
-:spadfun:`\*`\: (%, %) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+:spadfun:`\*`\: (%, %) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
   \ ``x*y``\  creates an interval such that for any elements \ ``u``\  and \ ``v``\  with contains?(\ ``x``\ ,\ ``u``\ ) and contains?(\ ``y``\ ,\ ``v``\ ) it holds contains?(x*y,u*v).
 
 
 .. index::
    pair: AIntervalCategory; *
 
-:spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+:spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   \ ``z*x``\  creates interval(\ ``z``\  * inf \ ``x``\ , \ ``z``\  * sup \ ``x``\ ).
 
 
-\ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
+\ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 
@@ -56,7 +56,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; *
 
-:spadfun:`\*`\: (R, %) -> % if R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+:spadfun:`\*`\: (R, %) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
   \ ``r*x``\  creates the interval(\ ``r``\  * inf \ ``x``\ , \ ``r``\  * sup \ ``x``\ ).
 
 .. _l41496e74657276616c43617465676f7279-2b:
@@ -79,14 +79,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; -
 
-:spadfun:`-`\: % -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+:spadfun:`-`\: % -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   \ ``-x``\  creates the interval \ ``[- sup x, - inf x]``\ .
 
 
 .. index::
    pair: AIntervalCategory; -
 
-:spadfun:`-`\: (%, %) -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+:spadfun:`-`\: (%, %) -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   \ ``x-y``\  creates the interval \ ``x+(-y)``\ .
 
 .. _l41496e74657276616c43617465676f7279-2f:
@@ -94,7 +94,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; /
 
-:spadfun:`/`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+:spadfun:`/`\: (%, %) -> % if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``x/y``\  returns x*inv(\ ``y``\ ). If positive?(\ ``x``\ ) and positive?(\ ``y``\ ), then this is equal to interval(inf(\ ``x``\ )/sup(\ ``y``\ ),sup(\ ``x``\ )/inf(\ ``y``\ )).
 
 .. _l41496e74657276616c43617465676f7279-3d:
@@ -110,14 +110,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; ^
 
-:spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+:spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   \ ``x^n``\  returns interval(1,1) if \ ``x``\  is not zero and \ ``n=0``\ . Otherwise it creates an interval such that for any elements \ ``u``\  and \ ``v``\  with contains?(\ ``x``\ ,\ ``u``\ ) it holds contains?(\ ``x^n``\ ,u^n).
 
 
 .. index::
    pair: AIntervalCategory; ^
 
-:spadfun:`^`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+:spadfun:`^`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
   \ ``x^n``\  creates an interval such that for any elements \ ``u``\  with contains?(\ ``x``\ ,\ ``u``\ ) it holds contains?(\ ``x^n``\ ,u^n).
 
 .. _l41496e74657276616c43617465676f7279-7e3d:
@@ -135,7 +135,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 
 .. _l41496e74657276616c43617465676f7279-616e7469436f6d6d757461746f72:
 
-\ :ref:`antiCommutator <l4e6f6e4173736f6369617469766553656d69526e67-616e7469436f6d6d757461746f72>`\ \: (%, %) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`antiCommutator <l4e6f6e4173736f6369617469766553656d69526e67-616e7469436f6d6d757461746f72>`\ \: (%, %) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
   from \ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\ 
 
 .. _l41496e74657276616c43617465676f7279-636f65726365:
@@ -194,7 +194,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; inv
 
-:spadfun:`inv`\: % -> % if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+:spadfun:`inv`\: % -> % if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``inv(x)``\  returns interval(1/sup(\ ``x``\ ),1/inf(\ ``x``\ )) if not contains?(\ ``x``\ ,0). It is an error, if the interval contains 0.
 
 .. _l41496e74657276616c43617465676f7279-6c61746578:
@@ -204,16 +204,16 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 
 .. _l41496e74657276616c43617465676f7279-6c656674506f776572:
 
-\ :ref:`leftPower <l4d61676d6157697468556e6974-6c656674506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`leftPower <l4d61676d6157697468556e6974-6c656674506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 
-\ :ref:`leftPower <l4d61676d61-6c656674506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`leftPower <l4d61676d61-6c656674506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 .. _l41496e74657276616c43617465676f7279-6c6566745265636970:
 
-\ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l41496e74657276616c43617465676f7279-6e656761746976653f:
@@ -226,12 +226,12 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 
 .. _l41496e74657276616c43617465676f7279-6f6e653f:
 
-\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l41496e74657276616c43617465676f7279-6f70706f736974653f:
 
-\ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
+\ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l41496e74657276616c43617465676f7279-706f7369746976653f:
@@ -252,31 +252,31 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 
 .. _l41496e74657276616c43617465676f7279-7265636970:
 
-\ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l41496e74657276616c43617465676f7279-7269676874506f776572:
 
-\ :ref:`rightPower <l4d61676d6157697468556e6974-7269676874506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`rightPower <l4d61676d6157697468556e6974-7269676874506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 
-\ :ref:`rightPower <l4d61676d61-7269676874506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`rightPower <l4d61676d61-7269676874506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 .. _l41496e74657276616c43617465676f7279-72696768745265636970:
 
-\ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l41496e74657276616c43617465676f7279-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
+\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % if R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l41496e74657276616c43617465676f7279-7375627472616374496643616e:
 
-\ :ref:`subtractIfCan <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e>`\ \: (%, %) -> Union(%, failed) if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`subtractIfCan <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e>`\ \: (%, %) -> Union(%, failed) if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l41496e74657276616c43617465676f7279-737570:
@@ -292,7 +292,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; unit?
 
-:spadfun:`unit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+:spadfun:`unit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``unit?(x)``\  returns \ ``true``\  if every element in \ ``x``\  can be inverted, i.e. if not contains?(\ ``x``\ ,0).
 
 .. _l41496e74657276616c43617465676f7279-7769647468:
@@ -308,41 +308,41 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
 .. index::
    pair: AIntervalCategory; zero?
 
-:spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
+:spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
   \ ``zero?(x)``\  returns \ ``true``\  if x=interval(0,0).
 
 
-\ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
 
 \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  
 
 \ :ref:`BasicType <l426173696354797065>`\  
 
-\ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
-\ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
-\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
-\ :ref:`Magma <l4d61676d61>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`Magma <l4d61676d61>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
-\ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
 
-\ :ref:`Monoid <l4d6f6e6f6964>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`Monoid <l4d6f6e6f6964>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
 
-\ :ref:`NonAssociativeSemiRing <l4e6f6e4173736f6369617469766553656d6952696e67>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`NonAssociativeSemiRing <l4e6f6e4173736f6369617469766553656d6952696e67>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
 
-\ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  % if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
-\ :ref:`SemiGroup <l53656d6947726f7570>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`SemiGroup <l53656d6947726f7570>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
-\ :ref:`SemiRing <l53656d6952696e67>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
+\ :ref:`SemiRing <l53656d6952696e67>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\ 
 
-\ :ref:`SemiRng <l53656d69526e67>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`SemiRng <l53656d69526e67>`\  if R has \ :ref:`SemiRing <l53656d6952696e67>`\  and R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
 

@@ -5,7 +5,7 @@
 FunctionSpace2(R, K)
 ====================
 
-:viewcode:`fspace.spad line 389 <fspace.spad#L389>` :editcode:`[edit on github] <fspace.spad#L389>`
+:viewcode:`fspace.spad line 391 <fspace.spad#L391>` :editcode:`[edit on github] <fspace.spad#L391>`
 
 * R: \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
@@ -35,7 +35,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -197,11 +197,6 @@ A space of formal functions with arguments in an arbitrary ordered set.
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
-.. _l46756e6374696f6e537061636532-636861727468526f6f74:
-
-\ :ref:`charthRoot <l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  from \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-
 .. _l46756e6374696f6e537061636532-636f65726365:
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
@@ -212,7 +207,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -234,8 +229,8 @@ A space of formal functions with arguments in an arbitrary ordered set.
   \ ``coerce(q)``\  returns \ ``q``\  as an element of \%.
 
 
-\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Ring <l52696e67>`\ 
-  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Ring <l52696e67>`\ 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: K -> % 
@@ -253,8 +248,8 @@ A space of formal functions with arguments in an arbitrary ordered set.
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: R -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  R
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: R -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  R
 
 
 .. index::
@@ -269,8 +264,8 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 .. _l46756e6374696f6e537061636532-636f6d6d757461746f72:
 
-\ :ref:`commutator <l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72>`\ \: (%, %) -> % if R has \ :ref:`Ring <l52696e67>`\  or R has \ :ref:`Group <l47726f7570>`\ 
-  from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
+\ :ref:`commutator <l47726f7570-636f6d6d757461746f72>`\ \: (%, %) -> % if R has \ :ref:`Group <l47726f7570>`\  or R has \ :ref:`Ring <l52696e67>`\ 
+  from \ :ref:`Group <l47726f7570>`\ 
 
 .. _l46756e6374696f6e537061636532-636f6e6a7567617465:
 
@@ -781,7 +776,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 .. _l46756e6374696f6e537061636532-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l46756e6374696f6e537061636532-7072696d653f:
 
@@ -805,7 +800,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 .. _l46756e6374696f6e537061636532-7265647563656453797374656d:
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -813,7 +808,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  R
 
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -827,7 +822,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 .. _l46756e6374696f6e537061636532-72657472616374:
 
-\ :ref:`retract <l5265747261637461626c65546f-72657472616374>`\ \: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`retract <l5265747261637461626c65546f-72657472616374>`\ \: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -856,7 +851,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 .. _l46756e6374696f6e537061636532-72657472616374496643616e:
 
-\ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -899,8 +894,8 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 .. _l46756e6374696f6e537061636532-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % if R has \ :ref:`SemiGroup <l53656d6947726f7570>`\  or R has \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l4d61676d6157697468556e6974-73616d706c65>`\ \: % if R has \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\  or R has \ :ref:`SemiGroup <l53656d6947726f7570>`\ 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l46756e6374696f6e537061636532-73697a654c6573733f:
 
@@ -1023,7 +1018,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  if R has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
-\ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
@@ -1087,7 +1082,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
-\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  R if R has \ :ref:`Ring <l52696e67>`\ 
 
@@ -1129,7 +1124,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
-\ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
+\ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
@@ -1147,7 +1142,7 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  R if R has \ :ref:`Ring <l52696e67>`\ 
 
@@ -1167,5 +1162,5 @@ A space of formal functions with arguments in an arbitrary ordered set.
 
 \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
-\ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  if R has \ :ref:`Ring <l52696e67>`\  or R has \ :ref:`Group <l47726f7570>`\ 
+\ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  if R has \ :ref:`Group <l47726f7570>`\  or R has \ :ref:`Ring <l52696e67>`\ 
 

@@ -41,7 +41,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -197,7 +197,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 .. _l556e69766172696174654c617572656e74536572696573-617070726f78696d617465:
 
-\ :ref:`approximate <l556e6976617269617465506f77657253657269657343617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Coef if Coef has ^\: (Coef, \ :ref:`Integer <l496e7465676572>`\ ) -> Coef and Coef has coerce\: \ :ref:`Symbol <l53796d626f6c>`\  -> Coef
+\ :ref:`approximate <l556e6976617269617465506f77657253657269657343617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Coef if Coef has coerce\: \ :ref:`Symbol <l53796d626f6c>`\  -> Coef and Coef has ^\: (Coef, \ :ref:`Integer <l496e7465676572>`\ ) -> Coef
   from \ :ref:`UnivariatePowerSeriesCategory <l556e6976617269617465506f77657253657269657343617465676f7279>`\ (Coef, \ :ref:`Integer <l496e7465676572>`\ )
 
 .. _l556e69766172696174654c617572656e74536572696573-61736563:
@@ -257,7 +257,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 .. _l556e69766172696174654c617572656e74536572696573-636861727468526f6f74:
 
-\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  or \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l556e69766172696174654c617572656e74536572696573-636f656666696369656e74:
@@ -279,12 +279,12 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`Algebra <l416c6765627261>`\  Coef
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
@@ -313,7 +313,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 .. _l556e69766172696174654c617572656e74536572696573-636f6e646974696f6e50:
 
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l556e69766172696174654c617572656e74536572696573-636f6e737472756374:
@@ -383,11 +383,11 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
-\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
@@ -395,11 +395,11 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
-\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
@@ -431,11 +431,11 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
-\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
@@ -443,11 +443,11 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
-\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
@@ -480,7 +480,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`UnivariatePowerSeriesCategory <l556e6976617269617465506f77657253657269657343617465676f7279>`\ (Coef, \ :ref:`Integer <l496e7465676572>`\ )
 
 
-\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), %)
 
 .. _l556e69766172696174654c617572656e74536572696573-6575636c696465616e53697a65:
@@ -502,7 +502,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
 
 
@@ -510,7 +510,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) -> % if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) -> % if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
 
 
@@ -596,7 +596,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`UnivariateSeriesWithRationalExponents <l556e697661726961746553657269657357697468526174696f6e616c4578706f6e656e7473>`\ (Coef, \ :ref:`Integer <l496e7465676572>`\ )
 
 
-\ :ref:`integrate <l556e697661726961746553657269657357697468526174696f6e616c4578706f6e656e7473-696e74656772617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has variables\: Coef -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has integrate\: (Coef, \ :ref:`Symbol <l53796d626f6c>`\ ) -> Coef
+\ :ref:`integrate <l556e697661726961746553657269657357697468526174696f6e616c4578706f6e656e7473-696e74656772617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has integrate\: (Coef, \ :ref:`Symbol <l53796d626f6c>`\ ) -> Coef and Coef has variables\: Coef -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`UnivariateSeriesWithRationalExponents <l556e697661726961746553657269657357697468526174696f6e616c4578706f6e656e7473>`\ (Coef, \ :ref:`Integer <l496e7465676572>`\ )
 
 
@@ -826,7 +826,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 .. _l556e69766172696174654c617572656e74536572696573-7265647563656453797374656d:
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -834,7 +834,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)
 
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -1131,7 +1131,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 \ :ref:`Eltable <l456c7461626c65>`\ (%, %) 
 
-\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), %) if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
+\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), %) if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) and Coef has \ :ref:`Field <l4669656c64>`\ 
 
 \ :ref:`EntireRing <l456e7469726552696e67>`\  if Coef has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
@@ -1153,7 +1153,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 \ :ref:`IndexedProductCategory <l496e646578656450726f6475637443617465676f7279>`\ (Coef, \ :ref:`Integer <l496e7465676572>`\ ) 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen))
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) and Coef has \ :ref:`Field <l4669656c64>`\ 
 
 \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen), \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen)) if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) and Coef has \ :ref:`Field <l4669656c64>`\ 
 
@@ -1169,7 +1169,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  if Coef has \ :ref:`Field <l4669656c64>`\ 
 
-\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) if Coef has \ :ref:`Field <l4669656c64>`\ 
 
@@ -1223,7 +1223,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`OrderedSet <l4f726465726564536574>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
 
-\ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+\ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  and Coef has \ :ref:`Field <l4669656c64>`\  or Coef has \*\: (\ :ref:`Integer <l496e7465676572>`\ , Coef) -> Coef and Coef has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 \ :ref:`PartialOrder <l5061727469616c4f72646572>`\  if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`OrderedSet <l4f726465726564536574>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
 
@@ -1259,7 +1259,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if Coef has \ :ref:`Field <l4669656c64>`\  and \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Coef, var, cen) if Coef has \ :ref:`Field <l4669656c64>`\ 
 

@@ -231,8 +231,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-656c74:
 
-\ :ref:`elt <l5753416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
 
 
 \ :ref:`elt <l456c7461626c65416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
@@ -306,8 +306,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-6669727374:
 
-\ :ref:`first <l5753416767726567617465-6669727374>`\ \: % -> E 
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`first <l496e6465786564416767726567617465-6669727374>`\ \: % -> E 
+  from \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
 
 
 \ :ref:`first <l4c696e656172416767726567617465-6669727374>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -449,6 +449,14 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 .. _l5753566563746f72-6a5753496e74657270726574:
 
 \ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`WSObject <l57534f626a656374>`\ 
 
 .. _l5753566563746f72-6a5753566563746f72:
@@ -623,8 +631,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-71656c74:
 
-\ :ref:`qelt <l5753416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`qelt <l456c7461626c65416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
+  from \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (\ :ref:`Integer <l496e7465676572>`\ , E)
 
 .. _l5753566563746f72-71736574656c7421:
 
@@ -664,8 +672,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-72656d6f76654475706c696361746573:
 
-\ :ref:`removeDuplicates <l5753416767726567617465-72656d6f76654475706c696361746573>`\ \: % -> % 
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`removeDuplicates <l436f6c6c656374696f6e-72656d6f76654475706c696361746573>`\ \: % -> % 
+  from \ :ref:`Collection <l436f6c6c656374696f6e>`\  E
 
 .. _l5753566563746f72-7265706c61636550617274:
 
@@ -684,8 +692,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-72657665727365:
 
-\ :ref:`reverse <l5753416767726567617465-72657665727365>`\ \: % -> % 
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`reverse <l4c696e656172416767726567617465-72657665727365>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
 
 
 \ :ref:`reverse <l5753416767726567617465-72657665727365>`\ \: (%, \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
@@ -763,8 +771,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-736f7274:
 
-\ :ref:`sort <l5753416767726567617465-736f7274>`\ \: % -> % 
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`sort <l4c696e656172416767726567617465-736f7274>`\ \: % -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
 
 
 \ :ref:`sort <l4c696e656172416767726567617465-736f7274>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
@@ -772,8 +780,8 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-736f727465643f:
 
-\ :ref:`sorted? <l5753416767726567617465-736f727465643f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`WSAggregate <l5753416767726567617465>`\  E
+\ :ref:`sorted? <l4c696e656172416767726567617465-736f727465643f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  E
 
 
 \ :ref:`sorted? <l4c696e656172416767726567617465-736f727465643f>`\ \: ((E, E) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  

@@ -5,7 +5,7 @@
 NMAlgebraicallyClosedFunctionSpace R
 ====================================
 
-:viewcode:`jnpoly.spad line 9 <jnpoly.spad#L9>` :editcode:`[edit on github] <jnpoly.spad#L9>`
+:viewcode:`jnpoly.spad line 1 <jnpoly.spad#L1>` :editcode:`[edit on github] <jnpoly.spad#L1>`
 
 * R: Join(\ :ref:`Comparable <l436f6d70617261626c65>`\ , \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ )
 
@@ -175,11 +175,6 @@ Model for algebraically closed function spaces.
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
-.. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-636861727468526f6f74:
-
-\ :ref:`charthRoot <l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  from \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-636f65726365:
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
@@ -190,8 +185,8 @@ Model for algebraically closed function spaces.
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l46756e6374696f6e537061636532-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  R -> % 
@@ -235,8 +230,8 @@ Model for algebraically closed function spaces.
 
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-636f6d6d757461746f72:
 
-\ :ref:`commutator <l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72>`\ \: (%, %) -> % 
-  from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
+\ :ref:`commutator <l47726f7570-636f6d6d757461746f72>`\ \: (%, %) -> % 
+  from \ :ref:`Group <l47726f7570>`\ 
 
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-636f6e6a7567617465:
 
@@ -692,7 +687,7 @@ Model for algebraically closed function spaces.
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-7072696d653f:
 
@@ -808,10 +803,36 @@ Model for algebraically closed function spaces.
 \ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-726f6f744f66:
+
+\ :ref:`rootOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f744f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`rootOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f744f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`rootOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f744f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+.. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-726f6f74734f66:
+
+\ :ref:`rootsOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f74734f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`rootsOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f74734f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`rootsOf <l416c67656272616963616c6c79436c6f7365644669656c64-726f6f74734f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l4d61676d6157697468556e6974-73616d706c65>`\ \: % 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
 .. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-73697a654c6573733f:
 
@@ -899,6 +920,32 @@ Model for algebraically closed function spaces.
 \ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
+.. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-7a65726f4f66:
+
+\ :ref:`zeroOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f4f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`zeroOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f4f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`zeroOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f4f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+.. _l4e4d416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365-7a65726f734f66:
+
+\ :ref:`zerosOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f734f66>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`zerosOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f734f66>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
+
+\ :ref:`zerosOf <l416c67656272616963616c6c79436c6f7365644669656c64-7a65726f734f66>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
+
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
 
@@ -911,6 +958,8 @@ Model for algebraically closed function spaces.
 \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`Algebra <l416c6765627261>`\  R 
+
+\ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\  
 
 \ :ref:`BasicType <l426173696354797065>`\  
 
@@ -1015,8 +1064,6 @@ Model for algebraically closed function spaces.
 \ :ref:`Module <l4d6f64756c65>`\  R 
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
-
-\ :ref:`NMAlgebraicallyClosedField <l4e4d416c67656272616963616c6c79436c6f7365644669656c64>`\  
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
 

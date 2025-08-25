@@ -5,12 +5,12 @@
 NMFraction R
 ============
 
-:viewcode:`jnemo.spad line 1630 <jnemo.spad#L1630>` :editcode:`[edit on github] <jnemo.spad#L1630>`
+:viewcode:`jnemo.spad line 1671 <jnemo.spad#L1671>` :editcode:`[edit on github] <jnemo.spad#L1671>`
 
 * R: Join(\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\ , \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ )
 
 
-Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \ ``G``\ . Vanuxem Date Created: Description:
+Nemo Fractions over un integral domain.
 
 
 .. _l4e4d4672616374696f6e-30:
@@ -179,16 +179,12 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 
 .. _l4e4d4672616374696f6e-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
 .. _l4e4d4672616374696f6e-636861727468526f6f74:
 
-\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e4d4672616374696f6e-636f65726365:
@@ -205,12 +201,12 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: R -> % 
@@ -227,7 +223,7 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 
 .. _l4e4d4672616374696f6e-636f6e646974696f6e50:
 
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4e4d4672616374696f6e-636f6e76657274:
@@ -340,8 +336,8 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 
 .. _l4e4d4672616374696f6e-646976696465:
 
-\ :ref:`divide <l4e4d52696e67-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
+  from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e4d4672616374696f6e-656c74:
 
@@ -469,11 +465,6 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
-.. _l4e4d4672616374696f6e-696e7665727365:
-
-\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
 .. _l4e4d4672616374696f6e-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -522,8 +513,8 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 
 .. _l4e4d4672616374696f6e-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4672616374696f6e-6a6c526566:
 
@@ -645,7 +636,7 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 .. _l4e4d4672616374696f6e-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
 
 .. _l4e4d4672616374696f6e-706f7369746976653f:
 
@@ -816,8 +807,8 @@ Domain for Julia AbstractAlgebra fractions over a Nemo integral domain Author: \
 
 .. _l4e4d4672616374696f6e-756e69743f:
 
-\ :ref:`unit? <l4e4d52696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`unit? <l456e7469726552696e67-756e69743f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
 .. _l4e4d4672616374696f6e-756e697443616e6f6e6963616c:
 

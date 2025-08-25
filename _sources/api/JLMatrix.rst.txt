@@ -5,7 +5,7 @@
 JLMatrix R
 ==========
 
-:viewcode:`jobject.spad line 1700 <jobject.spad#L1700>` :editcode:`[edit on github] <jobject.spad#L1700>`
+:viewcode:`jobject.spad line 1705 <jobject.spad#L1705>` :editcode:`[edit on github] <jobject.spad#L1705>`
 
 * R: \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
 
@@ -650,7 +650,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JLMatrix; nrand
 
-:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLFloat <l4a4c466c6f6174>`\  if R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NMType <l4e4d54797065>`\  and R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
+:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLFloat <l4a4c466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NMType <l4e4d54797065>`\ 
   \ ``nrand(m,n)``\  returns a JLMatrix of size (\ ``m``\ ,\ ``n``\ ) with normally distributed random numbers. For example: \example{mat := nrand(4,4)\$JLMatrix(JLFloat)} \example{chol := jlApply("cholesky", mat * transpose(mat))} \example{chol.L * chol.U}
 
 .. _l4a4c4d6174726978-6e726f7773:
@@ -711,7 +711,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JLMatrix; radicalEigenvalues
 
-:spadfun:`radicalEigenvalues`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  or R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+:spadfun:`radicalEigenvalues`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  and R has \ :ref:`NMRing <l4e4d52696e67>`\  or R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  and R has \ :ref:`NMRing <l4e4d52696e67>`\ 
   \ ``radicalEigenvalues(mat)``\  returns a Julia vector containing the eigenvalues of \ ``mat``\ .
 
 .. _l4a4c4d6174726978-7261646963616c456967656e76616c756573576974684d756c7469706c69636974696573:
@@ -719,7 +719,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JLMatrix; radicalEigenvaluesWithMultiplicities
 
-:spadfun:`radicalEigenvaluesWithMultiplicities`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObjTuple <l4a4c4f626a5475706c65>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`QuotientFieldCategory <l51756f7469656e744669656c6443617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  or R has \ :ref:`NMRing <l4e4d52696e67>`\  and R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
+:spadfun:`radicalEigenvaluesWithMultiplicities`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObjTuple <l4a4c4f626a5475706c65>`\  if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  and R has \ :ref:`NMRing <l4e4d52696e67>`\  or R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\  and R has \ :ref:`NMRing <l4e4d52696e67>`\ 
   \ ``radicalEigenvaluesWithMultiplicities(mat)``\  returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities. The tuples are of internal type (NMAlgebraicNumber, \ ``JLObjInt64``\ ).
 
 .. _l4a4c4d6174726978-72616e6b:
@@ -890,7 +890,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. index::
    pair: JLMatrix; urand01
 
-:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLFloat <l4a4c466c6f6174>`\  if R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NMType <l4e4d54797065>`\  and R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
+:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLFloat <l4a4c466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NMType <l4e4d54797065>`\ 
   \ ``urand01(m,n)``\  returns a JLMatrix of size (\ ``m``\ ,\ ``n``\ ) with uniformly distributed random number contained in [0,1]. \example{mat := urand01(4,4)\$JLMatrix(JLFloat)} \example{qr := jlApply("qr", mat)} \example{qr.Q * qr.R}
 
 .. _l4a4c4d6174726978-76657274436f6e636174:

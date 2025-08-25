@@ -108,7 +108,7 @@ TranscendentalManipulations provides functions to simplify and expand expression
 .. index::
    pair: TranscendentalManipulations; expandTrigProducts
 
-:spadfun:`expandTrigProducts`\: F -> F if F has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  R and R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  R and R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  R and F has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  R
+:spadfun:`expandTrigProducts`\: F -> F if R has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  R and F has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`Pattern <l5061747465726e>`\  R and R has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  R and F has \ :ref:`PatternMatchable <l5061747465726e4d6174636861626c65>`\  R
   \ ``expandTrigProducts(e)``\  replaces \ ``sin(x)*sin(y)``\  by \ ``(cos(x-y)-cos(x+y))/2``\ , \ ``cos(x)*cos(y)``\  by \ ``(cos(x-y)+cos(x+y))/2``\ , and \ ``sin(x)*cos(y)``\  by \ ``(sin(x-y)+sin(x+y))/2``\ . Note: this operation uses pattern matcher, so it is relatively expensive. To avoid getting into an infinite loop the transformations are applied at most ten times.
 
 .. _l5472616e7363656e64656e74616c4d616e6970756c6174696f6e73-687472696773:

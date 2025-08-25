@@ -103,11 +103,6 @@ MonoidRing(R, M)
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
-.. _l4d6f6e6f696452696e67-636861727468526f6f74:
-
-\ :ref:`charthRoot <l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  from \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-
 .. _l4d6f6e6f696452696e67-636f656666696369656e74:
 
 \ :ref:`coefficient <l467265654d6f64756c6543617465676f7279-636f656666696369656e74>`\ \: (%, M) -> R 
@@ -160,27 +155,27 @@ MonoidRing(R, M)
 
 .. _l4d6f6e6f696452696e67-636f6e76657274:
 
-\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 
 .. _l4d6f6e6f696452696e67-656e756d6572617465:
 
-\ :ref:`enumerate <l46696e697465-656e756d6572617465>`\ \: () -> \ :ref:`List <l4c697374>`\  % if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`enumerate <l46696e697465-656e756d6572617465>`\ \: () -> \ :ref:`List <l4c697374>`\  % if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l4d6f6e6f696452696e67-68617368:
 
-\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l4d6f6e6f696452696e67-6861736855706461746521:
 
-\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l4d6f6e6f696452696e67-696e646578:
 
-\ :ref:`index <l46696e697465-696e646578>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`index <l46696e697465-696e646578>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l4d6f6e6f696452696e67-6c61746578:
@@ -234,7 +229,7 @@ MonoidRing(R, M)
 
 .. _l4d6f6e6f696452696e67-6c6f6f6b7570:
 
-\ :ref:`lookup <l46696e697465-6c6f6f6b7570>`\ \: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`lookup <l46696e697465-6c6f6f6b7570>`\ \: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l4d6f6e6f696452696e67-6d6170:
@@ -275,11 +270,11 @@ MonoidRing(R, M)
 .. _l4d6f6e6f696452696e67-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
 
 .. _l4d6f6e6f696452696e67-72616e646f6d:
 
-\ :ref:`random <l46696e697465-72616e646f6d>`\ \: () -> % if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`random <l46696e697465-72616e646f6d>`\ \: () -> % if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l4d6f6e6f696452696e67-7265636970:
@@ -331,12 +326,12 @@ MonoidRing(R, M)
 
 .. _l4d6f6e6f696452696e67-73697a65:
 
-\ :ref:`size <l46696e697465-73697a65>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`size <l46696e697465-73697a65>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l4d6f6e6f696452696e67-736d616c6c65723f:
 
-\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if M has \ :ref:`Comparable <l436f6d70617261626c65>`\  and R has \ :ref:`Comparable <l436f6d70617261626c65>`\  or M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\  and M has \ :ref:`Comparable <l436f6d70617261626c65>`\  or R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
 .. _l4d6f6e6f696452696e67-7375627472616374496643616e:
@@ -394,15 +389,15 @@ MonoidRing(R, M)
 
 \ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  and M has \ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\ 
 
-\ :ref:`Comparable <l436f6d70617261626c65>`\  if M has \ :ref:`Comparable <l436f6d70617261626c65>`\  and R has \ :ref:`Comparable <l436f6d70617261626c65>`\  or M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\  and M has \ :ref:`Comparable <l436f6d70617261626c65>`\  or R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
 
-\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
 
-\ :ref:`Finite <l46696e697465>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`Finite <l46696e697465>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
 
 \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, M) 
 
-\ :ref:`Hashable <l4861736861626c65>`\  if M has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+\ :ref:`Hashable <l4861736861626c65>`\  if R has \ :ref:`Finite <l46696e697465>`\  and M has \ :ref:`Finite <l46696e697465>`\ 
 
 \ :ref:`IndexedDirectProductCategory <l496e646578656444697265637450726f6475637443617465676f7279>`\ (R, M) 
 

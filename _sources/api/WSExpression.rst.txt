@@ -71,8 +71,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 .. _l575345787072657373696f6e-2f:
 
-\ :ref:`/ <l47726f7570-2f>`\ \: (%, %) -> % 
-  from \ :ref:`Group <l47726f7570>`\ 
+\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
+  from \ :ref:`Field <l4669656c64>`\ 
 
 
 \ :ref:`/ <l46756e6374696f6e537061636532-2f>`\ \: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %), \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %)) -> % 
@@ -113,8 +113,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
 
 
-\ :ref:`^ <l47726f7570-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`Group <l47726f7570>`\ 
+\ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
 
 \ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -342,7 +342,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; assuming
 
 :spadfun:`assuming`\: (%, %) -> % 
-  \ ``assuming(assumption(s), expr)``\  uses the assumptions for use of expr with refine, simplify and integerate for example. The assumption(\ ``s``\ ) are not always supported by MathLink. Use assumptions directly whith 'refine' etc. directly
+  \ ``assuming(assumption(s), expr)``\  uses the assumptions for use of expr with refine, simplify and integrate for example. The assumption(\ ``s``\ ) are not always supported by MathLink. Use assumptions directly whith 'refine' etc. directly
 
 .. _l575345787072657373696f6e-6174616e:
 
@@ -489,6 +489,11 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 \ :ref:`charlierC <l5370656369616c46756e6374696f6e43617465676f7279-636861726c69657243>`\ \: (%, %, %) -> % 
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
+.. _l575345787072657373696f6e-636861727468526f6f74:
+
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
 .. _l575345787072657373696f6e-63686562797368657654:
 
 .. index::
@@ -555,8 +560,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 .. _l575345787072657373696f6e-636f65726365:
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: % -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  %
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
 \ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -840,6 +845,10 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
@@ -1236,11 +1245,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 :spadfun:`engineeringForm`\: (%, %) -> % 
   \ ``engineeringForm(x,n)``\  returns the printed representation of \ ``x``\  in engineering form with \ ``n``\  digits of precision.
 
-.. _l575345787072657373696f6e-656e756d6572617465:
-
-\ :ref:`enumerate <l46696e697465-656e756d6572617465>`\ \: () -> \ :ref:`List <l4c697374>`\  % if % has \ :ref:`Finite <l46696e697465>`\ 
-  from \ :ref:`Finite <l46696e697465>`\ 
-
 .. _l575345787072657373696f6e-657266:
 
 \ :ref:`erf <l4c696f7576696c6c69616e46756e6374696f6e43617465676f7279-657266>`\ \: % -> % 
@@ -1276,15 +1280,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 .. index::
    pair: WSExpression; eulerE
 
-:spadfun:`eulerE`\: % -> % 
-  \ ``eulerE(n)``\  returns the Euler number En.
+:spadfun:`eulerE`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %) -> % 
+  \ ``eulerE(n,z)``\  return the Euler \ ``E``\  polynomial of degree \ ``n``\ .
 
 
 .. index::
    pair: WSExpression; eulerE
 
-:spadfun:`eulerE`\: (%, %) -> % 
-  \ ``eulerE(n,z)``\  return the Euler \ ``E``\  polynomial of degree \ ``n``\ .
+:spadfun:`eulerE`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> % 
+  \ ``eulerE(n)``\  returns the Euler number En.
 
 .. _l575345787072657373696f6e-65756c657247616d6d61:
 
@@ -1299,7 +1303,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 .. index::
    pair: WSExpression; eulerPhi
 
-:spadfun:`eulerPhi`\: % -> % 
+:spadfun:`eulerPhi`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> % 
   \ ``eulerPhi(n)``\  is the totient function i.e. the number of integers that are relatively prime to \ ``n``\  in the range [1,\ ``n``\ ].
 
 .. _l575345787072657373696f6e-6576616c:
@@ -1456,8 +1460,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 .. _l575345787072657373696f6e-657871756f:
 
-\ :ref:`exquo <l456e7469726552696e67-657871756f>`\ \: (%, %) -> Union(%, failed) 
-  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+\ :ref:`exquo <l436f6d706c657843617465676f7279-657871756f>`\ \: (%, %) -> Union(%, failed) 
+  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
 
 .. _l575345787072657373696f6e-657874656e6465644575636c696465616e:
 
@@ -1482,14 +1486,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; extendedSimplify
 
 :spadfun:`extendedSimplify`\: % -> % 
-  \ ``extendedSimplify(expr)``\  extended version of simplify. This is the full version of simplify.
+  \ ``extendedSimplify(expr)``\  is the extended version of simplify. This is the full version of simplify. \example{x:= jWSExpr x} \example{expr := Gamma(x)/Gamma(x-1)) Compare with simplify(expr). \example{extendedSimplify(expr)}
 
 
 .. index::
    pair: WSExpression; extendedSimplify
 
 :spadfun:`extendedSimplify`\: (%, %) -> % 
-  \ ``extendedSimplify(expr, assumptions)``\  extended version of simplify with respect to assumptions or ExcludedForms. This is the full version.
+  \ ``extendedSimplify(expr, assumptions)``\  is the extended version of simplify with respect to assumptions or ExcludedForms. This is the full version.
 
 .. _l575345787072657373696f6e-65787472616374:
 
@@ -1884,16 +1888,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 \ :ref:`hankelH2 <l5370656369616c46756e6374696f6e43617465676f7279-68616e6b656c4832>`\ \: (%, %) -> % 
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
-.. _l575345787072657373696f6e-68617368:
-
-\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
-  from \ :ref:`Hashable <l4861736861626c65>`\ 
-
-.. _l575345787072657373696f6e-6861736855706461746521:
-
-\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
-  from \ :ref:`Hashable <l4861736861626c65>`\ 
-
 .. _l575345787072657373696f6e-686176657273696e65:
 
 .. index::
@@ -2056,8 +2050,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 .. _l575345787072657373696f6e-696e76:
 
-\ :ref:`inv <l47726f7570-696e76>`\ \: % -> % 
-  from \ :ref:`Group <l47726f7570>`\ 
+\ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
+  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
 .. _l575345787072657373696f6e-696e766572736542657461526567756c6172697a6564:
 
@@ -2582,6 +2576,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 \ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
   from \ :ref:`WSObject <l57534f626a656374>`\ 
 
+
+\ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jWSInterpret <l57534f626a656374-6a5753496e74657270726574>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
 .. _l575345787072657373696f6e-6a57534c657373:
 
 .. index::
@@ -2643,14 +2645,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; jWSTable
 
 :spadfun:`jWSTable`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``jWSTable(expr, range)``\  applies the \ ``expr``\  to the define range.
+  \ ``jWSTable(expr, range)``\  applies the \ ``expr``\  to the defined range.
 
 
 .. index::
    pair: WSExpression; jWSTable
 
 :spadfun:`jWSTable`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``jWSTable(expr, range1, range2)``\  applies the \ ``expr``\  to the define ranges.
+  \ ``jWSTable(expr, range1, range2)``\  applies the \ ``expr``\  to the defined ranges.
 
 .. _l575345787072657373696f6e-6b656c76696e426569:
 
@@ -2753,7 +2755,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 .. index::
    pair: WSExpression; lambertW
 
-:spadfun:`lambertW`\: (%, %) -> % 
+:spadfun:`lambertW`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %) -> % 
   \ ``lambertW(k,z)``\  returns the \ ``k``\ -th solution to LambertW function.
 
 .. _l575345787072657373696f6e-6c617374:
@@ -2925,10 +2927,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
 .. _l575345787072657373696f6e-6c6f6f6b7570:
-
-\ :ref:`lookup <l46696e697465-6c6f6f6b7570>`\ \: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`Finite <l46696e697465>`\ 
-  from \ :ref:`Finite <l46696e697465>`\ 
-
 
 .. index::
    pair: WSExpression; lookup
@@ -3810,11 +3808,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 :spadfun:`ramanujanTauZ`\: % -> % 
   \ ``ramanujanTauZ(t)``\  computes the Ramanujan tau \ ``Z``\ -function of \ ``t``\ .
-
-.. _l575345787072657373696f6e-72616e646f6d:
-
-\ :ref:`random <l46696e697465-72616e646f6d>`\ \: () -> % if % has \ :ref:`Finite <l46696e697465>`\ 
-  from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l575345787072657373696f6e-72616e6b:
 

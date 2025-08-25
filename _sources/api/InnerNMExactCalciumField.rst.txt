@@ -5,12 +5,12 @@
 InnerNMExactCalciumField Options
 ================================
 
-:viewcode:`jnemo.spad line 825 <jnemo.spad#L825>` :editcode:`[edit on github] <jnemo.spad#L825>`
+:viewcode:`jnemo.spad line 858 <jnemo.spad#L858>` :editcode:`[edit on github] <jnemo.spad#L858>`
 
 * Options: \ :ref:`JLObjDict <l4a4c4f626a44696374>`\ 
 
 
-\ :ref:`InnerNMExactCalciumField <l496e6e65724e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo package Inner domain using options, see https://fredrikj.net/calcium/ca.html\#context-options for hints). Reference: https://nemocas.github.io/Nemo.\ ``jl``\  See https://flintlib.org/doc/introduction_calcium.html for the \ ``C``\  library.
+\ :ref:`InnerNMExactCalciumField <l496e6e65724e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo package. Inner domain using options, see https://fredrikj.net/calcium/ca.html\#context-options for hints.
 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-30:
@@ -272,10 +272,6 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -283,6 +279,11 @@ InnerNMExactCalciumField Options
 
 \ :ref:`characteristicPolynomial <l46696e69746552616e6b416c6765627261-6368617261637465726973746963506f6c796e6f6d69616c>`\ \: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`FiniteRankAlgebra <l46696e69746552616e6b416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
+
+.. _l496e6e65724e4d457861637443616c6369756d4669656c64-636861727468526f6f74:
+
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-636f65726365:
 
@@ -475,10 +476,6 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-646966666572656e7469617465:
 
-\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: % -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
-  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
-
-
 \ :ref:`differentiate <l446966666572656e7469616c457874656e73696f6e-646966666572656e7469617465>`\ \: (%, % -> %) -> % 
   from \ :ref:`DifferentialExtension <l446966666572656e7469616c457874656e73696f6e>`\  %
 
@@ -503,11 +500,6 @@ InnerNMExactCalciumField Options
 
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-
-.. _l496e6e65724e4d457861637443616c6369756d4669656c64-656e756d6572617465:
-
-\ :ref:`enumerate <l46696e697465-656e756d6572617465>`\ \: () -> \ :ref:`List <l4c697374>`\  % if % has \ :ref:`Finite <l46696e697465>`\ 
-  from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-657175616c3f:
 
@@ -588,8 +580,8 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-657871756f:
 
-\ :ref:`exquo <l436f6d706c657843617465676f7279-657871756f>`\ \: (%, %) -> Union(%, failed) 
-  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
+\ :ref:`exquo <l456e7469726552696e67-657871756f>`\ \: (%, %) -> Union(%, failed) 
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-657874656e6465644575636c696465616e:
 
@@ -612,7 +604,7 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-666163746f7253717561726546726565506f6c796e6f6d69616c:
 
-\ :ref:`factorSquareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`factorSquareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-666c6f6f72:
@@ -650,9 +642,9 @@ InnerNMExactCalciumField Options
 \ :ref:`generator <l4d6f6e6f67656e6963416c6765627261-67656e657261746f72>`\ \: () -> % 
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
 
-.. _l496e6e65724e4d457861637443616c6369756d4669656c64-6861736855706461746521:
+.. _l496e6e65724e4d457861637443616c6369756d4669656c64-68617368:
 
-\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
   from \ :ref:`Hashable <l4861736861626c65>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-696d6167:
@@ -713,11 +705,6 @@ InnerNMExactCalciumField Options
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
-
-.. _l496e6e65724e4d457861637443616c6369756d4669656c64-696e7665727365:
-
-\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a696e656366:
 
@@ -803,8 +790,8 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c4f7074696f6e73:
 
@@ -959,7 +946,7 @@ InnerNMExactCalciumField Options
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-706f736974697665496e66696e697479:
 
@@ -1183,11 +1170,6 @@ InnerNMExactCalciumField Options
 \ :ref:`sinh <l4879706572626f6c696346756e6374696f6e43617465676f7279-73696e68>`\ \: % -> % 
   from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
 
-.. _l496e6e65724e4d457861637443616c6369756d4669656c64-73697a65:
-
-\ :ref:`size <l46696e697465-73697a65>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`Finite <l46696e697465>`\ 
-  from \ :ref:`Finite <l46696e697465>`\ 
-
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-73697a654c6573733f:
 
 \ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -1220,7 +1202,7 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-73717561726546726565506f6c796e6f6d69616c:
 
-\ :ref:`squareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+\ :ref:`squareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-737472696e67:

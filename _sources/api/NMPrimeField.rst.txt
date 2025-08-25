@@ -5,12 +5,12 @@
 NMPrimeField p
 ==============
 
-:viewcode:`jnemo.spad line 574 <jnemo.spad#L574>` :editcode:`[edit on github] <jnemo.spad#L574>`
+:viewcode:`jnemo.spad line 586 <jnemo.spad#L586>` :editcode:`[edit on github] <jnemo.spad#L586>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-This domain allows the manipulation of Nemo prime field elements using the Nemo Julia package (FLINT based). https://flintlib.org/
+This domain allows the manipulation of Nemo prime field elements using the Nemo Julia package (FLINT based).
 
 
 .. _l4e4d5072696d654669656c64-30:
@@ -25,8 +25,8 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-2a:
 
-\ :ref:`\* <l4d61676d61-2a>`\ \: (%, %) -> % 
-  from \ :ref:`Magma <l4d61676d61>`\ 
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (%, %) -> % 
+  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  %
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
@@ -82,8 +82,8 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-2f:
 
-\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
-  from \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`/ <l457874656e73696f6e4669656c64-2f>`\ \: (%, %) -> % 
+  from \ :ref:`ExtensionField <l457874656e73696f6e4669656c64>`\  %
 
 .. _l4e4d5072696d654669656c64-3d:
 
@@ -144,10 +144,6 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -167,8 +163,8 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-636f65726365:
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  %
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: % -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  %
 
 
 \ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -402,8 +398,8 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e4d5072696d654669656c64-67656e657261746f723f:
 
@@ -417,21 +413,6 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 \ :ref:`generator <l46696e697465416c67656272616963457874656e73696f6e4669656c64-67656e657261746f72>`\ \: () -> % 
   from \ :ref:`FiniteAlgebraicExtensionField <l46696e697465416c67656272616963457874656e73696f6e4669656c64>`\  %
-
-.. _l4e4d5072696d654669656c64-4746:
-
-.. index::
-   pair: NMPrimeField; GF
-
-:spadfun:`GF`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``GF(i)``\  returns \ ``i``\  as a NMPrimeField element.
-
-
-.. index::
-   pair: NMPrimeField; GF
-
-:spadfun:`GF`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``GF(i)``\  returns \ ``i``\  as a NMPrimeField element.
 
 .. _l4e4d5072696d654669656c64-68617368:
 
@@ -462,11 +443,6 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
-
-.. _l4e4d5072696d654669656c64-696e7665727365:
-
-\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d5072696d654669656c64-6a6c41626f7574:
 
@@ -516,8 +492,8 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d5072696d654669656c64-6a6c526566:
 

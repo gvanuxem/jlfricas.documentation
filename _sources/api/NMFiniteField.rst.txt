@@ -5,14 +5,14 @@
 NMFiniteField(p, n)
 ===================
 
-:viewcode:`jnemo.spad line 698 <jnemo.spad#L698>` :editcode:`[edit on github] <jnemo.spad#L698>`
+:viewcode:`jnemo.spad line 724 <jnemo.spad#L724>` :editcode:`[edit on github] <jnemo.spad#L724>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 * n: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements using the Nemo Julia package (FLINT based). https://flintlib.org/
+This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements using the Nemo Julia package (FLINT based).
 
 
 .. _l4e4d46696e6974654669656c64-30:
@@ -101,8 +101,11 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`BasicType <l426173696354797065>`\ 
+.. index::
+   pair: NMFiniteField; =
+
+:spadfun:`=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  
 
 .. _l4e4d46696e6974654669656c64-5e:
 
@@ -119,8 +122,11 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`BasicType <l426173696354797065>`\ 
+.. index::
+   pair: NMFiniteField; ~=
+
+:spadfun:`~=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  
 
 .. _l4e4d46696e6974654669656c64-6162736f6c7574653f:
 
@@ -182,10 +188,6 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-6368617261637465726973746963:
 
-\ :ref:`characteristic <l4e4d52696e67-6368617261637465726973746963>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
-
-
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
@@ -235,8 +237,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
   \ ``coerce(i)``\  coerces \ ``i``\ .
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p
 
 .. _l4e4d46696e6974654669656c64-636f6d6d757461746f72:
 
@@ -444,8 +446,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l4e4d46696e6974654669656c64-67656e657261746f723f:
 
@@ -489,11 +491,6 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
-
-.. _l4e4d46696e6974654669656c64-696e7665727365:
-
-\ :ref:`inverse <l4e4d52696e67-696e7665727365>`\ \: % -> % 
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d46696e6974654669656c64-6a6c41626f7574:
 
@@ -543,8 +540,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-6a6c4f626a656374:
 
-\ :ref:`jlObject <l4e4d52696e67-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d46696e6974654669656c64-6a6c526566:
 
@@ -756,8 +753,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-72616e6b:
 
-\ :ref:`rank <l46696e69746552616e6b416c6765627261-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  from \ :ref:`FiniteRankAlgebra <l46696e69746552616e6b416c6765627261>`\ (\ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p)
+\ :ref:`rank <l4672616d65644d6f64756c65-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`FramedModule <l4672616d65644d6f64756c65>`\  \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p
 
 .. _l4e4d46696e6974654669656c64-7265636970:
 

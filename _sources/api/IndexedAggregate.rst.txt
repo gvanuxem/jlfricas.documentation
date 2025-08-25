@@ -22,12 +22,12 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
 
 .. _l496e6465786564416767726567617465-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l496e6465786564416767726567617465-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l496e6465786564416767726567617465-616e793f:
@@ -51,7 +51,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Entry
 
 
-\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (Entry, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (Entry, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Entry
 
 .. _l496e6465786564416767726567617465-656c74:
@@ -86,7 +86,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
 .. index::
    pair: IndexedAggregate; entry?
 
-:spadfun:`entry?`\: (Entry, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`entry?`\: (Entry, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`BasicType <l426173696354797065>`\ 
   \ ``entry?(x, u)``\  tests if \ ``x``\  equals \ ``u . i``\  for some index \ ``i``\ .
 
 .. _l496e6465786564416767726567617465-65713f:
@@ -170,7 +170,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
 
 .. _l496e6465786564416767726567617465-6d6178:
 
-\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> Entry if Entry has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> Entry if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Entry
 
 
@@ -187,7 +187,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
 
 .. _l496e6465786564416767726567617465-6d656d6265723f:
 
-\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (Entry, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (Entry, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Entry
 
 .. _l496e6465786564416767726567617465-6d656d62657273:
@@ -197,7 +197,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
 
 .. _l496e6465786564416767726567617465-6d696e:
 
-\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> Entry if Entry has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> Entry if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Entry
 
 .. _l496e6465786564416767726567617465-6d696e496e646578:
@@ -254,7 +254,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
 
 \ :ref:`Aggregate <l416767726567617465>`\  
 
-\ :ref:`BasicType <l426173696354797065>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Entry has \ :ref:`BasicType <l426173696354797065>`\  or Entry has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Entry has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 

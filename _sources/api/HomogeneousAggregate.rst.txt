@@ -20,12 +20,12 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 
 .. _l486f6d6f67656e656f7573416767726567617465-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l486f6d6f67656e656f7573416767726567617465-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l486f6d6f67656e656f7573416767726567617465-616e793f:
@@ -58,7 +58,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 .. index::
    pair: HomogeneousAggregate; count
 
-:spadfun:`count`\: (S, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`count`\: (S, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   \ ``count(x, u)``\  returns the number of occurrences of \ ``x``\  in \ ``u``\ . For collections, \ ``count(x, u) = reduce(+, [1 for y in u | x = y], 0)``\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-656d7074793f:
@@ -78,19 +78,19 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 
 .. _l486f6d6f67656e656f7573416767726567617465-6576616c:
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, S, S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, S, S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S)
 
 .. _l486f6d6f67656e656f7573416767726567617465-65766572793f:
@@ -132,7 +132,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 .. index::
    pair: HomogeneousAggregate; max
 
-:spadfun:`max`\: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`max`\: % -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   \ ``max(u)``\  returns maximal element of \ ``u``\ . Error if \ ``u``\  is empty.
 
 
@@ -147,7 +147,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 .. index::
    pair: HomogeneousAggregate; member?
 
-:spadfun:`member?`\: (S, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`member?`\: (S, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   \ ``member?(x, u)``\  tests if \ ``x``\  is a member of \ ``u``\ . For collections, \ ``member?(x, u) = reduce(or, [x=y for y in u], false)``\ . However, \ ``member?(x, u)``\  returns as soon as it finds a member.
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d656d62657273:
@@ -163,7 +163,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 .. index::
    pair: HomogeneousAggregate; min
 
-:spadfun:`min`\: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`min`\: % -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   \ ``min(u)``\  returns minimal element of \ ``u``\ . Error if \ ``u``\  is empty.
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d6f72653f:
@@ -192,13 +192,13 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
 
 \ :ref:`Aggregate <l416767726567617465>`\  
 
-\ :ref:`BasicType <l426173696354797065>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if S has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  S if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`Evalable <l4576616c61626c65>`\  S if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S) if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S) if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 

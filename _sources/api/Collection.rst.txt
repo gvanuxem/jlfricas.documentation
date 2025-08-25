@@ -20,12 +20,12 @@ A collection is a homogeneous aggregate which can be built from a list of member
 
 .. _l436f6c6c656374696f6e-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l436f6c6c656374696f6e-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l436f6c6c656374696f6e-616e793f:
@@ -62,7 +62,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  S
 
 
-\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (S, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (S, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  S
 
 .. _l436f6c6c656374696f6e-656d7074793f:
@@ -82,19 +82,19 @@ A collection is a homogeneous aggregate which can be built from a list of member
 
 .. _l436f6c6c656374696f6e-6576616c:
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, S, S) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, S, S) -> % if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S)
 
 .. _l436f6c6c656374696f6e-65766572793f:
@@ -132,7 +132,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
 
 .. _l436f6c6c656374696f6e-6d6178:
 
-\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  S
 
 
@@ -141,7 +141,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
 
 .. _l436f6c6c656374696f6e-6d656d6265723f:
 
-\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (S, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (S, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  S
 
 .. _l436f6c6c656374696f6e-6d656d62657273:
@@ -151,7 +151,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
 
 .. _l436f6c6c656374696f6e-6d696e:
 
-\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  S
 
 .. _l436f6c6c656374696f6e-6d6f72653f:
@@ -183,7 +183,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
 .. index::
    pair: Collection; reduce
 
-:spadfun:`reduce`\: ((S, S) -> S, %, S, S) -> S if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`reduce`\: ((S, S) -> S, %, S, S) -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   \ ``reduce(f, u, x, z)``\  reduces the binary operation \ ``f``\  across \ ``u``\ , stopping when an "absorbing element" \ ``z``\  is encountered. As for \ ``reduce(f, u, x)``\ , \ ``x``\  is the identity element of \ ``f``\ . Same as \ ``reduce(f, u, x)``\  when \ ``u``\  contains no element \ ``z``\ . Thus the third argument \ ``x``\  is returned when \ ``u``\  is empty.
 
 .. _l436f6c6c656374696f6e-72656d6f7665:
@@ -198,7 +198,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
 .. index::
    pair: Collection; remove
 
-:spadfun:`remove`\: (S, %) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`remove`\: (S, %) -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   \ ``remove(x, u)``\  returns a copy of \ ``u``\  with all elements equal to \ ``x``\  removed. Note: \ ``remove(x, u) = [y for y in u | y ~= x]``\ .
 
 .. _l436f6c6c656374696f6e-72656d6f76654475706c696361746573:
@@ -206,7 +206,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
 .. index::
    pair: Collection; removeDuplicates
 
-:spadfun:`removeDuplicates`\: % -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+:spadfun:`removeDuplicates`\: % -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\ 
   \ ``removeDuplicates(u)``\  returns a copy of \ ``u``\  with all duplicates removed.
 
 .. _l436f6c6c656374696f6e-73616d706c65:
@@ -230,17 +230,17 @@ A collection is a homogeneous aggregate which can be built from a list of member
 
 \ :ref:`Aggregate <l416767726567617465>`\  
 
-\ :ref:`BasicType <l426173696354797065>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and S has \ :ref:`BasicType <l426173696354797065>`\  or S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if S has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if S has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  S if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`Evalable <l4576616c61626c65>`\  S if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  S 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S) if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (S, S) if S has \ :ref:`SetCategory <l53657443617465676f7279>`\  and S has \ :ref:`Evalable <l4576616c61626c65>`\  S
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 

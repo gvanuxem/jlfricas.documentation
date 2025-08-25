@@ -5,12 +5,12 @@
 SparseMultivariatePolynomialExpressions R
 =========================================
 
-:viewcode:`ssolve.spad line 22 <ssolve.spad#L22>` :editcode:`[edit on github] <ssolve.spad#L22>`
+:viewcode:`ssolve.spad line 17 <ssolve.spad#L17>` :editcode:`[edit on github] <ssolve.spad#L17>`
 
 * R: \ :ref:`Ring <l52696e67>`\ 
 
 
-undocumented
+This domain is a hack, in some sense. What is needed is providing - automatically - all operations supported by the coefficient domain, as long as the polynomials can be retracted to that domain, i.e. as long as they are just constants.
 
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-30:
@@ -194,13 +194,13 @@ undocumented
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-636861727468526f6f74:
 
-\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or R has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-636f656666696369656e74:
 
-\ :ref:`coefficient <l4162656c69616e4d6f6e6f696452696e67-636f656666696369656e74>`\ \: (%, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> R 
-  from \ :ref:`AbelianMonoidRing <l4162656c69616e4d6f6e6f696452696e67>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+\ :ref:`coefficient <l467265654d6f64756c6543617465676f7279-636f656666696369656e74>`\ \: (%, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> R 
+  from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 
 \ :ref:`coefficient <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-636f656666696369656e74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -247,7 +247,7 @@ undocumented
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-636f6e646974696f6e50:
 
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-636f6e737472756374:
@@ -442,8 +442,8 @@ undocumented
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
+  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
 
 .. _l5370617273654d756c746976617269617465506f6c796e6f6d69616c45787072657373696f6e73-67726f756e643f:
 

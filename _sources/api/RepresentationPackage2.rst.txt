@@ -79,28 +79,28 @@ RepresentationPackage2 R
 .. index::
    pair: RepresentationPackage2; meatAxe
 
-:spadfun:`meatAxe`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+:spadfun:`meatAxe`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``meatAxe(aG, randomElements)``\  calls \ *meatAxe(aG, false, 6, 7)*\ , only using Parker\ ``'s``\  fingerprints, if \ *randomElemnts*\  is \ ``false``\ . If it is \ ``true``\ , it calls \ *meatAxe(aG, true, 25, 7)*\ , only using random elements. Note: the choice of 25 was rather arbitrary. Also, 7 covers the case of three-dimensional kernels over the field with 2 elements.
 
 
 .. index::
    pair: RepresentationPackage2; meatAxe
 
-:spadfun:`meatAxe`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+:spadfun:`meatAxe`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``meatAxe(aG, randomElements, numberOfTries, maxTests)``\  returns a 2-list of representations as follows. All matrices of argument \ ``aG``\  are assumed to be square and of equal size. Then \ ``aG``\  generates a subalgebra, say \ ``A``\ , of the algebra of all square matrices of dimension \ ``n``\ . \ *V R*\  is an A-module in the usual way. meatAxe(\ ``aG``\ , \ ``numberOfTries``\ , maxTests) creates at most \ *numberOfTries*\  random elements of the algebra, tests them for singularity. If singular, it tries at most \ *maxTests*\  elements of its kernel to generate a proper submodule. If successful, a 2-list is returned: first, a list containing first the list of the representations of the submodule, then a list of the representations of the factor module. Otherwise, if we know that all the kernel is already scanned, Norton\ ``'s``\  irreducibility test can be used either to prove irreducibility or to find the splitting. If \ *randomElements*\  is \ *false*\ , the first 6 tries use Parker\ ``'s``\  fingerprints.
 
 
 .. index::
    pair: RepresentationPackage2; meatAxe
 
-:spadfun:`meatAxe`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+:spadfun:`meatAxe`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``meatAxe(aG, numberOfTries)``\  calls \ *meatAxe(aG, true, numberOfTries, 7)*\ . Notes: 7 covers the case of three-dimensional kernels over the field with 2 elements.
 
 
 .. index::
    pair: RepresentationPackage2; meatAxe
 
-:spadfun:`meatAxe`\: \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+:spadfun:`meatAxe`\: \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``meatAxe(aG)``\  calls \ *meatAxe(aG, false, 25, 7)*\  returns a 2-list of representations as follows. All matrices of argument \ ``aG``\  are assumed to be square and of equal size. Then \ ``aG``\  generates a subalgebra, say \ ``A``\ , of the algebra of all square matrices of dimension \ ``n``\ . \ *V R*\  is an A-module in the usual way. meatAxe(\ ``aG``\ ) creates at most 25 random elements of the algebra, tests them for singularity. If singular, it tries at most 7 elements of its kernel to generate a proper submodule. If successful a list which contains first the list of the representations of the submodule, then a list of the representations of the factor module is returned. Otherwise, if we know that all the kernel is already scanned, Norton\ ``'s``\  irreducibility test can be used either to prove irreducibility or to find the splitting. Notes: the first 6 tries use Parker\ ``'s``\  fingerprints. Also, 7 covers the case of three-dimensional kernels over the field with 2 elements.
 
 .. _l526570726573656e746174696f6e5061636b61676532-7363616e4f6e6544696d537562737061636573:
@@ -108,7 +108,7 @@ RepresentationPackage2 R
 .. index::
    pair: RepresentationPackage2; scanOneDimSubspaces
 
-:spadfun:`scanOneDimSubspaces`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  R, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  R if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`Finite <l46696e697465>`\ 
+:spadfun:`scanOneDimSubspaces`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  R, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  R if R has \ :ref:`Finite <l46696e697465>`\  and R has \ :ref:`Field <l4669656c64>`\ 
   \ ``scanOneDimSubspaces(basis, n)``\  gives a canonical representative of the \ *n*\ \ ``-``\ th one-dimensional subspace of the vector space generated by the elements of \ *basis*\ , all from \ *R^n*\ . The coefficients of the representative are of shape \ *(0, ..., 0, 1, *, ..., *)*\ , \ ***\  in \ ``R``\ . If the size of \ ``R``\  is \ ``q``\ , then there are \ *(q^n-1)/(q-1)*\  of them. We first reduce \ ``n``\  modulo this number, then find the largest \ ``i``\  such that \ *+/[q^i for i in 0..i-1] <= n*\ . Subtracting this sum of powers from \ ``n``\  results in an \ ``i``\ -digit number to \ ``basis``\  \ ``q``\ . This fills the positions of the stars.
 
 .. _l526570726573656e746174696f6e5061636b61676532-73706c6974:

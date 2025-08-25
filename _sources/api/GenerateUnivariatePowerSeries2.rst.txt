@@ -18,7 +18,7 @@ GenerateUnivariatePowerSeries2 FE
 .. index::
    pair: GenerateUnivariatePowerSeries2; laurent
 
-:spadfun:`laurent`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`laurent`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``laurent(a(n), n, x=a, n0..)``\  returns \ ``sum(n = n0.., a(n) * (x - a)^n)``\ ; \ ``laurent(a(n), n, x=a, n0..n1)``\  returns \ ``sum(n = n0..n1, a(n) * (x - a)^n)``\ .
 
 
@@ -33,7 +33,7 @@ GenerateUnivariatePowerSeries2 FE
 .. index::
    pair: GenerateUnivariatePowerSeries2; puiseux
 
-:spadfun:`puiseux`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`puiseux`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``puiseux(a(n), n, x = a, r0.., r)``\  returns \ ``sum(n = r0, r0 + r, r0 + 2*r..., a(n) * (x - a)^n)``\ ; \ ``puiseux(a(n), n, x = a, r0..r1, r)``\  returns \ ``sum(n = r0 + k*r while n <= r1, a(n) * (x - a)^n)``\ .
 
 
@@ -48,21 +48,21 @@ GenerateUnivariatePowerSeries2 FE
 .. index::
    pair: GenerateUnivariatePowerSeries2; series
 
-:spadfun:`series`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`series`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``series(a(n), n, x = a)``\  returns \ ``sum(n = 0.., a(n)*(x-a)^n)``\ .
 
 
 .. index::
    pair: GenerateUnivariatePowerSeries2; series
 
-:spadfun:`series`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`series`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``series(a(n), n, x = a, r0.., r)``\  returns \ ``sum(n = r0, r0 + r, r0 + 2*r..., a(n) * (x - a)^n)``\ ; \ ``series(a(n), n, x = a, r0..r1, r)``\  returns \ ``sum(n = r0 + k*r while n <= r1, a(n) * (x - a)^n)``\ .
 
 
 .. index::
    pair: GenerateUnivariatePowerSeries2; series
 
-:spadfun:`series`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`series`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``series(a(n), n, x=a, n0..)``\  returns \ ``sum(n = n0.., a(n) * (x - a)^n)``\ ; \ ``series(a(n), n, x=a, n0..n1)``\  returns \ ``sum(n = n0..n1, a(n) * (x - a)^n)``\ .
 
 
@@ -91,14 +91,14 @@ GenerateUnivariatePowerSeries2 FE
 .. index::
    pair: GenerateUnivariatePowerSeries2; taylor
 
-:spadfun:`taylor`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`taylor`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``taylor(a(n), n, x = a)``\  returns \ ``sum(n = 0.., a(n)*(x-a)^n)``\ .
 
 
 .. index::
    pair: GenerateUnivariatePowerSeries2; taylor
 
-:spadfun:`taylor`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE
+:spadfun:`taylor`\: (FE, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Equation <l4571756174696f6e>`\  FE, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Any <l416e79>`\  if FE has \ :ref:`Evalable <l4576616c61626c65>`\  FE and FE has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
   \ ``taylor(a(n), n, x = a, n0..)``\  returns \ ``sum(n = n0.., a(n)*(x-a)^n)``\ ; \ ``taylor(a(n), n, x = a, n0..n1)``\  returns \ ``sum(n = n0.., a(n)*(x-a)^n)``\ .
 
 

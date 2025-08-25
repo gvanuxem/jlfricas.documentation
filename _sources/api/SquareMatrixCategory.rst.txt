@@ -36,8 +36,8 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 .. _l5371756172654d617472697843617465676f7279-2a:
 
-\ :ref:`\* <l4d61747269784f7065726174696f6e7343617465676f7279-2a>`\ \: (%, %) -> % 
-  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (%, %) -> % 
+  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  %
 
 
 .. index::
@@ -47,7 +47,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
   \ ``x * c``\  is the product of the matrix \ ``x``\  and the column vector \ ``c``\ . Error: if the dimensions are incompatible.
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -55,7 +55,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  R
 
 
-\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
@@ -84,11 +84,11 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 .. _l5371756172654d617472697843617465676f7279-2d:
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 .. _l5371756172654d617472697843617465676f7279-2f:
@@ -162,12 +162,12 @@ SquareMatrixCategory(ndim, R, Row, Col)
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Ring <l52696e67>`\ 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % if R has \ :ref:`Ring <l52696e67>`\  or R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: R -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  R
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: R -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  R
 
 .. _l5371756172654d617472697843617465676f7279-636f6c756d6e:
 
@@ -205,7 +205,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 .. _l5371756172654d617472697843617465676f7279-44:
 
-\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: % -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: % -> % if R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
@@ -217,7 +217,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
@@ -275,7 +275,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 .. _l5371756172654d617472697843617465676f7279-646966666572656e7469617465:
 
-\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: % -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: % -> % if R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
@@ -287,7 +287,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
@@ -565,7 +565,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 .. _l5371756172654d617472697843617465676f7279-7265647563656453797374656d:
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: (\ :ref:`Matrix <l4d6174726978>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , vec: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Integer <l496e7465676572>`\ ) if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -573,7 +573,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  R
 
 
-\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`reducedSystem <l4c696e6561726c794578706c696369744f766572-7265647563656453797374656d>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
   from \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -665,7 +665,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 .. _l5371756172654d617472697843617465676f7279-7375627472616374496643616e:
 
-\ :ref:`subtractIfCan <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e>`\ \: (%, %) -> Union(%, failed) if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`subtractIfCan <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e>`\ \: (%, %) -> Union(%, failed) if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l5371756172654d617472697843617465676f7279-73796d6d65747269633f:
@@ -703,7 +703,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (R, R) 
 
-\ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
@@ -719,7 +719,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 \ :ref:`DifferentialExtension <l446966666572656e7469616c457874656e73696f6e>`\  R if R has \ :ref:`Ring <l52696e67>`\ 
 
-\ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+\ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  if R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`Evalable <l4576616c61626c65>`\  R if R has \ :ref:`Evalable <l4576616c61626c65>`\  R
 
@@ -741,7 +741,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  R 
 
-\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  R if R has \ :ref:`Ring <l52696e67>`\ 
 
@@ -777,7 +777,7 @@ SquareMatrixCategory(ndim, R, Row, Col)
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`Ring <l52696e67>`\ 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  R 
 
