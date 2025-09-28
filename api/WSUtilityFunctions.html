@@ -79,24 +79,24 @@
 <dt><span class="spadfun">jlWSDateString</span>: <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a> -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSDateString(expr)</span></code> returns the WSExpression string of the date from a <code class="docutils literal notranslate"><span class="pre">WS</span></code> date object. For example: example{jlWSDateString jWSExpr “Tomorrow”}</p>
 </dd>
 </dl>
-<span id="l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274"></span><dl class="simple" id="index-9">
+<span id="l57535574696c69747946756e6374696f6e73-6a6c5753446f63756d656e746174696f6e"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">jlWSDocumentation</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSDocumentation(sym)</span></code> prints <code class="docutils literal notranslate"><span class="pre">WS</span></code> informations about the symbol <code class="docutils literal notranslate"><span class="pre">sym</span></code>. For example: example{jlWSDocumentation sin}</p>
+</dd>
+</dl>
+<span id="l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">jlWSExport</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a>) -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSExport(file.ext,</span> <span class="pre">obj)</span></code> exports the object obj to the file file.ext. The extension ext will determine the saved format. A <code class="docutils literal notranslate"><span class="pre">WS</span></code> expression for example can be exported in an image file, it will be saved in the <code class="docutils literal notranslate"><span class="pre">WS</span></code> ‘StandardForm’ whereas in FriCAS it is outputted in <code class="docutils literal notranslate"><span class="pre">WS</span></code> ‘OutputForm<code class="docutils literal notranslate"><span class="pre">':</span></code> example{x:=jWSExpr(x);jlWSExport(“legendreP.png”, legendreP(7, x))}</p>
 </dd>
 </dl>
-<span id="l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274537472696e67"></span><dl class="simple" id="index-10">
+<span id="l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274537472696e67"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">jlWSExportString</span>: (<a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a>, <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a>) -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlWSExportString(expr,</span> <span class="pre">jWSString(format))</span></code> returns the string representation of <code class="docutils literal notranslate"><span class="pre">expr</span></code> in the format form. Use toString or string to obtain the FriCAS String. For example: example{jWSExpr &quot;Probability[x &lt; 0, x \[Distributed] NormalDistribution[]]&quot;} example{jWSExpr &quot;Probability[x &lt; 1, x \[Distributed] NormalDistribution[]]&quot;} example{string jlWSExportString(%,jWSString “TeX”)}</p>
 </dd>
 </dl>
-<span id="l57535574696c69747946756e6374696f6e73-6a6c5753496d706f7274"></span><dl class="simple" id="index-11">
+<span id="l57535574696c69747946756e6374696f6e73-6a6c5753496d706f7274"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">jlWSImport</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a>) -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p>jWSImport(expr, form) imports expr with format form.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-12">
+<dl class="simple" id="index-13">
 <dt><span class="spadfun">jlWSImport</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p>jWSImport(expr) imports expr.</p>
-</dd>
-</dl>
-<span id="l57535574696c69747946756e6374696f6e73-6a6c5753496e666f726d6174696f6e"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">jlWSInformation</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p>jWSInformation(<code class="docutils literal notranslate"><span class="pre">sym</span></code>) prints informations about the symbol <code class="docutils literal notranslate"><span class="pre">sym</span></code>. For example: example{jWSInformation sin}</p>
 </dd>
 </dl>
 <span id="l57535574696c69747946756e6374696f6e73-6a6c5753506c6f74"></span><dl class="simple" id="index-14">

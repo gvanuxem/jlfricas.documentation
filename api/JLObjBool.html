@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>JLDataFrame &#8212; jlFriCAS</title>
+    <title>JLObjBool &#8212; jlFriCAS</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -16,8 +16,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="JLF32SquareMatrix n" href="JLF32SquareMatrix.html" />
-    <link rel="prev" title="JLComplexFloat" href="JLComplexFloat.html" /> 
+    <link rel="next" title="JLObjComplexF32" href="JLObjComplexF32.html" />
+    <link rel="prev" title="JLObjBigInt" href="JLObjBigInt.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
@@ -26,15 +26,15 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="JLF32SquareMatrix.html" title="JLF32SquareMatrix n"
+          <a href="JLObjComplexF32.html" title="JLObjComplexF32"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="JLComplexFloat.html" title="JLComplexFloat"
+          <a href="JLObjBigInt.html" title="JLObjBigInt"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">JLDataFrame</a></li> 
+        <li class="nav-item nav-item-this"><a href="">JLObjBool</a></li> 
       </ul>
     </div>  
 
@@ -43,67 +43,39 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="jldataframe">
-<span id="l4a4c446174614672616d65"></span><span id="index-0"></span><h1>JLDataFrame<a class="headerlink" href="#jldataframe" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1566">jobject.spad line 1566</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1566">[edit on github]</a></p>
-<p>Julia DataFrames support</p>
-<dl class="simple" id="l4a4c446174614672616d65-23">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-3d">
+  <section id="jlobjbool">
+<span id="l4a4c4f626a426f6f6c"></span><span id="index-0"></span><h1>JLObjBool<a class="headerlink" href="#jlobjbool" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L247">jobject.spad line 247</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L247">[edit on github]</a></p>
+<p>Convenience domain for Julia booleans, objects that are used within Julia, and not directly by the underlying FriCAS Common LISP. It is not meant to be used directly, but rather for returned value or function argument for example.</p>
+<dl class="simple" id="l4a4c4f626a426f6f6c-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-7e3d">
+<dl class="simple" id="l4a4c4f626a426f6f6c-7e3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-636f65726365">
+<span id="l4a4c4f626a426f6f6c-636f65726365"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(jbool)</span></code> coerces the Julia boolean value to a FriCAS Boolean.</p>
+</dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-636f6e76657274">
+<dl class="simple" id="l4a4c4f626a426f6f6c-636f6e76657274">
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-636f7079">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-636f7079"><span class="std std-ref">copy</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+<span id="l4a4c4f626a426f6f6c-6a66616c7365"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">jfalse</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jfalse()</span></code> returns the Julia boolean <code class="docutils literal notranslate"><span class="pre">false</span></code> value.</p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-656c74">
-<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-656d7074793f">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-656d7074793f"><span class="std std-ref">empty?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-656d707479">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-656d707479"><span class="std std-ref">empty</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-65713f">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-65713f"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<span id="l4a4c446174614672616d65-6a646672616d65"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">jdframe</span>: (<a class="reference internal" href="JLFloat64Matrix.html#l4a4c466c6f617436344d6174726978"><span class="std std-ref">JLFloat64Matrix</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jdframe(a,</span> <span class="pre">ls)</span></code> returns a data frame from data a and column names <code class="docutils literal notranslate"><span class="pre">ls</span></code>. For example: example{df:=jdframe(nrand(7,3),[a,<code class="docutils literal notranslate"><span class="pre">b</span></code>,jsym <code class="docutils literal notranslate"><span class="pre">c</span></code>])} example{<code class="docutils literal notranslate"><span class="pre">df</span></code>.<code class="docutils literal notranslate"><span class="pre">b</span></code>}</p>
-</dd>
-</dl>
-<dl class="simple" id="index-2">
-<dt><span class="spadfun">jdframe</span>: <a class="reference internal" href="JLFloat64Matrix.html#l4a4c466c6f617436344d6174726978"><span class="std std-ref">JLFloat64Matrix</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jdframe(array)</span></code> returns an automatically created data frame.</p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c41626f7574">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c41626f7574">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c4170706c79">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c4170706c79">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
@@ -115,86 +87,57 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c446174614672616d65-6a6c4465736372696265"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">jlDescribe</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDescribe(df)</span></code> returns basic statistics about <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c446973706c6179">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c446973706c6179">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c44756d70">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c44756d70">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c44756d70"><span class="std std-ref">jlDump</span></a>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c4964">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c4964">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c4f626a656374">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c4f626a656374">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4f626a656374"><span class="std std-ref">jlObject</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c526566">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c526566">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c526566"><span class="std std-ref">jlRef</span></a>: % -&gt; <a class="reference internal" href="SExpression.html#l5345787072657373696f6e"><span class="std std-ref">SExpression</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c726566">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c726566">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c726566"><span class="std std-ref">jlref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6a6c54797065">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6a6c54797065">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6c61746578">
+<span id="l4a4c4f626a426f6f6c-6a74727565"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">jtrue</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jtrue()</span></code> returns the Julia boolean <code class="docutils literal notranslate"><span class="pre">true</span></code> value.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a426f6f6c-6c61746578">
 <dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6c6573733f">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-6c6573733f"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<span id="l4a4c446174614672616d65-6d6174726978"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">matrix</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">matrix(df)</span></code> returns a copy of the internal DataFrame matrix.</p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-6d6f72653f">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-6d6f72653f"><span class="std std-ref">more?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-6d757461626c653f">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6d757461626c653f">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d757461626c653f"><span class="std std-ref">mutable?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-6e6f7468696e673f">
+<dl class="simple" id="l4a4c4f626a426f6f6c-6e6f7468696e673f">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4a4c446174614672616d65-71656c74">
-<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-71656c74"><span class="std std-ref">qelt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-71656c74"><span class="std std-ref">qelt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-73616d706c65">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-73697a653f">
-<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-73697a653f"><span class="std std-ref">size?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-</dl>
-<dl class="simple" id="l4a4c446174614672616d65-737472696e67">
+<dl class="simple" id="l4a4c4f626a426f6f6c-737472696e67">
 <dt><a class="reference internal" href="JLType.html#l4a4c54797065-737472696e67"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 <p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 <p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
-<p><a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a></p>
-<p><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 <p><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 <p><a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
 <p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
@@ -240,15 +183,15 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="JLF32SquareMatrix.html" title="JLF32SquareMatrix n"
+          <a href="JLObjComplexF32.html" title="JLObjComplexF32"
              >next</a> |</li>
         <li class="right" >
-          <a href="JLComplexFloat.html" title="JLComplexFloat"
+          <a href="JLObjBigInt.html" title="JLObjBigInt"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">JLDataFrame</a></li> 
+        <li class="nav-item nav-item-this"><a href="">JLObjBool</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

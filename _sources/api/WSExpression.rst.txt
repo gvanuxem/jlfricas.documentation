@@ -3182,7 +3182,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; normal
 
 :spadfun:`normal`\: % -> % 
-  \ ``normal(expr)``\  converts \ ``expr``\  to a normal expression from different expression types. Can be applied to a power serie for example. For example. \example{x:=jWSExpr x} \example{s:=series(exp(x),jWSExpr "\{x,0,10\}")} \example{normal(s)::EXPR INT}
+  \ ``normal(expr)``\  converts \ ``expr``\  to a normal expression from different expression types. Can be applied to a power serie for example. For example: \example{x:=jWSExpr x} \example{s:=series(exp(x),jWSExpr "\{x,0,10\}")} \example{normal(s)::EXPR INT}
 
 
 .. index::
@@ -4290,7 +4290,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; series
 
 :spadfun:`series`\: (%, %) -> % 
-  \ ``series(expr, opt)``\  returns a serie from \ ``expr``\ . \example{x:=jWSExpr(x);a:=jWSExpr(a);} \example{opt:=jWSList [x,\ ``pi``\ ()\$WSEXPR/4,7]} \example{series(sin(a*x),opt)} \example{series(cos(x),"\{x, 0, 12\}")}
+  \ ``series(expr, opt)``\  returns a serie from \ ``expr``\ . \example{x:=jWSExpr(x);a:=jWSExpr(a);} \example{opt:=jWSList [x,\ ``pi``\ ()\$WSEXPR/4,7]} \example{series(sin(a*x),opt)} \example{series(cos(x),"\{x, 0, 12\}")} \example{series(inverseErfc(x),"\{x,0,3\}")}
 
 .. _l575345787072657373696f6e-736574656c7421:
 
