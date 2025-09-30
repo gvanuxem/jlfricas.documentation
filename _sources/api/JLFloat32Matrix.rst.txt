@@ -5,7 +5,7 @@
 JLFloat32Matrix
 ===============
 
-:viewcode:`jarray32.spad line 214 <jarray32.spad#L214>` :editcode:`[edit on github] <jarray32.spad#L214>`
+:viewcode:`jarray32.spad line 223 <jarray32.spad#L223>` :editcode:`[edit on github] <jarray32.spad#L223>`
 
 
 This domain provides a fast \ ``JLFloat32``\  matrix type with no bound checking on elt\ ``'s``\ . Minimum index is 1.
@@ -275,6 +275,14 @@ This domain provides a fast \ ``JLFloat32``\  matrix type with no bound checking
 \ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (\ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ 
 
+.. _l4a4c466c6f617433324d6174726978-65787072616e64:
+
+.. index::
+   pair: JLFloat32Matrix; exprand
+
+:spadfun:`exprand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  \ ``exprand(m,n)``\  return a Julia matrix of size (\ ``m``\ ,\ ``n``\ ) with random elements from the exponential distribution with scale 1.
+
 .. _l4a4c466c6f617433324d6174726978-657871756f:
 
 \ :ref:`exquo <l4d61747269784f7065726174696f6e7343617465676f7279-657871756f>`\ \: (%, \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> Union(%, failed) 
@@ -318,7 +326,7 @@ This domain provides a fast \ ``JLFloat32``\  matrix type with no bound checking
 .. index::
    pair: JLFloat32Matrix; identity
 
-:spadfun:`identity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+:spadfun:`identity`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
   \ ``identity(n)``\  returns a \ ``n``\  by \ ``n``\  identity matrix.\ ``S``\ 
 
 .. _l4a4c466c6f617433324d6174726978-696e7665727365:
@@ -521,8 +529,8 @@ This domain provides a fast \ ``JLFloat32``\  matrix type with no bound checking
 .. index::
    pair: JLFloat32Matrix; nrand
 
-:spadfun:`nrand`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``nrand(m,n)``\  returns a normally distributed Julia matrix of size (\ ``m``\ ,\ ``n``\ ) with \ ``mean=0``\  and standard \ ``deviation=1``\ .
+:spadfun:`nrand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  \ ``nrand(m,n)``\  returns a Julia matrix of size (\ ``m``\ ,\ ``n``\ ) with random element from the normal distribution with \ ``mean=0``\  and standard \ ``deviation=1``\ .
 
 .. _l4a4c466c6f617433324d6174726978-6e726f7773:
 
@@ -762,16 +770,16 @@ This domain provides a fast \ ``JLFloat32``\  matrix type with no bound checking
 .. index::
    pair: JLFloat32Matrix; urand01
 
-:spadfun:`urand01`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``urand01(m,n)``\  returns a uniformly (0\$NNI..1) distributed Julia matrix of size (\ ``m``\ ,\ ``n``\ ).
+:spadfun:`urand01`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  \ ``urand01(m,n)``\  returns a uniformly (0..1) distributed Julia matrix of size (\ ``m``\ ,\ ``n``\ ).
 
 .. _l4a4c466c6f617433324d6174726978-7572616e64:
 
 .. index::
    pair: JLFloat32Matrix; urand
 
-:spadfun:`urand`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
-  \ ``urand(m,n,x)``\  returns a uniformly (0\$NNI..\ ``x``\ ) distributed Julia matrix of size (\ ``m``\ ,\ ``n``\ ).
+:spadfun:`urand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
+  \ ``urand(m,n,x)``\  returns a uniformly (0..\ ``x``\ ) distributed Julia matrix of size (\ ``m``\ ,\ ``n``\ ). Use the underying Common Lisp random number generator so jlSeed! will not affect it.
 
 .. _l4a4c466c6f617433324d6174726978-76657274436f6e636174:
 

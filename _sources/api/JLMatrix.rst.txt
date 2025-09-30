@@ -5,7 +5,7 @@
 JLMatrix R
 ==========
 
-:viewcode:`jobject.spad line 1808 <jobject.spad#L1808>` :editcode:`[edit on github] <jobject.spad#L1808>`
+:viewcode:`jobject.spad line 1812 <jobject.spad#L1812>` :editcode:`[edit on github] <jobject.spad#L1812>`
 
 * R: \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
 
@@ -323,6 +323,14 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 \ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (R -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  R
+
+.. _l4a4c4d6174726978-65787072616e64:
+
+.. index::
+   pair: JLMatrix; exprand
+
+:spadfun:`exprand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLFloat <l4a4c466c6f6174>`\  if R has \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\  and R has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\  and R hasn't \ :ref:`NMType <l4e4d54797065>`\ 
+  \ ``exprand(m,n)``\  returns a JLMatrix of size (\ ``m``\ ,\ ``n``\ ) with exponentially distributed random numbers. \example{mat := exprand(4,4)\$JLMatrix(JLFloat)} \example{svd := jlApply("svd", mat)}
 
 .. _l4a4c4d6174726978-657871756f:
 

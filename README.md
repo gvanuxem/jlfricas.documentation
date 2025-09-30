@@ -25,8 +25,10 @@ To build FriCAS with Julia support, the <code>julia</code> executable needs to b
  - StyledStrings
 
  And optionnally:
+  - MathLink (use the option `--enable-mathlink` at configure time)
+  - PythonCall (and CondaPkg if you want to install some Python® packages)
   - Plots
-  - UnicodePlots (will be used by default)
+  - UnicodePlots (will be used by default if installed)
   - Latexify
   - LaTeXStrings
   - DataFrames and Statistics
@@ -42,7 +44,7 @@ Take into account that this is absolutely not the official documentation even th
 
 If you want to build and install the HTML documentation,
 you need to install [Sphinx](https://www.sphinx-doc.org/en/master/). On a Debian like system, to add it, issue in a
-terminal <code>sudo apt install python3 python3-sphinx</code>.
+terminal <code>sudo apt install python3-sphinx</code>.
 After building FriCAS, and before the installation, issue in your terminal
 <code>make htmldoc</code>.
 
@@ -77,6 +79,8 @@ Current development goals:
 -   make it easier for external programs to interface with FriCAS
 -   support for using external mathematical routines from Spad
 
-## Caveats
+## Caveat: SBCL
 
-Julia support for FriCAS built with SBCL is/was erratic, depending on the Julia version used and the loaded libraries used by Julia. The 1.10.0 version seems to have solved some issues related to memory management interactions with SBCL, but with Julia 1.10.1 and 1.10.2 some problems occur again. Note that with Julia 1.11.* and later, FriCAS seems to work fine again. More work needs to be done in this regard. So, if you use SBCL to build FriCAS, imperatively use a version of Julia that is known to be compatible.
+Julia support for FriCAS built with SBCL is/was erratic, depending on the Julia version used and the loaded libraries used by Julia. The 1.10.0 version seems to have solved some issues related to memory management interactions with SBCL, but with Julia 1.10.1 and 1.10.2 some problems occur again. Note that with Julia 1.11.* and later, FriCAS seems to work fine again. More work needs to be done in this regard. So, if you use SBCL to build FriCAS, imperatively use a version of Julia that is known to be compatible. Additionnaly, if you use WS domains/packages through MathLink,
+SBCL is known to crash if you start HyperDoc after loading WS domains/package. If you need to use
+HyperDoc, start it first whith the system command `)hd`.

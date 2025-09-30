@@ -231,6 +231,14 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
 \ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ 
 
+.. _l4a4c466c6f61743634566563746f72-65787072616e64:
+
+.. index::
+   pair: JLFloat64Vector; exprand
+
+:spadfun:`exprand`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  \ ``exprand(n)``\  returns a Julia vector of size \ ``n``\  with random elements from the exponential distribution with scale 1.
+
 .. _l4a4c466c6f61743634566563746f72-66696c6c21:
 
 \ :ref:`fill! <l496e6465786564416767726567617465-66696c6c21>`\ \: (%, \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> % 
@@ -446,8 +454,8 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
 .. index::
    pair: JLFloat64Vector; nrand
 
-:spadfun:`nrand`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``nrand(n)``\  returns a normally distributed Julia vector of size \ ``n``\  with \ ``mean=0``\  and standard \ ``deviation=1``\ .
+:spadfun:`nrand`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  \ ``nrand(n)``\  returns a Julia vector of size \ ``n``\  with random elements from the normal distribution with \ ``mean=0``\  and standard \ ``deviation=1``\ .
 
 .. _l4a4c466c6f61743634566563746f72-6f7574657250726f64756374:
 
@@ -603,16 +611,16 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
 .. index::
    pair: JLFloat64Vector; urand01
 
-:spadfun:`urand01`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``urand01(n)``\  returns a uniform(0\$NNI..1) Julia vector of size \ ``n``\ .
+:spadfun:`urand01`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  \ ``urand01(n)``\  returns a uniform(0..1) Julia vector of size \ ``n``\ .
 
 .. _l4a4c466c6f61743634566563746f72-7572616e64:
 
 .. index::
    pair: JLFloat64Vector; urand
 
-:spadfun:`urand`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> % 
-  \ ``urand(n, x)``\  returns a uniform(0\$NNI..\ ``x``\ ) Julia vector of size \ ``n``\ .
+:spadfun:`urand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> % 
+  \ ``urand(n, x)``\  returns a uniform(0..\ ``x``\ ) Julia vector of size \ ``n``\ . Use the underying Common Lisp random number generator so jlSeed! will not affect it.
 
 .. _l4a4c466c6f61743634566563746f72-766563746f72:
 
