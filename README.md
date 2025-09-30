@@ -11,7 +11,7 @@
 [FriCAS](https://fricas.github.io) is a general purpose computer algebra
 system (CAS).
 
-In this experimantal work-in-progress repository, a C wrapper using libjulia is embedded in [FriCAS](https://fricas.github.io/) to support some [Julia](https://julialang.org) specialized operations (for example, hardware architecture optimized BLAS and LAPACK libraries). The build process supports Clozure CL and SBCL, but only Julia 1.10.0 and Julia 1.11.* are supported with SBCL, see [Caveats](#caveats). It must not be considered production-ready. Support of general Julia object is now also supported.
+In this experimantal work-in-progress repository, a C wrapper using libjulia is embedded in [FriCAS](https://fricas.github.io/) to support some [Julia](https://julialang.org) specialized operations (for example, hardware architecture optimized BLAS and LAPACK libraries). The build process supports Clozure CL and SBCL, but only Julia 1.10.0 and Julia 1.11.* are supported with SBCL, see [Caveats](#caveat-sbcl). It must not be considered production-ready. Support of general Julia object is now also supported.
 
 ## Building and Installing
 
