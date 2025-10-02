@@ -13,7 +13,7 @@ binary distribution.
 Quick installation
 ------------------
 
-FriCAS now tries to support standard GNU build/installation
+jlFriCAS now tries to support standard GNU build/installation
 conventions.  So if you have sources and all prerequisites, then
 ::
 
@@ -79,6 +79,12 @@ newest ECL versions are progressively slower.
 Some computation work much faster on 64-bit machines, especially
 when using SBCL.
 
+Julia
+^^^^^
+Julia is a high-level, high-performance, dynamic language for technical computing.
+The main homepage for Julia can be found at https://julialang.org. You can download Julia
+for your system at https://julialang.org/install/.
+
 
 jFriCAS (optional)
 ^^^^^^^^^^^^^^^^^^
@@ -96,19 +102,23 @@ Hunchentoot (optional)
 
 The jFriCAS_ interface needs a web server built into FRICASsys binary.
 This can be done by using Lisp (currently only SBCL_) containing
-the Hunchentoot_ web server.  Do at configure time.
+the Hunchentoot_ web server. If SBCL_ does not include the Hunchentoot_
+web server, you can install the hunchentoot packages of your distribution
+or look at https://github.com/gvanuxem/jlfricas to use quicklisp.
+On a Debian based system it can be installed with
+`sudo apt-install cl-hunchentoot` and do at configure time.
 ::
 
     ./configure --enable-julia --enable-hunchentoot
 
-FriCAS build in this way will contain Hunchentoot_ and can be used
+jlFriCAS build in this way will contain Hunchentoot_ and can be used
 by jFriCAS_.
 
 
 X libraries (optional, but needed for graphics and HyperDoc)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-On Debian (or Ubuntu) install the following packages.
+On a Debian based system install the following packages.
 ::
 
    sudo apt install libx11-dev libxt-dev libice-dev \
@@ -177,9 +187,8 @@ SphinxDoc (optional)
 The documentation is built via Sphinx_.
 ::
 
-   sudo apt install python3 python3-pip
-   pip3 install -U Sphinx
-   ./configure --enable-julia && make htmldoc
+   sudo apt install python3 python3-sphinx
+   ./configure --enable-julia && make && make htmldoc && sudo make install
 
 
 Aldor (optional)

@@ -57,14 +57,14 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSDateString
 
 :spadfun:`jlWSDateString`\: () -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  dateString() returns the WSExpression string of the local date and time. For example: \example{toString dateTime()}
+  \ ``jlWSDateString()``\  returns the WSExpression string of the local date and time. For example: \example{toString dateTime()}
 
 
 .. index::
    pair: WSUtilityFunctions; jlWSDateString
 
 :spadfun:`jlWSDateString`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlWSDateString(expr, form)``\  returns WSExpression string of the date from a \ ``WS``\  date object with \ ``WS``\  format form. Fo example: \example{jlWSDateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))}
+  \ ``jlWSDateString(expr, form)``\  returns WSExpression string of the date from a \ ``WS``\  date object with \ ``WS``\  format form. For example: \example{jlWSDateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))}
 
 
 .. index::
@@ -126,21 +126,21 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSRange
 
 :spadfun:`jlWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``jlWSRange(n,m)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\ .
+  \ ``jlWSRange(n,m)``\  returns a WSList that ranges from \ ``n``\  to \ ``m``\ .
 
 
 .. index::
    pair: WSUtilityFunctions; jlWSRange
 
 :spadfun:`jlWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``jlWSRange(n,m,d)``\  returns a \ ``WS``\  agg that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
+  \ ``jlWSRange(n,m,d)``\  returns a WSList that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
 
 
 .. index::
    pair: WSUtilityFunctions; jlWSRange
 
 :spadfun:`jlWSRange`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``jlWSRange(n)``\  returns a \ ``WS``\  agg that ranges from 1 to \ ``n``\ . For example: \example{jlWSRange(10)@WSLIST(WSINT)}
+  \ ``jlWSRange(n)``\  returns a WSList that ranges from 1 to \ ``n``\ . For example: \example{jlWSRange(10)@WSLIST(WSINT)}
 
 .. _l57535574696c69747946756e6374696f6e73-6a5753446174654f626a656374:
 
@@ -223,6 +223,6 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; zeroMatrix
 
 :spadfun:`zeroMatrix`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``zeroMatrix(m, n)``\  returns an \ ``m``\ -by-\ ``n``\  zero matrix.
+  \ ``zeroMatrix(m, n)``\  returns a \ ``m``\ -by-\ ``n``\  zero matrix.
 
 
