@@ -5,7 +5,13 @@
 [![FriCAS CI on Windows (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/windowsJulia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/windowsJulia_sbcl.yml)\
 [![FriCAS CI on macOS (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/macOS_Julia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/macOS_Julia_sbcl.yml)
 
-![Capture](https://github.com/user-attachments/assets/86832053-744d-452a-a032-60c12ce8b3b4)
+![Capture1](https://github.com/user-attachments/assets/86832053-744d-452a-a032-60c12ce8b3b4)
+
+Graphics:
+![Capture2](https://github.com/user-attachments/assets/b6bd0c9a-feab-438b-9e15-08ba25d7bde3)
+
+
+
 
 
 [FriCAS](https://fricas.github.io) is a general purpose computer algebra
@@ -18,7 +24,7 @@ In this experimantal work-in-progress repository, a C wrapper using libjulia is 
 For general installation instructions see INSTALL. For general documentation
 consult <https://fricas.github.io>.
 
-To build FriCAS with Julia support, the <code>julia</code> executable needs to be available in your PATH, and a simple <code>./configure --enable-julia</code> should do the trick. We require Julia 1.7 or higher. Please see https://julialang.org/downloads/ for instructions on how to obtain Julia for your system. The required Julia packages are:
+To build FriCAS with Julia support, the <code>julia</code> executable needs to be available in your PATH, and a simple <code>./configure --enable-julia && make && sudo make install</code> should do the trick. We require Julia 1.7 or higher. Please see https://julialang.org/downloads/ for instructions on how to obtain Julia for your system. The required Julia packages are:
  - Suppressor
  - Nemo
  - SpecialFunctions
@@ -26,7 +32,7 @@ To build FriCAS with Julia support, the <code>julia</code> executable needs to b
 
  And optionnally:
   - MathLink (use the option `--enable-mathlink` at configure time)
-  - PythonCall (and CondaPkg if you want to install some Python® packages)
+  - PythonCall (and CondaPkg if you want to install some Python® packages, use Julia for this)
   - Plots
   - UnicodePlots (will be used by default if installed)
   - Latexify

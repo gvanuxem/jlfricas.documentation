@@ -82,41 +82,6 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-
-.. index::
-   pair: JLObjPy; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, mod, pyobj)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. \example{jlApply("array", "numpy", jpyobj("[1,2,3]"))} creates a numpy array from the Python list [1,2,3]. jlApply("sqrt", "math", 2) computes the square root of 2.
-
-
-.. index::
-   pair: JLObjPy; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, mod, pyobj1, pyobj2)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\  and \ ``pyobj2``\ 
-
-
-.. index::
-   pair: JLObjPy; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, mod, pyobj1, pyobj2, pyobj3)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\  and \ ``pyobj3``\ .
-
-
-.. index::
-   pair: JLObjPy; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
-  \ ``jlApply(func, mod, pyobj1, pyobj2, pyobj3, pyobj4)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\ , \ ``pyobj3``\  and \ ``pyobj4``\ .
-
-
-.. index::
-   pair: JLObjPy; jlApply
-
-:spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
-  \ ``jlApply(func, mod, pyobj1, pyobj2, pyobj3, pyobj4, pyobj5)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\ , \ ``pyobj3``\ , \ ``pyobj4``\  and \ ``pyobj5``\ .
-
 .. _l4a4c4f626a5079-6a6c446973706c6179:
 
 \ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -136,6 +101,42 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 
 \ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a5079-6a6c50794170706c79:
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ ``jlPyApply(mod, func, pyobj)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. \example{jlPyApply("numpy", "array", jpyobj("[1,2,3]"))} creates a numpy array from the Python list [1,2,3]. jlApply("math", "sqrt", 2) computes the square root of 2.
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ ``jlPyApply(mod, func, pyobj1, pyobj2)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\  and \ ``pyobj2``\ 
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ ``jlPyApply(mod, func, pyobj1, pyobj2, pyobj3)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\  and \ ``pyobj3``\ .
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  \ ``jlPyApply(mod, func, pyobj1, pyobj2, pyobj3, pyobj4)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\ , \ ``pyobj3``\  and \ ``pyobj4``\ .
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  \ ``jlPyApply(mod, func, pyobj1, pyobj2, pyobj3, pyobj4, pyobj5)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\ , \ ``pyobj3``\ , \ ``pyobj4``\  and \ ``pyobj5``\ .
 
 .. _l4a4c4f626a5079-6a6c5079436f6e76657274:
 
@@ -159,7 +160,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jlPyImport
 
 :spadfun:`jlPyImport`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jlPyImport(mod)``\  imports the Python module \ ``mod``\  in the Julia Python environment. No use at this time.
+  \ ``jlPyImport(mod)``\  imports the Python module \ ``mod``\  in the Julia Python environment.
 
 .. _l4a4c4f626a5079-6a6c526566:
 
