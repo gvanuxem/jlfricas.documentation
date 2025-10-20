@@ -52,35 +52,35 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(\ ``JLObjFloat64``\ ): \example{M:=nrand(4,4);} \example{jlApply("svd", M::JLMatrix(JLObjFloat64)).S} should be "equivalent" to svdvals(\ ``M``\ ).
+  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter and returns the result as a FriCAS JLObjectType. For example, using JLMatrix(\ ``JLObjFloat64``\ ): \example{M:=nrand(4,4);} \example{jlApply("svd", M::JLMatrix(JLObjFloat64)).S} should be "equivalent" to svdvals(\ ``M``\ ).
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JLVector(JLFloat)} \example{jlApply("map", "cos", coerce v)}
+  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JLObjectType. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JLVector(JLFloat)} \example{jlApply("map", "cos", coerce v)}
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\  as parameters and returns the result as a FriCAS JLObject.
+  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\  as parameters and returns the result as a FriCAS JLObjectType.
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3, obj4)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\  and \ ``obj4``\  as parameters and returns the result as a FriCAS JLObject.
+  \ ``jlApply(func, obj1, obj2, obj3, obj4)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\  and \ ``obj4``\  as parameters and returns the result as a FriCAS JLObjectType.
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
-  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\  and \ ``obj5``\  as parameters and returns the result as a FriCAS JLObject.
+  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\  and \ ``obj5``\  as parameters and returns the result as a FriCAS JLObjectType.
 
 .. _l4a4c4f626a65637454797065-6a6c446973706c6179:
 
@@ -104,7 +104,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlId
 
 :spadfun:`jlId`\: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
-  \ ``jlId(obj)``\  returns the Julia indexed dictionary index related to the object \ ``obj``\ .
+  \ ``jlId(obj)``\  returns the Julia indexed dictionary index referencing the object \ ``obj``\ .
 
 .. _l4a4c4f626a65637454797065-6a6c4f626a656374:
 
@@ -120,7 +120,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlRef
 
 :spadfun:`jlRef`\: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
-  \ ``jlRef(obj)``\  returns the pretty printed internal Lisp representation of the Julia object \ ``obj``\ .
+  \ ``jlRef(obj)``\  returns the internal Lisp representation of the Julia object \ ``obj``\ .
 
 .. _l4a4c4f626a65637454797065-6a6c726566:
 

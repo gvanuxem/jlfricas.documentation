@@ -5,7 +5,7 @@
 JLObjDynamicLinker
 ==================
 
-:viewcode:`jutils.spad line 334 <jutils.spad#L334>` :editcode:`[edit on github] <jutils.spad#L334>`
+:viewcode:`jutils.spad line 333 <jutils.spad#L333>` :editcode:`[edit on github] <jutils.spad#L333>`
 
 
 Generic Julia objects used for dynamically linking shared libraries.
@@ -101,21 +101,21 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlCApply(func, ctype, x, xctype)``\  applies the function pointer \ ``func``\  to \ ``x``\  given its Julia \ ``C``\  type (xctype) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types). For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:= jlDlSym(libm,jsym(sqrt)} \example{jlDlCApply(squareRoot, "Cdouble" jobject("2."), "Cdouble")} \example{sinus:=jlDlSym(libm,jsym(sin))} \example{jlDlCApply(sinus,"Float64"), jobject("2."), "Float64")}
+  \ ``jlDlCApply(func, ctype, x, xctype)``\  applies the function pointer \ ``func``\  to \ ``x``\  given its Julia \ ``C``\  type (xctype) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types). For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:= jlDlSym(libm,jsym(sqrt))} \example{jlDlCApply(squareRoot, "Cdouble", jobject("2."), "Cdouble")} \example{sinus:=jlDlSym(libm,jsym(sin))} \example{jlDlCApply(sinus,"Float64", jobject("2."), "Float64")}
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlCApply(func, ctype, x, xctype, y, xctype)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\  given their Julia \ ``C``\  type (\ ``xctype``\  and \ ``xctype``\ ) or their supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types).
+  \ ``jlDlCApply(func, ctype, x, xctype, y, yctype)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\  given their Julia \ ``C``\  type (\ ``xctype``\  and yctype) or their supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types).
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlCApply(func, ctype, x, xctype, y, ctype, z, ztype)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\  given its Julia \ ``C``\  type (\ ``xctype``\ ) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types).
+  \ ``jlDlCApply(func, ctype, x, xctype, y, yctype, z, zctype)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\  given its Julia \ ``C``\  type (\ ``xctype``\ , \ ``yctype``\  and zctype) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ ``C``\  type \ ``ctype``\  (or any Julia supported types).
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c436c6f7365:
 

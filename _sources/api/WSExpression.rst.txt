@@ -342,7 +342,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; assuming
 
 :spadfun:`assuming`\: (%, %) -> % 
-  \ ``assuming(assumption(s), expr)``\  uses the assumptions for use of expr with refine, simplify and integrate for example. The assumption(\ ``s``\ ) are not always supported by MathLink. Use assumptions directly whith 'refine' etc. directly
+  \ ``assuming(assumption(s), expr)``\  uses the assumptions for use of expr with refine, simplify and integrate for example. The assumption(\ ``s``\ ) are not always supported by MathLink. Use assumptions whith 'refine' etc. directly instead.
 
 .. _l575345787072657373696f6e-6174616e:
 
@@ -1486,7 +1486,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; extendedSimplify
 
 :spadfun:`extendedSimplify`\: % -> % 
-  \ ``extendedSimplify(expr)``\  is the extended version of simplify. This is the full version of simplify. \example{x:= jWSExpr x} \example{expr := Gamma(x)/Gamma(x-1)) Compare with simplify(expr). \example{extendedSimplify(expr)}
+  \ ``extendedSimplify(expr)``\  is the extended version of simplify. This is the full version of simplify. \example{x:= jWSExpr x} \example{expr := Gamma(x)/Gamma(x-1)} Compare with simplify(\ ``expr``\ ). \example{extendedSimplify(expr)}
 
 
 .. index::
@@ -1549,6 +1549,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
   \ ``factorList(expr)``\  factor the expression or polynomial \ ``expr``\ , but returns result as a list of pair (factor, exponent).
 
 .. _l575345787072657373696f6e-666163746f72506f6c796e6f6d69616c:
+
+.. index::
+   pair: WSExpression; factorPolynomial
+
+:spadfun:`factorPolynomial`\: % -> % 
+  \ ``factorPolynomial(p)``\  factorizes the polynomial \ ``p``\ . For example: \example{x := jWSExpr x} \example{p:=expand(chebyshevT(7,x)* chebyshevU(9,x))} \example{factorPolynomial p}
+
 
 \ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
@@ -3419,7 +3426,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; padeApproximant
 
 :spadfun:`padeApproximant`\: (%, %) -> % 
-  \ ``padeApproximant(expr, {x,x0, {n,m}})``\  returns the Padé approximant at \ ``x0``\ .
+  \ ``padeApproximant(expr, "{x,x0, {n,m}"})``\  returns the Padé approximant at \ ``x0``\ .
 
 .. _l575345787072657373696f6e-70617261626f6c696343796c696e64657244:
 
@@ -3509,6 +3516,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 :spadfun:`polynomial?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``polynomial?(p,vlist)``\  check whether or not \ ``p``\  is a polynomial in the list of variables \ ``vlist``\ .
 
+.. _l575345787072657373696f6e-706f6c796e6f6d69616c45787072657373696f6e3f:
+
+.. index::
+   pair: WSExpression; polynomialExpression?
+
+:spadfun:`polynomialExpression?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``polynomialExpression?(p,x)``\  check whether or not \ ``p``\  is a polynomial expression in \ ``x``\ .
+
+
+.. index::
+   pair: WSExpression; polynomialExpression?
+
+:spadfun:`polynomialExpression?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``polynomialExpression?(p,vlist)``\  check whether or not \ ``p``\  is a polynomial expression in the list of variables \ ``vlist``\ .
+
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c457874656e646564474344:
 
 .. index::
@@ -3516,14 +3538,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 :spadfun:`polynomialExtendedGCD`\: (%, %, %) -> % 
   \ ``polynomialExtendedGCD(p1, p2, x)``\  returns the greatest common divisor of \ ``p1``\  and \ ``p2``\  considered as univariate polynomial in \ ``x``\ 
-
-.. _l575345787072657373696f6e-706f6c796e6f6d69616c466163746f72:
-
-.. index::
-   pair: WSExpression; polynomialFactor
-
-:spadfun:`polynomialFactor`\: % -> % 
-  \ ``polynomialFactor(p)``\  factorizes the polynomial \ ``p``\ . For example: \example{x := jWSExpr x} \example{p:=expand(chebyshevT(7,x)* chebyshevU(9,x))} \example{polynomialFactor p}
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c474344:
 
@@ -3836,6 +3850,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 :spadfun:`rationalApproximation`\: (%, %) -> % 
   \ ``rationalApproximation(expr, dx)``\  try to find a rational approximation of the expression \ ``expr``\  within tolerance \ ``dx``\ .
+
+.. _l575345787072657373696f6e-726174696f6e616c45787072657373696f6e3f:
+
+.. index::
+   pair: WSExpression; rationalExpression?
+
+:spadfun:`rationalExpression?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``rationalExpression?(p,x)``\  check whether or not \ ``p``\  is a rational expression in \ ``x``\ .
+
+
+.. index::
+   pair: WSExpression; rationalExpression?
+
+:spadfun:`rationalExpression?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``rationalExpression?(p,vlist)``\  check whether or not \ ``p``\  is a rational expression in the list of variables \ ``vlist``\ .
 
 .. _l575345787072657373696f6e-7265616c3f:
 

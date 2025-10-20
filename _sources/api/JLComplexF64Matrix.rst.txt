@@ -5,7 +5,7 @@
 JLComplexF64Matrix
 ==================
 
-:viewcode:`jarray64.spad line 726 <jarray64.spad#L726>` :editcode:`[edit on github] <jarray64.spad#L726>`
+:viewcode:`jarray64.spad line 750 <jarray64.spad#L750>` :editcode:`[edit on github] <jarray64.spad#L750>`
 
 
 This domain provides a fast \ ``JLComplexF64``\  matrix type with no bound checking on elt\ ``'s``\ . Minimum index is 1.
@@ -248,6 +248,13 @@ This domain provides a fast \ ``JLComplexF64``\  matrix type with no bound check
 
 \ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
   from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ )
+
+
+.. index::
+   pair: JLComplexF64Matrix; elt
+
+:spadfun:`elt`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\  
+  \ ``elt(m, i)``\  returns the \ ``i``\ -th elements of \ ``m``\ . Column major order.
 
 
 \ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
@@ -607,6 +614,13 @@ This domain provides a fast \ ``JLComplexF64``\  matrix type with no bound check
 \ :ref:`qelt <l54776f44696d656e73696f6e616c417272617943617465676f7279-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\  
   from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ )
 
+
+.. index::
+   pair: JLComplexF64Matrix; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\  
+  \ ``qelt(m, i)``\  returns the \ ``i``\ -th elements of \ ``m``\ . Column major order.
+
 .. _l4a4c436f6d706c65784636344d6174726978-716e6577:
 
 \ :ref:`qnew <l54776f44696d656e73696f6e616c417272617943617465676f7279-716e6577>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -616,6 +630,13 @@ This domain provides a fast \ ``JLComplexF64``\  matrix type with no bound check
 
 \ :ref:`qsetelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ ) -> \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\  
   from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ )
+
+
+.. index::
+   pair: JLComplexF64Matrix; qsetelt!
+
+:spadfun:`qsetelt!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ ) -> \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\  
+  \ ``qsetelt!(m,)``\  sets the \ ``i``\ -th elements of \ ``m``\  to \ ``r``\ . Column major order.
 
 .. _l4a4c436f6d706c65784636344d6174726978-72616e6b:
 
@@ -696,6 +717,13 @@ This domain provides a fast \ ``JLComplexF64``\  matrix type with no bound check
 
 \ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (\ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ )
+
+
+.. index::
+   pair: JLComplexF64Matrix; setelt!
+
+:spadfun:`setelt!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\ ) -> \ :ref:`JLComplexF64 <l4a4c436f6d706c6578463634>`\  
+  \ ``setelt!(m, i, r)``\  sets the \ ``i``\ -th elements of \ ``m``\  to \ ``r``\ . Column major order.
 
 
 \ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
