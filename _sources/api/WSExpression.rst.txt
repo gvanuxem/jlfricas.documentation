@@ -8,7 +8,7 @@ WSExpression
 :viewcode:`jwsexpr.spad line 1 <jwsexpr.spad#L1>` :editcode:`[edit on github] <jwsexpr.spad#L1>`
 
 
-Julia Wolfram Symbolic expressions using the MathLink Julia package.
+Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports the Eltable category (interface) so, for example using Fibonacci polynomials fibonacci(12,jWSExpr \ ``x``\ ) \ ``=>``\  3 5 7 9 11 6 \ ``x``\  + 35 \ ``x``\  + 56 \ ``x``\  + 36 \ ``x``\  + 10 \ ``x``\  + \ ``x``\  \%.5 \ ``=>``\  10*x^9
 
 
 .. _l575345787072657373696f6e-30:
@@ -574,6 +574,20 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 \ :ref:`coerce <l5753416767726567617465-636f65726365>`\ \: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   from \ :ref:`WSAggregate <l5753416767726567617465>`\  %
+
+
+.. index::
+   pair: WSExpression; coerce
+
+:spadfun:`coerce`\: % -> \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``coerce(expr)``\  coerces \ ``expr``\  to a WSInteger if possible.
+
+
+.. index::
+   pair: WSExpression; coerce
+
+:spadfun:`coerce`\: % -> \ :ref:`WSRational <l5753526174696f6e616c>`\  
+  \ ``coerce(expr)``\  coerces \ ``expr``\  to a WSRational if possible.
 
 
 .. index::
@@ -2252,7 +2266,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; jacobiZeta
 
 :spadfun:`jacobiZeta`\: (%, %) -> % 
-  \ ``jacobiZeta(phi,m)``\  computes the Jacobi Zeta function.
+  \ ``jacobiZeta(ϕ,m)``\  computes the Jacobi Zeta function.
 
 .. _l575345787072657373696f6e-6a6c41626f7574:
 
@@ -2347,15 +2361,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
-
-.. _l575345787072657373696f6e-6a6c4e756d65726963:
-
-\ :ref:`jlNumeric <l57534f626a656374-6a6c4e756d65726963>`\ \: % -> % 
-  from \ :ref:`WSObject <l57534f626a656374>`\ 
-
-
-\ :ref:`jlNumeric <l57534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`WSObject <l57534f626a656374>`\ 
 
 .. _l575345787072657373696f6e-6a6c4f626a656374:
 
@@ -3252,6 +3257,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
 :spadfun:`numerDenom`\: % -> \ :ref:`WSList <l57534c697374>`\  % 
   \ ``numerDenom(expr)``\  returns the numerator and denominator of \ ``expr``\ .
 
+.. _l575345787072657373696f6e-6e756d65726963:
+
+\ :ref:`numeric <l57534f626a656374-6e756d65726963>`\ \: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`numeric <l57534f626a656374-6e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
 .. _l575345787072657373696f6e-6e756d6572696344536f6c7665:
 
 .. index::
@@ -3507,14 +3521,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; polynomial?
 
 :spadfun:`polynomial?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomial?(p,x)``\  check whether or not \ ``p``\  is a polynomial in \ ``x``\ .
+  \ ``polynomial?(p,x)``\  checks whether or not \ ``p``\  is a polynomial in \ ``x``\ .
 
 
 .. index::
    pair: WSExpression; polynomial?
 
 :spadfun:`polynomial?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomial?(p,vlist)``\  check whether or not \ ``p``\  is a polynomial in the list of variables \ ``vlist``\ .
+  \ ``polynomial?(p,vlist)``\  checks whether or not \ ``p``\  is a polynomial in the list of variables \ ``vlist``\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c45787072657373696f6e3f:
 
@@ -3522,14 +3536,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; polynomialExpression?
 
 :spadfun:`polynomialExpression?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomialExpression?(p,x)``\  check whether or not \ ``p``\  is a polynomial expression in \ ``x``\ .
+  \ ``polynomialExpression?(p,x)``\  checks whether or not \ ``p``\  is a polynomial expression in \ ``x``\ .
 
 
 .. index::
    pair: WSExpression; polynomialExpression?
 
 :spadfun:`polynomialExpression?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomialExpression?(p,vlist)``\  check whether or not \ ``p``\  is a polynomial expression in the list of variables \ ``vlist``\ .
+  \ ``polynomialExpression?(p,vlist)``\  checks whether or not \ ``p``\  is a polynomial expression in the list of variables \ ``vlist``\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c457874656e646564474344:
 
@@ -3857,14 +3871,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package.
    pair: WSExpression; rationalExpression?
 
 :spadfun:`rationalExpression?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rationalExpression?(p,x)``\  check whether or not \ ``p``\  is a rational expression in \ ``x``\ .
+  \ ``rationalExpression?(p,x)``\  checks whether or not \ ``p``\  is a rational expression in \ ``x``\ .
 
 
 .. index::
    pair: WSExpression; rationalExpression?
 
 :spadfun:`rationalExpression?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rationalExpression?(p,vlist)``\  check whether or not \ ``p``\  is a rational expression in the list of variables \ ``vlist``\ .
+  \ ``rationalExpression?(p,vlist)``\  checks whether or not \ ``p``\  is a rational expression in the list of variables \ ``vlist``\ .
 
 .. _l575345787072657373696f6e-7265616c3f:
 

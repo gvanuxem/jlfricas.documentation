@@ -5,7 +5,7 @@
 WSInteger
 =========
 
-:viewcode:`jws.spad line 205 <jws.spad#L205>` :editcode:`[edit on github] <jws.spad#L205>`
+:viewcode:`jws.spad line 206 <jws.spad#L206>` :editcode:`[edit on github] <jws.spad#L206>`
 
 
 Julia Wolfram Symbolic integers using the MathLink Julia package.
@@ -400,15 +400,6 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l5753496e7465676572-6a6c4e756d65726963:
-
-\ :ref:`jlNumeric <l57534f626a656374-6a6c4e756d65726963>`\ \: % -> % 
-  from \ :ref:`WSObject <l57534f626a656374>`\ 
-
-
-\ :ref:`jlNumeric <l57534f626a656374-6a6c4e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`WSObject <l57534f626a656374>`\ 
-
 .. _l5753496e7465676572-6a6c4f626a656374:
 
 \ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
@@ -537,6 +528,15 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 
 \ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753496e7465676572-6e756d65726963:
+
+\ :ref:`numeric <l57534f626a656374-6e756d65726963>`\ \: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`numeric <l57534f626a656374-6e756d65726963>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
 
 .. _l5753496e7465676572-6f64643f:
 
@@ -694,6 +694,22 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 
 \ :ref:`squareFreePart <l556e69717565466163746f72697a6174696f6e446f6d61696e-7371756172654672656550617274>`\ \: % -> % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
+
+.. _l5753496e7465676572-737469726c696e6731:
+
+.. index::
+   pair: WSInteger; stirling1
+
+:spadfun:`stirling1`\: (%, %) -> % 
+  \ ``stirling1(n,m)``\  returns the Stirling number of the first kind from \ ``n``\  and \ ``m``\ . For example: \example{stirling1(20, jWSInt 2)}
+
+.. _l5753496e7465676572-737469726c696e6732:
+
+.. index::
+   pair: WSInteger; stirling2
+
+:spadfun:`stirling2`\: (%, %) -> % 
+  \ ``stirling2(n,m)``\  returns the Stirling number of the second kind from \ ``n``\  and \ ``m``\ . For example: \example{stirling2(20, jWSInt 2)}
 
 .. _l5753496e7465676572-737472696e67:
 

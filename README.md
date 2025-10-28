@@ -12,7 +12,7 @@ system (CAS).
 In this experimantal work-in-progress repository, a C wrapper using libjulia is embedded in [FriCAS](https://fricas.github.io/) to support some [Julia](https://julialang.org) specialized operations (for example, hardware architecture optimized BLAS and LAPACK libraries). The build process supports Clozure CL and SBCL, but only Julia 1.10.0 and Julia 1.11.* are supported with SBCL, see [Caveats](#caveat-sbcl). It must not be considered production-ready. Support of general Julia object is now also supported. An overview of what is added to FriCAS is available
 [here](https://gvanuxem.github.io/jlfricas.documentation/search.html?q=Julia).
 
-A source of information can be found in HTML format [here](https://gvanuxem.github.io/jlfricas.documentation/).
+A general source of information can also be found in HTML format [here](https://gvanuxem.github.io/jlfricas.documentation/).
 Take into account that this is absolutely not the official documentation even though it is highly based on the official FriCAS web site which can be built from the FriCAS source code (thanks to Ralf Hemmecke and Kurt Pagani for their amazing work).
 
 ![Capture1](https://github.com/user-attachments/assets/86832053-744d-452a-a032-60c12ce8b3b4)
@@ -87,4 +87,4 @@ Current development goals:
 
 Julia support for FriCAS built with SBCL is/was erratic, depending on the Julia version used and the loaded libraries used by Julia. The 1.10.0 version seems to have solved some issues related to memory management interactions with SBCL, but with Julia 1.10.1 and 1.10.2 some problems occur again. Note that with Julia 1.11.* and later, FriCAS seems to work fine again. More work needs to be done in this regard. So, if you use SBCL to build FriCAS, imperatively use a version of Julia that is known to be compatible. Additionnaly, if you use WS domains/packages through MathLink,
 SBCL is known to crash if you start HyperDoc after loading WS domains/packages. If you need to use
-HyperDoc, start it first whith the system command `)hd`.
+HyperDoc, start it first with the system command `)hd`.

@@ -5,7 +5,7 @@
 JLObjDynamicLinker
 ==================
 
-:viewcode:`jutils.spad line 333 <jutils.spad#L333>` :editcode:`[edit on github] <jutils.spad#L333>`
+:viewcode:`jutils.spad line 337 <jutils.spad#L337>` :editcode:`[edit on github] <jutils.spad#L337>`
 
 
 Generic Julia objects used for dynamically linking shared libraries.
@@ -154,14 +154,14 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
-  \ ``jlDlOpen(lib, flags)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. \example{jlUsing "Libdl" -- for flags} \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW")} flags can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Libdl must be loaded or imported before using these flags.
+  \ ``jlDlOpen(lib, flags)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. The Julia module Libdl must be loaded/imported before using this function. \example{jlUsing "Libdl"} \ ``--``\  for flags \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW")} flags can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``jlDlOpen(lib, flags, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library can not be loaded. \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW", false)} \ ``flags``\  can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Libdl must be loaded or imported before using these \ ``flags``\ .
+  \ ``jlDlOpen(lib, flags, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library can not be loaded. The Julia module must be be loaded/imported before using this function. \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW", false)} \ ``flags``\  can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these \ ``flags``\ .
 
 
 .. index::
