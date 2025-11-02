@@ -5,7 +5,7 @@
 JLVector R
 ==========
 
-:viewcode:`jobject.spad line 1637 <jobject.spad#L1637>` :editcode:`[edit on github] <jobject.spad#L1637>`
+:viewcode:`jobject.spad line 1657 <jobject.spad#L1657>` :editcode:`[edit on github] <jobject.spad#L1657>`
 
 * R: \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
@@ -339,6 +339,21 @@ This domain provides a JLVector type for JLObjectType. Minimum index is 1.
 \ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c566563746f72-6a6c4669656c644e616d6573:
+
+\ :ref:`jlFieldNames <l4a4c4f626a65637454797065-6a6c4669656c644e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c566563746f72-6a6c4765744669656c64:
+
+\ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c566563746f72-6a6c47657450726f7065727479:
+
+\ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c566563746f72-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
@@ -347,6 +362,11 @@ This domain provides a JLVector type for JLObjectType. Minimum index is 1.
 .. _l4a4c566563746f72-6a6c4f626a656374:
 
 \ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c566563746f72-6a6c50726f70657274794e616d6573:
+
+\ :ref:`jlPropertyNames <l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c566563746f72-6a6c526566:
@@ -667,7 +687,7 @@ This domain provides a JLVector type for JLObjectType. Minimum index is 1.
    pair: JLVector; urand01
 
 :spadfun:`urand01`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLComplexFloat <l4a4c436f6d706c6578466c6f6174>`\  if R hasn't \ :ref:`NMType <l4e4d54797065>`\  and R has \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`JLFloat <l4a4c466c6f6174>`\  and R has \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
-  \ ``urand01(n)``\  returns a JLVector of size \ ``n``\  with uniformly distributed random numbers contained in [0,1].
+  \ ``urand01(n)``\  returns a JLVector of size \ ``n``\  with uniformly distributed random numbers contained in the unit disk.
 
 
 .. index::

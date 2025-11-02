@@ -5,7 +5,7 @@
 JLObjectType
 ============
 
-:viewcode:`jobject.spad line 1 <jobject.spad#L1>` :editcode:`[edit on github] <jobject.spad#L1>`
+:viewcode:`jobject.spad line 3 <jobject.spad#L3>` :editcode:`[edit on github] <jobject.spad#L3>`
 
 
 Category for arbitrary Julia objects, more precisely objects that are used within Julia.
@@ -27,7 +27,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``coerce(obj)``\  coerce \ ``obj``\  to JLObject. Convenience function.
+  \ ``coerce(obj)``\  coerces \ ``obj``\  to JLObject. Convenience function.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -98,6 +98,30 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 :spadfun:`jlDump`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   \ ``jlDump(obj)``\  dumps (shows) the Julia object (internal structure with type).
 
+.. _l4a4c4f626a65637454797065-6a6c4669656c644e616d6573:
+
+.. index::
+   pair: JLObjectType; jlFieldNames
+
+:spadfun:`jlFieldNames`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``jlFieldNames(obj)``\  returns the field names of \ ``obj``\ .
+
+.. _l4a4c4f626a65637454797065-6a6c4765744669656c64:
+
+.. index::
+   pair: JLObjectType; jlGetField
+
+:spadfun:`jlGetField`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``jlGetField(obj, sym)``\  returns the property/element \ ``sym``\  of \ ``obj``\ .
+
+.. _l4a4c4f626a65637454797065-6a6c47657450726f7065727479:
+
+.. index::
+   pair: JLObjectType; jlGetProperty
+
+:spadfun:`jlGetProperty`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``jlGetProperty(obj, sym)``\  returns the property/element \ ``sym``\  of \ ``obj``\ .
+
 .. _l4a4c4f626a65637454797065-6a6c4964:
 
 .. index::
@@ -113,6 +137,14 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 
 :spadfun:`jlObject`\: () -> \ :ref:`String <l537472696e67>`\  
   \ ``jlObject()``\  returns the internal Julia name of the Julia module used. For example: \example{jlObject()\$NMUnivariatePolynomial(NINT,'x)}
+
+.. _l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573:
+
+.. index::
+   pair: JLObjectType; jlPropertyNames
+
+:spadfun:`jlPropertyNames`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``jlPropertyNames(obj)``\  returns the property/element names of \ ``obj``\ .
 
 .. _l4a4c4f626a65637454797065-6a6c526566:
 
@@ -136,7 +168,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlType
 
 :spadfun:`jlType`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlType(obj)``\  return the Julia type of \ ``obj``\ .
+  \ ``jlType(obj)``\  returns the Julia type of \ ``obj``\ .
 
 .. _l4a4c4f626a65637454797065-6c61746578:
 

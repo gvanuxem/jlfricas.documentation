@@ -5,7 +5,7 @@
 NMAcbField p
 ============
 
-:viewcode:`jnball.spad line 320 <jnball.spad#L320>` :editcode:`[edit on github] <jnball.spad#L320>`
+:viewcode:`jnball.spad line 335 <jnball.spad#L335>` :editcode:`[edit on github] <jnball.spad#L335>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
@@ -605,7 +605,7 @@ NMAcbField p
    pair: NMAcbField; ellipticE
 
 :spadfun:`ellipticE`\: % -> % 
-  ellipicE(\ ``x``\ ) is the complete elliptic integral of the second kind.
+  \ ``ellipticE(x)``\  is the complete elliptic integral of the second kind.
 
 .. _l4e4d4163624669656c64-656c6c69707469634b:
 
@@ -905,6 +905,21 @@ NMAcbField p
 \ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d4163624669656c64-6a6c4669656c644e616d6573:
+
+\ :ref:`jlFieldNames <l4a4c4f626a65637454797065-6a6c4669656c644e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d4163624669656c64-6a6c4765744669656c64:
+
+\ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d4163624669656c64-6a6c47657450726f7065727479:
+
+\ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d4163624669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
@@ -918,6 +933,11 @@ NMAcbField p
 .. _l4e4d4163624669656c64-6a6c4f626a656374:
 
 \ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d4163624669656c64-6a6c50726f70657274794e616d6573:
+
+\ :ref:`jlPropertyNames <l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4163624669656c64-6a6c526566:
@@ -1213,6 +1233,14 @@ NMAcbField p
 \ :ref:`random <l46696e697465-72616e646f6d>`\ \: () -> % if \ :ref:`NMArbField <l4e4d4172624669656c64>`\  p has \ :ref:`Finite <l46696e697465>`\ 
   from \ :ref:`Finite <l46696e697465>`\ 
 
+.. _l4e4d4163624669656c64-72616e6474657374:
+
+.. index::
+   pair: NMAcbField; randtest
+
+:spadfun:`randtest`\: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\  -> % 
+  \ ``randtest(randtype)``\  returns a random number depending on the Julia symbol \ ``randtype``\ . :urandom an uniformly distributed random number contained in the unit disk. To test corner cases: :randtest with separate real and imaginary parts, :randtest_precise with precise real and imaginary parts, :randtest_special with separate real and imaginary parts but eventually infinities and NaNs, :randtest_param with very high probability of returning integers or half-integers.
+
 .. _l4e4d4163624669656c64-72616e6b:
 
 \ :ref:`rank <l4672616d65644d6f64756c65-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
@@ -1479,6 +1507,14 @@ NMAcbField p
 
 \ :ref:`unitNormal <l456e7469726552696e67-756e69744e6f726d616c>`\ \: % -> Record(unit: %, canonical: %, associate: %) 
   from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
+
+.. _l4e4d4163624669656c64-7572616e643031:
+
+.. index::
+   pair: NMAcbField; urand01
+
+:spadfun:`urand01`\: () -> % 
+  \ ``urand01()``\  returns an uniformly distributed random number contained in the unit disk.
 
 .. _l4e4d4163624669656c64-7a65726f3f:
 

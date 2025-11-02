@@ -50,7 +50,7 @@
             
   <section id="jlobjecttype">
 <span id="l4a4c4f626a65637454797065"></span><span id="index-0"></span><h1>JLObjectType<a class="headerlink" href="#jlobjecttype" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1">jobject.spad line 1</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L3">jobject.spad line 3</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L3">[edit on github]</a></p>
 <p>Category for arbitrary Julia objects, more precisely objects that are used within Julia.</p>
 <dl class="simple" id="l4a4c4f626a65637454797065-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -61,7 +61,7 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a65637454797065-636f65726365"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(obj)</span></code> coerce <code class="docutils literal notranslate"><span class="pre">obj</span></code> to JLObject. Convenience function.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(obj)</span></code> coerces <code class="docutils literal notranslate"><span class="pre">obj</span></code> to JLObject. Convenience function.</p>
 </dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
@@ -102,35 +102,51 @@
 <dt><span class="spadfun">jlDump</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDump(obj)</span></code> dumps (shows) the Julia object (internal structure with type).</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c4964"></span><dl class="simple" id="index-10">
+<span id="l4a4c4f626a65637454797065-6a6c4669656c644e616d6573"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">jlFieldNames</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlFieldNames(obj)</span></code> returns the field names of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a65637454797065-6a6c4765744669656c64"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">jlGetField</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlGetField(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="docutils literal notranslate"><span class="pre">sym</span></code> of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a65637454797065-6a6c47657450726f7065727479"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">jlGetProperty</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlGetProperty(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="docutils literal notranslate"><span class="pre">sym</span></code> of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a65637454797065-6a6c4964"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">jlId</span>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlId(obj)</span></code> returns the Julia indexed dictionary index referencing the object <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c4f626a656374"></span><dl class="simple" id="index-11">
+<span id="l4a4c4f626a65637454797065-6a6c4f626a656374"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">jlObject</span>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlObject()</span></code> returns the internal Julia name of the Julia module used. For example: example{jlObject()$NMUnivariatePolynomial(NINT,’x)}</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c526566"></span><dl class="simple" id="index-12">
+<span id="l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">jlPropertyNames</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlPropertyNames(obj)</span></code> returns the property/element names of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a65637454797065-6a6c526566"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">jlRef</span>: % -&gt; <a class="reference internal" href="SExpression.html#l5345787072657373696f6e"><span class="std std-ref">SExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlRef(obj)</span></code> returns the internal Lisp representation of the Julia object <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c726566"></span><dl class="simple" id="index-13">
+<span id="l4a4c4f626a65637454797065-6a6c726566"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">jlref</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlref(str)</span></code> evaluates the Julia command <code class="docutils literal notranslate"><span class="pre">str</span></code> and returns the corresponding FriCAS Julia object.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c54797065"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">jlType</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlType(obj)</span></code> return the Julia type of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
+<span id="l4a4c4f626a65637454797065-6a6c54797065"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">jlType</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlType(obj)</span></code> returns the Julia type of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a65637454797065-6c61746578">
 <dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6d757461626c653f"></span><dl class="simple" id="index-15">
+<span id="l4a4c4f626a65637454797065-6d757461626c653f"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">mutable?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mutable?(obj)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">obj</span></code> is mutable.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6e6f7468696e673f"></span><dl class="simple" id="index-16">
+<span id="l4a4c4f626a65637454797065-6e6f7468696e673f"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">nothing?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nothing?(obj)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">obj</span></code> is nothing.</p>
 </dd>
 </dl>

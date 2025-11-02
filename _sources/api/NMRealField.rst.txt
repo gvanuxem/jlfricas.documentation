@@ -5,7 +5,7 @@
 NMRealField
 ===========
 
-:viewcode:`jnball.spad line 619 <jnball.spad#L619>` :editcode:`[edit on github] <jnball.spad#L619>`
+:viewcode:`jnball.spad line 651 <jnball.spad#L651>` :editcode:`[edit on github] <jnball.spad#L651>`
 
 
 \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  implements arbitrary precision ball arithmetic using the Nemo Julia package.
@@ -686,6 +686,21 @@ NMRealField
 \ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d5265616c4669656c64-6a6c4669656c644e616d6573:
+
+\ :ref:`jlFieldNames <l4a4c4f626a65637454797065-6a6c4669656c644e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d5265616c4669656c64-6a6c4765744669656c64:
+
+\ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d5265616c4669656c64-6a6c47657450726f7065727479:
+
+\ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d5265616c4669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
@@ -699,6 +714,11 @@ NMRealField
 .. _l4e4d5265616c4669656c64-6a6c4f626a656374:
 
 \ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d5265616c4669656c64-6a6c50726f70657274794e616d6573:
+
+\ :ref:`jlPropertyNames <l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d5265616c4669656c64-6a6c526566:
@@ -974,6 +994,14 @@ NMRealField
 
 :spadfun:`radius`\: % -> % 
   \ ``radius(x)``\  returns the radius of \ ``x``\ .
+
+.. _l4e4d5265616c4669656c64-72616e6474657374:
+
+.. index::
+   pair: NMRealField; randtest
+
+:spadfun:`randtest`\: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\  -> % 
+  \ ``randtest(randtype)``\  returns a random number depending on the Julia symbol \ ``randtype``\ . :urandom an uniformly distributed random number contained in [0,1]. To test corner cases: :randtest returns a finite random number, :randtest_exact returns a zero radius random number, :randtest_precise returns a precise random number i.e. with a radius of around 2^-precision() the magnitude of the midpoint, :randtest_special returns a special random number where midpoint and/or radius might be NaNs or infinities, :randtest_wide returns a random number with a large radius that might be big relative to its midpoint.
 
 .. _l4e4d5265616c4669656c64-7265636970:
 
