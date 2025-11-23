@@ -50,7 +50,7 @@
             
   <section id="jlcomplexfloat">
 <span id="l4a4c436f6d706c6578466c6f6174"></span><span id="index-0"></span><h1>JLComplexFloat<a class="headerlink" href="#jlcomplexfloat" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1457">jobject.spad line 1457</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1457">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1482">jobject.spad line 1482</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1482">[edit on github]</a></p>
 <p>JLFComplexloat implements arbitrary precision floating point arithmetic for complex numbers using Julia BigFloats (MPFR based). <a class="reference external" href="https://www.mpfr.org/">https://www.mpfr.org/</a></p>
 <dl class="simple" id="l4a4c436f6d706c6578466c6f6174-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
@@ -519,34 +519,54 @@
 </dd>
 </dl>
 <span id="l4a4c436f6d706c6578466c6f6174-6a63666c6f6174"></span><dl class="simple" id="index-17">
-<dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">r</span></code> as a JLComplexFloat.</p>
+<dt><span class="spadfun">jcfloat</span>: (<a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(r,i)</span></code> returns r+i as a JLComplexFloat.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-18">
-<dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(q)</span></code> returns <code class="docutils literal notranslate"><span class="pre">q</span></code> as a JLComplexFloat.</p>
+<dt><span class="spadfun">jcfloat</span>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(r,i)</span></code> returns r+i as a JLComplexFloat.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-19">
+<dt><span class="spadfun">jcfloat</span>: (<a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a>, <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(r,i)</span></code> returns r+i as a JLComplexFloat.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-20">
+<dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">r</span></code> as a JLComplexFloat.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-21">
+<dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(q)</span></code> returns <code class="docutils literal notranslate"><span class="pre">q</span></code> as a JLComplexFloat.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-22">
 <dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(z)</span></code> returns <code class="docutils literal notranslate"><span class="pre">z</span></code> as a JLComplexFloat.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-23">
+<dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">r</span></code> as a JLComplexFloat.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-24">
+<dt><span class="spadfun">jcfloat</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jcfloat(str)</span></code> returns <code class="docutils literal notranslate"><span class="pre">str</span></code> as a JLComplexFloat.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c436f6d706c6578466c6f6174-6a6c41626f7574">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-6a6c4170706c79"></span><dl class="simple" id="index-20">
+<span id="l4a4c436f6d706c6578466c6f6174-6a6c4170706c79"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> with <code class="docutils literal notranslate"><span class="pre">x</span></code> as parameter.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-21">
+<dl class="simple" id="index-26">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-22">
+<dl class="simple" id="index-27">
 <dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">func</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
@@ -556,11 +576,11 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-6a6c417070726f783f"></span><dl class="simple" id="index-23">
+<span id="l4a4c436f6d706c6578466c6f6174-6a6c417070726f783f"></span><dl class="simple" id="index-28">
 <dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y)</span></code> computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-24">
+<dl class="simple" id="index-29">
 <dt><span class="spadfun">jlApprox?</span>: (%, %, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y,atol)</span></code> computes inexact equality comparison with absolute tolerance <code class="docutils literal notranslate"><span class="pre">atol</span></code>. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.</p>
 </dd>
 </dl>
@@ -604,6 +624,10 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c726566"><span class="std std-ref">jlref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4a4c436f6d706c6578466c6f6174-6a6c54657874">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54657874"><span class="std std-ref">jlText</span></a>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c436f6d706c6578466c6f6174-6a6c54797065">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -636,15 +660,15 @@
 <dt><a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261-6c696674"><span class="std std-ref">lift</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a></dt><dd><p>from <a class="reference internal" href="MonogenicAlgebra.html#l4d6f6e6f67656e6963416c6765627261"><span class="std std-ref">MonogenicAlgebra</span></a>(<a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a>, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a>)</p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-6c6f673130"></span><dl class="simple" id="index-25">
+<span id="l4a4c436f6d706c6578466c6f6174-6c6f673130"></span><dl class="simple" id="index-30">
 <dt><span class="spadfun">log10</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log10(x)</span></code> computes the base 10 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-6c6f673170"></span><dl class="simple" id="index-26">
+<span id="l4a4c436f6d706c6578466c6f6174-6c6f673170"></span><dl class="simple" id="index-31">
 <dt><span class="spadfun">log1p</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log1p(x)</span></code> computes accurately log(1+x)</p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-6c6f6732"></span><dl class="simple" id="index-27">
+<span id="l4a4c436f6d706c6578466c6f6174-6c6f6732"></span><dl class="simple" id="index-32">
 <dt><span class="spadfun">log2</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log2(x)</span></code> computes the base 2 logarithm of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
@@ -684,7 +708,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-6e72616e64"></span><dl class="simple" id="index-28">
+<span id="l4a4c436f6d706c6578466c6f6174-6e72616e64"></span><dl class="simple" id="index-33">
 <dt><span class="spadfun">nrand</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand()</span></code> returns an normally distributed random number.</p>
 </dd>
 </dl>
@@ -724,11 +748,11 @@
 <dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-706f6c6172436f6f7264696e61746573"><span class="std std-ref">polarCoordinates</span></a>: % -&gt; Record(r: <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a>, phi: <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a>)</dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-707265636973696f6e"></span><dl class="simple" id="index-29">
+<span id="l4a4c436f6d706c6578466c6f6174-707265636973696f6e"></span><dl class="simple" id="index-34">
 <dt><span class="spadfun">precision</span>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">precision(x)</span></code> returns the precision of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-30">
+<dl class="simple" id="index-35">
 <dt><span class="spadfun">precision</span>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">precision(x,</span> <span class="pre">p)</span></code> returns a copy of <code class="docutils literal notranslate"><span class="pre">x</span></code> with precision <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -778,7 +802,7 @@
 <dt><a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279-726174696f6e616c496643616e"><span class="std std-ref">rationalIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, failed) if <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a> has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p>from <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-7265616c3f"></span><dl class="simple" id="index-31">
+<span id="l4a4c436f6d706c6578466c6f6174-7265616c3f"></span><dl class="simple" id="index-36">
 <dt><span class="spadfun">real?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">real?(x)</span></code> tests whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is real.</p>
 </dd>
 </dl>
@@ -946,7 +970,7 @@
 <dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c436f6d706c6578466c6f6174-7572616e643031"></span><dl class="simple" id="index-32">
+<span id="l4a4c436f6d706c6578466c6f6174-7572616e643031"></span><dl class="simple" id="index-37">
 <dt><span class="spadfun">urand01</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01()</span></code> returns an uniformly distributed random number contained in the unit disk.</p>
 </dd>
 </dl>

@@ -162,6 +162,14 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 :spadfun:`jlref`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ ``jlref(str)``\  evaluates the Julia command \ ``str``\  and returns the corresponding FriCAS Julia object.
 
+.. _l4a4c4f626a65637454797065-6a6c54657874:
+
+.. index::
+   pair: JLObjectType; jlText
+
+:spadfun:`jlText`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ ``jlText(obj, mimest)``\  returns the text representation of \ ``obj``\  as a list of String lines with mime subtype mimest, for example "plain" for "text/plain" or "html" for "text/html" if implemented at Julia level. Use internally the 'show' method. For example: \example{df:=jdframe nrand(6,3)} \example{jlText(df, "plain")} \example{jlText(df, "html")} \example{jlText(df, "csv")} \example{jlText(df, "latex")}
+
 .. _l4a4c4f626a65637454797065-6a6c54797065:
 
 .. index::

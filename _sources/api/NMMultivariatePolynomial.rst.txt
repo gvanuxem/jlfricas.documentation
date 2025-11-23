@@ -5,14 +5,14 @@
 NMMultivariatePolynomial(R, VarSet)
 ===================================
 
-:viewcode:`jnpoly.spad line 1282 <jnpoly.spad#L1282>` :editcode:`[edit on github] <jnpoly.spad#L1282>`
+:viewcode:`jnpoly.spad line 1316 <jnpoly.spad#L1316>` :editcode:`[edit on github] <jnpoly.spad#L1316>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 * VarSet: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-This type is a basic representation of sparse, distributed multivariate polynomials using the Julia package Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage is lexicographic. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet, "lex") \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z:f:V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
+This type is a basic representation of sparse, distributed multivariate polynomials using the Julia package Nemo. It is parameterized by the coefficient ring. The coefficient ring may be non-commutative, but the variables are assumed to commute. The monomial ordering used for internal storage is lexicographic. For example: VarSet: List Symbol:=[\ ``x``\ ,\ ``y``\ ,\ ``z``\ ] \ ``V``\  \ ``:=``\  OrderedVariableList(VarSet) \ ``--``\  eventually, for later use \ ``--``\  See SparseMultivariatePolynomial \ ``--``\  \ ``E``\  \ ``:=``\  IndexedExponents \ ``V``\  PRing \ ``:=``\  \ ``NMP``\ (NINT,VarSet) \ ``x``\  \ ``:=``\  x::V::PRing \ ``y``\  \ ``:=``\  y::V::PRing \ ``z``\  \ ``:=``\  z:f:V::PRing \ ``p:=x*2+3*y^2+17*z^13``\  \ ``p^7``\ 
 
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-30:
@@ -581,6 +581,11 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 \ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c54657874:
+
+\ :ref:`jlText <l4a4c4f626a65637454797065-6a6c54657874>`\ \: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6c54797065:
 
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -926,6 +931,38 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 \ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966744c65667421:
+
+.. index::
+   pair: NMMultivariatePolynomial; shiftLeft!
+
+:spadfun:`shiftLeft!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966744c656674:
+
+.. index::
+   pair: NMMultivariatePolynomial; shiftLeft
+
+:spadfun:`shiftLeft`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-7368696674526967687421:
+
+.. index::
+   pair: NMMultivariatePolynomial; shiftRight!
+
+:spadfun:`shiftRight!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  
+
+.. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966745269676874:
+
+.. index::
+   pair: NMMultivariatePolynomial; shiftRight
+
+:spadfun:`shiftRight`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  
 
 .. _l4e4d4d756c746976617269617465506f6c796e6f6d69616c-736d616c6c65723f:
 

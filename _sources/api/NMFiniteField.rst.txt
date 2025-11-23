@@ -5,7 +5,7 @@
 NMFiniteField(p, n)
 ===================
 
-:viewcode:`jnemo.spad line 721 <jnemo.spad#L721>` :editcode:`[edit on github] <jnemo.spad#L721>`
+:viewcode:`jnemo.spad line 735 <jnemo.spad#L735>` :editcode:`[edit on github] <jnemo.spad#L735>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
@@ -101,11 +101,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-3d:
 
-.. index::
-   pair: NMFiniteField; =
-
-:spadfun:`=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``a = b``\  checks equality.
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l4e4d46696e6974654669656c64-5e:
 
@@ -122,11 +119,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-7e3d:
 
-.. index::
-   pair: NMFiniteField; ~=
-
-:spadfun:`~=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``a ~= b``\  checks inequality.
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l4e4d46696e6974654669656c64-6162736f6c7574653f:
 
@@ -573,6 +567,11 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 \ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d46696e6974654669656c64-6a6c54657874:
+
+\ :ref:`jlText <l4a4c4f626a65637454797065-6a6c54657874>`\ \: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d46696e6974654669656c64-6a6c54797065:
 
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -773,8 +772,11 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-72616e6b:
 
-\ :ref:`rank <l4672616d65644d6f64756c65-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  from \ :ref:`FramedModule <l4672616d65644d6f64756c65>`\  \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p
+.. index::
+   pair: NMFiniteField; rank
+
+:spadfun:`rank`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  \ ``rank()``\  returns the degree of the extension.
 
 .. _l4e4d46696e6974654669656c64-7265636970:
 

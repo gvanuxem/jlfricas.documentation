@@ -5,7 +5,7 @@
 NMExactCalciumField
 ===================
 
-:viewcode:`jnemo.spad line 1270 <jnemo.spad#L1270>` :editcode:`[edit on github] <jnemo.spad#L1270>`
+:viewcode:`jnemo.spad line 1289 <jnemo.spad#L1289>` :editcode:`[edit on github] <jnemo.spad#L1289>`
 
 
 \ :ref:`NMExactCalciumField <l4e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo package.
@@ -140,6 +140,22 @@ NMExactCalciumField
 
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4e4d457861637443616c6369756d4669656c64-61627332:
+
+.. index::
+   pair: NMExactCalciumField; abs2
+
+:spadfun:`abs2`\: % -> % 
+  \ ``abs2(x)``\  returns the square of the absolute value of \ ``x``\ .
+
+.. _l4e4d457861637443616c6369756d4669656c64-616273:
+
+.. index::
+   pair: NMExactCalciumField; abs
+
+:spadfun:`abs`\: % -> % 
+  \ ``abs(x)``\  returns the absolute value of \ ``x``\ .
 
 .. _l4e4d457861637443616c6369756d4669656c64-61636f73:
 
@@ -368,7 +384,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; conjugate
 
 :spadfun:`conjugate`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``conjugate(x, repr)``\  returns conjugate(\ ``x``\ ) using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :deep (recursively) :shallow (a new extension, \ ``ā``\ , is used if there is no express simplification)
+  \ ``conjugate(x, repr)``\  returns conjugate(\ ``x``\ ) using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it), :deep (recursively), :shallow (a new extension, \ ``ā``\ , is used if there is no express simplification).
 
 .. _l4e4d457861637443616c6369756d4669656c64-636f6e76657274:
 
@@ -498,6 +514,11 @@ NMExactCalciumField
 
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+
+.. _l4e4d457861637443616c6369756d4669656c64-656e756d6572617465:
+
+\ :ref:`enumerate <l46696e697465-656e756d6572617465>`\ \: () -> \ :ref:`List <l4c697374>`\  % if % has \ :ref:`Finite <l46696e697465>`\ 
+  from \ :ref:`Finite <l46696e697465>`\ 
 
 .. _l4e4d457861637443616c6369756d4669656c64-657175616c3f:
 
@@ -791,6 +812,11 @@ NMExactCalciumField
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c726566:
 
 \ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d457861637443616c6369756d4669656c64-6a6c54657874:
+
+\ :ref:`jlText <l4a4c4f626a65637454797065-6a6c54657874>`\ \: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c54797065:

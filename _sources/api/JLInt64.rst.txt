@@ -5,7 +5,7 @@
 JLInt64
 =======
 
-:viewcode:`julia.spad line 138 <julia.spad#L138>` :editcode:`[edit on github] <julia.spad#L138>`
+:viewcode:`julia.spad line 140 <julia.spad#L140>` :editcode:`[edit on github] <julia.spad#L140>`
 
 
 This domain allows the manipulation of Julia \ ``Int64``\ . Beware of internal Lisp implementations of machine integer, usually they differ, for example Lisp MOST-POSITIVE-FIXNUM on \ ``x86_64``\  GNU/Linux is 4611686018427387903 with SBCL whereas it is 1152921504606846975 with Clozure \ ``CL``\ . They will be passed as an \ ``Int64``\  to Julia nevertheless, but returned value can possibly not fit in a Lisp fixnum. In Julia, typemax(\ ``Int64``\ ) is 9223372036854775807 on this arch. This domain is therefore not intented to perfom "advanced" computation, it just includes basic arthmetic and is used, for example, for returned pivot vectors in linear algebra.

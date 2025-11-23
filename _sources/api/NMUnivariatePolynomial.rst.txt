@@ -232,6 +232,14 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
 \ :ref:`commutator <l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72>`\ \: (%, %) -> % 
   from \ :ref:`NonAssociativeRng <l4e6f6e4173736f63696174697665526e67>`\ 
 
+.. _l4e4d556e6976617269617465506f6c796e6f6d69616c-636f6d706f7365:
+
+.. index::
+   pair: NMUnivariatePolynomial; compose
+
+:spadfun:`compose`\: (%, %) -> % 
+  \ ``compose(p, q)``\  returns the composition \ ``p``\ (\ ``q``\ (\ ``x``\ )).
+
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-636f6d706f73697465:
 
 \ :ref:`composite <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-636f6d706f73697465>`\ \: (%, %) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
@@ -726,6 +734,11 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
 \ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c54657874:
+
+\ :ref:`jlText <l4a4c4f626a65637454797065-6a6c54657874>`\ \: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c54797065:
 
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -1167,15 +1180,37 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
 \ :ref:`separate <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-7365706172617465>`\ \: (%, %) -> Record(primePart: %, commonPart: %) if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
   from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
+.. _l4e4d556e6976617269617465506f6c796e6f6d69616c-73686966744c65667421:
+
+.. index::
+   pair: NMUnivariatePolynomial; shiftLeft!
+
+:spadfun:`shiftLeft!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  shiftLeft(\ ``p``\ ) left shift \ ``p``\ .
+
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-73686966744c656674:
 
-\ :ref:`shiftLeft <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-73686966744c656674>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
+.. index::
+   pair: NMUnivariatePolynomial; shiftLeft
+
+:spadfun:`shiftLeft`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``shiftLeft(p)``\  left shift \ ``p``\ .
+
+.. _l4e4d556e6976617269617465506f6c796e6f6d69616c-7368696674526967687421:
+
+.. index::
+   pair: NMUnivariatePolynomial; shiftRight!
+
+:spadfun:`shiftRight!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  shiftRight(\ ``p``\ ) right shift \ ``p``\ .
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-73686966745269676874:
 
-\ :ref:`shiftRight <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-73686966745269676874>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
+.. index::
+   pair: NMUnivariatePolynomial; shiftRight
+
+:spadfun:`shiftRight`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``shiftRight(p)``\  right shift \ ``p``\ .
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-73697a654c6573733f:
 
