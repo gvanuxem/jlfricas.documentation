@@ -2583,7 +2583,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a WSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{jlWSDateString(jWSExpr "Tomorrow")}
+  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a WSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{jlWSDateString(jWSExpr "Tomorrow")} \example{toString jWSExpr "TextSentences[WikipediaData[_"Sun_"]][[;; 40]]"}
 
 
 .. index::
@@ -4881,28 +4881,43 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-776569657273747261737350:
 
-\ :ref:`weierstrassP <l5370656369616c46756e6374696f6e43617465676f7279-776569657273747261737350>`\ \: (%, %, %) -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: WSExpression; weierstrassP
+
+:spadfun:`weierstrassP`\: (%, %, %) -> % 
+  \ ``weierstrassP(g2, g3, z)``\  is the Weierstrass \ ``P``\  function.
 
 .. _l575345787072657373696f6e-776569657273747261737350496e7665727365:
 
-\ :ref:`weierstrassPInverse <l5370656369616c46756e6374696f6e43617465676f7279-776569657273747261737350496e7665727365>`\ \: (%, %, %) -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: WSExpression; weierstrassPInverse
+
+:spadfun:`weierstrassPInverse`\: (%, %, %) -> % 
+  \ ``weierstrassPInverse(g2, g3, z)``\  is the inverse of Weierstrass \ ``P``\  function, defined by the formula \ ``weierstrassP(g2, g3, weierstrassPInverse(g2, g3, z)) = z``\ .
 
 .. _l575345787072657373696f6e-7765696572737472617373505072696d65:
 
-\ :ref:`weierstrassPPrime <l5370656369616c46756e6374696f6e43617465676f7279-7765696572737472617373505072696d65>`\ \: (%, %, %) -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: WSExpression; weierstrassPPrime
+
+:spadfun:`weierstrassPPrime`\: (%, %, %) -> % 
+  \ ``weierstrassPPrime(g2, g3, z)``\  is the derivative of Weierstrass \ ``P``\  function.
 
 .. _l575345787072657373696f6e-77656965727374726173735369676d61:
 
-\ :ref:`weierstrassSigma <l5370656369616c46756e6374696f6e43617465676f7279-77656965727374726173735369676d61>`\ \: (%, %, %) -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: WSExpression; weierstrassSigma
+
+:spadfun:`weierstrassSigma`\: (%, %, %) -> % 
+  \ ``weierstrassSigma(g2, g3, z)``\  is the Weierstrass Sigma function.
 
 .. _l575345787072657373696f6e-77656965727374726173735a657461:
 
-\ :ref:`weierstrassZeta <l5370656369616c46756e6374696f6e43617465676f7279-77656965727374726173735a657461>`\ \: (%, %, %) -> % 
-  from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
+.. index::
+   pair: WSExpression; weierstrassZeta
+
+:spadfun:`weierstrassZeta`\: (%, %, %) -> % 
+  \ ``weierstrassZeta(g2, g3, z)``\  is the Weierstrass Zeta function.
 
 .. _l575345787072657373696f6e-7768697474616b65724d:
 
