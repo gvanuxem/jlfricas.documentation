@@ -83,6 +83,13 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 :spadfun:`angerJ`\: (R, R) -> R 
   \ ``angerJ(v, z)``\  is the Anger \ ``J``\  function.
 
+
+.. index::
+   pair: WSNumericalSpecialFunctions; angerJ
+
+:spadfun:`angerJ`\: (R, R, R) -> R 
+  \ ``angerJ(v, n, z)``\  is the associated Anger \ ``J``\  function.
+
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6261726e657347:
 
 .. index::
@@ -186,6 +193,14 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 :spadfun:`chebyshevU`\: (R, R) -> R 
   \ ``chebyshevU(n, expr)``\  evaluates the chebyshev polynomial of the second kind at \ ``z``\ .
 
+.. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-636f6e6a7567617465:
+
+.. index::
+   pair: WSNumericalSpecialFunctions; conjugate
+
+:spadfun:`conjugate`\: R -> R 
+  \ ``conjugate(z)``\  is the conjugate of the complex number \ ``z``\ .
+
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-636f756c6f6d6246:
 
 .. index::
@@ -249,6 +264,14 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 :spadfun:`digamma`\: R -> R 
   \ ``digamma(z)``\  is the logarithmic derivative of \ ``Gamma(z)``\  (often written \ ``psi(z)``\  in the literature).
 
+.. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-646972616344656c7461:
+
+.. index::
+   pair: WSNumericalSpecialFunctions; diracDelta
+
+:spadfun:`diracDelta`\: R -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``diracDelta(x)``\  returns the Dirac delta function of \ ``x``\ .
+
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6469726963686c6574457461:
 
 .. index::
@@ -279,14 +302,14 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
    pair: WSNumericalSpecialFunctions; ellipticE
 
 :spadfun:`ellipticE`\: (R, R) -> R 
-  \ ``ellipticE(z, m)``\  is the incomplete elliptic integral of the second kind: \ ``ellipticE(z, m) = integrate(sqrt(1-m*t^2)/sqrt(1-t^2), t = 0..z)``\ .
+  \ ``ellipticE(phi,m)``\  computes the elliptic integral of the second kind.
 
 
 .. index::
    pair: WSNumericalSpecialFunctions; ellipticE
 
 :spadfun:`ellipticE`\: R -> R 
-  \ ``ellipticE(m)``\  is the complete elliptic integral of the second kind: \ ``ellipticE(m) = integrate(sqrt(1-m*t^2)/sqrt(1-t^2), t = 0..1)``\ .
+  \ ``ellipticE(z)``\  computes the complete elliptic integral of the second kind.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-656c6c697074696346:
 
@@ -294,7 +317,7 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
    pair: WSNumericalSpecialFunctions; ellipticF
 
 :spadfun:`ellipticF`\: (R, R) -> R 
-  \ ``ellipticF(z, m)``\  is the incomplete elliptic integral of the first kind : \ ``ellipticF(z, m) = integrate(1/sqrt((1-t^2)*(1-m*t^2)), t = 0..z)``\ .
+  \ ``ellipticF(phi,m)``\  computes the elliptic integral of the first kind.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-656c6c69707469634b:
 
@@ -302,7 +325,7 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
    pair: WSNumericalSpecialFunctions; ellipticK
 
 :spadfun:`ellipticK`\: R -> R 
-  \ ``ellipticK(m)``\  is the complete elliptic integral of the first kind: \ ``ellipticK(m) = integrate(1/sqrt((1-t^2)*(1-m*t^2)), t = 0..1)``\ .
+  \ ``ellipticK(m)``\  computes the complete elliptic integral of the first kind.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-656c6c69707469635069:
 
@@ -317,7 +340,7 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
    pair: WSNumericalSpecialFunctions; ellipticPi
 
 :spadfun:`ellipticPi`\: (R, R, R) -> R 
-  \ ``ellipticPi(z, n, m)``\  is the incomplete elliptic integral of the third kind: \ ``ellipticPi(z, n, m) = integrate(1/((1-n*t^2)*sqrt((1-t^2)*(1-m*t^2))), t = 0..z)``\ .
+  \ ``ellipticPi(n,phi,m)``\  computes the elliptic integral of the third kind.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-656c6c69707469635468657461:
 
@@ -601,8 +624,8 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 .. index::
    pair: WSNumericalSpecialFunctions; jacobiTheta
 
-:spadfun:`jacobiTheta`\: (R, R) -> R 
-  \ ``jacobiTheta(z, m)``\  is the Jacobi Theta function in Jacobi notation.
+:spadfun:`jacobiTheta`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , R, R) -> R 
+  \ ``jacobiTheta(n, z, m)``\  are the Jacobi Theta functions.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6a61636f62695a657461:
 
@@ -651,22 +674,6 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 
 :spadfun:`kleinInvariantJ`\: R -> R 
   \ ``kleinInvariantJ(tau)``\  computes the Klein\ ``'s``\  absolute invariant.
-
-.. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6b756d6d65724d:
-
-.. index::
-   pair: WSNumericalSpecialFunctions; kummerM
-
-:spadfun:`kummerM`\: (R, R, R) -> R 
-  \ ``kummerM(mu, nu, z)``\  is the Kummer \ ``M``\  function.
-
-.. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6b756d6d657255:
-
-.. index::
-   pair: WSNumericalSpecialFunctions; kummerU
-
-:spadfun:`kummerU`\: (R, R, R) -> R 
-  \ ``kummerU(mu, nu, z)``\  is the Kummer \ ``U``\  function.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6c616775657272654c:
 
@@ -823,14 +830,6 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 
 :spadfun:`mathieuSPrime`\: (R, R, R) -> R 
   \ ``mathieuSPrime(b,q,z)``\  derivative of the odd Mathieu function.
-
-.. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6d6569786e65724d:
-
-.. index::
-   pair: WSNumericalSpecialFunctions; meixnerM
-
-:spadfun:`meixnerM`\: (R, R, R, R) -> R 
-  \ ``meixnerM(n, b, c, z)``\  is the Meixner polynomial
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-6d6f64756c61724c616d626461:
 
@@ -995,6 +994,14 @@ Julia Wolfram Symbolic numerical special functions using the MathLink Julia pack
 
 :spadfun:`riemannZeta`\: R -> R 
   \ ``riemannZeta(z)``\  is the Riemann Zeta function.
+
+.. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-7369676e:
+
+.. index::
+   pair: WSNumericalSpecialFunctions; sign
+
+:spadfun:`sign`\: R -> R 
+  \ ``sign(x)``\  is 1 if \ ``x``\  is positive, \ ``-1``\  if \ ``x``\  is negative, 0 if \ ``x``\  equals 0.
 
 .. _l57534e756d65726963616c5370656369616c46756e6374696f6e73-73706865726963616c42657373656c4a:
 
