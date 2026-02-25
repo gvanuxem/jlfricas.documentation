@@ -5,12 +5,12 @@
 NMFraction R
 ============
 
-:viewcode:`jnemo.spad line 1694 <jnemo.spad#L1694>` :editcode:`[edit on github] <jnemo.spad#L1694>`
+:viewcode:`jnemo.spad line 1758 <jnemo.spad#L1758>` :editcode:`[edit on github] <jnemo.spad#L1758>`
 
 * R: Join(\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\ , \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ )
 
 
-Nemo Fractions over un integral domain.
+Nemo Fractions over an integral domain.
 
 
 .. _l4e4d4672616374696f6e-30:
@@ -324,7 +324,7 @@ Nemo Fractions over un integral domain.
    pair: NMFraction; differentiate
 
 :spadfun:`differentiate`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``differentiate(x f)``\  differentiates \ ``x``\  extending the derivation \ ``f``\  on on NMFraction(\ ``R``\ ).
+  \ ``differentiate(x, f)``\  differentiates \ ``x``\  extending the derivation \ ``f``\  on NMFraction(\ ``R``\ ).
 
 
 \ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
@@ -430,8 +430,8 @@ Nemo Fractions over un integral domain.
 .. index::
    pair: NMFraction; factorFraction
 
-:spadfun:`factorFraction`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Factored <l466163746f726564>`\  R 
-  \ ``factorFraction(p)``\  factors the numerator and the denominator of the fraction \ ``p``\ .
+:spadfun:`factorFraction`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Factored <l466163746f726564>`\  R if R has \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
+  \ ``factorFraction(r)``\  factors the numerator and the denominator of the fraction \ ``r``\ .
 
 .. _l4e4d4672616374696f6e-666163746f72506f6c796e6f6d69616c:
 
@@ -523,6 +523,11 @@ Nemo Fractions over un integral domain.
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d4672616374696f6e-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d4672616374696f6e-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -531,6 +536,11 @@ Nemo Fractions over un integral domain.
 .. _l4e4d4672616374696f6e-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d4672616374696f6e-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4672616374696f6e-6a6c4e4d52696e67:
@@ -565,7 +575,7 @@ Nemo Fractions over un integral domain.
 
 .. _l4e4d4672616374696f6e-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4672616374696f6e-6c61746578:
@@ -701,21 +711,21 @@ Nemo Fractions over un integral domain.
    pair: NMFraction; random
 
 :spadfun:`random`\: (\ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``random(x, seg1, seg2)``\  returns a random fraction depending on the base ring. For example: \example{FRPRing:=NFRAC(NUP(NINT,'x))} \example{random(1..5,-10..10)\$FRPRing}
+  \ ``random(seg1, seg2)``\  returns a random fraction depending on the base ring. For example: \example{FRPRing:=NFRAC(NUP(NINT,'x))} \example{random(1..5,-10..10)\$FRPRing}
 
 
 .. index::
    pair: NMFraction; random
 
 :spadfun:`random`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``random(p)``\  returns a random rational with numerator and denominator having \ ``p``\  bits before before canonicalisation.
+  \ ``random(p)``\  returns a random rational with numerator and denominator having \ ``p``\  bits before canonicalisation.
 
 
 .. index::
    pair: NMFraction; random
 
 :spadfun:`random`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``random(x, seg)``\  returns a random fraction depending on the base ring.
+  \ ``random(seg)``\  returns a random fraction depending on the base ring.
 
 .. _l4e4d4672616374696f6e-7265636970:
 
@@ -989,6 +999,8 @@ Nemo Fractions over un integral domain.
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 

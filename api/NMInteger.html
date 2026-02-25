@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>NMInteger &#8212; jlFriCAS</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
@@ -50,8 +50,8 @@
             
   <section id="nminteger">
 <span id="l4e4d496e7465676572"></span><span id="index-0"></span><h1>NMInteger<a class="headerlink" href="#nminteger" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L56">jnemo.spad line 56</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L56">[edit on github]</a></p>
-<p>This domain allows the manipulation of Nemo integers using the Nemo package for Julia (FLINT based).</p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L64">jnemo.spad line 64</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L64">[edit on github]</a></p>
+<p>This domain allows the manipulation of Nemo integers using the Nemo Julia package (FLINT based).</p>
 <dl class="simple" id="l4e4d496e7465676572-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -169,7 +169,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(ni)</span></code> ro a <code class="docutils literal notranslate"><span class="pre">JLInt64</span></code> if possible.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(ni)</span></code> to a <code class="docutils literal notranslate"><span class="pre">JLInt64</span></code> if possible.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -336,12 +336,20 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744669656c64"><span class="std std-ref">jlGetField</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d496e7465676572-6a6c4765744a756c6961496e646578">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578"><span class="std std-ref">jlGetJuliaIndex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d496e7465676572-6a6c47657450726f7065727479">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c47657450726f7065727479"><span class="std std-ref">jlGetProperty</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d496e7465676572-6a6c4964">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d496e7465676572-6a6c696d726566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c696d726566"><span class="std std-ref">jlimref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d496e7465676572-6a6c4e4d52696e67">
@@ -369,7 +377,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d496e7465676572-6a6c54797065">
-<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <span id="l4e4d496e7465676572-6a6e696e74"></span><dl class="simple" id="index-8">
@@ -695,6 +703,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>

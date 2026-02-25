@@ -14,7 +14,7 @@ NMUnivariatePuiseuxSeries(R, x, prec)
 * prec: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ ``x``\  \ ``:=``\  x::NUPSX(NFRAC(NINT),\ ``'x``\ ,30) 23*x+3*19*x^7+x^(1/7) exp \% log \%
+NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ ``x``\  \ ``:=``\  x::NUPXS(NFRAC(NINT),\ ``'x``\ ,30) 23*x+3*19*x^7+x^(1/7) exp \% log \%
 
 
 .. _l4e4d556e697661726961746550756973657578536572696573-30:
@@ -206,7 +206,7 @@ NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ `
    pair: NMUnivariatePuiseuxSeries; coefficient
 
 :spadfun:`coefficient`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> R 
-  \ ``coefficient(s, i)``\  return the coefficient of the term of degree \ ``n``\ .
+  \ ``coefficient(s, i)``\  returns the coefficient of the term of degree \ ``i``\ .
 
 .. _l4e4d556e697661726961746550756973657578536572696573-636f65726365:
 
@@ -362,7 +362,7 @@ NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ `
    pair: NMUnivariatePuiseuxSeries; inverse
 
 :spadfun:`inverse`\: % -> % 
-  \ ``inverse(s)``\  returns the inverse of \ ``s``\ . Throw a Julia error if no such inverse exists.
+  \ ``inverse(s)``\  returns the inverse of \ ``s``\ . Throws a Julia error if no such inverse exists.
 
 .. _l4e4d556e697661726961746550756973657578536572696573-6a6c41626f7574:
 
@@ -410,6 +410,11 @@ NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ `
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d556e697661726961746550756973657578536572696573-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d556e697661726961746550756973657578536572696573-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -418,6 +423,11 @@ NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ `
 .. _l4e4d556e697661726961746550756973657578536572696573-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e697661726961746550756973657578536572696573-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e697661726961746550756973657578536572696573-6a6c4e4d52696e67:
@@ -452,7 +462,7 @@ NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ `
 
 .. _l4e4d556e697661726961746550756973657578536572696573-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e697661726961746550756973657578536572696573-6c61746578:
@@ -585,7 +595,7 @@ NMUnivariatePuiseuxSeries is the Nemo univariate Puiseux series using Julia. \ `
    pair: NMUnivariatePuiseuxSeries; sqrt
 
 :spadfun:`sqrt`\: % -> % 
-  \ ``sqrt(f)``\  return square root of \ ``f``\  if it exists, a Julia error is thrown if \ ``f``\  has no square root.
+  \ ``sqrt(f)``\  returns the square root of \ ``f``\  if it exists, a Julia error is thrown if \ ``f``\  has no square root.
 
 .. _l4e4d556e697661726961746550756973657578536572696573-737472696e67:
 

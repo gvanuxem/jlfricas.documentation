@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>NMPrimeField p &#8212; jlFriCAS</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
@@ -50,7 +50,7 @@
             
   <section id="nmprimefield-p">
 <span id="l4e4d5072696d654669656c64"></span><span id="index-0"></span><h1>NMPrimeField p<a class="headerlink" href="#nmprimefield-p" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L583">jnemo.spad line 583</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L583">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L639">jnemo.spad line 639</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L639">[edit on github]</a></p>
 <ul class="simple">
 <li><p>p: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></p></li>
 </ul>
@@ -76,7 +76,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x*i</span></code> is the multiplication by a an integer (NMInteger).</p>
+<dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x*i</span></code> is the multiplication by an integer (NMInteger).</p>
 </dd>
 <dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
 </dd>
@@ -326,11 +326,19 @@
 </dd>
 </dl>
 <span id="l4e4d5072696d654669656c64-67656e657261746f723f"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">generator?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">generator?(x)</span></code> checks whether or not of the NMPrimeField.</p>
+<dt><span class="spadfun">generator?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">generator?(x)</span></code> checks whether or not <code class="docutils literal notranslate"><span class="pre">x</span></code> is a generator of the NMPrimeField.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-67656e657261746f72">
 <dt><a class="reference internal" href="FiniteAlgebraicExtensionField.html#l46696e697465416c67656272616963457874656e73696f6e4669656c64-67656e657261746f72"><span class="std std-ref">generator</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteAlgebraicExtensionField.html#l46696e697465416c67656272616963457874656e73696f6e4669656c64"><span class="std std-ref">FiniteAlgebraicExtensionField</span></a> %</p>
+</dd>
+</dl>
+<span id="l4e4d5072696d654669656c64-4746"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">GF</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GF(i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">i</span></code> as a NMPrimeField element. Convenience function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">GF</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GF(i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">i</span></code> as a NMPrimeField element. Convenience function.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-68617368">
@@ -389,12 +397,20 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744669656c64"><span class="std std-ref">jlGetField</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4e4d5072696d654669656c64-6a6c4765744a756c6961496e646578">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578"><span class="std std-ref">jlGetJuliaIndex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-6a6c47657450726f7065727479">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c47657450726f7065727479"><span class="std std-ref">jlGetProperty</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-6a6c4964">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d5072696d654669656c64-6a6c696d726566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c696d726566"><span class="std std-ref">jlimref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-6a6c4e4d52696e67">
@@ -422,14 +438,14 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-6a6c54797065">
-<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d5072696d654669656c64-6a6e7066"></span><dl class="simple" id="index-6">
+<span id="l4e4d5072696d654669656c64-6a6e7066"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">jnpf</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnpf(i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">i</span></code> as a NMPrimeField element.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-7">
+<dl class="simple" id="index-9">
 <dt><span class="spadfun">jnpf</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jnpf(i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">i</span></code> as a NMPrimeField element.</p>
 </dd>
 </dl>
@@ -525,7 +541,7 @@
 <dt><a class="reference internal" href="FiniteFieldCategory.html#l46696e6974654669656c6443617465676f7279-6f72646572"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l46696e6974654669656c6443617465676f7279"><span class="std std-ref">FiniteFieldCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-8">
+<dl class="simple" id="index-10">
 <dt><span class="spadfun">order</span>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">order()</span></code> returns the order of the NMPrimeField.</p>
 </dd>
 </dl>
@@ -555,7 +571,7 @@
 <dt><a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e-7072696e636970616c496465616c"><span class="std std-ref">principalIdeal</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; Record(coef: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, generator: %)</dt><dd><p>from <a class="reference internal" href="PrincipalIdealDomain.html#l5072696e636970616c496465616c446f6d61696e"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d5072696d654669656c64-7175616472617469634e6f6e52657369647565"></span><dl class="simple" id="index-9">
+<span id="l4e4d5072696d654669656c64-7175616472617469634e6f6e52657369647565"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">quadraticNonResidue</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">quadraticNonResidue()</span></code> computes the smallest non negative integer, which represents a quadratic non residue.</p>
 </dd>
 </dl>
@@ -633,8 +649,8 @@
 <dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e"><span class="std std-ref">solveLinearPolynomialEquation</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, failed)</dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d5072696d654669656c64-73717274"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">sqrt</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sqrt(x)</span></code> returns quare root of <code class="docutils literal notranslate"><span class="pre">x</span></code>. Throw a Julia error if there is no square root and returns 0.</p>
+<span id="l4e4d5072696d654669656c64-73717274"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">sqrt</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sqrt(x)</span></code> returns square root of <code class="docutils literal notranslate"><span class="pre">x</span></code>. Throws a Julia error if there is no square root and returns 0.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5072696d654669656c64-73717561726546726565">
@@ -746,6 +762,7 @@
 <p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
 <p><a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p>
 <p><a class="reference internal" href="NMCommutativeRing.html#l4e4d436f6d6d7574617469766552696e67"><span class="std std-ref">NMCommutativeRing</span></a></p>
+<p><a class="reference internal" href="NMField.html#l4e4d4669656c64"><span class="std std-ref">NMField</span></a></p>
 <p><a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 <p><a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a></p>
 <p><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> %</p>
@@ -784,6 +801,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>

@@ -5,10 +5,10 @@
 JLObjUInt64
 ===========
 
-:viewcode:`jobject.spad line 706 <jobject.spad#L706>` :editcode:`[edit on github] <jobject.spad#L706>`
+:viewcode:`jimobject.spad line 416 <jimobject.spad#L416>` :editcode:`[edit on github] <jimobject.spad#L416>`
 
 
-Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported. By defaut the hexadecimal notation is used. Use the juliaUI64Print to change it to \ ``false``\  if the integer representation is required. Note that operations defined here check overflow imposing a performance penalty.
+Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported. By default the hexadecimal notation is used. Use the juliaUI64Print to change it to \ ``false``\  if the integer representation is required. Note that operations defined here check overflow imposing a performance penalty.
 
 
 .. _l4a4c4f626a55496e743634-30:
@@ -255,6 +255,11 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a55496e743634-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c4f626a55496e743634-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -263,6 +268,11 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
 .. _l4a4c4f626a55496e743634-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a55496e743634-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a55496e743634-6a6c4f626a656374:
@@ -292,7 +302,7 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
 
 .. _l4a4c4f626a55496e743634-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a55496e743634-6a75696e743634:
@@ -308,7 +318,7 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
    pair: JLObjUInt64; juint64
 
 :spadfun:`juint64`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``juint64(i)``\  returns \ ``i``\  as a \ ``JLObjInt64``\ .
+  \ ``juint64(i)``\  returns \ ``i``\  as a \ ``JLObjUInt64``\ .
 
 
 .. index::
@@ -323,7 +333,7 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
    pair: JLObjUInt64; juliaUI64Print
 
 :spadfun:`juliaUI64Print`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  juliaUI6Pprint(bool) set the output mode. If set to \ ``false``\ , use the FriCAS output mode. Otherwise use the Julia one, in hexadecimal notation (default).
+  \ ``juliaUI64Print(bool)``\  set the output mode. If set to \ ``false``\ , use the FriCAS output mode. Otherwise use the Julia one, in hexadecimal notation (default).
 
 .. _l4a4c4f626a55496e743634-6c61746578:
 

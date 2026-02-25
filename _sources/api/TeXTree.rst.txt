@@ -1,0 +1,126 @@
+.. index:: TeXTree
+
+.. _l54655854726565:
+
+TeXTree
+=======
+
+:viewcode:`texd.spad line 108 <texd.spad#L108>` :editcode:`[edit on github] <texd.spad#L108>`
+
+
+This domain represents TeX parse tree.
+
+
+.. _l54655854726565-646973706c61795f6d6174683f:
+
+.. index::
+   pair: TeXTree; display_math?
+
+:spadfun:`display_math?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``display_math?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a display math node.
+
+.. _l54655854726565-646973706c61795f6d617468:
+
+.. index::
+   pair: TeXTree; display_math
+
+:spadfun:`display_math`\: % -> % 
+  diplay_math(\ ``t``\ ) builds a display math node with content \ ``t``\ .
+
+.. _l54655854726565-6765745f63616c6c:
+
+.. index::
+   pair: TeXTree; get_call
+
+:spadfun:`get_call`\: % -> Record(name: \ :ref:`String <l537472696e67>`\ , args: \ :ref:`List <l4c697374>`\  %) 
+  \ ``get_call(t)``\  extracts name and actual arguments from a macro call node.
+
+.. _l54655854726565-6765745f6d617468:
+
+.. index::
+   pair: TeXTree; get_math
+
+:spadfun:`get_math`\: % -> % 
+  \ ``get_math(t)``\  extracts content of text or display math node.
+
+.. _l54655854726565-6765745f74657874:
+
+.. index::
+   pair: TeXTree; get_text
+
+:spadfun:`get_text`\: % -> \ :ref:`String <l537472696e67>`\  
+  \ ``get_text(t)``\  extracts text from a node representing text.
+
+.. _l54655854726565-67726f75703f:
+
+.. index::
+   pair: TeXTree; group?
+
+:spadfun:`group?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  group(\ ``t``\ ) returns \ ``true``\  if and only if \ ``t``\  is a group node.
+
+.. _l54655854726565-67726f7570:
+
+.. index::
+   pair: TeXTree; group
+
+:spadfun:`group`\: \ :ref:`List <l4c697374>`\  % -> % 
+  \ ``group(l)``\  builds group node from a list \ ``l``\ .
+
+.. _l54655854726565-6d5f63616c6c3f:
+
+.. index::
+   pair: TeXTree; m_call?
+
+:spadfun:`m_call?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``m_call?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a macro call node.
+
+.. _l54655854726565-6d5f63616c6c:
+
+.. index::
+   pair: TeXTree; m_call
+
+:spadfun:`m_call`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
+  \ ``m_call(s, l)``\  builds macro call node for macro with name \ ``s``\  and with actual arguments \ ``l``\ .
+
+.. _l54655854726565-746578743f:
+
+.. index::
+   pair: TeXTree; text?
+
+:spadfun:`text?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``text?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a node representing text.
+
+.. _l54655854726565-74657874:
+
+.. index::
+   pair: TeXTree; text
+
+:spadfun:`text`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``text(s)``\  builds a node representing text \ ``s``\ .
+
+.. _l54655854726565-746578745f6d6174683f:
+
+.. index::
+   pair: TeXTree; text_math?
+
+:spadfun:`text_math?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``text_math?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a text math node.
+
+.. _l54655854726565-746578745f6d617468:
+
+.. index::
+   pair: TeXTree; text_math
+
+:spadfun:`text_math`\: % -> % 
+  \ ``text_math(t)``\  builds a text math node with content \ ``t``\ .
+
+.. _l54655854726565-756e67726f7570:
+
+.. index::
+   pair: TeXTree; ungroup
+
+:spadfun:`ungroup`\: % -> \ :ref:`List <l4c697374>`\  % 
+  \ ``ungroup(t)``\  extracts underlying list from a group node.
+
+

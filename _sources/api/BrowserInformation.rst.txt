@@ -1,0 +1,261 @@
+.. index:: BrowserInformation
+
+.. _l42726f77736572496e666f726d6174696f6e:
+
+BrowserInformation
+==================
+
+:viewcode:`hypertex.spad line 12 <hypertex.spad#L12>` :editcode:`[edit on github] <hypertex.spad#L12>`
+
+
+This package makes available information about Spad constructors and operations.
+
+
+.. _l42726f77736572496e666f726d6174696f6e-616c6c5f636f6e7374727563746f7273:
+
+.. index::
+   pair: BrowserInformation; all_constructors
+
+:spadfun:`all_constructors`\: () -> Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) 
+  \ ``all_constructors()``\  gives list of all constructor names, split into categories, domains and packages.
+
+.. _l42726f77736572496e666f726d6174696f6e-616e636573746f7273:
+
+.. index::
+   pair: BrowserInformation; ancestors
+
+:spadfun:`ancestors`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ ``ancestors(c, use_args?)``\  computes ancestors of a constructor.
+
+.. _l42726f77736572496e666f726d6174696f6e-636f6e7374727563746f725f646f63756d656e746174696f6e:
+
+.. index::
+   pair: BrowserInformation; constructor_documentation
+
+:spadfun:`constructor_documentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``constructor_documentation(n)``\  gives documentation string for constructor with name \ ``s``\ . Returns empty string for undocumented constructors.
+
+.. _l42726f77736572496e666f726d6174696f6e-636f6e7374727563746f725f666f726d:
+
+.. index::
+   pair: BrowserInformation; constructor_form
+
+:spadfun:`constructor_form`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  \ ``constructor_form(n)``\  gives constructor form, that is \ ``S``\ -expression (list) with constructor name and argument names for constructor with name \ ``s``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-636f6e7374727563746f725f6b696e64:
+
+.. index::
+   pair: BrowserInformation; constructor_kind
+
+:spadfun:`constructor_kind`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  
+  \ ``constructor_kind(s)``\  gives constructor kind, that is one of category, domain, package.
+
+.. _l42726f77736572496e666f726d6174696f6e-636f6e7374727563746f725f6e616d653f:
+
+.. index::
+   pair: BrowserInformation; constructor_name?
+
+:spadfun:`constructor_name?`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``constructor_name?(s)``\  returns \ ``true``\  if and only if \ ``s``\  is a name of existing constructor.
+
+.. _l42726f77736572496e666f726d6174696f6e-636f6e7374727563746f725f7369676e6174757265:
+
+.. index::
+   pair: BrowserInformation; constructor_signature
+
+:spadfun:`constructor_signature`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  \ ``constructor_signature(s)``\  gives constructor signature, that is \ ``S``\ -expression (list) giving type of constructor and types of arguments.
+
+.. _l42726f77736572496e666f726d6174696f6e-636f6e766572745f7061747465726e:
+
+.. index::
+   pair: BrowserInformation; convert_pattern
+
+:spadfun:`convert_pattern`\: \ :ref:`String <l537472696e67>`\  -> Union(\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``convert_pattern(n)``\  converts search pattern \ ``n``\  to an internal form used by \ ``do_match``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-64656661756c745f6e616d653f:
+
+.. index::
+   pair: BrowserInformation; default_name?
+
+:spadfun:`default_name?`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``default_name?(s)``\  returns \ ``true``\  if and only if \ ``s``\  has format of name of a default package, that is name of \ ``s``\  ends in an ampersand.
+
+.. _l42726f77736572496e666f726d6174696f6e-646f5f6d61746368:
+
+.. index::
+   pair: BrowserInformation; do_match
+
+:spadfun:`do_match`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``do_match(p, s)``\  returns \ ``true``\  if and only if \ ``s``\  matches to pattern \ ``p``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-646f776e63617365:
+
+.. index::
+   pair: BrowserInformation; downcase
+
+:spadfun:`downcase`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``downcase(s)``\  converts \ ``s``\  to lower case.
+
+.. _l42726f77736572496e666f726d6174696f6e-6578706f727473:
+
+.. index::
+   pair: BrowserInformation; exports
+
+:spadfun:`exports`\: \ :ref:`SExpression <l5345787072657373696f6e>`\  -> Record(cats: \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ), ops: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) 
+  \ ``exports(c)``\  gives explicit exports of a constructor.
+
+.. _l42726f77736572496e666f726d6174696f6e-6578706f7365645f636f6e7374727563746f723f:
+
+.. index::
+   pair: BrowserInformation; exposed_constructor?
+
+:spadfun:`exposed_constructor?`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ ``exposed_constructor?(s)``\  returns \ ``true``\  if and only if \ ``s``\  is a name of an exposed constructor.
+
+.. _l42726f77736572496e666f726d6174696f6e-66696c7465725f6f7073:
+
+.. index::
+   pair: BrowserInformation; filter_ops
+
+:spadfun:`filter_ops`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
+  \ ``filter_ops(p, ol)``\  gives list of operations from ol with names matching \ ``p``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-66696c7465725f73796d626f6c73:
+
+.. index::
+   pair: BrowserInformation; filter_symbols
+
+:spadfun:`filter_symbols`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
+  \ ``filter_symbols(p, sl)``\  gives list of symbols from \ ``sl``\  with names matching \ ``p``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-67726f75705f62795f636f6e646974696f6e:
+
+.. index::
+   pair: BrowserInformation; group_by_condition
+
+:spadfun:`group_by_condition`\: \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(grp_tag: \ :ref:`SExpression <l5345787072657373696f6e>`\ , constrs: \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ )) 
+  \ ``group_by_condition(ol)``\  splits list of constructors with conditions depending on their conditions.
+
+
+.. index::
+   pair: BrowserInformation; group_by_condition
+
+:spadfun:`group_by_condition`\: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) -> \ :ref:`List <l4c697374>`\  Record(grp_tag: \ :ref:`SExpression <l5345787072657373696f6e>`\ , ops: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) 
+  \ ``group_by_condition(ol)``\  splits list of operations depending on their conditions.
+
+.. _l42726f77736572496e666f726d6174696f6e-67726f75705f62795f696d706c656d656e746174696f6e:
+
+.. index::
+   pair: BrowserInformation; group_by_implementation
+
+:spadfun:`group_by_implementation`\: (\ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) -> \ :ref:`List <l4c697374>`\  Record(grp_tag: \ :ref:`SExpression <l5345787072657373696f6e>`\ , ops: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) 
+  group_by_condition(al, \ ``df``\ , ol) splits list of operations ol depending on their implementation. ol must be a list of operations from a domain with form \ ``df``\ , al must fully specify operations of the domain.
+
+.. _l42726f77736572496e666f726d6174696f6e-67726f75705f62795f6f726967696e:
+
+.. index::
+   pair: BrowserInformation; group_by_origin
+
+:spadfun:`group_by_origin`\: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) -> \ :ref:`List <l4c697374>`\  Record(grp_tag: \ :ref:`SExpression <l5345787072657373696f6e>`\ , ops: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) 
+  \ ``group_by_origin(ol)``\  splits list of operations depending on their origin.
+
+.. _l42726f77736572496e666f726d6174696f6e-6f7065726174696f6e73:
+
+.. index::
+   pair: BrowserInformation; operations
+
+:spadfun:`operations`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
+  \ ``operations(c, use_args?)``\  computes operation list of a constructor.
+
+.. _l42726f77736572496e666f726d6174696f6e-6f70735f66726f6d5f6578706f727473:
+
+.. index::
+   pair: BrowserInformation; ops_from_exports
+
+:spadfun:`ops_from_exports`\: () -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
+  \ ``ops_from_exports()``\  gives list of all exported operations computed from constructor exports.
+
+.. _l42726f77736572496e666f726d6174696f6e-6f70735f66726f6d5f6c69626462:
+
+.. index::
+   pair: BrowserInformation; ops_from_libdb
+
+:spadfun:`ops_from_libdb`\: () -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
+  \ ``ops_from_libdb()``\  gives list of all exported operations from libdb. This operation is present only to check compatibility with old code and will be removed in the future.
+
+.. _l42726f77736572496e666f726d6174696f6e-706172656e7473:
+
+.. index::
+   pair: BrowserInformation; parents
+
+:spadfun:`parents`\: \ :ref:`SExpression <l5345787072657373696f6e>`\  -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ ``parents(c)``\  gives parents (that is direct ancestors) of a constructor.
+
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f636f6e7374727563746f7273:
+
+.. index::
+   pair: BrowserInformation; search_constructors
+
+:spadfun:`search_constructors`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) -> Union(Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``search_constructors(n, t)``\  searches for constructors with name matching \ ``n``\ . \ ``t``\  may be \ ``k``\  (meaning all constructors), \ ``c``\ , \ ``d``\  or \ ``p``\  meaning only categories, domains or packages are returned.
+
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f646f63756d656e746174696f6e:
+
+.. index::
+   pair: BrowserInformation; search_documentation
+
+:spadfun:`search_documentation`\: \ :ref:`String <l537472696e67>`\  -> Union(Record(con_info: Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ), op_info: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``search_documentation(n)``\  searches for constructors and operations with documentation string matching \ ``n``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f67656e6572616c:
+
+.. index::
+   pair: BrowserInformation; search_general
+
+:spadfun:`search_general`\: \ :ref:`String <l537472696e67>`\  -> Union(Record(con_info: Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ), op_info: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``search_general(n)``\  searches constructors and operations with name matching \ ``n``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f6f7065726174696f6e73:
+
+.. index::
+   pair: BrowserInformation; search_operations
+
+:spadfun:`search_operations`\: \ :ref:`String <l537472696e67>`\  -> Union(\ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``search_operations(n)``\  searches for operations with name matching \ ``n``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f6f7065726174696f6e735f6c69626462:
+
+.. index::
+   pair: BrowserInformation; search_operations_libdb
+
+:spadfun:`search_operations_libdb`\: \ :ref:`String <l537472696e67>`\  -> Union(\ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``search_operations_libdb(n)``\  searches for all operations with name matching \ ``n``\  using old code. This operation is present only to check compatibility with old code and will be removed in the future.
+
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f6f706c:
+
+.. index::
+   pair: BrowserInformation; search_opl
+
+:spadfun:`search_opl`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) -> Union(\ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
+  \ ``search_opl(n, ol)``\  gives list of operations from ol with names matching \ ``n``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-73696d705f6f70735f636f6e646974696f6e73:
+
+.. index::
+   pair: BrowserInformation; simp_ops_conditions
+
+:spadfun:`simp_ops_conditions`\: (\ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )), \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
+  \ ``simp_ops_conditions(ol, cf, df)``\  simplifies conditions of operations in \ ``ol``\  after arguments in \ ``df``\  are substituded for arguments in \ ``cf``\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-7375626c69735f666f726d616c:
+
+.. index::
+   pair: BrowserInformation; sublis_formal
+
+:spadfun:`sublis_formal`\: (\ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  \ ``sublis_formal(args, expr)``\  replaces formal variable symbols in expr by corresponding elements of \ ``args``\ .
+
+

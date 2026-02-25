@@ -57,7 +57,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSDateString
 
 :spadfun:`jlWSDateString`\: () -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlWSDateString()``\  returns the WSExpression string of the local date and time. For example: \example{toString dateTime()}
+  \ ``jlWSDateString()``\  returns the WSExpression string of the local date and time. For example: \example{toString jlWSDateString()}
 
 
 .. index::
@@ -79,7 +79,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSDocumentation
 
 :spadfun:`jlWSDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlWSDocumentation(sym)``\  prints \ ``WS``\  informations about the symbol \ ``sym``\ . For example: \example{jlWSDocumentation sin}
+  \ ``jlWSDocumentation(sym)``\  prints \ ``WS``\  information about the symbol \ ``sym``\ . Note that the \ ``WS``\  language is preferable. Trivial implementation. For example: \example{jlWSDocumentation sin} \example{jlWSDocumentation ArcSin}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274:
 
@@ -87,7 +87,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSExport
 
 :spadfun:`jlWSExport`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlWSExport(file.ext, obj)``\  exports the object obj to the file file.ext. The extension ext will determine the saved format. A \ ``WS``\  expression for example can be exported in an image file, it will be saved in the \ ``WS``\  'StandardForm' whereas in FriCAS it is outputted in \ ``WS``\  'OutputForm\ ``':``\  \example{x:=jWSExpr(x);jlWSExport("legendreP.png", legendreP(7, x))}
+  \ ``jlWSExport(file.ext, obj)``\  exports the object obj to the file file.ext. The extension ext will determine the saved format. A \ ``WS``\  expression for example can be exported in an image file, it will be saved in the \ ``WS``\  'StandardForm' whereas in FriCAS it is displayed in \ ``WS``\  'OutputForm\ ``':``\  \example{x:=jWSExpr(x);jlWSExport("legendreP.png", legendreP(7, x))}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274537472696e67:
 
@@ -95,22 +95,37 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSExportString
 
 :spadfun:`jlWSExportString`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlWSExportString(expr, jWSString(format))``\  returns the string representation of \ ``expr``\  in the format form. Use toString or string to obtain the FriCAS String. For example: \example{jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"} \example{jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"} \example{string jlWSExportString(\%,jWSString "TeX")}
+  \ ``jlWSExportString(expr, jWSString(format))``\  returns the string representation of \ ``expr``\  in the specified format. Use toString or string to obtain the FriCAS String. For example: \example{jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"} \example{jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"} \example{string jlWSExportString(\%,jWSString "TeX")}
+
+.. _l57535574696c69747946756e6374696f6e73-6a6c575346696c65466f726d6174:
+
+.. index::
+   pair: WSUtilityFunctions; jlWSFileFormat
+
+:spadfun:`jlWSFileFormat`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSFileFormat(src, list(form))``\  tries to determine the format of the source \ ``src``\  from its content using the list of formats form. Returns \ ``WS``\  None if no format is found. Can be used with jWSImport. For example: \ ``jlWSFileFormat("examples/customers-100.csv",jWSExpr "{_"CSV_",_"TSV_"}")``\ 
+
+
+.. index::
+   pair: WSUtilityFunctions; jlWSFileFormat
+
+:spadfun:`jlWSFileFormat`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSFileFormat(src)``\  tries to determine the format of the source \ ``src``\  from its content. Can be used with jWSImport. For example: \example{jlWSFileFormat("examples/customers-100.csv")}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c5753496d706f7274:
 
 .. index::
    pair: WSUtilityFunctions; jlWSImport
 
-:spadfun:`jlWSImport`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  jWSImport(expr, form) imports expr with format form.
+:spadfun:`jlWSImport`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSImport(myfile, form)``\  imports the file \ ``myfile``\  with format form. For example: \example{file:=jlWSImport(jWSString("examples/customers-100.csv"), jWSString "CSV");}
 
 
 .. index::
    pair: WSUtilityFunctions; jlWSImport
 
-:spadfun:`jlWSImport`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  jWSImport(expr) imports expr.
+:spadfun:`jlWSImport`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSImport(src)``\  imports the source \ ``src``\ . For example: \example{file:=jlWSImport jWSString "examples/customers-100.csv";} \example{jlWSDateString(file.2.11)}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c5753506c6f74:
 
@@ -120,27 +135,21 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 :spadfun:`jlWSPlot`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   \ ``jlWSPlot(expr, options)``\  is the \ ``WS``\  plot function. Since it should be run in a Wolfram notebook or any other supported graphical interfaces, the Wolfram Jupyter "plugin" for example, it is left to the user for testing purposes. The following uses the jlWSExport function: \example{x:=jWSExpr(x);opt:=jWSList [x,-5,5]} \example{jlWSExport("sin.png", jlWSPlot(sin(x),opt))}
 
-.. _l57535574696c69747946756e6374696f6e73-6a6c575352616e6765:
+.. _l57535574696c69747946756e6374696f6e73-6a6c57535365656452616e646f6d21:
 
 .. index::
-   pair: WSUtilityFunctions; jlWSRange
+   pair: WSUtilityFunctions; jlWSSeedRandom!
 
-:spadfun:`jlWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``jlWSRange(n,m)``\  returns a WSList that ranges from \ ``n``\  to \ ``m``\ .
+:spadfun:`jlWSSeedRandom!`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSSeedRandom!(n)``\  reseeds the random number generator with \ ``n``\  as seed. Returns the random generator state.
 
-
-.. index::
-   pair: WSUtilityFunctions; jlWSRange
-
-:spadfun:`jlWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``jlWSRange(n,m,d)``\  returns a WSList that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
-
+.. _l57535574696c69747946756e6374696f6e73-6a6c5753536e6970706574:
 
 .. index::
-   pair: WSUtilityFunctions; jlWSRange
+   pair: WSUtilityFunctions; jlWSSnippet
 
-:spadfun:`jlWSRange`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``jlWSRange(n)``\  returns a WSList that ranges from 1 to \ ``n``\ . For example: \example{jlWSRange(10)@WSLIST(WSINT)}
+:spadfun:`jlWSSnippet`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ ``jlWSSnippet(expr, n)``\  returns the first (or last) \ ``n``\  snippets of the WSExpression \ ``expr``\ . For example: \example{jlWSSnippet(jlWSImport jWSString "http://www.fricas.org/",-2)}
 
 .. _l57535574696c69747946756e6374696f6e73-6a5753446174654f626a656374:
 
@@ -164,13 +173,27 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 :spadfun:`jWSDateObject`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   \ ``jWSDateObject(expr)``\  returns the WSExpression object of the date from \ ``expr``\ .
 
-.. _l57535574696c69747946756e6374696f6e73-7365656452616e646f6d:
+.. _l57535574696c69747946756e6374696f6e73-6a575352616e6765:
 
 .. index::
-   pair: WSUtilityFunctions; seedRandom
+   pair: WSUtilityFunctions; jWSRange
 
-:spadfun:`seedRandom`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``seedRandom(n)``\  reseeds the random number generator with \ ``n``\  as seed. Returns the random generator state.
+:spadfun:`jWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``jWSRange(n,m)``\  returns a WSList that ranges from \ ``n``\  to \ ``m``\ .
+
+
+.. index::
+   pair: WSUtilityFunctions; jWSRange
+
+:spadfun:`jWSRange`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ , \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``jWSRange(n,m,d)``\  returns a WSList that ranges from \ ``n``\  to \ ``m``\  with step \ ``d``\ .
+
+
+.. index::
+   pair: WSUtilityFunctions; jWSRange
+
+:spadfun:`jWSRange`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
+  \ ``jWSRange(n)``\  returns a WSList that ranges from 1 to \ ``n``\ . For example: \example{jWSRange(10)@WSLIST(WSINT)}
 
 .. _l57535574696c69747946756e6374696f6e73-7572616e643031436f6d706c6578:
 
@@ -223,6 +246,6 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; zeroMatrix
 
 :spadfun:`zeroMatrix`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``zeroMatrix(m, n)``\  returns a \ ``m``\ -by-\ ``n``\  zero matrix.
+  \ ``zeroMatrix(m, n)``\  returns an \ ``m``\ -by-\ ``n``\  zero matrix.
 
 

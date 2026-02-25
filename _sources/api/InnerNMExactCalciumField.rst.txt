@@ -5,12 +5,12 @@
 InnerNMExactCalciumField Options
 ================================
 
-:viewcode:`jnemo.spad line 871 <jnemo.spad#L871>` :editcode:`[edit on github] <jnemo.spad#L871>`
+:viewcode:`jnemo.spad line 935 <jnemo.spad#L935>` :editcode:`[edit on github] <jnemo.spad#L935>`
 
 * Options: \ :ref:`JLObjDict <l4a4c4f626a44696374>`\ 
 
 
-\ :ref:`InnerNMExactCalciumField <l496e6e65724e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo package. Inner domain using options, see https://fredrikj.net/calcium/ca.html\#context-options for hints.
+\ :ref:`InnerNMExactCalciumField <l496e6e65724e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo Julia package. Inner domain using options, see https://fredrikj.net/calcium/ca.html\#context-options for hints.
 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-30:
@@ -369,7 +369,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; complexNormalForm
 
 :spadfun:`complexNormalForm`\: % -> % 
-  \ ``complexNormalForm(x)``\  returns \ ``x``\  rewritten using standard transformations. See the Nemo.\ ``jl``\  documentation fo more informations.
+  \ ``complexNormalForm(x)``\  returns \ ``x``\  rewritten using standard transformations. See the Nemo.\ ``jl``\  documentation for more information.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-636f6e646974696f6e50:
 
@@ -634,7 +634,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; floor
 
 :spadfun:`floor`\: % -> % 
-  \ ``floor(z)``\  returns the largest integer below or equal ot \ ``z``\ .
+  \ ``floor(z)``\  returns the largest integer below or equal to \ ``z``\ .
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-47616d6d61:
 
@@ -740,7 +740,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; jinecf
 
 :spadfun:`jinecf`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``jinecf(real,cplx)``\  coerces \ ``real``\  and \ ``cplx``\  to a Nemo exact where \ ``real``\  is the \ ``real``\  part and \ ``cplx``\  the complex part.
+  \ ``jinecf(real, cplx)``\  coerces \ ``real``\  and cplx to a Nemo exact complex number where \ ``real``\  is the \ ``real``\  part and cplx the complex part.
 
 
 .. index::
@@ -809,6 +809,11 @@ InnerNMExactCalciumField Options
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -817,6 +822,11 @@ InnerNMExactCalciumField Options
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c4e4d52696e67:
@@ -859,7 +869,7 @@ InnerNMExactCalciumField Options
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6c61746578:
@@ -946,7 +956,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; negativeInfinity
 
 :spadfun:`negativeInfinity`\: () -> % 
-  \ ``negativeInfinity()``\  returns negtive infinity.
+  \ ``negativeInfinity()``\  returns negative infinity.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-6e6f726d:
 
@@ -1035,14 +1045,14 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; random
 
 :spadfun:`random`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``random(depth, bits)``\  returns a random number with size of coefficients up to bits. if \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1.
+  \ ``random(depth, bits)``\  returns a random number with size of coefficients up to bits. If \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1.
 
 
 .. index::
    pair: InnerNMExactCalciumField; random
 
 :spadfun:`random`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``random(depth, bits, type)``\  returns a random number with size of coefficients up to \ ``bits``\ . if \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1. \ ``depth``\  is not used for rationals. type can be one of: :rational (returns a rational) :null (returns value with default settings) :special (returns a special value of a number - can throw an error if it isn\ ``'t``\  a number).
+  \ ``random(depth, bits, type)``\  returns a random number with size of coefficients up to \ ``bits``\ . If \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1. \ ``depth``\  is not used for rationals. type can be one of: :rational (returns a rational) :null (returns value with default settings) :special (returns a special value of a number - can throw an error if it isn\ ``'t``\  a number).
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-72616e6b:
 
@@ -1209,7 +1219,7 @@ InnerNMExactCalciumField Options
    pair: InnerNMExactCalciumField; sin
 
 :spadfun:`sin`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``sin(x, repr)``\  return sin(\ ``x``\ ) using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :exponential :tangent :direct
+  \ ``sin(x, repr)``\  returns sin(\ ``x``\ ) using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :exponential :tangent :direct Example: sin(\ ``x``\ ,"exponential") \ ``--``\  automatically coerced.
 
 .. _l496e6e65724e4d457861637443616c6369756d4669656c64-73696e68:
 
@@ -1456,6 +1466,8 @@ InnerNMExactCalciumField Options
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 

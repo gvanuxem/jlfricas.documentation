@@ -5,11 +5,16 @@
 JLObjDict
 =========
 
-:viewcode:`jobject.spad line 995 <jobject.spad#L995>` :editcode:`[edit on github] <jobject.spad#L995>`
+:viewcode:`jobject.spad line 396 <jobject.spad#L396>` :editcode:`[edit on github] <jobject.spad#L396>`
 
 
 Convenience domain for Julia Dictionaries, objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example.
 
+
+.. _l4a4c4f626a44696374-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a44696374-3d:
 
@@ -46,14 +51,21 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`Any <l416e79>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``delete!(dict, key)``\  delete the mapping corresponding to the the key of \ ``dict``\ .
+  \ ``delete!(dict, key)``\  deletes the mapping corresponding to the the key of \ ``dict``\ .
+
+
+.. index::
+   pair: JLObjDict; delete!
+
+:spadfun:`delete!`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``delete!(dict, key)``\  deletes the mapping corresponding to the the key of \ ``dict``\ .
 
 
 .. index::
    pair: JLObjDict; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``delete!(dict, key)``\  delete the mapping corresponding to the the key of \ ``dict``\ .
+  \ ``delete!(dict, key)``\  deletes the mapping corresponding to the the key of \ ``dict``\ .
 
 .. _l4a4c4f626a44696374-656c74:
 
@@ -66,6 +78,13 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 
 \ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+
+.. index::
+   pair: JLObjDict; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``elt(dict, ind)``\  returns the element at index ind of \ ``dict``\ . It can be used, for example, with a Tuple or a Vector.
 
 
 .. index::
@@ -143,6 +162,11 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a44696374-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c4f626a44696374-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -151,6 +175,11 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 .. _l4a4c4f626a44696374-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a44696374-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a44696374-6a6c4f626a656374:
@@ -180,7 +209,7 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 
 .. _l4a4c4f626a44696374-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a44696374-6c61746578:
@@ -224,6 +253,13 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 .. index::
    pair: JLObjDict; qelt
 
+:spadfun:`qelt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``qelt(dict, ind)``\  returns the element at index ind of \ ``dict``\ . It can be used, for example, with a Tuple or a Vector.
+
+
+.. index::
+   pair: JLObjDict; qelt
+
 :spadfun:`qelt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   \ ``qelt(dict, sym)``\  returns the value associated to the key \ ``sym``\  of \ ``dict``\ . No checks are done regarding the existence of the key \ ``sym``\  at the FriCAS level. Returns the Julia missing value if the key does not exist.
 
@@ -239,6 +275,13 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 
 :spadfun:`setelt!`\: (%, \ :ref:`Any <l416e79>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
   \ ``setelt!(dict, key, val)``\  sets the val to the \ ``key``\  of \ ``dict``\ . If the \ ``key``\  does not exist it will be created.
+
+
+.. index::
+   pair: JLObjDict; setelt!
+
+:spadfun:`setelt!`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
+  \ ``setelt!(dict, ind, val)``\  sets the val to the index \ ``ind``\  of \ ``dict``\ . If the index does not exist it will be created.
 
 
 .. index::
@@ -265,6 +308,8 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
 
 \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\  
 

@@ -5,12 +5,12 @@
 WSAPReal prec
 =============
 
-:viewcode:`jws.spad line 741 <jws.spad#L741>` :editcode:`[edit on github] <jws.spad#L741>`
+:viewcode:`jws.spad line 752 <jws.spad#L752>` :editcode:`[edit on github] <jws.spad#L752>`
 
 * prec: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Transport Protocol.
+Julia Wolfram Symbolic arbitrary precision real numbers using Wolfram Symbolic Transport Protocol.
 
 
 .. _l575341505265616c-30:
@@ -277,7 +277,7 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
    pair: WSAPReal; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``coerce(x)``\  coerce \ ``x``\  to a WSExpression.
+  \ ``coerce(x)``\  coerces \ ``x``\  to a WSExpression.
 
 
 .. index::
@@ -306,7 +306,7 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
    pair: WSAPReal; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce(str)``\  construct \ ``str``\  as a WSAPReal.
+  \ ``coerce(str)``\  constructs \ ``str``\  as a WSAPReal.
 
 .. _l575341505265616c-636f6d6d757461746f72:
 
@@ -607,6 +607,11 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l575341505265616c-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l575341505265616c-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -620,6 +625,11 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
 .. _l575341505265616c-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l575341505265616c-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l575341505265616c-6a6c4f626a656374:
@@ -654,7 +664,7 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
 
 .. _l575341505265616c-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l575341505265616c-6a5753496e74657270726574:
@@ -757,7 +767,7 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
    pair: WSAPReal; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  compute logarithm of \ ``x``\  in base 10.
+  \ ``log10(x)``\  computes the logarithm of \ ``x``\  in base 10.
 
 .. _l575341505265616c-6c6f6732:
 
@@ -765,7 +775,7 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
    pair: WSAPReal; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  compute logarithm of \ ``x``\  in base 2.
+  \ ``log2(x)``\  computes the logarithm of \ ``x``\  in base 2.
 
 .. _l575341505265616c-6c6f67:
 
@@ -899,14 +909,14 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
    pair: WSAPReal; rationalApproximation
 
 :spadfun:`rationalApproximation`\: % -> \ :ref:`WSRational <l5753526174696f6e616c>`\  
-  \ ``rationalApproximation(x)``\  try to find a rational approximation of \ ``x``\ .
+  \ ``rationalApproximation(x)``\  tries to find a rational approximation of \ ``x``\ .
 
 
 .. index::
    pair: WSAPReal; rationalApproximation
 
 :spadfun:`rationalApproximation`\: (%, %) -> \ :ref:`WSRational <l5753526174696f6e616c>`\  
-  \ ``rationalApproximation(x, dx)``\  try to find a rational approximation of \ ``x``\  within tolerance \ ``dx``\ .
+  \ ``rationalApproximation(x, dx)``\  tries to find a rational approximation of \ ``x``\  within tolerance \ ``dx``\ .
 
 .. _l575341505265616c-7265636970:
 
@@ -996,7 +1006,7 @@ Julia Wolfram Symbolic arbitrary pecision real numbers using Wolfram Symbolic Tr
    pair: WSAPReal; sinc
 
 :spadfun:`sinc`\: % -> % 
-  \ ``sinc(x)``\  compues the unormalized sinc of \ ``x``\ , sin(\ ``x``\ )\ ``/x``\  and 0 if \ ``x``\  = 0.
+  \ ``sinc(x)``\  computes the unnormalized sinc of \ ``x``\ , sin(\ ``x``\ )\ ``/x``\  and 0 if \ ``x``\  = 0.
 
 .. _l575341505265616c-73696e68:
 

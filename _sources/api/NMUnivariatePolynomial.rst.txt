@@ -5,14 +5,14 @@
 NMUnivariatePolynomial(R, x)
 ============================
 
-:viewcode:`jnpoly.spad line 10 <jnpoly.spad#L10>` :editcode:`[edit on github] <jnpoly.spad#L10>`
+:viewcode:`jnpoly.spad line 1 <jnpoly.spad#L1>` :editcode:`[edit on github] <jnpoly.spad#L1>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 * x: \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Vanuxem Date Created: March, 2024 Nested polynomials Fatemans\ ``'s``\  benchmark: \example{R:=NUP(NINT,'x)} \example{x:=x::R} \example{RR := NUP(R,'y)} \example{y:=y::RR} \example{RRR := NUP(RR,'z)} \example{z:=z::RRR} \example{T:=NUP(RRR,'t)} \example{t:=t::T} \example{f := 1 + x + y + z + t} \example{p := f^30;} \example{)set message time on} \example{p*(p + 1);}
+Univariate polynomial domain using the Nemo Julia package Author: \ ``G``\ . Vanuxem Date Created: March, 2024 Nested polynomials Fatemans\ ``'s``\  benchmark: \example{R:=NUP(NINT,'x)} \example{x:=x::R} \example{RR := NUP(R,'y)} \example{y:=y::RR} \example{RRR := NUP(RR,'z)} \example{z:=z::RRR} \example{T:=NUP(RRR,'t)} \example{t:=t::T} \example{f := 1 + x + y + z + t} \example{p := f^30;} \example{)set message time on} \example{p*(p + 1);}
 
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-30:
@@ -96,14 +96,14 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; +
 
 :spadfun:`+`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``p``\  * \ ``q``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Intger))
+  \ ``p``\  * \ ``q``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Integer))
 
 
 .. index::
    pair: NMUnivariatePolynomial; +
 
 :spadfun:`+`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``q``\  * \ ``p``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Intger))
+  \ ``q``\  * \ ``p``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Integer))
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-2d:
 
@@ -491,7 +491,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; etaQExp
 
 :spadfun:`etaQExp`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``etaQExp(r,n,p)``\  returns the \ ``q``\ -expansion to length \ ``n``\  of the Dedekind eta function (without the leading factor \ ``q^``\ (1/ 24)) raised to the power \ ``r``\ , (\ ``q^``\ (\ ``−1/24``\ )\ ``*η``\ (\ ``q``\ ))\ ``^r``\ .
+  \ ``q^``\ (1/24)) raised to the power \ ``r``\ , (\ ``q^``\ (\ ``−1/24``\ )\ ``*η``\ (\ ``q``\ ))\ ``^r``\ . etaQExp(\ ``r``\ ,\ ``n``\ ,\ ``p``\ ) returns the \ ``q``\ -expansion to length \ ``n``\  of the Dedekind eta function (without the leading factor
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6575636c696465616e53697a65:
 
@@ -699,6 +699,11 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -707,6 +712,11 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c4e4d52696e67:
@@ -741,7 +751,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6a6e7570:
@@ -913,7 +923,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; monomialRecursive?
 
 :spadfun:`monomialRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recurisvely (all scalar types).
+  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recursively (all scalar types).
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c73:
 
@@ -1194,7 +1204,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; shiftLeft
 
 :spadfun:`shiftLeft`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``shiftLeft(p)``\  left shift \ ``p``\ .
+  \ ``shiftLeft(p)``\  shifts \ ``p``\  left.
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-7368696674526967687421:
 
@@ -1210,7 +1220,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; shiftRight
 
 :spadfun:`shiftRight`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``shiftRight(p)``\  right shift \ ``p``\ .
+  \ ``shiftRight(p)``\  shifts \ ``p``\  right.
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-73697a654c6573733f:
 
@@ -1322,7 +1332,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; trailingCoefficient
 
 :spadfun:`trailingCoefficient`\: % -> R 
-  \ ``trailingCoefficient(p)``\  returns the trailing coefficientof \ ``p``\ .
+  \ ``trailingCoefficient(p)``\  returns the trailing coefficient of \ ``p``\ .
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-7472756e63617465:
 
@@ -1330,7 +1340,7 @@ Univariate polynomial domain using the Julia package Nemo Author: \ ``G``\ . Van
    pair: NMUnivariatePolynomial; truncate
 
 :spadfun:`truncate`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``truncate(p, n)``\  return \ ``p``\  truncated to \ ``n``\  term. It\ ``'s``\  the remainder of the division by \ ``x^n``\ .
+  \ ``truncate(p, n)``\  returns \ ``p``\  truncated to \ ``n``\  terms. It\ ``'s``\  the remainder of the division by \ ``x^n``\ .
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-756e69743f:
 

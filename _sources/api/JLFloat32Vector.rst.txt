@@ -116,7 +116,7 @@ This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking
    pair: JLFloat32Vector; copy!
 
 :spadfun:`copy!`\: (%, %) -> % 
-  \ ``copy!(b,a)``\  copies efficiently a to \ ``b``\ . No check are done on arrays dimension.
+  \ ``copy!(b,a)``\  efficiently copies a to \ ``b``\ . No checks are performed on array dimensions.
 
 .. _l4a4c466c6f61743332566563746f72-636f7079:
 
@@ -222,7 +222,7 @@ This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking
    pair: JLFloat32Vector; exprand
 
 :spadfun:`exprand`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``exprand(n)``\  return a vector of size \ ``n``\  with random elements from the exponential distribution with scale 1.
+  \ ``exprand(n)``\  returns a vector of size \ ``n``\  with random elements from the exponential distribution with scale 1.
 
 .. _l4a4c466c6f61743332566563746f72-66696c6c21:
 
@@ -278,14 +278,14 @@ This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking
    pair: JLFloat32Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\  and returns a JLFloat32Vector.
+  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\ . and returns a JLFloat32Vector.
 
 
 .. index::
    pair: JLFloat32Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  
-  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\  and returns a Julia \ ``Float32``\ .
+  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\ . and returns a Julia \ ``Float32``\ .
 
 
 .. index::
@@ -321,7 +321,7 @@ This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking
    pair: JLFloat32Vector; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-vise.
+  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.
 
 .. _l4a4c466c6f61743332566563746f72-6a6c446973706c6179:
 
@@ -476,7 +476,7 @@ This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking
    pair: JLFloat32Vector; qnew
 
 :spadfun:`qnew`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``qnew(n)``\  returns an unitialized vector of dimension \ ``n``\ .
+  \ ``qnew(n)``\  returns an uninitialized vector of dimension \ ``n``\ .
 
 .. _l4a4c466c6f61743332566563746f72-71736574656c7421:
 
@@ -605,7 +605,7 @@ This domain provides a fast \ ``JLFloat32``\  vector type with no bound checking
    pair: JLFloat32Vector; urand
 
 :spadfun:`urand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\ ) -> % 
-  \ ``urand(n, x)``\  returns a uniformly (0..\ ``x``\ ) distributed Julia vector of size \ ``n``\ . Use the underying Common Lisp random number generator so jlSeed! will not affect it.
+  \ ``urand(n, x)``\  returns a uniformly (0..\ ``x``\ ) distributed Julia vector of size \ ``n``\ . Use the underlying Common Lisp random number generator so jlSeed! will not affect it.
 
 .. _l4a4c466c6f61743332566563746f72-766563746f72:
 

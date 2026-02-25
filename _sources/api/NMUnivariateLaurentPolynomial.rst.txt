@@ -5,14 +5,14 @@
 NMUnivariateLaurentPolynomial(R, x)
 ===================================
 
-:viewcode:`jnpoly.spad line 360 <jnpoly.spad#L360>` :editcode:`[edit on github] <jnpoly.spad#L360>`
+:viewcode:`jnpoly.spad line 351 <jnpoly.spad#L351>` :editcode:`[edit on github] <jnpoly.spad#L351>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 * x: \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author: \ ``G``\ . Vanuxem Date Created: Dec, 2024
+Univariate laurent polynomial domain using the AbstractAlgebra Julia package Author: \ ``G``\ . Vanuxem Date Created: Dec, 2024
 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-30:
@@ -96,14 +96,14 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
    pair: NMUnivariateLaurentPolynomial; +
 
 :spadfun:`+`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``p``\  * \ ``q``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Intger))
+  \ ``p``\  * \ ``q``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Integer))
 
 
 .. index::
    pair: NMUnivariateLaurentPolynomial; +
 
 :spadfun:`+`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``q``\  * \ ``p``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Intger))
+  \ ``q``\  * \ ``p``\  is the sum of \ ``p``\  and a rational number \ ``q``\  (Fraction(Integer))
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-2d:
 
@@ -667,6 +667,11 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -675,6 +680,11 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c4e4d52696e67:
@@ -709,7 +719,7 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6a6e756c70:
@@ -864,7 +874,7 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
    pair: NMUnivariateLaurentPolynomial; monomialRecursive?
 
 :spadfun:`monomialRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recurisvely (all scalar types).
+  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recursively (all scalar types).
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d6f6e6f6d69616c73:
 
@@ -1098,7 +1108,7 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
    pair: NMUnivariateLaurentPolynomial; reverse
 
 :spadfun:`reverse`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``reverse the``\  coefficients of \ ``p``\  (the leading becomes the trailing) and normalise the resulting polynomial. Adjust the length to \ ``n``\  so the resulting polynomial is trucated or padded with zeroes before the leading term if necessary
+  \ ``reverse the``\  coefficients of \ ``p``\  (the leading becomes the trailing) and normalise the resulting polynomial. Adjust the length to \ ``n``\  so the resulting polynomial is truncated or padded with zeroes before the leading term if necessary
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7269676874506f776572:
 
@@ -1212,7 +1222,7 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
    pair: NMUnivariateLaurentPolynomial; trailingCoefficient
 
 :spadfun:`trailingCoefficient`\: % -> R 
-  \ ``trailingCoefficient(p)``\  returns the trailing coefficientof \ ``p``\ .
+  \ ``trailingCoefficient(p)``\  returns the trailing coefficient of \ ``p``\ .
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7472756e63617465:
 
@@ -1220,7 +1230,7 @@ Univariate laurent polynomial domain using Julia AbstractAlgebra package  Author
    pair: NMUnivariateLaurentPolynomial; truncate
 
 :spadfun:`truncate`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``truncate(p, n)``\  return \ ``p``\  truncated to \ ``n``\  term. It\ ``'s``\  the remainder of the division by \ ``x^n``\ .
+  \ ``truncate(p, n)``\  returns \ ``p``\  truncated to \ ``n``\  terms. It\ ``'s``\  the remainder of the division by \ ``x^n``\ .
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e69743f:
 

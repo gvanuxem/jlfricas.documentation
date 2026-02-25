@@ -5,12 +5,12 @@
 JLMatrix R
 ==========
 
-:viewcode:`jobject.spad line 1971 <jobject.spad#L1971>` :editcode:`[edit on github] <jobject.spad#L1971>`
+:viewcode:`jobject.spad line 1427 <jobject.spad#L1427>` :editcode:`[edit on github] <jobject.spad#L1427>`
 
 * R: \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
 
 
-This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt\ ``'s``\ . Minimum index is 1. Beware, for matrix with Nemo elements, contrary to Julia matrix, Nemo follows the convention of the \ ``C``\  libraries, it wraps and uses row major representation.
+This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt\ ``'s``\ . Minimum index is 1. Beware, for matrix with Nemo elements, contrary to Julia matrix, Nemo follows the \ ``C``\  language convention, it wraps and uses row major representation.
 
 
 .. _l4a4c4d6174726978-23:
@@ -218,13 +218,50 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 \ :ref:`diagonalMatrix <l4d617472697843617465676f7279-646961676f6e616c4d6174726978>`\ \: \ :ref:`List <l4c697374>`\  R -> % 
   from \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (R, \ :ref:`JLVector <l4a4c566563746f72>`\  R, \ :ref:`JLVector <l4a4c566563746f72>`\  R)
 
+.. _l4a4c4d6174726978-656967656e537061636573:
+
+.. index::
+   pair: JLMatrix; eigenSpaces
+
+:spadfun:`eigenSpaces`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObjDict <l4a4c4f626a44696374>`\  if R has \ :ref:`NMField <l4e4d4669656c64>`\ 
+  eigenSpace(mat, side) returns a Julia Dict containing the :left or :right side of the eigen space of mat associated to the eigenvalue key. \example{a:=matrix([[111::NPF(127),91,50],[31,6,97],[117,63,6]])\$JLMatrix(NPF(127))} \example{eigenSpaces(a, "left")}
+
+
+.. index::
+   pair: JLMatrix; eigenSpaces
+
+:spadfun:`eigenSpaces`\: (\ :ref:`String <l537472696e67>`\ , %, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObjDict <l4a4c4f626a44696374>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\ 
+  \ ``eigenSpaces(JRing, mat, side)``\  returns a Julia Dict containing the :left or :right side of the eigen space of \ ``mat``\  associated to the eigenvalue key and the field \ ``JRing``\ . \example{a:=matrix([[111::NINT,91,50],[31,6,97],[117,63,6]])\$JLMatrix(NINT)} \example{eigenSpaces(jlNMRing()\$NAN, a, "left")}
+
 .. _l4a4c4d6174726978-656967656e76616c756573:
 
 .. index::
    pair: JLMatrix; eigenvalues
 
-:spadfun:`eigenvalues`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  R if R has \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ 
-  \ ``eigenvalues(m)``\  returns eigenvalues of \ ``m``\ .
+:spadfun:`eigenvalues`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  R if R has \ :ref:`NMField <l4e4d4669656c64>`\ 
+  \ ``eigenvalues(mat)``\  returns a Julia vector containing the eigenvalues of \ ``mat``\ . \example{a:=matrix([[111::NPF(127),91,50],[31,6,97],[117,63,6]])\$JLMatrix(NPF(127))} \example{eigenvalues(a)}
+
+
+.. index::
+   pair: JLMatrix; eigenvalues
+
+:spadfun:`eigenvalues`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\ 
+  \ ``eigenvalues(JRing, mat)``\  returns a Julia vector containing the eigenvalues of mat in the field \ ``JRing``\ . The Julia vector of JLObject is of internal type JLRing. \example{a:=matrix([[111::NINT,91,50],[31,6,97],[117,63,6]])\$JLMatrix(NINT)} \example{eigenvalues(jlNMRing()\$NCF, a)}
+
+.. _l4a4c4d6174726978-656967656e76616c756573576974684d756c7469706c69636974696573:
+
+.. index::
+   pair: JLMatrix; eigenvaluesWithMultiplicities
+
+:spadfun:`eigenvaluesWithMultiplicities`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObjTuple <l4a4c4f626a5475706c65>`\  if R has \ :ref:`NMField <l4e4d4669656c64>`\ 
+  \ ``eigenvaluesWithMultiplicities(mat)``\  returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities. The tuples are of internal type (\%, \ ``JLObjInt64``\ ). \example{a:=matrix([[111::NPF(127),91,50],[31,6,97],[117,63,6]])\$JLMatrix(NPF(127))} \example{eigenvaluesWithMultiplicities(a)}
+
+
+.. index::
+   pair: JLMatrix; eigenvaluesWithMultiplicities
+
+:spadfun:`eigenvaluesWithMultiplicities`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`JLObjTuple <l4a4c4f626a5475706c65>`\  if R has \ :ref:`NMRing <l4e4d52696e67>`\ 
+  \ ``eigenvaluesWithMultiplicities(JRing, mat)``\  returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities in the field \ ``JRing``\ . The tuples are of internal type (JLRing, \ ``JLObjInt64``\ ). \example{a:=matrix([[111::NINT,91,50],[31,6,97],[117,63,6]])\$JLMatrix(NINT)} \example{eigenvaluesWithMultiplicities(jlNMRing()\$NCF, a)}
 
 .. _l4a4c4d6174726978-656c74:
 
@@ -343,28 +380,28 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
    pair: JLMatrix; factorize
 
 :spadfun:`factorize`\: \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLObjComplexF32 <l4a4c4f626a436f6d706c6578463332>`\  -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
+  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
 
 
 .. index::
    pair: JLMatrix; factorize
 
 :spadfun:`factorize`\: \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLObjComplexF64 <l4a4c4f626a436f6d706c6578463634>`\  -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
+  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
 
 
 .. index::
    pair: JLMatrix; factorize
 
 :spadfun:`factorize`\: \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLObjFloat32 <l4a4c4f626a466c6f61743332>`\  -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
+  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
 
 
 .. index::
    pair: JLMatrix; factorize
 
 :spadfun:`factorize`\: \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLObjFloat64 <l4a4c4f626a466c6f61743634>`\  -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
+  \ ``factorize(m)``\  factorizes \ ``m``\  using a suited matrix factorization for \ ``m``\ . For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a \ ``QR``\  factorization will be used.
 
 .. _l4a4c4d6174726978-66696c6c21:
 
@@ -413,7 +450,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
    pair: JLMatrix; inverse
 
 :spadfun:`inverse`\: % -> % 
-  \ ``inverse(m)``\  returns inverse matrix. Throws a Julia error if \ ``m``\  is no invertible.
+  \ ``inverse(m)``\  returns inverse matrix. Throws a Julia error if \ ``m``\  is not invertible.
 
 
 \ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) if R has \ :ref:`Field <l4669656c64>`\ 
@@ -481,6 +518,11 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4d6174726978-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c4d6174726978-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -489,6 +531,11 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 .. _l4a4c4d6174726978-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4d6174726978-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4d6174726978-6a6c4f626a656374:
@@ -518,7 +565,7 @@ This domain provides a generic Julia matrix type stored in Julia with no bound c
 
 .. _l4a4c4d6174726978-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4d6174726978-6a6d6174726978:

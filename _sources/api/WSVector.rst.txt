@@ -5,7 +5,7 @@
 WSVector E
 ==========
 
-:viewcode:`jwsagg.spad line 248 <jwsagg.spad#L248>` :editcode:`[edit on github] <jwsagg.spad#L248>`
+:viewcode:`jwsagg.spad line 249 <jwsagg.spad#L249>` :editcode:`[edit on github] <jwsagg.spad#L249>`
 
 * E: \ :ref:`WSObject <l57534f626a656374>`\ 
 
@@ -46,7 +46,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; *
 
 :spadfun:`\*`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %) -> % 
-  \ ``n*a``\  scale the vector a by \ ``n``\ .
+  \ ``n*a``\  scales the vector a by \ ``n``\ .
 
 .. _l5753566563746f72-2b:
 
@@ -62,14 +62,14 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; -
 
 :spadfun:`-`\: % -> % 
-  \ ``-a``\  negates each elements of the vector a.
+  \ ``-a``\  negates each element of the vector a.
 
 
 .. index::
    pair: WSVector; -
 
 :spadfun:`-`\: (%, %) -> % 
-  \ ``a - b``\  is the vector substraction. \ ``WS``\  error if dimensions are incompatible.
+  \ ``a - b``\  is the vector subtraction. \ ``WS``\  error if dimensions are incompatible.
 
 .. _l5753566563746f72-3c3d:
 
@@ -402,6 +402,11 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l5753566563746f72-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l5753566563746f72-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -415,6 +420,11 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 .. _l5753566563746f72-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753566563746f72-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753566563746f72-6a6c4f626a656374:
@@ -449,7 +459,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
 
 .. _l5753566563746f72-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753566563746f72-6a6f696e:

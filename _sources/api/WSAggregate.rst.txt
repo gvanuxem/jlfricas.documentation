@@ -37,7 +37,7 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
    pair: WSAggregate; accumulate
 
 :spadfun:`accumulate`\: % -> % if E has \ :ref:`WSNumber <l57534e756d626572>`\ 
-  \ ``accumulate(agg)``\ 
+  \ ``accumulate(agg)``\  returns the partial sums of elements in \ ``agg``\ .
 
 .. _l5753416767726567617465-617070656e64:
 
@@ -89,7 +89,7 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
    pair: WSAggregate; differences
 
 :spadfun:`differences`\: % -> % if E has \ :ref:`WSNumber <l57534e756d626572>`\ 
-  \ ``differences(agg)``\ 
+  \ ``differences(agg)``\  returns the differences between adjacent elements in \ ``agg``\ .
 
 .. _l5753416767726567617465-64696d656e73696f6e73:
 
@@ -190,6 +190,11 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l5753416767726567617465-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l5753416767726567617465-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -203,6 +208,11 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
 .. _l5753416767726567617465-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753416767726567617465-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753416767726567617465-6a6c4f626a656374:
@@ -237,7 +247,7 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
 
 .. _l5753416767726567617465-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753416767726567617465-6a6f696e:
@@ -246,7 +256,7 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
    pair: WSAggregate; join
 
 :spadfun:`join`\: (%, %) -> % 
-  \ ``join(agg1, agg2)``\  join the two aggreagtes \ ``agg1``\  and \ ``agg2``\ .
+  \ ``join(agg1, agg2)``\  joins the two aggregates \ ``agg1``\  and \ ``agg2``\ .
 
 .. _l5753416767726567617465-6a5753416767726567617465:
 
@@ -401,14 +411,14 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
    pair: WSAggregate; riffle
 
 :spadfun:`riffle`\: (%, %) -> % 
-  \ ``riffle(agg, elts)``\  riffles (interleaves) element(\ ``s``\ ) elts i.e. insert them.
+  \ ``riffle(agg, elts)``\  riffles (interleaves) element(\ ``s``\ ) elts i.e. inserts them.
 
 
 .. index::
    pair: WSAggregate; riffle
 
 :spadfun:`riffle`\: (%, %, %) -> % 
-  \ ``riffle(agg, elts, inds)``\  riffles (interleaves) element(\ ``s``\ ) \ ``elts``\  i.e. insert them. If inds is {min, max, \ ``n``\ } insert at position min, min+n, min+2n..max.
+  \ ``riffle(agg, elts, inds)``\  riffles (interleaves) element(\ ``s``\ ) \ ``elts``\  i.e. inserts them. If inds is {min, max, \ ``n``\ } inserts at position min, min+n, min+2n..max.
 
 .. _l5753416767726567617465-736574656c7421:
 
@@ -461,14 +471,14 @@ Julia Wolfram Symbolic aggregate (\ ``WS``\  list) using the MathLink Julia pack
    pair: WSAggregate; take
 
 :spadfun:`take`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``take(l,i)``\  returns the first \ ``i``\ -th elements.
+  \ ``take(l,i)``\  returns the first \ ``i``\  elements.
 
 
 .. index::
    pair: WSAggregate; take
 
 :spadfun:`take`\: (%, \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
-  \ ``take(l,i)``\  returns the first \ ``i``\ -th elements.
+  \ ``take(l,i)``\  returns the first \ ``i``\  elements.
 
 .. _l5753416767726567617465-746f537472696e67:
 

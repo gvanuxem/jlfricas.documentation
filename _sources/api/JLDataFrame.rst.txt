@@ -5,7 +5,7 @@
 JLDataFrame
 ===========
 
-:viewcode:`jobject.spad line 1725 <jobject.spad#L1725>` :editcode:`[edit on github] <jobject.spad#L1725>`
+:viewcode:`jobject.spad line 1151 <jobject.spad#L1151>` :editcode:`[edit on github] <jobject.spad#L1151>`
 
 
 Julia DataFrames support
@@ -69,6 +69,22 @@ Julia DataFrames support
 \ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Aggregate <l416767726567617465>`\ 
 
+.. _l4a4c446174614672616d65-6669727374:
+
+.. index::
+   pair: JLDataFrame; first
+
+:spadfun:`first`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``first(df, n)``\  returns the first \ ``n``\  rows.
+
+.. _l4a4c446174614672616d65-68656164:
+
+.. index::
+   pair: JLDataFrame; head
+
+:spadfun:`head`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``head(df, n)``\  returns the first \ ``n``\  rows.
+
 .. _l4a4c446174614672616d65-6a646672616d65:
 
 .. index::
@@ -82,6 +98,13 @@ Julia DataFrames support
    pair: JLDataFrame; jdframe
 
 :spadfun:`jdframe`\: \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\  -> % 
+  \ ``jdframe(array)``\  returns an automatically created data frame.
+
+
+.. index::
+   pair: JLDataFrame; jdframe
+
+:spadfun:`jdframe`\: \ :ref:`JLMatrix <l4a4c4d6174726978>`\  \ :ref:`JLObjFloat64 <l4a4c4f626a466c6f61743634>`\  -> % 
   \ ``jdframe(array)``\  returns an automatically created data frame.
 
 .. _l4a4c446174614672616d65-6a6c41626f7574:
@@ -138,6 +161,11 @@ Julia DataFrames support
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c446174614672616d65-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c446174614672616d65-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -146,6 +174,11 @@ Julia DataFrames support
 .. _l4a4c446174614672616d65-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c446174614672616d65-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c446174614672616d65-6a6c4f626a656374:
@@ -175,8 +208,16 @@ Julia DataFrames support
 
 .. _l4a4c446174614672616d65-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c446174614672616d65-6c617374:
+
+.. index::
+   pair: JLDataFrame; last
+
+:spadfun:`last`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``last(df, n)``\  returns the last \ ``n``\  rows.
 
 .. _l4a4c446174614672616d65-6c61746578:
 
@@ -206,10 +247,34 @@ Julia DataFrames support
 \ :ref:`mutable? <l4a4c4f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c446174614672616d65-6e616d6573:
+
+.. index::
+   pair: JLDataFrame; names
+
+:spadfun:`names`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ ``names(df)``\  returns the column names as a list of strings.
+
+.. _l4a4c446174614672616d65-6e636f6c73:
+
+.. index::
+   pair: JLDataFrame; ncols
+
+:spadfun:`ncols`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``ncols(df)``\  returns the number of columns.
+
 .. _l4a4c446174614672616d65-6e6f7468696e673f:
 
 \ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c446174614672616d65-6e726f7773:
+
+.. index::
+   pair: JLDataFrame; nrows
+
+:spadfun:`nrows`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ ``nrows(df)``\  returns the number of rows.
 
 .. _l4a4c446174614672616d65-71656c74:
 
@@ -234,6 +299,14 @@ Julia DataFrames support
 
 \ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLType <l4a4c54797065>`\ 
+
+.. _l4a4c446174614672616d65-7461696c:
+
+.. index::
+   pair: JLDataFrame; tail
+
+:spadfun:`tail`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ ``tail(df, n)``\  returns the last \ ``n``\  rows.
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

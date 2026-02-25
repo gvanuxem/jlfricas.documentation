@@ -5,7 +5,7 @@
 InnerNMPolynomial(R, Ordering)
 ==============================
 
-:viewcode:`jnpoly.spad line 632 <jnpoly.spad#L632>` :editcode:`[edit on github] <jnpoly.spad#L632>`
+:viewcode:`jnpoly.spad line 623 <jnpoly.spad#L623>` :editcode:`[edit on github] <jnpoly.spad#L623>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -64,7 +64,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; *
 
 :spadfun:`\*`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``q * p``\  is the product of \ ``p``\  with a rational \ ``q``\  (Fraction(Intger))
+  \ ``q * p``\  is the product of \ ``p``\  with a rational \ ``q``\  (Fraction(Integer))
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -538,6 +538,11 @@ This type is a basic representation of generic sparse distributed multivariable 
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l496e6e65724e4d506f6c796e6f6d69616c-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -546,6 +551,11 @@ This type is a basic representation of generic sparse distributed multivariable 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l496e6e65724e4d506f6c796e6f6d69616c-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6a6c4e4d52696e67:
@@ -580,7 +590,7 @@ This type is a basic representation of generic sparse distributed multivariable 
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6c61746578:
@@ -642,7 +652,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; length
 
 :spadfun:`length`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``length(p)``\  retruns the number of terms of \ ``p``\ .
+  \ ``length(p)``\  returns the number of terms of \ ``p``\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6c696e656172457874656e64:
 
@@ -714,7 +724,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; monomialRecursive?
 
 :spadfun:`monomialRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recurisvely (all scalar types).
+  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recursively (all scalar types).
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6d6f6e6f6d69616c73:
 
@@ -722,7 +732,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; monomials
 
 :spadfun:`monomials`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  % 
-  \ ``monomials(p)``\  returns the list of non-zero monomials of \ ``p``\  includind its coefficients.
+  \ ``monomials(p)``\  returns the list of non-zero monomials of \ ``p``\  including its coefficients.
 
 
 \ :ref:`monomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
@@ -984,7 +994,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; trailingCoefficient
 
 :spadfun:`trailingCoefficient`\: % -> R 
-  \ ``trailingCoefficient(p)``\  returns the trailing coefficientof \ ``p``\ .
+  \ ``trailingCoefficient(p)``\  returns the trailing coefficient of \ ``p``\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-756e69743f:
 

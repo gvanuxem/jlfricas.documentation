@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>JLFloat32Vector &#8212; jlFriCAS</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
@@ -125,7 +125,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-636f707921"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">copy!</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy!(b,a)</span></code> copies efficiently a to <code class="docutils literal notranslate"><span class="pre">b</span></code>. No check are done on arrays dimension.</p>
+<dt><span class="spadfun">copy!</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy!(b,a)</span></code> efficiently copies a to <code class="docutils literal notranslate"><span class="pre">b</span></code>. No checks are performed on array dimensions.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f61743332566563746f72-636f7079">
@@ -199,7 +199,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-65787072616e64"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">exprand</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprand(n)</span></code> return a vector of size <code class="docutils literal notranslate"><span class="pre">n</span></code> with random elements from the exponential distribution with scale 1.</p>
+<dt><span class="spadfun">exprand</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprand(n)</span></code> returns a vector of size <code class="docutils literal notranslate"><span class="pre">n</span></code> with random elements from the exponential distribution with scale 1.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f61743332566563746f72-66696c6c21">
@@ -239,11 +239,11 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-6a6c4170706c79"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">v)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">v</span></code> and returns a JLFloat32Vector.</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">v)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">v</span></code>. and returns a JLFloat32Vector.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">v)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">v</span></code> and returns a Julia <code class="docutils literal notranslate"><span class="pre">Float32</span></code>.</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">v)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">v</span></code>. and returns a Julia <code class="docutils literal notranslate"><span class="pre">Float32</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-5">
@@ -263,7 +263,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-6a6c417070726f783f"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y)</span></code> computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-vise.</p>
+<dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(x,y)</span></code> computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.</p>
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-6a6c446973706c6179"></span><dl class="simple" id="index-10">
@@ -369,7 +369,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-716e6577"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">qnew</span>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qnew(n)</span></code> returns an unitialized vector of dimension <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<dt><span class="spadfun">qnew</span>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qnew(n)</span></code> returns an uninitialized vector of dimension <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f61743332566563746f72-71736574656c7421">
@@ -459,7 +459,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-7572616e64"></span><dl class="simple" id="index-15">
-<dt><span class="spadfun">urand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand(n,</span> <span class="pre">x)</span></code> returns a uniformly (0..<code class="docutils literal notranslate"><span class="pre">x</span></code>) distributed Julia vector of size <code class="docutils literal notranslate"><span class="pre">n</span></code>. Use the underying Common Lisp random number generator so jlSeed! will not affect it.</p>
+<dt><span class="spadfun">urand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand(n,</span> <span class="pre">x)</span></code> returns a uniformly (0..<code class="docutils literal notranslate"><span class="pre">x</span></code>) distributed Julia vector of size <code class="docutils literal notranslate"><span class="pre">n</span></code>. Use the underlying Common Lisp random number generator so jlSeed! will not affect it.</p>
 </dd>
 </dl>
 <span id="l4a4c466c6f61743332566563746f72-766563746f72"></span><dl class="simple" id="index-16">
@@ -512,6 +512,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>

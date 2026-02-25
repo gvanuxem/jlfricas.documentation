@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>JLFloat32Matrix &#8212; jlFriCAS</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
@@ -143,7 +143,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-636f707921"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">copy!</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy!(b,a)</span></code> copies efficiently a to <code class="docutils literal notranslate"><span class="pre">b</span></code>.No check are done on arrays dimensions.</p>
+<dt><span class="spadfun">copy!</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy!(b,a)</span></code> efficiently copies a to <code class="docutils literal notranslate"><span class="pre">b</span></code>. No checks are performed on array dimensions.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-636f7079">
@@ -195,7 +195,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(m,</span> <span class="pre">i)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th elements of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Column major order.</p>
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(m,</span> <span class="pre">i)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th element of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Column major order.</p>
 </dd>
 <dt><a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279"><span class="std std-ref">TwoDimensionalArrayCategory</span></a>(<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>)</p>
 </dd>
@@ -231,7 +231,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-65787072616e64"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">exprand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprand(m,n)</span></code> return a Julia matrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with random elements from the exponential distribution with scale 1.</p>
+<dt><span class="spadfun">exprand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprand(m,n)</span></code> returns a Julia matrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with random elements from the exponential distribution with scale 1.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-657871756f">
@@ -263,7 +263,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-6964656e74697479"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">identity</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">identity(n)</span></code> returns a <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> identity matrix.<code class="docutils literal notranslate"><span class="pre">S</span></code></p>
+<dt><span class="spadfun">identity</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">identity(n)</span></code> returns a <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> identity matrix.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-696e7665727365">
@@ -271,19 +271,19 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-6a6c4170706c79"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> apply <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-7">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> apply <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-8">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> apply <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to argument <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-9">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x,</span> <span class="pre">val)</span></code> apply <code class="docutils literal notranslate"><span class="pre">func</span></code> to arguments <code class="docutils literal notranslate"><span class="pre">x</span></code> and val.</p>
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">x,</span> <span class="pre">val)</span></code> applies <code class="docutils literal notranslate"><span class="pre">func</span></code> to arguments <code class="docutils literal notranslate"><span class="pre">x</span></code> and val.</p>
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-6a6c417070726f783f"></span><dl class="simple" id="index-10">
@@ -399,7 +399,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-6e72616e64"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">nrand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand(m,n)</span></code> returns a Julia matrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with random element from the normal distribution with <code class="docutils literal notranslate"><span class="pre">mean=0</span></code> and standard <code class="docutils literal notranslate"><span class="pre">deviation=1</span></code>.</p>
+<dt><span class="spadfun">nrand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand(m,n)</span></code> returns a Julia matrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with random elements from the normal distribution with <code class="docutils literal notranslate"><span class="pre">mean=0</span></code> and standard <code class="docutils literal notranslate"><span class="pre">deviation=1</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-6e726f7773">
@@ -423,7 +423,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-706f736974697665446566696e6974653f"></span><dl class="simple" id="index-15">
-<dt><span class="spadfun">positiveDefinite?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">positiveDefinite?(m)</span></code> tests wether or not <code class="docutils literal notranslate"><span class="pre">m</span></code> is positive definite. Use a Cholesky factorisation.</p>
+<dt><span class="spadfun">positiveDefinite?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">positiveDefinite?(m)</span></code> tests whether or not <code class="docutils literal notranslate"><span class="pre">m</span></code> is positive definite. Use a Cholesky factorisation.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-706f736974697665506f776572">
@@ -435,7 +435,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-16">
-<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qelt(m,</span> <span class="pre">i)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th elements of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Column major order.</p>
+<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qelt(m,</span> <span class="pre">i)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th element of <code class="docutils literal notranslate"><span class="pre">m</span></code>. Column major order.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-716e6577">
@@ -447,7 +447,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-17">
-<dt><span class="spadfun">qsetelt!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qsetelt!(m,)</span></code> sets the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th elements of <code class="docutils literal notranslate"><span class="pre">m</span></code> to <code class="docutils literal notranslate"><span class="pre">r</span></code>. Column major order.</p>
+<dt><span class="spadfun">qsetelt!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qsetelt!(m,</span> <span class="pre">i,</span> <span class="pre">r)</span></code> sets the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th element of <code class="docutils literal notranslate"><span class="pre">m</span></code> to <code class="docutils literal notranslate"><span class="pre">r</span></code>. Column major order.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-72616e6b">
@@ -499,7 +499,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-18">
-<dt><span class="spadfun">setelt!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setelt!(m,</span> <span class="pre">i,</span> <span class="pre">r)</span></code> sets the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th elements of <code class="docutils literal notranslate"><span class="pre">m</span></code> to <code class="docutils literal notranslate"><span class="pre">r</span></code>. Column major order.</p>
+<dt><span class="spadfun">setelt!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setelt!(m,</span> <span class="pre">i,</span> <span class="pre">r)</span></code> sets the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th element of <code class="docutils literal notranslate"><span class="pre">m</span></code> to <code class="docutils literal notranslate"><span class="pre">r</span></code>. Column major order.</p>
 </dd>
 <dt><a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421"><span class="std std-ref">setelt!</span></a>: (%, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279"><span class="std std-ref">TwoDimensionalArrayCategory</span></a>(<a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>, <a class="reference internal" href="JLFloat32Vector.html#l4a4c466c6f61743332566563746f72"><span class="std std-ref">JLFloat32Vector</span></a>)</p>
 </dd>
@@ -557,7 +557,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-73796d6d65747269635061727421"></span><dl class="simple" id="index-20">
-<dt><span class="spadfun">symmetricPart!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symmetricPart!(m)</span></code> overwites <code class="docutils literal notranslate"><span class="pre">m</span></code> with the symmetric part of <code class="docutils literal notranslate"><span class="pre">m</span></code> (<code class="docutils literal notranslate"><span class="pre">m</span></code> + <code class="docutils literal notranslate"><span class="pre">m'</span></code>)<code class="docutils literal notranslate"><span class="pre">/2</span></code> to save memory space and returns <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+<dt><span class="spadfun">symmetricPart!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symmetricPart!(m)</span></code> overwrites <code class="docutils literal notranslate"><span class="pre">m</span></code> with the symmetric part of <code class="docutils literal notranslate"><span class="pre">m</span></code> (<code class="docutils literal notranslate"><span class="pre">m</span></code> + <code class="docutils literal notranslate"><span class="pre">m'</span></code>)<code class="docutils literal notranslate"><span class="pre">/2</span></code> to save memory space and returns <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-73796d6d657472696350617274"></span><dl class="simple" id="index-21">
@@ -579,7 +579,7 @@
 </dd>
 </dl>
 <span id="l4a4c466c6f617433324d6174726978-7572616e64"></span><dl class="simple" id="index-24">
-<dt><span class="spadfun">urand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand(m,n,x)</span></code> returns a uniformly (0..<code class="docutils literal notranslate"><span class="pre">x</span></code>) distributed Julia matrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>). Use the underying Common Lisp random number generator so jlSeed! will not affect it.</p>
+<dt><span class="spadfun">urand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="JLFloat32.html#l4a4c466c6f61743332"><span class="std std-ref">JLFloat32</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand(m,n,x)</span></code> returns a uniformly (0..<code class="docutils literal notranslate"><span class="pre">x</span></code>) distributed Julia matrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>). Use the underlying Common Lisp random number generator so jlSeed! will not affect it.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f617433324d6174726978-76657274436f6e636174">
@@ -633,6 +633,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>

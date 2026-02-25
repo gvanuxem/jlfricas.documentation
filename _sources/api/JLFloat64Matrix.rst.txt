@@ -150,7 +150,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; copy!
 
 :spadfun:`copy!`\: (%, %) -> % 
-  \ ``copy!(b,a)``\  copies efficiently a to \ ``b``\ .No check are done on arrays dimensions.
+  \ ``copy!(b,a)``\  efficiently copies a to \ ``b``\ . No checks are performed on array dimensions.
 
 .. _l4a4c466c6f617436344d6174726978-636f7079:
 
@@ -238,7 +238,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; elt
 
 :spadfun:`elt`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``elt(m, i)``\  returns the \ ``i``\ -th elements of \ ``m``\ . Column major order.
+  \ ``elt(m, i)``\  returns the \ ``i``\ -th element of \ ``m``\ . Column major order.
 
 
 \ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
@@ -341,7 +341,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; identity
 
 :spadfun:`identity`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``identity(n)``\  returns a \ ``n``\  by \ ``n``\  identity matrix.\ ``S``\ 
+  \ ``identity(n)``\  returns a \ ``n``\  by \ ``n``\  identity matrix.
 
 .. _l4a4c466c6f617436344d6174726978-696e7665727365:
 
@@ -354,28 +354,28 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, x)``\  apply \ ``func``\  to argument \ ``x``\ .
+  \ ``jlApply(func, x)``\  applies \ ``func``\  to argument \ ``x``\ .
 
 
 .. index::
    pair: JLFloat64Matrix; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``jlApply(func, x)``\  apply \ ``func``\  to argument \ ``x``\ .
+  \ ``jlApply(func, x)``\  applies \ ``func``\  to argument \ ``x``\ .
 
 
 .. index::
    pair: JLFloat64Matrix; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApply(func, x)``\  apply \ ``func``\  to argument \ ``x``\ .
+  \ ``jlApply(func, x)``\  applies \ ``func``\  to argument \ ``x``\ .
 
 
 .. index::
    pair: JLFloat64Matrix; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``jlApply(func, x, val)``\  apply \ ``func``\  to arguments \ ``x``\  and val.
+  \ ``jlApply(func, x, val)``\  applies \ ``func``\  to arguments \ ``x``\  and val.
 
 .. _l4a4c466c6f617436344d6174726978-6a6c417070726f783f:
 
@@ -577,7 +577,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; positiveDefinite?
 
 :spadfun:`positiveDefinite?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``positiveDefinite?(m)``\  tests wether or not \ ``m``\  is positive definite. Use a Cholesky factorisation.
+  \ ``positiveDefinite?(m)``\  tests whether or not \ ``m``\  is positive definite. Use a Cholesky factorisation.
 
 .. _l4a4c466c6f617436344d6174726978-706f736974697665506f776572:
 
@@ -594,7 +594,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``qelt(m, i)``\  returns the \ ``i``\ -th elements of \ ``m``\ . Column major order.
+  \ ``qelt(m, i)``\  returns the \ ``i``\ -th element of \ ``m``\ . Column major order.
 
 .. _l4a4c466c6f617436344d6174726978-716e6577:
 
@@ -611,7 +611,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; qsetelt!
 
 :spadfun:`qsetelt!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``qsetelt!(m,)``\  sets the \ ``i``\ -th elements of \ ``m``\  to \ ``r``\ . Column major order.
+  \ ``qsetelt!(m, i, r)``\  sets the \ ``i``\ -th element of \ ``m``\  to \ ``r``\ . Column major order.
 
 .. _l4a4c466c6f617436344d6174726978-72616e6b:
 
@@ -690,7 +690,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``setelt!(m, i, r)``\  sets the \ ``i``\ -th elements of \ ``m``\  to \ ``r``\ . Column major order.
+  \ ``setelt!(m, i, r)``\  sets the \ ``i``\ -th element of \ ``m``\  to \ ``r``\ . Column major order.
 
 
 \ :ref:`setelt! <l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421>`\ \: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -773,7 +773,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; symmetricPart!
 
 :spadfun:`symmetricPart!`\: % -> % 
-  \ ``symmetricPart!(m)``\  overwites \ ``m``\  with the symmetric part of \ ``m``\  (\ ``m``\  + \ ``m'``\ )\ ``/2``\  to save memory space and returns \ ``m``\ .
+  \ ``symmetricPart!(m)``\  overwrites \ ``m``\  with the symmetric part of \ ``m``\  (\ ``m``\  + \ ``m'``\ )\ ``/2``\  to save memory space and returns \ ``m``\ .
 
 .. _l4a4c466c6f617436344d6174726978-73796d6d657472696350617274:
 
@@ -814,7 +814,7 @@ This domain provides a fast \ ``JLFloat64``\  matrix type with no bound checking
    pair: JLFloat64Matrix; urand
 
 :spadfun:`urand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> % 
-  \ ``urand(m,n,x)``\  returns a uniform(0..\ ``x``\ ) Julia matrix of size (\ ``m``\ ,\ ``n``\ ). Use the underying Common Lisp random number generator so jlSeed! will not affect it.
+  \ ``urand(m,n,x)``\  returns a uniform(0..\ ``x``\ ) Julia matrix of size (\ ``m``\ ,\ ``n``\ ). Use the underlying Common Lisp random number generator so jlSeed! will not affect it.
 
 .. _l4a4c466c6f617436344d6174726978-76657274436f6e636174:
 

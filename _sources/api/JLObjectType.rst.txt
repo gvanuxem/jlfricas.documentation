@@ -44,7 +44,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlAbout
 
 :spadfun:`jlAbout`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlAbout(obj)``\  displays Julia informations about \ ``obj``\  if you have About.\ ``jl``\  installed in Julia. In the Julia interpreter, enter in the package management mode with ']', and issue: pkg> add "https://github.com/tecosaur/About.\ ``jl"``\ 
+  \ ``jlAbout(obj)``\  displays Julia information about \ ``obj``\  if you have About.\ ``jl``\  installed in Julia. In the Julia interpreter, enter in the package management mode with ']', and issue: pkg> add "https://github.com/tecosaur/About.\ ``jl"``\ 
 
 .. _l4a4c4f626a65637454797065-6a6c4170706c79:
 
@@ -114,6 +114,14 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 :spadfun:`jlGetField`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   \ ``jlGetField(obj, sym)``\  returns the property/element \ ``sym``\  of \ ``obj``\ .
 
+.. _l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578:
+
+.. index::
+   pair: JLObjectType; jlGetJuliaIndex
+
+:spadfun:`jlGetJuliaIndex`\: % -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlGetJuliaIndex(obj)``\  returns the Julia indexed dictionary index referencing the object \ ``obj``\ . Convenience function for use in the interpreter.
+
 .. _l4a4c4f626a65637454797065-6a6c47657450726f7065727479:
 
 .. index::
@@ -129,6 +137,14 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 
 :spadfun:`jlId`\: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
   \ ``jlId(obj)``\  returns the Julia indexed dictionary index referencing the object \ ``obj``\ .
+
+.. _l4a4c4f626a65637454797065-6a6c696d726566:
+
+.. index::
+   pair: JLObjectType; jlimref
+
+:spadfun:`jlimref`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ ``jlimref(str)``\  evaluates the Julia command \ ``str``\  and returns the corresponding FriCAS Julia immutable object wrapped in a Julia RefValue{Any}
 
 .. _l4a4c4f626a65637454797065-6a6c4f626a656374:
 
@@ -160,7 +176,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlref
 
 :spadfun:`jlref`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jlref(str)``\  evaluates the Julia command \ ``str``\  and returns the corresponding FriCAS Julia object.
+  \ ``jlref(str)``\  evaluates the Julia command \ ``str``\  and returns the corresponding FriCAS Julia mutable object.
 
 .. _l4a4c4f626a65637454797065-6a6c54657874:
 
@@ -175,7 +191,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
 .. index::
    pair: JLObjectType; jlType
 
-:spadfun:`jlType`\: % -> \ :ref:`String <l537472696e67>`\  
+:spadfun:`jlType`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   \ ``jlType(obj)``\  returns the Julia type of \ ``obj``\ .
 
 .. _l4a4c4f626a65637454797065-6c61746578:

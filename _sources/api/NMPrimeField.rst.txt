@@ -5,7 +5,7 @@
 NMPrimeField p
 ==============
 
-:viewcode:`jnemo.spad line 583 <jnemo.spad#L583>` :editcode:`[edit on github] <jnemo.spad#L583>`
+:viewcode:`jnemo.spad line 639 <jnemo.spad#L639>` :editcode:`[edit on github] <jnemo.spad#L639>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
@@ -44,7 +44,7 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; *
 
 :spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``x*i``\  is the multiplication by a an integer (NMInteger).
+  \ ``x*i``\  is the multiplication by an integer (NMInteger).
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -407,12 +407,27 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; generator?
 
 :spadfun:`generator?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``generator?(x)``\  checks whether or not of the NMPrimeField.
+  \ ``generator?(x)``\  checks whether or not \ ``x``\  is a generator of the NMPrimeField.
 
 .. _l4e4d5072696d654669656c64-67656e657261746f72:
 
 \ :ref:`generator <l46696e697465416c67656272616963457874656e73696f6e4669656c64-67656e657261746f72>`\ \: () -> % 
   from \ :ref:`FiniteAlgebraicExtensionField <l46696e697465416c67656272616963457874656e73696f6e4669656c64>`\  %
+
+.. _l4e4d5072696d654669656c64-4746:
+
+.. index::
+   pair: NMPrimeField; GF
+
+:spadfun:`GF`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ ``GF(i)``\  returns \ ``i``\  as a NMPrimeField element. Convenience function.
+
+
+.. index::
+   pair: NMPrimeField; GF
+
+:spadfun:`GF`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+  \ ``GF(i)``\  returns \ ``i``\  as a NMPrimeField element. Convenience function.
 
 .. _l4e4d5072696d654669656c64-68617368:
 
@@ -490,6 +505,11 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d5072696d654669656c64-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d5072696d654669656c64-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -498,6 +518,11 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 .. _l4e4d5072696d654669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d5072696d654669656c64-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d5072696d654669656c64-6a6c4e4d52696e67:
@@ -532,7 +557,7 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 
 .. _l4e4d5072696d654669656c64-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d5072696d654669656c64-6a6e7066:
@@ -826,7 +851,7 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
    pair: NMPrimeField; sqrt
 
 :spadfun:`sqrt`\: % -> % 
-  \ ``sqrt(x)``\  returns quare root of \ ``x``\ . Throw a Julia error if there is no square root and returns 0.
+  \ ``sqrt(x)``\  returns square root of \ ``x``\ . Throws a Julia error if there is no square root and returns 0.
 
 .. _l4e4d5072696d654669656c64-73717561726546726565:
 
@@ -1004,6 +1029,8 @@ This domain allows the manipulation of Nemo prime field elements using the Nemo 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 

@@ -5,7 +5,7 @@
 WSInteger
 =========
 
-:viewcode:`jws.spad line 204 <jws.spad#L204>` :editcode:`[edit on github] <jws.spad#L204>`
+:viewcode:`jws.spad line 212 <jws.spad#L212>` :editcode:`[edit on github] <jws.spad#L212>`
 
 
 Julia Wolfram Symbolic integers using the MathLink Julia package.
@@ -163,21 +163,21 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
    pair: WSInteger; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``coerce(z)``\ : coerces \ ``z``\ . Convenience function.
+  \ ``coerce(z)``\  coerces \ ``z``\ .
 
 
 .. index::
    pair: WSInteger; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSRational <l5753526174696f6e616c>`\  
-  \ ``coerce(z)``\ : coerces \ ``z``\ . Convenience function.
+  \ ``coerce(z)``\  coerces \ ``z``\ .
 
 
 .. index::
    pair: WSInteger; coerce
 
 :spadfun:`coerce`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce(z)``\ : coerces \ ``z``\ . Convenience function.
+  \ ``coerce(z)``\  coerces \ ``z``\ .
 
 .. _l5753496e7465676572-636f6d6d757461746f72:
 
@@ -294,7 +294,7 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
    pair: WSInteger; fibonacci
 
 :spadfun:`fibonacci`\: % -> % 
-  \ ``fibonacci(n)``\  returns the Fibonacci numberi \ ``Fn``\ .
+  \ ``fibonacci(n)``\  returns the Fibonacci number \ ``Fn``\ .
 
 .. _l5753496e7465676572-676364:
 
@@ -334,7 +334,7 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
    pair: WSInteger; integer
 
 :spadfun:`integer`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``integer(i)``\  return \ ``i``\  as a FriCAS Integer. Convenience function.
+  \ ``integer(i)``\  returns \ ``i``\  as a FriCAS Integer.
 
 .. _l5753496e7465676572-696e766d6f64:
 
@@ -392,6 +392,11 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l5753496e7465676572-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l5753496e7465676572-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -405,6 +410,11 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 .. _l5753496e7465676572-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753496e7465676572-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753496e7465676572-6a6c4f626a656374:
@@ -439,7 +449,7 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 
 .. _l5753496e7465676572-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753496e7465676572-6a5753496e74:
@@ -610,13 +620,13 @@ Julia Wolfram Symbolic integers using the MathLink Julia package.
 \ :ref:`principalIdeal <l5072696e636970616c496465616c446f6d61696e-7072696e636970616c496465616c>`\ \: \ :ref:`List <l4c697374>`\  % -> Record(coef: \ :ref:`List <l4c697374>`\  %, generator: %) 
   from \ :ref:`PrincipalIdealDomain <l5072696e636970616c496465616c446f6d61696e>`\ 
 
-.. _l5753496e7465676572-51466163746f7269616c:
+.. _l5753496e7465676572-71466163746f7269616c:
 
 .. index::
-   pair: WSInteger; QFactorial
+   pair: WSInteger; qFactorial
 
-:spadfun:`QFactorial`\: (%, %) -> % 
-  \ ``QFactorial(x,q)``\  returns the \ ``q``\ -analog of factorial of \ ``x``\ .
+:spadfun:`qFactorial`\: (%, %) -> % 
+  \ ``qFactorial(x,q)``\  returns the \ ``q``\ -analog of factorial of \ ``x``\ .
 
 .. _l5753496e7465676572-71756f:
 

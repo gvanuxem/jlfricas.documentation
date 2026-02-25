@@ -10,7 +10,7 @@ NMArbField p
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-\ :ref:`NMArbField <l4e4d4172624669656c64>`\  implements fixed precision ball arithmetic using the Julia Nemo package - based on the Arb library.
+\ :ref:`NMArbField <l4e4d4172624669656c64>`\  implements fixed precision ball arithmetic using the Nemo Julia package - based on the Arb library.
 
 
 .. _l4e4d4172624669656c64-30:
@@ -734,6 +734,11 @@ NMArbField p
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d4172624669656c64-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d4172624669656c64-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -742,6 +747,11 @@ NMArbField p
 .. _l4e4d4172624669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d4172624669656c64-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4172624669656c64-6a6c4e4d52696e67:
@@ -776,7 +786,7 @@ NMArbField p
 
 .. _l4e4d4172624669656c64-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d4172624669656c64-6a6e62616c6c:
@@ -960,7 +970,7 @@ NMArbField p
    pair: NMArbField; nonZero?
 
 :spadfun:`nonZero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nonZero?(x)``\  returns \ ``true``\  if \ ``x``\  is equal to 0.
+  \ ``nonZero?(x)``\  returns \ ``true``\  if \ ``x``\  is not equal to 0.
 
 .. _l4e4d4172624669656c64-6e6f726d:
 
@@ -1066,7 +1076,7 @@ NMArbField p
    pair: NMArbField; randtest
 
 :spadfun:`randtest`\: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\  -> % 
-  \ ``randtest(randtype)``\  returns a random number depending on the Julia symbol \ ``randtype``\ . :urandom an uniformly distributed random number contained in [0,1]. To test corner cases: :randtest returns a finite random number, :randtest_exact returns a zero radius random number, :randtest_precise returns a precise random number i.e. with a radius of around 2^-precision() the magnitude of the midpoint, :randtest_special returns a special random number where midpoint and/or radius might be NaNs or infinities, :randtest_wide returns a random number with a large radius that might be big relative to its midpoint.
+  \ ``randtest(randtype)``\  returns a random number depending on the Julia symbol \ ``randtype``\ . :urandom a uniformly distributed random number contained in [0,1]. To test corner cases: :randtest returns a finite random number, :randtest_exact returns a zero radius random number, :randtest_precise returns a precise random number i.e. with a radius of around 2^-precision() the magnitude of the midpoint, :randtest_special returns a special random number where midpoint and/or radius might be NaNs or infinities, :randtest_wide returns a random number with a large radius that might be big relative to its midpoint.
 
 .. _l4e4d4172624669656c64-7265636970:
 
@@ -1249,7 +1259,7 @@ NMArbField p
    pair: NMArbField; urand01
 
 :spadfun:`urand01`\: () -> % 
-  \ ``urand01()``\  returns an uniformly distributed random number contained in [0,1].
+  \ ``urand01()``\  returns a uniformly distributed random number contained in [0,1].
 
 .. _l4e4d4172624669656c64-77686f6c6550617274:
 

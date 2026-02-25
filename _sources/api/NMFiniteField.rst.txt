@@ -5,7 +5,7 @@
 NMFiniteField(p, n)
 ===================
 
-:viewcode:`jnemo.spad line 735 <jnemo.spad#L735>` :editcode:`[edit on github] <jnemo.spad#L735>`
+:viewcode:`jnemo.spad line 799 <jnemo.spad#L799>` :editcode:`[edit on github] <jnemo.spad#L799>`
 
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
@@ -144,7 +144,7 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
    pair: NMFiniteField; absoluteTrace
 
 :spadfun:`absoluteTrace`\: % -> \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p 
-  \ ``absoluteTrace(x)``\  returns the obsolute trace of \ ``x``\ .
+  \ ``absoluteTrace(x)``\  returns the absolute trace of \ ``x``\ .
 
 .. _l4e4d46696e6974654669656c64-616c676562726169633f:
 
@@ -449,7 +449,7 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
    pair: NMFiniteField; generator?
 
 :spadfun:`generator?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``generator?(x)``\  checks whether or not \ ``x``\  a generator of the finite filed.
+  \ ``generator?(x)``\  checks whether or not \ ``x``\  is a generator of the finite field.
 
 .. _l4e4d46696e6974654669656c64-67656e657261746f72:
 
@@ -532,6 +532,11 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d46696e6974654669656c64-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d46696e6974654669656c64-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -540,6 +545,11 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 .. _l4e4d46696e6974654669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d46696e6974654669656c64-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d46696e6974654669656c64-6a6c4e4d52696e67:
@@ -574,7 +584,7 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 
 .. _l4e4d46696e6974654669656c64-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d46696e6974654669656c64-6a6e6666:
@@ -590,7 +600,7 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
    pair: NMFiniteField; jnff
 
 :spadfun:`jnff`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``jnff(i)``\  returns \ ``i``\ , a NMIntger, as a NMFiniteField element.
+  \ ``jnff(i)``\  returns \ ``i``\ , a NMInteger, as a NMFiniteField element.
 
 .. _l4e4d46696e6974654669656c64-6c61746578:
 
@@ -866,7 +876,7 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
    pair: NMFiniteField; sqrt
 
 :spadfun:`sqrt`\: % -> % 
-  \ ``sqrt(x)``\  returns a square root of \ ``x``\ . Throw a Julia error if there is no square root and returns 0.
+  \ ``sqrt(x)``\  returns a square root of \ ``x``\ . Throws a Julia error if there is no square root and returns 0.
 
 .. _l4e4d46696e6974654669656c64-73717561726546726565:
 
@@ -904,7 +914,7 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
    pair: NMFiniteField; trace
 
 :spadfun:`trace`\: % -> \ :ref:`NMPrimeField <l4e4d5072696d654669656c64>`\  p 
-  \ ``trace(x)``\  returs the trace of \ ``x``\ .
+  \ ``trace(x)``\  returns the trace of \ ``x``\ .
 
 
 \ :ref:`trace <l46696e697465416c67656272616963457874656e73696f6e4669656c64-7472616365>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
@@ -1057,6 +1067,8 @@ This domain allows the manipulation of Nemo Galois field of \ ``p^n``\  elements
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 

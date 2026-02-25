@@ -5,7 +5,7 @@
 JLObjDynamicLinker
 ==================
 
-:viewcode:`jutils.spad line 350 <jutils.spad#L350>` :editcode:`[edit on github] <jutils.spad#L350>`
+:viewcode:`jutils.spad line 508 <jutils.spad#L508>` :editcode:`[edit on github] <jutils.spad#L508>`
 
 
 Generic Julia objects used for dynamically linking shared libraries.
@@ -41,7 +41,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jdlink
 
 :spadfun:`jdlink`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jdlink(lib)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer necessary using jlDlClose. \example{libm := jdlink "libopenlibm"} Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.
+  \ ``jdlink(lib)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer necessary using jlDlClose. \example{libm := jdlink "libopenlibm"} Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c41626f7574:
 
@@ -80,21 +80,21 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlCApply(func,x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . The Julia type of \ ``x``\  must be compatible with the Libdl Julia module. Type of the returned value is assumed to be the same than the type of \ ``x``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrt))} \example{jlDlCApply(squareRoot,jobject("2."))}
+  \ ``jlDlCApply(func,x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . The Julia type of \ ``x``\  must be compatible with the Libdl Julia module. Type of the returned value is assumed to be the same as the type of \ ``x``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrt))} \example{jlDlCApply(squareRoot,jobject("2."))}
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlCApply(func,x,y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . Type of the returned value is assumed to be the same than the type of \ ``x``\ . For example: \example{libgsl:= jlDlOpen "libgsl"} \example{ipower:=jlDlSym(libgsl, gsl_pow_int)} \example{jlDlCApply(ipower,jobject("2.0"),jobject("7"))}
+  \ ``jlDlCApply(func,x,y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . Type of the returned value is assumed to be the same as the type of \ ``x``\ . For example: \example{libgsl:= jlDlOpen "libgsl"} \example{ipower:=jlDlSym(libgsl, gsl_pow_int)} \example{jlDlCApply(ipower,jobject("2.0"),jobject("7"))}
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlCApply(func,x,y,z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . Returned value is assumed the same type than type of \ ``x``\ . Use jlDlCApply with type options if necessary. For example with GSL: \example{gsl:= jlDlOpen "libgsl"} \example{hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))} \example{jlDlCApply(hypot3,jobject("2."),jobject("7."),jobject("9.0"))} \example{jlDlCApply(hypot3,jfloat64("2."),jfloat64("7."),9.0::JLObjFloat64)}
+  \ ``jlDlCApply(func,x,y,z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . Returned value is assumed the same type as type of \ ``x``\ . Use jlDlCApply with type options if necessary. For example with GSL: \example{gsl:= jlDlOpen "libgsl"} \example{hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))} \example{jlDlCApply(hypot3,jobject("2."),jobject("7."),jobject("9.0"))} \example{jlDlCApply(hypot3,jfloat64("2."),jfloat64("7."),9.0::JLObjFloat64)}
 
 
 .. index::
@@ -123,7 +123,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlClose
 
 :spadfun:`jlDlClose`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlDlClose(libPtr)``\  unload explicitely the shared library referenced by \ ``libPtr``\ .
+  \ ``jlDlClose(libPtr)``\  unloads explicitly the shared library referenced by \ ``libPtr``\ .
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c46696e644c6962:
 
@@ -131,7 +131,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlFindLib
 
 :spadfun:`jlDlFindLib`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlDlFindLib(lib)``\  returns the the library \ ``lib``\ . Returns an empty string if it is not found.
+  \ ``jlDlFindLib(lib)``\  returns the library \ ``lib``\ . Returns an empty string if it is not found.
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c4c697374:
 
@@ -139,7 +139,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlList
 
 :spadfun:`jlDlList`\: () -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlDlList()``\  returns the list of loaded shared objects by the currect processus in a JLObject referencing a Julia vector of strings.
+  \ ``jlDlList()``\  returns the list of loaded shared objects by the current process in a JLObject referencing a Julia vector of strings.
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c4f70656e:
 
@@ -147,28 +147,28 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``jlDlOpen(lib, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. 'throw' determines whether or not Julia throws an error if the library can not be loaded. \example{jlDlOpen("libopenlibm", true)}
+  \ ``jlDlOpen(lib, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. 'throw' determines whether or not Julia throws an error if the library cannot be loaded. \example{jlDlOpen("libopenlibm", true)}
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
-  \ ``jlDlOpen(lib, flags)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. The Julia module Libdl must be loaded/imported before using this function. \example{jlUsing "Libdl"} \ ``--``\  for flags \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW")} flags can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.
+  \ ``jlDlOpen(lib, flags)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. The Julia module Libdl must be loaded/imported before using this function. \example{jlUsing "Libdl"} \ ``--``\  for flags \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW")} flags can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``jlDlOpen(lib, flags, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library can not be loaded. The Julia module must be be loaded/imported before using this function. \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW", false)} \ ``flags``\  can be one or combinaison of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these \ ``flags``\ .
+  \ ``jlDlOpen(lib, flags, throw)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library cannot be loaded. The Julia module must be be loaded/imported before using this function. \example{jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW", false)} \ ``flags``\  can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these \ ``flags``\ .
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jlDlOpen(lib)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain adresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library can not be loaded and returns 'nothing' in this case. Use the nothing? operation on the returned value if necessary.
+  \ ``jlDlOpen(lib)``\  opens/loads the dynamic shared library \ ``lib``\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded and returns 'nothing' in this case. Use the nothing? operation on the returned value if necessary.
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c50617468:
 
@@ -208,6 +208,11 @@ Generic Julia objects used for dynamically linking shared libraries.
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -216,6 +221,11 @@ Generic Julia objects used for dynamically linking shared libraries.
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c4f626a656374:
@@ -245,7 +255,7 @@ Generic Julia objects used for dynamically linking shared libraries.
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6c61746578:

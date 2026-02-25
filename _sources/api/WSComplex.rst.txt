@@ -5,7 +5,7 @@
 WSComplex
 =========
 
-:viewcode:`jws.spad line 1138 <jws.spad#L1138>` :editcode:`[edit on github] <jws.spad#L1138>`
+:viewcode:`jws.spad line 1152 <jws.spad#L1152>` :editcode:`[edit on github] <jws.spad#L1152>`
 
 
 Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
@@ -613,7 +613,7 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
    pair: WSComplex; exp
 
 :spadfun:`exp`\: () -> % 
-  \ ``exp()``\  returns the WSAPJLWSComplexReal \ ``ℯ``\  (\%\ ``e``\  or exp(1)).
+  \ ``exp()``\  returns the WSComplex \ ``ℯ``\  (\%\ ``e``\  or exp(1)).
 
 .. _l5753436f6d706c6578-65787072657373496465616c4d656d626572:
 
@@ -790,6 +790,11 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l5753436f6d706c6578-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l5753436f6d706c6578-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -803,6 +808,11 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
 .. _l5753436f6d706c6578-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l5753436f6d706c6578-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753436f6d706c6578-6a6c4f626a656374:
@@ -837,7 +847,7 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
 
 .. _l5753436f6d706c6578-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l5753436f6d706c6578-6a5753436f6d706c6578:
@@ -917,7 +927,7 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
    pair: WSComplex; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(z)``\  compute logarithm of \ ``z``\  in base 10.
+  \ ``log10(z)``\  computes the logarithm of \ ``z``\  in base 10.
 
 .. _l5753436f6d706c6578-6c6f6732:
 
@@ -925,7 +935,7 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
    pair: WSComplex; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(z)``\  compute logarithm of \ ``z``\  in base 2.
+  \ ``log2(z)``\  computes the logarithm of \ ``z``\  in base 2.
 
 .. _l5753436f6d706c6578-6c6f67:
 
@@ -1228,7 +1238,7 @@ Julia Wolfram Symbolic complex numbers using the MathLink Julia package.
    pair: WSComplex; sinc
 
 :spadfun:`sinc`\: % -> % 
-  \ ``sinc(z)``\  compues the unormalized sinc of \ ``z``\ , sin(\ ``z``\ )\ ``/z``\  and 0 if \ ``z``\  = 0.
+  \ ``sinc(z)``\  computes the unnormalized sinc of \ ``z``\ , sin(\ ``z``\ )\ ``/z``\  and 0 if \ ``z``\  = 0.
 
 .. _l5753436f6d706c6578-73696e68:
 

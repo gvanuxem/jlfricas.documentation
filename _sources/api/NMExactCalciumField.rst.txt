@@ -5,10 +5,10 @@
 NMExactCalciumField
 ===================
 
-:viewcode:`jnemo.spad line 1289 <jnemo.spad#L1289>` :editcode:`[edit on github] <jnemo.spad#L1289>`
+:viewcode:`jnemo.spad line 1353 <jnemo.spad#L1353>` :editcode:`[edit on github] <jnemo.spad#L1353>`
 
 
-\ :ref:`NMExactCalciumField <l4e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo package.
+\ :ref:`NMExactCalciumField <l4e4d457861637443616c6369756d4669656c64>`\  implements exact complex field arithmetic using the Nemo Julia package.
 
 
 .. _l4e4d457861637443616c6369756d4669656c64-30:
@@ -367,7 +367,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; complexNormalForm
 
 :spadfun:`complexNormalForm`\: % -> % 
-  \ ``complexNormalForm(x)``\  returns \ ``x``\  rewritten using standard transformations. See the Nemo.\ ``jl``\  documentation fo more informations.
+  \ ``complexNormalForm(x)``\  returns \ ``x``\  rewritten using standard transformations. See the Nemo.\ ``jl``\  documentation for more information.
 
 .. _l4e4d457861637443616c6369756d4669656c64-636f6e646974696f6e50:
 
@@ -632,7 +632,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; floor
 
 :spadfun:`floor`\: % -> % 
-  \ ``floor(z)``\  returns the largest integer below or equal ot \ ``z``\ .
+  \ ``floor(z)``\  returns the largest integer below or equal to \ ``z``\ .
 
 .. _l4e4d457861637443616c6369756d4669656c64-47616d6d61:
 
@@ -771,6 +771,11 @@ NMExactCalciumField
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d457861637443616c6369756d4669656c64-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -779,6 +784,11 @@ NMExactCalciumField
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d457861637443616c6369756d4669656c64-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c4e4d52696e67:
@@ -797,7 +807,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; jlOptions
 
 :spadfun:`jlOptions`\: % -> \ :ref:`JLObjDict <l4a4c4f626a44696374>`\  
-  \ ``jlOptions(x)``\  returns the options used during compoutations.
+  \ ``jlOptions(x)``\  returns the options used during computations.
 
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c50726f70657274794e616d6573:
 
@@ -821,7 +831,7 @@ NMExactCalciumField
 
 .. _l4e4d457861637443616c6369756d4669656c64-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d457861637443616c6369756d4669656c64-6a6e656366:
@@ -944,7 +954,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; negativeInfinity
 
 :spadfun:`negativeInfinity`\: () -> % 
-  \ ``negativeInfinity()``\  returns negtive infinity.
+  \ ``negativeInfinity()``\  returns negative infinity.
 
 .. _l4e4d457861637443616c6369756d4669656c64-6e6f726d:
 
@@ -1033,14 +1043,14 @@ NMExactCalciumField
    pair: NMExactCalciumField; random
 
 :spadfun:`random`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``random(depth, bits)``\  returns a random number with size of coefficients up to bits. if \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1.
+  \ ``random(depth, bits)``\  returns a random number with size of coefficients up to bits. If \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1.
 
 
 .. index::
    pair: NMExactCalciumField; random
 
 :spadfun:`random`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``random(depth, bits, type)``\  returns a random number with size of coefficients up to \ ``bits``\ . if \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1. \ ``depth``\  is not used for rationals. type can be one of: :rational (returns a rational) :null (returns value with default settings) :special (returns a special value of a number - can throw an error if it isn\ ``'t``\  a number).
+  \ ``random(depth, bits, type)``\  returns a random number with size of coefficients up to \ ``bits``\ . If \ ``depth``\  is nonzero, apply a random arithmetic operation/function to operands produced using recursive calls with \ ``depth``\  - 1. \ ``depth``\  is not used for rationals. type can be one of: :rational (returns a rational) :null (returns value with default settings) :special (returns a special value of a number - can throw an error if it isn\ ``'t``\  a number).
 
 .. _l4e4d457861637443616c6369756d4669656c64-72616e6b:
 
@@ -1124,7 +1134,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; retract
 
 :spadfun:`retract`\: % -> \ :ref:`NMComplexBall <l4e4d436f6d706c657842616c6c>`\  
-  \ ``retract(x)``\  retract \ ``x``\ .
+  \ ``retract(x)``\  retracts \ ``x``\ .
 
 .. _l4e4d457861637443616c6369756d4669656c64-72657472616374496643616e:
 
@@ -1214,7 +1224,7 @@ NMExactCalciumField
    pair: NMExactCalciumField; sin
 
 :spadfun:`sin`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``sin(x, repr)``\  return sin(\ ``x``\ ) using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :exponential :tangent :direct
+  \ ``sin(x, repr)``\  returns sin(\ ``x``\ ) using one of the repr representations: :default (since 'default' is a FriCAS keyword use jsym(String) to coerce it) :exponential :tangent :direct
 
 .. _l4e4d457861637443616c6369756d4669656c64-73696e68:
 
@@ -1461,6 +1471,8 @@ NMExactCalciumField
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 

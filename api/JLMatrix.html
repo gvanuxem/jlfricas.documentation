@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>JLMatrix R &#8212; jlFriCAS</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
@@ -17,7 +17,7 @@
     <script src="../_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="JLObjBigInt" href="JLObjBigInt.html" />
+    <link rel="next" title="JLObjAnonymousFunction" href="JLObjAnonymousFunction.html" />
     <link rel="prev" title="JLInt64Vector" href="JLInt64Vector.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="JLObjBigInt.html" title="JLObjBigInt"
+          <a href="JLObjAnonymousFunction.html" title="JLObjAnonymousFunction"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="JLInt64Vector.html" title="JLInt64Vector"
@@ -50,11 +50,11 @@
             
   <section id="jlmatrix-r">
 <span id="l4a4c4d6174726978"></span><span id="index-0"></span><h1>JLMatrix R<a class="headerlink" href="#jlmatrix-r" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1971">jobject.spad line 1971</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1971">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L1427">jobject.spad line 1427</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L1427">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="JLObjectRing.html#l4a4c4f626a65637452696e67"><span class="std std-ref">JLObjectRing</span></a></p></li>
 </ul>
-<p>This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt<code class="docutils literal notranslate"><span class="pre">'s</span></code>. Minimum index is 1. Beware, for matrix with Nemo elements, contrary to Julia matrix, Nemo follows the convention of the <code class="docutils literal notranslate"><span class="pre">C</span></code> libraries, it wraps and uses row major representation.</p>
+<p>This domain provides a generic Julia matrix type stored in Julia with no bound checking on elt<code class="docutils literal notranslate"><span class="pre">'s</span></code>. Minimum index is 1. Beware, for matrix with Nemo elements, contrary to Julia matrix, Nemo follows the <code class="docutils literal notranslate"><span class="pre">C</span></code> language convention, it wraps and uses row major representation.</p>
 <dl class="simple" id="l4a4c4d6174726978-23">
 <dt><a class="reference internal" href="Aggregate.html#l416767726567617465-23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
@@ -193,8 +193,28 @@
 <dt><a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279-646961676f6e616c4d6174726978"><span class="std std-ref">diagonalMatrix</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R -&gt; %</dt><dd><p>from <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-656967656e76616c756573"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">eigenvalues</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R if R has <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="NMRealField.html#l4e4d5265616c4669656c64"><span class="std std-ref">NMRealField</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvalues(m)</span></code> returns eigenvalues of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+<span id="l4a4c4d6174726978-656967656e537061636573"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">eigenSpaces</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObjDict.html#l4a4c4f626a44696374"><span class="std std-ref">JLObjDict</span></a> if R has <a class="reference internal" href="NMField.html#l4e4d4669656c64"><span class="std std-ref">NMField</span></a></dt><dd><p>eigenSpace(mat, side) returns a Julia Dict containing the :left or :right side of the eigen space of mat associated to the eigenvalue key. example{a:=matrix([[111::NPF(127),91,50],[31,6,97],[117,63,6]])$JLMatrix(NPF(127))} example{eigenSpaces(a, “left”)}</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">eigenSpaces</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObjDict.html#l4a4c4f626a44696374"><span class="std std-ref">JLObjDict</span></a> if R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenSpaces(JRing,</span> <span class="pre">mat,</span> <span class="pre">side)</span></code> returns a Julia Dict containing the :left or :right side of the eigen space of <code class="docutils literal notranslate"><span class="pre">mat</span></code> associated to the eigenvalue key and the field <code class="docutils literal notranslate"><span class="pre">JRing</span></code>. example{a:=matrix([[111::NINT,91,50],[31,6,97],[117,63,6]])$JLMatrix(NINT)} example{eigenSpaces(jlNMRing()$NAN, a, “left”)}</p>
+</dd>
+</dl>
+<span id="l4a4c4d6174726978-656967656e76616c756573"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">eigenvalues</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R if R has <a class="reference internal" href="NMField.html#l4e4d4669656c64"><span class="std std-ref">NMField</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvalues(mat)</span></code> returns a Julia vector containing the eigenvalues of <code class="docutils literal notranslate"><span class="pre">mat</span></code>. example{a:=matrix([[111::NPF(127),91,50],[31,6,97],[117,63,6]])$JLMatrix(NPF(127))} example{eigenvalues(a)}</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">eigenvalues</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> if R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvalues(JRing,</span> <span class="pre">mat)</span></code> returns a Julia vector containing the eigenvalues of mat in the field <code class="docutils literal notranslate"><span class="pre">JRing</span></code>. The Julia vector of JLObject is of internal type JLRing. example{a:=matrix([[111::NINT,91,50],[31,6,97],[117,63,6]])$JLMatrix(NINT)} example{eigenvalues(jlNMRing()$NCF, a)}</p>
+</dd>
+</dl>
+<span id="l4a4c4d6174726978-656967656e76616c756573576974684d756c7469706c69636974696573"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">eigenvaluesWithMultiplicities</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLObjTuple.html#l4a4c4f626a5475706c65"><span class="std std-ref">JLObjTuple</span></a> if R has <a class="reference internal" href="NMField.html#l4e4d4669656c64"><span class="std std-ref">NMField</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvaluesWithMultiplicities(mat)</span></code> returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities. The tuples are of internal type (%, <code class="docutils literal notranslate"><span class="pre">JLObjInt64</span></code>). example{a:=matrix([[111::NPF(127),91,50],[31,6,97],[117,63,6]])$JLMatrix(NPF(127))} example{eigenvaluesWithMultiplicities(a)}</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">eigenvaluesWithMultiplicities</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLObjTuple.html#l4a4c4f626a5475706c65"><span class="std std-ref">JLObjTuple</span></a> if R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvaluesWithMultiplicities(JRing,</span> <span class="pre">mat)</span></code> returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities in the field <code class="docutils literal notranslate"><span class="pre">JRing</span></code>. The tuples are of internal type (JLRing, <code class="docutils literal notranslate"><span class="pre">JLObjInt64</span></code>). example{a:=matrix([[111::NINT,91,50],[31,6,97],[117,63,6]])$JLMatrix(NINT)} example{eigenvaluesWithMultiplicities(jlNMRing()$NCF, a)}</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4d6174726978-656c74">
@@ -255,7 +275,7 @@
 <dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465-65766572793f"><span class="std std-ref">every?</span></a>: (R -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-65787072616e64"></span><dl class="simple" id="index-8">
+<span id="l4a4c4d6174726978-65787072616e64"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">exprand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a> if R has <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a> and R has <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a> and R hasn’t <a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprand(m,n)</span></code> returns a JLMatrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with exponentially distributed random numbers. example{mat := exprand(4,4)$JLMatrix(JLFloat)} example{svd := jlApply(“svd”, mat)}</p>
 </dd>
 </dl>
@@ -263,20 +283,20 @@
 <dt><a class="reference internal" href="MatrixOperationsCategory.html#l4d61747269784f7065726174696f6e7343617465676f7279-657871756f"><span class="std std-ref">exquo</span></a>: (%, R) -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p>from <a class="reference internal" href="MatrixOperationsCategory.html#l4d61747269784f7065726174696f6e7343617465676f7279"><span class="std std-ref">MatrixOperationsCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-666163746f72697a65"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjComplexF32.html#l4a4c4f626a436f6d706c6578463332"><span class="std std-ref">JLObjComplexF32</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
+<span id="l4a4c4d6174726978-666163746f72697a65"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjComplexF32.html#l4a4c4f626a436f6d706c6578463332"><span class="std std-ref">JLObjComplexF32</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-10">
-<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjComplexF64.html#l4a4c4f626a436f6d706c6578463634"><span class="std std-ref">JLObjComplexF64</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjComplexF64.html#l4a4c4f626a436f6d706c6578463634"><span class="std std-ref">JLObjComplexF64</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-11">
-<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjFloat32.html#l4a4c4f626a466c6f61743332"><span class="std std-ref">JLObjFloat32</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
+<dl class="simple" id="index-16">
+<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjFloat32.html#l4a4c4f626a466c6f61743332"><span class="std std-ref">JLObjFloat32</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-12">
-<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjFloat64.html#l4a4c4f626a466c6f61743634"><span class="std std-ref">JLObjFloat64</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be choosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">factorize</span>: <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLObjFloat64.html#l4a4c4f626a466c6f61743634"><span class="std std-ref">JLObjFloat64</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(m)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">m</span></code> using a suited matrix factorization for <code class="docutils literal notranslate"><span class="pre">m</span></code>. For a symmetric matrix the Bunch-Kaufman factorization will be chosen whereas for generic matrices, a LU or a <code class="docutils literal notranslate"><span class="pre">QR</span></code> factorization will be used.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4d6174726978-66696c6c21">
@@ -303,17 +323,17 @@
 <dt><a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a53706c6974"><span class="std std-ref">horizSplit</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279"><span class="std std-ref">TwoDimensionalArrayCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-6964656e74697479"></span><dl class="simple" id="index-13">
+<span id="l4a4c4d6174726978-6964656e74697479"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">identity</span>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">identity(n)</span></code> returns a <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> identity matrix.</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-696e7665727365"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(m)</span></code> returns inverse matrix. Throws a Julia error if <code class="docutils literal notranslate"><span class="pre">m</span></code> is no invertible.</p>
+<span id="l4a4c4d6174726978-696e7665727365"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(m)</span></code> returns inverse matrix. Throws a Julia error if <code class="docutils literal notranslate"><span class="pre">m</span></code> is not invertible.</p>
 </dd>
 <dt><a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279-696e7665727365"><span class="std std-ref">inverse</span></a>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></dt><dd><p>from <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-696e76657274496643616e"></span><dl class="simple" id="index-15">
+<span id="l4a4c4d6174726978-696e76657274496643616e"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">invertIfCan</span>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertIfCan(m)</span></code> returns the inverse of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. If the matrix is not invertible, “failed” is returned. Error: if the matrix is not square.</p>
 </dd>
 </dl>
@@ -333,7 +353,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-6a6c417070726f783f"></span><dl class="simple" id="index-16">
+<span id="l4a4c4d6174726978-6a6c417070726f783f"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">jlApprox?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R hasn’t <a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApprox?(A,B)</span></code> computes component-wise inexact equality with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.</p>
 </dd>
 </dl>
@@ -353,12 +373,20 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744669656c64"><span class="std std-ref">jlGetField</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4a4c4d6174726978-6a6c4765744a756c6961496e646578">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578"><span class="std std-ref">jlGetJuliaIndex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c4d6174726978-6a6c47657450726f7065727479">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c47657450726f7065727479"><span class="std std-ref">jlGetProperty</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4d6174726978-6a6c4964">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4d6174726978-6a6c696d726566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c696d726566"><span class="std std-ref">jlimref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4d6174726978-6a6c4f626a656374">
@@ -382,10 +410,10 @@
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4d6174726978-6a6c54797065">
-<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-6a6d6174726978"></span><dl class="simple" id="index-17">
+<span id="l4a4c4d6174726978-6a6d6174726978"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">jmatrix</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jmatrix(str)</span></code> evaluates the string <code class="docutils literal notranslate"><span class="pre">str</span></code> and returns the generated matrix. No checks are done at the FriCAS level.</p>
 </dd>
 </dl>
@@ -485,7 +513,7 @@
 <dt><a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279-6e636f6c73"><span class="std std-ref">ncols</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279"><span class="std std-ref">TwoDimensionalArrayCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-6e6577"></span><dl class="simple" id="index-18">
+<span id="l4a4c4d6174726978-6e6577"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">new</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new(m,</span> <span class="pre">n,</span> <span class="pre">x)</span></code> creates a matrix of size <code class="docutils literal notranslate"><span class="pre">m</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> with all elements <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
@@ -493,11 +521,11 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-6e72616e64"></span><dl class="simple" id="index-19">
+<span id="l4a4c4d6174726978-6e72616e64"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">nrand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLComplexFloat.html#l4a4c436f6d706c6578466c6f6174"><span class="std std-ref">JLComplexFloat</span></a> if R hasn’t <a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a> and R has <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand(m,n)</span></code> returns a JLMatrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with normally distributed random numbers. example{mat := nrand(4,4)$JLMatrix(JLComplexFloat)} example{qr := jlApply(“qr”, mat)} example{qr.Q * qr.R}</p>
 </dd>
 </dl>
-<dl class="simple" id="index-20">
+<dl class="simple" id="index-25">
 <dt><span class="spadfun">nrand</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a> if R has <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a> and R has <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a> and R hasn’t <a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrand(m,n)</span></code> returns a JLMatrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with normally distributed random numbers. For example: example{mat := nrand(4,4)$JLMatrix(JLFloat)} example{chol := jlApply(“cholesky”, mat * transpose(mat))} example{chol.L * chol.U}</p>
 </dd>
 </dl>
@@ -541,11 +569,11 @@
 <dt><a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279-71736574656c7421"><span class="std std-ref">qsetelt!</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, R) -&gt; R</dt><dd><p>from <a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279"><span class="std std-ref">TwoDimensionalArrayCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-7261646963616c456967656e76616c756573"></span><dl class="simple" id="index-21">
+<span id="l4a4c4d6174726978-7261646963616c456967656e76616c756573"></span><dl class="simple" id="index-26">
 <dt><span class="spadfun">radicalEigenvalues</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="NMAlgebraicNumber.html#l4e4d416c676562726169634e756d626572"><span class="std std-ref">NMAlgebraicNumber</span></a> if R has <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> and R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a> or R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a> and R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalEigenvalues(mat)</span></code> returns a Julia vector containing the eigenvalues of <code class="docutils literal notranslate"><span class="pre">mat</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-7261646963616c456967656e76616c756573576974684d756c7469706c69636974696573"></span><dl class="simple" id="index-22">
+<span id="l4a4c4d6174726978-7261646963616c456967656e76616c756573576974684d756c7469706c69636974696573"></span><dl class="simple" id="index-27">
 <dt><span class="spadfun">radicalEigenvaluesWithMultiplicities</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLObjTuple.html#l4a4c4f626a5475706c65"><span class="std std-ref">JLObjTuple</span></a> if R has <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> and R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a> or R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a> and R has <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalEigenvaluesWithMultiplicities(mat)</span></code> returns a Julia vector containing Julia tuples of the eigenvalues and their multiplicities. The tuples are of internal type (NMAlgebraicNumber, <code class="docutils literal notranslate"><span class="pre">JLObjInt64</span></code>).</p>
 </dd>
 </dl>
@@ -647,7 +675,7 @@
 <dt><a class="reference internal" href="MatrixOperationsCategory.html#l4d61747269784f7065726174696f6e7343617465676f7279-73796d6d65747269633f"><span class="std std-ref">symmetric?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MatrixOperationsCategory.html#l4d61747269784f7065726174696f6e7343617465676f7279"><span class="std std-ref">MatrixOperationsCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-7472616365"></span><dl class="simple" id="index-23">
+<span id="l4a4c4d6174726978-7472616365"></span><dl class="simple" id="index-28">
 <dt><span class="spadfun">trace</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">trace(m)</span></code> returns the trace of square matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. Julia error if <code class="docutils literal notranslate"><span class="pre">m</span></code> is not square.</p>
 </dd>
 </dl>
@@ -657,11 +685,11 @@
 <dt><a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279-7472616e73706f7365"><span class="std std-ref">transpose</span></a>: <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R -&gt; %</dt><dd><p>from <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R, <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> R)</p>
 </dd>
 </dl>
-<span id="l4a4c4d6174726978-7572616e643031"></span><dl class="simple" id="index-24">
+<span id="l4a4c4d6174726978-7572616e643031"></span><dl class="simple" id="index-29">
 <dt><span class="spadfun">urand01</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLComplexFloat.html#l4a4c436f6d706c6578466c6f6174"><span class="std std-ref">JLComplexFloat</span></a> if R hasn’t <a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a> and R has <a class="reference internal" href="ComplexCategory.html#l436f6d706c657843617465676f7279"><span class="std std-ref">ComplexCategory</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01(m,n)</span></code> returns a JLMatrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with uniformly distributed random number contained in the unit disk. example{mat := urand01(4,4)$JLMatrix(JLComplexFloat)} example{qr := jlApply(“qr”, mat)} example{qr.Q * qr.R}</p>
 </dd>
 </dl>
-<dl class="simple" id="index-25">
+<dl class="simple" id="index-30">
 <dt><span class="spadfun">urand01</span>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="#l4a4c4d6174726978"><span class="std std-ref">JLMatrix</span></a> <a class="reference internal" href="JLFloat.html#l4a4c466c6f6174"><span class="std std-ref">JLFloat</span></a> if R has <a class="reference internal" href="FloatingPointSystem.html#l466c6f6174696e67506f696e7453797374656d"><span class="std std-ref">FloatingPointSystem</span></a> and R has <a class="reference internal" href="arbitraryPrecision.html#l617262697472617279507265636973696f6e"><span class="std std-ref">arbitraryPrecision</span></a> and R hasn’t <a class="reference internal" href="NMType.html#l4e4d54797065"><span class="std std-ref">NMType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">urand01(m,n)</span></code> returns a JLMatrix of size (<code class="docutils literal notranslate"><span class="pre">m</span></code>,<code class="docutils literal notranslate"><span class="pre">n</span></code>) with uniformly distributed random number contained in [0,1]. example{mat := urand01(4,4)$JLMatrix(JLFloat)} example{qr := jlApply(“qr”, mat)} example{qr.Q * qr.R}</p>
 </dd>
 </dl>
@@ -718,6 +746,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
@@ -746,7 +775,7 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="JLObjBigInt.html" title="JLObjBigInt"
+          <a href="JLObjAnonymousFunction.html" title="JLObjAnonymousFunction"
              >next</a> |</li>
         <li class="right" >
           <a href="JLInt64Vector.html" title="JLInt64Vector"

@@ -5,10 +5,10 @@
 NMAlgebraicNumber
 =================
 
-:viewcode:`jnemo.spad line 198 <jnemo.spad#L198>` :editcode:`[edit on github] <jnemo.spad#L198>`
+:viewcode:`jnemo.spad line 206 <jnemo.spad#L206>` :editcode:`[edit on github] <jnemo.spad#L206>`
 
 
-This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic closure of rational field, represented by minimal polynomials using the Nemo package for Julia (Calcium based). https://fredrikj.net/calcium/
+This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic closure of rational field, represented by minimal polynomials using the Nemo Julia package (Calcium library based). https://fredrikj.net/calcium/
 
 
 .. _l4e4d416c676562726169634e756d626572-30:
@@ -226,8 +226,8 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -402,7 +402,7 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
    pair: NMAlgebraicNumber; floor
 
 :spadfun:`floor`\: % -> % 
-  \ ``floor(a)``\  returns the largest integer below or equal ot a.
+  \ ``floor(a)``\  returns the largest integer below or equal to a.
 
 .. _l4e4d416c676562726169634e756d626572-676364:
 
@@ -501,6 +501,11 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4e4d416c676562726169634e756d626572-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4e4d416c676562726169634e756d626572-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -509,6 +514,11 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
 .. _l4e4d416c676562726169634e756d626572-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d416c676562726169634e756d626572-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d416c676562726169634e756d626572-6a6c4e4d52696e67:
@@ -543,7 +553,7 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
 
 .. _l4e4d416c676562726169634e756d626572-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d416c676562726169634e756d626572-6a6e616e:
@@ -850,14 +860,14 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
    pair: NMAlgebraicNumber; rootOfUnity
 
 :spadfun:`rootOfUnity`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``rootOfUnity(n,k)``\ Return the root of unity exp(2*\%pi*\%i*k/n).
+  \ ``rootOfUnity(n,k)``\  returns the root of unity exp(2*\%pi*\%i*k/n).
 
 
 .. index::
    pair: NMAlgebraicNumber; rootOfUnity
 
 :spadfun:`rootOfUnity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``rootOfUnity(n)``\ Return the root of unity exp(2*\%pi*\%i/n).
+  \ ``rootOfUnity(n)``\  returns the root of unity exp(2*\%pi*\%i/n).
 
 .. _l4e4d416c676562726169634e756d626572-726f6f74734f66:
 
@@ -1087,6 +1097,8 @@ This domain allows the manipulation of Nemo algebraic numbers, i.e. algebraic cl
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 

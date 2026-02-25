@@ -5,7 +5,7 @@
 WSReal
 ======
 
-:viewcode:`jws.spad line 445 <jws.spad#L445>` :editcode:`[edit on github] <jws.spad#L445>`
+:viewcode:`jws.spad line 455 <jws.spad#L455>` :editcode:`[edit on github] <jws.spad#L455>`
 
 
 Julia Wolfram Symbolic real numbers using the MathLink Julia package.
@@ -263,14 +263,14 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`JLFloat <l4a4c466c6f6174>`\  
-  \ ``coerce(x)``\  converts \ ``x``\  as a JLFloat.
+  \ ``coerce(x)``\  converts \ ``x``\  to a JLFloat.
 
 
 .. index::
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``coerce(r)``\  coerce \ ``r``\  to a \ ``JLFloat64``\ .
+  \ ``coerce(r)``\  coerces \ ``r``\  to a \ ``JLFloat64``\ .
 
 
 \ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -285,21 +285,21 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``coerce(x)``\  coerce \ ``x``\  to a WSExpression.
+  \ ``coerce(x)``\  coerces \ ``x``\  to a WSExpression.
 
 
 .. index::
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  converts \ ``x``\  as a WSReal.
+  \ ``coerce(x)``\  converts \ ``x``\  to a WSReal.
 
 
 .. index::
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  converts \ ``x``\  as a WSReal.
+  \ ``coerce(x)``\  converts \ ``x``\  to a WSReal.
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -314,21 +314,21 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat <l4a4c466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  converts \ ``x``\  as a WSReal.
+  \ ``coerce(x)``\  converts \ ``x``\  to a WSReal.
 
 
 .. index::
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``coerce(x)``\  converts \ ``x``\  as a WSReal.
+  \ ``coerce(x)``\  converts \ ``x``\  to a WSReal.
 
 
 .. index::
    pair: WSReal; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce(str)``\  construct \ ``str``\  as a WSReal.
+  \ ``coerce(str)``\  constructs \ ``str``\  as a WSReal.
 
 .. _l57535265616c-636f6d6d757461746f72:
 
@@ -615,6 +615,11 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
 \ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l57535265616c-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l57535265616c-6a6c47657450726f7065727479:
 
 \ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -628,6 +633,11 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
 .. _l57535265616c-6a6c4964:
 
 \ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l57535265616c-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l57535265616c-6a6c4f626a656374:
@@ -662,7 +672,7 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
 
 .. _l57535265616c-6a6c54797065:
 
-\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l57535265616c-6a5753496e74657270726574:
@@ -684,14 +694,14 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; jWSReal
 
 :spadfun:`jWSReal`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``jWSReal(z)``\  coerces the integer \ ``z``\  to a WSReal.
+  \ ``jWSReal(z)``\  coerces \ ``z``\  to a WSReal.
 
 
 .. index::
    pair: WSReal; jWSReal
 
 :spadfun:`jWSReal`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jWSReal(z)``\  coerces the integer \ ``z``\  to a WSReal.
+  \ ``jWSReal(z)``\  coerces \ ``z``\  to a WSReal.
 
 
 .. index::
@@ -705,7 +715,7 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; jWSReal
 
 :spadfun:`jWSReal`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``jWSReal(z)``\  coerces the integer \ ``z``\  to a WSReal.
+  \ ``jWSReal(z)``\  coerces \ ``z``\  to a WSReal.
 
 
 .. index::
@@ -758,7 +768,7 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  compute logarithm of \ ``x``\  in base 10.
+  \ ``log10(x)``\  computes the logarithm of \ ``x``\  in base 10.
 
 .. _l57535265616c-6c6f6732:
 
@@ -766,7 +776,7 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  compute logarithm of \ ``x``\  in base 2.
+  \ ``log2(x)``\  computes the logarithm of \ ``x``\  in base 2.
 
 .. _l57535265616c-6c6f67:
 
@@ -896,7 +906,7 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; rationalApproximation
 
 :spadfun:`rationalApproximation`\: % -> \ :ref:`WSRational <l5753526174696f6e616c>`\  
-  \ ``rationalApproximation(x)``\  try to find a rational approximation of \ ``x``\ . Error if \ ``x``\  can not be retracted.
+  \ ``rationalApproximation(x)``\  tries to find a rational approximation of \ ``x``\ . Error if \ ``x``\  can not be retracted.
 
 
 .. index::
@@ -993,7 +1003,7 @@ Julia Wolfram Symbolic real numbers using the MathLink Julia package.
    pair: WSReal; sinc
 
 :spadfun:`sinc`\: % -> % 
-  \ ``sinc(x)``\  compues the unormalized sinc of \ ``x``\ , sin(\ ``x``\ )\ ``/x``\ .
+  \ ``sinc(x)``\  computes the unnormalized sinc of \ ``x``\ , sin(\ ``x``\ )\ ``/x``\ .
 
 .. _l57535265616c-73696e68:
 

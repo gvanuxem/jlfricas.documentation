@@ -5,7 +5,7 @@
 JLStringUtilities
 =================
 
-:viewcode:`jutils.spad line 175 <jutils.spad#L175>` :editcode:`[edit on github] <jutils.spad#L175>`
+:viewcode:`jutils.spad line 335 <jutils.spad#L335>` :editcode:`[edit on github] <jutils.spad#L335>`
 
 
 This package provides Julia facilities to work with strings.
@@ -25,14 +25,14 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlMessageStyled
 
 :spadfun:`jlMessageStyled`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlMessageStyled(message, color)``\  print the \ ``message``\  with formatted `color` (english color). For example: \example{jlMessageStyled("I AM HERE!!!", "red")}
+  \ ``jlMessageStyled(message, color)``\  prints the \ ``message``\  with formatted `color` (english color). For example: \example{jlMessageStyled("I AM HERE!!!", "red")}
 
 
 .. index::
    pair: JLStringUtilities; jlMessageStyled
 
 :spadfun:`jlMessageStyled`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlMessageStyled(message)``\  print the \ ``message``\  with formatted style within braces (\ ``I``\  am {red:here}). For example: \example{jlMessageStyled("{red:■} {green:■} {yellow:■} {blue:■} {magenta:■} {cyan:■}")}
+  \ ``jlMessageStyled(message)``\  prints the \ ``message``\  with formatted style within braces (\ ``I``\  am {red:here}). For example: \example{jlMessageStyled("{red:■} {green:■} {yellow:■} {blue:■} {magenta:■} {cyan:■}")}
 
 .. _l4a4c537472696e675574696c6974696573-6a6c5265676578:
 
@@ -107,14 +107,14 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlSplit
 
 :spadfun:`jlSplit`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlSplit(str, delims)``\  split \ ``str``\  with delimiter(\ ``s``\ ) delims (a string or a regular expression). Equivalent to jlSplit(\ ``str``\ , delims, 0).
+  \ ``jlSplit(str, delims)``\  splits \ ``str``\  with delimiter(\ ``s``\ ) delims (a string or a regular expression). Equivalent to jlSplit(\ ``str``\ , delims, 0).
 
 
 .. index::
    pair: JLStringUtilities; jlSplit
 
 :spadfun:`jlSplit`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlSplit(str, delims, n)``\  split \ ``str``\  with delimiter(\ ``s``\ ) \ ``delims``\  (a string or a regular expression). Return a list of size \ ``n``\ . Parse entirely \ ``str``\  if \ ``n``\  = 0.
+  \ ``jlSplit(str, delims, n)``\  splits \ ``str``\  with delimiter(\ ``s``\ ) \ ``delims``\  (a string or a regular expression). Returns a list of size \ ``n``\ . Parses entirely \ ``str``\  if \ ``n``\  = 0.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c537472696e67:
 
@@ -122,7 +122,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlString
 
 :spadfun:`jlString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlString(str)``\  constructs an escaped string usable by the Julie parser.
+  \ ``jlString(str)``\  constructs an escaped string usable by the Julia parser.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c5374796c6564:
 
@@ -130,7 +130,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlStyled
 
 :spadfun:`jlStyled`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlStyled(str)``\  returns the String corresponding to a Julia styled expression, that is, "styled_"str_"" if your Julia support it. (StyledStrings is an official package). Convenience function.
+  \ ``jlStyled(str)``\  returns the String corresponding to a Julia styled expression, that is, "styled_"str_"" if your Julia supports it. (StyledStrings is an official package). Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c53756273746974757465:
 
@@ -138,7 +138,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlSubstitute
 
 :spadfun:`jlSubstitute`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlSubstitute(str)``\  returns the String corresponding to a Julia subtitute expression, that is, "s_"str_"". Convenience function.
+  \ ``jlSubstitute(str)``\  returns the String corresponding to a Julia substitute expression, that is, "s_"str_"". Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c546f4c61746578:
 
