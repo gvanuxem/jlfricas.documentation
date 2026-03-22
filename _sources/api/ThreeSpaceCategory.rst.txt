@@ -84,22 +84,6 @@ The category ThreeSpaceCategory is used for creating three dimensional objects u
 :spadfun:`components`\: % -> \ :ref:`List <l4c697374>`\  % 
   \ ``components(s)``\  takes the \ :ref:`ThreeSpace <l54687265655370616365>`\  \ ``s``\ , and creates a list containing a unique \ :ref:`ThreeSpace <l54687265655370616365>`\  for each single component of \ ``s``\ . If \ ``s``\  has no components defined, the list returned is empty.
 
-.. _l5468726565537061636543617465676f7279-636f6d706f73697465:
-
-.. index::
-   pair: ThreeSpaceCategory; composite
-
-:spadfun:`composite`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``composite([s1, s2, ..., sn])``\  will create a new \ :ref:`ThreeSpace <l54687265655370616365>`\  that is a union of all the components from each \ :ref:`ThreeSpace <l54687265655370616365>`\  in the parameter list, grouped as a composite.
-
-.. _l5468726565537061636543617465676f7279-636f6d706f7369746573:
-
-.. index::
-   pair: ThreeSpaceCategory; composites
-
-:spadfun:`composites`\: % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``composites(s)``\  takes the \ :ref:`ThreeSpace <l54687265655370616365>`\  \ ``s``\ , and creates a list containing a unique \ :ref:`ThreeSpace <l54687265655370616365>`\  for each single composite of \ ``s``\ . If \ ``s``\  has no composites defined (composites need to be explicitly created), the list returned is empty. Note that not all the components need to be part of a composite.
-
 .. _l5468726565537061636543617465676f7279-636f7079:
 
 .. index::
@@ -219,14 +203,14 @@ The category ThreeSpaceCategory is used for creating three dimensional objects u
    pair: ThreeSpaceCategory; merge
 
 :spadfun:`merge`\: (%, %) -> % 
-  \ ``merge(s1, s2)``\  will create a new \ :ref:`ThreeSpace <l54687265655370616365>`\  that has the components of \ ``s1``\  and \ ``s2``\ ; Groupings of components into composites are maintained.
+  \ ``merge(s1, s2)``\  will create a new \ :ref:`ThreeSpace <l54687265655370616365>`\  that has the components of \ ``s1``\  and \ ``s2``\ .
 
 
 .. index::
    pair: ThreeSpaceCategory; merge
 
 :spadfun:`merge`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``merge([s1, s2, ..., sn])``\  will create a new \ :ref:`ThreeSpace <l54687265655370616365>`\  that has the components of all the ones in the list; Groupings of components into composites are maintained.
+  \ ``merge([s1, s2, ..., sn])``\  will create a new \ :ref:`ThreeSpace <l54687265655370616365>`\  that has the components of all the ones in the list.
 
 .. _l5468726565537061636543617465676f7279-6d6573683f:
 
@@ -301,14 +285,6 @@ The category ThreeSpaceCategory is used for creating three dimensional objects u
 
 :spadfun:`numberOfComponents`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   \ ``numberOfComponents(s)``\  returns the number of distinct object components in the indicated \ :ref:`ThreeSpace <l54687265655370616365>`\ , \ ``s``\ , such as points, curves, polygons, and constructs.
-
-.. _l5468726565537061636543617465676f7279-6e756d6265724f66436f6d706f7369746573:
-
-.. index::
-   pair: ThreeSpaceCategory; numberOfComposites
-
-:spadfun:`numberOfComposites`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``numberOfComposites(s)``\  returns the number of supercomponents, or composites, in the \ :ref:`ThreeSpace <l54687265655370616365>`\ , \ ``s``\ ; Composites are arbitrary groupings of otherwise distinct and unrelated components; A \ :ref:`ThreeSpace <l54687265655370616365>`\  need not have any composites defined at all and, outside of the requirement that no component can belong to more than one composite at a time, the definition and interpretation of composites are unrestricted.
 
 .. _l5468726565537061636543617465676f7279-6f626a65637473:
 

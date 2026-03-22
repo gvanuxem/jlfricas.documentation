@@ -35,7 +35,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -47,7 +47,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen)
 
 
-\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -169,7 +169,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 .. _l4578706f6e656e7469616c457870616e73696f6e-636861727468526f6f74:
 
-\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4578706f6e656e7469616c457870616e73696f6e-636f65726365:
@@ -182,12 +182,12 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> % if \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
@@ -201,8 +201,8 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
   \ ``coerce(f)``\  converts a \ :ref:`UnivariatePuiseuxSeries <l556e697661726961746550756973657578536572696573>`\  to an \ :ref:`ExponentialExpansion <l4578706f6e656e7469616c457870616e73696f6e>`\ .
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen)
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen)
 
 .. _l4578706f6e656e7469616c457870616e73696f6e-636f6d6d757461746f72:
 
@@ -211,7 +211,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 .. _l4578706f6e656e7469616c457870616e73696f6e-636f6e646974696f6e50:
 
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  and % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
+\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l4578706f6e656e7469616c457870616e73696f6e-636f6e76657274:
@@ -706,7 +706,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 
-\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) 
 
@@ -714,7 +714,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) 
 
-\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
+\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen), \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen)) 
 
@@ -788,7 +788,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
-\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) 
 
@@ -804,7 +804,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 \ :ref:`Module <l4d6f64756c65>`\  % 
 
-\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) 
 
@@ -812,7 +812,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
 
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) 
 
@@ -874,7 +874,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if \ :ref:`UnivariatePuiseuxSeriesWithExponentialSingularity <l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479>`\ (R, FE, var, cen) has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 

@@ -25,7 +25,7 @@ This package provides the functions for the multivariate "lifting", using an alg
    pair: MultivariateLifting; corrPoly
 
 :spadfun:`corrPoly`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`List <l4c697374>`\  OV, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, failed)) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, failed) 
-  \ ``corrPoly(u, lv, lr, ln, lu, bsolv)``\  solves polynomial equation system u/f = sum(ai/lu(\ ``i``\ )) where \ ``f``\  is product of \ ``lu``\ (\ ``i``\ ) and deg(\ ``ai``\ ) < deg(\ ``lu``\ (\ ``i``\ )) using modular method. corrPoly returns "failed" if there are no solution. \ ``lv``\  is list of variables, \ ``lr``\  is list of corresponding evaluation points, bsolv is solver over \ ``R``\  specialized for modular images of \ ``lu``\ .
+  \ ``corrPoly(u, lv, lr, ln, lu, bsolv)``\  solves polynomial equation system u/f = sum(ai/lu(\ ``i``\ )) where \ ``f``\  is product of \ ``lu``\ (\ ``i``\ ) and deg(\ ``ai``\ ) < deg(\ ``lu``\ (\ ``i``\ )) using modular method. corrPoly returns "failed" if there is no solution. \ ``lv``\  is list of variables, \ ``lr``\  is list of corresponding evaluation points, bsolv is solver over \ ``R``\  specialized for modular images of \ ``lu``\ .
 
 .. _l4d756c7469766172696174654c696674696e67-6c696674696e67:
 
@@ -40,6 +40,6 @@ This package provides the functions for the multivariate "lifting", using an alg
    pair: MultivariateLifting; lifting
 
 :spadfun:`lifting`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`List <l4c697374>`\  OV, \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, failed) if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-  \ ``lifting(u, lv, lu, lr, lp, ln, r)``\  is lifting(\ ``u``\ , \ ``lv``\ , \ ``lu``\ , \ ``lr``\ , \ ``lp``\ , \ ``ln``\ , solv(\ ``r``\ )) where solv(\ ``r``\ ) is solver using reduction modulo \ ``r``\  and lifting. Memberes of \ ``lu``\  must be relatively prime modulo \ ``r``\ 
+  \ ``lifting(u, lv, lu, lr, lp, ln, r)``\  is lifting(\ ``u``\ , \ ``lv``\ , \ ``lu``\ , \ ``lr``\ , \ ``lp``\ , \ ``ln``\ , solv(\ ``r``\ )) where solv(\ ``r``\ ) is solver using reduction modulo \ ``r``\  and lifting. Members of \ ``lu``\  must be relatively prime modulo \ ``r``\ 
 
 

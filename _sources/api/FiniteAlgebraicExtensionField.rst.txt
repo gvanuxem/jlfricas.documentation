@@ -33,7 +33,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  F
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -41,7 +41,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  F
 
 
-\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -172,7 +172,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  F
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -374,8 +374,8 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-676364506f6c796e6f6d69616c:
 
-\ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
+\ :ref:`gcdPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
+  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-67656e657261746f72:
 
@@ -454,7 +454,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; linearAssociatedExp
 
 :spadfun:`linearAssociatedExp`\: (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``linearAssociatedExp(a, f)``\  is linear over \ *F*\ , i.e. for elements \ *a*\  from \ *\$*\ , \ *c, d*\  form \ *F*\  and \ *f, g*\  univariate polynomials over \ *F*\  we have \ :spadfun:`linearAssociatedExp`\ (a, cf+dg) equals \ *c*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``f``\ ) plus \ *d*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``g``\ ). Therefore \ :spadfun:`linearAssociatedExp`\  is defined completely by its action on monomials from \ *F[X]*\ : \ :spadfun:`linearAssociatedExp`\ (a, monomial(1, \ ``k``\ )\ ``\$``\ SUP(\ ``F``\ )) is defined to be \ :spadfun:`Frobenius`\ (a, \ ``k``\ ) which is \ *a^(q^k)*\ , where \ *q=size()\$F*\ .
+  \ ``linearAssociatedExp(a, f)``\  is linear over \ *F*\ , i.e. for elements \ *a*\  from \ *\$*\ , \ *c, d*\  from \ *F*\  and \ *f, g*\  univariate polynomials over \ *F*\  we have \ :spadfun:`linearAssociatedExp`\ (a, cf+dg) equals \ *c*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``f``\ ) plus \ *d*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``g``\ ). Therefore \ :spadfun:`linearAssociatedExp`\  is defined completely by its action on monomials from \ *F[X]*\ : \ :spadfun:`linearAssociatedExp`\ (a, monomial(1, \ ``k``\ )\ ``\$``\ SUP(\ ``F``\ )) is defined to be \ :spadfun:`Frobenius`\ (a, \ ``k``\ ) which is \ *a^(q^k)*\ , where \ *q=size()\$F*\ .
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6c696e6561724173736f6369617465644c6f67:
 
@@ -532,7 +532,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; normalElement
 
 :spadfun:`normalElement`\: () -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``normalElement()``\  returns a element, normal over the ground field \ ``F``\ , i.e. \ ``a^(q^i), 0 <= i < extensionDegree()``\  is an \ ``F``\ -basis, where \ ``q = size()\$F``\ . At the first call, the element is computed by \ :ref:`createNormalElement <l46696e697465416c67656272616963457874656e73696f6e4669656c64-6372656174654e6f726d616c456c656d656e74>`\  then cached in a global variable. On subsequent calls, the element is retrieved by referencing the global variable.
+  \ ``normalElement()``\  returns an element, normal over the ground field \ ``F``\ , i.e. \ ``a^(q^i), 0 <= i < extensionDegree()``\  is an \ ``F``\ -basis, where \ ``q = size()\$F``\ . At the first call, the element is computed by \ :ref:`createNormalElement <l46696e697465416c67656272616963457874656e73696f6e4669656c64-6372656174654e6f726d616c456c656d656e74>`\  then cached in a global variable. On subsequent calls, the element is retrieved by referencing the global variable.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6f6e653f:
 
@@ -556,7 +556,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  F
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-7072696d653f:
 
@@ -771,7 +771,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 \ :ref:`Algebra <l416c6765627261>`\  F 
 
-\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`BasicType <l426173696354797065>`\  
 
@@ -779,7 +779,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (F, F) 
 
-\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
+\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
 
@@ -837,7 +837,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  F 
 
-\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  
 
@@ -849,7 +849,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 \ :ref:`Module <l4d6f64756c65>`\  F 
 
-\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
@@ -857,7 +857,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  F 
 
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  
 
@@ -879,7 +879,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  F 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`Ring <l52696e67>`\  
 

@@ -5,7 +5,7 @@
 JLObjDynamicLinker
 ==================
 
-:viewcode:`jutils.spad line 508 <jutils.spad#L508>` :editcode:`[edit on github] <jutils.spad#L508>`
+:viewcode:`jutils.spad line 334 <jutils.spad#L334>` :editcode:`[edit on github] <jutils.spad#L334>`
 
 
 Generic Julia objects used for dynamically linking shared libraries.
@@ -123,7 +123,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlClose
 
 :spadfun:`jlDlClose`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlDlClose(libPtr)``\  unloads explicitly the shared library referenced by \ ``libPtr``\ .
+  \ ``jlDlClose(libPtr)``\  unloads explicitly the shared library. Returns \ ``true``\  if the shared object was successfully unloaded, \ ``false``\  otherwise. \example{jlDlClose(lib)}
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c46696e644c6962:
 
@@ -191,7 +191,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlSym
 
 :spadfun:`jlDlSym`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ ``jlDlSym(lib, sym)``\  returns the pointer to the symbol \ ``sym``\  in the library referenced by \ ``lib``\ . See jlDlOpen. \example{lnk:=jdlink "libjulia"} \example{sym := jlDlSym(lnk,"jl_eval_string")} \example{TODO}
+  \ ``jlDlSym(lib, sym)``\  returns the pointer to the symbol \ ``sym``\  in the library referenced by \ ``lib``\ . See jlDlOpen. \example{lnk:=jdlink "libjulia"} \example{sym := jlDlSym(lnk,"jl_eval_string")}
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c44756d70:
 

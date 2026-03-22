@@ -59,7 +59,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; blockSplit
 
 :spadfun:`blockSplit`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
-  \ ``blockSplit(a, [n1,...,ni], [m1,...,mi])``\  splits a into multiple subarraus row and column wise, such that element at position \ ``k``\ , \ ``l``\  has \ ``nk``\  rows and \ ``ml``\  columns. Error: if number of rows of a is different than \ ``n1``\  + ... + \ ``ni``\  or number of columns of a is different than \ ``m1``\  + ... + \ ``mj``\ 
+  \ ``blockSplit(a, [n1,...,ni], [m1,...,mi])``\  splits a into multiple subarrays row and column wise, such that element at position \ ``k``\ , \ ``l``\  has \ ``nk``\  rows and \ ``ml``\  columns. Error: if number of rows of a is different than \ ``n1``\  + ... + \ ``ni``\  or number of columns of a is different than \ ``m1``\  + ... + \ ``mj``\ 
 
 
 .. index::
@@ -130,7 +130,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, row, ls2)``\  is equivalent to \ ``elt(x, row, l2)``\  where \ ``l2``\  is obtained appending expansions of elements of \ ``ls2``\ , but should be more convenient and more efficient.
+  \ ``elt(x, row, ls2)``\  is equivalent to \ ``elt(x, row, l2)``\  where \ ``l2``\  is obtained by appending expansions of elements of \ ``ls2``\ , but should be more convenient and more efficient.
 
 
 .. index::
@@ -158,21 +158,21 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, ls1, col)``\  is equivalent to \ ``elt(x, l1, col)``\  where \ ``l1``\  is obtained appending expansions of elements of \ ``ls1``\ , but should be more convenient and more efficient.
+  \ ``elt(x, ls1, col)``\  is equivalent to \ ``elt(x, l1, col)``\  where \ ``l1``\  is obtained by appending expansions of elements of \ ``ls1``\ , but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, ls1, ls2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ ``elt(x, ls1, ls2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, ls1, s2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ ``elt(x, ls1, s2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
@@ -186,7 +186,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, s1, ls2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ ``elt(x, s1, ls2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
@@ -212,19 +212,19 @@ TwoDimensionalArrayCategory is a general array category which allows different r
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6576616c:
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  R) -> % if R has \ :ref:`Evalable <l4576616c61626c65>`\  R and R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  R) -> % if R has \ :ref:`SetCategory <l53657443617465676f7279>`\  and R has \ :ref:`Evalable <l4576616c61626c65>`\  R
   from \ :ref:`Evalable <l4576616c61626c65>`\  R
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  R) -> % if R has \ :ref:`Evalable <l4576616c61626c65>`\  R and R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  R) -> % if R has \ :ref:`SetCategory <l53657443617465676f7279>`\  and R has \ :ref:`Evalable <l4576616c61626c65>`\  R
   from \ :ref:`Evalable <l4576616c61626c65>`\  R
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  R) -> % if R has \ :ref:`Evalable <l4576616c61626c65>`\  R and R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  R) -> % if R has \ :ref:`SetCategory <l53657443617465676f7279>`\  and R has \ :ref:`Evalable <l4576616c61626c65>`\  R
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (R, R)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, R, R) -> % if R has \ :ref:`Evalable <l4576616c61626c65>`\  R and R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, R, R) -> % if R has \ :ref:`SetCategory <l53657443617465676f7279>`\  and R has \ :ref:`Evalable <l4576616c61626c65>`\  R
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (R, R)
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-65766572793f:
@@ -435,7 +435,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; qnew
 
 :spadfun:`qnew`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``qnew(m, n)``\  is is an \ ``m``\ -by-\ ``n``\  uninitilized array
+  \ ``qnew(m, n)``\  is an \ ``m``\ -by-\ ``n``\  uninitialized array
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-71736574656c7421:
 
@@ -494,7 +494,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, row, ls2)``\  is equivalent to \ ``setelt!(x, row, l2)``\  where \ ``l2``\  is obtained appending expansions of elements of \ ``ls2``\ , but should be more convenient and more efficient.
+  \ ``setelt!(x, row, ls2)``\  is equivalent to \ ``setelt!(x, row, l2)``\  where \ ``l2``\  is obtained by appending expansions of elements of \ ``ls2``\ , but should be more convenient and more efficient.
 
 
 .. index::
@@ -522,21 +522,21 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, ls1, col)``\  is equivalent to \ ``setelt!(x, l1, col)``\  where \ ``l1``\  is obtained appending expansions of elements of \ ``ls1``\ , but should be more convenient and more efficient.
+  \ ``setelt!(x, ls1, col)``\  is equivalent to \ ``setelt!(x, l1, col)``\  where \ ``l1``\  is obtained by appending expansions of elements of \ ``ls1``\ , but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, ls1, ls1)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ ``setelt!(x, ls1, ls1)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, ls1, s2)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ ``setelt!(x, ls1, s2)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
@@ -550,7 +550,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, s1, ls2)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ ``setelt!(x, s1, ls2)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
@@ -664,7 +664,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  if R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  R if R has \ :ref:`Evalable <l4576616c61626c65>`\  R and R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`Evalable <l4576616c61626c65>`\  R if R has \ :ref:`SetCategory <l53657443617465676f7279>`\  and R has \ :ref:`Evalable <l4576616c61626c65>`\  R
 
 \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
 
@@ -672,7 +672,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
 
 \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  R 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (R, R) if R has \ :ref:`Evalable <l4576616c61626c65>`\  R and R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (R, R) if R has \ :ref:`SetCategory <l53657443617465676f7279>`\  and R has \ :ref:`Evalable <l4576616c61626c65>`\  R
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  if R has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 

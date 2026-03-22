@@ -89,7 +89,7 @@ MatrixCategory(R, Row, Col)
 .. index::
    pair: MatrixCategory; ^
 
-:spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`Monoid <l4d6f6e6f6964>`\ 
+:spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Monoid <l4d6f6e6f6964>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
   \ ``x ^ n``\  computes a non-negative integral power of the matrix \ ``x``\ . Error: if the matrix is not square.
 
 .. _l4d617472697843617465676f7279-7e3d:
@@ -186,7 +186,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; diagonalMatrix
 
 :spadfun:`diagonalMatrix`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``diagonalMatrix([m1, ..., mk])``\  creates a block diagonal matrix \ ``M``\  with block matrices \ *m1*\ , ..., \ *mk*\  down the diagonal, with 0 block matrices elsewhere. More precisely: if \ ``ri := nrows mi``\ , \ ``ci := ncols mi``\ , then \ ``m``\  is an (\ ``r1+``\ ..\ ``+rk``\ ) by (\ ``c1+``\ ..\ ``+ck``\ ) - matrix with entries \ ``m.i.j = ml.(i-r1-..-r(l-1)).(j-n1-..-n(l-1))``\ , if \ ``(r1+..+r(l-1)) < i <= r1+..+rl``\  and \ ``(c1+..+c(l-1)) < i <= c1+..+cl``\ , \ ``m.i.j``\  = 0 otherwise.
+  \ ``diagonalMatrix([m1, ..., mk])``\  creates a block diagonal matrix \ ``M``\  with block matrices \ *m1*\ , ..., \ *mk*\  down the diagonal, with 0 block matrices elsewhere. More precisely: if \ ``ri := nrows mi``\ , \ ``ci := ncols mi``\ , then \ ``m``\  is an (\ ``r1+``\ ..\ ``+rk``\ ) by (\ ``c1+``\ ..\ ``+ck``\ ) matrix with entries \ ``m.i.j = ml.(i-r1-..-r(l-1)).(j-c1-..-c(l-1))``\ , if \ ``(r1+..+r(l-1)) < i <= r1+..+rl``\  and \ ``(c1+..+c(l-1)) < i <= c1+..+cl``\ , \ ``m.i.j = 0``\  otherwise.
 
 
 .. index::
@@ -399,8 +399,8 @@ MatrixCategory(R, Row, Col)
   from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (R, Row, Col)
 
 
-\ :ref:`map <l4d61747269784f7065726174696f6e7343617465676f7279-6d6170>`\ \: (R -> R, %) -> % 
-  from \ :ref:`MatrixOperationsCategory <l4d61747269784f7065726174696f6e7343617465676f7279>`\ (R, Row, Col)
+\ :ref:`map <l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170>`\ \: (R -> R, %) -> % 
+  from \ :ref:`TwoDimensionalArrayCategory <l54776f44696d656e73696f6e616c417272617943617465676f7279>`\ (R, Row, Col)
 
 .. _l4d617472697843617465676f7279-6d6174726978:
 

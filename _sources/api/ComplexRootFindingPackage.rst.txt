@@ -36,7 +36,7 @@ ComplexRootFindingPackage(R, UP)
    pair: ComplexRootFindingPackage; divisorCascade
 
 :spadfun:`divisorCascade`\: (UP, UP) -> \ :ref:`List <l4c697374>`\  Record(factors: \ :ref:`List <l4c697374>`\  UP, error: R) 
-  \ ``divisorCascade(p, tp)``\  assumes that degree of polynomial \ *tp*\  is smaller than degree of polynomial \ ``p``\ , both monic. A sequence of divisions is calculated using the remainder, made monic, as divisor for the the next division. The result contains also the error of the factorizations, i.e. the norm of the remainder polynomial.
+  \ ``divisorCascade(p, tp)``\  assumes that degree of polynomial \ *tp*\  is smaller than degree of polynomial \ ``p``\ , both monic. A sequence of divisions is calculated using the remainder, made monic, as divisor for the next division. The result contains also the error of the factorizations, i.e. the norm of the remainder polynomial.
 
 
 .. index::
@@ -89,7 +89,7 @@ ComplexRootFindingPackage(R, UP)
    pair: ComplexRootFindingPackage; pleskenSplit
 
 :spadfun:`pleskenSplit`\: (UP, R) -> \ :ref:`Factored <l466163746f726564>`\  UP 
-  \ ``pleskenSplit(poly, eps)``\  determines a start polynomial \ *start*\ \\ by using "startPolynomial" then it increases the exponent \ ``n``\  of \ *start ^ n mod poly*\  to get an approximate factor of \ *poly*\ , in general of degree "degree \ ``poly``\  \ ``-1"``\ . Then a divisor cascade is calculated and the best splitting is chosen, as soon as the error is small enough.
+  \ ``pleskenSplit(poly, eps)``\  determines a start polynomial \ *start*\  by using "startPolynomial" then it increases the exponent \ ``n``\  of \ *start ^ n mod poly*\  to get an approximate factor of \ *poly*\ , in general of degree "degree \ ``poly``\  \ ``-1"``\ . Then a divisor cascade is calculated and the best splitting is chosen, as soon as the error is small enough.
 
 
 .. index::

@@ -1,0 +1,78 @@
+.. index:: SpadDoc
+
+.. _l53706164446f63:
+
+SpadDoc
+=======
+
+:viewcode:`sdoc.spad line 1 <sdoc.spad#L1>` :editcode:`[edit on github] <sdoc.spad#L1>`
+
+
+This package provides simple Spad documentation for use in the interpreter and the \ ``MCP``\  server.
+
+
+.. _l53706164446f63-6a6c436f6e7374727563746f72446f63756d656e746174696f6e:
+
+.. index::
+   pair: SpadDoc; jlConstructorDocumentation
+
+:spadfun:`jlConstructorDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlConstructorDocumentation(term)``\  shows the documentation of the constructor \ ``term``\ .
+
+.. _l53706164446f63-6a6c476574436f6e7374727563746f72446f63756d656e746174696f6e:
+
+.. index::
+   pair: SpadDoc; jlGetConstructorDocumentation
+
+:spadfun:`jlGetConstructorDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlGetConstructorDocumentation(term)``\  returns the documentation of the constructor \ ``term``\  as a string.
+
+.. _l53706164446f63-6a6c4765744f7065726174696f6e446f63756d656e746174696f6e:
+
+.. index::
+   pair: SpadDoc; jlGetOperationDocumentation
+
+:spadfun:`jlGetOperationDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ ``jlGetOperationDocumentation(op)``\  returns the documentation of the operation \ ``op``\  as a string.
+
+.. _l53706164446f63-6a6c4c69737443617465676f72696573:
+
+.. index::
+   pair: SpadDoc; jlListCategories
+
+:spadfun:`jlListCategories`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
+  \ ``jlListCategories(cat)``\  returns a list of the categories matching the categories \ ``cat``\ . Convenience and temporary function.
+
+.. _l53706164446f63-6a6c4c697374436f6e7374727563746f7273:
+
+.. index::
+   pair: SpadDoc; jlListConstructors
+
+:spadfun:`jlListConstructors`\: \ :ref:`Symbol <l53796d626f6c>`\  -> Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) 
+  \ ``jlListConstructors(const)``\  returns a list of the categories, domains, and packages that the constructor \ ``const``\  belongs to. For example: \example{jlListConstructors('AbelianMonoidRing)} \example{jlListConstructors("Int*")}
+
+.. _l53706164446f63-6a6c4c697374446f6d61696e73:
+
+.. index::
+   pair: SpadDoc; jlListDomains
+
+:spadfun:`jlListDomains`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
+  \ ``jlListDomains(dom)``\  returns a list of the domains matching the domains \ ``dom``\ . Convenience and temporary function.
+
+.. _l53706164446f63-6a6c4c6973745061636b61676573:
+
+.. index::
+   pair: SpadDoc; jlListPackages
+
+:spadfun:`jlListPackages`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
+  \ ``jlListPackages(pack)``\  returns a list of the packages matching the packages \ ``pack``\ . Convenience and temporary function.
+
+.. _l53706164446f63-6a6c4f7065726174696f6e446f63756d656e746174696f6e:
+
+.. index::
+   pair: SpadDoc; jlOperationDocumentation
+
+:spadfun:`jlOperationDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ ``jlOperationDocumentation(op)``\  shows the documentation of the operation \ ``op``\ .
+
+

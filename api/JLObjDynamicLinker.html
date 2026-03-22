@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
-    <script src="../_static/documentation_options.js?v=f5fb567a"></script>
+    <script src="../_static/documentation_options.js?v=f4be49bf"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/bizstyle.js"></script>
@@ -50,7 +50,7 @@
             
   <section id="jlobjdynamiclinker">
 <span id="l4a4c4f626a44796e616d69634c696e6b6572"></span><span id="index-0"></span><h1>JLObjDynamicLinker<a class="headerlink" href="#jlobjdynamiclinker" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jutils.spad#L508">jutils.spad line 508</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jutils.spad#L508">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jutils.spad#L334">jutils.spad line 334</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jutils.spad#L334">[edit on github]</a></p>
 <p>Generic Julia objects used for dynamically linking shared libraries.</p>
 <dl class="simple" id="l4a4c4f626a44796e616d69634c696e6b6572-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -119,7 +119,7 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c436c6f7365"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">jlDlClose</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDlClose(libPtr)</span></code> unloads explicitly the shared library referenced by <code class="docutils literal notranslate"><span class="pre">libPtr</span></code>.</p>
+<dt><span class="spadfun">jlDlClose</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDlClose(libPtr)</span></code> unloads explicitly the shared library. Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the shared object was successfully unloaded, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. example{jlDlClose(lib)}</p>
 </dd>
 </dl>
 <span id="l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c46696e644c6962"></span><dl class="simple" id="index-9">
@@ -155,7 +155,7 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c53796d"></span><dl class="simple" id="index-17">
-<dt><span class="spadfun">jlDlSym</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDlSym(lib,</span> <span class="pre">sym)</span></code> returns the pointer to the symbol <code class="docutils literal notranslate"><span class="pre">sym</span></code> in the library referenced by <code class="docutils literal notranslate"><span class="pre">lib</span></code>. See jlDlOpen. example{lnk:=jdlink “libjulia”} example{sym := jlDlSym(lnk,”jl_eval_string”)} example{TODO}</p>
+<dt><span class="spadfun">jlDlSym</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlDlSym(lib,</span> <span class="pre">sym)</span></code> returns the pointer to the symbol <code class="docutils literal notranslate"><span class="pre">sym</span></code> in the library referenced by <code class="docutils literal notranslate"><span class="pre">lib</span></code>. See jlDlOpen. example{lnk:=jdlink “libjulia”} example{sym := jlDlSym(lnk,”jl_eval_string”)}</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a44796e616d69634c696e6b6572-6a6c44756d70">

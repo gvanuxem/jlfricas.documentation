@@ -115,28 +115,28 @@ GaloisGroupFactorizer UP
    pair: GaloisGroupFactorizer; factorSquareFree
 
 :spadfun:`factorSquareFree`\: (UP, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Factored <l466163746f726564>`\  UP 
-  \ ``factorSquareFree(p, listOfDegrees)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm and knowing that \ ``p``\  has for possible splitting of its degree listOfDegrees. \ ``p``\  is supposed not having any repeated factor (this is not checked).
+  \ ``factorSquareFree(p, listOfDegrees)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm and knowing that \ ``p``\  has for possible splitting of its degree listOfDegrees. \ ``p``\  is assumed to have no repeated factors (this is not checked).
 
 
 .. index::
    pair: GaloisGroupFactorizer; factorSquareFree
 
 :spadfun:`factorSquareFree`\: (UP, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Factored <l466163746f726564>`\  UP 
-  \ ``factorSquareFree(p, listOfDegrees, r)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm, knowing that \ ``p``\  has for possible splitting of its degree \ ``listOfDegrees``\  and that \ ``p``\  has at least \ ``r``\  factors. \ ``p``\  is supposed not having any repeated factor (this is not checked).
+  \ ``factorSquareFree(p, listOfDegrees, r)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm, knowing that \ ``p``\  has for possible splitting of its degree \ ``listOfDegrees``\  and that \ ``p``\  has at least \ ``r``\  factors. \ ``p``\  is assumed to have no repeated factors (this is not checked).
 
 
 .. index::
    pair: GaloisGroupFactorizer; factorSquareFree
 
 :spadfun:`factorSquareFree`\: (UP, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Factored <l466163746f726564>`\  UP 
-  \ ``factorSquareFree(p, r)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm and knowing that \ ``p``\  has at least \ ``r``\  factors. \ ``p``\  is supposed not having any repeated factor (this is not checked).
+  \ ``factorSquareFree(p, r)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm and knowing that \ ``p``\  has at least \ ``r``\  factors. \ ``p``\  is assumed to have no repeated factors (this is not checked).
 
 
 .. index::
    pair: GaloisGroupFactorizer; factorSquareFree
 
 :spadfun:`factorSquareFree`\: (UP, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Factored <l466163746f726564>`\  UP 
-  \ ``factorSquareFree(p, d, r)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm, knowing that \ ``d``\  divides the degree of all factors of \ ``p``\  and that \ ``p``\  has at least \ ``r``\  factors. \ ``p``\  is supposed not having any repeated factor (this is not checked).
+  \ ``factorSquareFree(p, d, r)``\  factorizes the polynomial \ ``p``\  using the single factor bound algorithm, knowing that \ ``d``\  divides the degree of all factors of \ ``p``\  and that \ ``p``\  has at least \ ``r``\  factors. \ ``p``\  is assumed to have no repeated factors (this is not checked).
 
 
 .. index::
@@ -198,14 +198,14 @@ GaloisGroupFactorizer UP
    pair: GaloisGroupFactorizer; stopMusserTrials
 
 :spadfun:`stopMusserTrials`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``stopMusserTrials()``\  returns the bound on the number of factors for which \ :spadfun:`modularFactor`\  stops to look for an other prime. You will have to remember that the step of recombining the extraneous factors may take up to \ ``2^stopMusserTrials()``\  trials.
+  \ ``stopMusserTrials()``\  returns the bound on the number of factors for which \ :spadfun:`modularFactor`\  stops to look for another prime. You will have to remember that the step of recombining the extraneous factors may take up to \ ``2^stopMusserTrials()``\  trials.
 
 
 .. index::
    pair: GaloisGroupFactorizer; stopMusserTrials
 
 :spadfun:`stopMusserTrials`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``stopMusserTrials(n)``\  sets to \ ``n``\  the bound on the number of factors for which \ :spadfun:`modularFactor`\  stops to look for an other prime. You will have to remember that the step of recombining the extraneous factors may take up to \ ``2^n``\  trials. Returns the previous value.
+  \ ``stopMusserTrials(n)``\  sets to \ ``n``\  the bound on the number of factors for which \ :spadfun:`modularFactor`\  stops to look for another prime. You will have to remember that the step of recombining the extraneous factors may take up to \ ``2^n``\  trials. Returns the previous value.
 
 .. _l47616c6f697347726f7570466163746f72697a6572-74727946756e6374696f6e616c4465636f6d706f736974696f6e3f:
 

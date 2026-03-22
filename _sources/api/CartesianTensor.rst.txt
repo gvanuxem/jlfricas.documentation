@@ -20,7 +20,7 @@ CartesianTensor(minix, dim, \ ``R``\ ) provides Cartesian tensors with component
 .. _l43617274657369616e54656e736f72-30:
 
 \ :ref:`0 <l4772616465644d6f64756c65-30>`\ \: % 
-  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 .. _l43617274657369616e54656e736f72-31:
 
@@ -54,16 +54,16 @@ CartesianTensor(minix, dim, \ ``R``\ ) provides Cartesian tensors with component
 .. _l43617274657369616e54656e736f72-2b:
 
 \ :ref:`+ <l4772616465644d6f64756c65-2b>`\ \: (%, %) -> % 
-  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 .. _l43617274657369616e54656e736f72-2d:
 
 \ :ref:`- <l4772616465644d6f64756c65-2d>`\ \: % -> % 
-  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 
 \ :ref:`- <l4772616465644d6f64756c65-2d>`\ \: (%, %) -> % 
-  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 .. _l43617274657369616e54656e736f72-3d:
 
@@ -118,7 +118,7 @@ CartesianTensor(minix, dim, \ ``R``\ ) provides Cartesian tensors with component
    pair: CartesianTensor; contract
 
 :spadfun:`contract`\: (%, \ :ref:`Integer <l496e7465676572>`\ , %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``contract(t, i, s, j)``\  is the inner product of tenors \ ``s``\  and \ ``t``\  which sums along the \ ``k1``\ \ ``-``\ th index of \ ``t``\  and the \ ``k2``\ \ ``-``\ th index of \ ``s``\ . For example, if \ ``r = contract(s, 2, t, 1)``\  for rank 3 tensors rank 3 tensors \ ``s``\  and \ ``t``\ , then \ ``r``\  is the rank 4 \ ``(= 3 + 3 - 2)``\  tensor given by \ ``r(i, j, k, l) = sum(h=1..dim, s(i, h, j)*t(h, k, l))``\ .
+  \ ``contract(t, i, s, j)``\  is the inner product of tensors \ ``s``\  and \ ``t``\  which sums along the \ ``k1``\ \ ``-``\ th index of \ ``t``\  and the \ ``k2``\ \ ``-``\ th index of \ ``s``\ . For example, if \ ``r = contract(s, 2, t, 1)``\  for rank 3 tensors rank 3 tensors \ ``s``\  and \ ``t``\ , then \ ``r``\  is the rank 4 \ ``(= 3 + 3 - 2)``\  tensor given by \ ``r(i, j, k, l) = sum(h=1..dim, s(i, h, j)*t(h, k, l))``\ .
 
 
 .. index::
@@ -130,7 +130,7 @@ CartesianTensor(minix, dim, \ ``R``\ ) provides Cartesian tensors with component
 .. _l43617274657369616e54656e736f72-646567726565:
 
 \ :ref:`degree <l4772616465644d6f64756c65-646567726565>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+  from \ :ref:`GradedModule <l4772616465644d6f64756c65>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
 .. _l43617274657369616e54656e736f72-656c74:
 
@@ -194,7 +194,7 @@ CartesianTensor(minix, dim, \ ``R``\ ) provides Cartesian tensors with component
    pair: CartesianTensor; leviCivitaSymbol
 
 :spadfun:`leviCivitaSymbol`\: () -> % 
-  \ ``leviCivitaSymbol()``\  is the rank \ ``dim``\  tensor defined by \ ``leviCivitaSymbol()(i1, ...idim) = +1/0/-1``\  if \ ``i1, ..., idim``\  is an even/is nota /is an odd permutation of \ ``minix, ..., minix+dim-1``\ .
+  \ ``leviCivitaSymbol()``\  is the rank \ ``dim``\  tensor defined by \ ``leviCivitaSymbol()(i1, ...idim) = +1/0/-1``\  if \ ``i1, ..., idim``\  is an even/is not a /is an odd permutation of \ ``minix, ..., minix+dim-1``\ .
 
 .. _l43617274657369616e54656e736f72-70726f64756374:
 
@@ -226,7 +226,7 @@ CartesianTensor(minix, dim, \ ``R``\ ) provides Cartesian tensors with component
    pair: CartesianTensor; reindex
 
 :spadfun:`reindex`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``reindex(t, [i1, ..., idim])``\  permutes the indices of \ ``t``\ . For example, if \ ``r = reindex(t, [4, 1, 2, 3])``\  for a rank 4 tensor \ ``t``\ , then \ ``r``\  is the rank for tensor given by \ ``r(i, j, k, l) = t(l, i, j, k)``\ .
+  \ ``reindex(t, [i1, ..., idim])``\  permutes the indices of \ ``t``\ . For example, if \ ``r = reindex(t, [4, 1, 2, 3])``\  for a rank 4 tensor \ ``t``\ , then \ ``r``\  is the rank 4 tensor given by \ ``r(i, j, k, l) = t(l, i, j, k)``\ .
 
 .. _l43617274657369616e54656e736f72-72657472616374:
 

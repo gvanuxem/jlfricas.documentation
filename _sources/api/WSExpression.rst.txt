@@ -32,14 +32,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-
-
-\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-
-
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
@@ -71,8 +63,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-2f:
 
-\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
-  from \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`/ <l47726f7570-2f>`\ \: (%, %) -> % 
+  from \ :ref:`Group <l47726f7570>`\ 
 
 
 \ :ref:`/ <l46756e6374696f6e537061636532-2f>`\ \: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %), \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %)) -> % 
@@ -113,8 +105,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
 
 
-\ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+\ :ref:`^ <l47726f7570-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  from \ :ref:`Group <l47726f7570>`\ 
 
 
 \ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -496,11 +488,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 \ :ref:`charlierC <l5370656369616c46756e6374696f6e43617465676f7279-636861726c69657243>`\ \: (%, %, %) -> % 
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
-.. _l575345787072657373696f6e-636861727468526f6f74:
-
-\ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
-
 .. _l575345787072657373696f6e-63686562797368657654:
 
 .. index::
@@ -567,8 +554,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-636f65726365:
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: % -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  %
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: % -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  %
 
 
 \ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -720,11 +707,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`complexExpand`\: (%, %) -> % 
   \ ``complexExpand(expr, cvars)``\  expands \ ``expr``\  assuming all but cvars variables are real.
 
-.. _l575345787072657373696f6e-636f6e646974696f6e50:
-
-\ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or % has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
-  from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
-
 .. _l575345787072657373696f6e-636f6e6a7567617465:
 
 \ :ref:`conjugate <l436f6d706c657843617465676f7279-636f6e6a7567617465>`\ \: % -> % 
@@ -866,10 +848,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-
-
-\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
-  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
@@ -1266,6 +1244,11 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`engineeringForm`\: (%, %) -> % 
   \ ``engineeringForm(x,n)``\  returns the printed representation of \ ``x``\  in engineering form with \ ``n``\  digits of precision.
 
+.. _l575345787072657373696f6e-656e756d6572617465:
+
+\ :ref:`enumerate <l46696e697465-656e756d6572617465>`\ \: () -> \ :ref:`List <l4c697374>`\  % if % has \ :ref:`Finite <l46696e697465>`\ 
+  from \ :ref:`Finite <l46696e697465>`\ 
+
 .. _l575345787072657373696f6e-657266:
 
 \ :ref:`erf <l4c696f7576696c6c69616e46756e6374696f6e43617465676f7279-657266>`\ \: % -> % 
@@ -1481,8 +1464,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-657871756f:
 
-\ :ref:`exquo <l436f6d706c657843617465676f7279-657871756f>`\ \: (%, %) -> Union(%, failed) 
-  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  %
+\ :ref:`exquo <l456e7469726552696e67-657871756f>`\ \: (%, %) -> Union(%, failed) 
+  from \ :ref:`EntireRing <l456e7469726552696e67>`\ 
 
 .. _l575345787072657373696f6e-657874656e6465644575636c696465616e:
 
@@ -1578,7 +1561,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
   \ ``factorPolynomial(p)``\  factorizes the polynomial \ ``p``\ . For example: \example{x := jWSExpr x} \example{p:=expand(chebyshevT(7,x)* chebyshevU(9,x))} \example{factorPolynomial p}
 
 
-\ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l575345787072657373696f6e-666163746f7253717561726546726565:
@@ -1599,7 +1582,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-666163746f7253717561726546726565506f6c796e6f6d69616c:
 
-\ :ref:`factorSquareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`factorSquareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l575345787072657373696f6e-666163746f725465726d73:
@@ -1916,6 +1899,11 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 \ :ref:`hankelH2 <l5370656369616c46756e6374696f6e43617465676f7279-68616e6b656c4832>`\ \: (%, %) -> % 
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
+.. _l575345787072657373696f6e-6861736855706461746521:
+
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  if % has \ :ref:`Hashable <l4861736861626c65>`\ 
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
 .. _l575345787072657373696f6e-686176657273696e65:
 
 .. index::
@@ -2078,8 +2066,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-696e76:
 
-\ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
-  from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+\ :ref:`inv <l47726f7570-696e76>`\ \: % -> % 
+  from \ :ref:`Group <l47726f7570>`\ 
 
 .. _l575345787072657373696f6e-696e766572736542657461526567756c6172697a6564:
 
@@ -2692,14 +2680,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`jWSRule`\: (%, %) -> % 
   \ ``jWSRule(lhs,rhs)``\  returns the Julia \ ``WS``\  rule \ ``lhs``\ ->rhs.
 
-.. _l575345787072657373696f6e-6a5753537472696e67:
-
-.. index::
-   pair: WSExpression; jWSString
-
-:spadfun:`jWSString`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSString(str)``\  returns \ ``str``\  as a \ ``WS``\  String.
-
 .. _l575345787072657373696f6e-6a57535461626c65:
 
 .. index::
@@ -2988,6 +2968,10 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
   from \ :ref:`SpecialFunctionCategory <l5370656369616c46756e6374696f6e43617465676f7279>`\ 
 
 .. _l575345787072657373696f6e-6c6f6f6b7570:
+
+\ :ref:`lookup <l46696e697465-6c6f6f6b7570>`\ \: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`Finite <l46696e697465>`\ 
+  from \ :ref:`Finite <l46696e697465>`\ 
+
 
 .. index::
    pair: WSExpression; lookup
@@ -3886,6 +3870,11 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`ramanujanTauZ`\: % -> % 
   \ ``ramanujanTauZ(t)``\  computes the Ramanujan tau \ ``Z``\ -function of \ ``t``\ .
 
+.. _l575345787072657373696f6e-72616e646f6d:
+
+\ :ref:`random <l46696e697465-72616e646f6d>`\ \: () -> % if % has \ :ref:`Finite <l46696e697465>`\ 
+  from \ :ref:`Finite <l46696e697465>`\ 
+
 .. _l575345787072657373696f6e-72616e6b:
 
 \ :ref:`rank <l4672616d65644d6f64756c65-72616e6b>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
@@ -4522,7 +4511,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e:
 
-\ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l575345787072657373696f6e-736f7274:
@@ -4592,7 +4581,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-73717561726546726565506f6c796e6f6d69616c:
 
-\ :ref:`squareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if % has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+\ :ref:`squareFreePolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
 .. _l575345787072657373696f6e-737469656c746a657347616d6d61:
@@ -4612,8 +4601,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-737472696e67:
 
-\ :ref:`string <l57534f626a656374-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`WSObject <l57534f626a656374>`\ 
+\ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLType <l4a4c54797065>`\ 
 
 .. _l575345787072657373696f6e-73747275766548:
 
@@ -5031,8 +5020,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 
-\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\  
 
 \ :ref:`AlgebraicallyClosedFunctionSpace <l416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365>`\  % 
@@ -5044,8 +5031,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) 
-
-\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
 
 \ :ref:`CancellationAbelianMonoid <l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
 
@@ -5139,8 +5124,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
-\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`LeftOreRing <l4c6566744f726552696e67>`\  
 
 \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  % 
@@ -5153,15 +5136,11 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`Module <l4d6f64756c65>`\  % 
 
-\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-
 \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) 
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
-
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  
 
@@ -5200,8 +5179,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
-
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`Ring <l52696e67>`\  
 

@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=5283bb3d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
-    <script src="../_static/documentation_options.js?v=f5fb567a"></script>
+    <script src="../_static/documentation_options.js?v=f4be49bf"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/bizstyle.js"></script>
@@ -50,7 +50,7 @@
             
   <section id="jlobjanonymousfunction">
 <span id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e"></span><span id="index-0"></span><h1>JLObjAnonymousFunction<a class="headerlink" href="#jlobjanonymousfunction" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jimobject.spad#L672">jimobject.spad line 672</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jimobject.spad#L672">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jimobject.spad#L779">jimobject.spad line 779</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jimobject.spad#L779">[edit on github]</a></p>
 <p>Convenience domain for Julia Anonymous Functions, objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp.</p>
 <dl class="simple" id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -67,18 +67,34 @@
 </dd>
 </dl>
 <dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="AnonymousFunction.html#l416e6f6e796d6f757346756e6374696f6e"><span class="std std-ref">AnonymousFunction</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(af)</span></code> returns a Julia Anonymous Function from the AnonymousFunction. <code class="docutils literal notranslate"><span class="pre">af</span></code> must be compatible with 1D format.</p>
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="AnonymousFunction.html#l416e6f6e796d6f757346756e6374696f6e"><span class="std std-ref">AnonymousFunction</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(af)</span></code> returns a Julia Anonymous Function from the AnonymousFunction <code class="docutils literal notranslate"><span class="pre">af</span></code> must be compatible with 1D format.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-636f6e76657274">
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-6a616e66"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">janf</span>: <a class="reference internal" href="AnonymousFunction.html#l416e6f6e796d6f757346756e6374696f6e"><span class="std std-ref">AnonymousFunction</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">janf(af)</span></code> returns a Julia Anonymous Function from the AnonymousFunction. <code class="docutils literal notranslate"><span class="pre">af</span></code> must be compatible with 1D format.</p>
+<span id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-656c74"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(jaf,</span> <span class="pre">arg)</span></code> returns result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the argument arg. Use it as: <cite>jaf(arg)</cite>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-3">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(jaf,</span> <span class="pre">arg1,</span> <span class="pre">arg2)</span></code> returns result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the arguments <code class="docutils literal notranslate"><span class="pre">arg1</span></code> and <code class="docutils literal notranslate"><span class="pre">arg2</span></code>. Use it as: <cite>jaf(``arg1`</cite>, <code class="docutils literal notranslate"><span class="pre">arg2</span></code>)`.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(jaf,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">arg3)</span></code> returns result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the arguments <code class="docutils literal notranslate"><span class="pre">arg1</span></code>, <code class="docutils literal notranslate"><span class="pre">arg2</span></code> and <code class="docutils literal notranslate"><span class="pre">arg3</span></code>. Use it as: <cite>jaf(``arg1`</cite>, <code class="docutils literal notranslate"><span class="pre">arg2</span></code>, <code class="docutils literal notranslate"><span class="pre">arg3</span></code>)`.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(jaf,</span> <span class="pre">args)</span></code> returns result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the arguments in the list args. Use it as: <cite>jaf(args)</cite>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-6a616e66"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">janf</span>: <a class="reference internal" href="AnonymousFunction.html#l416e6f6e796d6f757346756e6374696f6e"><span class="std std-ref">AnonymousFunction</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">janf(af)</span></code> returns a Julia Anonymous Function from the AnonymousFunction <code class="docutils literal notranslate"><span class="pre">af</span></code> must be compatible with 1D format.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
 <dt><span class="spadfun">janf</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">janf(str)</span></code> returns a Julia Anonymous Function from the evaluation of the Julia command <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
 </dd>
 </dl>
@@ -86,21 +102,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-6a6c4170706c79"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">jlApply</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(jaf,</span> <span class="pre">arg)</span></code> returns the result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the argument arg. For example: example{x+-&gt;x^(2*%i)/3} example{jlApply(%,jobject “BigFloat(2.2)”)}</p>
-</dd>
-</dl>
-<dl class="simple" id="index-5">
-<dt><span class="spadfun">jlApply</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(jaf,</span> <span class="pre">arg1,</span> <span class="pre">arg2)</span></code> returns the result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the arguments <code class="docutils literal notranslate"><span class="pre">arg1</span></code> and <code class="docutils literal notranslate"><span class="pre">arg2</span></code>.</p>
-</dd>
-</dl>
-<dl class="simple" id="index-6">
-<dt><span class="spadfun">jlApply</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(jaf,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">arg3)</span></code> returns the result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the arguments <code class="docutils literal notranslate"><span class="pre">arg1</span></code>, <code class="docutils literal notranslate"><span class="pre">arg2</span></code> and <code class="docutils literal notranslate"><span class="pre">arg3</span></code>.</p>
-</dd>
-</dl>
-<dl class="simple" id="index-7">
-<dt><span class="spadfun">jlApply</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jlApply(jaf,</span> <span class="pre">args)</span></code> returns the result of applying the Julia Anonymous Function <code class="docutils literal notranslate"><span class="pre">jaf</span></code> to the arguments in the list args.</p>
-</dd>
+<dl class="simple" id="l4a4c4f626a416e6f6e796d6f757346756e6374696f6e-6a6c4170706c79">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>

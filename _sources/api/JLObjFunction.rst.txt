@@ -5,7 +5,7 @@
 JLObjFunction f
 ===============
 
-:viewcode:`jimobject.spad line 746 <jimobject.spad#L746>` :editcode:`[edit on github] <jimobject.spad#L746>`
+:viewcode:`jimobject.spad line 853 <jimobject.spad#L853>` :editcode:`[edit on github] <jimobject.spad#L853>`
 
 * f: \ :ref:`Symbol <l53796d626f6c>`\ 
 
@@ -41,8 +41,41 @@ Convenience domain for Julia Functions, objects that are used within Julia, and 
 
 .. _l4a4c4f626a46756e6374696f6e-636f6e76657274:
 
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`InputForm <l496e707574466f726d>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
+
+
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a4c4f626a46756e6374696f6e-656c74:
+
+.. index::
+   pair: JLObjFunction; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``elt(jfunc, arg)``\  returns result of applying the Julia Function \ ``jfunc``\  to the argument arg. Use it as: `jfunc(arg)`.
+
+
+.. index::
+   pair: JLObjFunction; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``elt(jfunc, arg1, arg2)``\  returns result of applying the Julia Function \ ``jfunc``\  to the arguments \ ``arg1``\  and \ ``arg2``\ . Use it as: `jfunc(\ ``arg1``\ , \ ``arg2``\ )`.
+
+
+.. index::
+   pair: JLObjFunction; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``elt(jfunc, arg1, arg2, arg3)``\  returns result of applying the Julia Function \ ``jfunc``\  to the arguments \ ``arg1``\ , \ ``arg2``\  and \ ``arg3``\ . Use it as: `jfunc(\ ``arg1``\ , \ ``arg2``\ , \ ``arg3``\ )`.
+
+
+.. index::
+   pair: JLObjFunction; elt
+
+:spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ ``elt(jfunc, args)``\  returns result of applying the Julia Function \ ``jfunc``\  to the arguments in the list args.
 
 .. _l4a4c4f626a46756e6374696f6e-6a66756e63:
 
@@ -65,34 +98,6 @@ Convenience domain for Julia Functions, objects that are used within Julia, and 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a46756e6374696f6e-6a6c4170706c79:
-
-.. index::
-   pair: JLObjFunction; jlApply
-
-:spadfun:`jlApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(jfunc, arg)``\  returns the result of applying the Julia Function \ ``jfunc``\  to the argument arg.
-
-
-.. index::
-   pair: JLObjFunction; jlApply
-
-:spadfun:`jlApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(jfunc, arg1, arg2)``\  returns the result of applying the Julia Function \ ``jfunc``\  to the arguments \ ``arg1``\  and \ ``arg2``\ .
-
-
-.. index::
-   pair: JLObjFunction; jlApply
-
-:spadfun:`jlApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(jfunc, arg1, arg2, arg3)``\  returns the result of applying the Julia Function \ ``jfunc``\  to the arguments \ ``arg1``\ , \ ``arg2``\  and \ ``arg3``\ .
-
-
-.. index::
-   pair: JLObjFunction; jlApply
-
-:spadfun:`jlApply`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(jfunc, args)``\  returns the result of applying the Julia Function \ ``jfunc``\  to the arguments in the list args.
-
 
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
@@ -207,6 +212,8 @@ Convenience domain for Julia Functions, objects that are used within Julia, and 
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
 

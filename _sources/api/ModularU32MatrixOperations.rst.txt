@@ -17,7 +17,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; copy_mat_part
 
 :spadfun:`copy_mat_part`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`U32Matrix <l5533324d6174726978>`\  
-  \ ``copy_mat_part(m, nr, nc)``\  returns a copy of inital \ ``nr``\  by \ ``nc``\  part of \ ``m``\ .
+  \ ``copy_mat_part(m, nr, nc)``\  returns a copy of initial \ ``nr``\  by \ ``nc``\  part of \ ``m``\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-696e7665727365:
 
@@ -41,7 +41,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; lup_decomposition
 
 :spadfun:`lup_decomposition`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> Record(lpart: \ :ref:`U32Matrix <l5533324d6174726978>`\ , upart: \ :ref:`U32Matrix <l5533324d6174726978>`\ , udinv: \ :ref:`U32Vector <l553332566563746f72>`\ , ppart: \ :ref:`U32Vector <l553332566563746f72>`\ ) 
-  \ ``lup_decomposition(m, p)``\  computes LUP decomposition of \ ``m``\  modulo \ ``p``\ , that us [\ ``l``\ , \ ``u``\ , ud, \ ``pp``\ ] such that l*transpose(\ ``u``\ ) equals to permutation of rows of \ ``m``\  given by \ ``pp``\ , \ ``l``\  and \ ``u``\  are lower triangular and \ ``l``\  has ones at diagonal. ud gives inverses of pivots (zero if there is no pivot in a given column).
+  \ ``lup_decomposition(m, p)``\  computes LUP decomposition of \ ``m``\  modulo \ ``p``\ , that is [\ ``l``\ , \ ``u``\ , ud, \ ``pp``\ ] such that l*transpose(\ ``u``\ ) equals to permutation of rows of \ ``m``\  given by \ ``pp``\ , \ ``l``\  and \ ``u``\  are lower triangular and \ ``l``\  has ones at diagonal. ud gives inverses of pivots (zero if there is no pivot in a given column).
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-6d6d756c:
 
@@ -57,7 +57,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; mul_mv
 
 :spadfun:`mul_mv`\: (\ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``mul_mv(vr, m, v, p)``\  multiples \ ``v``\  by \ ``m``\  modulo \ ``p``\  and puts the result in \ ``vr``\ .
+  \ ``mul_mv(vr, m, v, p)``\  multiplies \ ``v``\  by \ ``m``\  modulo \ ``p``\  and puts the result in \ ``vr``\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-73686966745f6d617421:
 
@@ -65,7 +65,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; shift_mat!
 
 :spadfun:`shift_mat!`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``shift_mat!(m, sa, nr, nc)``\  replace entries in inital \ ``nr``\  by \ ``nc``\  part of \ ``m``\  by corresonding entries with row index increaded by \ ``sa``\ .
+  \ ``shift_mat!(m, sa, nr, nc)``\  replace entries in initial \ ``nr``\  by \ ``nc``\  part of \ ``m``\  by corresponding entries with row index increased by \ ``sa``\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-747269616e67756c61725f6d756c7469706c79:
 

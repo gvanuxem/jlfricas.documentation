@@ -29,7 +29,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
   from \ :ref:`Magma <l4d61676d61>`\ 
 
 
-\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+\ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -41,7 +41,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
   from \ :ref:`RightModule <l52696768744d6f64756c65>`\  S
 
 
-\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+\ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
@@ -182,16 +182,16 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\  or S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
+\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
 
 
-\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: S -> % 
-  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  S
+\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: S -> % 
+  from \ :ref:`Algebra <l416c6765627261>`\  S
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> % if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
@@ -704,7 +704,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
 
 \ :ref:`Algebra <l416c6765627261>`\  % 
 
-\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`Algebra <l416c6765627261>`\  S 
 
@@ -712,7 +712,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (%, %) 
 
-\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
+\ :ref:`BiModule <l42694d6f64756c65>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`BiModule <l42694d6f64756c65>`\ (S, S) 
 
@@ -784,7 +784,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  % 
 
-\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  S 
 
@@ -800,7 +800,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
 
 \ :ref:`Module <l4d6f64756c65>`\  % 
 
-\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`Module <l4d6f64756c65>`\  S 
 
@@ -808,7 +808,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  % 
 
-\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  S 
 
@@ -866,7 +866,7 @@ QuotientField(\ ``S``\ ) is the category of fractions of an Integral Domain \ ``
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  % 
 
-\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
 
 \ :ref:`RightModule <l52696768744d6f64756c65>`\  \ :ref:`Integer <l496e7465676572>`\  if S has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
 

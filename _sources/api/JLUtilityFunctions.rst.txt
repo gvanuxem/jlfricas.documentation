@@ -27,14 +27,6 @@ This package provides different Julia utility functions.
 :spadfun:`jlBuildPackage`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
   \ ``jlBuildPackage(package)``\  builds \ ``package``\  in Julia. For example, jlBuildPackage("PyCall") will build the PyCall \ ``package``\ .
 
-.. _l4a4c5574696c69747946756e6374696f6e73-6a6c436f6e7374727563746f72446f63756d656e746174696f6e:
-
-.. index::
-   pair: JLUtilityFunctions; jlConstructorDocumentation
-
-:spadfun:`jlConstructorDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlConstructorDocumentation(term)``\  shows the documentation of the constructor \ ``term``\ . For example double quote will be removed and the documentation without double quotes of the constructor will be shown. Temporary and trivial implementation that uses BrowserInformation. For example: \example{jlConstructorDocumentation('AbelianMonoidRing)} will show the documentation of the category AbelianMonoidRing.
-
 .. _l4a4c5574696c69747946756e6374696f6e73-6a6c446566696e65643f:
 
 .. index::
@@ -154,30 +146,6 @@ This package provides different Julia utility functions.
 :spadfun:`jlInitialize`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ ``jlInitialize(init)``\  initializes the Julia environment if \ ``init``\  is \ ``true``\ , otherwise clears the Julia environment. Normally, it should not be used since it is automatically called.
 
-.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4c69737443617465676f72696573:
-
-.. index::
-   pair: JLUtilityFunctions; jlListCategories
-
-:spadfun:`jlListCategories`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``jlListCategories(cat)``\  returns a list of the categories matching the categories \ ``cat``\ . Convenience and temporary function.
-
-.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4c697374436f6e7374727563746f7273:
-
-.. index::
-   pair: JLUtilityFunctions; jlListConstructors
-
-:spadfun:`jlListConstructors`\: \ :ref:`Symbol <l53796d626f6c>`\  -> Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) 
-  \ ``jlListConstructors(const)``\  returns a list of the categories, domains, and packages that the constructor \ ``const``\  belongs to. For example: \example{jlListConstructors('AbelianMonoidRing)} \example{jlListConstructors("Int*"}
-
-.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4c697374446f6d61696e73:
-
-.. index::
-   pair: JLUtilityFunctions; jlListDomains
-
-:spadfun:`jlListDomains`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``jlListDomains(dom)``\  returns a list of the domains matching the domains \ ``dom``\ . Convenience and temporary function.
-
 .. _l4a4c5574696c69747946756e6374696f6e73-6a6c4c6973745061636b61676573:
 
 .. index::
@@ -186,28 +154,13 @@ This package provides different Julia utility functions.
 :spadfun:`jlListPackages`\: () -> \ :ref:`Void <l566f6964>`\  
   \ ``jlListPackages()``\  displays the status of all installed packages in Julia.
 
-
-.. index::
-   pair: JLUtilityFunctions; jlListPackages
-
-:spadfun:`jlListPackages`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``jlListPackages(pack)``\  returns a list of the packages matching the packages \ ``pack``\ . Convenience and temporary function.
-
-.. _l4a4c5574696c69747946756e6374696f6e73-6a6c4f7065726174696f6e446f63756d656e746174696f6e:
-
-.. index::
-   pair: JLUtilityFunctions; jlOperationDocumentation
-
-:spadfun:`jlOperationDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlOperationDocumentation(op)``\  shows the documentation of the operation \ ``op``\ . For example double quote will be removed and the documentation without double quotes of the operation will be shown. Signature part is partially implemented. Temporary and trivial implementation that uses BrowserInformation.
-
 .. _l4a4c5574696c69747946756e6374696f6e73-6a6c507265636f6d70696c655061636b616765:
 
 .. index::
    pair: JLUtilityFunctions; jlPrecompilePackage
 
 :spadfun:`jlPrecompilePackage`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlPrecompilePackage(package)``\  precompiles \ ``package``\  in Julia. For example, jlPrecompilePackage("PyCall") will precompile the PyCall \ ``package``\ .
+  \ ``jlPrecompilePackage(package)``\  precompiles \ ``package``\  in Julia. For example, jlPrecompilePackage("PyCall") will precompile the PyCall \ ``package``\ . Note that technically this is not required since Julia does it on the fly.
 
 .. _l4a4c5574696c69747946756e6374696f6e73-6a6c52616e646f6d537472696e67:
 
