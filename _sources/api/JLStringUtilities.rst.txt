@@ -17,7 +17,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlLatex
 
 :spadfun:`jlLatex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlLatex(str)``\  returns the String corresponding to a Julia LaTeX expression, that is, "L"str"" if your Julia installation supports it (LaTeXStrings package). Convenience function.
+  \ :code:`jlLatex(str)`\  returns the String corresponding to a Julia LaTeX expression, that is, "L"str"" if your Julia installation supports it (LaTeXStrings package). Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c4d6573736167655374796c6564:
 
@@ -25,14 +25,14 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlMessageStyled
 
 :spadfun:`jlMessageStyled`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlMessageStyled(message, color)``\  prints the \ ``message``\  with formatted `color` (english color). For example: \example{jlMessageStyled("I AM HERE!!!", "red")}
+  \ :code:`jlMessageStyled(message, color)`\  prints the \ :code:`message`\  with formatted `color` (english color). For example: \example{jlMessageStyled("I AM HERE!!!", "red")}
 
 
 .. index::
    pair: JLStringUtilities; jlMessageStyled
 
 :spadfun:`jlMessageStyled`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlMessageStyled(message)``\  prints the \ ``message``\  with formatted style within braces (\ ``I``\  am {red:here}). For example: \example{jlMessageStyled("{red:■} {green:■} {yellow:■} {blue:■} {magenta:■} {cyan:■}")}
+  \ :code:`jlMessageStyled(message)`\  prints the \ :code:`message`\  with formatted style within braces (\ :code:`I`\  am {red:here}). For example: \example{jlMessageStyled("{red:■} {green:■} {yellow:■} {blue:■} {magenta:■} {cyan:■}")}
 
 .. _l4a4c537472696e675574696c6974696573-6a6c5265676578:
 
@@ -40,7 +40,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlRegex
 
 :spadfun:`jlRegex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegex(str)``\  returns the String corresponding to a Julia regular expression, that is, "r_"str_"". Convenience function.
+  \ :code:`jlRegex(str)`\  returns the String corresponding to a Julia regular expression, that is, "r_"str_"". Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c52656765784d617463683f:
 
@@ -48,7 +48,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlRegexMatch?
 
 :spadfun:`jlRegexMatch?`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlRegexMatch?(s, regex)``\  checks if the regular expression matches in \ ``s``\ .
+  \ :code:`jlRegexMatch?(s, regex)`\  checks if the regular expression matches in \ :code:`s`\ .
 
 .. _l4a4c537472696e675574696c6974696573-6a6c52656765784d61746368:
 
@@ -56,42 +56,42 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlRegexMatch
 
 :spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexMatch(s, regex)``\  returns the matched regular expressions in \ ``s``\ .
+  \ :code:`jlRegexMatch(s, regex)`\  returns the matched regular expressions in \ :code:`s`\ .
 
 
 .. index::
    pair: JLStringUtilities; jlRegexMatch
 
 :spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexMatch(s, regex)``\  returns the matched regular expression in \ ``s``\ .
+  \ :code:`jlRegexMatch(s, regex)`\  returns the matched regular expression in \ :code:`s`\ .
 
 
 .. index::
    pair: JLStringUtilities; jlRegexMatch
 
 :spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`StringTable <l537472696e675461626c65>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexMatch(s, regex)``\  returns the matched regular expressions in \ ``s``\ .
+  \ :code:`jlRegexMatch(s, regex)`\  returns the matched regular expressions in \ :code:`s`\ .
 
 
 .. index::
    pair: JLStringUtilities; jlRegexMatch
 
 :spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexMatch(s, regex, i)``\  returns the matched regular expressions in \ ``s``\ , starting at index \ ``i``\ .
+  \ :code:`jlRegexMatch(s, regex, i)`\  returns the matched regular expressions in \ :code:`s`\ , starting at index \ :code:`i`\ .
 
 
 .. index::
    pair: JLStringUtilities; jlRegexMatch
 
 :spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexMatch(s, regex, i)``\  returns the matched regular expression in \ ``s``\ , starting at index \ ``i``\ .
+  \ :code:`jlRegexMatch(s, regex, i)`\  returns the matched regular expression in \ :code:`s`\ , starting at index \ :code:`i`\ .
 
 
 .. index::
    pair: JLStringUtilities; jlRegexMatch
 
 :spadfun:`jlRegexMatch`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`StringTable <l537472696e675461626c65>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexMatch(s, regex, i)``\  returns the matched regular expressions in \ ``s``\ , starting at index \ ``i``\ .
+  \ :code:`jlRegexMatch(s, regex, i)`\  returns the matched regular expressions in \ :code:`s`\ , starting at index \ :code:`i`\ .
 
 .. _l4a4c537472696e675574696c6974696573-6a6c52656765785265706c616365:
 
@@ -99,7 +99,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlRegexReplace
 
 :spadfun:`jlRegexReplace`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlRegexReplace(str, regex, subst)``\  will replace captured regular expressions in \ ``str``\  with subst. More information in String documentation of Julia. For example: jlRegexReplace("hey", jlRegex("\$"), jlSubstitute(" you!"))
+  \ :code:`jlRegexReplace(str, regex, subst)`\  will replace captured regular expressions in \ :code:`str`\  with subst. More information in String documentation of Julia. For example: jlRegexReplace("hey", jlRegex("\$"), jlSubstitute(" you!"))
 
 .. _l4a4c537472696e675574696c6974696573-6a6c53706c6974:
 
@@ -107,14 +107,14 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlSplit
 
 :spadfun:`jlSplit`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlSplit(str, delims)``\  splits \ ``str``\  with delimiter(\ ``s``\ ) delims (a string or a regular expression). Equivalent to jlSplit(\ ``str``\ , delims, 0).
+  \ :code:`jlSplit(str, delims)`\  splits \ :code:`str`\  with delimiter(\ :code:`s`\ ) delims (a string or a regular expression). Equivalent to jlSplit(\ :code:`str`\ , delims, 0).
 
 
 .. index::
    pair: JLStringUtilities; jlSplit
 
 :spadfun:`jlSplit`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlSplit(str, delims, n)``\  splits \ ``str``\  with delimiter(\ ``s``\ ) \ ``delims``\  (a string or a regular expression). Returns a list of size \ ``n``\ . Parses entirely \ ``str``\  if \ ``n``\  = 0.
+  \ :code:`jlSplit(str, delims, n)`\  splits \ :code:`str`\  with delimiter(\ :code:`s`\ ) \ :code:`delims`\  (a string or a regular expression). Returns a list of size \ :code:`n`\ . Parses entirely \ :code:`str`\  if \ :code:`n`\  = 0.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c537472696e67:
 
@@ -122,7 +122,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlString
 
 :spadfun:`jlString`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlString(str)``\  constructs an escaped string usable by the Julia parser.
+  \ :code:`jlString(str)`\  constructs an escaped string usable by the Julia parser.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c5374796c6564:
 
@@ -130,7 +130,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlStyled
 
 :spadfun:`jlStyled`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlStyled(str)``\  returns the String corresponding to a Julia styled expression, that is, "styled_"str_"" if your Julia supports it. (StyledStrings is an official package). Convenience function.
+  \ :code:`jlStyled(str)`\  returns the String corresponding to a Julia styled expression, that is, "styled_"str_"" if your Julia supports it. (StyledStrings is an official package). Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c53756273746974757465:
 
@@ -138,7 +138,7 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlSubstitute
 
 :spadfun:`jlSubstitute`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlSubstitute(str)``\  returns the String corresponding to a Julia substitute expression, that is, "s_"str_"". Convenience function.
+  \ :code:`jlSubstitute(str)`\  returns the String corresponding to a Julia substitute expression, that is, "s_"str_"". Convenience function.
 
 .. _l4a4c537472696e675574696c6974696573-6a6c546f4c61746578:
 
@@ -146,6 +146,6 @@ This package provides Julia facilities to work with strings.
    pair: JLStringUtilities; jlToLatex
 
 :spadfun:`jlToLatex`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlToLatex(str)``\  converts the string \ ``str``\  to LaTeX for supported expressions. The Julia package Latexify needs to be installed. jlToLatex("sin(sqrt(2))") \ ``=>``\  "\$\sin\left( \sqrt{2} \right)\$"
+  \ :code:`jlToLatex(str)`\  converts the string \ :code:`str`\  to LaTeX for supported expressions. The Julia package Latexify needs to be installed. jlToLatex("sin(sqrt(2))") \ :code:`=>`\  "\$\sin\left( \sqrt{2} \right)\$"
 
 

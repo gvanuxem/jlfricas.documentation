@@ -17,7 +17,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; copy_mat_part
 
 :spadfun:`copy_mat_part`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`U32Matrix <l5533324d6174726978>`\  
-  \ ``copy_mat_part(m, nr, nc)``\  returns a copy of initial \ ``nr``\  by \ ``nc``\  part of \ ``m``\ .
+  \ :code:`copy_mat_part(m, nr, nc)`\  returns a copy of initial \ :code:`nr`\  by \ :code:`nc`\  part of \ :code:`m`\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-696e7665727365:
 
@@ -25,7 +25,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; inverse
 
 :spadfun:`inverse`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> Union(\ :ref:`U32Matrix <l5533324d6174726978>`\ , failed) 
-  \ ``inverse(m, p)``\  computes inverse of \ ``m``\  modulo \ ``p``\ . Returns "failed" when \ ``m``\  is not invertible.
+  \ :code:`inverse(m, p)`\  computes inverse of \ :code:`m`\  modulo \ :code:`p`\ . Returns "failed" when \ :code:`m`\  is not invertible.
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-6c6f7765725f747269616e67756c61725f696e7665727365:
 
@@ -33,7 +33,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; lower_triangular_inverse
 
 :spadfun:`lower_triangular_inverse`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`U32Matrix <l5533324d6174726978>`\  
-  \ ``lower_triangular_inverse(m, piv, p)``\  computes transpose of the inverse of \ ``m``\  modulo \ ``p``\ . \ ``m``\  is assumed lower triangular, \ ``piv``\  should contains inverses of diagonal elements of \ ``m``\ .
+  \ :code:`lower_triangular_inverse(m, piv, p)`\  computes transpose of the inverse of \ :code:`m`\  modulo \ :code:`p`\ . \ :code:`m`\  is assumed lower triangular, \ :code:`piv`\  should contains inverses of diagonal elements of \ :code:`m`\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-6c75705f6465636f6d706f736974696f6e:
 
@@ -41,7 +41,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; lup_decomposition
 
 :spadfun:`lup_decomposition`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> Record(lpart: \ :ref:`U32Matrix <l5533324d6174726978>`\ , upart: \ :ref:`U32Matrix <l5533324d6174726978>`\ , udinv: \ :ref:`U32Vector <l553332566563746f72>`\ , ppart: \ :ref:`U32Vector <l553332566563746f72>`\ ) 
-  \ ``lup_decomposition(m, p)``\  computes LUP decomposition of \ ``m``\  modulo \ ``p``\ , that is [\ ``l``\ , \ ``u``\ , ud, \ ``pp``\ ] such that l*transpose(\ ``u``\ ) equals to permutation of rows of \ ``m``\  given by \ ``pp``\ , \ ``l``\  and \ ``u``\  are lower triangular and \ ``l``\  has ones at diagonal. ud gives inverses of pivots (zero if there is no pivot in a given column).
+  \ :code:`lup_decomposition(m, p)`\  computes LUP decomposition of \ :code:`m`\  modulo \ :code:`p`\ , that is [\ :code:`l`\ , \ :code:`u`\ , ud, \ :code:`pp`\ ] such that l*transpose(\ :code:`u`\ ) equals to permutation of rows of \ :code:`m`\  given by \ :code:`pp`\ , \ :code:`l`\  and \ :code:`u`\  are lower triangular and \ :code:`l`\  has ones at diagonal. ud gives inverses of pivots (zero if there is no pivot in a given column).
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-6d6d756c:
 
@@ -49,7 +49,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; mmul
 
 :spadfun:`mmul`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`U32Matrix <l5533324d6174726978>`\  
-  \ ``mmul(m1, m2, d, p)``\  multiplies \ ``m1``\  by ncols(\ ``m1``\ ) times \ ``d``\  part of transpose of \ ``m2``\  modulo \ ``p``\ . Error if \ ``m2``\  is too small.
+  \ :code:`mmul(m1, m2, d, p)`\  multiplies \ :code:`m1`\  by ncols(\ :code:`m1`\ ) times \ :code:`d`\  part of transpose of \ :code:`m2`\  modulo \ :code:`p`\ . Error if \ :code:`m2`\  is too small.
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-6d756c5f6d76:
 
@@ -57,7 +57,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; mul_mv
 
 :spadfun:`mul_mv`\: (\ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``mul_mv(vr, m, v, p)``\  multiplies \ ``v``\  by \ ``m``\  modulo \ ``p``\  and puts the result in \ ``vr``\ .
+  \ :code:`mul_mv(vr, m, v, p)`\  multiplies \ :code:`v`\  by \ :code:`m`\  modulo \ :code:`p`\  and puts the result in \ :code:`vr`\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-73686966745f6d617421:
 
@@ -65,7 +65,7 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; shift_mat!
 
 :spadfun:`shift_mat!`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``shift_mat!(m, sa, nr, nc)``\  replace entries in initial \ ``nr``\  by \ ``nc``\  part of \ ``m``\  by corresponding entries with row index increased by \ ``sa``\ .
+  \ :code:`shift_mat!(m, sa, nr, nc)`\  replace entries in initial \ :code:`nr`\  by \ :code:`nc`\  part of \ :code:`m`\  by corresponding entries with row index increased by \ :code:`sa`\ .
 
 .. _l4d6f64756c61725533324d61747269784f7065726174696f6e73-747269616e67756c61725f6d756c7469706c79:
 
@@ -73,6 +73,6 @@ This is specialized solver for systems of linear equations modulo 32-bit prime, 
    pair: ModularU32MatrixOperations; triangular_multiply
 
 :spadfun:`triangular_multiply`\: (\ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`U32Matrix <l5533324d6174726978>`\ , \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`U32Matrix <l5533324d6174726978>`\  
-  \ ``triangular_multiply(m1, m2, pa, p)``\  multiplies \ ``m1``\  by transpose of \ ``m2``\  modulo \ ``p``\ . After that columns of the product are permuted, column \ ``j``\  of the product goes to column \ ``pa``\ (\ ``j``\ ) of the result. \ ``m1``\  and \ ``m2``\  are assumed upper triangular.
+  \ :code:`triangular_multiply(m1, m2, pa, p)`\  multiplies \ :code:`m1`\  by transpose of \ :code:`m2`\  modulo \ :code:`p`\ . After that columns of the product are permuted, column \ :code:`j`\  of the product goes to column \ :code:`pa`\ (\ :code:`j`\ ) of the result. \ :code:`m1`\  and \ :code:`m2`\  are assumed upper triangular.
 
 

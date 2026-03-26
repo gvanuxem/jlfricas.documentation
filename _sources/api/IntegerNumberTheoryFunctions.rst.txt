@@ -17,7 +17,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; bernoulli
 
 :spadfun:`bernoulli`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``bernoulli(n)``\  returns the \ ``n``\ th Bernoulli number. This is \ ``B(n, 0)``\ , where \ ``B(n, x)``\  is the \ ``n``\ th Bernoulli polynomial.
+  \ :code:`bernoulli(n)`\  returns the \ :code:`n`\ th Bernoulli number. This is \ :code:`B(n, 0)`\ , where \ :code:`B(n, x)`\  is the \ :code:`n`\ th Bernoulli polynomial.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6361726d69636861656c4c616d626461:
 
@@ -25,7 +25,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; carmichaelLambda
 
 :spadfun:`carmichaelLambda`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``carmichaelLambda(n)``\  returns exponent of the multiplicative group of integers modulo \ ``n``\ , that is smallest positive integer \ ``k``\  such that \ ``i^k rem n = 1``\  for all \ ``i``\  relatively prime to \ ``n``\ .
+  \ :code:`carmichaelLambda(n)`\  returns exponent of the multiplicative group of integers modulo \ :code:`n`\ , that is smallest positive integer \ :code:`k`\  such that \ :code:`i^k rem n = 1`\  for all \ :code:`i`\  relatively prime to \ :code:`n`\ .
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6368696e65736552656d61696e646572:
 
@@ -33,7 +33,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; chineseRemainder
 
 :spadfun:`chineseRemainder`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``chineseRemainder(x1, m1, x2, m2)``\  returns \ ``w``\ , where \ ``w``\  is such that \ ``w = x1 mod m1``\  and \ ``w = x2 mod m2``\ . Note: \ ``m1``\  and \ ``m2``\  must be relatively prime.
+  \ :code:`chineseRemainder(x1, m1, x2, m2)`\  returns \ :code:`w`\ , where \ :code:`w`\  is such that \ :code:`w = x1 mod m1`\  and \ :code:`w = x2 mod m2`\ . Note: \ :code:`m1`\  and \ :code:`m2`\  must be relatively prime.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-64697669736f7273:
 
@@ -41,7 +41,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; divisors
 
 :spadfun:`divisors`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``divisors(n)``\  returns a list of the divisors of \ ``n``\ .
+  \ :code:`divisors(n)`\  returns a list of the divisors of \ :code:`n`\ .
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-65756c6572:
 
@@ -49,7 +49,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; euler
 
 :spadfun:`euler`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``euler(n)``\  returns the \ ``n``\ th Euler number. This is \ ``2^n E(n, 1/2)``\ , where \ ``E(n, x)``\  is the \ ``n``\ th Euler polynomial.
+  \ :code:`euler(n)`\  returns the \ :code:`n`\ th Euler number. This is \ :code:`2^n E(n, 1/2)`\ , where \ :code:`E(n, x)`\  is the \ :code:`n`\ th Euler polynomial.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-65756c6572506869:
 
@@ -57,7 +57,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; eulerPhi
 
 :spadfun:`eulerPhi`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``eulerPhi(n)``\  returns the number of integers between 1 and \ ``n``\  (including 1) which are relatively prime to \ ``n``\ . This is the Euler phi function \ ``phi(n)``\  is also called the totient function.
+  \ :code:`eulerPhi(n)`\  returns the number of integers between 1 and \ :code:`n`\  (including 1) which are relatively prime to \ :code:`n`\ . This is the Euler phi function \ :code:`phi(n)`\  is also called the totient function.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6669626f6e61636369:
 
@@ -65,7 +65,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; fibonacci
 
 :spadfun:`fibonacci`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``fibonacci(n)``\  returns the \ ``n``\ th Fibonacci number, \ ``F[n]``\ . The Fibonacci numbers are defined by \ ``F[0] = 0``\ , \ ``F[1] = 1``\  and \ ``F[n] = F[n-1] + F[n-2]``\ . The algorithm has running time \ ``O(log(n)^3)``\ . Reference: Knuth, The Art of Computer Programming Vol 2, Semi-Numerical Algorithms.
+  \ :code:`fibonacci(n)`\  returns the \ :code:`n`\ th Fibonacci number, \ :code:`F[n]`\ . The Fibonacci numbers are defined by \ :code:`F[0] = 0`\ , \ :code:`F[1] = 1`\  and \ :code:`F[n] = F[n-1] + F[n-2]`\ . The algorithm has running time \ :code:`O(log(n)^3)`\ . Reference: Knuth, The Art of Computer Programming Vol 2, Semi-Numerical Algorithms.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6861726d6f6e6963:
 
@@ -73,7 +73,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; harmonic
 
 :spadfun:`harmonic`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``harmonic(n)``\  returns the \ ``n``\ th harmonic number. This is \ ``H[n] = sum(1/k, k=1..n)``\ .
+  \ :code:`harmonic(n)`\  returns the \ :code:`n`\ th harmonic number. This is \ :code:`H[n] = sum(1/k, k=1..n)`\ .
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6a61636f6269:
 
@@ -81,7 +81,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; jacobi
 
 :spadfun:`jacobi`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``jacobi(a, b)``\  returns the Jacobi symbol \ ``J(a/b)``\ . When \ ``b``\  is odd, \ ``J(a/b) = product(L(a/p) for p in factor b )``\ . Note: by convention, 0 is returned if \ ``gcd(a, b) ~= 1``\ . Iterative \ ``O(log(b)^2)``\  version coded by Michael Monagan June 1987.
+  \ :code:`jacobi(a, b)`\  returns the Jacobi symbol \ :code:`J(a/b)`\ . When \ :code:`b`\  is odd, \ :code:`J(a/b) = product(L(a/p) for p in factor b )`\ . Note: by convention, 0 is returned if \ :code:`gcd(a, b) ~= 1`\ . Iterative \ :code:`O(log(b)^2)`\  version coded by Michael Monagan June 1987.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6c6567656e647265:
 
@@ -89,7 +89,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; legendre
 
 :spadfun:`legendre`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``legendre(a, p)``\  returns the Legendre symbol \ ``L(a/p)``\ . \ ``L(a/p) = (-1)^((p-1)/2) mod p``\  (\ ``p``\  prime), which is 0 if \ ``a``\  is 0, 1 if \ ``a``\  is a quadratic residue \ ``mod p``\  and \ ``-1``\  otherwise. Note: because the primality test is expensive, if it is known that \ ``p``\  is prime then use \ ``jacobi(a, p)``\ .
+  \ :code:`legendre(a, p)`\  returns the Legendre symbol \ :code:`L(a/p)`\ . \ :code:`L(a/p) = (-1)^((p-1)/2) mod p`\  (\ :code:`p`\  prime), which is 0 if \ :code:`a`\  is 0, 1 if \ :code:`a`\  is a quadratic residue \ :code:`mod p`\  and \ :code:`-1`\  otherwise. Note: because the primality test is expensive, if it is known that \ :code:`p`\  is prime then use \ :code:`jacobi(a, p)`\ .
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6d6f65626975734d75:
 
@@ -97,7 +97,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; moebiusMu
 
 :spadfun:`moebiusMu`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``moebiusMu(n)``\  returns the Moebius function \ ``mu(n)``\ . \ ``mu(n)``\  is either \ ``-1``\ , 0 or 1 as follows: \ ``mu(n) = 0``\  if \ ``n``\  is divisible by a square > 1, \ ``mu(n) = (-1)^k``\  if \ ``n``\  is square-free and has \ ``k``\  distinct prime divisors.
+  \ :code:`moebiusMu(n)`\  returns the Moebius function \ :code:`mu(n)`\ . \ :code:`mu(n)`\  is either \ :code:`-1`\ , 0 or 1 as follows: \ :code:`mu(n) = 0`\  if \ :code:`n`\  is divisible by a square > 1, \ :code:`mu(n) = (-1)^k`\  if \ :code:`n`\  is square-free and has \ :code:`k`\  distinct prime divisors.
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-6e756d6265724f6644697669736f7273:
 
@@ -105,7 +105,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; numberOfDivisors
 
 :spadfun:`numberOfDivisors`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``numberOfDivisors(n)``\  returns the number of integers between 1 and \ ``n``\  (inclusive) which divide \ ``n``\ . The number of divisors of \ ``n``\  is often denoted by \ ``tau(n)``\ .
+  \ :code:`numberOfDivisors(n)`\  returns the number of integers between 1 and \ :code:`n`\  (inclusive) which divide \ :code:`n`\ . The number of divisors of \ :code:`n`\  is often denoted by \ :code:`tau(n)`\ .
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-73756d4f6644697669736f7273:
 
@@ -113,7 +113,7 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; sumOfDivisors
 
 :spadfun:`sumOfDivisors`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``sumOfDivisors(n)``\  returns the sum of the integers between 1 and \ ``n``\  (inclusive) which divide \ ``n``\ . The sum of the divisors of \ ``n``\  is often denoted by \ ``sigma(n)``\ .
+  \ :code:`sumOfDivisors(n)`\  returns the sum of the integers between 1 and \ :code:`n`\  (inclusive) which divide \ :code:`n`\ . The sum of the divisors of \ :code:`n`\  is often denoted by \ :code:`sigma(n)`\ .
 
 .. _l496e74656765724e756d6265725468656f727946756e6374696f6e73-73756d4f664b7468506f77657244697669736f7273:
 
@@ -121,6 +121,6 @@ This package provides various number theoretic functions on the integers.
    pair: IntegerNumberTheoryFunctions; sumOfKthPowerDivisors
 
 :spadfun:`sumOfKthPowerDivisors`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``sumOfKthPowerDivisors(n, k)``\  returns the sum of the \ ``k``\ th powers of the integers between 1 and \ ``n``\  (inclusive) which divide \ ``n``\ . The sum of the \ ``k``\ th powers of the divisors of \ ``n``\  is often denoted by \ ``sigma_k(n)``\ .
+  \ :code:`sumOfKthPowerDivisors(n, k)`\  returns the sum of the \ :code:`k`\ th powers of the integers between 1 and \ :code:`n`\  (inclusive) which divide \ :code:`n`\ . The sum of the \ :code:`k`\ th powers of the divisors of \ :code:`n`\  is often denoted by \ :code:`sigma_k(n)`\ .
 
 

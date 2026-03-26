@@ -79,7 +79,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; entries
 
 :spadfun:`entries`\: % -> \ :ref:`List <l4c697374>`\  Entry 
-  \ ``entries(u)``\  returns a list of all the entries of aggregate \ ``u``\  in no assumed order.
+  \ :code:`entries(u)`\  returns a list of all the entries of aggregate \ :code:`u`\  in no assumed order.
 
 .. _l496e6465786564416767726567617465-656e7472793f:
 
@@ -87,7 +87,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; entry?
 
 :spadfun:`entry?`\: (Entry, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Entry has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``entry?(x, u)``\  tests if \ ``x``\  equals \ ``u . i``\  for some index \ ``i``\ .
+  \ :code:`entry?(x, u)`\  tests if \ :code:`x`\  equals \ :code:`u . i`\  for some index \ :code:`i`\ .
 
 .. _l496e6465786564416767726567617465-65713f:
 
@@ -122,7 +122,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; fill!
 
 :spadfun:`fill!`\: (%, Entry) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``fill!(u, x)``\  replaces each entry in aggregate \ ``u``\  by \ ``x``\ . The modified \ ``u``\  is returned as value.
+  \ :code:`fill!(u, x)`\  replaces each entry in aggregate \ :code:`u`\  by \ :code:`x`\ . The modified \ :code:`u`\  is returned as value.
 
 .. _l496e6465786564416767726567617465-6669727374:
 
@@ -130,7 +130,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; first
 
 :spadfun:`first`\: % -> Entry if Index has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
-  \ ``first(u)``\  returns the first element \ ``x``\  of \ ``u``\ . Note: for collections, \ ``first([x, y, ..., z]) = x``\ . Error: if \ ``u``\  is empty.
+  \ :code:`first(u)`\  returns the first element \ :code:`x`\  of \ :code:`u`\ . Note: for collections, \ :code:`first([x, y, ..., z]) = x`\ . Error: if \ :code:`u`\  is empty.
 
 .. _l496e6465786564416767726567617465-696e6465783f:
 
@@ -138,7 +138,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; index?
 
 :spadfun:`index?`\: (Index, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``index?(i, u)``\  tests if \ ``i``\  is an index of aggregate \ ``u``\ .
+  \ :code:`index?(i, u)`\  tests if \ :code:`i`\  is an index of aggregate \ :code:`u`\ .
 
 .. _l496e6465786564416767726567617465-696e6469636573:
 
@@ -146,7 +146,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; indices
 
 :spadfun:`indices`\: % -> \ :ref:`List <l4c697374>`\  Index 
-  \ ``indices(u)``\  returns a list of indices of aggregate \ ``u``\  in no particular order.
+  \ :code:`indices(u)`\  returns a list of indices of aggregate \ :code:`u`\  in no particular order.
 
 .. _l496e6465786564416767726567617465-6c61746578:
 
@@ -183,7 +183,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; maxIndex
 
 :spadfun:`maxIndex`\: % -> Index if Index has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
-  \ ``maxIndex(u)``\  returns the maximum index \ ``i``\  of aggregate \ ``u``\ . Note: in general, \ ``maxIndex(u) = reduce(max, indices u)``\ ; for List, \ ``maxIndex(u) = \#u``\ .
+  \ :code:`maxIndex(u)`\  returns the maximum index \ :code:`i`\  of aggregate \ :code:`u`\ . Note: in general, \ :code:`maxIndex(u) = reduce(max, indices u)`\ ; for List, \ :code:`maxIndex(u) = \#u`\ .
 
 .. _l496e6465786564416767726567617465-6d656d6265723f:
 
@@ -206,7 +206,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; minIndex
 
 :spadfun:`minIndex`\: % -> Index if Index has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
-  \ ``minIndex(u)``\  returns the minimum index \ ``i``\  of aggregate \ ``u``\ . Note: in general, \ ``minIndex(a) = reduce(min, indices a)``\ ; for List, \ ``minIndex(a) = 1``\ .
+  \ :code:`minIndex(u)`\  returns the minimum index \ :code:`i`\  of aggregate \ :code:`u`\ . Note: in general, \ :code:`minIndex(a) = reduce(min, indices a)`\ ; for List, \ :code:`minIndex(a) = 1`\ .
 
 .. _l496e6465786564416767726567617465-6d6f72653f:
 
@@ -249,7 +249,7 @@ An indexed aggregate is a many-to-one mapping of indices to entries. For example
    pair: IndexedAggregate; swap!
 
 :spadfun:`swap!`\: (%, Index, Index) -> \ :ref:`Void <l566f6964>`\  if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``swap!(u, i, j)``\  interchanges elements \ ``i``\  and \ ``j``\  of aggregate \ ``u``\ . No meaningful value is returned.
+  \ :code:`swap!(u, i, j)`\  interchanges elements \ :code:`i`\  and \ :code:`j`\  of aggregate \ :code:`u`\ . No meaningful value is returned.
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

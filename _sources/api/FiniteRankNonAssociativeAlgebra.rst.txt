@@ -10,7 +10,7 @@ FiniteRankNonAssociativeAlgebra R
 * R: \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
 
 
-A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutative ring \ ``R``\  which is a free \ ``R``\ -module of finite rank.
+A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutative ring \ :code:`R`\  which is a free \ :code:`R`\ -module of finite rank.
 
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-30:
@@ -78,7 +78,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; alternative?
 
 :spadfun:`alternative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``alternative?()``\  tests if \ ``2*associator(a, a, b) = 0 = 2*associator(a, b, b)``\  for all \ ``a``\ , \ ``b``\  in the algebra. Note: we only can test this; in general we don\ ``'t``\  know whether \ ``2*a=0``\  implies \ ``a=0``\ .
+  \ :code:`alternative?()`\  tests if \ :code:`2*associator(a, a, b) = 0 = 2*associator(a, b, b)`\  for all \ :code:`a`\ , \ :code:`b`\  in the algebra. Note: we only can test this; in general we don\ :code:`'t`\  know whether \ :code:`2*a=0`\  implies \ :code:`a=0`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-616e74694173736f636961746976653f:
 
@@ -86,7 +86,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; antiAssociative?
 
 :spadfun:`antiAssociative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``antiAssociative?()``\  tests if multiplication in algebra is anti-associative, i.e. \ ``(a*b)*c + a*(b*c) = 0``\  for all \ ``a``\ , \ ``b``\ , \ ``c``\  in the algebra.
+  \ :code:`antiAssociative?()`\  tests if multiplication in algebra is anti-associative, i.e. \ :code:`(a*b)*c + a*(b*c) = 0`\  for all \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\  in the algebra.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-616e7469436f6d6d757461746976653f:
 
@@ -94,7 +94,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; antiCommutative?
 
 :spadfun:`antiCommutative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``antiCommutative?()``\  tests if \ ``a*a = 0``\  for all \ ``a``\  in the algebra. Note: this implies \ ``a*b + b*a = 0``\  for all \ ``a``\  and \ ``b``\ .
+  \ :code:`antiCommutative?()`\  tests if \ :code:`a*a = 0`\  for all \ :code:`a`\  in the algebra. Note: this implies \ :code:`a*b + b*a = 0`\  for all \ :code:`a`\  and \ :code:`b`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-616e7469436f6d6d757461746f72:
 
@@ -107,7 +107,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; associative?
 
 :spadfun:`associative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``associative?()``\  tests if multiplication in algebra is associative.
+  \ :code:`associative?()`\  tests if multiplication in algebra is associative.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6173736f636961746f72:
 
@@ -120,7 +120,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; associatorDependence
 
 :spadfun:`associatorDependence`\: () -> \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``associatorDependence()``\  looks for the associator identities, i.e. finds a basis of the solutions of the linear combinations of the six permutations of \ ``associator(a, b, c)``\  which yield 0, for all \ ``a``\ , \ ``b``\ , \ ``c``\  in the algebra. The order of the permutations is \ ``123 231 312 132 321 213``\ .
+  \ :code:`associatorDependence()`\  looks for the associator identities, i.e. finds a basis of the solutions of the linear combinations of the six permutations of \ :code:`associator(a, b, c)`\  which yield 0, for all \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\  in the algebra. The order of the permutations is \ :code:`123 231 312 132 321 213`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-636f65726365:
 
@@ -133,7 +133,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; commutative?
 
 :spadfun:`commutative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``commutative?()``\  tests if multiplication in the algebra is commutative.
+  \ :code:`commutative?()`\  tests if multiplication in the algebra is commutative.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-636f6d6d757461746f72:
 
@@ -146,7 +146,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; conditionsForIdempotents
 
 :spadfun:`conditionsForIdempotents`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
-  \ ``conditionsForIdempotents([v1, ..., vn])``\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the \ ``R``\ -module basis \ ``v1``\ , ..., \ ``vn``\ .
+  \ :code:`conditionsForIdempotents([v1, ..., vn])`\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the \ :code:`R`\ -module basis \ :code:`v1`\ , ..., \ :code:`vn`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-636f6f7264696e61746573:
 
@@ -154,14 +154,14 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; coordinates
 
 :spadfun:`coordinates`\: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Vector <l566563746f72>`\  R 
-  \ ``coordinates(a, [v1, ..., vn])``\  returns the coordinates of \ ``a``\  with respect to the \ ``R``\ -module basis \ ``v1``\ , ..., \ ``vn``\ .
+  \ :code:`coordinates(a, [v1, ..., vn])`\  returns the coordinates of \ :code:`a`\  with respect to the \ :code:`R`\ -module basis \ :code:`v1`\ , ..., \ :code:`vn`\ .
 
 
 .. index::
    pair: FiniteRankNonAssociativeAlgebra; coordinates
 
 :spadfun:`coordinates`\: (\ :ref:`Vector <l566563746f72>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``coordinates([a1, ..., am], [v1, ..., vn])``\  returns a matrix whose \ ``i``\ -th row is formed by the coordinates of \ ``ai``\  with respect to the \ ``R``\ -module basis \ ``v1``\ , ..., \ ``vn``\ .
+  \ :code:`coordinates([a1, ..., am], [v1, ..., vn])`\  returns a matrix whose \ :code:`i`\ -th row is formed by the coordinates of \ :code:`ai`\  with respect to the \ :code:`R`\ -module basis \ :code:`v1`\ , ..., \ :code:`vn`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-666c657869626c653f:
 
@@ -169,7 +169,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; flexible?
 
 :spadfun:`flexible?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``flexible?()``\  tests if \ ``2*associator(a, b, a) = 0``\  for all \ ``a``\ , \ ``b``\  in the algebra. Note: we only can test this; in general we don\ ``'t``\  know whether \ ``2*a=0``\  implies \ ``a=0``\ .
+  \ :code:`flexible?()`\  tests if \ :code:`2*associator(a, b, a) = 0`\  for all \ :code:`a`\ , \ :code:`b`\  in the algebra. Note: we only can test this; in general we don\ :code:`'t`\  know whether \ :code:`2*a=0`\  implies \ :code:`a=0`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6a61636f62694964656e746974793f:
 
@@ -177,7 +177,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; jacobiIdentity?
 
 :spadfun:`jacobiIdentity?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jacobiIdentity?()``\  tests if \ ``(a*b)*c + (b*c)*a + (c*a)*b = 0``\  for all \ ``a``\ , \ ``b``\ , \ ``c``\  in the algebra. For example, this holds for crossed products of 3-dimensional vectors.
+  \ :code:`jacobiIdentity?()`\  tests if \ :code:`(a*b)*c + (b*c)*a + (c*a)*b = 0`\  for all \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\  in the algebra. For example, this holds for crossed products of 3-dimensional vectors.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6a6f7264616e41646d69737369626c653f:
 
@@ -185,7 +185,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; jordanAdmissible?
 
 :spadfun:`jordanAdmissible?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jordanAdmissible?()``\  tests if 2 is invertible in the coefficient domain and the multiplication defined by \ ``(1/2)(a*b+b*a)``\  determines a Jordan algebra, i.e. satisfies the Jordan identity. The property of \ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  follows from by definition.
+  \ :code:`jordanAdmissible?()`\  tests if 2 is invertible in the coefficient domain and the multiplication defined by \ :code:`(1/2)(a*b+b*a)`\  determines a Jordan algebra, i.e. satisfies the Jordan identity. The property of \ :ref:`CommutativeStar <l436f6d6d7574617469766553746172>`\  follows from by definition.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6a6f7264616e416c67656272613f:
 
@@ -193,7 +193,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; jordanAlgebra?
 
 :spadfun:`jordanAlgebra?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jordanAlgebra?()``\  tests if the algebra is commutative, characteristic is not 2, and \ ``(a*b)*a^2 - a*(b*a^2) = 0``\  for all \ ``a``\ , \ ``b``\ , \ ``c``\  in the algebra (Jordan identity). Example: for every associative algebra \ ``(A, +, @)``\  we can construct a Jordan algebra \ ``(A, +, *)``\ , where \ ``a*b := (a@b+b@a)/2``\ .
+  \ :code:`jordanAlgebra?()`\  tests if the algebra is commutative, characteristic is not 2, and \ :code:`(a*b)*a^2 - a*(b*a^2) = 0`\  for all \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\  in the algebra (Jordan identity). Example: for every associative algebra \ :code:`(A, +, @)`\  we can construct a Jordan algebra \ :code:`(A, +, *)`\ , where \ :code:`a*b := (a@b+b@a)/2`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c61746578:
 
@@ -206,7 +206,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftAlternative?
 
 :spadfun:`leftAlternative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``leftAlternative?()``\  tests if \ ``2*associator(a, a, b) = 0``\  for all \ ``a``\ , \ ``b``\  in the algebra. Note: we only can test this; in general we don\ ``'t``\  know whether \ ``2*a=0``\  implies \ ``a=0``\ .
+  \ :code:`leftAlternative?()`\  tests if \ :code:`2*associator(a, a, b) = 0`\  for all \ :code:`a`\ , \ :code:`b`\  in the algebra. Note: we only can test this; in general we don\ :code:`'t`\  know whether \ :code:`2*a=0`\  implies \ :code:`a=0`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6566744368617261637465726973746963506f6c796e6f6d69616c:
 
@@ -214,7 +214,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftCharacteristicPolynomial
 
 :spadfun:`leftCharacteristicPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
-  \ ``leftCharacteristicPolynomial(a)``\  returns the characteristic polynomial of the left regular representation of \ ``a``\  with respect to any basis.
+  \ :code:`leftCharacteristicPolynomial(a)`\  returns the characteristic polynomial of the left regular representation of \ :code:`a`\  with respect to any basis.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6566744469736372696d696e616e74:
 
@@ -222,7 +222,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftDiscriminant
 
 :spadfun:`leftDiscriminant`\: \ :ref:`Vector <l566563746f72>`\  % -> R 
-  \ ``leftDiscriminant([v1, ..., vn])``\  returns the determinant of the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the left trace of the product \ ``vi*vj``\ . Note: the same as \ ``determinant(leftTraceMatrix([v1, ..., vn]))``\ .
+  \ :code:`leftDiscriminant([v1, ..., vn])`\  returns the determinant of the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the left trace of the product \ :code:`vi*vj`\ . Note: the same as \ :code:`determinant(leftTraceMatrix([v1, ..., vn]))`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6566744d696e696d616c506f6c796e6f6d69616c:
 
@@ -230,7 +230,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftMinimalPolynomial
 
 :spadfun:`leftMinimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``leftMinimalPolynomial(a)``\  returns the polynomial determined by the smallest non-trivial linear combination of left powers of \ ``a``\ . Note: the polynomial never has a constant term as in general the algebra has no unit.
+  \ :code:`leftMinimalPolynomial(a)`\  returns the polynomial determined by the smallest non-trivial linear combination of left powers of \ :code:`a`\ . Note: the polynomial never has a constant term as in general the algebra has no unit.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6566744e6f726d:
 
@@ -238,7 +238,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftNorm
 
 :spadfun:`leftNorm`\: % -> R 
-  \ ``leftNorm(a)``\  returns the determinant of the left regular representation of \ ``a``\ .
+  \ :code:`leftNorm(a)`\  returns the determinant of the left regular representation of \ :code:`a`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c656674506f776572:
 
@@ -251,7 +251,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftRecip
 
 :spadfun:`leftRecip`\: % -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``leftRecip(a)``\  returns an element, which is a left inverse of \ ``a``\ , or \ ``"failed"``\  if there is no unit element, if such an element doesn\ ``'t``\  exist or cannot be determined (see unitsKnown).
+  \ :code:`leftRecip(a)`\  returns an element, which is a left inverse of \ :code:`a`\ , or \ :code:`"failed"`\  if there is no unit element, if such an element doesn\ :code:`'t`\  exist or cannot be determined (see unitsKnown).
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c656674526567756c6172526570726573656e746174696f6e:
 
@@ -259,7 +259,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftRegularRepresentation
 
 :spadfun:`leftRegularRepresentation`\: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``leftRegularRepresentation(a, [v1, ..., vn])``\  returns the matrix \ ``m``\  of the linear map defined by left multiplication by \ ``a``\  with respect to the \ ``R``\ -module basis \ ``b = [v1, ..., vn]``\ . That is for all \ ``x``\  \ ``coordinates(a*x, b) = m*coordinates(x, b)``\ .
+  \ :code:`leftRegularRepresentation(a, [v1, ..., vn])`\  returns the matrix \ :code:`m`\  of the linear map defined by left multiplication by \ :code:`a`\  with respect to the \ :code:`R`\ -module basis \ :code:`b = [v1, ..., vn]`\ . That is for all \ :code:`x`\  \ :code:`coordinates(a*x, b) = m*coordinates(x, b)`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6566745472616365:
 
@@ -267,7 +267,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftTrace
 
 :spadfun:`leftTrace`\: % -> R 
-  \ ``leftTrace(a)``\  returns the trace of the left regular representation of \ ``a``\ .
+  \ :code:`leftTrace(a)`\  returns the trace of the left regular representation of \ :code:`a`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c65667454726163654d6174726978:
 
@@ -275,7 +275,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftTraceMatrix
 
 :spadfun:`leftTraceMatrix`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``leftTraceMatrix([v1, ..., vn])``\  is the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the left trace of the product \ ``vi*vj``\ .
+  \ :code:`leftTraceMatrix([v1, ..., vn])`\  is the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the left trace of the product \ :code:`vi*vj`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c656674556e6974:
 
@@ -283,7 +283,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftUnit
 
 :spadfun:`leftUnit`\: () -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``leftUnit()``\  returns a left unit of the algebra (not necessarily unique), or \ ``"failed"``\  if there is none.
+  \ :code:`leftUnit()`\  returns a left unit of the algebra (not necessarily unique), or \ :code:`"failed"`\  if there is none.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c656674556e697473:
 
@@ -291,7 +291,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; leftUnits
 
 :spadfun:`leftUnits`\: () -> Union(Record(particular: %, basis: \ :ref:`List <l4c697374>`\  %), failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``leftUnits()``\  returns the affine space of all left units of the algebra, or \ ``"failed"``\  if there is none.
+  \ :code:`leftUnits()`\  returns the affine space of all left units of the algebra, or \ :code:`"failed"`\  if there is none.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c696541646d69737369626c653f:
 
@@ -299,7 +299,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; lieAdmissible?
 
 :spadfun:`lieAdmissible?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``lieAdmissible?()``\  tests if the algebra defined by the commutators is a Lie algebra, i.e. satisfies the Jacobi identity. The property of anticommutativity follows from definition.
+  \ :code:`lieAdmissible?()`\  tests if the algebra defined by the commutators is a Lie algebra, i.e. satisfies the Jacobi identity. The property of anticommutativity follows from definition.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6965416c67656272613f:
 
@@ -307,7 +307,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; lieAlgebra?
 
 :spadfun:`lieAlgebra?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``lieAlgebra?()``\  tests if the algebra is anticommutative and \ ``(a*b)*c + (b*c)*a + (c*a)*b = 0``\  for all \ ``a``\ , \ ``b``\ , \ ``c``\  in the algebra (Jacobi identity). Example: for every associative algebra \ ``(A, +, @)``\  we can construct a Lie algebra \ ``(A, +, *)``\ , where \ ``a*b := a@b-b@a``\ .
+  \ :code:`lieAlgebra?()`\  tests if the algebra is anticommutative and \ :code:`(a*b)*c + (b*c)*a + (c*a)*b = 0`\  for all \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\  in the algebra (Jacobi identity). Example: for every associative algebra \ :code:`(A, +, @)`\  we can construct a Lie algebra \ :code:`(A, +, *)`\ , where \ :code:`a*b := a@b-b@a`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6e6f6e636f6d6d757461746976654a6f7264616e416c67656272613f:
 
@@ -315,7 +315,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; noncommutativeJordanAlgebra?
 
 :spadfun:`noncommutativeJordanAlgebra?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``noncommutativeJordanAlgebra?()``\  tests if the algebra is flexible and Jordan admissible.
+  \ :code:`noncommutativeJordanAlgebra?()`\  tests if the algebra is flexible and Jordan admissible.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6f70706f736974653f:
 
@@ -333,7 +333,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; powerAssociative?
 
 :spadfun:`powerAssociative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``powerAssociative?()``\  tests if all subalgebras generated by a single element are associative.
+  \ :code:`powerAssociative?()`\  tests if all subalgebras generated by a single element are associative.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72616e6b:
 
@@ -341,7 +341,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rank
 
 :spadfun:`rank`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``rank()``\  returns the rank of the algebra as \ ``R``\ -module.
+  \ :code:`rank()`\  returns the rank of the algebra as \ :code:`R`\ -module.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7265636970:
 
@@ -349,7 +349,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; recip
 
 :spadfun:`recip`\: % -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``recip(a)``\  returns an element, which is both a left and a right inverse of \ ``a``\ , or \ ``"failed"``\  if there is no unit element, if such an element doesn\ ``'t``\  exist or cannot be determined (see unitsKnown).
+  \ :code:`recip(a)`\  returns an element, which is both a left and a right inverse of \ :code:`a`\ , or \ :code:`"failed"`\  if there is no unit element, if such an element doesn\ :code:`'t`\  exist or cannot be determined (see unitsKnown).
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-726570726573656e7473:
 
@@ -357,7 +357,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; represents
 
 :spadfun:`represents`\: (\ :ref:`Vector <l566563746f72>`\  R, \ :ref:`Vector <l566563746f72>`\  %) -> % 
-  \ ``represents([a1, ..., am], [v1, ..., vm])``\  returns the linear combination \ ``a1*vm + ... + an*vm``\ .
+  \ :code:`represents([a1, ..., am], [v1, ..., vm])`\  returns the linear combination \ :code:`a1*vm + ... + an*vm`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7269676874416c7465726e61746976653f:
 
@@ -365,7 +365,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightAlternative?
 
 :spadfun:`rightAlternative?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rightAlternative?()``\  tests if \ ``2*associator(a, b, b) = 0``\  for all \ ``a``\ , \ ``b``\  in the algebra. Note: we only can test this; in general we don\ ``'t``\  know whether \ ``2*a=0``\  implies \ ``a=0``\ .
+  \ :code:`rightAlternative?()`\  tests if \ :code:`2*associator(a, b, b) = 0`\  for all \ :code:`a`\ , \ :code:`b`\  in the algebra. Note: we only can test this; in general we don\ :code:`'t`\  know whether \ :code:`2*a=0`\  implies \ :code:`a=0`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72696768744368617261637465726973746963506f6c796e6f6d69616c:
 
@@ -373,7 +373,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightCharacteristicPolynomial
 
 :spadfun:`rightCharacteristicPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
-  \ ``rightCharacteristicPolynomial(a)``\  returns the characteristic polynomial of the right regular representation of \ ``a``\  with respect to any basis.
+  \ :code:`rightCharacteristicPolynomial(a)`\  returns the characteristic polynomial of the right regular representation of \ :code:`a`\  with respect to any basis.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72696768744469736372696d696e616e74:
 
@@ -381,7 +381,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightDiscriminant
 
 :spadfun:`rightDiscriminant`\: \ :ref:`Vector <l566563746f72>`\  % -> R 
-  \ ``rightDiscriminant([v1, ..., vn])``\  returns the determinant of the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the right trace of the product \ ``vi*vj``\ . Note: the same as \ ``determinant(rightTraceMatrix([v1, ..., vn]))``\ .
+  \ :code:`rightDiscriminant([v1, ..., vn])`\  returns the determinant of the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the right trace of the product \ :code:`vi*vj`\ . Note: the same as \ :code:`determinant(rightTraceMatrix([v1, ..., vn]))`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72696768744d696e696d616c506f6c796e6f6d69616c:
 
@@ -389,7 +389,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightMinimalPolynomial
 
 :spadfun:`rightMinimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rightMinimalPolynomial(a)``\  returns the polynomial determined by the smallest non-trivial linear combination of right powers of \ ``a``\ . Note: the polynomial never has a constant term as in general the algebra has no unit.
+  \ :code:`rightMinimalPolynomial(a)`\  returns the polynomial determined by the smallest non-trivial linear combination of right powers of \ :code:`a`\ . Note: the polynomial never has a constant term as in general the algebra has no unit.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72696768744e6f726d:
 
@@ -397,7 +397,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightNorm
 
 :spadfun:`rightNorm`\: % -> R 
-  \ ``rightNorm(a)``\  returns the determinant of the right regular representation of \ ``a``\ .
+  \ :code:`rightNorm(a)`\  returns the determinant of the right regular representation of \ :code:`a`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7269676874506f776572:
 
@@ -410,7 +410,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightRecip
 
 :spadfun:`rightRecip`\: % -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rightRecip(a)``\  returns an element, which is a right inverse of \ ``a``\ , or \ ``"failed"``\  if there is no unit element, if such an element doesn\ ``'t``\  exist or cannot be determined (see unitsKnown).
+  \ :code:`rightRecip(a)`\  returns an element, which is a right inverse of \ :code:`a`\ , or \ :code:`"failed"`\  if there is no unit element, if such an element doesn\ :code:`'t`\  exist or cannot be determined (see unitsKnown).
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7269676874526567756c6172526570726573656e746174696f6e:
 
@@ -418,7 +418,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightRegularRepresentation
 
 :spadfun:`rightRegularRepresentation`\: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``rightRegularRepresentation(a, [v1, ..., vn])``\  returns the matrix \ ``m``\  of the linear map defined by right multiplication by \ ``a``\  with respect to the \ ``R``\ -module basis \ ``b = [v1, ..., vn]``\ . That is for all \ ``x``\  \ ``coordinates(x*a, b) = m*coordinates(x, b)``\ .
+  \ :code:`rightRegularRepresentation(a, [v1, ..., vn])`\  returns the matrix \ :code:`m`\  of the linear map defined by right multiplication by \ :code:`a`\  with respect to the \ :code:`R`\ -module basis \ :code:`b = [v1, ..., vn]`\ . That is for all \ :code:`x`\  \ :code:`coordinates(x*a, b) = m*coordinates(x, b)`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72696768745472616365:
 
@@ -426,7 +426,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightTrace
 
 :spadfun:`rightTrace`\: % -> R 
-  \ ``rightTrace(a)``\  returns the trace of the right regular representation of \ ``a``\ .
+  \ :code:`rightTrace(a)`\  returns the trace of the right regular representation of \ :code:`a`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-726967687454726163654d6174726978:
 
@@ -434,7 +434,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightTraceMatrix
 
 :spadfun:`rightTraceMatrix`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``rightTraceMatrix([v1, ..., vn])``\  is the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the right trace of the product \ ``vi*vj``\ .
+  \ :code:`rightTraceMatrix([v1, ..., vn])`\  is the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the right trace of the product \ :code:`vi*vj`\ .
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7269676874556e6974:
 
@@ -442,7 +442,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightUnit
 
 :spadfun:`rightUnit`\: () -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rightUnit()``\  returns a right unit of the algebra (not necessarily unique), or \ ``"failed"``\  if there is none.
+  \ :code:`rightUnit()`\  returns a right unit of the algebra (not necessarily unique), or \ :code:`"failed"`\  if there is none.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7269676874556e697473:
 
@@ -450,7 +450,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; rightUnits
 
 :spadfun:`rightUnits`\: () -> Union(Record(particular: %, basis: \ :ref:`List <l4c697374>`\  %), failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rightUnits()``\  returns the affine space of all right units of the algebra, or \ ``"failed"``\  if there is none.
+  \ :code:`rightUnits()`\  returns the affine space of all right units of the algebra, or \ :code:`"failed"`\  if there is none.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-73616d706c65:
 
@@ -463,7 +463,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; someBasis
 
 :spadfun:`someBasis`\: () -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``someBasis()``\  returns some \ ``R``\ -module basis.
+  \ :code:`someBasis()`\  returns some \ :code:`R`\ -module basis.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7374727563747572616c436f6e7374616e7473:
 
@@ -471,7 +471,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; structuralConstants
 
 :spadfun:`structuralConstants`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``structuralConstants([v1, v2, ..., vm])``\  calculates the structural constants \ ``[(gammaijk) for k in 1..m]``\  defined by \ ``vi * vj = gammaij1 * v1 + ... + gammaijm * vm``\ , where \ ``[v1, ..., vm]``\  is an \ ``R``\ -module basis of a subalgebra.
+  \ :code:`structuralConstants([v1, v2, ..., vm])`\  calculates the structural constants \ :code:`[(gammaijk) for k in 1..m]`\  defined by \ :code:`vi * vj = gammaij1 * v1 + ... + gammaijm * vm`\ , where \ :code:`[v1, ..., vm]`\  is an \ :code:`R`\ -module basis of a subalgebra.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7375627472616374496643616e:
 
@@ -484,7 +484,7 @@ A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutativ
    pair: FiniteRankNonAssociativeAlgebra; unit
 
 :spadfun:`unit`\: () -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``unit()``\  returns a unit of the algebra (necessarily unique), or \ ``"failed"``\  if there is none.
+  \ :code:`unit()`\  returns a unit of the algebra (necessarily unique), or \ :code:`"failed"`\  if there is none.
 
 .. _l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7a65726f3f:
 

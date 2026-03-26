@@ -12,7 +12,7 @@ AssociatedJordanAlgebra(R, A)
 * A: \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  R
 
 
-AssociatedJordanAlgebra takes an algebra \ ``A``\  and uses \ :spadfun:`*\$A`\  to define the new multiplications \ ``a*b := (a *\$A b + b *\$A a)/2``\  (anticommutator). The usual notation \ ``{a, b}_+``\  cannot be used due to restrictions in the current language. This domain only gives a Jordan algebra if the Jordan-identity \ ``(a*b)*c + (b*c)*a + (c*a)*b = 0``\  holds for all \ ``a``\ , \ ``b``\ , \ ``c``\  in \ ``A``\ . This relation can be checked by \ :spadfun:`jordanAdmissible?()\$A`\ .   If the underlying algebra is of type FramedNonAssociativeAlgebra(R) (i.e. a non associative algebra over \ ``R``\  which is a free \ ``R``\ -module of finite rank, together with a fixed \ ``R``\ -module basis), then the same is \ ``true``\  for the associated Jordan algebra. Moreover, if the underlying algebra is of type FiniteRankNonAssociativeAlgebra(R) (i.e. a non associative algebra over \ ``R``\  which is a free \ ``R``\ -module of finite rank), then the same is \ ``true``\  for the associated Jordan algebra.
+AssociatedJordanAlgebra takes an algebra \ :code:`A`\  and uses \ :spadfun:`*\$A`\  to define the new multiplications \ :code:`a*b := (a *\$A b + b *\$A a)/2`\  (anticommutator). The usual notation \ :code:`{a, b}_+`\  cannot be used due to restrictions in the current language. This domain only gives a Jordan algebra if the Jordan-identity \ :code:`(a*b)*c + (b*c)*a + (c*a)*b = 0`\  holds for all \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\  in \ :code:`A`\ . This relation can be checked by \ :spadfun:`jordanAdmissible?()\$A`\ .   If the underlying algebra is of type FramedNonAssociativeAlgebra(R) (i.e. a non associative algebra over \ :code:`R`\  which is a free \ :code:`R`\ -module of finite rank, together with a fixed \ :code:`R`\ -module basis), then the same is \ :code:`true`\  for the associated Jordan algebra. Moreover, if the underlying algebra is of type FiniteRankNonAssociativeAlgebra(R) (i.e. a non associative algebra over \ :code:`R`\  which is a free \ :code:`R`\ -module of finite rank), then the same is \ :code:`true`\  for the associated Jordan algebra.
 
 
 .. _l4173736f6369617465644a6f7264616e416c6765627261-30:
@@ -133,7 +133,7 @@ AssociatedJordanAlgebra takes an algebra \ ``A``\  and uses \ :spadfun:`*\$A`\  
    pair: AssociatedJordanAlgebra; coerce
 
 :spadfun:`coerce`\: A -> % 
-  \ ``coerce(a)``\  coerces the element \ ``a``\  of the algebra \ ``A``\  to an element of the Jordan algebra \ :ref:`AssociatedJordanAlgebra <l4173736f6369617465644a6f7264616e416c6765627261>`\ (\ ``R``\ , A).
+  \ :code:`coerce(a)`\  coerces the element \ :code:`a`\  of the algebra \ :code:`A`\  to an element of the Jordan algebra \ :ref:`AssociatedJordanAlgebra <l4173736f6369617465644a6f7264616e416c6765627261>`\ (\ :code:`R`\ , A).
 
 .. _l4173736f6369617465644a6f7264616e416c6765627261-636f6d6d757461746976653f:
 

@@ -27,7 +27,7 @@ This package implements parametric integration in algebraic case. Some cases rem
    pair: AlgebraicIntegrate2; algextint
 
 :spadfun:`algextint`\: (UP -> UP, \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP -> \ :ref:`List <l4c697374>`\  Record(ratpart: \ :ref:`Fraction <l4672616374696f6e>`\  UP, coeffs: \ :ref:`Vector <l566563746f72>`\  F), (\ :ref:`Fraction <l4672616374696f6e>`\  UP, \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP) -> \ :ref:`List <l4c697374>`\  Record(ratpart: \ :ref:`Fraction <l4672616374696f6e>`\  UP, coeffs: \ :ref:`Vector <l566563746f72>`\  F), \ :ref:`Matrix <l4d6174726978>`\  F -> \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  F, \ :ref:`List <l4c697374>`\  R) -> \ :ref:`List <l4c697374>`\  Record(ratpart: R, coeffs: \ :ref:`Vector <l566563746f72>`\  F) 
-  \ ``algextint(der, ext, rde, csolve, [g1, ..., gn])``\  returns a basis of solutions of the homogeneous system \ ``h' + c1*g1 + ... + cn*gn = 0``\ . Argument \ ``ext``\  is an extended integration function on \ ``F``\ , \ ``rde``\  is RDE solver, \ ``csolve``\  is linear solver over constants.
+  \ :code:`algextint(der, ext, rde, csolve, [g1, ..., gn])`\  returns a basis of solutions of the homogeneous system \ :code:`h' + c1*g1 + ... + cn*gn = 0`\ . Argument \ :code:`ext`\  is an extended integration function on \ :code:`F`\ , \ :code:`rde`\  is RDE solver, \ :code:`csolve`\  is linear solver over constants.
 
 .. _l416c67656272616963496e7465677261746532-616c67657874696e745f62617365:
 
@@ -35,6 +35,6 @@ This package implements parametric integration in algebraic case. Some cases rem
    pair: AlgebraicIntegrate2; algextint_base
 
 :spadfun:`algextint_base`\: (UP -> UP, \ :ref:`Matrix <l4d6174726978>`\  F -> \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  F, \ :ref:`List <l4c697374>`\  R) -> \ :ref:`List <l4c697374>`\  Record(ratpart: R, coeffs: \ :ref:`Vector <l566563746f72>`\  F) 
-  \ ``algextint_base(der, csolve, [g1, ..., gn])``\  is like algextint(\ ``der``\ , ext, rde, \ ``csolve``\ , [\ ``g1``\ , ..., \ ``gn``\ ]), but assumes that field is algebraic extension of rational functions and that \ ``gi``\ -\ ``s``\  have no poles at infinity.
+  \ :code:`algextint_base(der, csolve, [g1, ..., gn])`\  is like algextint(\ :code:`der`\ , ext, rde, \ :code:`csolve`\ , [\ :code:`g1`\ , ..., \ :code:`gn`\ ]), but assumes that field is algebraic extension of rational functions and that \ :code:`gi`\ -\ :code:`s`\  have no poles at infinity.
 
 

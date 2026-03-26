@@ -33,14 +33,14 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  R 
-  \ ``coerce(x)``\  moves from the domain to the representation type
+  \ :code:`coerce(x)`\  moves from the domain to the representation type
 
 
 .. index::
    pair: ThreeDimensionalMatrix; coerce
 
 :spadfun:`coerce`\: \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  R -> % 
-  \ ``coerce(p)``\  moves from the representation type (PrimitiveArray PrimitiveArray PrimitiveArray \ ``R``\ ) to the domain
+  \ :code:`coerce(p)`\  moves from the representation type (PrimitiveArray PrimitiveArray PrimitiveArray \ :code:`R`\ ) to the domain
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-636f6e737472756374:
 
@@ -48,7 +48,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; construct
 
 :spadfun:`construct`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R -> % 
-  \ ``construct(lll)``\  creates a 3-\ ``D``\  matrix from a List List List \ ``R``\  \ ``lll``\ 
+  \ :code:`construct(lll)`\  creates a 3-\ :code:`D`\  matrix from a List List List \ :code:`R`\  \ :code:`lll`\ 
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-636f7079:
 
@@ -61,7 +61,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; elt
 
 :spadfun:`elt`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> R 
-  \ ``elt(x, i, j, k)``\  extract an element from the matrix \ ``x``\ 
+  \ :code:`elt(x, i, j, k)`\  extract an element from the matrix \ :code:`x`\ 
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-656d7074793f:
 
@@ -101,7 +101,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; identityMatrix
 
 :spadfun:`identityMatrix`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``identityMatrix(n)``\  create an identity matrix we note that this must be square
+  \ :code:`identityMatrix(n)`\  create an identity matrix we note that this must be square
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-6c61746578:
 
@@ -124,7 +124,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; matrixConcat3D
 
 :spadfun:`matrixConcat3D`\: (\ :ref:`Symbol <l53796d626f6c>`\ , %, %) -> % 
-  \ ``matrixConcat3D(s, x, y)``\  concatenates two 3-\ ``D``\  matrices along a specified axis
+  \ :code:`matrixConcat3D(s, x, y)`\  concatenates two 3-\ :code:`D`\  matrices along a specified axis
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-6d617472697844696d656e73696f6e73:
 
@@ -132,7 +132,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; matrixDimensions
 
 :spadfun:`matrixDimensions`\: % -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``matrixDimensions(x)``\  returns the dimensions of a matrix
+  \ :code:`matrixDimensions(x)`\  returns the dimensions of a matrix
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-6d6178:
 
@@ -155,7 +155,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; plus
 
 :spadfun:`plus`\: (%, %) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``plus(x, y)``\  adds two matrices, term by term we note that they must be the same size
+  \ :code:`plus(x, y)`\  adds two matrices, term by term we note that they must be the same size
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-73616d706c65:
 
@@ -168,7 +168,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R) -> R 
-  \ ``setelt!(x, i, j, k, s)``\  (or \ ``x``\ .\ ``i``\ .\ ``j``\ .\ ``k``\  \ ``:=``\  \ ``s``\ ) sets a specific element of the array to some value of type \ ``R``\ 
+  \ :code:`setelt!(x, i, j, k, s)`\  (or \ :code:`x`\ .\ :code:`i`\ .\ :code:`j`\ .\ :code:`k`\  \ :code:`:=`\  \ :code:`s`\ ) sets a specific element of the array to some value of type \ :code:`R`\ 
 
 .. _l546872656544696d656e73696f6e616c4d6174726978-73697a653f:
 
@@ -181,7 +181,7 @@ This domain represents three dimensional matrices over a general object type
    pair: ThreeDimensionalMatrix; zeroMatrix
 
 :spadfun:`zeroMatrix`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``zeroMatrix(i, j, k)``\  create a matrix with all zero terms
+  \ :code:`zeroMatrix(i, j, k)`\  create a matrix with all zero terms
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

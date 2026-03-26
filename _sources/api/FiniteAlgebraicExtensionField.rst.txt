@@ -10,7 +10,7 @@ FiniteAlgebraicExtensionField F
 * F: \ :ref:`Field <l4669656c64>`\ 
 
 
-FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite algebraic extensions of the field \ *F*\ . If \ *F*\  is finite then any finite algebraic extension of \ *F*\  is finite, too. Let \ *K*\  be a finite algebraic extension of the finite field \ *F*\ . The exponentiation of elements of \ *K*\  defines a \ ``Z``\ -module structure on the multiplicative group of \ *K*\ . The additive group of \ *K*\  becomes a module over the ring of polynomials over \ *F*\  via the operation \ :spadfun:`linearAssociatedExp`\ (a: \ ``K``\ , \ ``f:``\  SparseUnivariatePolynomial \ ``F``\ ) which is linear over \ *F*\ , i.e. for elements \ *a*\  from \ *K*\ , \ *c, d*\  from \ *F*\  and \ *f, g*\  univariate polynomials over \ *F*\  we have \ :spadfun:`linearAssociatedExp`\ (a, cf+dg) equals \ *c*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``f``\ ) plus \ *d*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``g``\ ). Therefore \ :spadfun:`linearAssociatedExp`\  is defined completely by its action on monomials from \ *F[X]*\ : \ :spadfun:`linearAssociatedExp`\ (a, monomial(1, \ ``k``\ )\ ``\$``\ SUP(\ ``F``\ )) is defined to be \ :spadfun:`Frobenius`\ (a, \ ``k``\ ) which is \ *a^(q^k)*\  where \ *q=size()\$F*\ . The operations order and discreteLog associated with the multiplicative exponentiation have additive analogues associated to the operation \ :spadfun:`linearAssociatedExp`\ . These are the functions \ :spadfun:`linearAssociatedOrder`\  and \ :spadfun:`linearAssociatedLog`\ , respectively.
+FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite algebraic extensions of the field \ *F*\ . If \ *F*\  is finite then any finite algebraic extension of \ *F*\  is finite, too. Let \ *K*\  be a finite algebraic extension of the finite field \ *F*\ . The exponentiation of elements of \ *K*\  defines a \ :code:`Z`\ -module structure on the multiplicative group of \ *K*\ . The additive group of \ *K*\  becomes a module over the ring of polynomials over \ *F*\  via the operation \ :spadfun:`linearAssociatedExp`\ (a: \ :code:`K`\ , \ :code:`f:`\  SparseUnivariatePolynomial \ :code:`F`\ ) which is linear over \ *F*\ , i.e. for elements \ *a*\  from \ *K*\ , \ *c, d*\  from \ *F*\  and \ *f, g*\  univariate polynomials over \ *F*\  we have \ :spadfun:`linearAssociatedExp`\ (a, cf+dg) equals \ *c*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ :code:`f`\ ) plus \ *d*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ :code:`g`\ ). Therefore \ :spadfun:`linearAssociatedExp`\  is defined completely by its action on monomials from \ *F[X]*\ : \ :spadfun:`linearAssociatedExp`\ (a, monomial(1, \ :code:`k`\ )\ :code:`\$`\ SUP(\ :code:`F`\ )) is defined to be \ :spadfun:`Frobenius`\ (a, \ :code:`k`\ ) which is \ *a^(q^k)*\  where \ *q=size()\$F*\ . The operations order and discreteLog associated with the multiplicative exponentiation have additive analogues associated to the operation \ :spadfun:`linearAssociatedExp`\ . These are the functions \ :spadfun:`linearAssociatedOrder`\  and \ :spadfun:`linearAssociatedLog`\ , respectively.
 
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-30:
@@ -137,7 +137,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; basis
 
 :spadfun:`basis`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`Vector <l566563746f72>`\  % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``basis(n)``\  returns a fixed basis of a subfield of \% as \ ``F``\ -vector space.
+  \ :code:`basis(n)`\  returns a fixed basis of a subfield of \% as \ :code:`F`\ -vector space.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6368617261637465726973746963:
 
@@ -225,7 +225,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; createNormalElement
 
 :spadfun:`createNormalElement`\: () -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``createNormalElement()``\  computes a normal element over the ground field \ ``F``\ , that is, \ ``a^(q^i), 0 <= i < extensionDegree()``\  is an \ ``F``\ -basis, where \ ``q = size()\$F``\ . Reference: Such an element exists Lidl/Niederreiter: Theorem 2.35.
+  \ :code:`createNormalElement()`\  computes a normal element over the ground field \ :code:`F`\ , that is, \ :code:`a^(q^i), 0 <= i < extensionDegree()`\  is an \ :code:`F`\ -basis, where \ :code:`q = size()\$F`\ . Reference: Such an element exists Lidl/Niederreiter: Theorem 2.35.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6372656174655072696d6974697665456c656d656e74:
 
@@ -247,7 +247,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; definingPolynomial
 
 :spadfun:`definingPolynomial`\: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F 
-  \ ``definingPolynomial()``\  returns the polynomial used to define the field extension.
+  \ :code:`definingPolynomial()`\  returns the polynomial used to define the field extension.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-646567726565:
 
@@ -259,7 +259,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; degree
 
 :spadfun:`degree`\: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``degree(a)``\  returns the degree of the minimal polynomial of an element \ ``a``\  over the ground field \ ``F``\ .
+  \ :code:`degree(a)`\  returns the degree of the minimal polynomial of an element \ :code:`a`\  over the ground field \ :code:`F`\ .
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-646966666572656e7469617465:
 
@@ -332,7 +332,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; extensionDegree
 
 :spadfun:`extensionDegree`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``extensionDegree()``\  returns the degree of field extension.
+  \ :code:`extensionDegree()`\  returns the degree of field extension.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-666163746f72:
 
@@ -383,7 +383,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; generator
 
 :spadfun:`generator`\: () -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``generator()``\  returns a root of the defining polynomial. This element generates the field as an algebra over the ground field.
+  \ :code:`generator()`\  returns a root of the defining polynomial. This element generates the field as an algebra over the ground field.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-68617368:
 
@@ -454,7 +454,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; linearAssociatedExp
 
 :spadfun:`linearAssociatedExp`\: (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``linearAssociatedExp(a, f)``\  is linear over \ *F*\ , i.e. for elements \ *a*\  from \ *\$*\ , \ *c, d*\  from \ *F*\  and \ *f, g*\  univariate polynomials over \ *F*\  we have \ :spadfun:`linearAssociatedExp`\ (a, cf+dg) equals \ *c*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``f``\ ) plus \ *d*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ ``g``\ ). Therefore \ :spadfun:`linearAssociatedExp`\  is defined completely by its action on monomials from \ *F[X]*\ : \ :spadfun:`linearAssociatedExp`\ (a, monomial(1, \ ``k``\ )\ ``\$``\ SUP(\ ``F``\ )) is defined to be \ :spadfun:`Frobenius`\ (a, \ ``k``\ ) which is \ *a^(q^k)*\ , where \ *q=size()\$F*\ .
+  \ :code:`linearAssociatedExp(a, f)`\  is linear over \ *F*\ , i.e. for elements \ *a*\  from \ *\$*\ , \ *c, d*\  from \ *F*\  and \ *f, g*\  univariate polynomials over \ *F*\  we have \ :spadfun:`linearAssociatedExp`\ (a, cf+dg) equals \ *c*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ :code:`f`\ ) plus \ *d*\  times \ :spadfun:`linearAssociatedExp`\ (a, \ :code:`g`\ ). Therefore \ :spadfun:`linearAssociatedExp`\  is defined completely by its action on monomials from \ *F[X]*\ : \ :spadfun:`linearAssociatedExp`\ (a, monomial(1, \ :code:`k`\ )\ :code:`\$`\ SUP(\ :code:`F`\ )) is defined to be \ :spadfun:`Frobenius`\ (a, \ :code:`k`\ ) which is \ *a^(q^k)*\ , where \ *q=size()\$F*\ .
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6c696e6561724173736f6369617465644c6f67:
 
@@ -462,14 +462,14 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; linearAssociatedLog
 
 :spadfun:`linearAssociatedLog`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``linearAssociatedLog(a)``\  returns a polynomial \ *g*\ , such that \ :spadfun:`linearAssociatedExp`\ (normalElement(), \ ``g``\ ) equals \ *a*\ .
+  \ :code:`linearAssociatedLog(a)`\  returns a polynomial \ *g*\ , such that \ :spadfun:`linearAssociatedExp`\ (normalElement(), \ :code:`g`\ ) equals \ *a*\ .
 
 
 .. index::
    pair: FiniteAlgebraicExtensionField; linearAssociatedLog
 
 :spadfun:`linearAssociatedLog`\: (%, %) -> Union(\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, failed) if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``linearAssociatedLog(b, a)``\  returns a polynomial \ *g*\ , such that the \ :spadfun:`linearAssociatedExp`\ (\ ``b``\ , \ ``g``\ ) equals \ *a*\ . If there is no such polynomial \ *g*\ , then \ :spadfun:`linearAssociatedLog`\  fails.
+  \ :code:`linearAssociatedLog(b, a)`\  returns a polynomial \ *g*\ , such that the \ :spadfun:`linearAssociatedExp`\ (\ :code:`b`\ , \ :code:`g`\ ) equals \ *a*\ . If there is no such polynomial \ *g*\ , then \ :spadfun:`linearAssociatedLog`\  fails.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6c696e6561724173736f6369617465644f72646572:
 
@@ -477,7 +477,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; linearAssociatedOrder
 
 :spadfun:`linearAssociatedOrder`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``linearAssociatedOrder(a)``\  returns the monic polynomial \ *g*\  of least degree, such that \ :spadfun:`linearAssociatedExp`\ (a, \ ``g``\ ) is 0.
+  \ :code:`linearAssociatedOrder(a)`\  returns the monic polynomial \ *g*\  of least degree, such that \ :spadfun:`linearAssociatedExp`\ (a, \ :code:`g`\ ) is 0.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6c6f6f6b7570:
 
@@ -494,7 +494,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; minimalPolynomial
 
 :spadfun:`minimalPolynomial`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``minimalPolynomial(x, n)``\  computes the minimal polynomial of \ ``x``\  over the field of extension degree \ ``n``\  over the ground field \ ``F``\ .
+  \ :code:`minimalPolynomial(x, n)`\  computes the minimal polynomial of \ :code:`x`\  over the field of extension degree \ :code:`n`\  over the ground field \ :code:`F`\ .
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6d756c74694575636c696465616e:
 
@@ -516,7 +516,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; norm
 
 :spadfun:`norm`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``norm(a, d)``\  computes the norm of \ ``a``\  with respect to the intermediate field of extension degree \ ``d``\  over the ground field \ ``F``\ . Error: if \ ``d``\  does not divide the extension degree \ ``n``\  of \ ``\%``\ . Note: norm(a, \ ``d``\ ) = reduce(*, [a^(\ ``q^``\ (d*i)) for \ ``i``\  in 0..\ ``n/d``\ ]) where \ ``q``\  is size of \ ``F``\ .
+  \ :code:`norm(a, d)`\  computes the norm of \ :code:`a`\  with respect to the intermediate field of extension degree \ :code:`d`\  over the ground field \ :code:`F`\ . Error: if \ :code:`d`\  does not divide the extension degree \ :code:`n`\  of \ :code:`\%`\ . Note: norm(a, \ :code:`d`\ ) = reduce(*, [a^(\ :code:`q^`\ (d*i)) for \ :code:`i`\  in 0..\ :code:`n/d`\ ]) where \ :code:`q`\  is size of \ :code:`F`\ .
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6e6f726d616c3f:
 
@@ -524,7 +524,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; normal?
 
 :spadfun:`normal?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``normal?(a)``\  tests whether the element \ ``a``\  is normal over the ground field \ ``F``\ , i.e. \ ``a^(q^i), 0 <= i <= extensionDegree()-1``\  is an \ ``F``\ -basis, where \ ``q = size()\$F``\ . Implementation according to Lidl/Niederreiter: Theorem 2.39.
+  \ :code:`normal?(a)`\  tests whether the element \ :code:`a`\  is normal over the ground field \ :code:`F`\ , i.e. \ :code:`a^(q^i), 0 <= i <= extensionDegree()-1`\  is an \ :code:`F`\ -basis, where \ :code:`q = size()\$F`\ . Implementation according to Lidl/Niederreiter: Theorem 2.39.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6e6f726d616c456c656d656e74:
 
@@ -532,7 +532,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; normalElement
 
 :spadfun:`normalElement`\: () -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``normalElement()``\  returns an element, normal over the ground field \ ``F``\ , i.e. \ ``a^(q^i), 0 <= i < extensionDegree()``\  is an \ ``F``\ -basis, where \ ``q = size()\$F``\ . At the first call, the element is computed by \ :ref:`createNormalElement <l46696e697465416c67656272616963457874656e73696f6e4669656c64-6372656174654e6f726d616c456c656d656e74>`\  then cached in a global variable. On subsequent calls, the element is retrieved by referencing the global variable.
+  \ :code:`normalElement()`\  returns an element, normal over the ground field \ :code:`F`\ , i.e. \ :code:`a^(q^i), 0 <= i < extensionDegree()`\  is an \ :code:`F`\ -basis, where \ :code:`q = size()\$F`\ . At the first call, the element is computed by \ :ref:`createNormalElement <l46696e697465416c67656272616963457874656e73696f6e4669656c64-6372656174654e6f726d616c456c656d656e74>`\  then cached in a global variable. On subsequent calls, the element is retrieved by referencing the global variable.
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-6f6e653f:
 
@@ -719,7 +719,7 @@ FiniteAlgebraicExtensionField \ *F*\  is the category of fields which are finite
    pair: FiniteAlgebraicExtensionField; trace
 
 :spadfun:`trace`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``trace(a, d)``\  computes the trace of \ ``a``\  with respect to the intermediate field of extension degree \ ``d``\  over the ground field \ ``F``\ . Error: if \ ``d``\  does not divide the extension degree \ ``n``\  of \ ``\%``\ . Note: \ ``trace(a, d) = reduce(+, [a^(q^(d*i)) for i in 0..n/d])``\  where \ ``q``\  is size of \ ``F``\ .
+  \ :code:`trace(a, d)`\  computes the trace of \ :code:`a`\  with respect to the intermediate field of extension degree \ :code:`d`\  over the ground field \ :code:`F`\ . Error: if \ :code:`d`\  does not divide the extension degree \ :code:`n`\  of \ :code:`\%`\ . Note: \ :code:`trace(a, d) = reduce(+, [a^(q^(d*i)) for i in 0..n/d])`\  where \ :code:`q`\  is size of \ :code:`F`\ .
 
 .. _l46696e697465416c67656272616963457874656e73696f6e4669656c64-74726163654d6174726978:
 

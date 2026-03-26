@@ -8,7 +8,7 @@ OutputBox
 :viewcode:`fmt.spad line 180 <fmt.spad#L180>` :editcode:`[edit on github] <fmt.spad#L180>`
 
 
-The domain \ ``OutputBox``\  represents the two-dimensional form of an expression by a number of strings (lines). Such a box has a baseline (at which such boxes will be horizontally aligned, a height (size above and including the baseline), a depth (size below the baseline), and a width (horizontal size).
+The domain \ :code:`OutputBox`\  represents the two-dimensional form of an expression by a number of strings (lines). Such a box has a baseline (at which such boxes will be horizontally aligned, a height (size above and including the baseline), a depth (size below the baseline), and a width (horizontal size).
 
 
 .. _l4f7574707574426f78-626f78:
@@ -17,7 +17,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; box
 
 :spadfun:`box`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``box(s)``\  creates a box that contains the string \ ``s``\ .
+  \ :code:`box(s)`\  creates a box that contains the string \ :code:`s`\ .
 
 .. _l4f7574707574426f78-636f65726365:
 
@@ -30,7 +30,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; depth
 
 :spadfun:`depth`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``depth(box)``\  returns the height of the \ ``box``\  below the baseline.
+  \ :code:`depth(box)`\  returns the height of the \ :code:`box`\  below the baseline.
 
 .. _l4f7574707574426f78-656d7074793f:
 
@@ -38,7 +38,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; empty?
 
 :spadfun:`empty?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``empty?(b)``\  returns \ ``true``\  of the box has height and depth equal to 0.
+  \ :code:`empty?(b)`\  returns \ :code:`true`\  of the box has height and depth equal to 0.
 
 .. _l4f7574707574426f78-656d707479:
 
@@ -54,7 +54,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; hcenter
 
 :spadfun:`hcenter`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % -> % 
-  \ ``hcenter(w)(box)``\  centers the box horizontally inside a box of width \ ``w``\ .
+  \ :code:`hcenter(w)(box)`\  centers the box horizontally inside a box of width \ :code:`w`\ .
 
 .. _l4f7574707574426f78-68636f6e636174:
 
@@ -62,7 +62,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; hconcat
 
 :spadfun:`hconcat`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``hconcat(lbox)``\  aligns the boxes at their baseline and concats those boxes horizontally from left to right.
+  \ :code:`hconcat(lbox)`\  aligns the boxes at their baseline and concats those boxes horizontally from left to right.
 
 .. _l4f7574707574426f78-686569676874:
 
@@ -70,7 +70,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; height
 
 :spadfun:`height`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``height(box)``\  returns the height of the \ ``box``\  (above the baseline) including the baseline.
+  \ :code:`height(box)`\  returns the height of the \ :code:`box`\  (above the baseline) including the baseline.
 
 .. _l4f7574707574426f78-6c696e6573:
 
@@ -78,7 +78,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; lines
 
 :spadfun:`lines`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``lines(box)``\  returns the contents of the \ ``box``\  as strings (all of the same length (width(\ ``box``\ )).
+  \ :code:`lines(box)`\  returns the contents of the \ :code:`box`\  as strings (all of the same length (width(\ :code:`box`\ )).
 
 .. _l4f7574707574426f78-706164:
 
@@ -86,7 +86,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; pad
 
 :spadfun:`pad`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % -> % 
-  \ ``pad(t, b, l, r)(box)``\  returns a new box that is padded by \ ``t``\  empty lines at the top, \ ``b``\  empty lines at the bottom, \ ``l``\  space characters at the left, \ ``r``\  space characters at the right. If \ ``w``\ , \ ``h``\ , \ ``d``\  are the width, height and depth of box then the resulting box will have width l+w+r and height \ ``t+h``\  and depth \ ``d+b``\ .
+  \ :code:`pad(t, b, l, r)(box)`\  returns a new box that is padded by \ :code:`t`\  empty lines at the top, \ :code:`b`\  empty lines at the bottom, \ :code:`l`\  space characters at the left, \ :code:`r`\  space characters at the right. If \ :code:`w`\ , \ :code:`h`\ , \ :code:`d`\  are the width, height and depth of box then the resulting box will have width l+w+r and height \ :code:`t+h`\  and depth \ :code:`d+b`\ .
 
 .. _l4f7574707574426f78-76636f6e636174:
 
@@ -94,14 +94,14 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; vconcat
 
 :spadfun:`vconcat`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``vconcat(lbox, h)``\  returns \ ``vconcat(lbox,h, 0)``\ .
+  \ :code:`vconcat(lbox, h)`\  returns \ :code:`vconcat(lbox,h, 0)`\ .
 
 
 .. index::
    pair: OutputBox; vconcat
 
 :spadfun:`vconcat`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``vconcat(lbox, h, adjust)``\  computes the maximal width of the boxes in the list \ ``lbox``\ ; then if \ ``adjust<0``\ , left adjusts, if \ ``adjust>0``\ , right adjusts, and otherwise centers each smaller box in a new box of this maximal width and returns a box by putting all the boxes vertically on top of each other. The height of the new box is given by \ ``h``\ , the depth results from the difference of the number of lines and \ ``h``\ .
+  \ :code:`vconcat(lbox, h, adjust)`\  computes the maximal width of the boxes in the list \ :code:`lbox`\ ; then if \ :code:`adjust<0`\ , left adjusts, if \ :code:`adjust>0`\ , right adjusts, and otherwise centers each smaller box in a new box of this maximal width and returns a box by putting all the boxes vertically on top of each other. The height of the new box is given by \ :code:`h`\ , the depth results from the difference of the number of lines and \ :code:`h`\ .
 
 .. _l4f7574707574426f78-7769647468:
 
@@ -109,7 +109,7 @@ The domain \ ``OutputBox``\  represents the two-dimensional form of an expressio
    pair: OutputBox; width
 
 :spadfun:`width`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``width(box)``\  returns the width of the \ ``box``\ .
+  \ :code:`width(box)`\  returns the width of the \ :code:`box`\ .
 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

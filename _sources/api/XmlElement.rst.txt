@@ -8,7 +8,7 @@ XmlElement
 :viewcode:`scene.spad line 3780 <scene.spad#L3780>` :editcode:`[edit on github] <scene.spad#L3780>`
 
 
-This package provides support for \ ``XML``\  files an \ ``XML``\  element is something which either has the form: <tagname attributes> content </tagname> or <tagname attributes/> where content may be a sequence of sub-elements or unstructured text
+This package provides support for \ :code:`XML`\  files an \ :code:`XML`\  element is something which either has the form: <tagname attributes> content </tagname> or <tagname attributes/> where content may be a sequence of sub-elements or unstructured text
 
 
 .. _l586d6c456c656d656e74-636f65726365:
@@ -17,7 +17,7 @@ This package provides support for \ ``XML``\  files an \ ``XML``\  element is so
    pair: XmlElement; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``coerce(x)``\  outputs \ ``x``\  as a list of strings. Each element in the list represents a new line. This is an alternative to creating a long single string with 'newline' embedded in it.
+  \ :code:`coerce(x)`\  outputs \ :code:`x`\  as a list of strings. Each element in the list represents a new line. This is an alternative to creating a long single string with 'newline' embedded in it.
 
 .. _l586d6c456c656d656e74-656d7074793f:
 
@@ -25,7 +25,7 @@ This package provides support for \ ``XML``\  files an \ ``XML``\  element is so
    pair: XmlElement; empty?
 
 :spadfun:`empty?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``empty?(el)``\  returns \ ``true``\  is this element does not contain anything
+  \ :code:`empty?(el)`\  returns \ :code:`true`\  is this element does not contain anything
 
 .. _l586d6c456c656d656e74-6f757470757456524d4c:
 
@@ -33,7 +33,7 @@ This package provides support for \ ``XML``\  files an \ ``XML``\  element is so
    pair: XmlElement; outputVRML
 
 :spadfun:`outputVRML`\: (%, \ :ref:`TextFile <l5465787446696c65>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputVRML(rp, f1)``\  writes the element as \ ``VRML2``\ . \ ``VRML2``\  is not \ ``xml``\  but it has the same semantics and node names as \ ``X3D``\  but a different syntax so it makes sense to create an \ ``XML``\  structure and then format the output differently.
+  \ :code:`outputVRML(rp, f1)`\  writes the element as \ :code:`VRML2`\ . \ :code:`VRML2`\  is not \ :code:`xml`\  but it has the same semantics and node names as \ :code:`X3D`\  but a different syntax so it makes sense to create an \ :code:`XML`\  structure and then format the output differently.
 
 .. _l586d6c456c656d656e74-786d6c456c656d656e74:
 
@@ -41,13 +41,13 @@ This package provides support for \ ``XML``\  files an \ ``XML``\  element is so
    pair: XmlElement; xmlElement
 
 :spadfun:`xmlElement`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %, \ :ref:`List <l4c697374>`\  \ :ref:`XmlAttribute <l586d6c417474726962757465>`\ ) -> % 
-  \ ``xmlElement(name, elements, attributes)``\  construct an element with structured \ ``elements``\ 
+  \ :code:`xmlElement(name, elements, attributes)`\  construct an element with structured \ :code:`elements`\ 
 
 
 .. index::
    pair: XmlElement; xmlElement
 
 :spadfun:`xmlElement`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`XmlAttribute <l586d6c417474726962757465>`\ ) -> % 
-  \ ``xmlElement(name, txt, attributes)``\  construct an element with unstructured text
+  \ :code:`xmlElement(name, txt, attributes)`\  construct an element with unstructured text
 
 

@@ -5,7 +5,7 @@
 Database S
 ==========
 
-:viewcode:`alql.spad line 173 <alql.spad#L173>` :editcode:`[edit on github] <alql.spad#L173>`
+:viewcode:`alql.spad line 182 <alql.spad#L182>` :editcode:`[edit on github] <alql.spad#L182>`
 
 * S: \ :ref:`OrderedSet <l4f726465726564536574>`\  with
 
@@ -25,7 +25,7 @@ This domain implements a simple view of a database whose fields are indexed by s
    pair: Database; +
 
 :spadfun:`+`\: (%, %) -> % 
-  \ ``db1+db2``\  returns the merge of databases \ ``db1``\  and \ ``db2``\ 
+  \ :code:`db1+db2`\  returns the merge of databases \ :code:`db1`\  and \ :code:`db2`\ 
 
 .. _l4461746162617365-2d:
 
@@ -33,7 +33,7 @@ This domain implements a simple view of a database whose fields are indexed by s
    pair: Database; -
 
 :spadfun:`-`\: (%, %) -> % 
-  \ ``db1-db2``\  returns the difference of databases \ ``db1``\  and \ ``db2``\  i.e. consisting of elements in \ ``db1``\  but not in \ ``db2``\ 
+  \ :code:`db1-db2`\  returns the difference of databases \ :code:`db1`\  and \ :code:`db2`\  i.e. consisting of elements in \ :code:`db1`\  but not in \ :code:`db2`\ 
 
 .. _l4461746162617365-3d:
 
@@ -55,7 +55,7 @@ This domain implements a simple view of a database whose fields are indexed by s
    pair: Database; coerce
 
 :spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coerce(l)``\  makes a database out of a list
+  \ :code:`coerce(l)`\  makes a database out of a list
 
 .. _l4461746162617365-646973706c6179:
 
@@ -63,7 +63,7 @@ This domain implements a simple view of a database whose fields are indexed by s
    pair: Database; display
 
 :spadfun:`display`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``display(x)``\  displays \ ``x``\  in some form
+  \ :code:`display(x)`\  displays \ :code:`x`\  in some form
 
 .. _l4461746162617365-656c74:
 
@@ -71,14 +71,14 @@ This domain implements a simple view of a database whose fields are indexed by s
    pair: Database; elt
 
 :spadfun:`elt`\: (%, \ :ref:`QueryEquation <l51756572794571756174696f6e>`\ ) -> % 
-  \ ``elt(db, q)``\  returns all elements of \ ``db``\  which satisfy \ ``q``\ .
+  \ :code:`elt(db, q)`\  returns all elements of \ :code:`db`\  which satisfy \ :code:`q`\ .
 
 
 .. index::
    pair: Database; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`DataList <l446174614c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``elt(db, s)``\  returns the \ ``s``\  field of each element of \ ``db``\ .
+  \ :code:`elt(db, s)`\  returns the \ :code:`s`\  field of each element of \ :code:`db`\ .
 
 .. _l4461746162617365-66756c6c446973706c6179:
 
@@ -86,14 +86,14 @@ This domain implements a simple view of a database whose fields are indexed by s
    pair: Database; fullDisplay
 
 :spadfun:`fullDisplay`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``fullDisplay(x)``\  displays \ ``x``\  in detail
+  \ :code:`fullDisplay(x)`\  displays \ :code:`x`\  in detail
 
 
 .. index::
    pair: Database; fullDisplay
 
 :spadfun:`fullDisplay`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``fullDisplay(db, start, end )``\  prints full details of entries in the range \ ``start..end``\  in \ ``db``\ .
+  \ :code:`fullDisplay(db, start, end )`\  prints full details of entries in the range \ :code:`start..end`\  in \ :code:`db`\ .
 
 .. _l4461746162617365-6c61746578:
 

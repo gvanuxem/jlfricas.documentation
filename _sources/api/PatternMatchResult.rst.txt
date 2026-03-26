@@ -31,7 +31,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; addMatch
 
 :spadfun:`addMatch`\: (\ :ref:`Pattern <l5061747465726e>`\  R, S, %) -> % 
-  \ ``addMatch(var, expr, r)``\  adds the match (\ ``var``\ , \ ``expr``\ ) in \ ``r``\ , provided that \ ``expr``\  satisfies the predicates attached to \ ``var``\ , and that \ ``var``\  is not matched to another expression already.
+  \ :code:`addMatch(var, expr, r)`\  adds the match (\ :code:`var`\ , \ :code:`expr`\ ) in \ :code:`r`\ , provided that \ :code:`expr`\  satisfies the predicates attached to \ :code:`var`\ , and that \ :code:`var`\  is not matched to another expression already.
 
 .. _l5061747465726e4d61746368526573756c74-6164644d6174636852657374726963746564:
 
@@ -39,7 +39,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; addMatchRestricted
 
 :spadfun:`addMatchRestricted`\: (\ :ref:`Pattern <l5061747465726e>`\  R, S, %, S) -> % 
-  \ ``addMatchRestricted(var, expr, r, val)``\  adds the match (\ ``var``\ , \ ``expr``\ ) in \ ``r``\ , provided that \ ``expr``\  satisfies the predicates attached to \ ``var``\ , that \ ``var``\  is not matched to another expression already, and that either \ ``var``\  is an optional pattern variable or that \ ``expr``\  is not equal to val (usually an identity).
+  \ :code:`addMatchRestricted(var, expr, r, val)`\  adds the match (\ :code:`var`\ , \ :code:`expr`\ ) in \ :code:`r`\ , provided that \ :code:`expr`\  satisfies the predicates attached to \ :code:`var`\ , that \ :code:`var`\  is not matched to another expression already, and that either \ :code:`var`\  is an optional pattern variable or that \ :code:`expr`\  is not equal to val (usually an identity).
 
 .. _l5061747465726e4d61746368526573756c74-636f65726365:
 
@@ -52,7 +52,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; construct
 
 :spadfun:`construct`\: \ :ref:`List <l4c697374>`\  Record(key: \ :ref:`Symbol <l53796d626f6c>`\ , entry: S) -> % 
-  \ ``construct([v1, e1], ..., [vn, en])``\  returns the match result containing the matches (\ ``v1``\ , \ ``e1``\ ), ..., (\ ``vn``\ , en).
+  \ :code:`construct([v1, e1], ..., [vn, en])`\  returns the match result containing the matches (\ :code:`v1`\ , \ :code:`e1`\ ), ..., (\ :code:`vn`\ , en).
 
 .. _l5061747465726e4d61746368526573756c74-6465737472756374:
 
@@ -60,7 +60,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; destruct
 
 :spadfun:`destruct`\: % -> \ :ref:`List <l4c697374>`\  Record(key: \ :ref:`Symbol <l53796d626f6c>`\ , entry: S) 
-  \ ``destruct(r)``\  returns the list of matches (var, expr) in \ ``r``\ . Error: if \ ``r``\  is a failed match.
+  \ :code:`destruct(r)`\  returns the list of matches (var, expr) in \ :code:`r`\ . Error: if \ :code:`r`\  is a failed match.
 
 .. _l5061747465726e4d61746368526573756c74-6661696c65643f:
 
@@ -68,7 +68,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; failed?
 
 :spadfun:`failed?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``failed?(r)``\  tests if \ ``r``\  is a failed match.
+  \ :code:`failed?(r)`\  tests if \ :code:`r`\  is a failed match.
 
 .. _l5061747465726e4d61746368526573756c74-6661696c6564:
 
@@ -76,7 +76,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; failed
 
 :spadfun:`failed`\: () -> % 
-  \ ``failed()``\  returns a failed match.
+  \ :code:`failed()`\  returns a failed match.
 
 .. _l5061747465726e4d61746368526573756c74-6765744d61746368:
 
@@ -84,7 +84,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; getMatch
 
 :spadfun:`getMatch`\: (\ :ref:`Pattern <l5061747465726e>`\  R, %) -> Union(S, failed) 
-  \ ``getMatch(var, r)``\  returns the expression that \ ``var``\  matches in the result \ ``r``\ , and "failed" if \ ``var``\  is not matched in \ ``r``\ .
+  \ :code:`getMatch(var, r)`\  returns the expression that \ :code:`var`\  matches in the result \ :code:`r`\ , and "failed" if \ :code:`var`\  is not matched in \ :code:`r`\ .
 
 .. _l5061747465726e4d61746368526573756c74-696e736572744d61746368:
 
@@ -92,7 +92,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; insertMatch
 
 :spadfun:`insertMatch`\: (\ :ref:`Pattern <l5061747465726e>`\  R, S, %) -> % 
-  \ ``insertMatch(var, expr, r)``\  adds the match (\ ``var``\ , \ ``expr``\ ) in \ ``r``\ , without checking predicates or previous matches for \ ``var``\ .
+  \ :code:`insertMatch(var, expr, r)`\  adds the match (\ :code:`var`\ , \ :code:`expr`\ ) in \ :code:`r`\ , without checking predicates or previous matches for \ :code:`var`\ .
 
 .. _l5061747465726e4d61746368526573756c74-6c61746578:
 
@@ -105,7 +105,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; new
 
 :spadfun:`new`\: () -> % 
-  \ ``new()``\  returns a new empty match result.
+  \ :code:`new()`\  returns a new empty match result.
 
 .. _l5061747465726e4d61746368526573756c74-736174697366793f:
 
@@ -113,7 +113,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; satisfy?
 
 :spadfun:`satisfy?`\: (%, \ :ref:`Pattern <l5061747465726e>`\  R) -> Union(\ :ref:`Boolean <l426f6f6c65616e>`\ , failed) 
-  \ ``satisfy?(r, p)``\  returns \ ``true``\  if the matches satisfy the top-level predicate of \ ``p``\ , \ ``false``\  if they don\ ``'t``\ , and "failed" if not enough variables of \ ``p``\  are matched in \ ``r``\  to decide.
+  \ :code:`satisfy?(r, p)`\  returns \ :code:`true`\  if the matches satisfy the top-level predicate of \ :code:`p`\ , \ :code:`false`\  if they don\ :code:`'t`\ , and "failed" if not enough variables of \ :code:`p`\  are matched in \ :code:`r`\  to decide.
 
 .. _l5061747465726e4d61746368526573756c74-756e696f6e:
 
@@ -121,7 +121,7 @@ A PatternMatchResult is an object internally returned by the pattern matcher; It
    pair: PatternMatchResult; union
 
 :spadfun:`union`\: (%, %) -> % 
-  \ ``union(a, b)``\  makes the set-union of two match results.
+  \ :code:`union(a, b)`\  makes the set-union of two match results.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

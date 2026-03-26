@@ -102,7 +102,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; charthRoot
 
 :spadfun:`charthRoot`\: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  \ ``charthRoot(r)``\  returns the \ ``p``\ \ ``-``\ th root of \ ``r``\ , or "failed" if none exists in the domain.
+  \ :code:`charthRoot(r)`\  returns the \ :code:`p`\ \ :code:`-`\ th root of \ :code:`r`\ , or "failed" if none exists in the domain.
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f65726365:
 
@@ -128,7 +128,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; conditionP
 
 :spadfun:`conditionP`\: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\ 
-  \ ``conditionP(m)``\  returns a vector of elements, not all zero, whose \ ``p``\ \ ``-``\ th powers (\ ``p``\  is the characteristic of the domain) are a solution of the homogeneous linear system represented by \ ``m``\ , or "failed" is there is no such vector.
+  \ :code:`conditionP(m)`\  returns a vector of elements, not all zero, whose \ :code:`p`\ \ :code:`-`\ th powers (\ :code:`p`\  is the characteristic of the domain) are a solution of the homogeneous linear system represented by \ :code:`m`\ , or "failed" is there is no such vector.
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-657871756f:
 
@@ -146,7 +146,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; factorPolynomial
 
 :spadfun:`factorPolynomial`\: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  \ ``factorPolynomial(p)``\  returns the factorization into irreducibles of the univariate polynomial \ ``p``\ .
+  \ :code:`factorPolynomial(p)`\  returns the factorization into irreducibles of the univariate polynomial \ :code:`p`\ .
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f7253717561726546726565506f6c796e6f6d69616c:
 
@@ -154,7 +154,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; factorSquareFreePolynomial
 
 :spadfun:`factorSquareFreePolynomial`\: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  \ ``factorSquareFreePolynomial(p)``\  factors the univariate polynomial \ ``p``\  into irreducibles where \ ``p``\  is known to be square free and primitive with respect to its main variable.
+  \ :code:`factorSquareFreePolynomial(p)`\  factors the univariate polynomial \ :code:`p`\  into irreducibles where \ :code:`p`\  is known to be square free and primitive with respect to its main variable.
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-676364:
 
@@ -171,7 +171,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; gcdPolynomial
 
 :spadfun:`gcdPolynomial`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  \ ``gcdPolynomial(p, q)``\  returns the \ ``gcd``\  of the univariate polynomials \ ``p``\  and \ ``q``\ .
+  \ :code:`gcdPolynomial(p, q)`\  returns the \ :code:`gcd`\  of the univariate polynomials \ :code:`p`\  and \ :code:`q`\ .
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-6c61746578:
 
@@ -256,7 +256,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; solveLinearPolynomialEquation
 
 :spadfun:`solveLinearPolynomialEquation`\: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) 
-  \ ``solveLinearPolynomialEquation([f1, ..., fn], g)``\  (where the \ ``fi``\  are relatively prime to each other) returns a list of \ ``ai``\  such that \ ``g/prod fi = sum ai/fi``\  or returns "failed" if no such list of \ ``ai``\ \ ``'s``\  exists.
+  \ :code:`solveLinearPolynomialEquation([f1, ..., fn], g)`\  (where the \ :code:`fi`\  are relatively prime to each other) returns a list of \ :code:`ai`\  such that \ :code:`g/prod fi = sum ai/fi`\  or returns "failed" if no such list of \ :code:`ai`\ \ :code:`'s`\  exists.
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565:
 
@@ -274,7 +274,7 @@ This is the category of domains that know "enough" about themselves in order to 
    pair: PolynomialFactorizationExplicit; squareFreePolynomial
 
 :spadfun:`squareFreePolynomial`\: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  \ ``squareFreePolynomial(p)``\  returns the square-free factorization of the univariate polynomial \ ``p``\ .
+  \ :code:`squareFreePolynomial(p)`\  returns the square-free factorization of the univariate polynomial \ :code:`p`\ .
 
 .. _l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-7375627472616374496643616e:
 

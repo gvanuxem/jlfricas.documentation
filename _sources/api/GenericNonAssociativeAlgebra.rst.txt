@@ -137,7 +137,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; coerce
 
 :spadfun:`coerce`\: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R -> % 
-  \ ``coerce(v)``\  assumes that it is called with a vector of length equal to the dimension of the algebra, then a linear combination with the basis element is formed
+  \ :code:`coerce(v)`\  assumes that it is called with a vector of length equal to the dimension of the algebra, then a linear combination with the basis element is formed
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-636f6d6d757461746976653f:
 
@@ -159,7 +159,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; conditionsForIdempotents
 
 :spadfun:`conditionsForIdempotents`\: () -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``conditionsForIdempotents()``\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the fixed \ ``R``\ -module basis
+  \ :code:`conditionsForIdempotents()`\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the fixed \ :code:`R`\ -module basis
 
 
 \ :ref:`conditionsForIdempotents <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-636f6e646974696f6e73466f724964656d706f74656e7473>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
@@ -170,7 +170,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; conditionsForIdempotents
 
 :spadfun:`conditionsForIdempotents`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``conditionsForIdempotents([v1, ..., vn])``\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the \ ``R``\ -module basis \ ``v1``\ , ..., \ ``vn``\ 
+  \ :code:`conditionsForIdempotents([v1, ..., vn])`\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the \ :code:`R`\ -module basis \ :code:`v1`\ , ..., \ :code:`vn`\ 
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-636f6e76657274:
 
@@ -223,42 +223,42 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; generic
 
 :spadfun:`generic`\: () -> % 
-  \ ``generic()``\  returns a generic element, i.e. the linear combination of the fixed basis with the symbolic coefficients \ ``\%x1, \%x2, ..``\ 
+  \ :code:`generic()`\  returns a generic element, i.e. the linear combination of the fixed basis with the symbolic coefficients \ :code:`\%x1, \%x2, ..`\ 
 
 
 .. index::
    pair: GenericNonAssociativeAlgebra; generic
 
 :spadfun:`generic`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Vector <l566563746f72>`\  %) -> % 
-  \ ``generic(s, v)``\  returns a generic element, i.e. the linear combination of \ ``v``\  with the symbolic coefficients \ ``s1, s2, ..``\ 
+  \ :code:`generic(s, v)`\  returns a generic element, i.e. the linear combination of \ :code:`v`\  with the symbolic coefficients \ :code:`s1, s2, ..`\ 
 
 
 .. index::
    pair: GenericNonAssociativeAlgebra; generic
 
 :spadfun:`generic`\: (\ :ref:`Vector <l566563746f72>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Vector <l566563746f72>`\  %) -> % 
-  \ ``generic(vs, ve)``\  returns a generic element, i.e. the linear combination of \ ``ve``\  with the symbolic coefficients \ ``vs``\  error, if the vector of symbols is shorter than the vector of elements
+  \ :code:`generic(vs, ve)`\  returns a generic element, i.e. the linear combination of \ :code:`ve`\  with the symbolic coefficients \ :code:`vs`\  error, if the vector of symbols is shorter than the vector of elements
 
 
 .. index::
    pair: GenericNonAssociativeAlgebra; generic
 
 :spadfun:`generic`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``generic(s)``\  returns a generic element, i.e. the linear combination of the fixed basis with the symbolic coefficients \ ``s1, s2, ..``\ 
+  \ :code:`generic(s)`\  returns a generic element, i.e. the linear combination of the fixed basis with the symbolic coefficients \ :code:`s1, s2, ..`\ 
 
 
 .. index::
    pair: GenericNonAssociativeAlgebra; generic
 
 :spadfun:`generic`\: \ :ref:`Vector <l566563746f72>`\  % -> % 
-  \ ``generic(ve)``\  returns a generic element, i.e. the linear combination of \ ``ve``\  basis with the symbolic coefficients \ ``\%x1, \%x2, ..``\ 
+  \ :code:`generic(ve)`\  returns a generic element, i.e. the linear combination of \ :code:`ve`\  basis with the symbolic coefficients \ :code:`\%x1, \%x2, ..`\ 
 
 
 .. index::
    pair: GenericNonAssociativeAlgebra; generic
 
 :spadfun:`generic`\: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``generic(vs)``\  returns a generic element, i.e. the linear combination of the fixed basis with the symbolic coefficients \ ``vs``\ ; error, if the vector of symbols is too short
+  \ :code:`generic(vs)`\  returns a generic element, i.e. the linear combination of the fixed basis with the symbolic coefficients \ :code:`vs`\ ; error, if the vector of symbols is too short
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e657269634c6566744469736372696d696e616e74:
 
@@ -266,7 +266,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericLeftDiscriminant
 
 :spadfun:`genericLeftDiscriminant`\: () -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericLeftDiscriminant()``\  is the determinant of the generic left trace forms of all products of basis element, if the generic left trace form is associative, an algebra is separable if the generic left discriminant is invertible, if it is non-zero, there is some ring extension which makes the algebra separable
+  \ :code:`genericLeftDiscriminant()`\  is the determinant of the generic left trace forms of all products of basis element, if the generic left trace form is associative, an algebra is separable if the generic left discriminant is invertible, if it is non-zero, there is some ring extension which makes the algebra separable
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e657269634c6566744d696e696d616c506f6c796e6f6d69616c:
 
@@ -274,7 +274,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericLeftMinimalPolynomial
 
 :spadfun:`genericLeftMinimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericLeftMinimalPolynomial(a)``\  substitutes the coefficients of \ ``a``\  for the generic coefficients in \ ``leftRankPolynomial()``\ 
+  \ :code:`genericLeftMinimalPolynomial(a)`\  substitutes the coefficients of \ :code:`a`\  for the generic coefficients in \ :code:`leftRankPolynomial()`\ 
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e657269634c6566744e6f726d:
 
@@ -282,7 +282,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericLeftNorm
 
 :spadfun:`genericLeftNorm`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericLeftNorm(a)``\  substitutes the coefficients of \ ``a``\  for the generic coefficients into the coefficient of the constant term in \ :spadfun:`leftRankPolynomial`\  and changes the sign if the degree of this polynomial is odd. This is a form of degree \ ``k``\ 
+  \ :code:`genericLeftNorm(a)`\  substitutes the coefficients of \ :code:`a`\  for the generic coefficients into the coefficient of the constant term in \ :spadfun:`leftRankPolynomial`\  and changes the sign if the degree of this polynomial is odd. This is a form of degree \ :code:`k`\ 
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e657269634c6566745472616365:
 
@@ -290,7 +290,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericLeftTrace
 
 :spadfun:`genericLeftTrace`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericLeftTrace(a)``\  substitutes the coefficients of \ ``a``\  for the generic coefficients into the coefficient of the second highest term in \ :spadfun:`leftRankPolynomial`\  and changes the sign. This is a linear form
+  \ :code:`genericLeftTrace(a)`\  substitutes the coefficients of \ :code:`a`\  for the generic coefficients into the coefficient of the second highest term in \ :spadfun:`leftRankPolynomial`\  and changes the sign. This is a linear form
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e657269634c6566745472616365466f726d:
 
@@ -298,7 +298,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericLeftTraceForm
 
 :spadfun:`genericLeftTraceForm`\: (%, %) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericLeftTraceForm (a, b)``\  is defined to be \ ``genericLeftTrace (a*b)``\ , this defines a symmetric bilinear form on the algebra
+  \ :code:`genericLeftTraceForm (a, b)`\  is defined to be \ :code:`genericLeftTrace (a*b)`\ , this defines a symmetric bilinear form on the algebra
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e6572696352696768744469736372696d696e616e74:
 
@@ -306,7 +306,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericRightDiscriminant
 
 :spadfun:`genericRightDiscriminant`\: () -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericRightDiscriminant()``\  is the determinant of the generic left trace forms of all products of basis element, if the generic left trace form is associative, an algebra is separable if the generic left discriminant is invertible, if it is non-zero, there is some ring extension which makes the algebra separable
+  \ :code:`genericRightDiscriminant()`\  is the determinant of the generic left trace forms of all products of basis element, if the generic left trace form is associative, an algebra is separable if the generic left discriminant is invertible, if it is non-zero, there is some ring extension which makes the algebra separable
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e6572696352696768744d696e696d616c506f6c796e6f6d69616c:
 
@@ -314,7 +314,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericRightMinimalPolynomial
 
 :spadfun:`genericRightMinimalPolynomial`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericRightMinimalPolynomial(a)``\  substitutes the coefficients of \ ``a``\  for the generic coefficients in \ :spadfun:`rightRankPolynomial`\ 
+  \ :code:`genericRightMinimalPolynomial(a)`\  substitutes the coefficients of \ :code:`a`\  for the generic coefficients in \ :spadfun:`rightRankPolynomial`\ 
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e6572696352696768744e6f726d:
 
@@ -322,7 +322,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericRightNorm
 
 :spadfun:`genericRightNorm`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericRightNorm(a)``\  substitutes the coefficients of \ ``a``\  for the generic coefficients into the coefficient of the constant term in \ :spadfun:`rightRankPolynomial`\  and changes the sign if the degree of this polynomial is odd
+  \ :code:`genericRightNorm(a)`\  substitutes the coefficients of \ :code:`a`\  for the generic coefficients into the coefficient of the constant term in \ :spadfun:`rightRankPolynomial`\  and changes the sign if the degree of this polynomial is odd
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e6572696352696768745472616365:
 
@@ -330,7 +330,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericRightTrace
 
 :spadfun:`genericRightTrace`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericRightTrace(a)``\  substitutes the coefficients of \ ``a``\  for the generic coefficients into the coefficient of the second highest term in \ :spadfun:`rightRankPolynomial`\  and changes the sign
+  \ :code:`genericRightTrace(a)`\  substitutes the coefficients of \ :code:`a`\  for the generic coefficients into the coefficient of the second highest term in \ :spadfun:`rightRankPolynomial`\  and changes the sign
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-67656e6572696352696768745472616365466f726d:
 
@@ -338,7 +338,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; genericRightTraceForm
 
 :spadfun:`genericRightTraceForm`\: (%, %) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``genericRightTraceForm (a, b)``\  is defined to be \ :spadfun:`genericRightTrace (a*b)`\ , this defines a symmetric bilinear form on the algebra
+  \ :code:`genericRightTraceForm (a, b)`\  is defined to be \ :spadfun:`genericRightTrace (a*b)`\ , this defines a symmetric bilinear form on the algebra
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-68617368:
 
@@ -415,7 +415,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; leftRankPolynomial
 
 :spadfun:`leftRankPolynomial`\: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``leftRankPolynomial()``\  returns the left minimal polynomial of the generic element
+  \ :code:`leftRankPolynomial()`\  returns the left minimal polynomial of the generic element
 
 
 \ :ref:`leftRankPolynomial <l4672616d65644e6f6e4173736f63696174697665416c6765627261-6c65667452616e6b506f6c796e6f6d69616c>`\ \: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
@@ -460,7 +460,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; leftUnits
 
 :spadfun:`leftUnits`\: () -> Union(Record(particular: %, basis: \ :ref:`List <l4c697374>`\  %), failed) 
-  \ ``leftUnits()``\  returns the affine space of all left units of the algebra, or \ ``"failed"``\  if there is none
+  \ :code:`leftUnits()`\  returns the affine space of all left units of the algebra, or \ :code:`"failed"`\  if there is none
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-6c696541646d69737369626c653f:
 
@@ -561,7 +561,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; rightRankPolynomial
 
 :spadfun:`rightRankPolynomial`\: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rightRankPolynomial()``\  returns the right minimal polynomial of the generic element
+  \ :code:`rightRankPolynomial()`\  returns the right minimal polynomial of the generic element
 
 
 \ :ref:`rightRankPolynomial <l4672616d65644e6f6e4173736f63696174697665416c6765627261-726967687452616e6b506f6c796e6f6d69616c>`\ \: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
@@ -606,7 +606,7 @@ AlgebraGenericElementPackage allows you to create generic elements of an algebra
    pair: GenericNonAssociativeAlgebra; rightUnits
 
 :spadfun:`rightUnits`\: () -> Union(Record(particular: %, basis: \ :ref:`List <l4c697374>`\  %), failed) 
-  \ ``rightUnits()``\  returns the affine space of all right units of the algebra, or \ ``"failed"``\  if there is none
+  \ :code:`rightUnits()`\  returns the affine space of all right units of the algebra, or \ :code:`"failed"`\  if there is none
 
 .. _l47656e657269634e6f6e4173736f63696174697665416c6765627261-73616d706c65:
 

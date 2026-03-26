@@ -10,7 +10,7 @@ compUtil UT
 * UT: \ :ref:`VarCat <l566172436174>`\ 
 
 
-The compUtil package provides utilities to convert between the computational domains: Lambda, Ski and ILogic. Both Lambda are Ski are Turing complete and can be coerced to each other. Lambda and Ski are not equal and they are only isomorphic up to beta-equivalence and beta-equivalence is undecidable so there is not a direct correspondence between the nodes in their trees. Also the names of bound variables and other such constructions may be lost in Lambda \ ``->``\  Ski \ ``->``\  Lambda round trip. An element of ILogic cannot be coerced to the other types. However ILogic can be used to produce a theory which can be concerted to/from the other domains using Curry-Howard isomorphism.
+The compUtil package provides utilities to convert between the computational domains: Lambda, Ski and ILogic. Both Lambda are Ski are Turing complete and can be coerced to each other. Lambda and Ski are not equal and they are only isomorphic up to beta-equivalence and beta-equivalence is undecidable so there is not a direct correspondence between the nodes in their trees. Also the names of bound variables and other such constructions may be lost in Lambda \ :code:`->`\  Ski \ :code:`->`\  Lambda round trip. An element of ILogic cannot be coerced to the other types. However ILogic can be used to produce a theory which can be concerted to/from the other domains using Curry-Howard isomorphism.
 
 
 .. _l636f6d705574696c-636f65726365:
@@ -19,20 +19,20 @@ The compUtil package provides utilities to convert between the computational dom
    pair: compUtil; coerce
 
 :spadfun:`coerce`\: \ :ref:`Lambda <l4c616d626461>`\  UT -> \ :ref:`SKICombinators <l534b49436f6d62696e61746f7273>`\  UT 
-  \ ``coerce Lambda``\  term to SKI combinators. this process is known as abstraction elimination. it is done by applying the following rules until all lambda terms have been eliminated. rule LS1: Lam[\ ``x``\ ] \ ``=>``\  \ ``x``\  rule LS2: Lam[(\ ``E1``\  \ ``E2``\ )] \ ``=>``\  (Lam[\ ``E1``\ ] Lam[\ ``E2``\ ]) rule LS3: Lam[\ ``x``\ .\ ``E``\ ] \ ``=>``\  (\ ``K``\  Lam[\ ``E``\ ]) (if \ ``x``\  does not occur free in \ ``E``\ ) rule LS4: Lam[\ ``x``\ .\ ``x``\ ] \ ``=>``\  \ ``I``\  rule LS5: Lam[\ ``x``\ .\ ``y``\ .\ ``E``\ ] \ ``=>``\  Lam[\ ``x``\ .Lam[\ ``y``\ .\ ``E``\ ]] (if \ ``x``\  occurs free in \ ``E``\ ) rule LS6: Lam[\ ``x``\ .(\ ``E1``\  \ ``E2``\ )] \ ``=>``\  (\ ``S``\  Lam[\ ``x``\ .\ ``E1``\ ] Lam[\ ``x``\ .\ ``E2``\ ])
+  \ :code:`coerce Lambda`\  term to SKI combinators. this process is known as abstraction elimination. it is done by applying the following rules until all lambda terms have been eliminated. rule LS1: Lam[\ :code:`x`\ ] \ :code:`=>`\  \ :code:`x`\  rule LS2: Lam[(\ :code:`E1`\  \ :code:`E2`\ )] \ :code:`=>`\  (Lam[\ :code:`E1`\ ] Lam[\ :code:`E2`\ ]) rule LS3: Lam[\ :code:`x`\ .\ :code:`E`\ ] \ :code:`=>`\  (\ :code:`K`\  Lam[\ :code:`E`\ ]) (if \ :code:`x`\  does not occur free in \ :code:`E`\ ) rule LS4: Lam[\ :code:`x`\ .\ :code:`x`\ ] \ :code:`=>`\  \ :code:`I`\  rule LS5: Lam[\ :code:`x`\ .\ :code:`y`\ .\ :code:`E`\ ] \ :code:`=>`\  Lam[\ :code:`x`\ .Lam[\ :code:`y`\ .\ :code:`E`\ ]] (if \ :code:`x`\  occurs free in \ :code:`E`\ ) rule LS6: Lam[\ :code:`x`\ .(\ :code:`E1`\  \ :code:`E2`\ )] \ :code:`=>`\  (\ :code:`S`\  Lam[\ :code:`x`\ .\ :code:`E1`\ ] Lam[\ :code:`x`\ .\ :code:`E2`\ ])
 
 
 .. index::
    pair: compUtil; coerce
 
 :spadfun:`coerce`\: \ :ref:`SKICombinators <l534b49436f6d62696e61746f7273>`\  UT -> \ :ref:`ILogic <l494c6f676963>`\  
-  \ ``coerce combinators``\  to intuitionistic logic this is known as the Curry-Howard isomorphism it uses the following rules: rule SI1: Ski[Kab] \ ``=>``\  a \ ``->``\  (\ ``b``\  \ ``->``\  a), rule SI2: Ski[Sabc] \ ``=>``\  (a \ ``->``\  (\ ``b``\  \ ``->``\  \ ``c``\ )) \ ``->``\  ((a \ ``->``\  \ ``b``\ ) \ ``->``\  (a \ ``->``\  \ ``c``\ )), rule SI3: Ski[a a-\ ``>b``\ ] \ ``=>``\  \ ``b``\  the last rule is function application (modus ponens)
+  \ :code:`coerce combinators`\  to intuitionistic logic this is known as the Curry-Howard isomorphism it uses the following rules: rule SI1: Ski[Kab] \ :code:`=>`\  a \ :code:`->`\  (\ :code:`b`\  \ :code:`->`\  a), rule SI2: Ski[Sabc] \ :code:`=>`\  (a \ :code:`->`\  (\ :code:`b`\  \ :code:`->`\  \ :code:`c`\ )) \ :code:`->`\  ((a \ :code:`->`\  \ :code:`b`\ ) \ :code:`->`\  (a \ :code:`->`\  \ :code:`c`\ )), rule SI3: Ski[a a-\ :code:`>b`\ ] \ :code:`=>`\  \ :code:`b`\  the last rule is function application (modus ponens)
 
 
 .. index::
    pair: compUtil; coerce
 
 :spadfun:`coerce`\: \ :ref:`SKICombinators <l534b49436f6d62696e61746f7273>`\  UT -> \ :ref:`Lambda <l4c616d626461>`\  UT 
-  \ ``coerce SKI``\  combinators to Lambda term. this conversion is done by applying the following rules rule SL1: Ski[\ ``I``\ ] = \ ``x``\ .0 rule SL2: Ski[\ ``K``\ ] = \ ``x``\ .\ ``y``\ .1 rule SL3: Ski[\ ``S``\ ] = \ ``x``\ .\ ``y``\ .\ ``z``\ .(2 0 (1 0)) rule SL4: Ski[(\ ``E1``\  \ ``E2``\ )] = (Ski[\ ``E1``\ ] Ski[\ ``E2``\ ])
+  \ :code:`coerce SKI`\  combinators to Lambda term. this conversion is done by applying the following rules rule SL1: Ski[\ :code:`I`\ ] = \ :code:`x`\ .0 rule SL2: Ski[\ :code:`K`\ ] = \ :code:`x`\ .\ :code:`y`\ .1 rule SL3: Ski[\ :code:`S`\ ] = \ :code:`x`\ .\ :code:`y`\ .\ :code:`z`\ .(2 0 (1 0)) rule SL4: Ski[(\ :code:`E1`\  \ :code:`E2`\ )] = (Ski[\ :code:`E1`\ ] Ski[\ :code:`E2`\ ])
 
 

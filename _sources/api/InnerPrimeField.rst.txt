@@ -10,7 +10,7 @@ InnerPrimeField p
 * p: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-InnerPrimeField(\ ``p``\ ) implements the field with \ ``p``\  elements by using IntegerMod \ ``p``\ . Note: argument \ ``p``\  MUST be a prime (this domain does not check). See \ :ref:`PrimeField <l5072696d654669656c64>`\  for a domain that does check. In addition to the inherited operations of IntegerMod \ ``p``\ , the domain provides exploits the structure of the cyclic group of its invertible elements. It stores a primitive element \ ``w``\ , \ ``i``\ .a. generator of this group and it stores a logarithm table for \ ``w``\  as soon as this is required. sqrt was added in 2018.
+InnerPrimeField(\ :code:`p`\ ) implements the field with \ :code:`p`\  elements by using IntegerMod \ :code:`p`\ . Note: argument \ :code:`p`\  MUST be a prime (this domain does not check). See \ :ref:`PrimeField <l5072696d654669656c64>`\  for a domain that does check. In addition to the inherited operations of IntegerMod \ :code:`p`\ , the domain provides exploits the structure of the cyclic group of its invertible elements. It stores a primitive element \ :code:`w`\ , \ :code:`i`\ .a. generator of this group and it stores a logarithm table for \ :code:`w`\  as soon as this is required. sqrt was added in 2018.
 
 
 .. _l496e6e65725072696d654669656c64-30:
@@ -527,7 +527,7 @@ InnerPrimeField(\ ``p``\ ) implements the field with \ ``p``\  elements by using
    pair: InnerPrimeField; quadraticNonResidue
 
 :spadfun:`quadraticNonResidue`\: () -> % 
-  \ ``quadraticNonResidue()``\  computes the smallest non negative integer, which represents a quadratic non residue.
+  \ :code:`quadraticNonResidue()`\  computes the smallest non negative integer, which represents a quadratic non residue.
 
 .. _l496e6e65725072696d654669656c64-71756f:
 
@@ -632,7 +632,7 @@ InnerPrimeField(\ ``p``\ ) implements the field with \ ``p``\  elements by using
    pair: InnerPrimeField; sqrt
 
 :spadfun:`sqrt`\: % -> % 
-  \ ``sqrt(x)``\  computes one \ ``y``\  such that \ ``y^2``\  = \ ``x``\ , error if there is no square root, i.e. jacobi(\ ``x``\ ,\ ``p``\ ) = \ ``-1``\ . Implementation according to http://www.staff.uni-mainz.de/pommeren/Cryptology/Asymmetric/5_NTh/
+  \ :code:`sqrt(x)`\  computes one \ :code:`y`\  such that \ :code:`y^2`\  = \ :code:`x`\ , error if there is no square root, i.e. jacobi(\ :code:`x`\ ,\ :code:`p`\ ) = \ :code:`-1`\ . Implementation according to http://www.staff.uni-mainz.de/pommeren/Cryptology/Asymmetric/5_NTh/
 
 .. _l496e6e65725072696d654669656c64-73717561726546726565:
 

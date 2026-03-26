@@ -64,14 +64,14 @@ This category provides an interface for expanding segments to a stream of elemen
    pair: SegmentExpansionCategory; expand
 
 :spadfun:`expand`\: % -> L 
-  \ ``expand(l..h by k)``\  creates value of type \ ``L``\  with elements \ ``l, l+k, ... lN``\  where \ ``lN <= h < lN+k``\ . For example, \ ``expand(1..5 by 2) = [1, 3, 5]``\ .
+  \ :code:`expand(l..h by k)`\  creates value of type \ :code:`L`\  with elements \ :code:`l, l+k, ... lN`\  where \ :code:`lN <= h < lN+k`\ . For example, \ :code:`expand(1..5 by 2) = [1, 3, 5]`\ .
 
 
 .. index::
    pair: SegmentExpansionCategory; expand
 
 :spadfun:`expand`\: \ :ref:`List <l4c697374>`\  % -> L 
-  \ ``expand(l)``\  creates a new value of type \ ``L``\  in which each segment \ ``l..h by k``\  is replaced with \ ``l, l+k, ... lN``\ , where \ ``lN <= h < lN+k``\ . For example, \ ``expand [1..4, 7..9] = [1, 2, 3, 4, 7, 8, 9]``\ .
+  \ :code:`expand(l)`\  creates a new value of type \ :code:`L`\  in which each segment \ :code:`l..h by k`\  is replaced with \ :code:`l, l+k, ... lN`\ , where \ :code:`lN <= h < lN+k`\ . For example, \ :code:`expand [1..4, 7..9] = [1, 2, 3, 4, 7, 8, 9]`\ .
 
 .. _l5365676d656e74457870616e73696f6e43617465676f7279-68696768:
 
@@ -99,7 +99,7 @@ This category provides an interface for expanding segments to a stream of elemen
    pair: SegmentExpansionCategory; map
 
 :spadfun:`map`\: (S -> S, %) -> L 
-  \ ``map(f, l..h by k)``\  produces a value of type \ ``L``\  by applying \ ``f``\  to each of the successive elements of the segment, that is, \ ``[f(l), f(l+k), ..., f(lN)]``\ , where \ ``lN <= h < lN+k``\ .
+  \ :code:`map(f, l..h by k)`\  produces a value of type \ :code:`L`\  by applying \ :code:`f`\  to each of the successive elements of the segment, that is, \ :code:`[f(l), f(l+k), ..., f(lN)]`\ , where \ :code:`lN <= h < lN+k`\ .
 
 .. _l5365676d656e74457870616e73696f6e43617465676f7279-72657665727365:
 

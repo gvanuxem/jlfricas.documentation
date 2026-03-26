@@ -199,14 +199,14 @@ MultivariateTaylorSeriesCategory(Coef, Var)
    pair: MultivariateTaylorSeriesCategory; coefficient
 
 :spadfun:`coefficient`\: (%, \ :ref:`List <l4c697374>`\  Var, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``coefficient(f, [x1, x2, ..., xk], [n1, n2, ..., nk])``\  returns the coefficient of \ ``x1^n1 * ... * xk^nk``\  in \ ``f``\ .
+  \ :code:`coefficient(f, [x1, x2, ..., xk], [n1, n2, ..., nk])`\  returns the coefficient of \ :code:`x1^n1 * ... * xk^nk`\  in \ :code:`f`\ .
 
 
 .. index::
    pair: MultivariateTaylorSeriesCategory; coefficient
 
 :spadfun:`coefficient`\: (%, Var, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``coefficient(f, x, n)``\  returns the coefficient of \ ``x^n``\  in \ ``f``\ .
+  \ :code:`coefficient(f, x, n)`\  returns the coefficient of \ :code:`x^n`\  in \ :code:`f`\ .
 
 .. _l4d756c7469766172696174655461796c6f7253657269657343617465676f7279-636f65726365:
 
@@ -359,7 +359,7 @@ MultivariateTaylorSeriesCategory(Coef, Var)
    pair: MultivariateTaylorSeriesCategory; extend
 
 :spadfun:`extend`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``extend(f, n)``\  causes all terms of \ ``f``\  of degree \ ``<= n``\  to be computed.
+  \ :code:`extend(f, n)`\  causes all terms of \ :code:`f`\  of degree \ :code:`<= n`\  to be computed.
 
 .. _l4d756c7469766172696174655461796c6f7253657269657343617465676f7279-696e74656772617465:
 
@@ -367,7 +367,7 @@ MultivariateTaylorSeriesCategory(Coef, Var)
    pair: MultivariateTaylorSeriesCategory; integrate
 
 :spadfun:`integrate`\: (%, Var) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(f, x)``\  returns the anti-derivative of the power series \ ``f(x)``\  with respect to the variable \ ``x``\  with constant coefficient 1. We may integrate a series when we can divide coefficients by integers.
+  \ :code:`integrate(f, x)`\  returns the anti-derivative of the power series \ :code:`f(x)`\  with respect to the variable \ :code:`x`\  with constant coefficient 1. We may integrate a series when we can divide coefficients by integers.
 
 .. _l4d756c7469766172696174655461796c6f7253657269657343617465676f7279-6c61746578:
 
@@ -429,14 +429,14 @@ MultivariateTaylorSeriesCategory(Coef, Var)
    pair: MultivariateTaylorSeriesCategory; monomial
 
 :spadfun:`monomial`\: (%, \ :ref:`List <l4c697374>`\  Var, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``monomial(a, [x1, x2, ..., xk], [n1, n2, ..., nk])``\  returns \ ``a * x1^n1 * ... * xk^nk``\ .
+  \ :code:`monomial(a, [x1, x2, ..., xk], [n1, n2, ..., nk])`\  returns \ :code:`a * x1^n1 * ... * xk^nk`\ .
 
 
 .. index::
    pair: MultivariateTaylorSeriesCategory; monomial
 
 :spadfun:`monomial`\: (%, Var, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``monomial(a, x, n)``\  returns \ ``a*x^n``\ .
+  \ :code:`monomial(a, x, n)`\  returns \ :code:`a*x^n`\ .
 
 
 \ :ref:`monomial <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c>`\ \: (Coef, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  Var) -> % 
@@ -463,14 +463,14 @@ MultivariateTaylorSeriesCategory(Coef, Var)
    pair: MultivariateTaylorSeriesCategory; order
 
 :spadfun:`order`\: (%, Var) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(f, x)``\  returns the order of \ ``f``\  viewed as a series in \ ``x``\  may result in an infinite loop if \ ``f``\  has no non-zero terms.
+  \ :code:`order(f, x)`\  returns the order of \ :code:`f`\  viewed as a series in \ :code:`x`\  may result in an infinite loop if \ :code:`f`\  has no non-zero terms.
 
 
 .. index::
    pair: MultivariateTaylorSeriesCategory; order
 
 :spadfun:`order`\: (%, Var, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(f, x, n)``\  returns \ ``min(n, order(f, x))``\ .
+  \ :code:`order(f, x, n)`\  returns \ :code:`min(n, order(f, x))`\ .
 
 .. _l4d756c7469766172696174655461796c6f7253657269657343617465676f7279-7069:
 
@@ -493,14 +493,14 @@ MultivariateTaylorSeriesCategory(Coef, Var)
    pair: MultivariateTaylorSeriesCategory; polynomial
 
 :spadfun:`polynomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  Coef 
-  \ ``polynomial(f, k)``\  returns a polynomial consisting of the sum of all terms of \ ``f``\  of degree \ ``<= k``\ .
+  \ :code:`polynomial(f, k)`\  returns a polynomial consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`<= k`\ .
 
 
 .. index::
    pair: MultivariateTaylorSeriesCategory; polynomial
 
 :spadfun:`polynomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  Coef 
-  \ ``polynomial(f, k1, k2)``\  returns a polynomial consisting of the sum of all terms of \ ``f``\  of degree \ ``d``\  with \ ``k1 <= d <= k2``\ .
+  \ :code:`polynomial(f, k1, k2)`\  returns a polynomial consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`d`\  with \ :code:`k1 <= d <= k2`\ .
 
 .. _l4d756c7469766172696174655461796c6f7253657269657343617465676f7279-7265636970:
 

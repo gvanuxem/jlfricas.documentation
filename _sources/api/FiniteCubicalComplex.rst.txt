@@ -37,7 +37,7 @@ A Finite Cubical Complex for more documentation see: http://www.euclideanspace.c
    pair: FiniteCubicalComplex; addImpliedFaces
 
 :spadfun:`addImpliedFaces`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`CubicalFacet <l4375626963616c4661636574>`\  
-  a function to take a set of faces and add those that are implied by the cubicalComplex conventions (if they don\ ``'t``\  already exist). For example, if the input is a square [1..2, 1..2] then we would add its edges [1..1, 1..2], [2..2, 1..2], [1..2, 1..1], and [1..2, 2..2].
+  a function to take a set of faces and add those that are implied by the cubicalComplex conventions (if they don\ :code:`'t`\  already exist). For example, if the input is a square [1..2, 1..2] then we would add its edges [1..1, 1..2], [2..2, 1..2], [1..2, 1..1], and [1..2, 2..2].
 
 .. _l46696e6974654375626963616c436f6d706c6578-626f756e64617279:
 
@@ -61,7 +61,7 @@ A Finite Cubical Complex for more documentation see: http://www.euclideanspace.c
    pair: FiniteCubicalComplex; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`DeltaComplex <l44656c7461436f6d706c6578>`\  VS 
-  \ ``coerce CubicalComplex``\  to DeltaComplex
+  \ :code:`coerce CubicalComplex`\  to DeltaComplex
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -102,14 +102,14 @@ A Finite Cubical Complex for more documentation see: http://www.euclideanspace.c
    pair: FiniteCubicalComplex; fundamentalGroup
 
 :spadfun:`fundamentalGroup`\: % -> \ :ref:`GroupPresentation <l47726f757050726573656e746174696f6e>`\  
-  Generates fundamental group from this cubical complex. This works by converting to a DeltaComplex and then generating the fundamentalGroup from that. This is not the most efficient method because the conversion generates lots of higher order faceMaps which are not used. This will attempt to simplify the group presentation, if you don\ ``'t``\  want this use alternative function of same name. TODO write a faster implementation which only generates edge and square faceMaps.
+  Generates fundamental group from this cubical complex. This works by converting to a DeltaComplex and then generating the fundamentalGroup from that. This is not the most efficient method because the conversion generates lots of higher order faceMaps which are not used. This will attempt to simplify the group presentation, if you don\ :code:`'t`\  want this use alternative function of same name. TODO write a faster implementation which only generates edge and square faceMaps.
 
 
 .. index::
    pair: FiniteCubicalComplex; fundamentalGroup
 
 :spadfun:`fundamentalGroup`\: (%, \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`GroupPresentation <l47726f757050726573656e746174696f6e>`\  
-  Generates fundamental group from this cubical complex. This works by converting to a DeltaComplex and then generating the fundamentalGroup from that. This is not the most efficient method because the conversion generates lots of higher order faceMaps which are not used. TODO write a faster implementation which only generates edge and square faceMaps. This version has options to: simplify - if \ ``true``\  attempts to simplify the group presentation trace - if \ ``true``\  outputs trace of simplification rules used.
+  Generates fundamental group from this cubical complex. This works by converting to a DeltaComplex and then generating the fundamentalGroup from that. This is not the most efficient method because the conversion generates lots of higher order faceMaps which are not used. TODO write a faster implementation which only generates edge and square faceMaps. This version has options to: simplify - if \ :code:`true`\  attempts to simplify the group presentation trace - if \ :code:`true`\  outputs trace of simplification rules used.
 
 .. _l46696e6974654375626963616c436f6d706c6578-6772616465:
 

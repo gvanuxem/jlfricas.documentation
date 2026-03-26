@@ -55,7 +55,7 @@
 <li><p>Coef: <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p></li>
 <li><p>ULS: <a class="reference internal" href="UnivariateLaurentSeriesCategory.html#l556e69766172696174654c617572656e7453657269657343617465676f7279"><span class="std std-ref">UnivariateLaurentSeriesCategory</span></a> Coef</p></li>
 </ul>
-<p>This is a category of univariate Puiseux series constructed from univariate Laurent series. A Puiseux series is represented by a pair <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">f(x)]</span></code>, where <code class="docutils literal notranslate"><span class="pre">r</span></code> is a positive rational number and <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> is a Laurent series. This pair represents the Puiseux series <code class="docutils literal notranslate"><span class="pre">f(x^r)</span></code>.</p>
+<p>This is a category of univariate Puiseux series constructed from univariate Laurent series. A Puiseux series is represented by a pair <code class="code docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">f(x)]</span></code>, where <code class="code docutils literal notranslate"><span class="pre">r</span></code> is a positive rational number and <code class="code docutils literal notranslate"><span class="pre">f(x)</span></code> is a Laurent series. This pair represents the Puiseux series <code class="code docutils literal notranslate"><span class="pre">f(x^r)</span></code>.</p>
 <dl class="simple" id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -211,7 +211,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: ULS -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(f(x))</span></code> converts the Laurent series <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> to a Puiseux series.</p>
+<dt><span class="spadfun">coerce</span>: ULS -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(f(x))</span></code> converts the Laurent series <code class="code docutils literal notranslate"><span class="pre">f(x)</span></code> to a Puiseux series.</p>
 </dd>
 </dl>
 <dl class="simple" id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-636f6d6d757461746f72">
@@ -269,7 +269,7 @@
 </dd>
 </dl>
 <span id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-646567726565"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(f(x))</span></code> returns the degree of the leading term of the Puiseux series <code class="docutils literal notranslate"><span class="pre">f(x)</span></code>, which may have zero as a coefficient.</p>
+<dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">degree(f(x))</span></code> returns the degree of the leading term of the Puiseux series <code class="code docutils literal notranslate"><span class="pre">f(x)</span></code>, which may have zero as a coefficient.</p>
 </dd>
 </dl>
 <dl class="simple" id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-646966666572656e7469617465">
@@ -355,15 +355,15 @@
 </dd>
 </dl>
 <span id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c617572656e74"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">laurent</span>: % -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(f(x))</span></code> converts the Puiseux series <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> to a Laurent series if possible. Error: if this is not possible.</p>
+<dt><span class="spadfun">laurent</span>: % -&gt; ULS</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">laurent(f(x))</span></code> converts the Puiseux series <code class="code docutils literal notranslate"><span class="pre">f(x)</span></code> to a Laurent series if possible. Error: if this is not possible.</p>
 </dd>
 </dl>
 <span id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c617572656e74496643616e"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">laurentIfCan</span>: % -&gt; Union(ULS, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurentIfCan(f(x))</span></code> converts the Puiseux series <code class="docutils literal notranslate"><span class="pre">f(x)</span></code> to a Laurent series if possible. If this is not possible, “failed” is returned.</p>
+<dt><span class="spadfun">laurentIfCan</span>: % -&gt; Union(ULS, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">laurentIfCan(f(x))</span></code> converts the Puiseux series <code class="code docutils literal notranslate"><span class="pre">f(x)</span></code> to a Laurent series if possible. If this is not possible, “failed” is returned.</p>
 </dd>
 </dl>
 <span id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c617572656e74526570"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">laurentRep</span>: % -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurentRep(f(x))</span></code> returns <code class="docutils literal notranslate"><span class="pre">g(x)</span></code> where the Puiseux series <code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">g(x^r)</span></code> is represented by <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">g(x)]</span></code>.</p>
+<dt><span class="spadfun">laurentRep</span>: % -&gt; ULS</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">laurentRep(f(x))</span></code> returns <code class="code docutils literal notranslate"><span class="pre">g(x)</span></code> where the Puiseux series <code class="code docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">g(x^r)</span></code> is represented by <code class="code docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">g(x)]</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c636d">
@@ -467,7 +467,7 @@
 </dd>
 </dl>
 <span id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-70756973657578"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">puiseux</span>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, ULS) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(r,</span> <span class="pre">f(x))</span></code> returns <code class="docutils literal notranslate"><span class="pre">f(x^r)</span></code>.</p>
+<dt><span class="spadfun">puiseux</span>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, ULS) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">puiseux(r,</span> <span class="pre">f(x))</span></code> returns <code class="code docutils literal notranslate"><span class="pre">f(x^r)</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-71756f">
@@ -475,7 +475,7 @@
 </dd>
 </dl>
 <span id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-726174696f6e616c506f776572"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">rationalPower</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rationalPower(f(x))</span></code> returns <code class="docutils literal notranslate"><span class="pre">r</span></code> where the Puiseux series <code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">g(x^r)</span></code>.</p>
+<dt><span class="spadfun">rationalPower</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">rationalPower(f(x))</span></code> returns <code class="code docutils literal notranslate"><span class="pre">r</span></code> where the Puiseux series <code class="code docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">g(x^r)</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-7265636970">
@@ -720,7 +720,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

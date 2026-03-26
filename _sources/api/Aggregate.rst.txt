@@ -8,7 +8,7 @@ Aggregate
 :viewcode:`aggcat.spad line 1 <aggcat.spad#L1>` :editcode:`[edit on github] <aggcat.spad#L1>`
 
 
-The notion of aggregate serves to model any data structure aggregate, designating any collection of objects, with heterogeneous or homogeneous members, with a finite or infinite number of members, explicitly or implicitly represented. An aggregate can in principle represent everything from a string of characters to abstract sets such as "the set of \ ``x``\  satisfying relation \ *r(x)*\ ". An attribute \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  is used to assert that a domain has a finite number of elements.
+The notion of aggregate serves to model any data structure aggregate, designating any collection of objects, with heterogeneous or homogeneous members, with a finite or infinite number of members, explicitly or implicitly represented. An aggregate can in principle represent everything from a string of characters to abstract sets such as "the set of \ :code:`x`\  satisfying relation \ *r(x)*\ ". An attribute \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  is used to assert that a domain has a finite number of elements.
 
 
 .. _l416767726567617465-23:
@@ -17,7 +17,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; #
 
 :spadfun:`#`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``\#(u)``\  returns the number of elements in \ ``u``\ .
+  \ :code:`\#(u)`\  returns the number of elements in \ :code:`u`\ .
 
 .. _l416767726567617465-636f7079:
 
@@ -25,7 +25,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; copy
 
 :spadfun:`copy`\: % -> % 
-  \ ``copy(u)``\  returns a top-level (non-recursive) copy of \ ``u``\ . Note: for collections, \ ``copy(u) = [x for x in u]``\ .
+  \ :code:`copy(u)`\  returns a top-level (non-recursive) copy of \ :code:`u`\ . Note: for collections, \ :code:`copy(u) = [x for x in u]`\ .
 
 .. _l416767726567617465-656d7074793f:
 
@@ -33,7 +33,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; empty?
 
 :spadfun:`empty?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``empty?(u)``\  tests if \ ``u``\  has 0 elements.
+  \ :code:`empty?(u)`\  tests if \ :code:`u`\  has 0 elements.
 
 .. _l416767726567617465-656d707479:
 
@@ -41,7 +41,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; empty
 
 :spadfun:`empty`\: () -> % 
-  \ ``empty()``\ \$\ ``D``\  creates an aggregate of type \ ``D``\  with 0 elements. Note: The \ *\$D*\  can be dropped if understood by context, e.g. \ ``u: D := empty()``\ .
+  \ :code:`empty()`\ \$\ :code:`D`\  creates an aggregate of type \ :code:`D`\  with 0 elements. Note: The \ *\$D*\  can be dropped if understood by context, e.g. \ :code:`u: D := empty()`\ .
 
 .. _l416767726567617465-65713f:
 
@@ -49,7 +49,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; eq?
 
 :spadfun:`eq?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``eq?(u, v)``\  tests if \ ``u``\  and \ ``v``\  are same objects.
+  \ :code:`eq?(u, v)`\  tests if \ :code:`u`\  and \ :code:`v`\  are same objects.
 
 .. _l416767726567617465-6c6573733f:
 
@@ -57,7 +57,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; less?
 
 :spadfun:`less?`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``less?(u, n)``\  tests if \ ``u``\  has less than \ ``n``\  elements.
+  \ :code:`less?(u, n)`\  tests if \ :code:`u`\  has less than \ :code:`n`\  elements.
 
 .. _l416767726567617465-6d6f72653f:
 
@@ -65,7 +65,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; more?
 
 :spadfun:`more?`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``more?(u, n)``\  tests if \ ``u``\  has more than \ ``n``\  elements.
+  \ :code:`more?(u, n)`\  tests if \ :code:`u`\  has more than \ :code:`n`\  elements.
 
 .. _l416767726567617465-73616d706c65:
 
@@ -73,7 +73,7 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; sample
 
 :spadfun:`sample`\: % 
-  \ ``sample yields``\  a value of type \%
+  \ :code:`sample yields`\  a value of type \%
 
 .. _l416767726567617465-73697a653f:
 
@@ -81,6 +81,6 @@ The notion of aggregate serves to model any data structure aggregate, designatin
    pair: Aggregate; size?
 
 :spadfun:`size?`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``size?(u, n)``\  tests if \ ``u``\  has exactly \ ``n``\  elements.
+  \ :code:`size?(u, n)`\  tests if \ :code:`u`\  has exactly \ :code:`n`\  elements.
 
 

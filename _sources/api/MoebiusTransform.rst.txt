@@ -10,7 +10,7 @@ MoebiusTransform F
 * F: \ :ref:`Field <l4669656c64>`\ 
 
 
-MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transformations over \ ``F``\ .
+MoebiusTransform(\ :code:`F`\ ) is the domain of fractional linear (Moebius) transformations over \ :code:`F`\ .
 
 
 .. _l4d6f65626975735472616e73666f726d-31:
@@ -72,14 +72,14 @@ MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transfo
    pair: MoebiusTransform; eval
 
 :spadfun:`eval`\: (%, F) -> F 
-  \ ``eval(m, x)``\  returns \ ``(a*x + b)/(c*x + d)``\  where \ ``m = moebius(a, b, c, d)``\  (see \ :ref:`moebius <l4d6f65626975735472616e73666f726d-6d6f6562697573>`\ ).
+  \ :code:`eval(m, x)`\  returns \ :code:`(a*x + b)/(c*x + d)`\  where \ :code:`m = moebius(a, b, c, d)`\  (see \ :ref:`moebius <l4d6f65626975735472616e73666f726d-6d6f6562697573>`\ ).
 
 
 .. index::
    pair: MoebiusTransform; eval
 
 :spadfun:`eval`\: (%, \ :ref:`OnePointCompletion <l4f6e65506f696e74436f6d706c6574696f6e>`\  F) -> \ :ref:`OnePointCompletion <l4f6e65506f696e74436f6d706c6574696f6e>`\  F 
-  \ ``eval(m, x)``\  returns \ ``(a*x + b)/(c*x + d)``\  where \ ``m = moebius(a, b, c, d)``\  (see \ :ref:`moebius <l4d6f65626975735472616e73666f726d-6d6f6562697573>`\ ).
+  \ :code:`eval(m, x)`\  returns \ :code:`(a*x + b)/(c*x + d)`\  where \ :code:`m = moebius(a, b, c, d)`\  (see \ :ref:`moebius <l4d6f65626975735472616e73666f726d-6d6f6562697573>`\ ).
 
 .. _l4d6f65626975735472616e73666f726d-696e76:
 
@@ -111,7 +111,7 @@ MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transfo
    pair: MoebiusTransform; moebius
 
 :spadfun:`moebius`\: (F, F, F, F) -> % 
-  \ ``moebius(a, b, c, d)``\  returns \ ``matrix [[a, b], [c, d]]``\ .
+  \ :code:`moebius(a, b, c, d)`\  returns \ :code:`matrix [[a, b], [c, d]]`\ .
 
 .. _l4d6f65626975735472616e73666f726d-6f6e653f:
 
@@ -124,7 +124,7 @@ MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transfo
    pair: MoebiusTransform; recip
 
 :spadfun:`recip`\: % -> % 
-  \ ``recip(m)``\  = recip() * \ ``m``\ 
+  \ :code:`recip(m)`\  = recip() * \ :code:`m`\ 
 
 
 \ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
@@ -135,7 +135,7 @@ MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transfo
    pair: MoebiusTransform; recip
 
 :spadfun:`recip`\: () -> % 
-  \ ``recip()``\  returns \ ``matrix [[0, 1], [1, 0]]``\  representing the map \ ``x -> 1 / x``\ .
+  \ :code:`recip()`\  returns \ :code:`matrix [[0, 1], [1, 0]]`\  representing the map \ :code:`x -> 1 / x`\ .
 
 .. _l4d6f65626975735472616e73666f726d-7269676874506f776572:
 
@@ -162,14 +162,14 @@ MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transfo
    pair: MoebiusTransform; scale
 
 :spadfun:`scale`\: (%, F) -> % 
-  \ ``scale(m, h)``\  returns \ ``scale(h) * m``\  (see \ :ref:`shift <l4d6f65626975735472616e73666f726d-7368696674>`\ ).
+  \ :code:`scale(m, h)`\  returns \ :code:`scale(h) * m`\  (see \ :ref:`shift <l4d6f65626975735472616e73666f726d-7368696674>`\ ).
 
 
 .. index::
    pair: MoebiusTransform; scale
 
 :spadfun:`scale`\: F -> % 
-  \ ``scale(k)``\  returns \ ``matrix [[k, 0], [0, 1]]``\  representing the map \ ``x -> k * x``\ .
+  \ :code:`scale(k)`\  returns \ :code:`matrix [[k, 0], [0, 1]]`\  representing the map \ :code:`x -> k * x`\ .
 
 .. _l4d6f65626975735472616e73666f726d-7368696674:
 
@@ -177,14 +177,14 @@ MoebiusTransform(\ ``F``\ ) is the domain of fractional linear (Moebius) transfo
    pair: MoebiusTransform; shift
 
 :spadfun:`shift`\: (%, F) -> % 
-  \ ``shift(m, h)``\  returns \ ``shift(h) * m``\  (see \ :ref:`shift <l4d6f65626975735472616e73666f726d-7368696674>`\ ).
+  \ :code:`shift(m, h)`\  returns \ :code:`shift(h) * m`\  (see \ :ref:`shift <l4d6f65626975735472616e73666f726d-7368696674>`\ ).
 
 
 .. index::
    pair: MoebiusTransform; shift
 
 :spadfun:`shift`\: F -> % 
-  \ ``shift(k)``\  returns \ ``matrix [[1, k], [0, 1]]``\  representing the map \ ``x -> x + k``\ .
+  \ :code:`shift(k)`\  returns \ :code:`matrix [[1, k], [0, 1]]`\  representing the map \ :code:`x -> x + k`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

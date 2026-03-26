@@ -12,7 +12,7 @@ JetDifferential(JB, D)
 * D: \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
 
 
-\ ``JetDifferential(JB, D)``\  implements differentials (one-forms) over the jet bundle \ ``JB``\  with coefficients from \ ``D``\ . The differentials operate on \ ``JetVectorField(JB, D)``\ .
+\ :code:`JetDifferential(JB, D)`\  implements differentials (one-forms) over the jet bundle \ :code:`JB`\  with coefficients from \ :code:`D`\ . The differentials operate on \ :code:`JetVectorField(JB, D)`\ .
 
 
 .. _l4a6574446966666572656e7469616c-30:
@@ -71,7 +71,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; coefficient
 
 :spadfun:`coefficient`\: (%, JB) -> D 
-  \ ``coefficient(om, jb)``\  returns the coefficient of \ ``om``\  for the differential of \ ``jb``\ .
+  \ :code:`coefficient(om, jb)`\  returns the coefficient of \ :code:`om`\  for the differential of \ :code:`jb`\ .
 
 .. _l4a6574446966666572656e7469616c-636f656666696369656e7473:
 
@@ -79,7 +79,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`List <l4c697374>`\  D 
-  \ ``coefficients(om)``\  yields the coefficients of \ ``om``\ .
+  \ :code:`coefficients(om)`\  yields the coefficients of \ :code:`om`\ .
 
 .. _l4a6574446966666572656e7469616c-636f65726365:
 
@@ -92,7 +92,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; contract
 
 :spadfun:`contract`\: (\ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB, D), %) -> D 
-  \ ``contract(v, om)``\  computes the interior derivative of \ ``om``\  with respect to \ ``v``\ .
+  \ :code:`contract(v, om)`\  computes the interior derivative of \ :code:`om`\  with respect to \ :code:`v`\ .
 
 .. _l4a6574446966666572656e7469616c-636f7079:
 
@@ -100,7 +100,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; copy
 
 :spadfun:`copy`\: % -> % 
-  \ ``copy(om)``\  returns a copy of the differential \ ``om``\ .
+  \ :code:`copy(om)`\  returns a copy of the differential \ :code:`om`\ .
 
 .. _l4a6574446966666572656e7469616c-64:
 
@@ -108,14 +108,14 @@ JetDifferential(JB, D)
    pair: JetDifferential; d
 
 :spadfun:`d`\: D -> % 
-  \ ``d(f)``\  computes the differential of \ ``f``\ .
+  \ :code:`d(f)`\  computes the differential of \ :code:`f`\ .
 
 
 .. index::
    pair: JetDifferential; d
 
 :spadfun:`d`\: JB -> % 
-  \ ``d(jb)``\  returns the differential of \ ``jb``\ .
+  \ :code:`d(jb)`\  returns the differential of \ :code:`jb`\ .
 
 .. _l4a6574446966666572656e7469616c-646966666572656e7469616c73:
 
@@ -123,7 +123,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; differentials
 
 :spadfun:`differentials`\: % -> \ :ref:`List <l4c697374>`\  JB 
-  \ ``directions(om)``\  yields the differentials where \ ``om``\  has non-vanishing coefficients.
+  \ :code:`directions(om)`\  yields the differentials where \ :code:`om`\  has non-vanishing coefficients.
 
 .. _l4a6574446966666572656e7469616c-6450:
 
@@ -131,7 +131,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; dP
 
 :spadfun:`dP`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``dP(i, mu)``\  returns the differential of \ ``P(i, mu)``\ .
+  \ :code:`dP(i, mu)`\  returns the differential of \ :code:`P(i, mu)`\ .
 
 .. _l4a6574446966666572656e7469616c-6455:
 
@@ -139,7 +139,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; dU
 
 :spadfun:`dU`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``dU(i)``\  returns the differential of \ ``U(i)``\ .
+  \ :code:`dU(i)`\  returns the differential of \ :code:`U(i)`\ .
 
 .. _l4a6574446966666572656e7469616c-6458:
 
@@ -147,7 +147,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; dX
 
 :spadfun:`dX`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``dX(i)``\  returns the differential of \ ``X(i)``\ .
+  \ :code:`dX(i)`\  returns the differential of \ :code:`X(i)`\ .
 
 .. _l4a6574446966666572656e7469616c-6576616c:
 
@@ -155,7 +155,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; eval
 
 :spadfun:`eval`\: (%, \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB, D)) -> D 
-  \ ``eval(om, v)``\  applies the differential \ ``om``\  to the vector field \ ``v``\ .
+  \ :code:`eval(om, v)`\  applies the differential \ :code:`om`\  to the vector field \ :code:`v`\ .
 
 .. _l4a6574446966666572656e7469616c-6c61746578:
 
@@ -168,7 +168,7 @@ JetDifferential(JB, D)
    pair: JetDifferential; lie
 
 :spadfun:`lie`\: (\ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB, D), %) -> % 
-  \ ``lie(v, om)``\  calculates the Lie derivative of \ ``om``\  with respect to \ ``v``\ .
+  \ :code:`lie(v, om)`\  calculates the Lie derivative of \ :code:`om`\  with respect to \ :code:`v`\ .
 
 .. _l4a6574446966666572656e7469616c-6f70706f736974653f:
 

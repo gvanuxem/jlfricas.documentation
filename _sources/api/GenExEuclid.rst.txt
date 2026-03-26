@@ -12,7 +12,7 @@ GenExEuclid(R, BP)
 * BP: \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
 
-The equation \ ``Af+Bg=h``\  and its generalization to \ ``n``\  polynomials is solved for solutions over the \ ``R``\ , euclidean domain. A table containing the solutions of \ ``Af+Bg=x^k``\  is used. The operations are performed modulo a prime which is in principle big enough, but the solutions are tested and, in case of failure, a hensel lifting process is used to get to the right solutions. It will be used in the factorization of multivariate polynomials over finite field, with \ ``R=F[x]``\ .
+The equation \ :code:`Af+Bg=h`\  and its generalization to \ :code:`n`\  polynomials is solved for solutions over the \ :code:`R`\ , euclidean domain. A table containing the solutions of \ :code:`Af+Bg=x^k`\  is used. The operations are performed modulo a prime which is in principle big enough, but the solutions are tested and, in case of failure, a hensel lifting process is used to get to the right solutions. It will be used in the factorization of multivariate polynomials over finite field, with \ :code:`R=F[x]`\ .
 
 
 .. _l47656e45784575636c6964-636f6d70426f756e64:
@@ -21,7 +21,7 @@ The equation \ ``Af+Bg=h``\  and its generalization to \ ``n``\  polynomials is 
    pair: GenExEuclid; compBound
 
 :spadfun:`compBound`\: (BP, \ :ref:`List <l4c697374>`\  BP) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``compBound(p, lp)``\  computes a bound for the coefficients of the solution polynomials. Given a polynomial right hand side \ ``p``\ , and a list \ ``lp``\  of left hand side polynomials. Exported because it depends on the valuation.
+  \ :code:`compBound(p, lp)`\  computes a bound for the coefficients of the solution polynomials. Given a polynomial right hand side \ :code:`p`\ , and a list \ :code:`lp`\  of left hand side polynomials. Exported because it depends on the valuation.
 
 .. _l47656e45784575636c6964-726564756374696f6e:
 
@@ -29,7 +29,7 @@ The equation \ ``Af+Bg=h``\  and its generalization to \ ``n``\  polynomials is 
    pair: GenExEuclid; reduction
 
 :spadfun:`reduction`\: (BP, R) -> BP 
-  \ ``reduction(p, prime)``\  reduces the polynomial \ ``p``\  modulo prime of \ ``R``\ . Note: this function is exported only because it\ ``'s``\  conditional.
+  \ :code:`reduction(p, prime)`\  reduces the polynomial \ :code:`p`\  modulo prime of \ :code:`R`\ . Note: this function is exported only because it\ :code:`'s`\  conditional.
 
 .. _l47656e45784575636c6964-736f6c76656964:
 
@@ -37,7 +37,7 @@ The equation \ ``Af+Bg=h``\  and its generalization to \ ``n``\  polynomials is 
    pair: GenExEuclid; solveid
 
 :spadfun:`solveid`\: (BP, R, \ :ref:`Vector <l566563746f72>`\  \ :ref:`List <l4c697374>`\  BP) -> Union(\ :ref:`List <l4c697374>`\  BP, failed) 
-  \ ``solveid(h, prime, table)``\  computes the coefficients of the extended euclidean algorithm for a list of polynomials whose tablePow is table and with right side \ ``h``\ .
+  \ :code:`solveid(h, prime, table)`\  computes the coefficients of the extended euclidean algorithm for a list of polynomials whose tablePow is table and with right side \ :code:`h`\ .
 
 .. _l47656e45784575636c6964-7461626c65506f77:
 
@@ -45,7 +45,7 @@ The equation \ ``Af+Bg=h``\  and its generalization to \ ``n``\  polynomials is 
    pair: GenExEuclid; tablePow
 
 :spadfun:`tablePow`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R, \ :ref:`List <l4c697374>`\  BP) -> Union(\ :ref:`Vector <l566563746f72>`\  \ :ref:`List <l4c697374>`\  BP, failed) 
-  \ ``tablePow(maxdeg, prime, lpol)``\  constructs the table with the coefficients of the Extended Euclidean Algorithm for lpol. Here the right side is \ ``x^k``\ , for \ ``k``\  less to \ ``maxdeg``\ . The operation returns "failed" when the elements are not coprime modulo \ ``prime``\ .
+  \ :code:`tablePow(maxdeg, prime, lpol)`\  constructs the table with the coefficients of the Extended Euclidean Algorithm for lpol. Here the right side is \ :code:`x^k`\ , for \ :code:`k`\  less to \ :code:`maxdeg`\ . The operation returns "failed" when the elements are not coprime modulo \ :code:`prime`\ .
 
 .. _l47656e45784575636c6964-746573744d6f64756c7573:
 
@@ -53,6 +53,6 @@ The equation \ ``Af+Bg=h``\  and its generalization to \ ``n``\  polynomials is 
    pair: GenExEuclid; testModulus
 
 :spadfun:`testModulus`\: (R, \ :ref:`List <l4c697374>`\  BP) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``testModulus(p, lp)``\  returns \ ``true``\  if the prime \ ``p``\  is valid for the list of polynomials \ ``lp``\ , i.e. preserves the degree and they remain relatively prime.
+  \ :code:`testModulus(p, lp)`\  returns \ :code:`true`\  if the prime \ :code:`p`\  is valid for the list of polynomials \ :code:`lp`\ , i.e. preserves the degree and they remain relatively prime.
 
 

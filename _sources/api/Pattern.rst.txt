@@ -35,7 +35,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; *
 
 :spadfun:`\*`\: (%, %) -> % 
-  \ ``a * b``\  returns the pattern \ ``a * b``\ .
+  \ :code:`a * b`\  returns the pattern \ :code:`a * b`\ .
 
 .. _l5061747465726e-2b:
 
@@ -43,7 +43,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; +
 
 :spadfun:`+`\: (%, %) -> % 
-  \ ``a + b``\  returns the pattern \ ``a + b``\ .
+  \ :code:`a + b`\  returns the pattern \ :code:`a + b`\ .
 
 .. _l5061747465726e-2f:
 
@@ -51,7 +51,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; /
 
 :spadfun:`/`\: (%, %) -> % 
-  \ ``a / b``\  returns the pattern \ ``a / b``\ .
+  \ :code:`a / b`\  returns the pattern \ :code:`a / b`\ .
 
 .. _l5061747465726e-3d:
 
@@ -64,14 +64,14 @@ Patterns for use by the pattern matcher.
    pair: Pattern; ^
 
 :spadfun:`^`\: (%, %) -> % 
-  \ ``a ^ b``\  returns the pattern \ ``a ^ b``\ .
+  \ :code:`a ^ b`\  returns the pattern \ :code:`a ^ b`\ .
 
 
 .. index::
    pair: Pattern; ^
 
 :spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``a ^ n``\  returns the pattern \ ``a ^ n``\ .
+  \ :code:`a ^ n`\  returns the pattern \ :code:`a ^ n`\ .
 
 .. _l5061747465726e-7e3d:
 
@@ -84,7 +84,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; addBadValue
 
 :spadfun:`addBadValue`\: (%, \ :ref:`Any <l416e79>`\ ) -> % 
-  \ ``addBadValue(p, v)``\  adds \ ``v``\  to the list of "bad values" for \ ``p``\ . Note: \ ``p``\  is not allowed to match any of its "bad values".
+  \ :code:`addBadValue(p, v)`\  adds \ :code:`v`\  to the list of "bad values" for \ :code:`p`\ . Note: \ :code:`p`\  is not allowed to match any of its "bad values".
 
 .. _l5061747465726e-636f65726365:
 
@@ -105,7 +105,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; constant?
 
 :spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``constant?(p)``\  tests if \ ``p``\  contains no matching variables.
+  \ :code:`constant?(p)`\  tests if \ :code:`p`\  contains no matching variables.
 
 .. _l5061747465726e-636f6e76657274:
 
@@ -113,7 +113,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; convert
 
 :spadfun:`convert`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``convert([a1, ..., an])``\  returns the pattern \ ``[a1, ..., an]``\ .
+  \ :code:`convert([a1, ..., an])`\  returns the pattern \ :code:`[a1, ..., an]`\ .
 
 .. _l5061747465726e-636f7079:
 
@@ -121,7 +121,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; copy
 
 :spadfun:`copy`\: % -> % 
-  \ ``copy(p)``\  returns a recursive copy of \ ``p``\ .
+  \ :code:`copy(p)`\  returns a recursive copy of \ :code:`p`\ .
 
 .. _l5061747465726e-6465707468:
 
@@ -129,7 +129,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; depth
 
 :spadfun:`depth`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``depth(p)``\  returns the nesting level of \ ``p``\ .
+  \ :code:`depth(p)`\  returns the nesting level of \ :code:`p`\ .
 
 .. _l5061747465726e-656c74:
 
@@ -137,7 +137,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; elt
 
 :spadfun:`elt`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
-  \ ``elt(op, [a1, ..., an])``\  returns \ ``op(a1, ..., an)``\ .
+  \ :code:`elt(op, [a1, ..., an])`\  returns \ :code:`op(a1, ..., an)`\ .
 
 .. _l5061747465726e-67656e657269633f:
 
@@ -145,7 +145,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; generic?
 
 :spadfun:`generic?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``generic?(p)``\  tests if \ ``p``\  is a single matching variable.
+  \ :code:`generic?(p)`\  tests if \ :code:`p`\  is a single matching variable.
 
 .. _l5061747465726e-67657442616456616c756573:
 
@@ -153,7 +153,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; getBadValues
 
 :spadfun:`getBadValues`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Any <l416e79>`\  
-  \ ``getBadValues(p)``\  returns the list of "bad values" for \ ``p``\ . Note: \ ``p``\  is not allowed to match any of its "bad values".
+  \ :code:`getBadValues(p)`\  returns the list of "bad values" for \ :code:`p`\ . Note: \ :code:`p`\  is not allowed to match any of its "bad values".
 
 .. _l5061747465726e-6861735072656469636174653f:
 
@@ -161,7 +161,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; hasPredicate?
 
 :spadfun:`hasPredicate?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``hasPredicate?(p)``\  tests if \ ``p``\  has predicates attached to it.
+  \ :code:`hasPredicate?(p)`\  tests if \ :code:`p`\  has predicates attached to it.
 
 .. _l5061747465726e-686173546f705072656469636174653f:
 
@@ -169,7 +169,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; hasTopPredicate?
 
 :spadfun:`hasTopPredicate?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``hasTopPredicate?(p)``\  tests if \ ``p``\  has a top-level predicate.
+  \ :code:`hasTopPredicate?(p)`\  tests if \ :code:`p`\  has a top-level predicate.
 
 .. _l5061747465726e-696e523f:
 
@@ -177,7 +177,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; inR?
 
 :spadfun:`inR?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``inR?(p)``\  tests if \ ``p``\  is an atom (i.e. an element of \ ``R``\ ).
+  \ :code:`inR?(p)`\  tests if \ :code:`p`\  is an atom (i.e. an element of \ :code:`R`\ ).
 
 .. _l5061747465726e-697345787074:
 
@@ -185,7 +185,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isExpt
 
 :spadfun:`isExpt`\: % -> Union(Record(val: %, exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), failed) 
-  \ ``isExpt(p)``\  returns \ ``[q, n]``\  if \ ``n > 0``\  and \ ``p = q ^ n``\ , and "failed" otherwise.
+  \ :code:`isExpt(p)`\  returns \ :code:`[q, n]`\  if \ :code:`n > 0`\  and \ :code:`p = q ^ n`\ , and "failed" otherwise.
 
 .. _l5061747465726e-69734c697374:
 
@@ -193,7 +193,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isList
 
 :spadfun:`isList`\: % -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``isList(p)``\  returns \ ``[a1, ..., an]``\  if \ ``p = [a1, ..., an]``\ , "failed" otherwise.
+  \ :code:`isList(p)`\  returns \ :code:`[a1, ..., an]`\  if \ :code:`p = [a1, ..., an]`\ , "failed" otherwise.
 
 .. _l5061747465726e-69734f70:
 
@@ -201,14 +201,14 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isOp
 
 :spadfun:`isOp`\: % -> Union(Record(op: \ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , arg: \ :ref:`List <l4c697374>`\  %), failed) 
-  \ ``isOp(p)``\  returns \ ``[op, [a1, ..., an]]``\  if \ ``p = op(a1, ..., an)``\ , and "failed" otherwise.
+  \ :code:`isOp(p)`\  returns \ :code:`[op, [a1, ..., an]]`\  if \ :code:`p = op(a1, ..., an)`\ , and "failed" otherwise.
 
 
 .. index::
    pair: Pattern; isOp
 
 :spadfun:`isOp`\: (%, \ :ref:`BasicOperator <l42617369634f70657261746f72>`\ ) -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``isOp(p, op)``\  returns \ ``[a1, ..., an]``\  if \ ``p = op(a1, ..., an)``\ , and "failed" otherwise.
+  \ :code:`isOp(p, op)`\  returns \ :code:`[a1, ..., an]`\  if \ :code:`p = op(a1, ..., an)`\ , and "failed" otherwise.
 
 .. _l5061747465726e-6973506c7573:
 
@@ -216,7 +216,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isPlus
 
 :spadfun:`isPlus`\: % -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``isPlus(p)``\  returns \ ``[a1, ..., an]``\  if \ ``n > 1``\  and \ ``p = a1 + ... + an``\ , and "failed" otherwise.
+  \ :code:`isPlus(p)`\  returns \ :code:`[a1, ..., an]`\  if \ :code:`n > 1`\  and \ :code:`p = a1 + ... + an`\ , and "failed" otherwise.
 
 .. _l5061747465726e-6973506f776572:
 
@@ -224,7 +224,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isPower
 
 :spadfun:`isPower`\: % -> Union(Record(val: %, exponent: %), failed) 
-  \ ``isPower(p)``\  returns \ ``[a, b]``\  if \ ``p = a ^ b``\ , and "failed" otherwise.
+  \ :code:`isPower(p)`\  returns \ :code:`[a, b]`\  if \ :code:`p = a ^ b`\ , and "failed" otherwise.
 
 .. _l5061747465726e-697351756f7469656e74:
 
@@ -232,7 +232,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isQuotient
 
 :spadfun:`isQuotient`\: % -> Union(Record(num: %, den: %), failed) 
-  \ ``isQuotient(p)``\  returns \ ``[a, b]``\  if \ ``p = a / b``\ , and "failed" otherwise.
+  \ :code:`isQuotient(p)`\  returns \ :code:`[a, b]`\  if \ :code:`p = a / b`\ , and "failed" otherwise.
 
 .. _l5061747465726e-697354696d6573:
 
@@ -240,7 +240,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; isTimes
 
 :spadfun:`isTimes`\: % -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``isTimes(p)``\  returns \ ``[a1, ..., an]``\  if \ ``n > 1``\  and \ ``p = a1 * ... * an``\ , and "failed" otherwise.
+  \ :code:`isTimes(p)`\  returns \ :code:`[a1, ..., an]`\  if \ :code:`n > 1`\  and \ :code:`p = a1 * ... * an`\ , and "failed" otherwise.
 
 .. _l5061747465726e-6c61746578:
 
@@ -253,7 +253,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; multiple?
 
 :spadfun:`multiple?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``multiple?(p)``\  tests if \ ``p``\  is a single matching variable allowing list matching or multiple term matching in a sum or product.
+  \ :code:`multiple?(p)`\  tests if \ :code:`p`\  is a single matching variable allowing list matching or multiple term matching in a sum or product.
 
 .. _l5061747465726e-6f7074696f6e616c3f:
 
@@ -261,7 +261,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; optional?
 
 :spadfun:`optional?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``optional?(p)``\  tests if \ ``p``\  is a single matching variable which can match an identity.
+  \ :code:`optional?(p)`\  tests if \ :code:`p`\  is a single matching variable which can match an identity.
 
 .. _l5061747465726e-6f707470616972:
 
@@ -269,7 +269,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; optpair
 
 :spadfun:`optpair`\: \ :ref:`List <l4c697374>`\  % -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``optpair(l)``\  returns \ ``l``\  has the form \ ``[a, b]``\  and a is optional, and "failed" otherwise.
+  \ :code:`optpair(l)`\  returns \ :code:`l`\  has the form \ :code:`[a, b]`\  and a is optional, and "failed" otherwise.
 
 .. _l5061747465726e-7061747465726e5661726961626c65:
 
@@ -277,7 +277,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; patternVariable
 
 :spadfun:`patternVariable`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``patternVariable(x, c?, o?, m?)``\  creates a pattern variable \ ``x``\ , which is constant if \ ``c? = true``\ , optional if \ ``o? = true``\ , and multiple if \ ``m? = true``\ .
+  \ :code:`patternVariable(x, c?, o?, m?)`\  creates a pattern variable \ :code:`x`\ , which is constant if \ :code:`c? = true`\ , optional if \ :code:`o? = true`\ , and multiple if \ :code:`m? = true`\ .
 
 .. _l5061747465726e-70726564696361746573:
 
@@ -285,7 +285,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; predicates
 
 :spadfun:`predicates`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Any <l416e79>`\  
-  \ ``predicates(p)``\  returns \ ``[p1, ..., pn]``\  such that the predicate attached to \ ``p``\  is \ ``p1``\  and ... and \ ``pn``\ .
+  \ :code:`predicates(p)`\  returns \ :code:`[p1, ..., pn]`\  such that the predicate attached to \ :code:`p`\  is \ :code:`p1`\  and ... and \ :code:`pn`\ .
 
 .. _l5061747465726e-71756f7465643f:
 
@@ -293,7 +293,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; quoted?
 
 :spadfun:`quoted?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``quoted?(p)``\  tests if \ ``p``\  is of the form \ ``'s``\  for a symbol \ ``s``\ .
+  \ :code:`quoted?(p)`\  tests if \ :code:`p`\  is of the form \ :code:`'s`\  for a symbol \ :code:`s`\ .
 
 .. _l5061747465726e-726573657442616456616c756573:
 
@@ -301,7 +301,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; resetBadValues
 
 :spadfun:`resetBadValues`\: % -> % 
-  \ ``resetBadValues(p)``\  initializes the list of "bad values" for \ ``p``\  to \ ``[]``\ . Note: \ ``p``\  is not allowed to match any of its "bad values".
+  \ :code:`resetBadValues(p)`\  initializes the list of "bad values" for \ :code:`p`\  to \ :code:`[]`\ . Note: \ :code:`p`\  is not allowed to match any of its "bad values".
 
 .. _l5061747465726e-72657472616374:
 
@@ -327,7 +327,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; setPredicates
 
 :spadfun:`setPredicates`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Any <l416e79>`\ ) -> % 
-  \ ``setPredicates(p, [p1, ..., pn])``\  attaches the predicate \ ``p1``\  and ... and \ ``pn``\  to \ ``p``\ .
+  \ :code:`setPredicates(p, [p1, ..., pn])`\  attaches the predicate \ :code:`p1`\  and ... and \ :code:`pn`\  to \ :code:`p`\ .
 
 .. _l5061747465726e-736574546f70507265646963617465:
 
@@ -335,7 +335,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; setTopPredicate
 
 :spadfun:`setTopPredicate`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Any <l416e79>`\ ) -> % 
-  \ ``setTopPredicate(x, [a1, ..., an], f)``\  returns \ ``x``\  with the top-level predicate set to \ ``f(a1, ..., an)``\ .
+  \ :code:`setTopPredicate(x, [a1, ..., an], f)`\  returns \ :code:`x`\  with the top-level predicate set to \ :code:`f(a1, ..., an)`\ .
 
 .. _l5061747465726e-73796d626f6c3f:
 
@@ -343,7 +343,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; symbol?
 
 :spadfun:`symbol?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``symbol?(p)``\  tests if \ ``p``\  is a symbol.
+  \ :code:`symbol?(p)`\  tests if \ :code:`p`\  is a symbol.
 
 .. _l5061747465726e-746f70507265646963617465:
 
@@ -351,7 +351,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; topPredicate
 
 :spadfun:`topPredicate`\: % -> Record(var: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , pred: \ :ref:`Any <l416e79>`\ ) 
-  \ ``topPredicate(x)``\  returns \ ``[[a1, ..., an], f]``\  where the top-level predicate of \ ``x``\  is \ ``f(a1, ..., an)``\ . Note: \ ``n``\  is 0 if \ ``x``\  has no top-level predicate.
+  \ :code:`topPredicate(x)`\  returns \ :code:`[[a1, ..., an], f]`\  where the top-level predicate of \ :code:`x`\  is \ :code:`f(a1, ..., an)`\ . Note: \ :code:`n`\  is 0 if \ :code:`x`\  has no top-level predicate.
 
 .. _l5061747465726e-7661726961626c6573:
 
@@ -359,7 +359,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; variables
 
 :spadfun:`variables`\: % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``variables(p)``\  returns the list of matching variables appearing in \ ``p``\ .
+  \ :code:`variables(p)`\  returns the list of matching variables appearing in \ :code:`p`\ .
 
 .. _l5061747465726e-7769746850726564696361746573:
 
@@ -367,7 +367,7 @@ Patterns for use by the pattern matcher.
    pair: Pattern; withPredicates
 
 :spadfun:`withPredicates`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Any <l416e79>`\ ) -> % 
-  \ ``withPredicates(p, [p1, ..., pn])``\  makes a copy of \ ``p``\  and attaches the predicate \ ``p1``\  and ... and \ ``pn``\  to the copy, which is returned.
+  \ :code:`withPredicates(p, [p1, ..., pn])`\  makes a copy of \ :code:`p`\  and attaches the predicate \ :code:`p1`\  and ... and \ :code:`pn`\  to the copy, which is returned.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

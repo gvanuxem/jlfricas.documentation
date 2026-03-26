@@ -54,7 +54,7 @@
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p></li>
 </ul>
-<p>The domain <a class="reference internal" href="#l5061727469616c4672616374696f6e"><span class="std std-ref">PartialFraction</span></a> implements partial fractions over a euclidean domain <code class="docutils literal notranslate"><span class="pre">R</span></code>. This requirement on the argument domain allows us to normalize the fractions. Of particular interest are the 2 forms for these fractions. The <code class="docutils literal notranslate"><span class="pre">compact\</span> <span class="pre">``''</span></code> form has only one fractional term per prime in the denominator, while the <code class="docutils literal notranslate"><span class="pre">``p</span></code>-adic<code class="docutils literal notranslate"><span class="pre">''</span></code> form expands each numerator <code class="docutils literal notranslate"><span class="pre">p</span></code>-adically via the prime <code class="docutils literal notranslate"><span class="pre">p</span></code> in the denominator. For computational efficiency, the compact form is used, though the <code class="docutils literal notranslate"><span class="pre">p</span></code>-adic form may be gotten by calling the function <a class="reference internal" href="#l5061727469616c4672616374696f6e-70616469634672616374696f6e"><span class="std std-ref">padicFraction</span></a>. For a general euclidean domain, it is not known how to factor the denominator. Thus the function <a class="reference internal" href="#l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e"><span class="std std-ref">partialFraction</span></a> takes an element of Factored(R) as its second argument.</p>
+<p>The domain <a class="reference internal" href="#l5061727469616c4672616374696f6e"><span class="std std-ref">PartialFraction</span></a> implements partial fractions over a euclidean domain <code class="code docutils literal notranslate"><span class="pre">R</span></code>. This requirement on the argument domain allows us to normalize the fractions. Of particular interest are the 2 forms for these fractions. The <a href="#id1"><span class="problematic" id="id2">``</span></a>compact<code class="code docutils literal notranslate"><span class="pre">''</span></code> form has only one fractional term per prime in the denominator, while the :code:<a href="#id3"><span class="problematic" id="id4">``</span></a><cite>p</cite>-adic<code class="code docutils literal notranslate"><span class="pre">''</span></code> form expands each numerator <code class="code docutils literal notranslate"><span class="pre">p</span></code>-adically via the prime <code class="code docutils literal notranslate"><span class="pre">p</span></code> in the denominator. For computational efficiency, the compact form is used, though the <code class="code docutils literal notranslate"><span class="pre">p</span></code>-adic form may be gotten by calling the function <a class="reference internal" href="#l5061727469616c4672616374696f6e-70616469634672616374696f6e"><span class="std std-ref">padicFraction</span></a>. For a general euclidean domain, it is not known how to factor the denominator. Thus the function <a class="reference internal" href="#l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e"><span class="std std-ref">partialFraction</span></a> takes an element of Factored(R) as its second argument.</p>
 <dl class="simple" id="l5061727469616c4672616374696f6e-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -132,13 +132,13 @@
 </dd>
 </dl>
 <dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> sums up the components of the partial fraction and returns a single fraction.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> R</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(p)</span></code> sums up the components of the partial fraction and returns a single fraction.</p>
 </dd>
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(f)</span></code> takes a fraction with numerator and denominator in factored form and creates a partial fraction. It is necessary for the parts to be factored because it is not known in general how to factor elements of <code class="docutils literal notranslate"><span class="pre">R</span></code> and this is needed to decompose into partial fractions.</p>
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(f)</span></code> takes a fraction with numerator and denominator in factored form and creates a partial fraction. It is necessary for the parts to be factored because it is not known in general how to factor elements of <code class="code docutils literal notranslate"><span class="pre">R</span></code> and this is needed to decompose into partial fractions.</p>
 </dd>
 <dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
@@ -150,7 +150,7 @@
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-636f6d706163744672616374696f6e"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">compactFraction</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">compactFraction(p)</span></code> normalizes the partial fraction <code class="docutils literal notranslate"><span class="pre">p</span></code> to the compact representation. In this form, the partial fraction has only one fractional term per prime in the denominator.</p>
+<dt><span class="spadfun">compactFraction</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">compactFraction(p)</span></code> normalizes the partial fraction <code class="code docutils literal notranslate"><span class="pre">p</span></code> to the compact representation. In this form, the partial fraction has only one fractional term per prime in the denominator.</p>
 </dd>
 </dl>
 <dl class="simple" id="l5061727469616c4672616374696f6e-646976696465">
@@ -180,7 +180,7 @@
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-6672616374696f6e616c5465726d73"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">fractionalTerms</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(num: R, d_fact: R, d_exp: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fractionalTerms(p)</span></code> extracts the fractional part of <code class="docutils literal notranslate"><span class="pre">p</span></code> to a list of Record(num : <code class="docutils literal notranslate"><span class="pre">R</span></code>, den : Factored <code class="docutils literal notranslate"><span class="pre">R</span></code>). This returns [] if there is no fractional part.</p>
+<dt><span class="spadfun">fractionalTerms</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(num: R, d_fact: R, d_exp: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">fractionalTerms(p)</span></code> extracts the fractional part of <code class="code docutils literal notranslate"><span class="pre">p</span></code> to a list of Record(num : <code class="code docutils literal notranslate"><span class="pre">R</span></code>, den : Factored <code class="code docutils literal notranslate"><span class="pre">R</span></code>). This returns [] if there is no fractional part.</p>
 </dd>
 </dl>
 <dl class="simple" id="l5061727469616c4672616374696f6e-676364">
@@ -230,7 +230,7 @@
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-6e756d6265724f664672616374696f6e616c5465726d73"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">numberOfFractionalTerms</span>: % -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfFractionalTerms(p)</span></code> computes the number of fractional terms in <code class="docutils literal notranslate"><span class="pre">p</span></code>. This returns 0 if there is no fractional part.</p>
+<dt><span class="spadfun">numberOfFractionalTerms</span>: % -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">numberOfFractionalTerms(p)</span></code> computes the number of fractional terms in <code class="code docutils literal notranslate"><span class="pre">p</span></code>. This returns 0 if there is no fractional part.</p>
 </dd>
 </dl>
 <dl class="simple" id="l5061727469616c4672616374696f6e-6f6e653f">
@@ -242,19 +242,19 @@
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-7061646963616c6c79457870616e64"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">padicallyExpand</span>: (R, R) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">padicallyExpand(p,</span> <span class="pre">x)</span></code> is a utility function that expands the second argument <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">``p</span></code>-adically<code class="docutils literal notranslate"><span class="pre">''</span></code> in the first.</p>
+<dt><span class="spadfun">padicallyExpand</span>: (R, R) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">padicallyExpand(p,</span> <span class="pre">x)</span></code> is a utility function that expands the second argument <code class="code docutils literal notranslate"><span class="pre">x</span></code> :code:<a href="#id5"><span class="problematic" id="id6">``</span></a><cite>p</cite>-adically<code class="code docutils literal notranslate"><span class="pre">''</span></code> in the first.</p>
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-70616469634672616374696f6e"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">padicFraction</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">padicFraction(q)</span></code> expands the fraction <code class="docutils literal notranslate"><span class="pre">p</span></code>-adically in the primes <code class="docutils literal notranslate"><span class="pre">p</span></code> in the denominator of <code class="docutils literal notranslate"><span class="pre">q</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">padicFraction(3/(2^2))</span> <span class="pre">=</span> <span class="pre">1/2</span> <span class="pre">+</span> <span class="pre">1/(2^2)</span></code>. Use <a class="reference internal" href="#l5061727469616c4672616374696f6e-636f6d706163744672616374696f6e"><span class="std std-ref">compactFraction</span></a> to return to compact form.</p>
+<dt><span class="spadfun">padicFraction</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">padicFraction(q)</span></code> expands the fraction <code class="code docutils literal notranslate"><span class="pre">p</span></code>-adically in the primes <code class="code docutils literal notranslate"><span class="pre">p</span></code> in the denominator of <code class="code docutils literal notranslate"><span class="pre">q</span></code>. For example, <code class="code docutils literal notranslate"><span class="pre">padicFraction(3/(2^2))</span> <span class="pre">=</span> <span class="pre">1/2</span> <span class="pre">+</span> <span class="pre">1/(2^2)</span></code>. Use <a class="reference internal" href="#l5061727469616c4672616374696f6e-636f6d706163744672616374696f6e"><span class="std std-ref">compactFraction</span></a> to return to compact form.</p>
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">partialFraction</span>: (R, <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">partialFraction(numer,</span> <span class="pre">denom)</span></code> is the main function for constructing partial fractions. The second argument is the denominator and should be factored.</p>
+<dt><span class="spadfun">partialFraction</span>: (R, <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">partialFraction(numer,</span> <span class="pre">denom)</span></code> is the main function for constructing partial fractions. The second argument is the denominator and should be factored.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-10">
-<dt><span class="spadfun">partialFraction</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> R -&gt; % if R has <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">partialFraction(f)</span></code> is a user friendly interface for partial fractions when <code class="docutils literal notranslate"><span class="pre">f</span></code> is a fraction of UniqueFactorizationDomain.</p>
+<dt><span class="spadfun">partialFraction</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> R -&gt; % if R has <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">partialFraction(f)</span></code> is a user friendly interface for partial fractions when <code class="code docutils literal notranslate"><span class="pre">f</span></code> is a fraction of UniqueFactorizationDomain.</p>
 </dd>
 </dl>
 <dl class="simple" id="l5061727469616c4672616374696f6e-706c656e617279506f776572">
@@ -324,7 +324,7 @@
 </dd>
 </dl>
 <span id="l5061727469616c4672616374696f6e-77686f6c6550617274"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">wholePart</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">wholePart(p)</span></code> extracts the whole part of the partial fraction <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<dt><span class="spadfun">wholePart</span>: % -&gt; R</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">wholePart(p)</span></code> extracts the whole part of the partial fraction <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l5061727469616c4672616374696f6e-7a65726f3f">
@@ -433,7 +433,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

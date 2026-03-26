@@ -17,28 +17,28 @@ The purpose of this package is to provide reasonable plots of functions with sin
    pair: TwoDimensionalPlotClipping; clip
 
 :spadfun:`clip`\: (\ :ref:`Plot <l506c6f74>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clip(p, frac, sc)``\  performs two-dimensional clipping on a plot, \ ``p``\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the graph of one variable \ ``y = f(x)``\ ; the fraction parameter is specified by \ ``frac``\  and the scale parameter is specified by \ ``sc``\  for use in the \ :spadfun:`clip`\  function.
+  \ :code:`clip(p, frac, sc)`\  performs two-dimensional clipping on a plot, \ :code:`p`\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the graph of one variable \ :code:`y = f(x)`\ ; the fraction parameter is specified by \ :code:`frac`\  and the scale parameter is specified by \ :code:`sc`\  for use in the \ :spadfun:`clip`\  function.
 
 
 .. index::
    pair: TwoDimensionalPlotClipping; clip
 
 :spadfun:`clip`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clip(ll)``\  performs two-dimensional clipping on a list of lists of points, \ ``ll``\ ; the default parameters \ ``1/2``\  for the fraction and \ ``5/1``\  for the scale are used in the \pspadfun{iClipParametric} subroutine, which is called by this function.
+  \ :code:`clip(ll)`\  performs two-dimensional clipping on a list of lists of points, \ :code:`ll`\ ; the default parameters \ :code:`1/2`\  for the fraction and \ :code:`5/1`\  for the scale are used in the \pspadfun{iClipParametric} subroutine, which is called by this function.
 
 
 .. index::
    pair: TwoDimensionalPlotClipping; clip
 
 :spadfun:`clip`\: \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clip(l)``\  performs two-dimensional clipping on a curve \ ``l``\ , which is a list of points; the default parameters \ ``1/2``\  for the fraction and \ ``5/1``\  for the scale are used in the \pspadfun{iClipParametric} subroutine, which is called by this function.
+  \ :code:`clip(l)`\  performs two-dimensional clipping on a curve \ :code:`l`\ , which is a list of points; the default parameters \ :code:`1/2`\  for the fraction and \ :code:`5/1`\  for the scale are used in the \pspadfun{iClipParametric} subroutine, which is called by this function.
 
 
 .. index::
    pair: TwoDimensionalPlotClipping; clip
 
 :spadfun:`clip`\: \ :ref:`Plot <l506c6f74>`\  -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clip(p)``\  performs two-dimensional clipping on a plot, \ ``p``\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the graph of one variable, \ ``y = f(x)``\ ; the default parameters \ ``1/4``\  for the fraction and \ ``5/1``\  for the scale are used in the \ :spadfun:`clip`\  function.
+  \ :code:`clip(p)`\  performs two-dimensional clipping on a plot, \ :code:`p`\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the graph of one variable, \ :code:`y = f(x)`\ ; the default parameters \ :code:`1/4`\  for the fraction and \ :code:`5/1`\  for the scale are used in the \ :spadfun:`clip`\  function.
 
 .. _l54776f44696d656e73696f6e616c506c6f74436c697070696e67-636c6970506172616d6574726963:
 
@@ -46,14 +46,14 @@ The purpose of this package is to provide reasonable plots of functions with sin
    pair: TwoDimensionalPlotClipping; clipParametric
 
 :spadfun:`clipParametric`\: (\ :ref:`Plot <l506c6f74>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clipParametric(p, frac, sc)``\  performs two-dimensional clipping on a plot, \ ``p``\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the parametric curve \ ``x = f(t)``\ , \ ``y = g(t)``\ ; the fraction parameter is specified by \ ``frac``\  and the scale parameter is specified by \ ``sc``\  for use in the \pspadfun{iClipParametric} subroutine, which is called by this function.
+  \ :code:`clipParametric(p, frac, sc)`\  performs two-dimensional clipping on a plot, \ :code:`p`\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the parametric curve \ :code:`x = f(t)`\ , \ :code:`y = g(t)`\ ; the fraction parameter is specified by \ :code:`frac`\  and the scale parameter is specified by \ :code:`sc`\  for use in the \pspadfun{iClipParametric} subroutine, which is called by this function.
 
 
 .. index::
    pair: TwoDimensionalPlotClipping; clipParametric
 
 :spadfun:`clipParametric`\: \ :ref:`Plot <l506c6f74>`\  -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clipParametric(p)``\  performs two-dimensional clipping on a plot, \ ``p``\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the parametric curve \ ``x = f(t)``\ , \ ``y = g(t)``\ ; the default parameters \ ``1/2``\  for the fraction and \ ``5/1``\  for the scale are used in the \pspadfun{iClipParametric} subroutine, which is called by this function.
+  \ :code:`clipParametric(p)`\  performs two-dimensional clipping on a plot, \ :code:`p`\ , from the domain \ :ref:`Plot <l506c6f74>`\  for the parametric curve \ :code:`x = f(t)`\ , \ :code:`y = g(t)`\ ; the default parameters \ :code:`1/2`\  for the fraction and \ :code:`5/1`\  for the scale are used in the \pspadfun{iClipParametric} subroutine, which is called by this function.
 
 .. _l54776f44696d656e73696f6e616c506c6f74436c697070696e67-636c69705769746852616e676573:
 
@@ -61,6 +61,6 @@ The purpose of this package is to provide reasonable plots of functions with sin
    pair: TwoDimensionalPlotClipping; clipWithRanges
 
 :spadfun:`clipWithRanges`\: (\ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> Record(brans: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , xValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , yValues: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) 
-  \ ``clipWithRanges(pointLists, xMin, xMax, yMin, yMax)``\  performs clipping on a list of lists of points, \ ``pointLists``\ . Clipping is done within the specified ranges of \ ``xMin``\ , \ ``xMax``\  and \ ``yMin``\ , \ ``yMax``\ . This function is used internally by the \pspadfun{iClipParametric} subroutine in this package.
+  \ :code:`clipWithRanges(pointLists, xMin, xMax, yMin, yMax)`\  performs clipping on a list of lists of points, \ :code:`pointLists`\ . Clipping is done within the specified ranges of \ :code:`xMin`\ , \ :code:`xMax`\  and \ :code:`yMin`\ , \ :code:`yMax`\ . This function is used internally by the \pspadfun{iClipParametric} subroutine in this package.
 
 

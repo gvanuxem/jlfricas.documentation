@@ -28,14 +28,14 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; *
 
 :spadfun:`\*`\: (%, E) -> % 
-  \ ``x * r``\  is the right scalar multiple of the scalar \ ``r``\  and the vector \ ``x``\ .
+  \ :code:`x * r`\  is the right scalar multiple of the scalar \ :code:`r`\  and the vector \ :code:`x`\ .
 
 
 .. index::
    pair: WSVector; *
 
 :spadfun:`\*`\: (E, %) -> % 
-  \ ``r*x``\  is the left scalar multiple of the scalar \ ``r``\  and the vector \ ``x``\ .
+  \ :code:`r*x`\  is the left scalar multiple of the scalar \ :code:`r`\  and the vector \ :code:`x`\ .
 
 
 \ :ref:`\* <l566563746f7243617465676f7279-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if E has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
@@ -46,7 +46,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; *
 
 :spadfun:`\*`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %) -> % 
-  \ ``n*a``\  scales the vector a by \ ``n``\ .
+  \ :code:`n*a`\  scales the vector a by \ :code:`n`\ .
 
 .. _l5753566563746f72-2b:
 
@@ -54,7 +54,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; +
 
 :spadfun:`+`\: (%, %) -> % 
-  \ ``a + b``\  is the vector addition. \ ``WS``\  error if dimensions are incompatible.
+  \ :code:`a + b`\  is the vector addition. \ :code:`WS`\  error if dimensions are incompatible.
 
 .. _l5753566563746f72-2d:
 
@@ -62,14 +62,14 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; -
 
 :spadfun:`-`\: % -> % 
-  \ ``-a``\  negates each element of the vector a.
+  \ :code:`-a`\  negates each element of the vector a.
 
 
 .. index::
    pair: WSVector; -
 
 :spadfun:`-`\: (%, %) -> % 
-  \ ``a - b``\  is the vector subtraction. \ ``WS``\  error if dimensions are incompatible.
+  \ :code:`a - b`\  is the vector subtraction. \ :code:`WS`\  error if dimensions are incompatible.
 
 .. _l5753566563746f72-3c3d:
 
@@ -134,7 +134,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSMatrix <l57534d6174726978>`\  E if E has \ :ref:`WSRing <l575352696e67>`\ 
-  \ ``coerce(v)``\  coerces inplace \ ``v``\  to a \ ``WS``\  matrix.
+  \ :code:`coerce(v)`\  coerces inplace \ :code:`v`\  to a \ :code:`WS`\  matrix.
 
 
 \ :ref:`coerce <l5753416767726567617465-636f65726365>`\ \: \ :ref:`List <l4c697374>`\  E -> % 
@@ -196,7 +196,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; cross
 
 :spadfun:`cross`\: (%, %) -> % 
-  \ ``cross(v1,v2)``\  computes the vector cross product of \ ``v1``\  and \ ``v2``\ .
+  \ :code:`cross(v1,v2)`\  computes the vector cross product of \ :code:`v1`\  and \ :code:`v2`\ .
 
 .. _l5753566563746f72-64656c657465:
 
@@ -227,7 +227,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; dot
 
 :spadfun:`dot`\: (%, %) -> E 
-  \ ``dot(v1, v2)``\  is the dot product of \ ``v1``\  and \ ``v2``\ .
+  \ :code:`dot(v1, v2)`\  is the dot product of \ :code:`v1`\  and \ :code:`v2`\ .
 
 .. _l5753566563746f72-656c74:
 
@@ -491,14 +491,14 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; jWSVector
 
 :spadfun:`jWSVector`\: \ :ref:`List <l4c697374>`\  E -> % 
-  \ ``jWSVector(list)``\  constructs \ ``list``\  as a WSVector.
+  \ :code:`jWSVector(list)`\  constructs \ :code:`list`\  as a WSVector.
 
 
 .. index::
    pair: WSVector; jWSVector
 
 :spadfun:`jWSVector`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSVector(str)``\  constructs \ ``str``\  as a WSVector. \ ``str``\  must be in the \ ``WS``\  language (list).
+  \ :code:`jWSVector(str)`\  constructs \ :code:`str`\  as a WSVector. \ :code:`str`\  must be in the \ :code:`WS`\  language (list).
 
 .. _l5753566563746f72-6c617374:
 
@@ -615,7 +615,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; norm
 
 :spadfun:`norm`\: % -> E 
-  \ ``norm(v)``\  computes the norm of the vector \ ``v``\ .
+  \ :code:`norm(v)`\  computes the norm of the vector \ :code:`v`\ .
 
 .. _l5753566563746f72-6e6f7468696e673f:
 
@@ -857,7 +857,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; transpose
 
 :spadfun:`transpose`\: % -> % 
-  \ ``transpose(v)``\  transposes \ ``v``\ . For esoteric purpose, and if you know what you are doing. There is only one type of vector in the Wolfram language. Should not be used, and for normal purpose, does nothing.
+  \ :code:`transpose(v)`\  transposes \ :code:`v`\ . For esoteric purpose, and if you know what you are doing. There is only one type of vector in the Wolfram language. Should not be used, and for normal purpose, does nothing.
 
 .. _l5753566563746f72-7472696d:
 
@@ -875,7 +875,7 @@ Julia Wolfram Symbolic vectors using the MathLink Julia package.
    pair: WSVector; vector
 
 :spadfun:`vector`\: \ :ref:`WSList <l57534c697374>`\  E -> % 
-  \ ``vector(list)``\  returns \ ``list``\  as a vector. Inplace coercion. \example{vector(range(5)}
+  \ :code:`vector(list)`\  returns \ :code:`list`\  as a vector. Inplace coercion. \example{vector(range(5)}
 
 .. _l5753566563746f72-7a65726f3f:
 

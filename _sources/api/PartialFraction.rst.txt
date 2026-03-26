@@ -10,7 +10,7 @@ PartialFraction R
 * R: \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 
-The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implements partial fractions over a euclidean domain \ ``R``\ . This requirement on the argument domain allows us to normalize the fractions. Of particular interest are the 2 forms for these fractions. The ``compact\ ``''``\  form has only one fractional term per prime in the denominator, while the \ ````p``\ -adic\ ``''``\  form expands each numerator \ ``p``\ -adically via the prime \ ``p``\  in the denominator. For computational efficiency, the compact form is used, though the \ ``p``\ -adic form may be gotten by calling the function \ :ref:`padicFraction <l5061727469616c4672616374696f6e-70616469634672616374696f6e>`\ . For a general euclidean domain, it is not known how to factor the denominator. Thus the function \ :ref:`partialFraction <l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e>`\  takes an element of Factored(R) as its second argument.
+The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implements partial fractions over a euclidean domain \ :code:`R`\ . This requirement on the argument domain allows us to normalize the fractions. Of particular interest are the 2 forms for these fractions. The ``compact\ :code:`''`\  form has only one fractional term per prime in the denominator, while the \ :code:```p`\ -adic\ :code:`''`\  form expands each numerator \ :code:`p`\ -adically via the prime \ :code:`p`\  in the denominator. For computational efficiency, the compact form is used, though the \ :code:`p`\ -adic form may be gotten by calling the function \ :ref:`padicFraction <l5061727469616c4672616374696f6e-70616469634672616374696f6e>`\ . For a general euclidean domain, it is not known how to factor the denominator. Thus the function \ :ref:`partialFraction <l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e>`\  takes an element of Factored(R) as its second argument.
 
 
 .. _l5061727469616c4672616374696f6e-30:
@@ -125,7 +125,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  R 
-  \ ``coerce(p)``\  sums up the components of the partial fraction and returns a single fraction.
+  \ :code:`coerce(p)`\  sums up the components of the partial fraction and returns a single fraction.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -136,7 +136,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; coerce
 
 :spadfun:`coerce`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Factored <l466163746f726564>`\  R -> % 
-  \ ``coerce(f)``\  takes a fraction with numerator and denominator in factored form and creates a partial fraction. It is necessary for the parts to be factored because it is not known in general how to factor elements of \ ``R``\  and this is needed to decompose into partial fractions.
+  \ :code:`coerce(f)`\  takes a fraction with numerator and denominator in factored form and creates a partial fraction. It is necessary for the parts to be factored because it is not known in general how to factor elements of \ :code:`R`\  and this is needed to decompose into partial fractions.
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -157,7 +157,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; compactFraction
 
 :spadfun:`compactFraction`\: % -> % 
-  \ ``compactFraction(p)``\  normalizes the partial fraction \ ``p``\  to the compact representation. In this form, the partial fraction has only one fractional term per prime in the denominator.
+  \ :code:`compactFraction(p)`\  normalizes the partial fraction \ :code:`p`\  to the compact representation. In this form, the partial fraction has only one fractional term per prime in the denominator.
 
 .. _l5061727469616c4672616374696f6e-646976696465:
 
@@ -199,7 +199,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; fractionalTerms
 
 :spadfun:`fractionalTerms`\: % -> \ :ref:`List <l4c697374>`\  Record(num: R, d_fact: R, d_exp: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``fractionalTerms(p)``\  extracts the fractional part of \ ``p``\  to a list of Record(num : \ ``R``\ , den : Factored \ ``R``\ ). This returns [] if there is no fractional part.
+  \ :code:`fractionalTerms(p)`\  extracts the fractional part of \ :code:`p`\  to a list of Record(num : \ :code:`R`\ , den : Factored \ :code:`R`\ ). This returns [] if there is no fractional part.
 
 .. _l5061727469616c4672616374696f6e-676364:
 
@@ -272,7 +272,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; numberOfFractionalTerms
 
 :spadfun:`numberOfFractionalTerms`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``numberOfFractionalTerms(p)``\  computes the number of fractional terms in \ ``p``\ . This returns 0 if there is no fractional part.
+  \ :code:`numberOfFractionalTerms(p)`\  computes the number of fractional terms in \ :code:`p`\ . This returns 0 if there is no fractional part.
 
 .. _l5061727469616c4672616374696f6e-6f6e653f:
 
@@ -290,7 +290,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; padicallyExpand
 
 :spadfun:`padicallyExpand`\: (R, R) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
-  \ ``padicallyExpand(p, x)``\  is a utility function that expands the second argument \ ``x``\  \ ````p``\ -adically\ ``''``\  in the first.
+  \ :code:`padicallyExpand(p, x)`\  is a utility function that expands the second argument \ :code:`x`\  \ :code:```p`\ -adically\ :code:`''`\  in the first.
 
 .. _l5061727469616c4672616374696f6e-70616469634672616374696f6e:
 
@@ -298,7 +298,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; padicFraction
 
 :spadfun:`padicFraction`\: % -> % 
-  \ ``padicFraction(q)``\  expands the fraction \ ``p``\ -adically in the primes \ ``p``\  in the denominator of \ ``q``\ . For example, \ ``padicFraction(3/(2^2)) = 1/2 + 1/(2^2)``\ . Use \ :ref:`compactFraction <l5061727469616c4672616374696f6e-636f6d706163744672616374696f6e>`\  to return to compact form.
+  \ :code:`padicFraction(q)`\  expands the fraction \ :code:`p`\ -adically in the primes \ :code:`p`\  in the denominator of \ :code:`q`\ . For example, \ :code:`padicFraction(3/(2^2)) = 1/2 + 1/(2^2)`\ . Use \ :ref:`compactFraction <l5061727469616c4672616374696f6e-636f6d706163744672616374696f6e>`\  to return to compact form.
 
 .. _l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e:
 
@@ -306,14 +306,14 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; partialFraction
 
 :spadfun:`partialFraction`\: (R, \ :ref:`Factored <l466163746f726564>`\  R) -> % 
-  \ ``partialFraction(numer, denom)``\  is the main function for constructing partial fractions. The second argument is the denominator and should be factored.
+  \ :code:`partialFraction(numer, denom)`\  is the main function for constructing partial fractions. The second argument is the denominator and should be factored.
 
 
 .. index::
    pair: PartialFraction; partialFraction
 
 :spadfun:`partialFraction`\: \ :ref:`Fraction <l4672616374696f6e>`\  R -> % if R has \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
-  \ ``partialFraction(f)``\  is a user friendly interface for partial fractions when \ ``f``\  is a fraction of UniqueFactorizationDomain.
+  \ :code:`partialFraction(f)`\  is a user friendly interface for partial fractions when \ :code:`f`\  is a fraction of UniqueFactorizationDomain.
 
 .. _l5061727469616c4672616374696f6e-706c656e617279506f776572:
 
@@ -405,7 +405,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; wholePart
 
 :spadfun:`wholePart`\: % -> R 
-  \ ``wholePart(p)``\  extracts the whole part of the partial fraction \ ``p``\ .
+  \ :code:`wholePart(p)`\  extracts the whole part of the partial fraction \ :code:`p`\ .
 
 .. _l5061727469616c4672616374696f6e-7a65726f3f:
 

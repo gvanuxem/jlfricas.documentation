@@ -23,7 +23,7 @@ This package provides functions for integration, limited integration, extended i
    pair: PureAlgebraicIntegration; palgint
 
 :spadfun:`palgint`\: (F, \ :ref:`Kernel <l4b65726e656c>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F) -> \ :ref:`IntegrationResult <l496e746567726174696f6e526573756c74>`\  F 
-  \ ``palgint(f, x, y)``\  returns the integral of \ ``f(x, y)dx``\  where \ ``y``\  is an algebraic function of \ ``x``\ .
+  \ :code:`palgint(f, x, y)`\  returns the integral of \ :code:`f(x, y)dx`\  where \ :code:`y`\  is an algebraic function of \ :code:`x`\ .
 
 .. _l50757265416c67656272616963496e746567726174696f6e-70616c674c4f4445:
 
@@ -31,7 +31,7 @@ This package provides functions for integration, limited integration, extended i
    pair: PureAlgebraicIntegration; palgLODE
 
 :spadfun:`palgLODE`\: (L, F, \ :ref:`Kernel <l4b65726e656c>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F, \ :ref:`Symbol <l53796d626f6c>`\ ) -> Record(particular: Union(F, failed), basis: \ :ref:`List <l4c697374>`\  F) if L has \ :ref:`LinearOrdinaryDifferentialOperatorCategory <l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7243617465676f7279>`\  F
-  \ ``palgLODE(op, g, kx, y, x)``\  returns the solution of \ ``op f = g``\ . \ ``y``\  is an algebraic function of \ ``x``\ .
+  \ :code:`palgLODE(op, g, kx, y, x)`\  returns the solution of \ :code:`op f = g`\ . \ :code:`y`\  is an algebraic function of \ :code:`x`\ .
 
 .. _l50757265416c67656272616963496e746567726174696f6e-70616c67524445:
 
@@ -39,7 +39,7 @@ This package provides functions for integration, limited integration, extended i
    pair: PureAlgebraicIntegration; palgRDE
 
 :spadfun:`palgRDE`\: (F, F, F, \ :ref:`Kernel <l4b65726e656c>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F, (F, F, \ :ref:`Symbol <l53796d626f6c>`\ ) -> Union(F, failed)) -> Union(F, failed) 
-  \ ``palgRDE(nfp, f, g, x, y, foo)``\  returns a function \ ``z(x, y)``\  such that \ ``dz/dx + n * df/dx z(x, y) = g(x, y)``\  if such a \ ``z``\  exists, "failed" otherwise; \ ``y``\  is an algebraic function of \ ``x``\ ; \ ``foo(a, b, x)``\  is a function that solves \ ``du/dx + n * da/dx u(x) = u(x)``\  for an unknown \ ``u(x)``\  not involving \ ``y``\ . \ ``nfp``\  is \ ``n * df/dx``\ .
+  \ :code:`palgRDE(nfp, f, g, x, y, foo)`\  returns a function \ :code:`z(x, y)`\  such that \ :code:`dz/dx + n * df/dx z(x, y) = g(x, y)`\  if such a \ :code:`z`\  exists, "failed" otherwise; \ :code:`y`\  is an algebraic function of \ :code:`x`\ ; \ :code:`foo(a, b, x)`\  is a function that solves \ :code:`du/dx + n * da/dx u(x) = u(x)`\  for an unknown \ :code:`u(x)`\  not involving \ :code:`y`\ . \ :code:`nfp`\  is \ :code:`n * df/dx`\ .
 
 .. _l50757265416c67656272616963496e746567726174696f6e-706172616d5f4c4f4445:
 
@@ -47,7 +47,7 @@ This package provides functions for integration, limited integration, extended i
    pair: PureAlgebraicIntegration; param_LODE
 
 :spadfun:`param_LODE`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F) -> Record(particular: \ :ref:`List <l4c697374>`\  Record(ratpart: F, coeffs: \ :ref:`Vector <l566563746f72>`\  F), basis: \ :ref:`List <l4c697374>`\  F) 
-  \ ``param_LODE(eq, lg, x, y)``\ 
+  \ :code:`param_LODE(eq, lg, x, y)`\ 
 
 .. _l50757265416c67656272616963496e746567726174696f6e-706172616d5f524445:
 
@@ -55,6 +55,6 @@ This package provides functions for integration, limited integration, extended i
    pair: PureAlgebraicIntegration; param_RDE
 
 :spadfun:`param_RDE`\: (F, \ :ref:`List <l4c697374>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F, \ :ref:`Kernel <l4b65726e656c>`\  F) -> Record(particular: \ :ref:`List <l4c697374>`\  Record(ratpart: F, coeffs: \ :ref:`Vector <l566563746f72>`\  F), basis: \ :ref:`List <l4c697374>`\  F) 
-  \ ``param_RDE(fp, lg, x, y)``\ 
+  \ :code:`param_RDE(fp, lg, x, y)`\ 
 
 

@@ -236,7 +236,7 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
    pair: TableAggregate; map
 
 :spadfun:`map`\: ((Entry, Entry) -> Entry, %, %) -> % 
-  \ ``map(fn, t1, t2)``\  creates a new table \ ``t``\  from given tables \ ``t1``\  and \ ``t2``\  with elements \ ``fn``\ (\ ``x``\ , \ ``y``\ ) where \ ``x``\  and \ ``y``\  are corresponding elements from \ ``t1``\  and \ ``t2``\  respectively.
+  \ :code:`map(fn, t1, t2)`\  creates a new table \ :code:`t`\  from given tables \ :code:`t1`\  and \ :code:`t2`\  with elements \ :code:`fn`\ (\ :code:`x`\ , \ :code:`y`\ ) where \ :code:`x`\  and \ :code:`y`\  are corresponding elements from \ :code:`t1`\  and \ :code:`t2`\  respectively.
 
 
 \ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (Entry -> Entry, %) -> % 
@@ -390,7 +390,7 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
    pair: TableAggregate; setelt!
 
 :spadfun:`setelt!`\: (%, Key, Entry) -> Entry 
-  \ ``setelt!(t, k, e)``\  (also written \ ``t.k := e``\ ) is equivalent to \ ``(insert!([k, e], t); e)``\ .
+  \ :code:`setelt!(t, k, e)`\  (also written \ :code:`t.k := e`\ ) is equivalent to \ :code:`(insert!([k, e], t); e)`\ .
 
 .. _l5461626c65416767726567617465-73697a653f:
 
@@ -408,14 +408,14 @@ A table aggregate is a model of a table, i.e. a discrete many-to-one mapping fro
    pair: TableAggregate; table
 
 :spadfun:`table`\: () -> % 
-  \ ``table()``\ \$\ ``T``\  creates an empty table of type \ ``T``\ .
+  \ :code:`table()`\ \$\ :code:`T`\  creates an empty table of type \ :code:`T`\ .
 
 
 .. index::
    pair: TableAggregate; table
 
 :spadfun:`table`\: \ :ref:`List <l4c697374>`\  Record(key: Key, entry: Entry) -> % 
-  \ ``table([x, y, ..., z])``\  creates a table consisting of entries \ ``x, y, ..., z``\ .
+  \ :code:`table([x, y, ..., z])`\  creates a table consisting of entries \ :code:`x, y, ..., z`\ .
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

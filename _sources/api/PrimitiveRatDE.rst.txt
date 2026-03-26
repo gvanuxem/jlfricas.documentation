@@ -16,7 +16,7 @@ PrimitiveRatDE(F, UP, L, LQ)
 * LQ: \ :ref:`LinearOrdinaryDifferentialOperatorCategory <l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7243617465676f7279>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP
 
 
-\ ``PrimitiveRatDE``\  provides functions for in-field solutions of linear ordinary differential equations, in the transcendental case. The derivation to use is given by the parameter \ ``L``\ .
+\ :code:`PrimitiveRatDE`\  provides functions for in-field solutions of linear ordinary differential equations, in the transcendental case. The derivation to use is given by the parameter \ :code:`L`\ .
 
 
 .. _l5072696d69746976655261744445-64656e6f6d4c4f4445:
@@ -25,14 +25,14 @@ PrimitiveRatDE(F, UP, L, LQ)
    pair: PrimitiveRatDE; denomLODE
 
 :spadfun:`denomLODE`\: (L, \ :ref:`Fraction <l4672616374696f6e>`\  UP) -> Union(UP, failed) 
-  \ ``denomLODE(op, g)``\  returns a polynomial \ ``d``\  such that any rational solution of \ ``op y = g``\  is of the form \ ``p/d``\  for some polynomial \ ``p``\ , and "failed", if the equation has no rational solution.
+  \ :code:`denomLODE(op, g)`\  returns a polynomial \ :code:`d`\  such that any rational solution of \ :code:`op y = g`\  is of the form \ :code:`p/d`\  for some polynomial \ :code:`p`\ , and "failed", if the equation has no rational solution.
 
 
 .. index::
    pair: PrimitiveRatDE; denomLODE
 
 :spadfun:`denomLODE`\: (L, \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP) -> UP 
-  \ ``denomLODE(op, [g1, ..., gm])``\  returns a polynomial \ ``d``\  such that any rational solution of \ ``op y = c1 g1 + ... + cm gm``\  is of the form \ ``p/d``\  for some polynomial \ ``p``\ .
+  \ :code:`denomLODE(op, [g1, ..., gm])`\  returns a polynomial \ :code:`d`\  such that any rational solution of \ :code:`op y = c1 g1 + ... + cm gm`\  is of the form \ :code:`p/d`\  for some polynomial \ :code:`p`\ .
 
 .. _l5072696d69746976655261744445-696e64696369616c4571756174696f6e:
 
@@ -40,14 +40,14 @@ PrimitiveRatDE(F, UP, L, LQ)
    pair: PrimitiveRatDE; indicialEquation
 
 :spadfun:`indicialEquation`\: (L, F) -> UP 
-  \ ``indicialEquation(op, a)``\  returns the indicial equation of \ ``op``\  at \ ``a``\ .
+  \ :code:`indicialEquation(op, a)`\  returns the indicial equation of \ :code:`op`\  at \ :code:`a`\ .
 
 
 .. index::
    pair: PrimitiveRatDE; indicialEquation
 
 :spadfun:`indicialEquation`\: (LQ, F) -> UP 
-  \ ``indicialEquation(op, a)``\  returns the indicial equation of \ ``op``\  at \ ``a``\ .
+  \ :code:`indicialEquation(op, a)`\  returns the indicial equation of \ :code:`op`\  at \ :code:`a`\ .
 
 .. _l5072696d69746976655261744445-696e64696369616c4571756174696f6e73:
 
@@ -55,28 +55,28 @@ PrimitiveRatDE(F, UP, L, LQ)
    pair: PrimitiveRatDE; indicialEquations
 
 :spadfun:`indicialEquations`\: (L, UP) -> \ :ref:`List <l4c697374>`\  Record(center: UP, equation: UP) 
-  \ ``indicialEquations(op, p)``\  returns \ ``[[d1, e1], ..., [dq, eq]]``\  where the \ ``d_i``\ \ ``'s``\  are the affine singularities of \ ``op``\  above the roots of \ ``p``\ , and the \ ``e_i``\ \ ``'s``\  are the indicial equations at each \ ``d_i``\ .
+  \ :code:`indicialEquations(op, p)`\  returns \ :code:`[[d1, e1], ..., [dq, eq]]`\  where the \ :code:`d_i`\ \ :code:`'s`\  are the affine singularities of \ :code:`op`\  above the roots of \ :code:`p`\ , and the \ :code:`e_i`\ \ :code:`'s`\  are the indicial equations at each \ :code:`d_i`\ .
 
 
 .. index::
    pair: PrimitiveRatDE; indicialEquations
 
 :spadfun:`indicialEquations`\: (LQ, UP) -> \ :ref:`List <l4c697374>`\  Record(center: UP, equation: UP) 
-  \ ``indicialEquations(op, p)``\  returns \ ``[[d1, e1], ..., [dq, eq]]``\  where the \ ``d_i``\ \ ``'s``\  are the affine singularities of \ ``op``\  above the roots of \ ``p``\ , and the \ ``e_i``\ \ ``'s``\  are the indicial equations at each \ ``d_i``\ .
+  \ :code:`indicialEquations(op, p)`\  returns \ :code:`[[d1, e1], ..., [dq, eq]]`\  where the \ :code:`d_i`\ \ :code:`'s`\  are the affine singularities of \ :code:`op`\  above the roots of \ :code:`p`\ , and the \ :code:`e_i`\ \ :code:`'s`\  are the indicial equations at each \ :code:`d_i`\ .
 
 
 .. index::
    pair: PrimitiveRatDE; indicialEquations
 
 :spadfun:`indicialEquations`\: L -> \ :ref:`List <l4c697374>`\  Record(center: UP, equation: UP) 
-  \ ``indicialEquations op``\  returns \ ``[[d1, e1], ..., [dq, eq]]``\  where the \ ``d_i``\ \ ``'s``\  are the affine singularities of \ ``op``\ , and the \ ``e_i``\ \ ``'s``\  are the indicial equations at each \ ``d_i``\ .
+  \ :code:`indicialEquations op`\  returns \ :code:`[[d1, e1], ..., [dq, eq]]`\  where the \ :code:`d_i`\ \ :code:`'s`\  are the affine singularities of \ :code:`op`\ , and the \ :code:`e_i`\ \ :code:`'s`\  are the indicial equations at each \ :code:`d_i`\ .
 
 
 .. index::
    pair: PrimitiveRatDE; indicialEquations
 
 :spadfun:`indicialEquations`\: LQ -> \ :ref:`List <l4c697374>`\  Record(center: UP, equation: UP) 
-  \ ``indicialEquations op``\  returns \ ``[[d1, e1], ..., [dq, eq]]``\  where the \ ``d_i``\ \ ``'s``\  are the affine singularities of \ ``op``\ , and the \ ``e_i``\ \ ``'s``\  are the indicial equations at each \ ``d_i``\ .
+  \ :code:`indicialEquations op`\  returns \ :code:`[[d1, e1], ..., [dq, eq]]`\  where the \ :code:`d_i`\ \ :code:`'s`\  are the affine singularities of \ :code:`op`\ , and the \ :code:`e_i`\ \ :code:`'s`\  are the indicial equations at each \ :code:`d_i`\ .
 
 .. _l5072696d69746976655261744445-73706c697444656e6f6d696e61746f72:
 
@@ -84,6 +84,6 @@ PrimitiveRatDE(F, UP, L, LQ)
    pair: PrimitiveRatDE; splitDenominator
 
 :spadfun:`splitDenominator`\: (LQ, \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP) -> Record(eq: L, rh: \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP) 
-  \ ``splitDenominator(op, [g1, ..., gm])``\  returns \ ``op0, [h1, ..., hm]``\  such that the equations \ ``op y = c1 g1 + ... + cm gm``\  and \ ``op0 y = c1 h1 + ... + cm hm``\  have the same solutions.
+  \ :code:`splitDenominator(op, [g1, ..., gm])`\  returns \ :code:`op0, [h1, ..., hm]`\  such that the equations \ :code:`op y = c1 g1 + ... + cm gm`\  and \ :code:`op0 y = c1 h1 + ... + cm hm`\  have the same solutions.
 
 

@@ -19,7 +19,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; =
 
 :spadfun:`=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  return \ ``true``\  if equal (deep search) that is: all terms at all levels in tree must be alpha-equivalent to return \ ``true``\  That is the names, but not the deBruijn index, of the bound variables can be different. beta-equivalence is not implemented because it is not decidable.
+  return \ :code:`true`\  if equal (deep search) that is: all terms at all levels in tree must be alpha-equivalent to return \ :code:`true`\  That is the names, but not the deBruijn index, of the bound variables can be different. beta-equivalence is not implemented because it is not decidable.
 
 .. _l4c616d626461-61746f6d3f:
 
@@ -27,7 +27,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; atom?
 
 :spadfun:`atom?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  returns \ ``true``\  if this is an atom, that is free or bound variable otherwise return \ ``false``\  if this is a compound or lambda definition
+  returns \ :code:`true`\  if this is an atom, that is free or bound variable otherwise return \ :code:`false`\  if this is a compound or lambda definition
 
 .. _l4c616d626461-62696e64:
 
@@ -80,7 +80,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; isBoundNode?
 
 :spadfun:`isBoundNode?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  introspection: returns \ ``true``\  if this is a bound leaf node
+  introspection: returns \ :code:`true`\  if this is a bound leaf node
 
 .. _l4c616d626461-6973436f6d706f756e643f:
 
@@ -88,7 +88,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; isCompound?
 
 :spadfun:`isCompound?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  introspection: returns \ ``true``\  if this is a compound term containing two nodes
+  introspection: returns \ :code:`true`\  if this is a compound term containing two nodes
 
 .. _l4c616d626461-6973467265654e6f64653f:
 
@@ -96,7 +96,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; isFreeNode?
 
 :spadfun:`isFreeNode?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  introspection: returns \ ``true``\  if this is a unbound leaf node
+  introspection: returns \ :code:`true`\  if this is a unbound leaf node
 
 .. _l4c616d626461-69734c616d6264613f:
 
@@ -104,7 +104,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; isLambda?
 
 :spadfun:`isLambda?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  introspection: returns \ ``true``\  if this is a lambda definition
+  introspection: returns \ :code:`true`\  if this is a lambda definition
 
 .. _l4c616d626461-6c616d626461:
 
@@ -141,7 +141,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; parseLambda
 
 :spadfun:`parseLambda`\: \ :ref:`String <l537472696e67>`\  -> % 
-  Constructs nested lambda terms from a string notation assumes format like this: <term> : \ ``:=``\  "\ ``\"``\  var "."<term> | \ ``n``\  | <term><term> | "("<term>")" where: \\ = lambda (\ ``I``\  would like to use unicode lambda symbol but \ ``I``\  would also like to keep maximum compatibility with non-unicode versions of Lisp) \ ``n``\  = De Bruijn index which is a integer where, 1=inside inner lambda term, 2= next outer lambda term, 3= next outer and so on. brackets can be used around whole terms.
+  Constructs nested lambda terms from a string notation assumes format like this: <term> : \ :code:`:=`\  "\ :code:`\"`\  var "."<term> | \ :code:`n`\  | <term><term> | "("<term>")" where: \\ = lambda (\ :code:`I`\  would like to use unicode lambda symbol but \ :code:`I`\  would also like to keep maximum compatibility with non-unicode versions of Lisp) \ :code:`n`\  = De Bruijn index which is a integer where, 1=inside inner lambda term, 2= next outer lambda term, 3= next outer and so on. brackets can be used around whole terms.
 
 .. _l4c616d626461-70617273655465726d:
 
@@ -165,7 +165,7 @@ An implementation of untyped lambda-calculus
    pair: Lambda; subst
 
 :spadfun:`subst`\: (%, %, %) -> % 
-  substitution of 'a' for \ ``'b'``\  in \ ``'n'``\ 
+  substitution of 'a' for \ :code:`'b'`\  in \ :code:`'n'`\ 
 
 .. _l4c616d626461-746f537472696e67:
 

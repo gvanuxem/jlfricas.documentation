@@ -23,14 +23,14 @@ Tools to send a point to infinity on an algebraic curve.
    pair: ChangeOfVariable; chvar
 
 :spadfun:`chvar`\: (\ :ref:`List <l4c697374>`\  UPUP, UPUP) -> Record(func: \ :ref:`List <l4c697374>`\  UPUP, poly: UPUP, c1: \ :ref:`Fraction <l4672616374696f6e>`\  UP, c2: \ :ref:`Fraction <l4672616374696f6e>`\  UP, deg: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``chvar(lf, p)``\  is like chvar(\ ``f``\ , \ ``p``\ ) but handles list of functions
+  \ :code:`chvar(lf, p)`\  is like chvar(\ :code:`f`\ , \ :code:`p`\ ) but handles list of functions
 
 
 .. index::
    pair: ChangeOfVariable; chvar
 
 :spadfun:`chvar`\: (UPUP, UPUP) -> Record(func: UPUP, poly: UPUP, c1: \ :ref:`Fraction <l4672616374696f6e>`\  UP, c2: \ :ref:`Fraction <l4672616374696f6e>`\  UP, deg: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``chvar(f(x, y), p(x, y))``\  returns \ ``[g(z, t), q(z, t), c1(x), c2(x), n]``\  such that under the change of variable \ ``z = c1(x)``\ , \ ``t = y * c2(x)``\ , one gets \ ``f(x, y) = c1'(x)g(c1(x), c2(x)y)``\  The algebraic relation between \ ``x``\  and \ ``y``\  is \ ``p(x, y) = 0``\ . The algebraic relation between \ ``z``\  and \ ``t``\  is \ ``q(z, t) = 0``\ .
+  \ :code:`chvar(f(x, y), p(x, y))`\  returns \ :code:`[g(z, t), q(z, t), c1(x), c2(x), n]`\  such that under the change of variable \ :code:`z = c1(x)`\ , \ :code:`t = y * c2(x)`\ , one gets \ :code:`f(x, y) = c1'(x)g(c1(x), c2(x)y)`\  The algebraic relation between \ :code:`x`\  and \ :code:`y`\  is \ :code:`p(x, y) = 0`\ . The algebraic relation between \ :code:`z`\  and \ :code:`t`\  is \ :code:`q(z, t) = 0`\ .
 
 .. _l4368616e67654f665661726961626c65-6576616c:
 
@@ -38,7 +38,7 @@ Tools to send a point to infinity on an algebraic curve.
    pair: ChangeOfVariable; eval
 
 :spadfun:`eval`\: (UPUP, \ :ref:`Fraction <l4672616374696f6e>`\  UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP) -> UPUP 
-  \ ``eval(p(x, y), f(x), g(x))``\  returns \ ``p(f(x), y * g(x))``\ .
+  \ :code:`eval(p(x, y), f(x), g(x))`\  returns \ :code:`p(f(x), y * g(x))`\ .
 
 .. _l4368616e67654f665661726961626c65-676f6f64506f696e74:
 
@@ -46,7 +46,7 @@ Tools to send a point to infinity on an algebraic curve.
    pair: ChangeOfVariable; goodPoint
 
 :spadfun:`goodPoint`\: (\ :ref:`List <l4c697374>`\  UPUP, UPUP) -> F 
-  \ ``goodPoint([p1, ..., pn], q)``\  returns an integer a such that a is neither a pole of \ ``pi(x, y)``\  for some \ ``i``\  nor a branch point of \ ``q(x, y) = 0``\ .
+  \ :code:`goodPoint([p1, ..., pn], q)`\  returns an integer a such that a is neither a pole of \ :code:`pi(x, y)`\  for some \ :code:`i`\  nor a branch point of \ :code:`q(x, y) = 0`\ .
 
 .. _l4368616e67654f665661726961626c65-6d6b496e74656772616c:
 
@@ -54,7 +54,7 @@ Tools to send a point to infinity on an algebraic curve.
    pair: ChangeOfVariable; mkIntegral
 
 :spadfun:`mkIntegral`\: UPUP -> Record(coef: \ :ref:`Fraction <l4672616374696f6e>`\  UP, poly: UPUP) 
-  \ ``mkIntegral(p(x, y))``\  returns \ ``[c(x), q(x, z)]``\  such that \ ``z = c * y``\  is integral. The algebraic relation between \ ``x``\  and \ ``y``\  is \ ``p(x, y) = 0``\ . The algebraic relation between \ ``x``\  and \ ``z``\  is \ ``q(x, z) = 0``\ .
+  \ :code:`mkIntegral(p(x, y))`\  returns \ :code:`[c(x), q(x, z)]`\  such that \ :code:`z = c * y`\  is integral. The algebraic relation between \ :code:`x`\  and \ :code:`y`\  is \ :code:`p(x, y) = 0`\ . The algebraic relation between \ :code:`x`\  and \ :code:`z`\  is \ :code:`q(x, z) = 0`\ .
 
 .. _l4368616e67654f665661726961626c65-726164506f6c79:
 
@@ -62,7 +62,7 @@ Tools to send a point to infinity on an algebraic curve.
    pair: ChangeOfVariable; radPoly
 
 :spadfun:`radPoly`\: UPUP -> Union(Record(radicand: \ :ref:`Fraction <l4672616374696f6e>`\  UP, deg: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), failed) 
-  \ ``radPoly(p(x, y))``\  returns \ ``[c(x), n]``\  if \ ``p``\  is of the form \ ``y^n - c(x)``\ , "failed" otherwise.
+  \ :code:`radPoly(p(x, y))`\  returns \ :code:`[c(x), n]`\  if \ :code:`p`\  is of the form \ :code:`y^n - c(x)`\ , "failed" otherwise.
 
 .. _l4368616e67654f665661726961626c65-726f6f74506f6c79:
 
@@ -70,6 +70,6 @@ Tools to send a point to infinity on an algebraic curve.
    pair: ChangeOfVariable; rootPoly
 
 :spadfun:`rootPoly`\: (\ :ref:`Fraction <l4672616374696f6e>`\  UP, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , coef: \ :ref:`Fraction <l4672616374696f6e>`\  UP, radicand: UP) 
-  \ ``rootPoly(g, n)``\  returns \ ``[m, c, P]``\  such that \ ``c * g ^ (1/n) = P ^ (1/m)``\  thus if \ ``y^n = g``\ , then \ ``z^m = P``\  where \ ``z = c * y``\ .
+  \ :code:`rootPoly(g, n)`\  returns \ :code:`[m, c, P]`\  such that \ :code:`c * g ^ (1/n) = P ^ (1/m)`\  thus if \ :code:`y^n = g`\ , then \ :code:`z^m = P`\  where \ :code:`z = c * y`\ .
 
 

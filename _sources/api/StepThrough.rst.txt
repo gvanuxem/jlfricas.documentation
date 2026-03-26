@@ -8,7 +8,7 @@ StepThrough
 :viewcode:`catdef.spad line 1472 <catdef.spad#L1472>` :editcode:`[edit on github] <catdef.spad#L1472>`
 
 
-A class of objects which can be 'stepped through'. Repeated applications of \ :spadfun:`nextItem`\  is guaranteed never to return duplicate items and only return "failed" after exhausting all elements of the domain. This assumes that the sequence starts with \ ``init()``\ . For infinite domains, repeated application of \ :spadfun:`nextItem`\  is not required to reach all possible domain elements starting from any initial element.   Conditional attributes: infinite repeated \ ``nextItem``\ \ ``'s``\  are never "failed".
+A class of objects which can be 'stepped through'. Repeated applications of \ :spadfun:`nextItem`\  is guaranteed never to return duplicate items and only return "failed" after exhausting all elements of the domain. This assumes that the sequence starts with \ :code:`init()`\ . For infinite domains, repeated application of \ :spadfun:`nextItem`\  is not required to reach all possible domain elements starting from any initial element.   Conditional attributes: infinite repeated \ :code:`nextItem`\ \ :code:`'s`\  are never "failed".
 
 
 .. _l537465705468726f756768-3d:
@@ -32,7 +32,7 @@ A class of objects which can be 'stepped through'. Repeated applications of \ :s
    pair: StepThrough; init
 
 :spadfun:`init`\: % 
-  \ ``init()``\  chooses an initial object for stepping.
+  \ :code:`init()`\  chooses an initial object for stepping.
 
 .. _l537465705468726f756768-6c61746578:
 
@@ -45,7 +45,7 @@ A class of objects which can be 'stepped through'. Repeated applications of \ :s
    pair: StepThrough; nextItem
 
 :spadfun:`nextItem`\: % -> Union(%, failed) 
-  \ ``nextItem(x)``\  returns the next item, or "failed" if domain is exhausted.
+  \ :code:`nextItem(x)`\  returns the next item, or "failed" if domain is exhausted.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

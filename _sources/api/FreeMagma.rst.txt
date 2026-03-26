@@ -19,7 +19,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; *
 
 :spadfun:`\*`\: (%, %) -> % 
-  \ ``x*y``\  returns the tree \ ``[x, y]``\ .
+  \ :code:`x*y`\  returns the tree \ :code:`[x, y]`\ .
 
 .. _l467265654d61676d61-3c3d:
 
@@ -57,7 +57,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  VarSet 
-  \ ``coerce(x)``\  returns the element of \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\ (VarSet) corresponding to \ ``x``\  by removing parentheses.
+  \ :code:`coerce(x)`\  returns the element of \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\ (VarSet) corresponding to \ :code:`x`\  by removing parentheses.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -73,7 +73,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; first
 
 :spadfun:`first`\: % -> VarSet 
-  \ ``first(x)``\  returns the first entry of the tree \ ``x``\ .
+  \ :code:`first(x)`\  returns the first entry of the tree \ :code:`x`\ .
 
 .. _l467265654d61676d61-6c61746578:
 
@@ -86,7 +86,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; left
 
 :spadfun:`left`\: % -> % 
-  \ ``left(x)``\  returns left subtree of \ ``x``\  or error if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ ``x``\ ) is \ ``true``\ .
+  \ :code:`left(x)`\  returns left subtree of \ :code:`x`\  or error if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ :code:`x`\ ) is \ :code:`true`\ .
 
 .. _l467265654d61676d61-6c656e677468:
 
@@ -94,7 +94,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; length
 
 :spadfun:`length`\: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``length(x)``\  returns the number of entries in \ ``x``\ .
+  \ :code:`length(x)`\  returns the number of entries in \ :code:`x`\ .
 
 .. _l467265654d61676d61-6c657869636f:
 
@@ -102,7 +102,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; lexico
 
 :spadfun:`lexico`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``lexico(x, y)``\  returns \ ``true``\  iff \ ``x``\  is smaller than\ ``y``\  with respect to the lexicographical ordering induced by \ ``VarSet``\ . \ ``N``\ .\ ``B``\ . This operation does not take into account the tree structure of its arguments. Thus this is not a total ordering.
+  \ :code:`lexico(x, y)`\  returns \ :code:`true`\  iff \ :code:`x`\  is smaller than\ :code:`y`\  with respect to the lexicographical ordering induced by \ :code:`VarSet`\ . \ :code:`N`\ .\ :code:`B`\ . This operation does not take into account the tree structure of its arguments. Thus this is not a total ordering.
 
 .. _l467265654d61676d61-6d6178:
 
@@ -120,7 +120,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; mirror
 
 :spadfun:`mirror`\: % -> % 
-  \ ``mirror(x)``\  returns the reversed word of \ ``x``\ . That is \ ``x``\  itself if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ ``x``\ ) is \ ``true``\  and \ ``mirror(z) * mirror(y)``\  if \ ``x``\  is \ ``y*z``\ .
+  \ :code:`mirror(x)`\  returns the reversed word of \ :code:`x`\ . That is \ :code:`x`\  itself if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ :code:`x`\ ) is \ :code:`true`\  and \ :code:`mirror(z) * mirror(y)`\  if \ :code:`x`\  is \ :code:`y*z`\ .
 
 .. _l467265654d61676d61-72657374:
 
@@ -128,7 +128,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; rest
 
 :spadfun:`rest`\: % -> % 
-  \ ``rest(x)``\  return \ ``x``\  without the first entry or error if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ ``x``\ ) is \ ``true``\ .
+  \ :code:`rest(x)`\  return \ :code:`x`\  without the first entry or error if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ :code:`x`\ ) is \ :code:`true`\ .
 
 .. _l467265654d61676d61-72657472616374:
 
@@ -141,7 +141,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; retractable?
 
 :spadfun:`retractable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``retractable?(x)``\  tests if \ ``x``\  is a tree with only one entry.
+  \ :code:`retractable?(x)`\  tests if \ :code:`x`\  is a tree with only one entry.
 
 .. _l467265654d61676d61-72657472616374496643616e:
 
@@ -154,7 +154,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; right
 
 :spadfun:`right`\: % -> % 
-  \ ``right(x)``\  returns right subtree of \ ``x``\  or error if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ ``x``\ ) is \ ``true``\ .
+  \ :code:`right(x)`\  returns right subtree of \ :code:`x`\  or error if \ :ref:`retractable? <l467265654d61676d61-7265747261637461626c653f>`\ (\ :code:`x`\ ) is \ :code:`true`\ .
 
 .. _l467265654d61676d61-736d616c6c65723f:
 
@@ -167,7 +167,7 @@ This type is the basic representation of parenthesized words (binary trees over 
    pair: FreeMagma; varList
 
 :spadfun:`varList`\: % -> \ :ref:`List <l4c697374>`\  VarSet 
-  \ ``varList(x)``\  returns the list of distinct entries of \ ``x``\ .
+  \ :code:`varList(x)`\  returns the list of distinct entries of \ :code:`x`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

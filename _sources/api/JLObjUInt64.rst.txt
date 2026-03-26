@@ -8,7 +8,7 @@ JLObjUInt64
 :viewcode:`jimobject.spad line 416 <jimobject.spad#L416>` :editcode:`[edit on github] <jimobject.spad#L416>`
 
 
-Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported. By default the hexadecimal notation is used. Use the juliaUI64Print to change it to \ ``false``\  if the integer representation is required. Note that operations defined here check overflow imposing a performance penalty.
+Convenience domain for Julia \ :code:`UInt64`\ , 64 bits unsigned integers, objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported. By default the hexadecimal notation is used. Use the juliaUI64Print to change it to \ :code:`false`\  if the integer representation is required. Note that operations defined here check overflow imposing a performance penalty.
 
 
 .. _l4a4c4f626a55496e743634-30:
@@ -139,7 +139,7 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
    pair: JLObjUInt64; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``coerce(i)``\  coerces \ ``i``\  to a NonNegativeInteger.
+  \ :code:`coerce(i)`\  coerces \ :code:`i`\  to a NonNegativeInteger.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -154,7 +154,7 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
    pair: JLObjUInt64; coerce
 
 :spadfun:`coerce`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``coerce(z : NonNegativeInteger)``\  returns \ ``z``\  as a \ ``JLObjUInt64``\ .
+  \ :code:`coerce(z : NonNegativeInteger)`\  returns \ :code:`z`\  as a \ :code:`JLObjUInt64`\ .
 
 .. _l4a4c4f626a55496e743634-636f6d6d757461746f72:
 
@@ -311,21 +311,21 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
    pair: JLObjUInt64; juint64
 
 :spadfun:`juint64`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``juint64(i)``\  returns \ ``i``\  as a \ ``JLObjUInt64``\  if possible.
+  \ :code:`juint64(i)`\  returns \ :code:`i`\  as a \ :code:`JLObjUInt64`\  if possible.
 
 
 .. index::
    pair: JLObjUInt64; juint64
 
 :spadfun:`juint64`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``juint64(i)``\  returns \ ``i``\  as a \ ``JLObjUInt64``\ .
+  \ :code:`juint64(i)`\  returns \ :code:`i`\  as a \ :code:`JLObjUInt64`\ .
 
 
 .. index::
    pair: JLObjUInt64; juint64
 
 :spadfun:`juint64`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``juint64(str)``\  returns the Julia \ ``UInt64``\  from the \ ``str``\  command.
+  \ :code:`juint64(str)`\  returns the Julia \ :code:`UInt64`\  from the \ :code:`str`\  command.
 
 .. _l4a4c4f626a55496e743634-6a756c6961554936345072696e74:
 
@@ -333,7 +333,7 @@ Convenience domain for Julia \ ``UInt64``\ , 64 bits unsigned integers, objects 
    pair: JLObjUInt64; juliaUI64Print
 
 :spadfun:`juliaUI64Print`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``juliaUI64Print(bool)``\  set the output mode. If set to \ ``false``\ , use the FriCAS output mode. Otherwise use the Julia one, in hexadecimal notation (default).
+  \ :code:`juliaUI64Print(bool)`\  set the output mode. If set to \ :code:`false`\ , use the FriCAS output mode. Otherwise use the Julia one, in hexadecimal notation (default).
 
 .. _l4a4c4f626a55496e743634-6c61746578:
 

@@ -119,7 +119,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; charthRoot
 
 :spadfun:`charthRoot`\: % -> % 
-  \ ``charthRoot(a)``\  takes the characteristic'th root of \ *a*\ . Note: such a root is always defined in finite fields.
+  \ :code:`charthRoot(a)`\  takes the characteristic'th root of \ *a*\ . Note: such a root is always defined in finite fields.
 
 
 \ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) 
@@ -163,7 +163,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; createPrimitiveElement
 
 :spadfun:`createPrimitiveElement`\: () -> % 
-  \ ``createPrimitiveElement()``\  computes a generator of the (cyclic) multiplicative group of the field.
+  \ :code:`createPrimitiveElement()`\  computes a generator of the (cyclic) multiplicative group of the field.
 
 .. _l46696e6974654669656c6443617465676f7279-44:
 
@@ -189,7 +189,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; discreteLog
 
 :spadfun:`discreteLog`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``discreteLog(a)``\  computes the discrete logarithm of \ ``a``\  with respect to \ ``primitiveElement()``\  of the field.
+  \ :code:`discreteLog(a)`\  computes the discrete logarithm of \ :code:`a`\  with respect to \ :code:`primitiveElement()`\  of the field.
 
 
 \ :ref:`discreteLog <l4669656c644f665072696d654368617261637465726973746963-64697363726574654c6f67>`\ \: (%, %) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
@@ -245,7 +245,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; factorsOfCyclicGroupSize
 
 :spadfun:`factorsOfCyclicGroupSize`\: () -> \ :ref:`List <l4c697374>`\  Record(factor: \ :ref:`Integer <l496e7465676572>`\ , exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``factorsOfCyclicGroupSize()``\  returns the factorization of size()\ ``-1``\ 
+  \ :code:`factorsOfCyclicGroupSize()`\  returns the factorization of size()\ :code:`-1`\ 
 
 .. _l46696e6974654669656c6443617465676f7279-666163746f7253717561726546726565506f6c796e6f6d69616c:
 
@@ -359,7 +359,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; order
 
 :spadfun:`order`\: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``order(b)``\  computes the order of an element \ ``b``\  in the multiplicative group of the field. Error: if \ ``b``\  equals 0.
+  \ :code:`order(b)`\  computes the order of an element \ :code:`b`\  in the multiplicative group of the field. Error: if \ :code:`b`\  equals 0.
 
 .. _l46696e6974654669656c6443617465676f7279-706c656e617279506f776572:
 
@@ -386,7 +386,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; primitive?
 
 :spadfun:`primitive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``primitive?(b)``\  tests whether the element \ ``b``\  is a generator of the (cyclic) multiplicative group of the field, i.e. is a primitive element. Implementation Note: see \ ``ch``\ .IX.1.3, th.2 in \ ``D``\ . Lipson.
+  \ :code:`primitive?(b)`\  tests whether the element \ :code:`b`\  is a generator of the (cyclic) multiplicative group of the field, i.e. is a primitive element. Implementation Note: see \ :code:`ch`\ .IX.1.3, th.2 in \ :code:`D`\ . Lipson.
 
 .. _l46696e6974654669656c6443617465676f7279-7072696d6974697665456c656d656e74:
 
@@ -394,7 +394,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; primitiveElement
 
 :spadfun:`primitiveElement`\: () -> % 
-  \ ``primitiveElement()``\  returns a primitive element stored in a global variable in the domain. At first call, the primitive element is computed by calling \ :spadfun:`createPrimitiveElement`\ .
+  \ :code:`primitiveElement()`\  returns a primitive element stored in a global variable in the domain. At first call, the primitive element is computed by calling \ :spadfun:`createPrimitiveElement`\ .
 
 .. _l46696e6974654669656c6443617465676f7279-7072696e636970616c496465616c:
 
@@ -427,7 +427,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; representationType
 
 :spadfun:`representationType`\: () -> Union(prime, polynomial, normal, cyclic) 
-  \ ``representationType()``\  returns the type of the representation, one of: \ ``prime``\ , \ ``polynomial``\ , \ ``normal``\ , or \ ``cyclic``\ .
+  \ :code:`representationType()`\  returns the type of the representation, one of: \ :code:`prime`\ , \ :code:`polynomial`\ , \ :code:`normal`\ , or \ :code:`cyclic`\ .
 
 .. _l46696e6974654669656c6443617465676f7279-7269676874506f776572:
 
@@ -494,7 +494,7 @@ FiniteFieldCategory is the category of finite fields
    pair: FiniteFieldCategory; tableForDiscreteLogarithm
 
 :spadfun:`tableForDiscreteLogarithm`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Table <l5461626c65>`\ (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``tableForDiscreteLogarithm(a, n)``\  returns a table of the discrete logarithms of \ ``a^0``\  up to \ ``a^(n-1)``\  which, called with key \ ``lookup(a^i)``\  returns \ ``i``\  for \ ``i``\  in \ ``0..n-1``\ . Error: if not called for prime divisors of order of multiplicative group.
+  \ :code:`tableForDiscreteLogarithm(a, n)`\  returns a table of the discrete logarithms of \ :code:`a^0`\  up to \ :code:`a^(n-1)`\  which, called with key \ :code:`lookup(a^i)`\  returns \ :code:`i`\  for \ :code:`i`\  in \ :code:`0..n-1`\ . Error: if not called for prime divisors of order of multiplicative group.
 
 .. _l46696e6974654669656c6443617465676f7279-756e69743f:
 

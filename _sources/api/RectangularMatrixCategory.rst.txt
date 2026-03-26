@@ -18,7 +18,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
 * Col: \ :ref:`DirectProductCategory <l44697265637450726f6475637443617465676f7279>`\ (m, R)
 
 
-\ :ref:`RectangularMatrixCategory <l52656374616e67756c61724d617472697843617465676f7279>`\  is a category of matrices of fixed dimensions. The dimensions of the matrix will be parameters of the domain. Domains in this category will be \ ``R``\ -modules and will be non-mutable.
+\ :ref:`RectangularMatrixCategory <l52656374616e67756c61724d617472697843617465676f7279>`\  is a category of matrices of fixed dimensions. The dimensions of the matrix will be parameters of the domain. Domains in this category will be \ :code:`R`\ -modules and will be non-mutable.
 
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-30:
@@ -106,7 +106,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; column
 
 :spadfun:`column`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Col 
-  \ ``column(m, j)``\  returns the \ ``j``\ th column of the matrix \ ``m``\ . Error: if the index is outside the proper range.
+  \ :code:`column(m, j)`\  returns the \ :code:`j`\ th column of the matrix \ :code:`m`\ . Error: if the index is outside the proper range.
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-636f6c756d6e5370616365:
 
@@ -143,14 +143,14 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> R 
-  \ ``elt(m, i, j)``\  returns the element in the \ ``i``\ th row and \ ``j``\ th column of the matrix \ ``m``\ . Error: if indices are outside the proper ranges.
+  \ :code:`elt(m, i, j)`\  returns the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of the matrix \ :code:`m`\ . Error: if indices are outside the proper ranges.
 
 
 .. index::
    pair: RectangularMatrixCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , R) -> R 
-  \ ``elt(m, i, j, r)``\  returns the element in the \ ``i``\ th row and \ ``j``\ th column of the matrix \ ``m``\ , if \ ``m``\  has an \ ``i``\ th row and a \ ``j``\ th column, and returns \ ``r``\  otherwise.
+  \ :code:`elt(m, i, j, r)`\  returns the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of the matrix \ :code:`m`\ , if \ :code:`m`\  has an \ :code:`i`\ th row and a \ :code:`j`\ th column, and returns \ :code:`r`\  otherwise.
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-656d7074793f:
 
@@ -230,7 +230,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; listOfLists
 
 :spadfun:`listOfLists`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R 
-  \ ``listOfLists(m)``\  returns the rows of the matrix \ ``m``\  as a list of lists.
+  \ :code:`listOfLists(m)`\  returns the rows of the matrix \ :code:`m`\  as a list of lists.
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6c6f6f6b7570:
 
@@ -248,7 +248,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; map
 
 :spadfun:`map`\: ((R, R) -> R, %, %) -> % 
-  \ ``map(f, a, b)``\  returns \ ``c``\ , where \ ``c``\  is such that \ ``c(i, j) = f(a(i, j), b(i, j))``\  for all \ ``i``\ , \ ``j``\ .
+  \ :code:`map(f, a, b)`\  returns \ :code:`c`\ , where \ :code:`c`\  is such that \ :code:`c(i, j) = f(a(i, j), b(i, j))`\  for all \ :code:`i`\ , \ :code:`j`\ .
 
 
 \ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (R -> R, %) -> % 
@@ -260,7 +260,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; matrix
 
 :spadfun:`matrix`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R -> % 
-  \ ``matrix(l)``\  converts the list of lists \ ``l``\  to a matrix, where the list of lists is viewed as a list of the rows of the matrix.
+  \ :code:`matrix(l)`\  converts the list of lists \ :code:`l`\  to a matrix, where the list of lists is viewed as a list of the rows of the matrix.
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6d6178:
 
@@ -277,7 +277,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; maxColIndex
 
 :spadfun:`maxColIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``maxColIndex(m)``\  returns the index of the 'last' column of the matrix \ ``m``\ .
+  \ :code:`maxColIndex(m)`\  returns the index of the 'last' column of the matrix \ :code:`m`\ .
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6d6178526f77496e646578:
 
@@ -285,7 +285,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; maxRowIndex
 
 :spadfun:`maxRowIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``maxRowIndex(m)``\  returns the index of the 'last' row of the matrix \ ``m``\ .
+  \ :code:`maxRowIndex(m)`\  returns the index of the 'last' row of the matrix \ :code:`m`\ .
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6d656d6265723f:
 
@@ -308,7 +308,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; minColIndex
 
 :spadfun:`minColIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``minColIndex(m)``\  returns the index of the 'first' column of the matrix \ ``m``\ .
+  \ :code:`minColIndex(m)`\  returns the index of the 'first' column of the matrix \ :code:`m`\ .
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6d696e526f77496e646578:
 
@@ -316,7 +316,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; minRowIndex
 
 :spadfun:`minRowIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``minRowIndex(m)``\  returns the index of the 'first' row of the matrix \ ``m``\ .
+  \ :code:`minRowIndex(m)`\  returns the index of the 'first' row of the matrix \ :code:`m`\ .
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6d6f72653f:
 
@@ -329,7 +329,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; ncols
 
 :spadfun:`ncols`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``ncols(m)``\  returns the number of columns in the matrix \ ``m``\ .
+  \ :code:`ncols(m)`\  returns the number of columns in the matrix \ :code:`m`\ .
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6e726f7773:
 
@@ -337,7 +337,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; nrows
 
 :spadfun:`nrows`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``nrows(m)``\  returns the number of rows in the matrix \ ``m``\ .
+  \ :code:`nrows(m)`\  returns the number of rows in the matrix \ :code:`m`\ .
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-6e756c6c697479:
 
@@ -365,7 +365,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> R 
-  \ ``qelt(m, i, j)``\  returns the element in the \ ``i``\ th row and \ ``j``\ th column of the matrix \ ``m``\ . Note: there is NO error check to determine if indices are in the proper ranges.
+  \ :code:`qelt(m, i, j)`\  returns the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of the matrix \ :code:`m`\ . Note: there is NO error check to determine if indices are in the proper ranges.
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-72616e646f6d:
 
@@ -383,7 +383,7 @@ RectangularMatrixCategory(m, n, R, Row, Col)
    pair: RectangularMatrixCategory; row
 
 :spadfun:`row`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Row 
-  \ ``row(m, i)``\  returns the \ ``i``\ th row of the matrix \ ``m``\ . Error: if the index is outside the proper range.
+  \ :code:`row(m, i)`\  returns the \ :code:`i`\ th row of the matrix \ :code:`m`\ . Error: if the index is outside the proper range.
 
 .. _l52656374616e67756c61724d617472697843617465676f7279-726f77456368656c6f6e:
 

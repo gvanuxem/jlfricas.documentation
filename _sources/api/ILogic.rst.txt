@@ -8,7 +8,7 @@ ILogic
 :viewcode:`logic.spad line 2376 <logic.spad#L2376>` :editcode:`[edit on github] <logic.spad#L2376>`
 
 
-ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' values
+ILogic is an algebra with \ :code:`true`\ , \ :code:`false`\  and other 'unproven' values
 
 
 .. _l494c6f676963-2f5c:
@@ -22,7 +22,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; =
 
 :spadfun:`=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  returns \ ``true``\  (boolean \ ``true``\ ) if Intuitionistic Logic values are the same. Translates from Intuitionistic Logic to Boolean Logic
+  returns \ :code:`true`\  (boolean \ :code:`true`\ ) if Intuitionistic Logic values are the same. Translates from Intuitionistic Logic to Boolean Logic
 
 .. _l494c6f676963-5c2f:
 
@@ -45,7 +45,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; ~
 
 :spadfun:`~`\: % -> % 
-  \ ``~(x)``\  returns the logical complement of \ ``x``\ . TODO not sure if complement should be included here? intuitionistic logic can have complement but has different axioms to complement in Boolean algebra. Equivalent capability can be provided by implication.
+  \ :code:`~(x)`\  returns the logical complement of \ :code:`x`\ . TODO not sure if complement should be included here? intuitionistic logic can have complement but has different axioms to complement in Boolean algebra. Equivalent capability can be provided by implication.
 
 .. _l494c6f676963-61746f6d3f:
 
@@ -53,7 +53,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; atom?
 
 :spadfun:`atom?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  returns \ ``true``\  if this is an atom, that is a leaf node otherwise return \ ``false``\  if this is a compound term
+  returns \ :code:`true`\  if this is an atom, that is a leaf node otherwise return \ :code:`false`\  if this is a compound term
 
 .. _l494c6f676963-636f65726365:
 
@@ -66,7 +66,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; deductions
 
 :spadfun:`deductions`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  assumes \ ``ln``\  contains a list of factors which must be \ ``true``\  for the whole to be \ ``true``\  (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be \ ``true``\  by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.
+  assumes \ :code:`ln`\  contains a list of factors which must be \ :code:`true`\  for the whole to be \ :code:`true`\  (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be \ :code:`true`\  by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.
 
 .. _l494c6f676963-666163746f72:
 
@@ -74,7 +74,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; factor
 
 :spadfun:`factor`\: % -> \ :ref:`List <l4c697374>`\  % 
-  splits \ ``n``\  into a list of factors which must be \ ``true``\  for the whole to be \ ``true``\ . This assumes that the top level is already a set of factors separated by \ ``/\``\  otherwise the result will just be a list with one entry: \ ``'n'``\ . This is used when converting ILogic to types by using the Curry-Howard isomorphism.
+  splits \ :code:`n`\  into a list of factors which must be \ :code:`true`\  for the whole to be \ :code:`true`\ . This assumes that the top level is already a set of factors separated by \ :code:`/\`\  otherwise the result will just be a list with one entry: \ :code:`'n'`\ . This is used when converting ILogic to types by using the Curry-Howard isomorphism.
 
 .. _l494c6f676963-6765744368696c6472656e:
 
@@ -90,7 +90,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; implies
 
 :spadfun:`implies`\: (%, %) -> % 
-  \ ``implies(a, b)``\  returns the logical implication of ILogic a and \ ``b``\ . a is premise, \ ``b``\  is conclusion, result is \ ``false``\  (contradiction) if premise=true and conclusion=false does not mean there is a causal connection
+  \ :code:`implies(a, b)`\  returns the logical implication of ILogic a and \ :code:`b`\ . a is premise, \ :code:`b`\  is conclusion, result is \ :code:`false`\  (contradiction) if premise=true and conclusion=false does not mean there is a causal connection
 
 .. _l494c6f676963-6c61746578:
 
@@ -103,7 +103,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; logicF
 
 :spadfun:`logicF`\: () -> % 
-  \ ``false``\  (contradiction) is a logical constant.
+  \ :code:`false`\  (contradiction) is a logical constant.
 
 .. _l494c6f676963-6c6f67696354:
 
@@ -111,7 +111,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; logicT
 
 :spadfun:`logicT`\: () -> % 
-  \ ``true``\  is a logical constant.
+  \ :code:`true`\  is a logical constant.
 
 .. _l494c6f676963-6f7054797065:
 
@@ -119,7 +119,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; opType
 
 :spadfun:`opType`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  if this is a compound op then opType returns the type of that op: "IMPLY"::Symbol =implies "AND"::Symbol=/\ "OR"::Symbol=\ ``\/``\  "NOT"::Symbol=~ "OTHER"::Symbol=not compound op
+  if this is a compound op then opType returns the type of that op: "IMPLY"::Symbol =implies "AND"::Symbol=/\ "OR"::Symbol=\ :code:`\/`\  "NOT"::Symbol=~ "OTHER"::Symbol=not compound op
 
 .. _l494c6f676963-7061727365494c32:
 
@@ -127,7 +127,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; parseIL2
 
 :spadfun:`parseIL2`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(rft: %, pout: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  Constructs intuitionistic logic terms from a string notation assumes format like this: <term2> : \ ``:=``\  var | "("<term>")" <term> : \ ``:=``\  var | <term>/\ ``\<``\ term> | <term>\ ``\/``\ <term> | <term>-><term> | "("<term>")"
+  Constructs intuitionistic logic terms from a string notation assumes format like this: <term2> : \ :code:`:=`\  var | "("<term>")" <term> : \ :code:`:=`\  var | <term>/\ :code:`\<`\ term> | <term>\ :code:`\/`\ <term> | <term>-><term> | "("<term>")"
 
 .. _l494c6f676963-7061727365494c:
 
@@ -135,7 +135,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; parseIL
 
 :spadfun:`parseIL`\: \ :ref:`String <l537472696e67>`\  -> % 
-  Constructs intuitionistic logic terms from a string notation assumes format like this: <term> : \ ``:=``\  var | <term>/\ ``\<``\ term> | <term>\ ``\/``\ <term> | <term>-><term> | "("<term>")"
+  Constructs intuitionistic logic terms from a string notation assumes format like this: <term> : \ :code:`:=`\  var | <term>/\ :code:`\<`\ term> | <term>\ :code:`\/`\ <term> | <term>-><term> | "("<term>")"
 
 .. _l494c6f676963-7061727365494c5465726d:
 
@@ -188,7 +188,7 @@ ILogic is an algebra with \ ``true``\ , \ ``false``\  and other 'unproven' value
    pair: ILogic; value
 
 :spadfun:`value`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  returns: "T"::Symbol = \ ``T``\  "F"::Symbol = \ ``_|_``\  "E"::Symbol = error "P"::Symbol = proposition "C"::Symbol = compound Constructs lambda term and bind any variables with the name provided
+  returns: "T"::Symbol = \ :code:`T`\  "F"::Symbol = \ :code:`_|_`\  "E"::Symbol = error "P"::Symbol = proposition "C"::Symbol = compound Constructs lambda term and bind any variables with the name provided
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

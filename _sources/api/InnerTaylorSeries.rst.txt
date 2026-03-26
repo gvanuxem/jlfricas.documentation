@@ -10,7 +10,7 @@ InnerTaylorSeries Coef
 * Coef: \ :ref:`Ring <l52696e67>`\ 
 
 
-Internal package for dense Taylor series. This is an internal Taylor series type in which Taylor series are represented by a \ :ref:`Stream <l53747265616d>`\  of \ :ref:`Ring <l52696e67>`\  elements. For univariate series, the \ ``Stream``\  elements are the Taylor coefficients. For multivariate series, the \ ``n``\ th Stream element is a form of degree \ ``n``\  in the power series variables.
+Internal package for dense Taylor series. This is an internal Taylor series type in which Taylor series are represented by a \ :ref:`Stream <l53747265616d>`\  of \ :ref:`Ring <l52696e67>`\  elements. For univariate series, the \ :code:`Stream`\  elements are the Taylor coefficients. For multivariate series, the \ :code:`n`\ th Stream element is a form of degree \ :code:`n`\  in the power series variables.
 
 
 .. _l496e6e65725461796c6f72536572696573-30:
@@ -33,21 +33,21 @@ Internal package for dense Taylor series. This is an internal Taylor series type
    pair: InnerTaylorSeries; *
 
 :spadfun:`\*`\: (%, Coef) -> % 
-  \ ``x*c``\  returns the product of \ ``c``\  and the series \ ``x``\ .
+  \ :code:`x*c`\  returns the product of \ :code:`c`\  and the series \ :code:`x`\ .
 
 
 .. index::
    pair: InnerTaylorSeries; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x*i``\  returns the product of integer \ ``i``\  and the series \ ``x``\ .
+  \ :code:`x*i`\  returns the product of integer \ :code:`i`\  and the series \ :code:`x`\ .
 
 
 .. index::
    pair: InnerTaylorSeries; *
 
 :spadfun:`\*`\: (Coef, %) -> % 
-  \ ``c*x``\  returns the product of \ ``c``\  and the series \ ``x``\ .
+  \ :code:`c*x`\  returns the product of \ :code:`c`\  and the series \ :code:`x`\ .
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -125,7 +125,7 @@ Internal package for dense Taylor series. This is an internal Taylor series type
    pair: InnerTaylorSeries; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``coefficients(x)``\  returns a stream of ring elements. When \ ``x``\  is a univariate series, this is a stream of Taylor coefficients. When \ ``x``\  is a multivariate series, the \ ``n``\ th element of the stream is a form of degree \ ``n``\  in the power series variables.
+  \ :code:`coefficients(x)`\  returns a stream of ring elements. When \ :code:`x`\  is a univariate series, this is a stream of Taylor coefficients. When \ :code:`x`\  is a multivariate series, the \ :code:`n`\ th element of the stream is a form of degree \ :code:`n`\  in the power series variables.
 
 .. _l496e6e65725461796c6f72536572696573-636f65726365:
 
@@ -185,14 +185,14 @@ Internal package for dense Taylor series. This is an internal Taylor series type
    pair: InnerTaylorSeries; order
 
 :spadfun:`order`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(x)``\  returns the order of a power series \ ``x``\ , i.e. the degree of the first non-zero term of the series.
+  \ :code:`order(x)`\  returns the order of a power series \ :code:`x`\ , i.e. the degree of the first non-zero term of the series.
 
 
 .. index::
    pair: InnerTaylorSeries; order
 
 :spadfun:`order`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(x, n)``\  returns the minimum of \ ``n``\  and the order of \ ``x``\ .
+  \ :code:`order(x, n)`\  returns the minimum of \ :code:`n`\  and the order of \ :code:`x`\ .
 
 .. _l496e6e65725461796c6f72536572696573-706c656e617279506f776572:
 
@@ -205,7 +205,7 @@ Internal package for dense Taylor series. This is an internal Taylor series type
    pair: InnerTaylorSeries; pole?
 
 :spadfun:`pole?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``pole?(x)``\  tests if the series \ ``x``\  has a pole. Note: this is \ ``false``\  when \ ``x``\  is a Taylor series.
+  \ :code:`pole?(x)`\  tests if the series \ :code:`x`\  has a pole. Note: this is \ :code:`false`\  when \ :code:`x`\  is a Taylor series.
 
 .. _l496e6e65725461796c6f72536572696573-7265636970:
 
@@ -237,7 +237,7 @@ Internal package for dense Taylor series. This is an internal Taylor series type
    pair: InnerTaylorSeries; series
 
 :spadfun:`series`\: \ :ref:`Stream <l53747265616d>`\  Coef -> % 
-  \ ``series(s)``\  creates a power series from a stream of ring elements. For univariate series types, the stream \ ``s``\  should be a stream of Taylor coefficients. For multivariate series types, the stream \ ``s``\  should be a stream of forms the \ ``n``\ th element of which is a form of degree \ ``n``\  in the power series variables.
+  \ :code:`series(s)`\  creates a power series from a stream of ring elements. For univariate series types, the stream \ :code:`s`\  should be a stream of Taylor coefficients. For multivariate series types, the stream \ :code:`s`\  should be a stream of forms the \ :code:`n`\ th element of which is a form of degree \ :code:`n`\  in the power series variables.
 
 .. _l496e6e65725461796c6f72536572696573-7375627472616374496643616e:
 

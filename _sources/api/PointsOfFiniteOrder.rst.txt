@@ -27,7 +27,7 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; cmult
 
 :spadfun:`cmult`\: \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R0, \ :ref:`Kernel <l4b65726e656c>`\  F) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R0, \ :ref:`Kernel <l4b65726e656c>`\  F) 
-  \ ``cmult(x)``\  should be local but conditional
+  \ :code:`cmult(x)`\  should be local but conditional
 
 .. _l506f696e74734f6646696e6974654f72646572-68616e646c655f696d6167696e617279:
 
@@ -35,7 +35,7 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; handle_imaginary
 
 :spadfun:`handle_imaginary`\: \ :ref:`FiniteDivisor <l46696e69746544697669736f72>`\ (F, UP, UPUP, R) -> Record(ncurve: UPUP, n_div_numer: \ :ref:`Vector <l566563746f72>`\  UPUP, n_div_denom: UPUP, need_change: \ :ref:`Boolean <l426f6f6c65616e>`\ ) 
-  \ ``handle_imaginary(d)``\  should be local but conditional.
+  \ :code:`handle_imaginary(d)`\  should be local but conditional.
 
 .. _l506f696e74734f6646696e6974654f72646572-6f72646572:
 
@@ -43,7 +43,7 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; order
 
 :spadfun:`order`\: \ :ref:`FiniteDivisor <l46696e69746544697669736f72>`\ (F, UP, UPUP, R) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``order(fd)``\  returns order of divisor \ ``fd``\  or \ ``"failed"``\  if \ ``fd``\  is not of finite order.
+  \ :code:`order(fd)`\  returns order of divisor \ :code:`fd`\  or \ :code:`"failed"`\  if \ :code:`fd`\  is not of finite order.
 
 .. _l506f696e74734f6646696e6974654f72646572-706f737369626c654f72646572:
 
@@ -51,7 +51,7 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; possibleOrder
 
 :spadfun:`possibleOrder`\: \ :ref:`FiniteDivisor <l46696e69746544697669736f72>`\ (F, UP, UPUP, R) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``possibleOrder(d)``\  returns \ ``n``\  such that \ ``d``\  is of order \ ``n``\ , or of infinite order.
+  \ :code:`possibleOrder(d)`\  returns \ :code:`n`\  such that \ :code:`d`\  is of order \ :code:`n`\ , or of infinite order.
 
 .. _l506f696e74734f6646696e6974654f72646572-73696d706c696679436f65666673:
 
@@ -59,7 +59,7 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; simplifyCoeffs
 
 :spadfun:`simplifyCoeffs`\: (Record(ncurve: UPUP, n_div_numer: \ :ref:`Vector <l566563746f72>`\  UPUP, n_div_denom: UPUP, need_change: \ :ref:`Boolean <l426f6f6c65616e>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Kernel <l4b65726e656c>`\  F) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if F has \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\  and R0 has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
-  \ ``simplifyCoeffs(d, la)``\  should be local but conditional.
+  \ :code:`simplifyCoeffs(d, la)`\  should be local but conditional.
 
 .. _l506f696e74734f6646696e6974654f72646572-746f7273696f6e3f:
 
@@ -67,7 +67,7 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; torsion?
 
 :spadfun:`torsion?`\: \ :ref:`FiniteDivisor <l46696e69746544697669736f72>`\ (F, UP, UPUP, R) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``torsion?(fd)``\  returns \ ``true``\  if \ ``fd``\  is of finite order, \ ``false``\  otherwise.
+  \ :code:`torsion?(fd)`\  returns \ :code:`true`\  if \ :code:`fd`\  is of finite order, \ :code:`false`\  otherwise.
 
 .. _l506f696e74734f6646696e6974654f72646572-746f7273696f6e496643616e:
 
@@ -75,6 +75,6 @@ This package provides functions for testing whether a divisor on a curve is a to
    pair: PointsOfFiniteOrder; torsionIfCan
 
 :spadfun:`torsionIfCan`\: \ :ref:`FiniteDivisor <l46696e69746544697669736f72>`\ (F, UP, UPUP, R) -> Union(Record(order: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , function: R), failed) 
-  \ ``torsionIfCan(fd)``\  returns \ ``[n, f]``\  such that \ ``n*fd = div(f)``\  when \ ``fd``\  is of finite order. torsionIfCan(\ ``fd``\ ) returns \ ``"failed"``\  if \ ``fd``\  is not of finite order.
+  \ :code:`torsionIfCan(fd)`\  returns \ :code:`[n, f]`\  such that \ :code:`n*fd = div(f)`\  when \ :code:`fd`\  is of finite order. torsionIfCan(\ :code:`fd`\ ) returns \ :code:`"failed"`\  if \ :code:`fd`\  is not of finite order.
 
 

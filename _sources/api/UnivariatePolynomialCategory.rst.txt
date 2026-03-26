@@ -10,7 +10,7 @@ UnivariatePolynomialCategory R
 * R: Join(\ :ref:`SemiRng <l53656d69526e67>`\ , \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ )
 
 
-The category of univariate polynomials over a ring \ ``R``\ . No particular model is assumed - implementations can be either sparse or dense.
+The category of univariate polynomials over a ring \ :code:`R`\ . No particular model is assumed - implementations can be either sparse or dense.
 
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-30:
@@ -187,14 +187,14 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; composite
 
 :spadfun:`composite`\: (%, %) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``composite(p, q)``\  returns \ ``h``\  if \ ``p = h(q)``\ , and "failed" if no such \ ``h``\  exists.
+  \ :code:`composite(p, q)`\  returns \ :code:`h`\  if \ :code:`p = h(q)`\ , and "failed" if no such \ :code:`h`\  exists.
 
 
 .. index::
    pair: UnivariatePolynomialCategory; composite
 
 :spadfun:`composite`\: (\ :ref:`Fraction <l4672616374696f6e>`\  %, %) -> Union(\ :ref:`Fraction <l4672616374696f6e>`\  %, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``composite(f, q)``\  returns \ ``h``\  if \ ``f``\  = \ ``h``\ (\ ``q``\ ), and "failed" if no such \ ``h``\  exists.
+  \ :code:`composite(f, q)`\  returns \ :code:`h`\  if \ :code:`f`\  = \ :code:`h`\ (\ :code:`q`\ ), and "failed" if no such \ :code:`h`\  exists.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-636f6e646974696f6e50:
 
@@ -329,7 +329,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; differentiate
 
 :spadfun:`differentiate`\: (%, R -> R, %) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``differentiate(p, d, x')``\  extends the \ ``R``\ -derivation \ ``d``\  to an extension \ ``D``\  in \ ``R[x]``\  where \ ``Dx``\  is given by \ ``x'``\ , and returns \ ``Dp``\ .
+  \ :code:`differentiate(p, d, x')`\  extends the \ :code:`R`\ -derivation \ :code:`d`\  to an extension \ :code:`D`\  in \ :code:`R[x]`\  where \ :code:`Dx`\  is given by \ :code:`x'`\ , and returns \ :code:`Dp`\ .
 
 
 \ :ref:`differentiate <l446966666572656e7469616c457874656e73696f6e-646966666572656e7469617465>`\ \: (%, R -> R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\ 
@@ -357,7 +357,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; discriminant
 
 :spadfun:`discriminant`\: % -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``discriminant(p)``\  returns the discriminant of the polynomial \ ``p``\ .
+  \ :code:`discriminant(p)`\  returns the discriminant of the polynomial \ :code:`p`\ .
 
 
 \ :ref:`discriminant <l506f6c796e6f6d69616c43617465676f7279-6469736372696d696e616e74>`\ \: (%, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
@@ -374,7 +374,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; divideExponents
 
 :spadfun:`divideExponents`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(%, failed) 
-  \ ``divideExponents(p, n)``\  returns a new polynomial resulting from dividing all exponents of the polynomial \ ``p``\  by the non negative integer \ ``n``\ , or "failed" if some exponent is not exactly divisible by \ ``n``\ .
+  \ :code:`divideExponents(p, n)`\  returns a new polynomial resulting from dividing all exponents of the polynomial \ :code:`p`\  by the non negative integer \ :code:`n`\ , or "failed" if some exponent is not exactly divisible by \ :code:`n`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-656c74:
 
@@ -394,14 +394,14 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; elt
 
 :spadfun:`elt`\: (\ :ref:`Fraction <l4672616374696f6e>`\  %, \ :ref:`Fraction <l4672616374696f6e>`\  %) -> \ :ref:`Fraction <l4672616374696f6e>`\  % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``elt(a, b)``\  evaluates the fraction of univariate polynomials \ ``a``\  with the distinguished variable replaced by \ ``b``\ .
+  \ :code:`elt(a, b)`\  evaluates the fraction of univariate polynomials \ :code:`a`\  with the distinguished variable replaced by \ :code:`b`\ .
 
 
 .. index::
    pair: UnivariatePolynomialCategory; elt
 
 :spadfun:`elt`\: (\ :ref:`Fraction <l4672616374696f6e>`\  %, R) -> R if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``elt(a, r)``\  evaluates the fraction of univariate polynomials \ ``a``\  with the distinguished variable replaced by the constant \ ``r``\ .
+  \ :code:`elt(a, r)`\  evaluates the fraction of univariate polynomials \ :code:`a`\  with the distinguished variable replaced by the constant \ :code:`r`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-6575636c696465616e53697a65:
 
@@ -529,7 +529,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; integrate
 
 :spadfun:`integrate`\: % -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(p)``\  integrates the univariate polynomial \ ``p``\  with respect to its distinguished variable.
+  \ :code:`integrate(p)`\  integrates the univariate polynomial \ :code:`p`\  with respect to its distinguished variable.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-697345787074:
 
@@ -552,7 +552,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; karatsubaDivide
 
 :spadfun:`karatsubaDivide`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(quotient: %, remainder: %) if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``karatsubaDivide(p, n)``\  returns the same as \ ``monicDivide(p, monomial(1, n))``\ 
+  \ :code:`karatsubaDivide(p, n)`\  returns the same as \ :code:`monicDivide(p, monomial(1, n))`\ 
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-6c61746578:
 
@@ -628,7 +628,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; makeSUP
 
 :spadfun:`makeSUP`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
-  \ ``makeSUP(p)``\  converts the polynomial \ ``p``\  to be of type SparseUnivariatePolynomial over the same coefficients.
+  \ :code:`makeSUP(p)`\  converts the polynomial \ :code:`p`\  to be of type SparseUnivariatePolynomial over the same coefficients.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-6d6170:
 
@@ -659,7 +659,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; monicDivide
 
 :spadfun:`monicDivide`\: (%, %) -> Record(quotient: %, remainder: %) if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``monicDivide(p, q)``\  divide the polynomial \ ``p``\  by the monic polynomial \ ``q``\ , returning the pair \ ``[quotient, remainder]``\ . Error: if \ ``q``\  isn\ ``'t``\  monic.
+  \ :code:`monicDivide(p, q)`\  divide the polynomial \ :code:`p`\  by the monic polynomial \ :code:`q`\ , returning the pair \ :code:`[quotient, remainder]`\ . Error: if \ :code:`q`\  isn\ :code:`'t`\  monic.
 
 
 \ :ref:`monicDivide <l506f6c796e6f6d69616c43617465676f7279-6d6f6e6963446976696465>`\ \: (%, %, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) -> Record(quotient: %, remainder: %) if R has \ :ref:`Ring <l52696e67>`\ 
@@ -699,7 +699,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; multiplyExponents
 
 :spadfun:`multiplyExponents`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``multiplyExponents(p, n)``\  returns a new polynomial resulting from multiplying all exponents of the polynomial \ ``p``\  by the non negative integer \ ``n``\ .
+  \ :code:`multiplyExponents(p, n)`\  returns a new polynomial resulting from multiplying all exponents of the polynomial \ :code:`p`\  by the non negative integer \ :code:`n`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-6d756c746976617269617465:
 
@@ -736,7 +736,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; order
 
 :spadfun:`order`\: (%, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``order(p, q)``\  returns the largest \ ``n``\  such that \ ``q^n``\  divides polynomial \ ``p``\  i.e. the order of \ ``p(x)``\  at \ ``q(x)=0``\ .
+  \ :code:`order(p, q)`\  returns the largest \ :code:`n`\  such that \ :code:`q^n`\  divides polynomial \ :code:`p`\  i.e. the order of \ :code:`p(x)`\  at \ :code:`q(x)=0`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-7061747465726e4d61746368:
 
@@ -787,7 +787,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; pseudoDivide
 
 :spadfun:`pseudoDivide`\: (%, %) -> Record(coef: R, quotient: %, remainder: %) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``pseudoDivide(p, q)``\  returns \ ``[c, s, r]``\ , when \ ``p' := p*lc(q)^(deg p - deg q + 1) = c * p``\  is pseudo right-divided by \ ``q``\ , i.e. \ ``p' = s q + r``\ .
+  \ :code:`pseudoDivide(p, q)`\  returns \ :code:`[c, s, r]`\ , when \ :code:`p' := p*lc(q)^(deg p - deg q + 1) = c * p`\  is pseudo right-divided by \ :code:`q`\ , i.e. \ :code:`p' = s q + r`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-70736575646f51756f7469656e74:
 
@@ -795,7 +795,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; pseudoQuotient
 
 :spadfun:`pseudoQuotient`\: (%, %) -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``pseudoQuotient(p, q)``\  returns \ ``s``\ , the quotient when \ ``p' := p*lc(q)^(deg p - deg q + 1)``\  is pseudo right-divided by \ ``q``\ , i.e. \ ``p' = s q + r``\ .
+  \ :code:`pseudoQuotient(p, q)`\  returns \ :code:`s`\ , the quotient when \ :code:`p' := p*lc(q)^(deg p - deg q + 1)`\  is pseudo right-divided by \ :code:`q`\ , i.e. \ :code:`p' = s q + r`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-70736575646f52656d61696e646572:
 
@@ -803,7 +803,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; pseudoRemainder
 
 :spadfun:`pseudoRemainder`\: (%, %) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``pseudoRemainder(p, q)``\  = \ ``r``\ , for polynomials \ ``p``\  and \ ``q``\ , returns the remainder \ ``r``\  when \ ``p' := p*lc(q)^(deg p - deg q + 1)``\  is pseudo right-divided by \ ``q``\ , i.e. \ ``p' = s q + r``\ .
+  \ :code:`pseudoRemainder(p, q)`\  = \ :code:`r`\ , for polynomials \ :code:`p`\  and \ :code:`q`\ , returns the remainder \ :code:`r`\  when \ :code:`p' := p*lc(q)^(deg p - deg q + 1)`\  is pseudo right-divided by \ :code:`q`\ , i.e. \ :code:`p' = s q + r`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-71756f:
 
@@ -848,7 +848,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; resultant
 
 :spadfun:`resultant`\: (%, %) -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``resultant(p, q)``\  returns the resultant of the polynomials \ ``p``\  and \ ``q``\ .
+  \ :code:`resultant(p, q)`\  returns the resultant of the polynomials \ :code:`p`\  and \ :code:`q`\ .
 
 
 \ :ref:`resultant <l506f6c796e6f6d69616c43617465676f7279-726573756c74616e74>`\ \: (%, %, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
@@ -913,7 +913,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; separate
 
 :spadfun:`separate`\: (%, %) -> Record(primePart: %, commonPart: %) if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``separate(p, q)``\  returns \ ``[a, b]``\  such that \ ``p = a b``\ , \ ``a``\  is relatively prime to \ ``q``\  and \ ``b``\  divides some power of \ ``q``\ .
+  \ :code:`separate(p, q)`\  returns \ :code:`[a, b]`\  such that \ :code:`p = a b`\ , \ :code:`a`\  is relatively prime to \ :code:`q`\  and \ :code:`b`\  divides some power of \ :code:`q`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-73686966744c656674:
 
@@ -921,7 +921,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; shiftLeft
 
 :spadfun:`shiftLeft`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``shiftLeft(p, n)``\  returns \ ``p * monomial(1, n)``\ 
+  \ :code:`shiftLeft(p, n)`\  returns \ :code:`p * monomial(1, n)`\ 
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-73686966745269676874:
 
@@ -929,7 +929,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; shiftRight
 
 :spadfun:`shiftRight`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``shiftRight(p, n)``\  returns \ ``monicDivide(p, monomial(1, n)).quotient``\ 
+  \ :code:`shiftRight(p, n)`\  returns \ :code:`monicDivide(p, monomial(1, n)).quotient`\ 
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-73697a654c6573733f:
 
@@ -967,7 +967,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; subResultantGcd
 
 :spadfun:`subResultantGcd`\: (%, %) -> % if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``subResultantGcd(p, q)``\  computes the \ ``gcd``\  of the polynomials \ ``p``\  and \ ``q``\  using the SubResultant \ ``GCD``\  algorithm.
+  \ :code:`subResultantGcd(p, q)`\  computes the \ :code:`gcd`\  of the polynomials \ :code:`p`\  and \ :code:`q`\  using the SubResultant \ :code:`GCD`\  algorithm.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-7375627472616374496643616e:
 
@@ -1023,7 +1023,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; unmakeSUP
 
 :spadfun:`unmakeSUP`\: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R -> % 
-  \ ``unmakeSUP(sup)``\  converts \ ``sup``\  of type SparseUnivariatePolynomial(R) to be a member of the given type. Note: converse of makeSUP.
+  \ :code:`unmakeSUP(sup)`\  converts \ :code:`sup`\  of type SparseUnivariatePolynomial(R) to be a member of the given type. Note: converse of makeSUP.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-756e766563746f72697365:
 
@@ -1031,7 +1031,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; unvectorise
 
 :spadfun:`unvectorise`\: \ :ref:`Vector <l566563746f72>`\  R -> % 
-  \ ``unvectorise(v)``\  returns the polynomial which has for coefficients the entries of \ ``v``\  in the increasing order.
+  \ :code:`unvectorise(v)`\  returns the polynomial which has for coefficients the entries of \ :code:`v`\  in the increasing order.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-7661726961626c6573:
 
@@ -1044,7 +1044,7 @@ The category of univariate polynomials over a ring \ ``R``\ . No particular mode
    pair: UnivariatePolynomialCategory; vectorise
 
 :spadfun:`vectorise`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  R 
-  \ ``vectorise(p, n)``\  returns \ ``[a0, ..., a(n-1)]``\  where \ ``p = a0 + a1*x + ... + a(n-1)*x^(n-1)``\  + higher order terms. The degree of polynomial \ ``p``\  can be different from \ ``n-1``\ .
+  \ :code:`vectorise(p, n)`\  returns \ :code:`[a0, ..., a(n-1)]`\  where \ :code:`p = a0 + a1*x + ... + a(n-1)*x^(n-1)`\  + higher order terms. The degree of polynomial \ :code:`p`\  can be different from \ :code:`n-1`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-7a65726f3f:
 

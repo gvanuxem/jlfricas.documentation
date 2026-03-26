@@ -25,14 +25,14 @@ GroebnerFactorizationPackage(Dom, Expon, VarSet, Dpol)
    pair: GroebnerFactorizationPackage; factorGroebnerBasis
 
 :spadfun:`factorGroebnerBasis`\: (\ :ref:`List <l4c697374>`\  Dpol, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Dpol 
-  \ ``factorGroebnerBasis(basis, info)``\  checks whether the \ ``basis``\  contains reducible polynomials and uses these to split the \ ``basis``\ . If argument \ *info*\  is \ ``true``\ , information is printed about partial results.
+  \ :code:`factorGroebnerBasis(basis, info)`\  checks whether the \ :code:`basis`\  contains reducible polynomials and uses these to split the \ :code:`basis`\ . If argument \ *info*\  is \ :code:`true`\ , information is printed about partial results.
 
 
 .. index::
    pair: GroebnerFactorizationPackage; factorGroebnerBasis
 
 :spadfun:`factorGroebnerBasis`\: \ :ref:`List <l4c697374>`\  Dpol -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Dpol 
-  \ ``factorGroebnerBasis(basis)``\  checks whether the \ ``basis``\  contains reducible polynomials and uses these to split the \ ``basis``\ .
+  \ :code:`factorGroebnerBasis(basis)`\  checks whether the \ :code:`basis`\  contains reducible polynomials and uses these to split the \ :code:`basis`\ .
 
 .. _l47726f65626e6572466163746f72697a6174696f6e5061636b616765-67726f65626e6572466163746f72697a65:
 
@@ -40,27 +40,27 @@ GroebnerFactorizationPackage(Dom, Expon, VarSet, Dpol)
    pair: GroebnerFactorizationPackage; groebnerFactorize
 
 :spadfun:`groebnerFactorize`\: (\ :ref:`List <l4c697374>`\  Dpol, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Dpol 
-  \ ``groebnerFactorize(listOfPolys, info)``\  returns a list of groebner bases. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\ . At each stage the polynomial \ ``p``\  under consideration (either from the given basis or obtained from a reduction of the next \ ``S``\ -polynomial) is factorized. For each irreducible factors of \ ``p``\ , a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ ``p``\ . If \ *info*\  is \ ``true``\ , information is printed about partial results.
+  \ :code:`groebnerFactorize(listOfPolys, info)`\  returns a list of groebner bases. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\ . At each stage the polynomial \ :code:`p`\  under consideration (either from the given basis or obtained from a reduction of the next \ :code:`S`\ -polynomial) is factorized. For each irreducible factors of \ :code:`p`\ , a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ :code:`p`\ . If \ *info*\  is \ :code:`true`\ , information is printed about partial results.
 
 
 .. index::
    pair: GroebnerFactorizationPackage; groebnerFactorize
 
 :spadfun:`groebnerFactorize`\: (\ :ref:`List <l4c697374>`\  Dpol, \ :ref:`List <l4c697374>`\  Dpol) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Dpol 
-  \ ``groebnerFactorize(listOfPolys, nonZeroRestrictions)``\  returns a list of groebner basis. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\  under the restriction that the polynomials of \ *nonZeroRestrictions*\  don\ ``'t``\  vanish. At each stage the polynomial \ ``p``\  under consideration (either from the given basis or obtained from a reduction of the next \ ``S``\ -polynomial) is factorized. For each irreducible factors of \ ``p``\ , a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ ``p``\ .
+  \ :code:`groebnerFactorize(listOfPolys, nonZeroRestrictions)`\  returns a list of groebner basis. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\  under the restriction that the polynomials of \ *nonZeroRestrictions*\  don\ :code:`'t`\  vanish. At each stage the polynomial \ :code:`p`\  under consideration (either from the given basis or obtained from a reduction of the next \ :code:`S`\ -polynomial) is factorized. For each irreducible factors of \ :code:`p`\ , a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ :code:`p`\ .
 
 
 .. index::
    pair: GroebnerFactorizationPackage; groebnerFactorize
 
 :spadfun:`groebnerFactorize`\: (\ :ref:`List <l4c697374>`\  Dpol, \ :ref:`List <l4c697374>`\  Dpol, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Dpol 
-  \ ``groebnerFactorize(listOfPolys, nonZeroRestrictions, info)``\  returns a list of groebner basis. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\  under the restriction that the polynomials of \ *nonZeroRestrictions*\  don\ ``'t``\  vanish. At each stage the polynomial \ ``p``\  under consideration (either from the given basis or obtained from a reduction of the next \ ``S``\ -polynomial) is factorized. For each irreducible factors of \ ``p``\  a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ ``p``\ . If argument \ *info*\  is \ ``true``\ , information is printed about partial results.
+  \ :code:`groebnerFactorize(listOfPolys, nonZeroRestrictions, info)`\  returns a list of groebner basis. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\  under the restriction that the polynomials of \ *nonZeroRestrictions*\  don\ :code:`'t`\  vanish. At each stage the polynomial \ :code:`p`\  under consideration (either from the given basis or obtained from a reduction of the next \ :code:`S`\ -polynomial) is factorized. For each irreducible factors of \ :code:`p`\  a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ :code:`p`\ . If argument \ *info*\  is \ :code:`true`\ , information is printed about partial results.
 
 
 .. index::
    pair: GroebnerFactorizationPackage; groebnerFactorize
 
 :spadfun:`groebnerFactorize`\: \ :ref:`List <l4c697374>`\  Dpol -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Dpol 
-  \ ``groebnerFactorize(listOfPolys)``\  returns a list of groebner bases. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\ . At each stage the polynomial \ ``p``\  under consideration (either from the given basis or obtained from a reduction of the next \ ``S``\ -polynomial) is factorized. For each irreducible factors of \ ``p``\ , a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ ``p``\ .
+  \ :code:`groebnerFactorize(listOfPolys)`\  returns a list of groebner bases. The union of their solutions is the solution of the system of equations given by \ *listOfPolys*\ . At each stage the polynomial \ :code:`p`\  under consideration (either from the given basis or obtained from a reduction of the next \ :code:`S`\ -polynomial) is factorized. For each irreducible factors of \ :code:`p`\ , a new \ *createGroebnerBasis*\  is started doing the usual updates with the factor in place of \ :code:`p`\ .
 
 

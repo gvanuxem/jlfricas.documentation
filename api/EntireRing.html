@@ -103,7 +103,7 @@
 </dd>
 </dl>
 <span id="l456e7469726552696e67-6173736f6369617465733f"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">associates?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">associates?(x,</span> <span class="pre">y)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are associates, i.e. differ by a unit factor.</p>
+<dt><span class="spadfun">associates?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">associates?(x,</span> <span class="pre">y)</span></code> tests whether <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code> are associates, i.e. differ by a unit factor.</p>
 </dd>
 </dl>
 <dl class="simple" id="l456e7469726552696e67-6173736f636961746f72">
@@ -125,7 +125,7 @@
 </dd>
 </dl>
 <span id="l456e7469726552696e67-657871756f"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">exquo</span>: (%, %) -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exquo(a,</span> <span class="pre">b)</span></code> either returns an element <code class="docutils literal notranslate"><span class="pre">c</span></code> such that <code class="docutils literal notranslate"><span class="pre">c*b=a</span></code> or “failed” if no such element can be found.</p>
+<dt><span class="spadfun">exquo</span>: (%, %) -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">exquo(a,</span> <span class="pre">b)</span></code> either returns an element <code class="code docutils literal notranslate"><span class="pre">c</span></code> such that <code class="code docutils literal notranslate"><span class="pre">c*b=a</span></code> or “failed” if no such element can be found.</p>
 </dd>
 </dl>
 <dl class="simple" id="l456e7469726552696e67-6c61746578">
@@ -173,15 +173,15 @@
 </dd>
 </dl>
 <span id="l456e7469726552696e67-756e69743f"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">unit?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unit?(x)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">x</span></code> is a unit, i.e. is invertible.</p>
+<dt><span class="spadfun">unit?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">unit?(x)</span></code> tests whether <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a unit, i.e. is invertible.</p>
 </dd>
 </dl>
 <span id="l456e7469726552696e67-756e697443616e6f6e6963616c"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">unitCanonical</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unitCanonical(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">unitNormal(x).canonical</span></code>.</p>
+<dt><span class="spadfun">unitCanonical</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">unitCanonical(x)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">unitNormal(x).canonical</span></code>.</p>
 </dd>
 </dl>
 <span id="l456e7469726552696e67-756e69744e6f726d616c"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">unitNormal</span>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unitNormal(x)</span></code> tries to choose a canonical element from the associate class of <code class="docutils literal notranslate"><span class="pre">x</span></code>. The attribute canonicalUnitNormal, if asserted, means that the “canonical” element is the same across all associates of <code class="docutils literal notranslate"><span class="pre">x</span></code> if <code class="docutils literal notranslate"><span class="pre">unitNormal(x)</span> <span class="pre">=</span> <span class="pre">[u,</span> <span class="pre">c,</span> <span class="pre">a]</span></code> then <code class="docutils literal notranslate"><span class="pre">u*c</span> <span class="pre">=</span> <span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">a*u</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+<dt><span class="spadfun">unitNormal</span>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">unitNormal(x)</span></code> tries to choose a canonical element from the associate class of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. The attribute canonicalUnitNormal, if asserted, means that the “canonical” element is the same across all associates of <code class="code docutils literal notranslate"><span class="pre">x</span></code> if <code class="code docutils literal notranslate"><span class="pre">unitNormal(x)</span> <span class="pre">=</span> <span class="pre">[u,</span> <span class="pre">c,</span> <span class="pre">a]</span></code> then <code class="code docutils literal notranslate"><span class="pre">u*c</span> <span class="pre">=</span> <span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">a*u</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l456e7469726552696e67-7a65726f3f">
@@ -267,7 +267,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

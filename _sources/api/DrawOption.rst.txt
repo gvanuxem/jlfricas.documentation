@@ -27,7 +27,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; adaptive
 
 :spadfun:`adaptive`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``adaptive(b)``\  turns adaptive 2D plotting on if \ ``b``\  is \ ``true``\ , or off if \ ``b``\  is \ ``false``\ . This option is expressed in the form \ ``adaptive == b``\ .
+  \ :code:`adaptive(b)`\  turns adaptive 2D plotting on if \ :code:`b`\  is \ :code:`true`\ , or off if \ :code:`b`\  is \ :code:`false`\ . This option is expressed in the form \ :code:`adaptive == b`\ .
 
 .. _l447261774f7074696f6e-636c6970:
 
@@ -35,14 +35,14 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; clip
 
 :spadfun:`clip`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``clip(b)``\  turns 2D clipping on if \ ``b``\  is \ ``true``\ , or off if \ ``b``\  is \ ``false``\ . This option is expressed in the form \ ``clip == b``\ .
+  \ :code:`clip(b)`\  turns 2D clipping on if \ :code:`b`\  is \ :code:`true`\ , or off if \ :code:`b`\  is \ :code:`false`\ . This option is expressed in the form \ :code:`clip == b`\ .
 
 
 .. index::
    pair: DrawOption; clip
 
 :spadfun:`clip`\: \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``clip([l])``\  provides ranges for user-defined clipping as specified in the list \ ``l``\ . This option is expressed in the form \ ``clip == [l]``\ .
+  \ :code:`clip([l])`\  provides ranges for user-defined clipping as specified in the list \ :code:`l`\ . This option is expressed in the form \ :code:`clip == [l]`\ .
 
 .. _l447261774f7074696f6e-636f65726365:
 
@@ -55,21 +55,21 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; colorFunction
 
 :spadfun:`colorFunction`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``colorFunction(f(u, v))``\  specifies the color for three dimensional plots as a function based upon the two parametric variables. This option is expressed in the form \ ``colorFunction == f(u, v)``\ .
+  \ :code:`colorFunction(f(u, v))`\  specifies the color for three dimensional plots as a function based upon the two parametric variables. This option is expressed in the form \ :code:`colorFunction == f(u, v)`\ .
 
 
 .. index::
    pair: DrawOption; colorFunction
 
 :spadfun:`colorFunction`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``colorFunction(f(x, y, z))``\  specifies the color for three dimensional plots as a function of \ ``x``\ , \ ``y``\ , and \ ``z``\  coordinates. This option is expressed in the form \ ``colorFunction == f(x, y, z)``\ .
+  \ :code:`colorFunction(f(x, y, z))`\  specifies the color for three dimensional plots as a function of \ :code:`x`\ , \ :code:`y`\ , and \ :code:`z`\  coordinates. This option is expressed in the form \ :code:`colorFunction == f(x, y, z)`\ .
 
 
 .. index::
    pair: DrawOption; colorFunction
 
 :spadfun:`colorFunction`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``colorFunction(f(z))``\  specifies the color based upon the \ ``z``\ -component of three dimensional plots. This option is expressed in the form \ ``colorFunction == f(z)``\ .
+  \ :code:`colorFunction(f(z))`\  specifies the color based upon the \ :code:`z`\ -component of three dimensional plots. This option is expressed in the form \ :code:`colorFunction == f(z)`\ .
 
 .. _l447261774f7074696f6e-636f6f7264:
 
@@ -77,7 +77,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; coord
 
 :spadfun:`coord`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``coord(p)``\  specifies a change of coordinates of point \ ``p``\ . This option is expressed in the form \ ``coord == p``\ .
+  \ :code:`coord(p)`\  specifies a change of coordinates of point \ :code:`p`\ . This option is expressed in the form \ :code:`coord == p`\ .
 
 .. _l447261774f7074696f6e-636f6f7264696e61746573:
 
@@ -85,7 +85,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; coordinates
 
 :spadfun:`coordinates`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``coordinates(p)``\  specifies a change of coordinate systems of point \ ``p``\ . This option is expressed in the form \ ``coordinates == p``\ .
+  \ :code:`coordinates(p)`\  specifies a change of coordinate systems of point \ :code:`p`\ . This option is expressed in the form \ :code:`coordinates == p`\ .
 
 .. _l447261774f7074696f6e-6375727665436f6c6f72:
 
@@ -93,14 +93,14 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; curveColor
 
 :spadfun:`curveColor`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``curveColor(v)``\  specifies a color, \ ``v``\ , for 2D graph curves. This option is expressed in the form \ ``curveColor == v``\ .
+  \ :code:`curveColor(v)`\  specifies a color, \ :code:`v`\ , for 2D graph curves. This option is expressed in the form \ :code:`curveColor == v`\ .
 
 
 .. index::
    pair: DrawOption; curveColor
 
 :spadfun:`curveColor`\: \ :ref:`Palette <l50616c65747465>`\  -> % 
-  \ ``curveColor(p)``\  specifies a color index for 2D graph curves from the spadcolors palette \ ``p``\ . This option is expressed in the form \ ``curveColor ==p``\ .
+  \ :code:`curveColor(p)`\  specifies a color index for 2D graph curves from the spadcolors palette \ :code:`p`\ . This option is expressed in the form \ :code:`curveColor ==p`\ .
 
 .. _l447261774f7074696f6e-6c61746578:
 
@@ -113,7 +113,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; option?
 
 :spadfun:`option?`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``option?()``\  is not to be used at the top level; option? internally returns \ ``true``\  for drawing options which are indicated in a draw command, or \ ``false``\  for those which are not.
+  \ :code:`option?()`\  is not to be used at the top level; option? internally returns \ :code:`true`\  for drawing options which are indicated in a draw command, or \ :code:`false`\  for those which are not.
 
 .. _l447261774f7074696f6e-6f7074696f6e:
 
@@ -121,7 +121,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; option
 
 :spadfun:`option`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> Union(\ :ref:`Any <l416e79>`\ , failed) 
-  \ ``option()``\  is not to be used at the top level; option determines internally which drawing options are indicated in a draw command.
+  \ :code:`option()`\  is not to be used at the top level; option determines internally which drawing options are indicated in a draw command.
 
 .. _l447261774f7074696f6e-706f696e74436f6c6f72:
 
@@ -129,14 +129,14 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; pointColor
 
 :spadfun:`pointColor`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``pointColor(v)``\  specifies a color, \ ``v``\ , for 2D graph points. This option is expressed in the form \ ``pointColor == v``\ .
+  \ :code:`pointColor(v)`\  specifies a color, \ :code:`v`\ , for 2D graph points. This option is expressed in the form \ :code:`pointColor == v`\ .
 
 
 .. index::
    pair: DrawOption; pointColor
 
 :spadfun:`pointColor`\: \ :ref:`Palette <l50616c65747465>`\  -> % 
-  \ ``pointColor(p)``\  specifies a color index for 2D graph points from the spadcolors palette \ ``p``\ . This option is expressed in the form \ ``pointColor == p``\ .
+  \ :code:`pointColor(p)`\  specifies a color index for 2D graph points from the spadcolors palette \ :code:`p`\ . This option is expressed in the form \ :code:`pointColor == p`\ .
 
 .. _l447261774f7074696f6e-72616e6765:
 
@@ -144,14 +144,14 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; range
 
 :spadfun:`range`\: \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``range([l])``\  provides a user-specified range \ ``l``\ . This option is expressed in the form \ ``range == [l]``\ .
+  \ :code:`range([l])`\  provides a user-specified range \ :code:`l`\ . This option is expressed in the form \ :code:`range == [l]`\ .
 
 
 .. index::
    pair: DrawOption; range
 
 :spadfun:`range`\: \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``range([i])``\  provides a user-specified range \ ``i``\ . This option is expressed in the form \ ``range == [i]``\ .
+  \ :code:`range([i])`\  provides a user-specified range \ :code:`i`\ . This option is expressed in the form \ :code:`range == [i]`\ .
 
 .. _l447261774f7074696f6e-72616e676573:
 
@@ -159,7 +159,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; ranges
 
 :spadfun:`ranges`\: \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``ranges(l)``\  provides a list of user-specified ranges \ ``l``\ . This option is expressed in the form \ ``ranges == l``\ .
+  \ :code:`ranges(l)`\  provides a list of user-specified ranges \ :code:`l`\ . This option is expressed in the form \ :code:`ranges == l`\ .
 
 .. _l447261774f7074696f6e-7370616365:
 
@@ -167,7 +167,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; space
 
 :spadfun:`space`\: \ :ref:`ThreeSpace <l54687265655370616365>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``space specifies``\  the space into which we will draw. If none is given then a new space is created.
+  \ :code:`space specifies`\  the space into which we will draw. If none is given then a new space is created.
 
 .. _l447261774f7074696f6e-7374796c65:
 
@@ -175,7 +175,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; style
 
 :spadfun:`style`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``style(s)``\  specifies the drawing style in which the graph will be plotted by the indicated string \ ``s``\ . This option is expressed in the form \ ``style == s``\ .
+  \ :code:`style(s)`\  specifies the drawing style in which the graph will be plotted by the indicated string \ :code:`s`\ . This option is expressed in the form \ :code:`style == s`\ .
 
 .. _l447261774f7074696f6e-7469746c65:
 
@@ -183,7 +183,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; title
 
 :spadfun:`title`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``title(s)``\  specifies a title for a plot by the indicated string \ ``s``\ . This option is expressed in the form \ ``title == s``\ .
+  \ :code:`title(s)`\  specifies a title for a plot by the indicated string \ :code:`s`\ . This option is expressed in the form \ :code:`title == s`\ .
 
 .. _l447261774f7074696f6e-746f5363616c65:
 
@@ -191,7 +191,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; toScale
 
 :spadfun:`toScale`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``toScale(b)``\  specifies whether or not a plot is to be drawn to scale; if \ ``b``\  is \ ``true``\  it is drawn to scale, if \ ``b``\  is \ ``false``\  it is not. This option is expressed in the form \ ``toScale == b``\ .
+  \ :code:`toScale(b)`\  specifies whether or not a plot is to be drawn to scale; if \ :code:`b`\  is \ :code:`true`\  it is drawn to scale, if \ :code:`b`\  is \ :code:`false`\  it is not. This option is expressed in the form \ :code:`toScale == b`\ .
 
 .. _l447261774f7074696f6e-74756265506f696e7473:
 
@@ -199,7 +199,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; tubePoints
 
 :spadfun:`tubePoints`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``tubePoints(n)``\  specifies the number of points, \ ``n``\ , defining the circle which creates the tube around a 3D curve, the default is 6. This option is expressed in the form \ ``tubePoints == n``\ .
+  \ :code:`tubePoints(n)`\  specifies the number of points, \ :code:`n`\ , defining the circle which creates the tube around a 3D curve, the default is 6. This option is expressed in the form \ :code:`tubePoints == n`\ .
 
 .. _l447261774f7074696f6e-74756265526164697573:
 
@@ -207,7 +207,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; tubeRadius
 
 :spadfun:`tubeRadius`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``tubeRadius(r)``\  specifies a radius, \ ``r``\ , for a tube plot around a 3D curve; is expressed in the form \ ``tubeRadius == 4``\ .
+  \ :code:`tubeRadius(r)`\  specifies a radius, \ :code:`r`\ , for a tube plot around a 3D curve; is expressed in the form \ :code:`tubeRadius == 4`\ .
 
 .. _l447261774f7074696f6e-756e6974:
 
@@ -215,7 +215,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; unit
 
 :spadfun:`unit`\: \ :ref:`List <l4c697374>`\  \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``unit(lf)``\  will mark off the units according to the indicated list \ ``lf``\ . This option is expressed in the form \ ``unit == [f1, f2]``\ .
+  \ :code:`unit(lf)`\  will mark off the units according to the indicated list \ :code:`lf`\ . This option is expressed in the form \ :code:`unit == [f1, f2]`\ .
 
 .. _l447261774f7074696f6e-766172315374657073:
 
@@ -223,7 +223,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; var1Steps
 
 :spadfun:`var1Steps`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``var1Steps(n)``\  indicates the number of subdivisions, \ ``n``\ , of the first range variable. This option is expressed in the form \ ``var1Steps == n``\ .
+  \ :code:`var1Steps(n)`\  indicates the number of subdivisions, \ :code:`n`\ , of the first range variable. This option is expressed in the form \ :code:`var1Steps == n`\ .
 
 .. _l447261774f7074696f6e-766172325374657073:
 
@@ -231,7 +231,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; var2Steps
 
 :spadfun:`var2Steps`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``var2Steps(n)``\  indicates the number of subdivisions, \ ``n``\ , of the second range variable. This option is expressed in the form \ ``var2Steps == n``\ .
+  \ :code:`var2Steps(n)`\  indicates the number of subdivisions, \ :code:`n`\ , of the second range variable. This option is expressed in the form \ :code:`var2Steps == n`\ .
 
 .. _l447261774f7074696f6e-76696577706f696e74:
 
@@ -239,7 +239,7 @@ DrawOption allows the user to specify defaults for the creation and rendering of
    pair: DrawOption; viewpoint
 
 :spadfun:`viewpoint`\: Record(theta: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , phi: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , scale: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , scaleX: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , scaleY: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , scaleZ: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , deltaX: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , deltaY: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``viewpoint(vp)``\  creates a viewpoint data structure corresponding to the list of values. The values are interpreted as [theta, phi, scale, scaleX, scaleY, scaleZ, deltaX, deltaY]. This option is expressed in the form \ ``viewpoint == ls``\ .
+  \ :code:`viewpoint(vp)`\  creates a viewpoint data structure corresponding to the list of values. The values are interpreted as [theta, phi, scale, scaleX, scaleY, scaleZ, deltaX, deltaY]. This option is expressed in the form \ :code:`viewpoint == ls`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

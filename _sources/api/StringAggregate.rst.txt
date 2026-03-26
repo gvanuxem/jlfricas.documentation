@@ -61,7 +61,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; coerce
 
 :spadfun:`coerce`\: \ :ref:`Character <l436861726163746572>`\  -> % 
-  \ ``coerce(c)``\  returns \ ``c``\  as a string \ ``s``\  with the character \ ``c``\ .
+  \ :code:`coerce(c)`\  returns \ :code:`c`\  as a string \ :code:`s`\  with the character \ :code:`c`\ .
 
 .. _l537472696e67416767726567617465-636f6e636174:
 
@@ -124,7 +124,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; elt
 
 :spadfun:`elt`\: (%, %) -> % 
-  \ ``elt(s, t)``\  returns the concatenation of \ ``s``\  and \ ``t``\ . It is provided to allow juxtaposition of strings to work as concatenation. For example, \ ``"smoo" "shed"``\  returns \ ``"smooshed"``\ .
+  \ :code:`elt(s, t)`\  returns the concatenation of \ :code:`s`\  and \ :code:`t`\ . It is provided to allow juxtaposition of strings to work as concatenation. For example, \ :code:`"smoo" "shed"`\  returns \ :code:`"smooshed"`\ .
 
 
 \ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Character <l436861726163746572>`\  
@@ -239,7 +239,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; join
 
 :spadfun:`join`\: (%, \ :ref:`List <l4c697374>`\  %) -> % 
-  \ ``join(sep,ls)``\  returns an element that is the concatenation of all strings in \ ``ls``\  but separated by \ ``sep``\ , for example, join(\ ``"/"``\ ,["a",\ ``"b"``\ ,\ ``"c"``\ ]) returns "a/b/c".
+  \ :code:`join(sep,ls)`\  returns an element that is the concatenation of all strings in \ :code:`ls`\  but separated by \ :code:`sep`\ , for example, join(\ :code:`"/"`\ ,["a",\ :code:`"b"`\ ,\ :code:`"c"`\ ]) returns "a/b/c".
 
 .. _l537472696e67416767726567617465-6c61746578:
 
@@ -256,7 +256,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; leftTrim
 
 :spadfun:`leftTrim`\: (%, \ :ref:`CharacterClass <l436861726163746572436c617373>`\ ) -> % 
-  \ ``leftTrim(s, cc)``\  returns \ ``s``\  with all leading characters in \ ``cc``\  deleted. For example, \ ``leftTrim("(abc)", charClass "()")``\  returns \ ``"abc)"``\ .
+  \ :code:`leftTrim(s, cc)`\  returns \ :code:`s`\  with all leading characters in \ :code:`cc`\  deleted. For example, \ :code:`leftTrim("(abc)", charClass "()")`\  returns \ :code:`"abc)"`\ .
 
 .. _l537472696e67416767726567617465-6c6573733f:
 
@@ -269,7 +269,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; lowerCase!
 
 :spadfun:`lowerCase!`\: % -> % 
-  \ ``lowerCase!(s)``\  destructively replaces the alphabetic characters in \ ``s``\  by lower case.
+  \ :code:`lowerCase!(s)`\  destructively replaces the alphabetic characters in \ :code:`s`\  by lower case.
 
 .. _l537472696e67416767726567617465-6c6f77657243617365:
 
@@ -277,7 +277,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; lowerCase
 
 :spadfun:`lowerCase`\: % -> % 
-  \ ``lowerCase(s)``\  returns the string with all characters in lower case.
+  \ :code:`lowerCase(s)`\  returns the string with all characters in lower case.
 
 .. _l537472696e67416767726567617465-6d617021:
 
@@ -299,7 +299,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; match?
 
 :spadfun:`match?`\: (%, %, \ :ref:`Character <l436861726163746572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``match?(s, t, c)``\  tests if \ ``s``\  matches \ ``t``\  except perhaps for multiple and consecutive occurrences of character \ ``c``\ . Typically \ ``c``\  is the blank character.
+  \ :code:`match?(s, t, c)`\  tests if \ :code:`s`\  matches \ :code:`t`\  except perhaps for multiple and consecutive occurrences of character \ :code:`c`\ . Typically \ :code:`c`\  is the blank character.
 
 .. _l537472696e67416767726567617465-6d6178:
 
@@ -373,7 +373,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; position
 
 :spadfun:`position`\: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``position(s, t, i)``\  returns the position \ ``j``\  of the substring \ ``s``\  in string \ ``t``\ , beginning at index \ ``i``\ . Returns \ ``minIndex(s) - 1``\  if there is no such \ ``j``\ .
+  \ :code:`position(s, t, i)`\  returns the position \ :code:`j`\  of the substring \ :code:`s`\  in string \ :code:`t`\ , beginning at index \ :code:`i`\ . Returns \ :code:`minIndex(s) - 1`\  if there is no such \ :code:`j`\ .
 
 
 \ :ref:`position <l4c696e656172416767726567617465-706f736974696f6e>`\ \: (\ :ref:`Character <l436861726163746572>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Integer <l496e7465676572>`\  
@@ -392,7 +392,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; position
 
 :spadfun:`position`\: (\ :ref:`CharacterClass <l436861726163746572436c617373>`\ , %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``position(cc, t, i)``\  returns the position \ ``j``\  in string \ ``t``\  of the first character belonging to \ ``cc``\ , beginning at index \ ``i``\ . Returns \ ``minIndex(t) - 1``\  if there is no such \ ``j``\ .
+  \ :code:`position(cc, t, i)`\  returns the position \ :code:`j`\  in string \ :code:`t`\  of the first character belonging to \ :code:`cc`\ , beginning at index \ :code:`i`\ . Returns \ :code:`minIndex(t) - 1`\  if there is no such \ :code:`j`\ .
 
 .. _l537472696e67416767726567617465-7072656669783f:
 
@@ -400,7 +400,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; prefix?
 
 :spadfun:`prefix?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``prefix?(s, t)``\  tests if the string \ ``s``\  is the initial substring of \ ``t``\ . Note: \ ``prefix?(s, t) = reduce(and, [s.i = t.i for i in indices s])``\ .
+  \ :code:`prefix?(s, t)`\  tests if the string \ :code:`s`\  is the initial substring of \ :code:`t`\ . Note: \ :code:`prefix?(s, t) = reduce(and, [s.i = t.i for i in indices s])`\ .
 
 .. _l537472696e67416767726567617465-71656c74:
 
@@ -445,7 +445,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; replace
 
 :spadfun:`replace`\: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``replace(s, i..j, t)``\  replaces the substring \ ``s(i..j)``\  of \ ``s``\  by string \ ``t``\ .
+  \ :code:`replace(s, i..j, t)`\  replaces the substring \ :code:`s(i..j)`\  of \ :code:`s`\  by string \ :code:`t`\ .
 
 .. _l537472696e67416767726567617465-7265766572736521:
 
@@ -467,7 +467,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; rightTrim
 
 :spadfun:`rightTrim`\: (%, \ :ref:`CharacterClass <l436861726163746572436c617373>`\ ) -> % 
-  \ ``rightTrim(s, cc)``\  returns \ ``s``\  with all trailing occurrences of characters in \ ``cc``\  deleted. For example, \ ``rightTrim("(abc)", charClass "()")``\  returns \ ``"(abc"``\ .
+  \ :code:`rightTrim(s, cc)`\  returns \ :code:`s`\  with all trailing occurrences of characters in \ :code:`cc`\  deleted. For example, \ :code:`rightTrim("(abc)", charClass "()")`\  returns \ :code:`"(abc"`\ .
 
 .. _l537472696e67416767726567617465-73616d706c65:
 
@@ -531,14 +531,14 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; split
 
 :spadfun:`split`\: (%, \ :ref:`Character <l436861726163746572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``split(s, c)``\  returns a list of substrings delimited by character \ ``c``\ .
+  \ :code:`split(s, c)`\  returns a list of substrings delimited by character \ :code:`c`\ .
 
 
 .. index::
    pair: StringAggregate; split
 
 :spadfun:`split`\: (%, \ :ref:`CharacterClass <l436861726163746572436c617373>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``split(s, cc)``\  returns a list of substrings delimited by characters in \ ``cc``\ .
+  \ :code:`split(s, cc)`\  returns a list of substrings delimited by characters in \ :code:`cc`\ .
 
 .. _l537472696e67416767726567617465-737562737472696e673f:
 
@@ -546,7 +546,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; substring?
 
 :spadfun:`substring?`\: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``substring?(s, t, i)``\  tests if \ ``s``\  is a substring of \ ``t``\  beginning at index \ ``i``\ . Note: \ ``substring?(s, t, 0) = prefix?(s, t)``\ .
+  \ :code:`substring?(s, t, i)`\  tests if \ :code:`s`\  is a substring of \ :code:`t`\  beginning at index \ :code:`i`\ . Note: \ :code:`substring?(s, t, 0) = prefix?(s, t)`\ .
 
 .. _l537472696e67416767726567617465-7375666669783f:
 
@@ -554,7 +554,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; suffix?
 
 :spadfun:`suffix?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``suffix?(s, t)``\  tests if the string \ ``s``\  is the final substring of \ ``t``\ . Note: \ ``suffix?(s, t) = reduce(and, [s.i = t.(n - m + i) for i indices s])``\  where \ ``m``\  and \ ``n``\  denote the maxIndex of \ ``s``\  and \ ``t``\  respectively.
+  \ :code:`suffix?(s, t)`\  tests if the string \ :code:`s`\  is the final substring of \ :code:`t`\ . Note: \ :code:`suffix?(s, t) = reduce(and, [s.i = t.(n - m + i) for i indices s])`\  where \ :code:`m`\  and \ :code:`n`\  denote the maxIndex of \ :code:`s`\  and \ :code:`t`\  respectively.
 
 .. _l537472696e67416767726567617465-7377617021:
 
@@ -571,7 +571,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; trim
 
 :spadfun:`trim`\: (%, \ :ref:`CharacterClass <l436861726163746572436c617373>`\ ) -> % 
-  \ ``trim(s, cc)``\  returns \ ``s``\  with all characters in \ ``cc``\  deleted from right and left ends. For example, \ ``trim("(abc)", charClass "()")``\  returns \ ``"abc"``\ .
+  \ :code:`trim(s, cc)`\  returns \ :code:`s`\  with all characters in \ :code:`cc`\  deleted from right and left ends. For example, \ :code:`trim("(abc)", charClass "()")`\  returns \ :code:`"abc"`\ .
 
 .. _l537472696e67416767726567617465-75707065724361736521:
 
@@ -579,7 +579,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; upperCase!
 
 :spadfun:`upperCase!`\: % -> % 
-  \ ``upperCase!(s)``\  destructively replaces the alphabetic characters in \ ``s``\  by corresponding upper case characters.
+  \ :code:`upperCase!(s)`\  destructively replaces the alphabetic characters in \ :code:`s`\  by corresponding upper case characters.
 
 .. _l537472696e67416767726567617465-757070657243617365:
 
@@ -587,7 +587,7 @@ A string aggregate is a category for strings, that is, one dimensional arrays of
    pair: StringAggregate; upperCase
 
 :spadfun:`upperCase`\: % -> % 
-  \ ``upperCase(s)``\  returns the string with all characters in upper case.
+  \ :code:`upperCase(s)`\  returns the string with all characters in upper case.
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

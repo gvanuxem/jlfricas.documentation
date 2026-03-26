@@ -21,7 +21,7 @@ This package implements factorization for free ring.
    pair: XPolynomialFactor; factor
 
 :spadfun:`factor`\: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F) -> \ :ref:`List <l4c697374>`\  \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F) if F has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
-  \ ``factor(p)``\  returns a factorization of \ ``p``\  into irreducible factors. Note: in general there are finitely many nonequivalent factorizations into irreducible factors, this routine returns only one.
+  \ :code:`factor(p)`\  returns a factorization of \ :code:`p`\  into irreducible factors. Note: in general there are finitely many nonequivalent factorizations into irreducible factors, this routine returns only one.
 
 .. _l58506f6c796e6f6d69616c466163746f72-686f6d6f5f66616374:
 
@@ -29,7 +29,7 @@ This package implements factorization for free ring.
    pair: XPolynomialFactor; homo_fact
 
 :spadfun:`homo_fact`\: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F) -> \ :ref:`List <l4c697374>`\  \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F) 
-  \ ``homo_fact(p)``\  factors homogeneous polynomial \ ``p``\  into irreducible factors.
+  \ :code:`homo_fact(p)`\  factors homogeneous polynomial \ :code:`p`\  into irreducible factors.
 
 .. _l58506f6c796e6f6d69616c466163746f72-6c646976696465:
 
@@ -37,7 +37,7 @@ This package implements factorization for free ring.
    pair: XPolynomialFactor; ldivide
 
 :spadfun:`ldivide`\: (\ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) -> Record(quotient: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), remainder: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) 
-  \ ``ldivide(a, b)``\  returns [\ ``c``\ , \ ``r``\ ] such that a = \ ``b*c``\  + \ ``r``\ , \ ``r``\  is of minimal possible degree and homogeneous part of of \ ``r``\  of maximal degree contains no terms divisible from left by leading term of \ ``b``\ .
+  \ :code:`ldivide(a, b)`\  returns [\ :code:`c`\ , \ :code:`r`\ ] such that a = \ :code:`b*c`\  + \ :code:`r`\ , \ :code:`r`\  is of minimal possible degree and homogeneous part of of \ :code:`r`\  of maximal degree contains no terms divisible from left by leading term of \ :code:`b`\ .
 
 .. _l58506f6c796e6f6d69616c466163746f72-6c6566745f6578745f474344:
 
@@ -45,7 +45,7 @@ This package implements factorization for free ring.
    pair: XPolynomialFactor; left_ext_GCD
 
 :spadfun:`left_ext_GCD`\: (\ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) -> Union(Record(g: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), c1: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), c2: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), cu: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), cv: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)), failed) 
-  \ ``left_ext_GCD(a, b)``\  returns [\ ``g``\ , \ ``u0``\ , \ ``v0``\ , \ ``u``\ , \ ``v``\ ] where \ ``g``\  is left \ ``GCD``\  of a and \ ``b``\ , \ ``g``\  = \ ``a*u0``\  + \ ``b*v0``\  and au = - \ ``bv``\  is least common right multiple of a and \ ``b``\  when a and \ ``b``\  have least common right multiple. Otherwise left_ext_GCD(a, \ ``b``\ ) returns "failed".
+  \ :code:`left_ext_GCD(a, b)`\  returns [\ :code:`g`\ , \ :code:`u0`\ , \ :code:`v0`\ , \ :code:`u`\ , \ :code:`v`\ ] where \ :code:`g`\  is left \ :code:`GCD`\  of a and \ :code:`b`\ , \ :code:`g`\  = \ :code:`a*u0`\  + \ :code:`b*v0`\  and au = - \ :code:`bv`\  is least common right multiple of a and \ :code:`b`\  when a and \ :code:`b`\  have least common right multiple. Otherwise left_ext_GCD(a, \ :code:`b`\ ) returns "failed".
 
 .. _l58506f6c796e6f6d69616c466163746f72-72646976696465:
 
@@ -53,7 +53,7 @@ This package implements factorization for free ring.
    pair: XPolynomialFactor; rdivide
 
 :spadfun:`rdivide`\: (\ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) -> Record(quotient: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F), remainder: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F)) 
-  ldivide(a, \ ``b``\ ) returns [\ ``c``\ , \ ``r``\ ] such that a = \ ``c*b``\  + \ ``r``\ , \ ``r``\  is of minimal possible degree and homogeneous part of of \ ``r``\  of maximal degree contains no terms divisible from right by leading term of \ ``b``\ .
+  ldivide(a, \ :code:`b`\ ) returns [\ :code:`c`\ , \ :code:`r`\ ] such that a = \ :code:`c*b`\  + \ :code:`r`\ , \ :code:`r`\  is of minimal possible degree and homogeneous part of of \ :code:`r`\  of maximal degree contains no terms divisible from right by leading term of \ :code:`b`\ .
 
 .. _l58506f6c796e6f6d69616c466163746f72-746f705f73706c6974:
 
@@ -61,6 +61,6 @@ This package implements factorization for free ring.
    pair: XPolynomialFactor; top_split
 
 :spadfun:`top_split`\: \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F) -> \ :ref:`List <l4c697374>`\  \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (vl, F) 
-  \ ``top_split(p)``\  returns [\ ``p1``\ , \ ``p2``\ ] where \ ``p1``\  is homogeneous part of \ ``p``\  of maximal degree and \ ``p2``\  is sum of lower order terms of \ ``p``\ .
+  \ :code:`top_split(p)`\  returns [\ :code:`p1`\ , \ :code:`p2`\ ] where \ :code:`p1`\  is homogeneous part of \ :code:`p`\  of maximal degree and \ :code:`p2`\  is sum of lower order terms of \ :code:`p`\ .
 
 

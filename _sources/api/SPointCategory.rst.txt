@@ -17,7 +17,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; *
 
 :spadfun:`\*`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , %) -> % 
-  *(\ ``s``\ , \ ``x``\ ) gives scalar multiplication Although, scalar multiplication is strictly only a valid operation for vectors and not points, we allow it here because there are some useful short cuts, for instance, to find the central point between two points we can add them together and scalar multiply by 0.5.
+  *(\ :code:`s`\ , \ :code:`x`\ ) gives scalar multiplication Although, scalar multiplication is strictly only a valid operation for vectors and not points, we allow it here because there are some useful short cuts, for instance, to find the central point between two points we can add them together and scalar multiply by 0.5.
 
 .. _l53506f696e7443617465676f7279-2b:
 
@@ -25,7 +25,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; +
 
 :spadfun:`+`\: (%, %) -> % 
-  +(\ ``x``\ , \ ``y``\ ) gives addition add the corresponding elements of the vector or point. The type (vector or point) depends on the following table: vector + vector = vector point + vector = point point + point = invalid (but interpret as vector) Although, adding two points is not strictly a valid operation, we allow it here by interpreting the point as a vector relative to the origin. We do that because there are some useful short cuts, for instance, to find the central point between two points we can add them together and scalar multiply by 0.5.
+  +(\ :code:`x`\ , \ :code:`y`\ ) gives addition add the corresponding elements of the vector or point. The type (vector or point) depends on the following table: vector + vector = vector point + vector = point point + point = invalid (but interpret as vector) Although, adding two points is not strictly a valid operation, we allow it here by interpreting the point as a vector relative to the origin. We do that because there are some useful short cuts, for instance, to find the central point between two points we can add them together and scalar multiply by 0.5.
 
 .. _l53506f696e7443617465676f7279-2d:
 
@@ -33,7 +33,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; -
 
 :spadfun:`-`\: (%, %) -> % 
-  \ ``-(x, y)``\  gives subtraction subtract the corresponding elements of the vector or point. The type (vector or point) depends on the following table: vector - vector = vector point - vector = point vector - point = invalid (but interpret as point) point - point = invalid (but interpret as vector) Although, subtracting two points is not strictly a valid operation, we allow it here by interpreting the result as the vector distance between the two points.
+  \ :code:`-(x, y)`\  gives subtraction subtract the corresponding elements of the vector or point. The type (vector or point) depends on the following table: vector - vector = vector point - vector = point vector - point = invalid (but interpret as point) point - point = invalid (but interpret as vector) Although, subtracting two points is not strictly a valid operation, we allow it here by interpreting the result as the vector distance between the two points.
 
 .. _l53506f696e7443617465676f7279-3d:
 
@@ -59,7 +59,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; colinearity
 
 :spadfun:`colinearity`\: (%, %) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``colinearity(x, y)``\  returns a measure of how parallel two vectors are independent of the length of the vectors: 1.0 is completely parallel 0.0 is completely perpendicular returned value will be between these
+  \ :code:`colinearity(x, y)`\  returns a measure of how parallel two vectors are independent of the length of the vectors: 1.0 is completely parallel 0.0 is completely perpendicular returned value will be between these
 
 .. _l53506f696e7443617465676f7279-64696d656e73696f6e:
 
@@ -67,7 +67,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; dimension
 
 :spadfun:`dimension`\: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``dimension(p)``\  returns the number of dimensions that make up the point category \ ``p``\ .
+  \ :code:`dimension(p)`\  returns the number of dimensions that make up the point category \ :code:`p`\ .
 
 .. _l53506f696e7443617465676f7279-64697374616e6365:
 
@@ -75,7 +75,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; distance
 
 :spadfun:`distance`\: (%, %) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``distance(p1, p2)``\  returns the distance between the points \ ``p1``\  is the first point. \ ``p2``\  is the second point. There are 2 metrics associated with any SPointCategory the underlying space and the space that it is embedded in this is the distance in the underlying space.
+  \ :code:`distance(p1, p2)`\  returns the distance between the points \ :code:`p1`\  is the first point. \ :code:`p2`\  is the second point. There are 2 metrics associated with any SPointCategory the underlying space and the space that it is embedded in this is the distance in the underlying space.
 
 .. _l53506f696e7443617465676f7279-64697374616e636553717561726564:
 
@@ -83,7 +83,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; distanceSquared
 
 :spadfun:`distanceSquared`\: (%, %) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``distanceSquared(p1, p2)``\  returns the distance between the points \ ``p1``\  and \ ``p2``\ . There are 2 metrics associated with any SPointCategory the underlying space and the space that it is embedded in this is the distance in the underlying space.
+  \ :code:`distanceSquared(p1, p2)`\  returns the distance between the points \ :code:`p1`\  and \ :code:`p2`\ . There are 2 metrics associated with any SPointCategory the underlying space and the space that it is embedded in this is the distance in the underlying space.
 
 .. _l53506f696e7443617465676f7279-657874656e646564436f6f726473:
 
@@ -91,7 +91,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; extendedCoords
 
 :spadfun:`extendedCoords`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``extendedCoords(pt)``\  returns extended coordinates as a list.
+  \ :code:`extendedCoords(pt)`\  returns extended coordinates as a list.
 
 .. _l53506f696e7443617465676f7279-696e426f756e64733f:
 
@@ -99,7 +99,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; inBounds?
 
 :spadfun:`inBounds?`\: (%, %, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``inBounds?(pt, mns, mxs)``\  returns \ ``true``\  if \ ``pt``\  is inside bounding box where bounding box is specified by min and max.
+  \ :code:`inBounds?(pt, mns, mxs)`\  returns \ :code:`true`\  if \ :code:`pt`\  is inside bounding box where bounding box is specified by min and max.
 
 .. _l53506f696e7443617465676f7279-6973506f696e743f:
 
@@ -107,7 +107,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; isPoint?
 
 :spadfun:`isPoint?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isPoint?(p)``\  returns \ ``true``\  if this represents a point as opposed to a vector.
+  \ :code:`isPoint?(p)`\  returns \ :code:`true`\  if this represents a point as opposed to a vector.
 
 .. _l53506f696e7443617465676f7279-6973566563746f723f:
 
@@ -115,7 +115,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; isVector?
 
 :spadfun:`isVector?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isVector? returns``\  \ ``true``\  if this represents a vector as opposed to a point.
+  \ :code:`isVector? returns`\  \ :code:`true`\  if this represents a vector as opposed to a point.
 
 .. _l53506f696e7443617465676f7279-6c61746578:
 
@@ -128,7 +128,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; max
 
 :spadfun:`max`\: (%, %) -> % 
-  \ ``max(a, b)``\  returns a point whose value in each dimension is the maximum. So if a has the largest \ ``x``\  value and \ ``b``\  has the largest \ ``y``\  value then the result will combine these. This is useful for constructing boundary boxes around sets of points.
+  \ :code:`max(a, b)`\  returns a point whose value in each dimension is the maximum. So if a has the largest \ :code:`x`\  value and \ :code:`b`\  has the largest \ :code:`y`\  value then the result will combine these. This is useful for constructing boundary boxes around sets of points.
 
 .. _l53506f696e7443617465676f7279-6d696e:
 
@@ -136,7 +136,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; min
 
 :spadfun:`min`\: (%, %) -> % 
-  \ ``min(a, b)``\  returns a point whose value in each dimension is the minimum. So if a has the smallest \ ``x``\  value and \ ``b``\  has the smallest \ ``y``\  value then the result will combine these. This is useful for constructing boundary boxes around sets of points.
+  \ :code:`min(a, b)`\  returns a point whose value in each dimension is the minimum. So if a has the smallest \ :code:`x`\  value and \ :code:`b`\  has the smallest \ :code:`y`\  value then the result will combine these. This is useful for constructing boundary boxes around sets of points.
 
 .. _l53506f696e7443617465676f7279-706172616c6c656c:
 
@@ -144,7 +144,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; parallel
 
 :spadfun:`parallel`\: (%, %) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``parallel(x, y)``\  returns the length of the parallel component of two vectors. In the case of Euclidean space this is the dot product of two vectors. We use this function to test the colinearity
+  \ :code:`parallel(x, y)`\  returns the length of the parallel component of two vectors. In the case of Euclidean space this is the dot product of two vectors. We use this function to test the colinearity
 
 .. _l53506f696e7443617465676f7279-70657270656e646963756c6172:
 
@@ -152,7 +152,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; perpendicular
 
 :spadfun:`perpendicular`\: (%, %) -> % 
-  \ ``perpendicular(x, y)``\  returns a vector perpendicular to the two vectors in the case of 3D Euclidean space this is the cross the product of two vectors. We use this function to compute orthogonal
+  \ :code:`perpendicular(x, y)`\  returns a vector perpendicular to the two vectors in the case of 3D Euclidean space this is the cross the product of two vectors. We use this function to compute orthogonal
 
 .. _l53506f696e7443617465676f7279-506e616e3f:
 
@@ -160,7 +160,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; Pnan?
 
 :spadfun:`Pnan?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``Pnan?(p)``\  returns \ ``true``\  if any of its elements are not valid DoubleFloat values. Examples of invalid floating point numbers are when we have divided a given element by zero or taken sqrt of negative number at some stage? Note: we can still represent a point at infinity and we can represent points using complex numbers, but we do this using projective or conformal space or by using the appropriate instance of SPointCategory, not by using invalid floating point numbers.
+  \ :code:`Pnan?(p)`\  returns \ :code:`true`\  if any of its elements are not valid DoubleFloat values. Examples of invalid floating point numbers are when we have divided a given element by zero or taken sqrt of negative number at some stage? Note: we can still represent a point at infinity and we can represent points using complex numbers, but we do this using projective or conformal space or by using the appropriate instance of SPointCategory, not by using invalid floating point numbers.
 
 .. _l53506f696e7443617465676f7279-73637265656e436f6f726473:
 
@@ -168,7 +168,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; screenCoords
 
 :spadfun:`screenCoords`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``screenCoords(pt)``\  returns screen coordinates as a list.
+  \ :code:`screenCoords(pt)`\  returns screen coordinates as a list.
 
 .. _l53506f696e7443617465676f7279-73637265656e436f6f726458:
 
@@ -176,7 +176,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; screenCoordX
 
 :spadfun:`screenCoordX`\: % -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``screenCoordX(pt)``\  returns the \ ``'x'``\ (left to right) screen coordinate.
+  \ :code:`screenCoordX(pt)`\  returns the \ :code:`'x'`\ (left to right) screen coordinate.
 
 .. _l53506f696e7443617465676f7279-73637265656e436f6f726459:
 
@@ -184,7 +184,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; screenCoordY
 
 :spadfun:`screenCoordY`\: % -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``screenCoordY(pt)``\  returns the \ ``'y'``\ (bottom to top) screen coordinate.
+  \ :code:`screenCoordY(pt)`\  returns the \ :code:`'y'`\ (bottom to top) screen coordinate.
 
 .. _l53506f696e7443617465676f7279-73637265656e436f6f72645a:
 
@@ -192,7 +192,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; screenCoordZ
 
 :spadfun:`screenCoordZ`\: % -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``screenCoordZ(pt)``\  returns the \ ``'z'``\ (out from screen) screen coordinate.
+  \ :code:`screenCoordZ(pt)`\  returns the \ :code:`'z'`\ (out from screen) screen coordinate.
 
 .. _l53506f696e7443617465676f7279-7369706e74:
 
@@ -200,14 +200,14 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; sipnt
 
 :spadfun:`sipnt`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``sipnt(a, b)``\  constructs a 2D point defined by a and \ ``b``\  of type Integer
+  \ :code:`sipnt(a, b)`\  constructs a 2D point defined by a and \ :code:`b`\  of type Integer
 
 
 .. index::
    pair: SPointCategory; sipnt
 
 :spadfun:`sipnt`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``sipnt(a, b, c)``\  constructs a 3D point defined by a, \ ``b``\  and \ ``c``\  of type Integer
+  \ :code:`sipnt(a, b, c)`\  constructs a 3D point defined by a, \ :code:`b`\  and \ :code:`c`\  of type Integer
 
 .. _l53506f696e7443617465676f7279-7369766563:
 
@@ -215,14 +215,14 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; sivec
 
 :spadfun:`sivec`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``sivec(a, b)``\  constructs a 2D vector defined by a and \ ``b``\  of type Integer
+  \ :code:`sivec(a, b)`\  constructs a 2D vector defined by a and \ :code:`b`\  of type Integer
 
 
 .. index::
    pair: SPointCategory; sivec
 
 :spadfun:`sivec`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``sivec(a, b, c)``\  constructs a 3D vector defined by a, \ ``b``\  and \ ``c``\  of type Integer
+  \ :code:`sivec(a, b, c)`\  constructs a 3D vector defined by a, \ :code:`b`\  and \ :code:`c`\  of type Integer
 
 .. _l53506f696e7443617465676f7279-73706e74:
 
@@ -230,14 +230,14 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; spnt
 
 :spadfun:`spnt`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``spnt(a, b)``\  constructs a 2D point defined by a and \ ``b``\  of type \ ``R``\ 
+  \ :code:`spnt(a, b)`\  constructs a 2D point defined by a and \ :code:`b`\  of type \ :code:`R`\ 
 
 
 .. index::
    pair: SPointCategory; spnt
 
 :spadfun:`spnt`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``spnt(a, b, c)``\  constructs a 3D point defined by a, \ ``b``\  and \ ``c``\  of type \ ``R``\ 
+  \ :code:`spnt(a, b, c)`\  constructs a 3D point defined by a, \ :code:`b`\  and \ :code:`c`\  of type \ :code:`R`\ 
 
 .. _l53506f696e7443617465676f7279-73766563:
 
@@ -245,14 +245,14 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; svec
 
 :spadfun:`svec`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``svec(a, b)``\  constructs a 2D vector defined by a and \ ``b``\  of type \ ``R``\ 
+  \ :code:`svec(a, b)`\  constructs a 2D vector defined by a and \ :code:`b`\  of type \ :code:`R`\ 
 
 
 .. index::
    pair: SPointCategory; svec
 
 :spadfun:`svec`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``svec(a, b, c)``\  constructs a 3D vector defined by a, \ ``b``\  and \ ``c``\  of type \ ``R``\ 
+  \ :code:`svec(a, b, c)`\  constructs a 3D vector defined by a, \ :code:`b`\  and \ :code:`c`\  of type \ :code:`R`\ 
 
 .. _l53506f696e7443617465676f7279-746f506f696e74:
 
@@ -260,7 +260,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; toPoint
 
 :spadfun:`toPoint`\: % -> % 
-  \ ``toPoint(p)``\  returns a Point with the same coordinates as \ ``p``\  If \ ``p``\  was originally a vector then that will be treated as the distance from the origin.
+  \ :code:`toPoint(p)`\  returns a Point with the same coordinates as \ :code:`p`\  If \ :code:`p`\  was originally a vector then that will be treated as the distance from the origin.
 
 .. _l53506f696e7443617465676f7279-746f566563746f72:
 
@@ -268,7 +268,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; toVector
 
 :spadfun:`toVector`\: % -> % 
-  \ ``toVector returns``\  a Vector with the same coordinates as \ ``p``\  If \ ``p``\  was originally a point then the vector will be the distance from the origin.
+  \ :code:`toVector returns`\  a Vector with the same coordinates as \ :code:`p`\  If \ :code:`p`\  was originally a point then the vector will be the distance from the origin.
 
 .. _l53506f696e7443617465676f7279-756e6974566563746f72:
 
@@ -276,7 +276,7 @@ PointCategory is the category of points and vectors in space. Points may be used
    pair: SPointCategory; unitVector
 
 :spadfun:`unitVector`\: % -> % 
-  \ ``unitVector(p)``\  returns a vector with the same direction as \ ``p``\  but with unit length. We scale until length is 1
+  \ :code:`unitVector(p)`\  returns a vector with the same direction as \ :code:`p`\  but with unit length. We scale until length is 1
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

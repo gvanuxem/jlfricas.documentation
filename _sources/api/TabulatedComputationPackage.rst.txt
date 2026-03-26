@@ -12,7 +12,7 @@ TabulatedComputationPackage(Key, Entry)
 * Entry: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-\ ``TabulatedComputationPackage(Key , Entry)``\  provides some modest support for dealing with operations with type \ ``Key -> Entry``\ . The result of such operations can be stored and retrieved with this package by using a hash-table. The user does not need to worry about the management of this hash-table. However, only one hash-table is built by calling \ ``TabulatedComputationPackage(Key , Entry)``\ .
+\ :code:`TabulatedComputationPackage(Key , Entry)`\  provides some modest support for dealing with operations with type \ :code:`Key -> Entry`\ . The result of such operations can be stored and retrieved with this package by using a hash-table. The user does not need to worry about the management of this hash-table. However, only one hash-table is built by calling \ :code:`TabulatedComputationPackage(Key , Entry)`\ .
 
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-636c6561725461626c6521:
@@ -21,7 +21,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; clearTable!
 
 :spadfun:`clearTable!`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``clearTable!()``\  clears the hash-table and assumes that it will no longer be used.
+  \ :code:`clearTable!()`\  clears the hash-table and assumes that it will no longer be used.
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-65787472616374496643616e:
 
@@ -29,7 +29,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; extractIfCan
 
 :spadfun:`extractIfCan`\: Key -> Union(Entry, failed) 
-  \ ``extractIfCan(x)``\  searches the item whose key is \ ``x``\ .
+  \ :code:`extractIfCan(x)`\  searches the item whose key is \ :code:`x`\ .
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-696e69745461626c6521:
 
@@ -37,7 +37,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; initTable!
 
 :spadfun:`initTable!`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``initTable!()``\  initializes the hash-table.
+  \ :code:`initTable!()`\  initializes the hash-table.
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-696e7365727421:
 
@@ -45,7 +45,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; insert!
 
 :spadfun:`insert!`\: (Key, Entry) -> \ :ref:`Void <l566f6964>`\  
-  \ ``insert!(x, y)``\  stores the item whose key is \ ``x``\  and whose entry is \ ``y``\ .
+  \ :code:`insert!(x, y)`\  stores the item whose key is \ :code:`x`\  and whose entry is \ :code:`y`\ .
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-6d616b696e6753746174733f:
 
@@ -53,7 +53,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; makingStats?
 
 :spadfun:`makingStats?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``makingStats?()``\  returns \ ``true``\  iff the statistics process is running.
+  \ :code:`makingStats?()`\  returns \ :code:`true`\  iff the statistics process is running.
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-7072696e74496e666f21:
 
@@ -61,7 +61,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; printInfo!
 
 :spadfun:`printInfo!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``printInfo!(x, y)``\  initializes the messages to be printed when manipulating items from the hash-table. If a key is retrieved then \ ``x``\  is displayed. If an item is stored then \ ``y``\  is displayed.
+  \ :code:`printInfo!(x, y)`\  initializes the messages to be printed when manipulating items from the hash-table. If a key is retrieved then \ :code:`x`\  is displayed. If an item is stored then \ :code:`y`\  is displayed.
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-7072696e74696e67496e666f3f:
 
@@ -69,7 +69,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; printingInfo?
 
 :spadfun:`printingInfo?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``printingInfo?()``\  returns \ ``true``\  iff messages are printed when manipulating items from the hash-table.
+  \ :code:`printingInfo?()`\  returns \ :code:`true`\  iff messages are printed when manipulating items from the hash-table.
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-7072696e74537461747321:
 
@@ -77,7 +77,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; printStats!
 
 :spadfun:`printStats!`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``printStats!()``\  prints the statistics.
+  \ :code:`printStats!()`\  prints the statistics.
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-7374617274537461747321:
 
@@ -85,7 +85,7 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; startStats!
 
 :spadfun:`startStats!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``startStats!(x)``\  initializes the statistics process and sets the comments to display when statistics are printed
+  \ :code:`startStats!(x)`\  initializes the statistics process and sets the comments to display when statistics are printed
 
 .. _l546162756c61746564436f6d7075746174696f6e5061636b616765-7573696e675461626c653f:
 
@@ -93,6 +93,6 @@ TabulatedComputationPackage(Key, Entry)
    pair: TabulatedComputationPackage; usingTable?
 
 :spadfun:`usingTable?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``usingTable?()``\  returns \ ``true``\  iff the hash-table is used
+  \ :code:`usingTable?()`\  returns \ :code:`true`\  iff the hash-table is used
 
 

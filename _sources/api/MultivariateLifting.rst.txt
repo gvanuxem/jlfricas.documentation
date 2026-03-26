@@ -16,7 +16,7 @@ MultivariateLifting(E, OV, R, P)
 * P: \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (R, E, OV)
 
 
-This package provides the functions for the multivariate "lifting", using an algorithm of Paul Wang. This package will work for every euclidean domain \ ``R``\  which has property \ ``F``\ , i.e. there exists a factor operation in \ ``R[x]``\ .
+This package provides the functions for the multivariate "lifting", using an algorithm of Paul Wang. This package will work for every euclidean domain \ :code:`R`\  which has property \ :code:`F`\ , i.e. there exists a factor operation in \ :code:`R[x]`\ .
 
 
 .. _l4d756c7469766172696174654c696674696e67-636f7272506f6c79:
@@ -25,7 +25,7 @@ This package provides the functions for the multivariate "lifting", using an alg
    pair: MultivariateLifting; corrPoly
 
 :spadfun:`corrPoly`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`List <l4c697374>`\  OV, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, failed)) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, failed) 
-  \ ``corrPoly(u, lv, lr, ln, lu, bsolv)``\  solves polynomial equation system u/f = sum(ai/lu(\ ``i``\ )) where \ ``f``\  is product of \ ``lu``\ (\ ``i``\ ) and deg(\ ``ai``\ ) < deg(\ ``lu``\ (\ ``i``\ )) using modular method. corrPoly returns "failed" if there is no solution. \ ``lv``\  is list of variables, \ ``lr``\  is list of corresponding evaluation points, bsolv is solver over \ ``R``\  specialized for modular images of \ ``lu``\ .
+  \ :code:`corrPoly(u, lv, lr, ln, lu, bsolv)`\  solves polynomial equation system u/f = sum(ai/lu(\ :code:`i`\ )) where \ :code:`f`\  is product of \ :code:`lu`\ (\ :code:`i`\ ) and deg(\ :code:`ai`\ ) < deg(\ :code:`lu`\ (\ :code:`i`\ )) using modular method. corrPoly returns "failed" if there is no solution. \ :code:`lv`\  is list of variables, \ :code:`lr`\  is list of corresponding evaluation points, bsolv is solver over \ :code:`R`\  specialized for modular images of \ :code:`lu`\ .
 
 .. _l4d756c7469766172696174654c696674696e67-6c696674696e67:
 
@@ -33,13 +33,13 @@ This package provides the functions for the multivariate "lifting", using an alg
    pair: MultivariateLifting; lifting
 
 :spadfun:`lifting`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`List <l4c697374>`\  OV, \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R -> Union(\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, failed), failed)) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, failed) 
-  \ ``lifting(u, lv, lu, lr, lp, ln, gen_solv)``\  lifts univariate factorization, returning recovered factors or "failed" in case of bad reduction. \ ``u``\  is multivariate polynomial to factor, \ ``lu``\  is list of univariate factors, \ ``lv``\  is list of variables, \ ``ln``\  is list of degrees corresponding to variables, \ ``lr``\  is list of evaluation points, \ ``lp``\  is list of leading coefficients of factors if known, empty otherwise, gen_solv delivers solver for polynomial equations
+  \ :code:`lifting(u, lv, lu, lr, lp, ln, gen_solv)`\  lifts univariate factorization, returning recovered factors or "failed" in case of bad reduction. \ :code:`u`\  is multivariate polynomial to factor, \ :code:`lu`\  is list of univariate factors, \ :code:`lv`\  is list of variables, \ :code:`ln`\  is list of degrees corresponding to variables, \ :code:`lr`\  is list of evaluation points, \ :code:`lp`\  is list of leading coefficients of factors if known, empty otherwise, gen_solv delivers solver for polynomial equations
 
 
 .. index::
    pair: MultivariateLifting; lifting
 
 :spadfun:`lifting`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, \ :ref:`List <l4c697374>`\  OV, \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, \ :ref:`List <l4c697374>`\  R, \ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  P, failed) if R has \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-  \ ``lifting(u, lv, lu, lr, lp, ln, r)``\  is lifting(\ ``u``\ , \ ``lv``\ , \ ``lu``\ , \ ``lr``\ , \ ``lp``\ , \ ``ln``\ , solv(\ ``r``\ )) where solv(\ ``r``\ ) is solver using reduction modulo \ ``r``\  and lifting. Members of \ ``lu``\  must be relatively prime modulo \ ``r``\ 
+  \ :code:`lifting(u, lv, lu, lr, lp, ln, r)`\  is lifting(\ :code:`u`\ , \ :code:`lv`\ , \ :code:`lu`\ , \ :code:`lr`\ , \ :code:`lp`\ , \ :code:`ln`\ , solv(\ :code:`r`\ )) where solv(\ :code:`r`\ ) is solver using reduction modulo \ :code:`r`\  and lifting. Members of \ :code:`lu`\  must be relatively prime modulo \ :code:`r`\ 
 
 

@@ -99,7 +99,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; autoReduce
 
 :spadfun:`autoReduce`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``autoReduce(sys)``\  tries to simplify a system by solving each equation for its leading term and substituting it into the other equations.
+  \ :code:`autoReduce(sys)`\  tries to simplify a system by solving each equation for its leading term and substituting it into the other equations.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-6368617261637465726973746963:
 
@@ -112,7 +112,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; class
 
 :spadfun:`class`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``class(f)``\  is defined as the highest class of the jet variables effectively occurring in \ ``f``\ .
+  \ :code:`class(f)`\  is defined as the highest class of the jet variables effectively occurring in \ :code:`f`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-636f65726365:
 
@@ -132,7 +132,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; coerce
 
 :spadfun:`coerce`\: JB -> % 
-  \ ``coerce(jv)``\  coerces the jet variable \ ``jv``\  into a local section.
+  \ :code:`coerce(jv)`\  coerces the jet variable \ :code:`jv`\  into a local section.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-636f6d6d757461746f72:
 
@@ -145,7 +145,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; const?
 
 :spadfun:`const?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``const?(f)``\  checks whether \ ``f``\  depends on jet variables.
+  \ :code:`const?(f)`\  checks whether \ :code:`f`\  depends on jet variables.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-44:
 
@@ -170,7 +170,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; denominator
 
 :spadfun:`denominator`\: % -> % 
-  \ ``denominator(f)``\  yields the denominator of \ ``f``\ .
+  \ :code:`denominator(f)`\  yields the denominator of \ :code:`f`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-646966666572656e7469617465:
 
@@ -178,7 +178,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; differentiate
 
 :spadfun:`differentiate`\: (%, JB) -> % 
-  \ ``differentiate(f, jv)``\  differentiates the function \ ``f``\  \ ``wrt``\  the jet variable \ ``jv``\ .
+  \ :code:`differentiate(f, jv)`\  differentiates the function \ :code:`f`\  \ :code:`wrt`\  the jet variable \ :code:`jv`\ .
 
 
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
@@ -202,7 +202,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; dimension
 
 :spadfun:`dimension`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %), \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``dimension(sys, jm, q)``\  computes the dimension of the manifold described by the system \ ``sys``\  with Jacobi matrix \ ``jm``\  in the jet bundle of order \ ``q``\ .
+  \ :code:`dimension(sys, jm, q)`\  computes the dimension of the manifold described by the system \ :code:`sys`\  with Jacobi matrix \ :code:`jm`\  in the jet bundle of order \ :code:`q`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-645375627374:
 
@@ -210,7 +210,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; dSubst
 
 :spadfun:`dSubst`\: (%, JB, %) -> % 
-  \ ``dSubst(f, jv, exp)``\  is like \ ``subst(f, jv, exp)``\ . But additionally for all derivatives of \ ``jv``\  the corresponding substitutions are performed.
+  \ :code:`dSubst(f, jv, exp)`\  is like \ :code:`subst(f, jv, exp)`\ . But additionally for all derivatives of \ :code:`jv`\  the corresponding substitutions are performed.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-657871756f:
 
@@ -223,7 +223,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; extractSymbol
 
 :spadfun:`extractSymbol`\: \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %) -> \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %) 
-  \ ``extractSymbol(jm)``\  extracts the highest order part of the Jacobi matrix.
+  \ :code:`extractSymbol(jm)`\  extracts the highest order part of the Jacobi matrix.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-666f726d616c4469666632:
 
@@ -231,14 +231,14 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; formalDiff2
 
 :spadfun:`formalDiff2`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %)) -> Record(DPhi: %, JVars: \ :ref:`List <l4c697374>`\  JB) 
-  \ ``formalDiff2(f, i, jm)``\  formally differentiates the function \ ``f``\  with the Jacobi matrix \ ``jm``\  \ ``wrt``\  the \ ``i``\ \ ``-``\ th independent variable. \ ``JVars``\  is a list of the jet variables effectively in the result \ ``DPhi``\  (might be too large).
+  \ :code:`formalDiff2(f, i, jm)`\  formally differentiates the function \ :code:`f`\  with the Jacobi matrix \ :code:`jm`\  \ :code:`wrt`\  the \ :code:`i`\ \ :code:`-`\ th independent variable. \ :code:`JVars`\  is a list of the jet variables effectively in the result \ :code:`DPhi`\  (might be too large).
 
 
 .. index::
    pair: JetBundleFunctionCategory; formalDiff2
 
 :spadfun:`formalDiff2`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %)) -> Record(DSys: \ :ref:`List <l4c697374>`\  %, JVars: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  JB) 
-  \ ``formalDiff2(sys, i, jm)``\  is like the other \ :spadfun:`\ ``formalDiff2``\ `\  but for systems.
+  \ :code:`formalDiff2(sys, i, jm)`\  is like the other \ :spadfun:`\ :code:`formalDiff2`\ `\  but for systems.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-666f726d616c44696666:
 
@@ -246,21 +246,21 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; formalDiff
 
 :spadfun:`formalDiff`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``formalDiff(f, mu)``\  formally differentiates \ ``f``\  as indicated by the multi-index \ ``mu``\ .
+  \ :code:`formalDiff(f, mu)`\  formally differentiates \ :code:`f`\  as indicated by the multi-index \ :code:`mu`\ .
 
 
 .. index::
    pair: JetBundleFunctionCategory; formalDiff
 
 :spadfun:`formalDiff`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``formalDiff(f, i)``\  formally (totally) differentiates \ ``f``\  \ ``wrt``\  the \ ``i``\ \ ``-``\ th independent variable.
+  \ :code:`formalDiff(f, i)`\  formally (totally) differentiates \ :code:`f`\  \ :code:`wrt`\  the \ :code:`i`\ \ :code:`-`\ th independent variable.
 
 
 .. index::
    pair: JetBundleFunctionCategory; formalDiff
 
 :spadfun:`formalDiff`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``formalDiff(sys, i)``\  formally differentiates a family \ ``sys``\  of functions \ ``wrt``\  the \ ``i``\ \ ``-``\ th independent variable.
+  \ :code:`formalDiff(sys, i)`\  formally differentiates a family \ :code:`sys`\  of functions \ :code:`wrt`\  the \ :code:`i`\ \ :code:`-`\ th independent variable.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-667265654f663f:
 
@@ -268,7 +268,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; freeOf?
 
 :spadfun:`freeOf?`\: (%, JB) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``freeOf?(fun, jv)``\  checks whether \ ``fun``\  contains the jet variable \ ``jv``\ .
+  \ :code:`freeOf?(fun, jv)`\  checks whether \ :code:`fun`\  contains the jet variable \ :code:`jv`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-676364:
 
@@ -298,14 +298,14 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; jacobiMatrix
 
 :spadfun:`jacobiMatrix`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  JB) -> \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %) 
-  \ ``jacobiMatrix(sys, jvars)``\  constructs the Jacobi matrix of the family \ ``sys``\  of functions. \ ``jvars``\  contains for each function the effectively occurring jet variables. The columns of the matrix are ordered.
+  \ :code:`jacobiMatrix(sys, jvars)`\  constructs the Jacobi matrix of the family \ :code:`sys`\  of functions. \ :code:`jvars`\  contains for each function the effectively occurring jet variables. The columns of the matrix are ordered.
 
 
 .. index::
    pair: JetBundleFunctionCategory; jacobiMatrix
 
 :spadfun:`jacobiMatrix`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %) 
-  \ ``jacobiMatrix(sys)``\  constructs the Jacobi matrix of the family \ ``sys``\  of functions.
+  \ :code:`jacobiMatrix(sys)`\  constructs the Jacobi matrix of the family \ :code:`sys`\  of functions.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-6a65745661726961626c6573:
 
@@ -313,7 +313,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; jetVariables
 
 :spadfun:`jetVariables`\: % -> \ :ref:`List <l4c697374>`\  JB 
-  \ ``jetVariables(f)``\  yields all jet variables effectively occurring in \ ``f``\  in an ordered list.
+  \ :code:`jetVariables(f)`\  yields all jet variables effectively occurring in \ :code:`f`\  in an ordered list.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-6c61746578:
 
@@ -340,7 +340,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; leadingDer
 
 :spadfun:`leadingDer`\: % -> JB 
-  \ ``leadingDer(fun)``\  yields the leading derivative of \ ``fun``\ . If \ ``fun``\  contains no derivatives \ ``1``\  is returned.
+  \ :code:`leadingDer(fun)`\  yields the leading derivative of \ :code:`fun`\ . If \ :code:`fun`\  contains no derivatives \ :code:`1`\  is returned.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-6c656674506f776572:
 
@@ -370,7 +370,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; numerator
 
 :spadfun:`numerator`\: % -> % 
-  \ ``numerator(f)``\  yields the numerator of \ ``f``\ .
+  \ :code:`numerator(f)`\  yields the numerator of \ :code:`f`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-6e756d496e64566172:
 
@@ -396,7 +396,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; order
 
 :spadfun:`order`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(f)``\  gives highest order of the jet variables effectively occurring in \ ``f``\ .
+  \ :code:`order(f)`\  gives highest order of the jet variables effectively occurring in \ :code:`f`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-6f7264657244696d:
 
@@ -404,7 +404,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; orderDim
 
 :spadfun:`orderDim`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %), \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``orderDim(sys, jm, q)``\  computes the dimension of the manifold described by the system \ ``sys``\  with Jacobi matrix \ ``jm``\  in the jet bundle of order \ ``q``\  over the jet bundle of order \ ``q-1``\ .
+  \ :code:`orderDim(sys, jm, q)`\  computes the dimension of the manifold described by the system \ :code:`sys`\  with Jacobi matrix \ :code:`jm`\  in the jet bundle of order \ :code:`q`\  over the jet bundle of order \ :code:`q-1`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-50:
 
@@ -451,7 +451,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; reduceMod
 
 :spadfun:`reduceMod`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`List <l4c697374>`\  %) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``reduceMod(sys1, sys2)``\  reduces the system \ ``sys1``\  modulo the system \ ``sys2``\ .
+  \ :code:`reduceMod(sys1, sys2)`\  reduces the system \ :code:`sys1`\  modulo the system \ :code:`sys2`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-72657472616374:
 
@@ -496,7 +496,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; simplify
 
 :spadfun:`simplify`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %)) -> Record(Sys: \ :ref:`List <l4c697374>`\  %, JM: \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %), Depend: Union(failed, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) 
-  \ ``simplify(sys, jm)``\  simplifies a system with given Jacobi matrix. The Jacobi matrix of the simplified system is returned, too. \ ``Depend``\  contains for each equation of the simplified system the numbers of the equations of the original system out of which it is built, if it is possible to obtain this information. If one can generate equations of lower order by purely algebraic operations, then \ ``simplify``\  should do this.
+  \ :code:`simplify(sys, jm)`\  simplifies a system with given Jacobi matrix. The Jacobi matrix of the simplified system is returned, too. \ :code:`Depend`\  contains for each equation of the simplified system the numbers of the equations of the original system out of which it is built, if it is possible to obtain this information. If one can generate equations of lower order by purely algebraic operations, then \ :code:`simplify`\  should do this.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-73696d704d6f64:
 
@@ -504,14 +504,14 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; simpMod
 
 :spadfun:`simpMod`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`List <l4c697374>`\  %) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``simpMod(sys1, sys2)``\  simplifies the system \ ``sys1``\  modulo the system \ ``sys2``\ .
+  \ :code:`simpMod(sys1, sys2)`\  simplifies the system \ :code:`sys1`\  modulo the system \ :code:`sys2`\ .
 
 
 .. index::
    pair: JetBundleFunctionCategory; simpMod
 
 :spadfun:`simpMod`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %), \ :ref:`List <l4c697374>`\  %) -> Record(Sys: \ :ref:`List <l4c697374>`\  %, JM: \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %), Depend: Union(failed, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) 
-  \ ``simpMod(sys1, sys2)``\  simplifies the system \ ``sys1``\  modulo the system \ ``sys2``\ . Returns the same information as \ ``simplify``\ .
+  \ :code:`simpMod(sys1, sys2)`\  simplifies the system \ :code:`sys1`\  modulo the system \ :code:`sys2`\ . Returns the same information as \ :code:`simplify`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-73696d704f6e65:
 
@@ -519,7 +519,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; simpOne
 
 :spadfun:`simpOne`\: % -> % 
-  \ ``simpOne(f)``\  removes unnecessary coefficients and exponents, denominators etc.
+  \ :code:`simpOne(f)`\  removes unnecessary coefficients and exponents, denominators etc.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-736f6c7665466f72:
 
@@ -527,7 +527,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; solveFor
 
 :spadfun:`solveFor`\: (%, JB) -> Union(%, failed) 
-  \ ``solveFor(fun, jv)``\  tries to solve \ ``fun``\  for the jet variable \ ``jv``\ .
+  \ :code:`solveFor(fun, jv)`\  tries to solve \ :code:`fun`\  for the jet variable \ :code:`jv`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-736f72744c44:
 
@@ -535,7 +535,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; sortLD
 
 :spadfun:`sortLD`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``sortLD(sys)``\  sorts the functions in \ ``sys``\  according to their leading derivatives.
+  \ :code:`sortLD(sys)`\  sorts the functions in \ :code:`sys`\  according to their leading derivatives.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-7375627374:
 
@@ -543,7 +543,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; subst
 
 :spadfun:`subst`\: (%, JB, %) -> % 
-  \ ``subst(f, jv, exp)``\  substitutes \ ``exp``\  for the jet variable \ ``jv``\  in the function \ ``f``\ .
+  \ :code:`subst(f, jv, exp)`\  substitutes \ :code:`exp`\  for the jet variable \ :code:`jv`\  in the function \ :code:`f`\ .
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-7375627472616374496643616e:
 
@@ -556,7 +556,7 @@ JetBundleFunctionCategory JB
    pair: JetBundleFunctionCategory; symbol
 
 :spadfun:`symbol`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`SparseEchelonMatrix <l537061727365456368656c6f6e4d6174726978>`\ (JB, %) 
-  \ ``symbol(sys)``\  computes directly the symbol of the family \ ``sys``\  of functions.
+  \ :code:`symbol(sys)`\  computes directly the symbol of the family \ :code:`sys`\  of functions.
 
 .. _l4a657442756e646c6546756e6374696f6e43617465676f7279-55:
 

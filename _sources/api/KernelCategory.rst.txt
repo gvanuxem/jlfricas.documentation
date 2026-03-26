@@ -10,7 +10,7 @@ KernelCategory S
 * S: \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
 
-A kernel over a set \ ``S``\  is an operator applied to a given list of arguments from \ ``S``\ .
+A kernel over a set \ :code:`S`\  is an operator applied to a given list of arguments from \ :code:`S`\ .
 
 
 .. _l4b65726e656c43617465676f7279-3c3d:
@@ -49,7 +49,7 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; argument
 
 :spadfun:`argument`\: % -> \ :ref:`List <l4c697374>`\  S 
-  \ ``argument(op(a1, ..., an))``\  returns \ ``[a1, ..., an]``\ .
+  \ :code:`argument(op(a1, ..., an))`\  returns \ :code:`[a1, ..., an]`\ .
 
 .. _l4b65726e656c43617465676f7279-636f65726365:
 
@@ -75,7 +75,7 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; height
 
 :spadfun:`height`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``height(k)``\  returns the nesting level of \ ``k``\ .
+  \ :code:`height(k)`\  returns the nesting level of \ :code:`k`\ .
 
 .. _l4b65726e656c43617465676f7279-69733f:
 
@@ -83,14 +83,14 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; is?
 
 :spadfun:`is?`\: (%, \ :ref:`BasicOperator <l42617369634f70657261746f72>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``is?(op(a1, ..., an), f)``\  tests if op = \ ``f``\ .
+  \ :code:`is?(op(a1, ..., an), f)`\  tests if op = \ :code:`f`\ .
 
 
 .. index::
    pair: KernelCategory; is?
 
 :spadfun:`is?`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``is?(op(a1, ..., an), s)``\  tests if the name of op is \ ``s``\ .
+  \ :code:`is?(op(a1, ..., an), s)`\  tests if the name of op is \ :code:`s`\ .
 
 .. _l4b65726e656c43617465676f7279-6b65726e656c:
 
@@ -98,14 +98,14 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; kernel
 
 :spadfun:`kernel`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , \ :ref:`List <l4c697374>`\  S, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``kernel(op, [a1, ..., an], m)``\  returns the kernel \ ``op(a1, ..., an)``\  of nesting level \ ``m``\ . Error: if \ ``op``\  is \ ``k``\ -ary for some \ ``k``\  not equal to \ ``n``\ .
+  \ :code:`kernel(op, [a1, ..., an], m)`\  returns the kernel \ :code:`op(a1, ..., an)`\  of nesting level \ :code:`m`\ . Error: if \ :code:`op`\  is \ :code:`k`\ -ary for some \ :code:`k`\  not equal to \ :code:`n`\ .
 
 
 .. index::
    pair: KernelCategory; kernel
 
 :spadfun:`kernel`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``kernel(x)``\  returns \ ``x``\  viewed as a kernel.
+  \ :code:`kernel(x)`\  returns \ :code:`x`\  viewed as a kernel.
 
 .. _l4b65726e656c43617465676f7279-6c61746578:
 
@@ -128,7 +128,7 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; name
 
 :spadfun:`name`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``name(op(a1, ..., an))``\  returns the name of op.
+  \ :code:`name(op(a1, ..., an))`\  returns the name of op.
 
 .. _l4b65726e656c43617465676f7279-6f70657261746f72:
 
@@ -136,7 +136,7 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; operator
 
 :spadfun:`operator`\: % -> \ :ref:`BasicOperator <l42617369634f70657261746f72>`\  
-  \ ``operator(op(a1, ..., an))``\  returns the operator op.
+  \ :code:`operator(op(a1, ..., an))`\  returns the operator op.
 
 .. _l4b65726e656c43617465676f7279-736d616c6c65723f:
 
@@ -149,7 +149,7 @@ A kernel over a set \ ``S``\  is an operator applied to a given list of argument
    pair: KernelCategory; symbolIfCan
 
 :spadfun:`symbolIfCan`\: % -> Union(\ :ref:`Symbol <l53796d626f6c>`\ , failed) 
-  \ ``symbolIfCan(k)``\  returns \ ``k``\  viewed as a symbol if \ ``k``\  is a symbol, and "failed" otherwise.
+  \ :code:`symbolIfCan(k)`\  returns \ :code:`k`\  viewed as a symbol if \ :code:`k`\  is a symbol, and "failed" otherwise.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

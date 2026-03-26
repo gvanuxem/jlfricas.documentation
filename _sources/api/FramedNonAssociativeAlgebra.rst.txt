@@ -10,7 +10,7 @@ FramedNonAssociativeAlgebra R
 * R: \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
 
 
-FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlgebra <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261>`\  (i.e. a non associative algebra over \ ``R``\  which is a free \ ``R``\ -module of finite rank) over a commutative ring \ ``R``\  together with a fixed \ ``R``\ -module basis.
+FramedNonAssociativeAlgebra(\ :code:`R`\ ) is a \ :ref:`FiniteRankNonAssociativeAlgebra <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261>`\  (i.e. a non associative algebra over \ :code:`R`\  which is a free \ :code:`R`\ -module of finite rank) over a commutative ring \ :code:`R`\  together with a fixed \ :code:`R`\ -module basis.
 
 
 .. _l4672616d65644e6f6e4173736f63696174697665416c6765627261-30:
@@ -98,7 +98,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; apply
 
 :spadfun:`apply`\: (\ :ref:`Matrix <l4d6174726978>`\  R, %) -> % 
-  \ ``apply(m, a)``\  defines a left operation of \ ``n``\  by \ ``n``\  matrices where \ ``n``\  is the rank of the algebra in terms of matrix-vector multiplication, this is a substitute for a left module structure. Error: if shape of matrix doesn\ ``'t``\  fit.
+  \ :code:`apply(m, a)`\  defines a left operation of \ :code:`n`\  by \ :code:`n`\  matrices where \ :code:`n`\  is the rank of the algebra in terms of matrix-vector multiplication, this is a substitute for a left module structure. Error: if shape of matrix doesn\ :code:`'t`\  fit.
 
 .. _l4672616d65644e6f6e4173736f63696174697665416c6765627261-6173736f636961746976653f:
 
@@ -141,7 +141,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; conditionsForIdempotents
 
 :spadfun:`conditionsForIdempotents`\: () -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
-  \ ``conditionsForIdempotents()``\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the fixed \ ``R``\ -module basis.
+  \ :code:`conditionsForIdempotents()`\  determines a complete list of polynomial equations for the coefficients of idempotents with respect to the fixed \ :code:`R`\ -module basis.
 
 
 \ :ref:`conditionsForIdempotents <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-636f6e646974696f6e73466f724964656d706f74656e7473>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
@@ -183,7 +183,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> R 
-  \ ``elt(a, i)``\  returns the \ ``i``\ -th coefficient of \ ``a``\  with respect to the fixed \ ``R``\ -module basis.
+  \ :code:`elt(a, i)`\  returns the \ :code:`i`\ -th coefficient of \ :code:`a`\  with respect to the fixed \ :code:`R`\ -module basis.
 
 .. _l4672616d65644e6f6e4173736f63696174697665416c6765627261-656e756d6572617465:
 
@@ -246,7 +246,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; leftDiscriminant
 
 :spadfun:`leftDiscriminant`\: () -> R 
-  \ ``leftDiscriminant()``\  returns the determinant of the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the left trace of the product \ ``vi*vj``\ , where \ ``v1``\ , ..., \ ``vn``\  are the elements of the fixed \ ``R``\ -module basis. Note: the same as \ ``determinant(leftTraceMatrix())``\ .
+  \ :code:`leftDiscriminant()`\  returns the determinant of the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the left trace of the product \ :code:`vi*vj`\ , where \ :code:`v1`\ , ..., \ :code:`vn`\  are the elements of the fixed \ :code:`R`\ -module basis. Note: the same as \ :code:`determinant(leftTraceMatrix())`\ .
 
 
 \ :ref:`leftDiscriminant <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c6566744469736372696d696e616e74>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> R 
@@ -273,7 +273,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; leftRankPolynomial
 
 :spadfun:`leftRankPolynomial`\: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftRankPolynomial()``\  calculates the left minimal polynomial of the generic element in the algebra, defined by the same structural constants over the polynomial ring in symbolic coefficients with respect to the fixed basis.
+  \ :code:`leftRankPolynomial()`\  calculates the left minimal polynomial of the generic element in the algebra, defined by the same structural constants over the polynomial ring in symbolic coefficients with respect to the fixed basis.
 
 .. _l4672616d65644e6f6e4173736f63696174697665416c6765627261-6c6566745265636970:
 
@@ -286,7 +286,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; leftRegularRepresentation
 
 :spadfun:`leftRegularRepresentation`\: % -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``leftRegularRepresentation(a)``\  returns the matrix of the linear map defined by left multiplication by \ ``a``\  with respect to the fixed \ ``R``\ -module basis.
+  \ :code:`leftRegularRepresentation(a)`\  returns the matrix of the linear map defined by left multiplication by \ :code:`a`\  with respect to the fixed \ :code:`R`\ -module basis.
 
 
 \ :ref:`leftRegularRepresentation <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c656674526567756c6172526570726573656e746174696f6e>`\ \: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
@@ -303,7 +303,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; leftTraceMatrix
 
 :spadfun:`leftTraceMatrix`\: () -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``leftTraceMatrix()``\  is the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by left trace of the product \ ``vi*vj``\ , where \ ``v1``\ , ..., \ ``vn``\  are the elements of the fixed \ ``R``\ -module basis.
+  \ :code:`leftTraceMatrix()`\  is the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by left trace of the product \ :code:`vi*vj`\ , where \ :code:`v1`\ , ..., \ :code:`vn`\  are the elements of the fixed \ :code:`R`\ -module basis.
 
 
 \ :ref:`leftTraceMatrix <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-6c65667454726163654d6174726978>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  R 
@@ -394,7 +394,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; rightDiscriminant
 
 :spadfun:`rightDiscriminant`\: () -> R 
-  \ ``rightDiscriminant()``\  returns the determinant of the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the right trace of the product \ ``vi*vj``\ , where \ ``v1``\ , ..., \ ``vn``\  are the elements of the fixed \ ``R``\ -module basis. Note: the same as \ ``determinant(rightTraceMatrix())``\ .
+  \ :code:`rightDiscriminant()`\  returns the determinant of the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the right trace of the product \ :code:`vi*vj`\ , where \ :code:`v1`\ , ..., \ :code:`vn`\  are the elements of the fixed \ :code:`R`\ -module basis. Note: the same as \ :code:`determinant(rightTraceMatrix())`\ .
 
 
 \ :ref:`rightDiscriminant <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-72696768744469736372696d696e616e74>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> R 
@@ -421,7 +421,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; rightRankPolynomial
 
 :spadfun:`rightRankPolynomial`\: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightRankPolynomial()``\  calculates the right minimal polynomial of the generic element in the algebra, defined by the same structural constants over the polynomial ring in symbolic coefficients with respect to the fixed basis.
+  \ :code:`rightRankPolynomial()`\  calculates the right minimal polynomial of the generic element in the algebra, defined by the same structural constants over the polynomial ring in symbolic coefficients with respect to the fixed basis.
 
 .. _l4672616d65644e6f6e4173736f63696174697665416c6765627261-72696768745265636970:
 
@@ -434,7 +434,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; rightRegularRepresentation
 
 :spadfun:`rightRegularRepresentation`\: % -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``rightRegularRepresentation(a)``\  returns the matrix of the linear map defined by right multiplication by \ ``a``\  with respect to the fixed \ ``R``\ -module basis.
+  \ :code:`rightRegularRepresentation(a)`\  returns the matrix of the linear map defined by right multiplication by \ :code:`a`\  with respect to the fixed \ :code:`R`\ -module basis.
 
 
 \ :ref:`rightRegularRepresentation <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7269676874526567756c6172526570726573656e746174696f6e>`\ \: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
@@ -451,7 +451,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; rightTraceMatrix
 
 :spadfun:`rightTraceMatrix`\: () -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``rightTraceMatrix()``\  is the \ ``n``\ -by-\ ``n``\  matrix whose element at the \ ``i``\ \ ``-``\ th row and \ ``j``\ \ ``-``\ th column is given by the right trace of the product \ ``vi*vj``\ , where \ ``v1``\ , ..., \ ``vn``\  are the elements of the fixed \ ``R``\ -module basis.
+  \ :code:`rightTraceMatrix()`\  is the \ :code:`n`\ -by-\ :code:`n`\  matrix whose element at the \ :code:`i`\ \ :code:`-`\ th row and \ :code:`j`\ \ :code:`-`\ th column is given by the right trace of the product \ :code:`vi*vj`\ , where \ :code:`v1`\ , ..., \ :code:`vn`\  are the elements of the fixed \ :code:`R`\ -module basis.
 
 
 \ :ref:`rightTraceMatrix <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-726967687454726163654d6174726978>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  R 
@@ -493,7 +493,7 @@ FramedNonAssociativeAlgebra(\ ``R``\ ) is a \ :ref:`FiniteRankNonAssociativeAlge
    pair: FramedNonAssociativeAlgebra; structuralConstants
 
 :spadfun:`structuralConstants`\: () -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``structuralConstants()``\  calculates the structural constants \ ``[(gammaijk) for k in 1..rank()]``\  defined by \ ``vi * vj = gammaij1 * v1 + ... + gammaijn * vn``\ , where \ ``v1``\ , ..., \ ``vn``\  is the fixed \ ``R``\ -module basis.
+  \ :code:`structuralConstants()`\  calculates the structural constants \ :code:`[(gammaijk) for k in 1..rank()]`\  defined by \ :code:`vi * vj = gammaij1 * v1 + ... + gammaijn * vn`\ , where \ :code:`v1`\ , ..., \ :code:`vn`\  is the fixed \ :code:`R`\ -module basis.
 
 
 \ :ref:`structuralConstants <l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261-7374727563747572616c436f6e7374616e7473>`\ \: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`Matrix <l4d6174726978>`\  R 

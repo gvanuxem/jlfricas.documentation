@@ -8,7 +8,7 @@ JetBundleCategory
 :viewcode:`jet.spad line 37 <jet.spad#L37>` :editcode:`[edit on github] <jet.spad#L37>`
 
 
-\ :ref:`JetBundleCategory <l4a657442756e646c6543617465676f7279>`\  provides basic data structures and procedures for jet bundles. Nearly all necessary functions are implemented already here. Only the representation and functions which directly access it must be implemented in a domain. Two notations of derivatives are supported. Default is multi-index notation, where the \ ``i``\ -th entry of the index denotes the number of differentiations taken with respect to \ ``x^i``\ . In repeated index notation each entry \ ``i``\  in the index denotes a differentiation with respect to \ ``x^i``\ . The choice affects, however, only in- and output. Internally, multi-index notation is used throughout.
+\ :ref:`JetBundleCategory <l4a657442756e646c6543617465676f7279>`\  provides basic data structures and procedures for jet bundles. Nearly all necessary functions are implemented already here. Only the representation and functions which directly access it must be implemented in a domain. Two notations of derivatives are supported. Default is multi-index notation, where the \ :code:`i`\ -th entry of the index denotes the number of differentiations taken with respect to \ :code:`x^i`\ . In repeated index notation each entry \ :code:`i`\  in the index denotes a differentiation with respect to \ :code:`x^i`\ . The choice affects, however, only in- and output. Internally, multi-index notation is used throughout.
 
 
 .. _l4a657442756e646c6543617465676f7279-31:
@@ -17,7 +17,7 @@ JetBundleCategory
    pair: JetBundleCategory; 1
 
 :spadfun:`1`\: % 
-  \ ``1``\  generates the special "jet variable" 1, which is needed for the representation of linear functions.
+  \ :code:`1`\  generates the special "jet variable" 1, which is needed for the representation of linear functions.
 
 .. _l4a657442756e646c6543617465676f7279-3c3d:
 
@@ -45,7 +45,7 @@ JetBundleCategory
    pair: JetBundleCategory; >
 
 :spadfun:`>`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jv1 > jv2``\  checks whether \ ``jv1``\  is greater than \ ``jv2``\  in the internal ordering.
+  \ :code:`jv1 > jv2`\  checks whether \ :code:`jv1`\  is greater than \ :code:`jv2`\  in the internal ordering.
 
 .. _l4a657442756e646c6543617465676f7279-7e3d:
 
@@ -58,7 +58,7 @@ JetBundleCategory
    pair: JetBundleCategory; allRepeated
 
 :spadfun:`allRepeated`\: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``allRepeated(ind)``\  returns a list of all possible realizations of a given multi-index as repeated index.
+  \ :code:`allRepeated(ind)`\  returns a list of all possible realizations of a given multi-index as repeated index.
 
 .. _l4a657442756e646c6543617465676f7279-636c617373:
 
@@ -66,14 +66,14 @@ JetBundleCategory
    pair: JetBundleCategory; class
 
 :spadfun:`class`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``class(jv)``\  yields the class of the jet variable \ ``jv``\  (Class of multi-index for derivative, 0 else).
+  \ :code:`class(jv)`\  yields the class of the jet variable \ :code:`jv`\  (Class of multi-index for derivative, 0 else).
 
 
 .. index::
    pair: JetBundleCategory; class
 
 :spadfun:`class`\: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``class(ind)``\  yields the class of the multi-index \ ``ind``\  (Position for first non-vanishing entry).
+  \ :code:`class(ind)`\  yields the class of the multi-index \ :code:`ind`\  (Position for first non-vanishing entry).
 
 .. _l4a657442756e646c6543617465676f7279-636f65726365:
 
@@ -90,7 +90,7 @@ JetBundleCategory
    pair: JetBundleCategory; derivativeOf?
 
 :spadfun:`derivativeOf?`\: (%, %) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``derivativeOf?(jv1, jv2)``\  checks whether \ ``jv1``\  is a derivative of \ ``jv2``\ . In this case, the difference of their multi-indices is returned. Otherwise, an empty list is returned.
+  \ :code:`derivativeOf?(jv1, jv2)`\  checks whether \ :code:`jv1`\  is a derivative of \ :code:`jv2`\ . In this case, the difference of their multi-indices is returned. Otherwise, an empty list is returned.
 
 .. _l4a657442756e646c6543617465676f7279-646966666572656e7469617465:
 
@@ -98,7 +98,7 @@ JetBundleCategory
    pair: JetBundleCategory; differentiate
 
 :spadfun:`differentiate`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> Union(%, 0) 
-  \ ``differentiate(jv, i)``\  differentiates \ ``jv``\  \ ``wrt``\  the \ ``i``\ \ ``-``\ th independent variable.
+  \ :code:`differentiate(jv, i)`\  differentiates \ :code:`jv`\  \ :code:`wrt`\  the \ :code:`i`\ \ :code:`-`\ th independent variable.
 
 .. _l4a657442756e646c6543617465676f7279-64696d4a:
 
@@ -106,7 +106,7 @@ JetBundleCategory
    pair: JetBundleCategory; dimJ
 
 :spadfun:`dimJ`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``dimJ(q)``\  computes the (fibre) dimension of the \ ``q``\ \ ``-``\ th order jet bundle.
+  \ :code:`dimJ(q)`\  computes the (fibre) dimension of the \ :code:`q`\ \ :code:`-`\ th order jet bundle.
 
 .. _l4a657442756e646c6543617465676f7279-64696d53:
 
@@ -114,7 +114,7 @@ JetBundleCategory
    pair: JetBundleCategory; dimS
 
 :spadfun:`dimS`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``dimS(q)``\  computes dimension of \ ``SqT``\  \ ``x``\  VE (= number of derivatives of order \ ``q``\ ).
+  \ :code:`dimS(q)`\  computes dimension of \ :code:`SqT`\  \ :code:`x`\  VE (= number of derivatives of order \ :code:`q`\ ).
 
 .. _l4a657442756e646c6543617465676f7279-6765744e6f746174696f6e:
 
@@ -122,7 +122,7 @@ JetBundleCategory
    pair: JetBundleCategory; getNotation
 
 :spadfun:`getNotation`\: () -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``getNotation()``\  shows the currently used notation.
+  \ :code:`getNotation()`\  shows the currently used notation.
 
 .. _l4a657442756e646c6543617465676f7279-696e646578:
 
@@ -130,7 +130,7 @@ JetBundleCategory
    pair: JetBundleCategory; index
 
 :spadfun:`index`\: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``index(jv)``\  yields number of the jet variable \ ``jv``\ .
+  \ :code:`index(jv)`\  yields number of the jet variable \ :code:`jv`\ .
 
 .. _l4a657442756e646c6543617465676f7279-696e74656772617465:
 
@@ -138,7 +138,7 @@ JetBundleCategory
    pair: JetBundleCategory; integrate
 
 :spadfun:`integrate`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``integrate(jv, i)``\  is like \ ``integrateIfCan(jv, i)``\  but yields an error, if the integration is not possible.
+  \ :code:`integrate(jv, i)`\  is like \ :code:`integrateIfCan(jv, i)`\  but yields an error, if the integration is not possible.
 
 .. _l4a657442756e646c6543617465676f7279-696e74656772617465496643616e:
 
@@ -146,7 +146,7 @@ JetBundleCategory
    pair: JetBundleCategory; integrateIfCan
 
 :spadfun:`integrateIfCan`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> Union(%, failed) 
-  \ ``integrate(jv, i)``\  integrates \ ``jv``\  \ ``wrt``\  the \ ``i``\ \ ``-``\ th independent variable, if possible.
+  \ :code:`integrate(jv, i)`\  integrates \ :code:`jv`\  \ :code:`wrt`\  the \ :code:`i`\ \ :code:`-`\ th independent variable, if possible.
 
 .. _l4a657442756e646c6543617465676f7279-6c61746578:
 
@@ -159,7 +159,7 @@ JetBundleCategory
    pair: JetBundleCategory; m2r
 
 :spadfun:`m2r`\: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``m2r(ind)``\  transforms a multi-index into a repeated index.
+  \ :code:`m2r(ind)`\  transforms a multi-index into a repeated index.
 
 .. _l4a657442756e646c6543617465676f7279-6d6178:
 
@@ -177,7 +177,7 @@ JetBundleCategory
    pair: JetBundleCategory; multiIndex
 
 :spadfun:`multiIndex`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``multiIndex(jv)``\  returns the multi-index of the jet variable \ ``jv``\ .
+  \ :code:`multiIndex(jv)`\  returns the multi-index of the jet variable \ :code:`jv`\ .
 
 .. _l4a657442756e646c6543617465676f7279-6e616d65:
 
@@ -185,7 +185,7 @@ JetBundleCategory
    pair: JetBundleCategory; name
 
 :spadfun:`name`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``name(jv)``\  yields the name of the jet variable \ ``jv``\ .
+  \ :code:`name(jv)`\  yields the name of the jet variable \ :code:`jv`\ .
 
 .. _l4a657442756e646c6543617465676f7279-6e756d446570566172:
 
@@ -193,7 +193,7 @@ JetBundleCategory
    pair: JetBundleCategory; numDepVar
 
 :spadfun:`numDepVar`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``numDepVar``\  returns the number of dependent variables.
+  \ :code:`numDepVar`\  returns the number of dependent variables.
 
 .. _l4a657442756e646c6543617465676f7279-6e756d496e64566172:
 
@@ -201,7 +201,7 @@ JetBundleCategory
    pair: JetBundleCategory; numIndVar
 
 :spadfun:`numIndVar`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``numIndVar``\  returns the number of independent variables.
+  \ :code:`numIndVar`\  returns the number of independent variables.
 
 .. _l4a657442756e646c6543617465676f7279-6f6e653f:
 
@@ -209,7 +209,7 @@ JetBundleCategory
    pair: JetBundleCategory; one?
 
 :spadfun:`one?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``one?(jv)``\  checks whether the jet variable \ ``jv``\  is the special variable 1.
+  \ :code:`one?(jv)`\  checks whether the jet variable \ :code:`jv`\  is the special variable 1.
 
 .. _l4a657442756e646c6543617465676f7279-6f72646572:
 
@@ -217,7 +217,7 @@ JetBundleCategory
    pair: JetBundleCategory; order
 
 :spadfun:`order`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(jv)``\  yields the order of the jet variable \ ``jv``\  (Order as derivative).
+  \ :code:`order(jv)`\  yields the order of the jet variable \ :code:`jv`\  (Order as derivative).
 
 .. _l4a657442756e646c6543617465676f7279-50:
 
@@ -225,28 +225,28 @@ JetBundleCategory
    pair: JetBundleCategory; P
 
 :spadfun:`P`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``P(i, ind)``\  generates the derivative of the \ ``i``\ \ ``-``\ th dependent variable \ ``wrt``\  the index \ ``ind``\ . Whether \ ``ind``\  is interpreted as multi-index or as repeated index depends on the chosen notation.
+  \ :code:`P(i, ind)`\  generates the derivative of the \ :code:`i`\ \ :code:`-`\ th dependent variable \ :code:`wrt`\  the index \ :code:`ind`\ . Whether \ :code:`ind`\  is interpreted as multi-index or as repeated index depends on the chosen notation.
 
 
 .. index::
    pair: JetBundleCategory; P
 
 :spadfun:`P`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``P(i, j)``\  generates the \ ``j``\ \ ``-``\ th derivative of the \ ``i``\ \ ``-``\ th independent variable \ ``wrt``\  the only independent variable.
+  \ :code:`P(i, j)`\  generates the \ :code:`j`\ \ :code:`-`\ th derivative of the \ :code:`i`\ \ :code:`-`\ th independent variable \ :code:`wrt`\  the only independent variable.
 
 
 .. index::
    pair: JetBundleCategory; P
 
 :spadfun:`P`\: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``P(ind)``\  generates the derivative of the only dependent variable \ ``wrt``\  the index \ ``ind``\ .
+  \ :code:`P(ind)`\  generates the derivative of the only dependent variable \ :code:`wrt`\  the index \ :code:`ind`\ .
 
 
 .. index::
    pair: JetBundleCategory; P
 
 :spadfun:`P`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``P(i)``\  generates the \ ``i``\ \ ``-``\ th derivative of the only dependent variable \ ``wrt``\  the only independent variable.
+  \ :code:`P(i)`\  generates the \ :code:`i`\ \ :code:`-`\ th derivative of the only dependent variable \ :code:`wrt`\  the only independent variable.
 
 .. _l4a657442756e646c6543617465676f7279-506d:
 
@@ -254,7 +254,7 @@ JetBundleCategory
    pair: JetBundleCategory; Pm
 
 :spadfun:`Pm`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``Pm(i, ind)``\  is like \ ``P(i, ind)``\  but \ ``ind``\  is always a multi-index.
+  \ :code:`Pm(i, ind)`\  is like \ :code:`P(i, ind)`\  but \ :code:`ind`\  is always a multi-index.
 
 .. _l4a657442756e646c6543617465676f7279-5072:
 
@@ -262,7 +262,7 @@ JetBundleCategory
    pair: JetBundleCategory; Pr
 
 :spadfun:`Pr`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``Pr(i, ind)``\  is like \ ``P(i, ind)``\  but \ ``ind``\  is always a repeated index.
+  \ :code:`Pr(i, ind)`\  is like \ :code:`P(i, ind)`\  but \ :code:`ind`\  is always a repeated index.
 
 .. _l4a657442756e646c6543617465676f7279-72326d:
 
@@ -270,7 +270,7 @@ JetBundleCategory
    pair: JetBundleCategory; r2m
 
 :spadfun:`r2m`\: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``r2m(ind)``\  transforms a repeated index into a multi-index.
+  \ :code:`r2m(ind)`\  transforms a repeated index into a multi-index.
 
 .. _l4a657442756e646c6543617465676f7279-7265706561746564496e646578:
 
@@ -278,7 +278,7 @@ JetBundleCategory
    pair: JetBundleCategory; repeatedIndex
 
 :spadfun:`repeatedIndex`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``repeatedIndex(jv)``\  returns the multi-index of the jet variable \ ``jv``\  in repeated index notation.
+  \ :code:`repeatedIndex(jv)`\  returns the multi-index of the jet variable \ :code:`jv`\  in repeated index notation.
 
 .. _l4a657442756e646c6543617465676f7279-7365744e6f746174696f6e:
 
@@ -286,7 +286,7 @@ JetBundleCategory
    pair: JetBundleCategory; setNotation
 
 :spadfun:`setNotation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``setNotation(s)``\  chooses the notation used for derivatives. Returns the old value.
+  \ :code:`setNotation(s)`\  chooses the notation used for derivatives. Returns the old value.
 
 .. _l4a657442756e646c6543617465676f7279-736d616c6c65723f:
 
@@ -299,7 +299,7 @@ JetBundleCategory
    pair: JetBundleCategory; type
 
 :spadfun:`type`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``type(jv)``\  yields the type (\ ``Const, Indep, Dep, Deriv``\ ) of the jet variable \ ``jv``\ .
+  \ :code:`type(jv)`\  yields the type (\ :code:`Const, Indep, Dep, Deriv`\ ) of the jet variable \ :code:`jv`\ .
 
 .. _l4a657442756e646c6543617465676f7279-55:
 
@@ -307,14 +307,14 @@ JetBundleCategory
    pair: JetBundleCategory; U
 
 :spadfun:`U`\: () -> % 
-  \ ``U()``\  generates the only dependent variable.
+  \ :code:`U()`\  generates the only dependent variable.
 
 
 .. index::
    pair: JetBundleCategory; U
 
 :spadfun:`U`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``U(i)``\  generates the \ ``i``\ \ ``-``\ th dependent variable.
+  \ :code:`U(i)`\  generates the \ :code:`i`\ \ :code:`-`\ th dependent variable.
 
 .. _l4a657442756e646c6543617465676f7279-7661726961626c6573:
 
@@ -322,14 +322,14 @@ JetBundleCategory
    pair: JetBundleCategory; variables
 
 :spadfun:`variables`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``variables(q, c)``\  computes all jet variables of order \ ``q``\  whose class is greater than or equal to \ ``c``\ .
+  \ :code:`variables(q, c)`\  computes all jet variables of order \ :code:`q`\  whose class is greater than or equal to \ :code:`c`\ .
 
 
 .. index::
    pair: JetBundleCategory; variables
 
 :spadfun:`variables`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  % 
-  \ ``variables(q)``\  computes the list of all jet variables up to order \ ``q``\ .
+  \ :code:`variables(q)`\  computes the list of all jet variables up to order \ :code:`q`\ .
 
 .. _l4a657442756e646c6543617465676f7279-776569676874:
 
@@ -337,7 +337,7 @@ JetBundleCategory
    pair: JetBundleCategory; weight
 
 :spadfun:`weight`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``weight(jv)``\  assigns each jet variable a unique integer reflecting its position in the internal ordering. The variable with the greater weight is also greater in this ordering.
+  \ :code:`weight(jv)`\  assigns each jet variable a unique integer reflecting its position in the internal ordering. The variable with the greater weight is also greater in this ordering.
 
 .. _l4a657442756e646c6543617465676f7279-58:
 
@@ -345,14 +345,14 @@ JetBundleCategory
    pair: JetBundleCategory; X
 
 :spadfun:`X`\: () -> % 
-  \ ``X()``\  generates the only independent variable.
+  \ :code:`X()`\  generates the only independent variable.
 
 
 .. index::
    pair: JetBundleCategory; X
 
 :spadfun:`X`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``X(i)``\  generates the \ ``i``\ \ ``-``\ th independent variable.
+  \ :code:`X(i)`\  generates the \ :code:`i`\ \ :code:`-`\ th independent variable.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

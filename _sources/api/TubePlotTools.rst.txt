@@ -17,7 +17,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; *
 
 :spadfun:`\*`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``s * p``\  returns a point whose coordinates are the scalar multiple of the point \ ``p``\  by the scalar \ ``s``\ , preserving the color, or fourth coordinate, of \ ``p``\ .
+  \ :code:`s * p`\  returns a point whose coordinates are the scalar multiple of the point \ :code:`p`\  by the scalar \ :code:`s`\ , preserving the color, or fourth coordinate, of \ :code:`p`\ .
 
 .. _l54756265506c6f74546f6f6c73-2b:
 
@@ -25,7 +25,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; +
 
 :spadfun:`+`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``p + q``\  computes and returns a point whose coordinates are the sums of the coordinates of the two points \ ``p``\  and \ ``q``\ , using the color, or fourth coordinate, of the first point \ ``p``\  as the color also of the point \ ``q``\ .
+  \ :code:`p + q`\  computes and returns a point whose coordinates are the sums of the coordinates of the two points \ :code:`p`\  and \ :code:`q`\ , using the color, or fourth coordinate, of the first point \ :code:`p`\  as the color also of the point \ :code:`q`\ .
 
 .. _l54756265506c6f74546f6f6c73-2d:
 
@@ -33,7 +33,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; -
 
 :spadfun:`-`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``p - q``\  computes and returns a point whose coordinates are the differences of the coordinates of two points \ ``p``\  and \ ``q``\ , using the color, or fourth coordinate, of the first point \ ``p``\  as the color also of the point \ ``q``\ .
+  \ :code:`p - q`\  computes and returns a point whose coordinates are the differences of the coordinates of two points \ :code:`p`\  and \ :code:`q`\ , using the color, or fourth coordinate, of the first point \ :code:`p`\  as the color also of the point \ :code:`q`\ .
 
 .. _l54756265506c6f74546f6f6c73-636f7353696e496e666f:
 
@@ -41,7 +41,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; cosSinInfo
 
 :spadfun:`cosSinInfo`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``cosSinInfo(n)``\  returns the list of lists of values for \ ``n``\ , in the form: \ ``[[cos(n - 1) a, sin(n - 1) a], ..., [cos 2 a, sin 2 a], [cos a, sin a]]``\  where \ ``a = 2 pi/n``\ . Note: \ ``n``\  should be greater than 2.
+  \ :code:`cosSinInfo(n)`\  returns the list of lists of values for \ :code:`n`\ , in the form: \ :code:`[[cos(n - 1) a, sin(n - 1) a], ..., [cos 2 a, sin 2 a], [cos a, sin a]]`\  where \ :code:`a = 2 pi/n`\ . Note: \ :code:`n`\  should be greater than 2.
 
 .. _l54756265506c6f74546f6f6c73-63726f7373:
 
@@ -49,7 +49,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; cross
 
 :spadfun:`cross`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``cross(p, q)``\  computes the cross product of the two points \ ``p``\  and \ ``q``\  using only the first three coordinates, and keeping the color of the first point \ ``p``\ . The result is returned as a point.
+  \ :code:`cross(p, q)`\  computes the cross product of the two points \ :code:`p`\  and \ :code:`q`\  using only the first three coordinates, and keeping the color of the first point \ :code:`p`\ . The result is returned as a point.
 
 .. _l54756265506c6f74546f6f6c73-646f74:
 
@@ -57,7 +57,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; dot
 
 :spadfun:`dot`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``dot(p, q)``\  computes the dot product of the two points \ ``p``\  and \ ``q``\  using only the first three coordinates, and returns the resulting \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ .
+  \ :code:`dot(p, q)`\  computes the dot product of the two points \ :code:`p`\  and \ :code:`q`\  using only the first three coordinates, and returns the resulting \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ .
 
 .. _l54756265506c6f74546f6f6c73-6c6f6f70506f696e7473:
 
@@ -65,7 +65,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; loopPoints
 
 :spadfun:`loopPoints`\: (\ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``loopPoints(p, n, b, r, lls)``\  creates and returns a list of points which form the loop with radius \ ``r``\ , around the center point indicated by the point \ ``p``\ , with the principal normal vector of the space curve at point \ ``p``\  given by the point(vector) \ ``n``\ , and the binormal vector given by the point(vector) \ ``b``\ , and a list of lists, \ ``lls``\ , which is the \ :spadfun:`cosSinInfo`\  of the number of points defining the loop.
+  \ :code:`loopPoints(p, n, b, r, lls)`\  creates and returns a list of points which form the loop with radius \ :code:`r`\ , around the center point indicated by the point \ :code:`p`\ , with the principal normal vector of the space curve at point \ :code:`p`\  given by the point(vector) \ :code:`n`\ , and the binormal vector given by the point(vector) \ :code:`b`\ , and a list of lists, \ :code:`lls`\ , which is the \ :spadfun:`cosSinInfo`\  of the number of points defining the loop.
 
 .. _l54756265506c6f74546f6f6c73-706f696e74:
 
@@ -73,7 +73,7 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; point
 
 :spadfun:`point`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``point(x1, x2, x3, c)``\  creates and returns a point from the three specified coordinates \ ``x1``\ , \ ``x2``\ , \ ``x3``\ , and also a fourth coordinate, \ ``c``\ , which is generally used to specify the color of the point.
+  \ :code:`point(x1, x2, x3, c)`\  creates and returns a point from the three specified coordinates \ :code:`x1`\ , \ :code:`x2`\ , \ :code:`x3`\ , and also a fourth coordinate, \ :code:`c`\ , which is generally used to specify the color of the point.
 
 .. _l54756265506c6f74546f6f6c73-756e6974566563746f72:
 
@@ -81,6 +81,6 @@ Tools for constructing tubes around 3-dimensional parametric curves.
    pair: TubePlotTools; unitVector
 
 :spadfun:`unitVector`\: \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``unitVector(p)``\  creates the unit vector of the point \ ``p``\  and returns the result as a point. Note: \ ``unitVector(p) = p/|p|``\ .
+  \ :code:`unitVector(p)`\  creates the unit vector of the point \ :code:`p`\  and returns the result as a point. Note: \ :code:`unitVector(p) = p/|p|`\ .
 
 

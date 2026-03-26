@@ -57,7 +57,7 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-3d"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> (boolean <code class="docutils literal notranslate"><span class="pre">true</span></code>) if intuitionisticLogic values are the same. Translates from Intuitionistic Logic to Boolean Logic</p>
+<dt><span class="spadfun">=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="code docutils literal notranslate"><span class="pre">true</span></code> (boolean <code class="code docutils literal notranslate"><span class="pre">true</span></code>) if intuitionisticLogic values are the same. Translates from Intuitionistic Logic to Boolean Logic</p>
 </dd>
 </dl>
 <dl class="simple" id="l4c6174746963654d6565744f664a6f696e73-5c2f">
@@ -73,7 +73,7 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-61746f6d3f"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">atom?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is an atom, that is a leaf node otherwise return <code class="docutils literal notranslate"><span class="pre">false</span></code> if this is a compound term</p>
+<dt><span class="spadfun">atom?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="code docutils literal notranslate"><span class="pre">true</span></code> if this is an atom, that is a leaf node otherwise return <code class="code docutils literal notranslate"><span class="pre">false</span></code> if this is a compound term</p>
 </dd>
 </dl>
 <dl class="simple" id="l4c6174746963654d6565744f664a6f696e73-636f65726365">
@@ -81,11 +81,11 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-646564756374696f6e73"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">deductions</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>assumes <code class="docutils literal notranslate"><span class="pre">ln</span></code> contains a list of factors which must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the whole to be <code class="docutils literal notranslate"><span class="pre">true</span></code> (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be <code class="docutils literal notranslate"><span class="pre">true</span></code> by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.</p>
+<dt><span class="spadfun">deductions</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>assumes <code class="code docutils literal notranslate"><span class="pre">ln</span></code> contains a list of factors which must be <code class="code docutils literal notranslate"><span class="pre">true</span></code> for the whole to be <code class="code docutils literal notranslate"><span class="pre">true</span></code> (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be <code class="code docutils literal notranslate"><span class="pre">true</span></code> by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-656d7074793f"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if empty</p>
+<dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">true</span></code> if empty</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-656d7074794c617474696365"></span><dl class="simple" id="index-5">
@@ -93,7 +93,7 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-666163746f72"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">factor</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>splits <code class="docutils literal notranslate"><span class="pre">n</span></code> into a list of factors which must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the whole to be <code class="docutils literal notranslate"><span class="pre">true</span></code>. This assumes that the top level is already a set of factors separated by <code class="docutils literal notranslate"><span class="pre">/\</span></code> otherwise the result will just be a list with one entry: <code class="docutils literal notranslate"><span class="pre">'n'</span></code>. This is used when converting ILogic to types by using the Curry-Howard isomorphism.</p>
+<dt><span class="spadfun">factor</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>splits <code class="code docutils literal notranslate"><span class="pre">n</span></code> into a list of factors which must be <code class="code docutils literal notranslate"><span class="pre">true</span></code> for the whole to be <code class="code docutils literal notranslate"><span class="pre">true</span></code>. This assumes that the top level is already a set of factors separated by <code class="code docutils literal notranslate"><span class="pre">/`</span> <span class="pre">otherwise</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">will</span> <span class="pre">just</span> <span class="pre">be</span> <span class="pre">a</span> <span class="pre">list</span> <span class="pre">with</span> <span class="pre">one</span> <span class="pre">entry:</span> <span class="pre">:code:</span></code>’n’<a href="#id1"><span class="problematic" id="id2">`</span></a>. This is used when converting ILogic to types by using the Curry-Howard isomorphism.</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-6765744368696c6472656e"></span><dl class="simple" id="index-7">
@@ -101,7 +101,7 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-6a6f696e"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">join</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">of</span></code> set of elements</p>
+<dt><span class="spadfun">join</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">join</span> <span class="pre">of</span></code> set of elements</p>
 </dd>
 </dl>
 <dl class="simple" id="l4c6174746963654d6565744f664a6f696e73-6c61746578">
@@ -113,7 +113,7 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-6c6f67696346"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">logicF</span>: () -&gt; %</dt><dd><p>construct <code class="docutils literal notranslate"><span class="pre">false</span></code> (contradiction): a logical constant.</p>
+<dt><span class="spadfun">logicF</span>: () -&gt; %</dt><dd><p>construct <code class="code docutils literal notranslate"><span class="pre">false</span></code> (contradiction): a logical constant.</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-6c6f67696354"></span><dl class="simple" id="index-11">
@@ -121,11 +121,11 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-6d656574"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">meet</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">meet</span> <span class="pre">of</span></code> set of elements</p>
+<dt><span class="spadfun">meet</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">meet</span> <span class="pre">of</span></code> set of elements</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-6f7054797065"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">opType</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>if this is a compound op then opType returns the type of that op: “IMPLY”::Symbol =implies “AND”::Symbol=/“OR”::Symbol=<code class="docutils literal notranslate"><span class="pre">\/</span></code> “NOT”::Symbol=~ “OTHER”::Symbol=not compound op</p>
+<dt><span class="spadfun">opType</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>if this is a compound op then opType returns the type of that op: “IMPLY”::Symbol =implies “AND”::Symbol=/“OR”::Symbol=<code class="code docutils literal notranslate"><span class="pre">/</span></code> “NOT”::Symbol=~ “OTHER”::Symbol=not compound op</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-7265647578"></span><dl class="simple" id="index-14">
@@ -145,7 +145,7 @@
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-76616c7565"></span><dl class="simple" id="index-17">
-<dt><span class="spadfun">value</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>returns: “T”::Symbol = <code class="docutils literal notranslate"><span class="pre">T</span></code> “F”::Symbol = <code class="docutils literal notranslate"><span class="pre">_|_</span></code> “E”::Symbol = error “P”::Symbol = proposition “C”::Symbol = compound Constructs lambda term and bind any variables with the name provided</p>
+<dt><span class="spadfun">value</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>returns: “T”::Symbol = <code class="code docutils literal notranslate"><span class="pre">T</span></code> “F”::Symbol = <code class="code docutils literal notranslate"><span class="pre">_|_</span></code> “E”::Symbol = error “P”::Symbol = proposition “C”::Symbol = compound Constructs lambda term and bind any variables with the name provided</p>
 </dd>
 </dl>
 <span id="l4c6174746963654d6565744f664a6f696e73-7661726961626c65"></span><dl class="simple" id="index-18">
@@ -218,7 +218,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

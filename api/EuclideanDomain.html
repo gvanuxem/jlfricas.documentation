@@ -51,7 +51,7 @@
   <section id="euclideandomain">
 <span id="l4575636c696465616e446f6d61696e"></span><span id="index-0"></span><h1>EuclideanDomain<a class="headerlink" href="#euclideandomain" title="Link to this heading">¶</a></h1>
 <p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/catdef.spad#L408">catdef.spad line 408</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/catdef.spad#L408">[edit on github]</a></p>
-<p>A constructive euclidean domain, i.e. one can divide producing a quotient and a remainder where the remainder is either zero or is smaller (<span class="spadfun">euclideanSize</span>) than the divisor.   Conditional attributes: multiplicativeValuation <code class="docutils literal notranslate"><span class="pre">Size(a*b)=Size(a)*Size(b)</span></code> additiveValuation <code class="docutils literal notranslate"><span class="pre">Size(a*b)=Size(a)+Size(b)</span></code></p>
+<p>A constructive euclidean domain, i.e. one can divide producing a quotient and a remainder where the remainder is either zero or is smaller (<span class="spadfun">euclideanSize</span>) than the divisor.   Conditional attributes: multiplicativeValuation <code class="code docutils literal notranslate"><span class="pre">Size(a*b)=Size(a)*Size(b)</span></code> additiveValuation <code class="code docutils literal notranslate"><span class="pre">Size(a*b)=Size(a)+Size(b)</span></code></p>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -127,11 +127,11 @@
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-646976696465"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">divide</span>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y)</span></code> divides <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code> producing a record containing a <code class="docutils literal notranslate"><span class="pre">quotient</span></code> and <code class="docutils literal notranslate"><span class="pre">remainder</span></code>, where the remainder is smaller (see <a class="reference internal" href="#l4575636c696465616e446f6d61696e-73697a654c6573733f"><span class="std std-ref">sizeLess?</span></a>) than the divisor <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<dt><span class="spadfun">divide</span>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y)</span></code> divides <code class="code docutils literal notranslate"><span class="pre">x</span></code> by <code class="code docutils literal notranslate"><span class="pre">y</span></code> producing a record containing a <code class="code docutils literal notranslate"><span class="pre">quotient</span></code> and <code class="code docutils literal notranslate"><span class="pre">remainder</span></code>, where the remainder is smaller (see <a class="reference internal" href="#l4575636c696465616e446f6d61696e-73697a654c6573733f"><span class="std std-ref">sizeLess?</span></a>) than the divisor <code class="code docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-6575636c696465616e53697a65"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">euclideanSize</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">euclideanSize(x)</span></code> returns the euclidean size of the element <code class="docutils literal notranslate"><span class="pre">x</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">x</span></code> is zero.</p>
+<dt><span class="spadfun">euclideanSize</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">euclideanSize(x)</span></code> returns the euclidean size of the element <code class="code docutils literal notranslate"><span class="pre">x</span></code>. Error: if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is zero.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-65787072657373496465616c4d656d626572">
@@ -143,11 +143,11 @@
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">extendedEuclidean</span>: (%, %) -&gt; Record(coef1: %, coef2: %, generator: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extendedEuclidean(x,</span> <span class="pre">y)</span></code> returns a record rec where <code class="docutils literal notranslate"><span class="pre">rec.coef1*x+rec.coef2*y</span> <span class="pre">=</span> <span class="pre">rec.generator</span></code> and rec.generator is a <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. The <code class="docutils literal notranslate"><span class="pre">gcd</span></code> is unique only up to associates if <a class="reference internal" href="canonicalUnitNormal.html#l63616e6f6e6963616c556e69744e6f726d616c"><span class="std std-ref">canonicalUnitNormal</span></a> is not asserted. <span class="spadfun">principalIdeal</span> provides a version of this operation which accepts an arbitrary length list of arguments.</p>
+<dt><span class="spadfun">extendedEuclidean</span>: (%, %) -&gt; Record(coef1: %, coef2: %, generator: %)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">extendedEuclidean(x,</span> <span class="pre">y)</span></code> returns a record rec where <code class="code docutils literal notranslate"><span class="pre">rec.coef1*x+rec.coef2*y</span> <span class="pre">=</span> <span class="pre">rec.generator</span></code> and rec.generator is a <code class="code docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. The <code class="code docutils literal notranslate"><span class="pre">gcd</span></code> is unique only up to associates if <a class="reference internal" href="canonicalUnitNormal.html#l63616e6f6e6963616c556e69744e6f726d616c"><span class="std std-ref">canonicalUnitNormal</span></a> is not asserted. <span class="spadfun">principalIdeal</span> provides a version of this operation which accepts an arbitrary length list of arguments.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">extendedEuclidean</span>: (%, %, %) -&gt; Union(Record(coef1: %, coef2: %), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extendedEuclidean(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> either returns a record rec where <code class="docutils literal notranslate"><span class="pre">rec.coef1*x+rec.coef2*y=z</span></code> or returns “failed” if <code class="docutils literal notranslate"><span class="pre">z</span></code> cannot be expressed as a linear combination of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<dt><span class="spadfun">extendedEuclidean</span>: (%, %, %) -&gt; Union(Record(coef1: %, coef2: %), failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">extendedEuclidean(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> either returns a record rec where <code class="code docutils literal notranslate"><span class="pre">rec.coef1*x+rec.coef2*y=z</span></code> or returns “failed” if <code class="code docutils literal notranslate"><span class="pre">z</span></code> cannot be expressed as a linear combination of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-676364">
@@ -185,7 +185,7 @@
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-6d756c74694575636c696465616e"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">multiEuclidean</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiEuclidean([f1,</span> <span class="pre">...,</span> <span class="pre">fn],</span> <span class="pre">z)</span></code> returns a list of coefficients <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an]</span></code> such that `` z / prod fi = sum aj/fj``. If no such list of coefficients exists, “failed” is returned.</p>
+<dt><span class="spadfun">multiEuclidean</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">multiEuclidean([f1,</span> <span class="pre">...,</span> <span class="pre">fn],</span> <span class="pre">z)</span></code> returns a list of coefficients <code class="code docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an]</span></code> such that :code:` z / prod fi = sum aj/fj`. If no such list of coefficients exists, “failed” is returned.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-6f6e653f">
@@ -205,7 +205,7 @@
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-71756f"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">quo</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">quo</span> <span class="pre">y</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y).quotient</span></code>. See <a class="reference internal" href="#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>.</p>
+<dt><span class="spadfun">quo</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">quo</span> <span class="pre">y</span></code> is the same as <code class="code docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y).quotient</span></code>. See <a class="reference internal" href="#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-7265636970">
@@ -213,7 +213,7 @@
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-72656d"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">rem</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">rem</span> <span class="pre">y</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y).remainder</span></code>. See <a class="reference internal" href="#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>.</p>
+<dt><span class="spadfun">rem</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">rem</span> <span class="pre">y</span></code> is the same as <code class="code docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y).remainder</span></code>. See <a class="reference internal" href="#l4575636c696465616e446f6d61696e-646976696465"><span class="std std-ref">divide</span></a>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-7269676874506f776572">
@@ -231,7 +231,7 @@
 </dd>
 </dl>
 <span id="l4575636c696465616e446f6d61696e-73697a654c6573733f"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">sizeLess?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sizeLess?(x,</span> <span class="pre">y)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">x</span></code> is strictly smaller than <code class="docutils literal notranslate"><span class="pre">y</span></code> with respect to the <a class="reference internal" href="#l4575636c696465616e446f6d61696e-6575636c696465616e53697a65"><span class="std std-ref">euclideanSize</span></a>. Note: zero is considered smaller than every nonzero element.</p>
+<dt><span class="spadfun">sizeLess?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sizeLess?(x,</span> <span class="pre">y)</span></code> tests whether <code class="code docutils literal notranslate"><span class="pre">x</span></code> is strictly smaller than <code class="code docutils literal notranslate"><span class="pre">y</span></code> with respect to the <a class="reference internal" href="#l4575636c696465616e446f6d61696e-6575636c696465616e53697a65"><span class="std std-ref">euclideanSize</span></a>. Note: zero is considered smaller than every nonzero element.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4575636c696465616e446f6d61696e-7375627472616374496643616e">
@@ -344,7 +344,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

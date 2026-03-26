@@ -12,7 +12,7 @@ UnivariatePolynomialDecompositionPackage(R, UP)
 * UP: \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
 
-UnivariatePolynomialDecompositionPackage implements functional decomposition of univariate polynomial with coefficients in an \ ``IntegralDomain``\  of \ ``CharacteristicZero``\ .
+UnivariatePolynomialDecompositionPackage implements functional decomposition of univariate polynomial with coefficients in an \ :code:`IntegralDomain`\  of \ :code:`CharacteristicZero`\ .
 
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-636f6d706c6574654465636f6d706f7365:
@@ -21,7 +21,7 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; completeDecompose
 
 :spadfun:`completeDecompose`\: UP -> \ :ref:`List <l4c697374>`\  UP if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``completeDecompose(f)``\  returns a list of factors of \ ``f``\  for the functional decomposition of \ ``f``\ . [\ ``f1``\ , ..., \ ``fn``\ ] means \ ``f``\  = \ ``f1``\  \ ``o``\  ... \ ``o``\  \ ``fn``\ .
+  \ :code:`completeDecompose(f)`\  returns a list of factors of \ :code:`f`\  for the functional decomposition of \ :code:`f`\ . [\ :code:`f1`\ , ..., \ :code:`fn`\ ] means \ :code:`f`\  = \ :code:`f1`\  \ :code:`o`\  ... \ :code:`o`\  \ :code:`fn`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-6465636f6d706f7365496643616e:
 
@@ -29,7 +29,7 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; decomposeIfCan
 
 :spadfun:`decomposeIfCan`\: UP -> Union(Record(left: UP, right: UP), failed) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``decomposeIfCan(f)``\  returns a functional decomposition of the polynomial \ ``f``\  or "failed" if it has not found any.
+  \ :code:`decomposeIfCan(f)`\  returns a functional decomposition of the polynomial \ :code:`f`\  or "failed" if it has not found any.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-6c656674466163746f72496643616e:
 
@@ -37,7 +37,7 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; leftFactorIfCan
 
 :spadfun:`leftFactorIfCan`\: (UP, UP) -> Union(UP, failed) 
-  \ ``leftFactorIfCan(f, h)``\  returns the left factor (\ ``g``\  in \ ``f``\  = \ ``g``\  \ ``o``\  \ ``h``\ ) of the functional decomposition of the polynomial \ ``f``\  with given \ ``h``\  or \ ``"failed"``\  if \ ``g``\  does not exist.
+  \ :code:`leftFactorIfCan(f, h)`\  returns the left factor (\ :code:`g`\  in \ :code:`f`\  = \ :code:`g`\  \ :code:`o`\  \ :code:`h`\ ) of the functional decomposition of the polynomial \ :code:`f`\  with given \ :code:`h`\  or \ :code:`"failed"`\  if \ :code:`g`\  does not exist.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-6d6f6e6963436f6d706c6574654465636f6d706f7365:
 
@@ -45,7 +45,7 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; monicCompleteDecompose
 
 :spadfun:`monicCompleteDecompose`\: UP -> \ :ref:`List <l4c697374>`\  UP 
-  \ ``monicCompleteDecompose(f)``\  returns a list of factors of \ ``f``\  for the functional decomposition of monic polynomial \ ``f``\ . [\ ``f1``\ , ..., \ ``fn``\ ] means \ ``f``\  = \ ``f1``\  \ ``o``\  ... \ ``o``\  \ ``fn``\ .
+  \ :code:`monicCompleteDecompose(f)`\  returns a list of factors of \ :code:`f`\  for the functional decomposition of monic polynomial \ :code:`f`\ . [\ :code:`f1`\ , ..., \ :code:`fn`\ ] means \ :code:`f`\  = \ :code:`f1`\  \ :code:`o`\  ... \ :code:`o`\  \ :code:`fn`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-6d6f6e69634465636f6d706f7365496643616e:
 
@@ -53,7 +53,7 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; monicDecomposeIfCan
 
 :spadfun:`monicDecomposeIfCan`\: UP -> Union(Record(left: UP, right: UP), failed) 
-  \ ``monicDecomposeIfCan(f)``\  returns a functional decomposition of the monic polynomial \ ``f``\  or "failed" if it has not found any.
+  \ :code:`monicDecomposeIfCan(f)`\  returns a functional decomposition of the monic polynomial \ :code:`f`\  or "failed" if it has not found any.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-6d6f6e69635269676874466163746f72496643616e:
 
@@ -61,7 +61,7 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; monicRightFactorIfCan
 
 :spadfun:`monicRightFactorIfCan`\: (UP, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(UP, failed) 
-  \ ``monicRightFactorIfCan(f, d)``\  returns a candidate to be the monic right factor (\ ``h``\  in \ ``f``\  = \ ``g``\  \ ``o``\  \ ``h``\ ) of degree \ ``d``\  of a functional decomposition of the polynomial \ ``f``\  or \ ``"failed"``\  if no such candidate.
+  \ :code:`monicRightFactorIfCan(f, d)`\  returns a candidate to be the monic right factor (\ :code:`h`\  in \ :code:`f`\  = \ :code:`g`\  \ :code:`o`\  \ :code:`h`\ ) of degree \ :code:`d`\  of a functional decomposition of the polynomial \ :code:`f`\  or \ :code:`"failed"`\  if no such candidate.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4465636f6d706f736974696f6e5061636b616765-7269676874466163746f72496643616e:
 
@@ -69,6 +69,6 @@ UnivariatePolynomialDecompositionPackage implements functional decomposition of 
    pair: UnivariatePolynomialDecompositionPackage; rightFactorIfCan
 
 :spadfun:`rightFactorIfCan`\: (UP, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R) -> Union(UP, failed) 
-  \ ``rightFactorIfCan(f, d, c)``\  returns a candidate to be the right factor (\ ``h``\  in \ ``f``\  = \ ``g``\  \ ``o``\  \ ``h``\ ) of degree \ ``d``\  with leading coefficient \ ``c``\  of a functional decomposition of the polynomial \ ``f``\  or \ ``"failed"``\  if no such candidate.
+  \ :code:`rightFactorIfCan(f, d, c)`\  returns a candidate to be the right factor (\ :code:`h`\  in \ :code:`f`\  = \ :code:`g`\  \ :code:`o`\  \ :code:`h`\ ) of degree \ :code:`d`\  with leading coefficient \ :code:`c`\  of a functional decomposition of the polynomial \ :code:`f`\  or \ :code:`"failed"`\  if no such candidate.
 
 

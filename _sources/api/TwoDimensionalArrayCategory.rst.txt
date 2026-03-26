@@ -43,7 +43,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; array2
 
 :spadfun:`array2`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R -> % 
-  \ ``array2(ll)``\  constructs a 2-dimensional array, the inner list being the rows.
+  \ :code:`array2(ll)`\  constructs a 2-dimensional array, the inner list being the rows.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b436f6e636174:
 
@@ -51,7 +51,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; blockConcat
 
 :spadfun:`blockConcat`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``blockConcat(ll)``\  concatenates arrays row and column wise, building a array from blocks. The order is row major as in \ ``matrix``\ .
+  \ :code:`blockConcat(ll)`\  concatenates arrays row and column wise, building a array from blocks. The order is row major as in \ :code:`matrix`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-626c6f636b53706c6974:
 
@@ -59,14 +59,14 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; blockSplit
 
 :spadfun:`blockSplit`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
-  \ ``blockSplit(a, [n1,...,ni], [m1,...,mi])``\  splits a into multiple subarrays row and column wise, such that element at position \ ``k``\ , \ ``l``\  has \ ``nk``\  rows and \ ``ml``\  columns. Error: if number of rows of a is different than \ ``n1``\  + ... + \ ``ni``\  or number of columns of a is different than \ ``m1``\  + ... + \ ``mj``\ 
+  \ :code:`blockSplit(a, [n1,...,ni], [m1,...,mi])`\  splits a into multiple subarrays row and column wise, such that element at position \ :code:`k`\ , \ :code:`l`\  has \ :code:`nk`\  rows and \ :code:`ml`\  columns. Error: if number of rows of a is different than \ :code:`n1`\  + ... + \ :code:`ni`\  or number of columns of a is different than \ :code:`m1`\  + ... + \ :code:`mj`\ 
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; blockSplit
 
 :spadfun:`blockSplit`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  % 
-  \ ``blockSplit(a, n, m)``\  splits a into \ ``n*m``\  subarrays of equal size row and column wise, dividing a into blocks. Error: if number of rows of a is not divisible by \ ``n``\  or number of columns of a is not divisible by \ ``m``\ .
+  \ :code:`blockSplit(a, n, m)`\  splits a into \ :code:`n*m`\  subarrays of equal size row and column wise, dividing a into blocks. Error: if number of rows of a is not divisible by \ :code:`n`\  or number of columns of a is not divisible by \ :code:`m`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-636f65726365:
 
@@ -79,7 +79,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; colSlice
 
 :spadfun:`colSlice`\: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``colSlice(m)``\  returns a segment \ ``s``\  such that for \ ``m``\  the access \ ``m``\ (\ ``i``\ , \ ``s``\ ) gives the \ ``i``\ -th row.
+  \ :code:`colSlice(m)`\  returns a segment \ :code:`s`\  such that for \ :code:`m`\  the access \ :code:`m`\ (\ :code:`i`\ , \ :code:`s`\ ) gives the \ :code:`i`\ -th row.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-636f6c756d6e:
 
@@ -87,7 +87,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; column
 
 :spadfun:`column`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Col 
-  \ ``column(m, j)``\  returns the \ ``j``\ th column of \ ``m``\  error check to determine if index is in proper ranges
+  \ :code:`column(m, j)`\  returns the \ :code:`j`\ th column of \ :code:`m`\  error check to determine if index is in proper ranges
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-636f7079:
 
@@ -109,91 +109,91 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> R 
-  \ ``elt(m, i, j)``\  returns the element in the \ ``i``\ th row and \ ``j``\ th column of the array \ ``m``\  error check to determine if indices are in proper ranges
+  \ :code:`elt(m, i, j)`\  returns the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of the array \ :code:`m`\  error check to determine if indices are in proper ranges
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , R) -> R 
-  \ ``elt(m, i, j, r)``\  returns the element in the \ ``i``\ th row and \ ``j``\ th column of the array \ ``m``\ , if \ ``m``\  has an \ ``i``\ th row and a \ ``j``\ th column, and returns \ ``r``\  otherwise
+  \ :code:`elt(m, i, j, r)`\  returns the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of the array \ :code:`m`\ , if \ :code:`m`\  has an \ :code:`i`\ th row and a \ :code:`j`\ th column, and returns \ :code:`r`\  otherwise
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, row, colList)``\  returns an 1-by-\ ``n``\  array consisting of elements of \ ``x``\ , where \ ``n = \# colList``\ . If \ ``colList = [j<1>, j<2>, ..., j<n>]``\ , then the \ ``(k, l)``\ th entry of \ ``elt(x, row, colList)``\  is \ ``x(row, j<l>)``\ .
+  \ :code:`elt(x, row, colList)`\  returns an 1-by-\ :code:`n`\  array consisting of elements of \ :code:`x`\ , where \ :code:`n = \# colList`\ . If \ :code:`colList = [j<1>, j<2>, ..., j<n>]`\ , then the \ :code:`(k, l)`\ th entry of \ :code:`elt(x, row, colList)`\  is \ :code:`x(row, j<l>)`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, row, ls2)``\  is equivalent to \ ``elt(x, row, l2)``\  where \ ``l2``\  is obtained by appending expansions of elements of \ ``ls2``\ , but should be more convenient and more efficient.
+  \ :code:`elt(x, row, ls2)`\  is equivalent to \ :code:`elt(x, row, l2)`\  where \ :code:`l2`\  is obtained by appending expansions of elements of \ :code:`ls2`\ , but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, rowList, col)``\  returns an \ ``m``\ -by-1 array consisting of elements of \ ``x``\ , where \ ``m = \# rowList``\ . If \ ``rowList = [i<1>, i<2>, ..., i<m>]``\ , then the \ ``(k, l)``\ th entry of \ ``elt(x, rowList, col)``\  is \ ``x(i<k>, col)``\ .
+  \ :code:`elt(x, rowList, col)`\  returns an \ :code:`m`\ -by-1 array consisting of elements of \ :code:`x`\ , where \ :code:`m = \# rowList`\ . If \ :code:`rowList = [i<1>, i<2>, ..., i<m>]`\ , then the \ :code:`(k, l)`\ th entry of \ :code:`elt(x, rowList, col)`\  is \ :code:`x(i<k>, col)`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, rowList, colList)``\  returns an \ ``m``\ -by-\ ``n``\  array consisting of elements of \ ``x``\ , where \ ``m = \# rowList``\  and \ ``n = \# colList``\ . If \ ``rowList = [i<1>, i<2>, ..., i<m>]``\  and \ ``colList = [j<1>, j<2>, ..., j<n>]``\ , then the \ ``(k, l)``\ th entry of \ ``elt(x, rowList, colList)``\  is \ ``x(i<k>, j<l>)``\ .
+  \ :code:`elt(x, rowList, colList)`\  returns an \ :code:`m`\ -by-\ :code:`n`\  array consisting of elements of \ :code:`x`\ , where \ :code:`m = \# rowList`\  and \ :code:`n = \# colList`\ . If \ :code:`rowList = [i<1>, i<2>, ..., i<m>]`\  and \ :code:`colList = [j<1>, j<2>, ..., j<n>]`\ , then the \ :code:`(k, l)`\ th entry of \ :code:`elt(x, rowList, colList)`\  is \ :code:`x(i<k>, j<l>)`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, rowList, s)``\  is equivalent to \ ``elt(x, rowList, expand(s))``\  but should be more convenient and more efficient.
+  \ :code:`elt(x, rowList, s)`\  is equivalent to \ :code:`elt(x, rowList, expand(s))`\  but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, ls1, col)``\  is equivalent to \ ``elt(x, l1, col)``\  where \ ``l1``\  is obtained by appending expansions of elements of \ ``ls1``\ , but should be more convenient and more efficient.
+  \ :code:`elt(x, ls1, col)`\  is equivalent to \ :code:`elt(x, l1, col)`\  where \ :code:`l1`\  is obtained by appending expansions of elements of \ :code:`ls1`\ , but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, ls1, ls2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ :code:`elt(x, ls1, ls2)`\  is equivalent to \ :code:`elt(x, l1, l2)`\  where \ :code:`li`\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, ls1, s2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ :code:`elt(x, ls1, s2)`\  is equivalent to \ :code:`elt(x, l1, l2)`\  where \ :code:`li`\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, s, colList)``\  is equivalent to \ ``elt(x, expand(s), colList)``\  but should be more convenient and more efficient.
+  \ :code:`elt(x, s, colList)`\  is equivalent to \ :code:`elt(x, expand(s), colList)`\  but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, s1, ls2)``\  is equivalent to \ ``elt(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ :code:`elt(x, s1, ls2)`\  is equivalent to \ :code:`elt(x, l1, l2)`\  where \ :code:`li`\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(x, s1, s2)``\  is equivalent to \ ``elt(x, expand(s1), expand(s2))``\  but should be more convenient and more efficient.
+  \ :code:`elt(x, s1, s2)`\  is equivalent to \ :code:`elt(x, expand(s1), expand(s2))`\  but should be more convenient and more efficient.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-656d7074793f:
 
@@ -238,7 +238,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; fill!
 
 :spadfun:`fill!`\: (%, R) -> % 
-  \ ``fill!(m, r)``\  fills \ ``m``\  with \ ``r``\ \ ``'s``\ 
+  \ :code:`fill!(m, r)`\  fills \ :code:`m`\  with \ :code:`r`\ \ :code:`'s`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-68617368:
 
@@ -256,14 +256,14 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; horizConcat
 
 :spadfun:`horizConcat`\: (%, %) -> % 
-  \ ``horizConcat(x, y)``\  horizontally concatenates two arrays with an equal number of rows. The entries of \ ``y``\  appear to the right of the entries of \ ``x``\ . Error: if the arrays do not have the same number of rows.
+  \ :code:`horizConcat(x, y)`\  horizontally concatenates two arrays with an equal number of rows. The entries of \ :code:`y`\  appear to the right of the entries of \ :code:`x`\ . Error: if the arrays do not have the same number of rows.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; horizConcat
 
 :spadfun:`horizConcat`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``horizConcat(l)``\  horizontally concatenates all members of \ ``l``\  Error: if the arrays do not have the same number of rows.
+  \ :code:`horizConcat(l)`\  horizontally concatenates all members of \ :code:`l`\  Error: if the arrays do not have the same number of rows.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-686f72697a53706c6974:
 
@@ -271,14 +271,14 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; horizSplit
 
 :spadfun:`horizSplit`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``horizSplit(a, [n1, n2, ..., ni])``\  splits a into arrays having \ ``n1``\ , ..., \ ``ni``\  columns. Error: if number of columns of a is different than \ ``n1``\  + ... + \ ``ni``\ .
+  \ :code:`horizSplit(a, [n1, n2, ..., ni])`\  splits a into arrays having \ :code:`n1`\ , ..., \ :code:`ni`\  columns. Error: if number of columns of a is different than \ :code:`n1`\  + ... + \ :code:`ni`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; horizSplit
 
 :spadfun:`horizSplit`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``horizSplit(a, n)``\  splits a into \ ``n``\  arrays of equal size column wise. Error: if number of columns of a is not divisible by \ ``n``\ .
+  \ :code:`horizSplit(a, n)`\  splits a into \ :code:`n`\  arrays of equal size column wise. Error: if number of columns of a is not divisible by \ :code:`n`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6c61746578:
 
@@ -296,7 +296,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; listOfLists
 
 :spadfun:`listOfLists`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R 
-  \ ``listOfLists(m)``\  returns the rows of the array \ ``m``\  as a list of lists.
+  \ :code:`listOfLists(m)`\  returns the rows of the array \ :code:`m`\  as a list of lists.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d617021:
 
@@ -304,7 +304,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; map!
 
 :spadfun:`map!`\: (R -> R, %) -> % 
-  \ ``map!(f, a)``\  assign \ ``a(i, j)``\  to \ ``f(a(i, j))``\  for all \ ``i, j``\ 
+  \ :code:`map!(f, a)`\  assign \ :code:`a(i, j)`\  to \ :code:`f(a(i, j))`\  for all \ :code:`i, j`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6170:
 
@@ -312,21 +312,21 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; map
 
 :spadfun:`map`\: ((R, R) -> R, %, %) -> % 
-  \ ``map(f, a, b)``\  returns \ ``c``\ , where \ ``c(i, j) = f(a(i, j), b(i, j))``\  for all \ ``i, j``\ 
+  \ :code:`map(f, a, b)`\  returns \ :code:`c`\ , where \ :code:`c(i, j) = f(a(i, j), b(i, j))`\  for all \ :code:`i, j`\ 
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; map
 
 :spadfun:`map`\: ((R, R) -> R, %, %, R) -> % 
-  \ ``map(f, a, b, r)``\  returns \ ``c``\ , where \ ``c(i, j) = f(a(i, j), b(i, j))``\  when both \ ``a(i, j)``\  and \ ``b(i, j)``\  exist; else \ ``c(i, j) = f(r, b(i, j))``\  when \ ``a(i, j)``\  does not exist; else \ ``c(i, j) = f(a(i, j), r)``\  when \ ``b(i, j)``\  does not exist; otherwise \ ``c(i, j) = f(r, r)``\ .
+  \ :code:`map(f, a, b, r)`\  returns \ :code:`c`\ , where \ :code:`c(i, j) = f(a(i, j), b(i, j))`\  when both \ :code:`a(i, j)`\  and \ :code:`b(i, j)`\  exist; else \ :code:`c(i, j) = f(r, b(i, j))`\  when \ :code:`a(i, j)`\  does not exist; else \ :code:`c(i, j) = f(a(i, j), r)`\  when \ :code:`b(i, j)`\  does not exist; otherwise \ :code:`c(i, j) = f(r, r)`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; map
 
 :spadfun:`map`\: (R -> R, %) -> % 
-  \ ``map(f, a)``\  returns \ ``b``\ , where \ ``b(i, j) = f(a(i, j))``\  for all \ ``i, j``\ 
+  \ :code:`map(f, a)`\  returns \ :code:`b`\ , where \ :code:`b(i, j) = f(a(i, j))`\  for all \ :code:`i, j`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6178:
 
@@ -343,7 +343,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; maxColIndex
 
 :spadfun:`maxColIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``maxColIndex(m)``\  returns the index of the 'last' column of the array \ ``m``\ 
+  \ :code:`maxColIndex(m)`\  returns the index of the 'last' column of the array \ :code:`m`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6178526f77496e646578:
 
@@ -351,7 +351,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; maxRowIndex
 
 :spadfun:`maxRowIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``maxRowIndex(m)``\  returns the index of the 'last' row of the array \ ``m``\ 
+  \ :code:`maxRowIndex(m)`\  returns the index of the 'last' row of the array \ :code:`m`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d656d6265723f:
 
@@ -374,7 +374,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; minColIndex
 
 :spadfun:`minColIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``minColIndex(m)``\  returns the index of the 'first' column of the array \ ``m``\ 
+  \ :code:`minColIndex(m)`\  returns the index of the 'first' column of the array \ :code:`m`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d696e526f77496e646578:
 
@@ -382,7 +382,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; minRowIndex
 
 :spadfun:`minRowIndex`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``minRowIndex(m)``\  returns the index of the 'first' row of the array \ ``m``\ 
+  \ :code:`minRowIndex(m)`\  returns the index of the 'first' row of the array \ :code:`m`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6d6f72653f:
 
@@ -395,7 +395,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; ncols
 
 :spadfun:`ncols`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``ncols(m)``\  returns the number of columns in the array \ ``m``\ 
+  \ :code:`ncols(m)`\  returns the number of columns in the array \ :code:`m`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6e6577:
 
@@ -403,7 +403,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; new
 
 :spadfun:`new`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R) -> % 
-  \ ``new(m, n, r)``\  is an \ ``m``\ -by-\ ``n``\  array all of whose entries are \ ``r``\ 
+  \ :code:`new(m, n, r)`\  is an \ :code:`m`\ -by-\ :code:`n`\  array all of whose entries are \ :code:`r`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-6e726f7773:
 
@@ -411,7 +411,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; nrows
 
 :spadfun:`nrows`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``nrows(m)``\  returns the number of rows in the array \ ``m``\ 
+  \ :code:`nrows(m)`\  returns the number of rows in the array \ :code:`m`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-7061727473:
 
@@ -419,7 +419,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; parts
 
 :spadfun:`parts`\: % -> \ :ref:`List <l4c697374>`\  R 
-  \ ``parts(m)``\  returns a list of the elements of \ ``m``\  in row major order
+  \ :code:`parts(m)`\  returns a list of the elements of \ :code:`m`\  in row major order
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-71656c74:
 
@@ -427,7 +427,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> R 
-  \ ``qelt(m, i, j)``\  returns the element in the \ ``i``\ th row and \ ``j``\ th column of the array \ ``m``\  NO error check to determine if indices are in proper ranges
+  \ :code:`qelt(m, i, j)`\  returns the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of the array \ :code:`m`\  NO error check to determine if indices are in proper ranges
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-716e6577:
 
@@ -435,7 +435,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; qnew
 
 :spadfun:`qnew`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``qnew(m, n)``\  is an \ ``m``\ -by-\ ``n``\  uninitialized array
+  \ :code:`qnew(m, n)`\  is an \ :code:`m`\ -by-\ :code:`n`\  uninitialized array
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-71736574656c7421:
 
@@ -443,7 +443,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; qsetelt!
 
 :spadfun:`qsetelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , R) -> R 
-  \ ``qsetelt!(m, i, j, r)``\  sets the element in the \ ``i``\ th row and \ ``j``\ th column of \ ``m``\  to \ ``r``\  NO error check to determine if indices are in proper ranges
+  \ :code:`qsetelt!(m, i, j, r)`\  sets the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of \ :code:`m`\  to \ :code:`r`\  NO error check to determine if indices are in proper ranges
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77:
 
@@ -451,7 +451,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; row
 
 :spadfun:`row`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Row 
-  \ ``row(m, i)``\  returns the \ ``i``\ th row of \ ``m``\  error check to determine if index is in proper ranges
+  \ :code:`row(m, i)`\  returns the \ :code:`i`\ th row of \ :code:`m`\  error check to determine if index is in proper ranges
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77536c696365:
 
@@ -459,7 +459,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; rowSlice
 
 :spadfun:`rowSlice`\: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``rowSlice(m)``\  returns a segment \ ``s``\  such that for \ ``m``\  the access \ ``m``\ (\ ``s``\ , \ ``j``\ ) gives the \ ``j``\ -th column.
+  \ :code:`rowSlice(m)`\  returns a segment \ :code:`s`\  such that for \ :code:`m`\  the access \ :code:`m`\ (\ :code:`s`\ , \ :code:`j`\ ) gives the \ :code:`j`\ -th column.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-73616d706c65:
 
@@ -472,7 +472,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setColumn!
 
 :spadfun:`setColumn!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , Col) -> % 
-  \ ``setColumn!(m, j, v)``\  sets to \ ``j``\ th column of \ ``m``\  to \ ``v``\ 
+  \ :code:`setColumn!(m, j, v)`\  sets to \ :code:`j`\ th column of \ :code:`m`\  to \ :code:`v`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-736574656c7421:
 
@@ -480,84 +480,84 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , R) -> R 
-  \ ``setelt!(m, i, j, r)``\  sets the element in the \ ``i``\ th row and \ ``j``\ th column of \ ``m``\  to \ ``r``\  error check to determine if indices are in proper ranges
+  \ :code:`setelt!(m, i, j, r)`\  sets the element in the \ :code:`i`\ th row and \ :code:`j`\ th column of \ :code:`m`\  to \ :code:`r`\  error check to determine if indices are in proper ranges
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, row, colList)``\  assigns to an 1-by-\ ``n``\  selection of the array, where \ ``n = \# colList``\ .
+  \ :code:`setelt!(x, row, colList)`\  assigns to an 1-by-\ :code:`n`\  selection of the array, where \ :code:`n = \# colList`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, row, ls2)``\  is equivalent to \ ``setelt!(x, row, l2)``\  where \ ``l2``\  is obtained by appending expansions of elements of \ ``ls2``\ , but should be more convenient and more efficient.
+  \ :code:`setelt!(x, row, ls2)`\  is equivalent to \ :code:`setelt!(x, row, l2)`\  where \ :code:`l2`\  is obtained by appending expansions of elements of \ :code:`ls2`\ , but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, rowList, col)``\  assigns to an \ ``m``\ -by-1 selection of the array, where \ ``m = \# rowList``\ .
+  \ :code:`setelt!(x, rowList, col)`\  assigns to an \ :code:`m`\ -by-1 selection of the array, where \ :code:`m = \# rowList`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, rowList, colList, y)``\  destructively alters the array \ ``x``\ . If \ ``y``\  is \ ``m``\ -by-\ ``n``\ , \ ``rowList = [i<1>, i<2>, ..., i<m>]``\  and \ ``colList = [j<1>, j<2>, ..., j<n>]``\ , then \ ``x(i<k>, j<l>)``\  is set to \ ``y(k, l)``\  for \ ``k = 1, ..., m``\  and \ ``l = 1, ..., n``\ .
+  \ :code:`setelt!(x, rowList, colList, y)`\  destructively alters the array \ :code:`x`\ . If \ :code:`y`\  is \ :code:`m`\ -by-\ :code:`n`\ , \ :code:`rowList = [i<1>, i<2>, ..., i<m>]`\  and \ :code:`colList = [j<1>, j<2>, ..., j<n>]`\ , then \ :code:`x(i<k>, j<l>)`\  is set to \ :code:`y(k, l)`\  for \ :code:`k = 1, ..., m`\  and \ :code:`l = 1, ..., n`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, l1, s2)``\  is equivalent to \ ``setelt!(x, l1, expand(s2))``\  but should be more convenient and more efficient.
+  \ :code:`setelt!(x, l1, s2)`\  is equivalent to \ :code:`setelt!(x, l1, expand(s2))`\  but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, ls1, col)``\  is equivalent to \ ``setelt!(x, l1, col)``\  where \ ``l1``\  is obtained by appending expansions of elements of \ ``ls1``\ , but should be more convenient and more efficient.
+  \ :code:`setelt!(x, ls1, col)`\  is equivalent to \ :code:`setelt!(x, l1, col)`\  where \ :code:`l1`\  is obtained by appending expansions of elements of \ :code:`ls1`\ , but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, ls1, ls1)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ :code:`setelt!(x, ls1, ls1)`\  is equivalent to \ :code:`setelt!(x, l1, l2)`\  where \ :code:`li`\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, ls1, s2)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ :code:`setelt!(x, ls1, s2)`\  is equivalent to \ :code:`setelt!(x, l1, l2)`\  where \ :code:`li`\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, s1, l2)``\  is equivalent to \ ``setelt!(x, expand(s1), l2)``\  but should be more convenient and more efficient.
+  \ :code:`setelt!(x, s1, l2)`\  is equivalent to \ :code:`setelt!(x, expand(s1), l2)`\  but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, s1, ls2)``\  is equivalent to \ ``setelt!(x, l1, l2)``\  where \ ``li``\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
+  \ :code:`setelt!(x, s1, ls2)`\  is equivalent to \ :code:`setelt!(x, l1, l2)`\  where \ :code:`li`\  is obtained by appending expansions of elements of lsi, but should be more convenient and more efficient.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setelt!(x, s1, s2)``\  is equivalent to \ ``setelt!(x, expand(s1), expand(s2))``\  but should be more convenient and more efficient.
+  \ :code:`setelt!(x, s1, s2)`\  is equivalent to \ :code:`setelt!(x, expand(s1), expand(s2))`\  but should be more convenient and more efficient.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-736574526f7721:
 
@@ -565,7 +565,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setRow!
 
 :spadfun:`setRow!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , Row) -> % 
-  \ ``setRow!(m, i, v)``\  sets to \ ``i``\ th row of \ ``m``\  to \ ``v``\ 
+  \ :code:`setRow!(m, i, v)`\  sets to \ :code:`i`\ th row of \ :code:`m`\  to \ :code:`v`\ 
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-7365747375624d617472697821:
 
@@ -573,7 +573,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; setsubMatrix!
 
 :spadfun:`setsubMatrix!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setsubMatrix(x, i1, j1, y)``\  destructively alters the array \ ``x``\ . Here \ ``x(i, j)``\  is set to \ ``y(i-i1+1, j-j1+1)``\  for \ ``i = i1, ..., i1-1+nrows y``\  and \ ``j = j1, ..., j1-1+ncols y``\ .
+  \ :code:`setsubMatrix(x, i1, j1, y)`\  destructively alters the array \ :code:`x`\ . Here \ :code:`x(i, j)`\  is set to \ :code:`y(i-i1+1, j-j1+1)`\  for \ :code:`i = i1, ..., i1-1+nrows y`\  and \ :code:`j = j1, ..., j1-1+ncols y`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-73697a653f:
 
@@ -591,7 +591,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; squareTop
 
 :spadfun:`squareTop`\: % -> % 
-  \ ``squareTop(m)``\  returns an \ ``n``\ -by-\ ``n``\  array consisting of the first \ ``n``\  rows of the \ ``m``\ -by-\ ``n``\  array \ ``m``\ . Error: if \ ``m < n``\ .
+  \ :code:`squareTop(m)`\  returns an \ :code:`n`\ -by-\ :code:`n`\  array consisting of the first \ :code:`n`\  rows of the \ :code:`m`\ -by-\ :code:`n`\  array \ :code:`m`\ . Error: if \ :code:`m < n`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-7375624d6174726978:
 
@@ -599,7 +599,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; subMatrix
 
 :spadfun:`subMatrix`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``subMatrix(x, i1, i2, j1, j2)``\  extracts the submatrix \ ``[x(i, j)]``\  where the index \ ``i``\  ranges from \ ``i1``\  to \ ``i2``\  and the index \ ``j``\  ranges from \ ``j1``\  to \ ``j2``\ .
+  \ :code:`subMatrix(x, i1, i2, j1, j2)`\  extracts the submatrix \ :code:`[x(i, j)]`\  where the index \ :code:`i`\  ranges from \ :code:`i1`\  to \ :code:`i2`\  and the index \ :code:`j`\  ranges from \ :code:`j1`\  to \ :code:`j2`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-73776170436f6c756d6e7321:
 
@@ -607,7 +607,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; swapColumns!
 
 :spadfun:`swapColumns!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``swapColumns!(m, i, j)``\  interchanges the \ ``i``\ th and \ ``j``\ th columns of \ ``m``\ . This destructively alters the array.
+  \ :code:`swapColumns!(m, i, j)`\  interchanges the \ :code:`i`\ th and \ :code:`j`\ th columns of \ :code:`m`\ . This destructively alters the array.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-73776170526f777321:
 
@@ -615,7 +615,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; swapRows!
 
 :spadfun:`swapRows!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``swapRows!(m, i, j)``\  interchanges the \ ``i``\ th and \ ``j``\ th rows of \ ``m``\ . This destructively alters the array.
+  \ :code:`swapRows!(m, i, j)`\  interchanges the \ :code:`i`\ th and \ :code:`j`\ th rows of \ :code:`m`\ . This destructively alters the array.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-7472616e73706f7365:
 
@@ -623,7 +623,7 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; transpose
 
 :spadfun:`transpose`\: % -> % 
-  \ ``transpose(m)``\  returns the transpose of the array \ ``m``\ .
+  \ :code:`transpose(m)`\  returns the transpose of the array \ :code:`m`\ .
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-76657274436f6e636174:
 
@@ -631,14 +631,14 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; vertConcat
 
 :spadfun:`vertConcat`\: (%, %) -> % 
-  \ ``vertConcat(x, y)``\  vertically concatenates two arrays with an equal number of columns. The entries of \ ``y``\  appear below of the entries of \ ``x``\ . Error: if the arrays do not have the same number of columns.
+  \ :code:`vertConcat(x, y)`\  vertically concatenates two arrays with an equal number of columns. The entries of \ :code:`y`\  appear below of the entries of \ :code:`x`\ . Error: if the arrays do not have the same number of columns.
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; vertConcat
 
 :spadfun:`vertConcat`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``vertConcat(l)``\  vertically concatenates all members of \ ``l``\  Error: if the arrays do not have the same number of columns.
+  \ :code:`vertConcat(l)`\  vertically concatenates all members of \ :code:`l`\  Error: if the arrays do not have the same number of columns.
 
 .. _l54776f44696d656e73696f6e616c417272617943617465676f7279-7665727453706c6974:
 
@@ -646,14 +646,14 @@ TwoDimensionalArrayCategory is a general array category which allows different r
    pair: TwoDimensionalArrayCategory; vertSplit
 
 :spadfun:`vertSplit`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``vertSplit(a, [n1, ..., ni])``\  splits a into arrays having \ ``n1``\ , ..., \ ``ni``\  rows. Error: if number of rows of a is different than \ ``n1+``\  ... + \ ``ni``\ .
+  \ :code:`vertSplit(a, [n1, ..., ni])`\  splits a into arrays having \ :code:`n1`\ , ..., \ :code:`ni`\  rows. Error: if number of rows of a is different than \ :code:`n1+`\  ... + \ :code:`ni`\ .
 
 
 .. index::
    pair: TwoDimensionalArrayCategory; vertSplit
 
 :spadfun:`vertSplit`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``vertSplit(a, n)``\  splits a into \ ``n``\  arrays of equal size row wise. Error: if number of rows of a is not divisible by \ ``n``\ .
+  \ :code:`vertSplit(a, n)`\  splits a into \ :code:`n`\  arrays of equal size row wise. Error: if number of rows of a is not divisible by \ :code:`n`\ .
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

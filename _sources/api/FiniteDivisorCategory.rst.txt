@@ -16,7 +16,7 @@ FiniteDivisorCategory(F, UP, UPUP, R)
 * R: \ :ref:`FunctionFieldCategory <l46756e6374696f6e4669656c6443617465676f7279>`\ (F, UP, UPUP)
 
 
-This category describes finite rational divisors on a curve, that is finite formal sums SUM(\ ``n``\  * \ ``P``\ ) where the \ ``n``\ \ ``'s``\  are integers and the \ ``P``\ \ ``'s``\  are finite rational points on the curve.
+This category describes finite rational divisors on a curve, that is finite formal sums SUM(\ :code:`n`\  * \ :code:`P`\ ) where the \ :code:`n`\ \ :code:`'s`\  are integers and the \ :code:`P`\ \ :code:`'s`\  are finite rational points on the curve.
 
 
 .. _l46696e69746544697669736f7243617465676f7279-30:
@@ -72,7 +72,7 @@ This category describes finite rational divisors on a curve, that is finite form
    pair: FiniteDivisorCategory; decompose
 
 :spadfun:`decompose`\: % -> Record(id: \ :ref:`FractionalIdeal <l4672616374696f6e616c496465616c>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP, UPUP, R), principalPart: R) 
-  \ ``decompose(d)``\  returns \ ``[id, f]``\  where \ ``d = (id) + div(f)``\ .
+  \ :code:`decompose(d)`\  returns \ :code:`[id, f]`\  where \ :code:`d = (id) + div(f)`\ .
 
 .. _l46696e69746544697669736f7243617465676f7279-64697669736f72:
 
@@ -80,42 +80,42 @@ This category describes finite rational divisors on a curve, that is finite form
    pair: FiniteDivisorCategory; divisor
 
 :spadfun:`divisor`\: (F, F) -> % 
-  \ ``divisor(a, b)``\  makes the divisor \ ``P:``\  \ ``(x = a, y = b)``\ . Error: if \ ``P``\  is singular.
+  \ :code:`divisor(a, b)`\  makes the divisor \ :code:`P:`\  \ :code:`(x = a, y = b)`\ . Error: if \ :code:`P`\  is singular.
 
 
 .. index::
    pair: FiniteDivisorCategory; divisor
 
 :spadfun:`divisor`\: (F, F, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``divisor(a, b, n)``\  makes the divisor \ ``nP``\  where \ ``P:``\  \ ``(x = a, y = b)``\ . \ ``P``\  is allowed to be singular if \ ``n``\  is a multiple of the rank.
+  \ :code:`divisor(a, b, n)`\  makes the divisor \ :code:`nP`\  where \ :code:`P:`\  \ :code:`(x = a, y = b)`\ . \ :code:`P`\  is allowed to be singular if \ :code:`n`\  is a multiple of the rank.
 
 
 .. index::
    pair: FiniteDivisorCategory; divisor
 
 :spadfun:`divisor`\: (R, UP, UP) -> % 
-  \ ``divisor(h, d, g)``\  returns \ ``gcd``\  of divisor of zeros of \ ``h``\  and divisor of zeros of \ ``d``\ . \ ``d``\  must be squarefree. All ramified zeros of \ ``d``\  must be contained in zeros of \ ``g``\ .
+  \ :code:`divisor(h, d, g)`\  returns \ :code:`gcd`\  of divisor of zeros of \ :code:`h`\  and divisor of zeros of \ :code:`d`\ . \ :code:`d`\  must be squarefree. All ramified zeros of \ :code:`d`\  must be contained in zeros of \ :code:`g`\ .
 
 
 .. index::
    pair: FiniteDivisorCategory; divisor
 
 :spadfun:`divisor`\: (R, UP, UP, UP, F) -> % 
-  \ ``divisor(h, d, d', g, r)``\  returns the sum of all the finite points where \ ``h/d``\  has residue \ ``r``\ . \ ``h``\  must be integral. \ ``d``\  must be squarefree. \ ``d'``\  is some derivative of \ ``d``\  (not necessarily dd/dx). \ ``g = gcd(d, discriminant)``\  contains the ramified zeros of \ ``d``\ 
+  \ :code:`divisor(h, d, d', g, r)`\  returns the sum of all the finite points where \ :code:`h/d`\  has residue \ :code:`r`\ . \ :code:`h`\  must be integral. \ :code:`d`\  must be squarefree. \ :code:`d'`\  is some derivative of \ :code:`d`\  (not necessarily dd/dx). \ :code:`g = gcd(d, discriminant)`\  contains the ramified zeros of \ :code:`d`\ 
 
 
 .. index::
    pair: FiniteDivisorCategory; divisor
 
 :spadfun:`divisor`\: \ :ref:`FractionalIdeal <l4672616374696f6e616c496465616c>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP, UPUP, R) -> % 
-  \ ``divisor(I)``\  makes a divisor \ ``D``\  from an ideal \ ``I``\ .
+  \ :code:`divisor(I)`\  makes a divisor \ :code:`D`\  from an ideal \ :code:`I`\ .
 
 
 .. index::
    pair: FiniteDivisorCategory; divisor
 
 :spadfun:`divisor`\: R -> % 
-  \ ``divisor(g)``\  returns the divisor of the function \ ``g``\ .
+  \ :code:`divisor(g)`\  returns the divisor of the function \ :code:`g`\ .
 
 .. _l46696e69746544697669736f7243617465676f7279-67656e657261746f72:
 
@@ -123,14 +123,14 @@ This category describes finite rational divisors on a curve, that is finite form
    pair: FiniteDivisorCategory; generator
 
 :spadfun:`generator`\: % -> Union(R, failed) 
-  \ ``generator(d)``\  returns \ ``f``\  if \ ``(f) = d``\ , "failed" if \ ``d``\  is not principal. \ ``d``\  is assumed to be of degree 0.
+  \ :code:`generator(d)`\  returns \ :code:`f`\  if \ :code:`(f) = d`\ , "failed" if \ :code:`d`\  is not principal. \ :code:`d`\  is assumed to be of degree 0.
 
 
 .. index::
    pair: FiniteDivisorCategory; generator
 
 :spadfun:`generator`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  UP) -> Union(R, failed) 
-  \ ``generator(d, k, lp)``\  returns \ ``f``\  if \ ``(f) = d``\ , "failed" if \ ``d``\  is not principal. \ ``k``\  is sum of orders of \ ``d``\  at special places. Special places are places over infinity and over zeros of polynomials in \ ``lp``\ . Elements of \ ``lp``\  are assumed to be relatively prime.
+  \ :code:`generator(d, k, lp)`\  returns \ :code:`f`\  if \ :code:`(f) = d`\ , "failed" if \ :code:`d`\  is not principal. \ :code:`k`\  is sum of orders of \ :code:`d`\  at special places. Special places are places over infinity and over zeros of polynomials in \ :code:`lp`\ . Elements of \ :code:`lp`\  are assumed to be relatively prime.
 
 .. _l46696e69746544697669736f7243617465676f7279-696465616c:
 
@@ -138,7 +138,7 @@ This category describes finite rational divisors on a curve, that is finite form
    pair: FiniteDivisorCategory; ideal
 
 :spadfun:`ideal`\: % -> \ :ref:`FractionalIdeal <l4672616374696f6e616c496465616c>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP, UPUP, R) 
-  \ ``ideal(D)``\  returns the ideal corresponding to a divisor \ ``D``\ .
+  \ :code:`ideal(D)`\  returns the ideal corresponding to a divisor \ :code:`D`\ .
 
 .. _l46696e69746544697669736f7243617465676f7279-6c61746578:
 
@@ -156,7 +156,7 @@ This category describes finite rational divisors on a curve, that is finite form
    pair: FiniteDivisorCategory; principal?
 
 :spadfun:`principal?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``principal?(D)``\  tests if the argument is the divisor of a function.
+  \ :code:`principal?(D)`\  tests if the argument is the divisor of a function.
 
 .. _l46696e69746544697669736f7243617465676f7279-726564756365:
 
@@ -164,7 +164,7 @@ This category describes finite rational divisors on a curve, that is finite form
    pair: FiniteDivisorCategory; reduce
 
 :spadfun:`reduce`\: % -> % 
-  \ ``reduce(D)``\  converts \ ``D``\  to some reduced form (the reduced forms can be different in different implementations).
+  \ :code:`reduce(D)`\  converts \ :code:`D`\  to some reduced form (the reduced forms can be different in different implementations).
 
 .. _l46696e69746544697669736f7243617465676f7279-73616d706c65:
 

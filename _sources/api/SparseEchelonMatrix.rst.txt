@@ -12,7 +12,7 @@ SparseEchelonMatrix(C, D)
 * D: \ :ref:`Ring <l52696e67>`\ 
 
 
-\ ``SparseEchelonMatrix(C, D)``\  implements sparse matrices whose columns are enumerated by the \ :ref:`OrderedSet <l4f726465726564536574>`\  \ ``C``\  and whose entries belong to the \ :ref:`GcdDomain <l476364446f6d61696e>`\  \ ``D``\ . The basic operation of this domain is the computation of an row echelon form. The algorithm used tries to maintain the sparsity and is especially adapted to matrices which are already close to a row echelon form.
+\ :code:`SparseEchelonMatrix(C, D)`\  implements sparse matrices whose columns are enumerated by the \ :ref:`OrderedSet <l4f726465726564536574>`\  \ :code:`C`\  and whose entries belong to the \ :ref:`GcdDomain <l476364446f6d61696e>`\  \ :code:`D`\ . The basic operation of this domain is the computation of an row echelon form. The algorithm used tries to maintain the sparsity and is especially adapted to matrices which are already close to a row echelon form.
 
 
 .. _l537061727365456368656c6f6e4d6174726978-2a:
@@ -21,14 +21,14 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; *
 
 :spadfun:`\*`\: (\ :ref:`Matrix <l4d6174726978>`\  D, %) -> % 
-  \ ``L*A``\  implements left multiplication with a usual matrix.
+  \ :code:`L*A`\  implements left multiplication with a usual matrix.
 
 
 .. index::
    pair: SparseEchelonMatrix; *
 
 :spadfun:`\*`\: (\ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  D, %) -> % if D has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``L*A``\  implements left multiplication with a usual matrix over the quotient field of \ ``D``\ .
+  \ :code:`L*A`\  implements left multiplication with a usual matrix over the quotient field of \ :code:`D`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-616c6c496e6469636573:
 
@@ -36,7 +36,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; allIndices
 
 :spadfun:`allIndices`\: % -> \ :ref:`List <l4c697374>`\  C 
-  \ ``allIndices(A)``\  returns all indices used for enumerating the columns of the matrix \ ``A``\ .
+  \ :code:`allIndices(A)`\  returns all indices used for enumerating the columns of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-617070656e64526f7721:
 
@@ -44,7 +44,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; appendRow!
 
 :spadfun:`appendRow!`\: (%, Record(Indices: \ :ref:`List <l4c697374>`\  C, Entries: \ :ref:`List <l4c697374>`\  D)) -> \ :ref:`Void <l566f6964>`\  
-  \ ``appendRow!(A, r)``\  appends the row \ ``r``\  at the end of the matrix \ ``A``\ .
+  \ :code:`appendRow!(A, r)`\  appends the row \ :code:`r`\  at the end of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-636f65726365:
 
@@ -52,7 +52,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`Matrix <l4d6174726978>`\  D 
-  \ ``coerce(A)``\  yields the matrix \ ``A``\  in the usual matrix type.
+  \ :code:`coerce(A)`\  yields the matrix \ :code:`A`\  in the usual matrix type.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -64,7 +64,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; consRow!
 
 :spadfun:`consRow!`\: (%, Record(Indices: \ :ref:`List <l4c697374>`\  C, Entries: \ :ref:`List <l4c697374>`\  D)) -> \ :ref:`Void <l566f6964>`\  
-  \ ``consRow!(A, r)``\  inserts the row \ ``r``\  at the top of the matrix \ ``A``\ .
+  \ :code:`consRow!(A, r)`\  inserts the row \ :code:`r`\  at the top of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-636f7079:
 
@@ -72,7 +72,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; copy
 
 :spadfun:`copy`\: % -> % 
-  \ ``copy(A)``\  returns a copy of the matrix \ ``A``\ .
+  \ :code:`copy(A)`\  returns a copy of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-64656c657465526f7721:
 
@@ -80,7 +80,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; deleteRow!
 
 :spadfun:`deleteRow!`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``deleteRow(A, i)``\  deletes the \ ``i``\ \ ``-``\ th row of the matrix \ ``A``\ .
+  \ :code:`deleteRow(A, i)`\  deletes the \ :code:`i`\ \ :code:`-`\ th row of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-656c696d5a65726f436f6c7321:
 
@@ -88,7 +88,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; elimZeroCols!
 
 :spadfun:`elimZeroCols!`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``elimZeroCols!(A)``\  removes columns which contain only zeros. This affects basically only the value of \ ``allIndices(A)``\ .
+  \ :code:`elimZeroCols!(A)`\  removes columns which contain only zeros. This affects basically only the value of \ :code:`allIndices(A)`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-656c74:
 
@@ -96,7 +96,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , C) -> D 
-  \ ``elt(A, i, c)``\  returns the entry of the matrix \ ``A``\  in row \ ``i``\  and in the column with index \ ``c``\ .
+  \ :code:`elt(A, i, c)`\  returns the entry of the matrix \ :code:`A`\  in row \ :code:`i`\  and in the column with index \ :code:`c`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-65787472616374:
 
@@ -104,7 +104,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; extract
 
 :spadfun:`extract`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``extract(A, i1, i2)``\  extracts the rows \ ``i1``\  to \ ``i2``\  and returns them as a new matrix.
+  \ :code:`extract(A, i1, i2)`\  extracts the rows \ :code:`i1`\  to \ :code:`i2`\  and returns them as a new matrix.
 
 .. _l537061727365456368656c6f6e4d6174726978-686f72697a4a6f696e:
 
@@ -112,7 +112,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; horizJoin
 
 :spadfun:`horizJoin`\: (%, %) -> % 
-  \ ``horizJoin(A, B)``\  horizontally concats the matrices \ ``A``\  and \ ``B``\ . It is assumed that all indices of \ ``B``\  are smaller than those of \ ``A``\ .
+  \ :code:`horizJoin(A, B)`\  horizontally concats the matrices \ :code:`A`\  and \ :code:`B`\ . It is assumed that all indices of \ :code:`B`\  are smaller than those of \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-686f72697a53706c6974:
 
@@ -120,7 +120,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; horizSplit
 
 :spadfun:`horizSplit`\: (%, C) -> Record(Left: %, Right: %) 
-  \ ``horizSplit(A, c)``\  splits the matrix \ ``A``\  into two at the column given by \ ``c``\ . The first column of the right matrix is enumerated by the first index less or equal to \ ``c``\ .
+  \ :code:`horizSplit(A, c)`\  splits the matrix \ :code:`A`\  into two at the column given by \ :code:`c`\ . The first column of the right matrix is enumerated by the first index less or equal to \ :code:`c`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-6a6f696e:
 
@@ -128,7 +128,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; join
 
 :spadfun:`join`\: (%, %) -> % 
-  \ ``join(A, B)``\  vertically concats the matrices \ ``A``\  and \ ``B``\ .
+  \ :code:`join(A, B)`\  vertically concats the matrices \ :code:`A`\  and \ :code:`B`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-6e636f6c73:
 
@@ -136,7 +136,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; ncols
 
 :spadfun:`ncols`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``ncols(A)``\  returns the number of columns of the matrix \ ``A``\ .
+  \ :code:`ncols(A)`\  returns the number of columns of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-6e6577:
 
@@ -144,7 +144,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; new
 
 :spadfun:`new`\: (\ :ref:`List <l4c697374>`\  C, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``new(inds, nrows)``\  generates a new matrix with \ ``nrows``\  rows and columns enumerated by the indices \ ``inds``\ . The matrix is empty, i.e. the zero matrix.
+  \ :code:`new(inds, nrows)`\  generates a new matrix with \ :code:`nrows`\  rows and columns enumerated by the indices \ :code:`inds`\ . The matrix is empty, i.e. the zero matrix.
 
 .. _l537061727365456368656c6f6e4d6174726978-6e726f7773:
 
@@ -152,7 +152,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; nrows
 
 :spadfun:`nrows`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``nrows(A)``\  returns the number of rows of the matrix \ ``A``\ .
+  \ :code:`nrows(A)`\  returns the number of rows of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-7069766f74:
 
@@ -160,7 +160,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; pivot
 
 :spadfun:`pivot`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Record(Index: C, Entry: D) 
-  \ ``pivot(A, i)``\  returns the leading entry of the \ ``i``\ \ ``-``\ th row of the matrix \ ``A``\  together with its index.
+  \ :code:`pivot(A, i)`\  returns the leading entry of the \ :code:`i`\ \ :code:`-`\ th row of the matrix \ :code:`A`\  together with its index.
 
 .. _l537061727365456368656c6f6e4d6174726978-7069766f7473:
 
@@ -168,7 +168,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; pivots
 
 :spadfun:`pivots`\: % -> Record(Indices: \ :ref:`List <l4c697374>`\  C, Entries: \ :ref:`List <l4c697374>`\  D) 
-  \ ``pivots(A)``\  returns all leading entries of the matrix \ ``A``\  together with their indices.
+  \ :code:`pivots(A)`\  returns all leading entries of the matrix \ :code:`A`\  together with their indices.
 
 .. _l537061727365456368656c6f6e4d6174726978-7072696d6974697665526f77456368656c6f6e:
 
@@ -176,7 +176,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; primitiveRowEchelon
 
 :spadfun:`primitiveRowEchelon`\: % -> Record(Ech: %, Lt: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  D, Pivots: \ :ref:`List <l4c697374>`\  D, Rank: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) if D has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``primitiveRowEchelon(A)``\  computes a row echelon form for the matrix \ ``A``\ . The algorithm used is fraction-free elimination. Every row is made primitive by division by the \ ``gcd``\ . The algorithm is especially adapted to matrices already close to row echelon form. The transformation matrix, the used pivots and the rank of the matrix are also returned.
+  \ :code:`primitiveRowEchelon(A)`\  computes a row echelon form for the matrix \ :code:`A`\ . The algorithm used is fraction-free elimination. Every row is made primitive by division by the \ :code:`gcd`\ . The algorithm is especially adapted to matrices already close to row echelon form. The transformation matrix, the used pivots and the rank of the matrix are also returned.
 
 .. _l537061727365456368656c6f6e4d6174726978-707572676521:
 
@@ -184,7 +184,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; purge!
 
 :spadfun:`purge!`\: (%, C -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``purge!(A, crit)``\  eliminates all columns belonging to an index \ ``c``\  such that \ ``crit(c)``\  yields \ ``true``\ .
+  \ :code:`purge!(A, crit)`\  eliminates all columns belonging to an index \ :code:`c`\  such that \ :code:`crit(c)`\  yields \ :code:`true`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-726f77:
 
@@ -192,7 +192,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; row
 
 :spadfun:`row`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Record(Indices: \ :ref:`List <l4c697374>`\  C, Entries: \ :ref:`List <l4c697374>`\  D) 
-  \ ``row(A, i)``\  returns the \ ``i``\ \ ``-``\ th row of the matrix \ ``A``\ .
+  \ :code:`row(A, i)`\  returns the \ :code:`i`\ \ :code:`-`\ th row of the matrix \ :code:`A`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-726f77456368656c6f6e:
 
@@ -200,7 +200,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; rowEchelon
 
 :spadfun:`rowEchelon`\: % -> Record(Ech: %, Lt: \ :ref:`Matrix <l4d6174726978>`\  D, Pivots: \ :ref:`List <l4c697374>`\  D, Rank: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``primitiveRowEchelon(A)``\  computes a row echelon form for the matrix \ ``A``\ . The algorithm used is fraction-free elimination. It is especially adapted to matrices already close to row echelon form. The transformation matrix, the used pivots and the rank of the matrix are also returned.
+  \ :code:`primitiveRowEchelon(A)`\  computes a row echelon form for the matrix \ :code:`A`\ . The algorithm used is fraction-free elimination. It is especially adapted to matrices already close to row echelon form. The transformation matrix, the used pivots and the rank of the matrix are also returned.
 
 .. _l537061727365456368656c6f6e4d6174726978-736574656c7421:
 
@@ -208,7 +208,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , C, D) -> \ :ref:`Void <l566f6964>`\  
-  \ ``setelt!(A, i, c, d)``\  sets the entry of the matrix \ ``A``\  in row \ ``i``\  and in the column with index \ ``c``\  to the value \ ``d``\ .
+  \ :code:`setelt!(A, i, c, d)`\  sets the entry of the matrix \ :code:`A`\  in row \ :code:`i`\  and in the column with index \ :code:`c`\  to the value \ :code:`d`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-7365744763644d6f6465:
 
@@ -216,7 +216,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; setGcdMode
 
 :spadfun:`setGcdMode`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  if D has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``setGcdMode(s)``\  sets a new value for the flag deciding on the method used to compute gcd`s for lists. Possible values for \ ``s``\  are \ ``iterated``\  and \ ``random``\ .
+  \ :code:`setGcdMode(s)`\  sets a new value for the flag deciding on the method used to compute gcd`s for lists. Possible values for \ :code:`s`\  are \ :code:`iterated`\  and \ :code:`random`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-736574526f7721:
 
@@ -224,14 +224,14 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; setRow!
 
 :spadfun:`setRow!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  C, \ :ref:`List <l4c697374>`\  D) -> \ :ref:`Void <l566f6964>`\  
-  \ ``setRow!(A, i, ind, ent)``\  sets the \ ``i``\ \ ``-``\ th row of the matrix \ ``A``\ . Its indices are \ ``ind``\ ; the entries \ ``ent``\ .
+  \ :code:`setRow!(A, i, ind, ent)`\  sets the \ :code:`i`\ \ :code:`-`\ th row of the matrix \ :code:`A`\ . Its indices are \ :code:`ind`\ ; the entries \ :code:`ent`\ .
 
 
 .. index::
    pair: SparseEchelonMatrix; setRow!
 
 :spadfun:`setRow!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , Record(Indices: \ :ref:`List <l4c697374>`\  C, Entries: \ :ref:`List <l4c697374>`\  D)) -> \ :ref:`Void <l566f6964>`\  
-  \ ``setRow!(A, i, ind, ent)``\  sets the \ ``i``\ \ ``-``\ th row of the matrix \ ``A``\  to the value \ ``r``\ .
+  \ :code:`setRow!(A, i, ind, ent)`\  sets the \ :code:`i`\ \ :code:`-`\ th row of the matrix \ :code:`A`\  to the value \ :code:`r`\ .
 
 .. _l537061727365456368656c6f6e4d6174726978-736f72746564507572676521:
 
@@ -239,7 +239,7 @@ SparseEchelonMatrix(C, D)
    pair: SparseEchelonMatrix; sortedPurge!
 
 :spadfun:`sortedPurge!`\: (%, C -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``sortedPurge!(A, crit)``\  is like \ ``purge``\ , however, with the additional assumption that \ ``crit``\  respects the ordering of the indices.
+  \ :code:`sortedPurge!(A, crit)`\  is like \ :code:`purge`\ , however, with the additional assumption that \ :code:`crit`\  respects the ordering of the indices.
 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

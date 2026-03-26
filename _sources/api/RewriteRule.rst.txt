@@ -46,7 +46,7 @@ Rules for the pattern matcher.
    pair: RewriteRule; elt
 
 :spadfun:`elt`\: (%, F, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> F 
-  \ ``elt(r, f, n)``\  or \ ``r``\ (\ ``f``\ , \ ``n``\ ) applies the rule \ ``r``\  to \ ``f``\  at most \ ``n``\  times.
+  \ :code:`elt(r, f, n)`\  or \ :code:`r`\ (\ :code:`f`\ , \ :code:`n`\ ) applies the rule \ :code:`r`\  to \ :code:`f`\  at most \ :code:`n`\  times.
 
 .. _l5265777269746552756c65-6c61746578:
 
@@ -59,7 +59,7 @@ Rules for the pattern matcher.
    pair: RewriteRule; lhs
 
 :spadfun:`lhs`\: % -> F 
-  \ ``lhs(r)``\  returns the left hand side of the rule \ ``r``\ .
+  \ :code:`lhs(r)`\  returns the left hand side of the rule \ :code:`r`\ .
 
 .. _l5265777269746552756c65-7061747465726e:
 
@@ -67,7 +67,7 @@ Rules for the pattern matcher.
    pair: RewriteRule; pattern
 
 :spadfun:`pattern`\: % -> \ :ref:`Pattern <l5061747465726e>`\  Base 
-  \ ``pattern(r)``\  returns the pattern corresponding to the left hand side of the rule \ ``r``\ .
+  \ :code:`pattern(r)`\  returns the pattern corresponding to the left hand side of the rule \ :code:`r`\ .
 
 .. _l5265777269746552756c65-71756f7465644f70657261746f7273:
 
@@ -75,7 +75,7 @@ Rules for the pattern matcher.
    pair: RewriteRule; quotedOperators
 
 :spadfun:`quotedOperators`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``quotedOperators(r)``\  returns the list of operators on the right hand side of \ ``r``\  that are considered quoted, that is they are not evaluated during any rewrite, but just applied formally to their arguments.
+  \ :code:`quotedOperators(r)`\  returns the list of operators on the right hand side of \ :code:`r`\  that are considered quoted, that is they are not evaluated during any rewrite, but just applied formally to their arguments.
 
 .. _l5265777269746552756c65-72657472616374:
 
@@ -93,7 +93,7 @@ Rules for the pattern matcher.
    pair: RewriteRule; rhs
 
 :spadfun:`rhs`\: % -> F 
-  \ ``rhs(r)``\  returns the right hand side of the rule \ ``r``\ .
+  \ :code:`rhs(r)`\  returns the right hand side of the rule \ :code:`r`\ .
 
 .. _l5265777269746552756c65-72756c65:
 
@@ -101,14 +101,14 @@ Rules for the pattern matcher.
    pair: RewriteRule; rule
 
 :spadfun:`rule`\: (F, F) -> % 
-  \ ``rule(f, g)``\  creates the rewrite rule: \ ``f == eval(g, g is f)``\ , with left-hand side \ ``f``\  and right-hand side \ ``g``\ .
+  \ :code:`rule(f, g)`\  creates the rewrite rule: \ :code:`f == eval(g, g is f)`\ , with left-hand side \ :code:`f`\  and right-hand side \ :code:`g`\ .
 
 
 .. index::
    pair: RewriteRule; rule
 
 :spadfun:`rule`\: (F, F, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``rule(f, g, [f1, ..., fn])``\  creates the rewrite rule \ ``f == eval(eval(g, g is f), [f1, ..., fn])``\ , that is a rule with left-hand side \ ``f``\  and right-hand side \ ``g``\ ; The symbols \ ``f1``\ , ..., \ ``fn``\  are the operators that are considered quoted, that is they are not evaluated during any rewrite, but just applied formally to their arguments.
+  \ :code:`rule(f, g, [f1, ..., fn])`\  creates the rewrite rule \ :code:`f == eval(eval(g, g is f), [f1, ..., fn])`\ , that is a rule with left-hand side \ :code:`f`\  and right-hand side \ :code:`g`\ ; The symbols \ :code:`f1`\ , ..., \ :code:`fn`\  are the operators that are considered quoted, that is they are not evaluated during any rewrite, but just applied formally to their arguments.
 
 .. _l5265777269746552756c65-7375636854686174:
 
@@ -116,7 +116,7 @@ Rules for the pattern matcher.
    pair: RewriteRule; suchThat
 
 :spadfun:`suchThat`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  F -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``suchThat(r, [a1, ..., an], f)``\  returns the rewrite rule \ ``r``\  with the predicate \ ``f(a1, ..., an)``\  attached to it.
+  \ :code:`suchThat(r, [a1, ..., an], f)`\  returns the rewrite rule \ :code:`r`\  with the predicate \ :code:`f(a1, ..., an)`\  attached to it.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

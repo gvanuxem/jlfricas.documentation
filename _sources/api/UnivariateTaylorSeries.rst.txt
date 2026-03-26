@@ -14,7 +14,7 @@ UnivariateTaylorSeries(Coef, var, cen)
 * cen: Coef
 
 
-Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\  is a domain representing Taylor series in one variable with coefficients in an arbitrary ring. The parameters of the type specify the coefficient ring, the power series variable, and the center of the power series expansion. For example, \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Integer, \ ``x``\ , 3) represents Taylor series in \ ``(x - 3)``\  with \ :ref:`Integer <l496e7465676572>`\  coefficients.
+Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\  is a domain representing Taylor series in one variable with coefficients in an arbitrary ring. The parameters of the type specify the coefficient ring, the power series variable, and the center of the power series expansion. For example, \ :ref:`UnivariateTaylorSeries <l556e69766172696174655461796c6f72536572696573>`\ (Integer, \ :code:`x`\ , 3) represents Taylor series in \ :code:`(x - 3)`\  with \ :ref:`Integer <l496e7465676572>`\  coefficients.
 
 
 .. _l556e69766172696174655461796c6f72536572696573-30:
@@ -241,14 +241,14 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; coerce
 
 :spadfun:`coerce`\: \ :ref:`UnivariatePolynomial <l556e6976617269617465506f6c796e6f6d69616c>`\ (var, Coef) -> % 
-  \ ``coerce(p)``\  converts a univariate polynomial \ ``p``\  in the variable \ ``var``\  to a univariate Taylor series in \ ``var``\ .
+  \ :code:`coerce(p)`\  converts a univariate polynomial \ :code:`p`\  in the variable \ :code:`var`\  to a univariate Taylor series in \ :code:`var`\ .
 
 
 .. index::
    pair: UnivariateTaylorSeries; coerce
 
 :spadfun:`coerce`\: \ :ref:`Variable <l5661726961626c65>`\  var -> % 
-  \ ``coerce(var)``\  converts the series variable \ ``var``\  into a Taylor series.
+  \ :code:`coerce(var)`\  converts the series variable \ :code:`var`\  into a Taylor series.
 
 .. _l556e69766172696174655461796c6f72536572696573-636f6d6d757461746f72:
 
@@ -360,7 +360,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; differentiate
 
 :spadfun:`differentiate`\: (%, \ :ref:`Variable <l5661726961626c65>`\  var) -> % 
-  \ ``differentiate(f(x), x)``\  computes the derivative of \ ``f(x)``\  with respect to \ ``x``\ .
+  \ :code:`differentiate(f(x), x)`\  computes the derivative of \ :code:`f(x)`\  with respect to \ :code:`x`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-656c74:
 
@@ -382,7 +382,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; evenlambert
 
 :spadfun:`evenlambert`\: % -> % 
-  \ ``evenlambert(f(x))``\  returns \ ``f(x^2) + f(x^4) + f(x^6) + ...``\ . \ ``f(x)``\  should have a zero constant coefficient. This function is used for computing infinite products. If \ ``f(x)``\  is a Taylor series with constant term 1, then \ ``product(n=1..infinity, f(x^(2*n))) = exp(evenlambert(log(f(x))))``\ .
+  \ :code:`evenlambert(f(x))`\  returns \ :code:`f(x^2) + f(x^4) + f(x^6) + ...`\ . \ :code:`f(x)`\  should have a zero constant coefficient. This function is used for computing infinite products. If \ :code:`f(x)`\  is a Taylor series with constant term 1, then \ :code:`product(n=1..infinity, f(x^(2*n))) = exp(evenlambert(log(f(x))))`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-657870:
 
@@ -405,7 +405,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; generalLambert
 
 :spadfun:`generalLambert`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``generalLambert(f(x), a, d)``\  returns \ ``f(x^a) + f(x^(a + d)) + f(x^(a + 2 d)) + ... . f(x) should have zero constant``\  coefficient and \ ``a``\  and \ ``d``\  should be positive.
+  \ :code:`generalLambert(f(x), a, d)`\  returns \ :code:`f(x^a) + f(x^(a + d)) + f(x^(a + 2 d)) + ... . f(x) should have zero constant`\  coefficient and \ :code:`a`\  and \ :code:`d`\  should be positive.
 
 .. _l556e69766172696174655461796c6f72536572696573-696e74656772617465:
 
@@ -421,7 +421,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; integrate
 
 :spadfun:`integrate`\: (%, \ :ref:`Variable <l5661726961626c65>`\  var) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(f(x), x)``\  returns an anti-derivative of the power series \ ``f(x)``\  with constant coefficient 0. We may integrate a series when we can divide coefficients by integers.
+  \ :code:`integrate(f(x), x)`\  returns an anti-derivative of the power series \ :code:`f(x)`\  with constant coefficient 0. We may integrate a series when we can divide coefficients by integers.
 
 .. _l556e69766172696174655461796c6f72536572696573-696e766d756c746973656374:
 
@@ -429,7 +429,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; invmultisect
 
 :spadfun:`invmultisect`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``invmultisect(a, b, f(x))``\  substitutes \ ``x^((a+b)*n)``\  for \ ``x^n``\  and multiplies by \ ``x^b``\ .
+  \ :code:`invmultisect(a, b, f(x))`\  substitutes \ :code:`x^((a+b)*n)`\  for \ :code:`x^n`\  and multiplies by \ :code:`x^b`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-6c616772616e6765:
 
@@ -437,7 +437,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; lagrange
 
 :spadfun:`lagrange`\: % -> % 
-  \ ``lagrange(g(x))``\  produces the Taylor series for \ ``f(x)``\  where \ ``f(x)``\  is implicitly defined as \ ``f(x) = x*g(f(x))``\ .
+  \ :code:`lagrange(g(x))`\  produces the Taylor series for \ :code:`f(x)`\  where \ :code:`f(x)`\  is implicitly defined as \ :code:`f(x) = x*g(f(x))`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-6c616d62657274:
 
@@ -445,7 +445,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; lambert
 
 :spadfun:`lambert`\: % -> % 
-  \ ``lambert(f(x))``\  returns \ ``f(x) + f(x^2) + f(x^3) + ...``\ . \ ``f(x)``\  should have zero constant coefficient. This function is used for computing infinite products. If \ ``f(x)``\  is a Taylor series with constant term 1, then \ ``product(n = 1..infinity, f(x^n)) = exp(lambert(log(f(x))))``\ .
+  \ :code:`lambert(f(x))`\  returns \ :code:`f(x) + f(x^2) + f(x^3) + ...`\ . \ :code:`f(x)`\  should have zero constant coefficient. This function is used for computing infinite products. If \ :code:`f(x)`\  is a Taylor series with constant term 1, then \ :code:`product(n = 1..infinity, f(x^n)) = exp(lambert(log(f(x))))`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-6c61746578:
 
@@ -522,7 +522,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; multisect
 
 :spadfun:`multisect`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``multisect(a, b, f(x))``\  selects the coefficients of \ ``x^((a+b)*n+a)``\ , and changes this monomial to \ ``x^n``\ .
+  \ :code:`multisect(a, b, f(x))`\  selects the coefficients of \ :code:`x^((a+b)*n+a)`\ , and changes this monomial to \ :code:`x^n`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-6e7468526f6f74:
 
@@ -535,7 +535,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; oddlambert
 
 :spadfun:`oddlambert`\: % -> % 
-  \ ``oddlambert(f(x))``\  returns \ ``f(x) + f(x^3) + f(x^5) + ...``\ . \ ``f(x)``\  should have a zero constant coefficient. This function is used for computing infinite products. If \ ``f(x)``\  is a Taylor series with constant term 1, then \ ``product(n=1..infinity, f(x^(2*n-1)))=exp(oddlambert(log(f(x))))``\ .
+  \ :code:`oddlambert(f(x))`\  returns \ :code:`f(x) + f(x^3) + f(x^5) + ...`\ . \ :code:`f(x)`\  should have a zero constant coefficient. This function is used for computing infinite products. If \ :code:`f(x)`\  is a Taylor series with constant term 1, then \ :code:`product(n=1..infinity, f(x^(2*n-1)))=exp(oddlambert(log(f(x))))`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-6f6e653f:
 
@@ -601,7 +601,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; revert
 
 :spadfun:`revert`\: % -> % 
-  \ ``revert(f(x))``\  returns a Taylor series \ ``g(x)``\  such that \ ``f(g(x)) = g(f(x)) = x``\ . Series \ ``f(x)``\  should have constant coefficient 0 and invertible 1st order coefficient.
+  \ :code:`revert(f(x))`\  returns a Taylor series \ :code:`g(x)`\  such that \ :code:`f(g(x)) = g(f(x)) = x`\ . Series \ :code:`f(x)`\  should have constant coefficient 0 and invertible 1st order coefficient.
 
 .. _l556e69766172696174655461796c6f72536572696573-7269676874506f776572:
 
@@ -706,7 +706,7 @@ Dense Taylor series in one variable \ :ref:`UnivariateTaylorSeries <l556e6976617
    pair: UnivariateTaylorSeries; univariatePolynomial
 
 :spadfun:`univariatePolynomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`UnivariatePolynomial <l556e6976617269617465506f6c796e6f6d69616c>`\ (var, Coef) 
-  \ ``univariatePolynomial(f, k)``\  returns a univariate polynomial consisting of the sum of all terms of \ ``f``\  of degree \ ``<= k``\ .
+  \ :code:`univariatePolynomial(f, k)`\  returns a univariate polynomial consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`<= k`\ .
 
 .. _l556e69766172696174655461796c6f72536572696573-7661726961626c65:
 

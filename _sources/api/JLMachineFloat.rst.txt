@@ -147,7 +147,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; atan
 
 :spadfun:`atan`\: (%, %) -> % 
-  \ ``atan(x, y)``\  computes the inverse tangent of x/y.
+  \ :code:`atan(x, y)`\  computes the inverse tangent of x/y.
 
 .. _l4a4c4d616368696e65466c6f6174-62617365:
 
@@ -169,7 +169,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; catalan
 
 :spadfun:`catalan`\: () -> % 
-  \ ``catalan()``\  returns the Catalan\ ``'s``\  constant.
+  \ :code:`catalan()`\  returns the Catalan\ :code:`'s`\  constant.
 
 .. _l4a4c4d616368696e65466c6f6174-6365696c696e67:
 
@@ -250,7 +250,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; eulerGamma
 
 :spadfun:`eulerGamma`\: () -> % 
-  \ ``eulerGamma()``\  returns the Euler\ ``'s``\  constant gamma (\ ``γ``\ ).
+  \ :code:`eulerGamma()`\  returns the Euler\ :code:`'s`\  constant gamma (\ :code:`γ`\ ).
 
 .. _l4a4c4d616368696e65466c6f6174-657870:
 
@@ -258,7 +258,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; exp
 
 :spadfun:`exp`\: () -> % 
-  \ ``exp()``\  returns the \ ``JLFloat64``\  \ ``ℯ``\  (\%\ ``e``\  or exp(1)).
+  \ :code:`exp()`\  returns the \ :code:`JLFloat64`\  \ :code:`ℯ`\  (\%\ :code:`e`\  or exp(1)).
 
 .. _l4a4c4d616368696e65466c6f6174-6578706d31:
 
@@ -266,7 +266,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; expm1
 
 :spadfun:`expm1`\: % -> % 
-  \ ``expm1(x)``\  computes accurately e^x-1.
+  \ :code:`expm1(x)`\  computes accurately e^x-1.
 
 .. _l4a4c4d616368696e65466c6f6174-6578706f6e656e74:
 
@@ -279,7 +279,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; exprand
 
 :spadfun:`exprand`\: () -> % 
-  \ ``exprand()``\  returns a random number from the exponential distribution with scale 1.
+  \ :code:`exprand()`\  returns a random number from the exponential distribution with scale 1.
 
 .. _l4a4c4d616368696e65466c6f6174-65787072657373496465616c4d656d626572:
 
@@ -344,7 +344,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; goldenRatio
 
 :spadfun:`goldenRatio`\: () -> % 
-  \ ``goldenRatio()``\  returns the golden ratio.
+  \ :code:`goldenRatio()`\  returns the golden ratio.
 
 .. _l4a4c4d616368696e65466c6f6174-696e637265617365507265636973696f6e:
 
@@ -362,21 +362,21 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, x)``\  applies \ ``func``\  to argument \ ``x``\ .
+  \ :code:`jlApply(func, x)`\  applies \ :code:`func`\  to argument \ :code:`x`\ .
 
 
 .. index::
    pair: JLMachineFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, x, y)``\  applies \ ``func``\  to arguments \ ``x``\  and \ ``y``\ .
+  \ :code:`jlApply(func, x, y)`\  applies \ :code:`func`\  to arguments \ :code:`x`\  and \ :code:`y`\ .
 
 
 .. index::
    pair: JLMachineFloat; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, x, y, z)``\  applies \ ``func``\  to arguments \ ``x``\ , \ ``y``\  and \ ``z``\ .
+  \ :code:`jlApply(func, x, y, z)`\  applies \ :code:`func`\  to arguments \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ .
 
 .. _l4a4c4d616368696e65466c6f6174-6a6c417070726f783f:
 
@@ -384,7 +384,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+  \ :code:`jlApprox?(x,y)`\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
 
 .. _l4a4c4d616368696e65466c6f6174-6a6c434170706c79:
 
@@ -392,21 +392,21 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; jlCApply
 
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , %) -> % 
-  \ ``jlCApply(lib, func, x)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to argument \ ``x``\ . For example: \example{jlCApply("libm.so.6",jsym(sqrt),jf64(2.0))}
+  \ :code:`jlCApply(lib, func, x)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to argument \ :code:`x`\ . For example: \example{jlCApply("libm.so.6",jsym(sqrt),jf64(2.0))}
 
 
 .. index::
    pair: JLMachineFloat; jlCApply
 
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , %, %) -> % 
-  \ ``jlCApply(lib, func, x, y)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to arguments \ ``x``\  and \ ``y``\ . For example: \example{jlCApply("libopenlibm", jsym(pow),jf64(2.7),jf64(3.0))} OpenLibm library is provided by Julia.
+  \ :code:`jlCApply(lib, func, x, y)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to arguments \ :code:`x`\  and \ :code:`y`\ . For example: \example{jlCApply("libopenlibm", jsym(pow),jf64(2.7),jf64(3.0))} OpenLibm library is provided by Julia.
 
 
 .. index::
    pair: JLMachineFloat; jlCApply
 
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , %, %, %) -> % 
-  \ ``jlCApply(lib, func, x, y, z)``\  applies the \ ``C``\  function \ ``func``\  from the library \ ``lib``\  to arguments \ ``x``\ , \ ``y``\  and \ ``z``\ . For example if you have the GNU Scientific Library installed: \example{jlCApply("libgsl",jsym(gsl_hypot3),jf64(2.0),jf64(7.0),jf64(9.0))}
+  \ :code:`jlCApply(lib, func, x, y, z)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to arguments \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . For example if you have the GNU Scientific Library installed: \example{jlCApply("libgsl",jsym(gsl_hypot3),jf64(2.0),jf64(7.0),jf64(9.0))}
 
 .. _l4a4c4d616368696e65466c6f6174-6c61746578:
 
@@ -447,7 +447,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  computes the base 10 logarithm of \ ``x``\ .
+  \ :code:`log10(x)`\  computes the base 10 logarithm of \ :code:`x`\ .
 
 .. _l4a4c4d616368696e65466c6f6174-6c6f6732:
 
@@ -455,7 +455,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  computes the base 2 logarithm of \ ``x``\ .
+  \ :code:`log2(x)`\  computes the base 2 logarithm of \ :code:`x`\ .
 
 .. _l4a4c4d616368696e65466c6f6174-6d616e7469737361:
 
@@ -491,7 +491,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; nan
 
 :spadfun:`nan`\: () -> % 
-  \ ``nan()``\  returns the Julia \ ``Float64``\  NaN (not a number) constant.
+  \ :code:`nan()`\  returns the Julia \ :code:`Float64`\  NaN (not a number) constant.
 
 .. _l4a4c4d616368696e65466c6f6174-6e656761746976653f:
 
@@ -504,7 +504,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; negativeInfinity
 
 :spadfun:`negativeInfinity`\: () -> % 
-  \ ``negativeInfinity()``\  returns the Julia \ ``Float64``\  negative infinity constant.
+  \ :code:`negativeInfinity()`\  returns the Julia \ :code:`Float64`\  negative infinity constant.
 
 .. _l4a4c4d616368696e65466c6f6174-6e6f726d:
 
@@ -517,7 +517,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; nrand
 
 :spadfun:`nrand`\: () -> % 
-  \ ``nrand()``\  returns a normally distributed random number.
+  \ :code:`nrand()`\  returns a normally distributed random number.
 
 .. _l4a4c4d616368696e65466c6f6174-6e7468526f6f74:
 
@@ -560,7 +560,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; positiveInfinity
 
 :spadfun:`positiveInfinity`\: () -> % 
-  \ ``positiveInfinity()``\  returns the Julia \ ``Float64``\  positive infinity constant.
+  \ :code:`positiveInfinity()`\  returns the Julia \ :code:`Float64`\  positive infinity constant.
 
 .. _l4a4c4d616368696e65466c6f6174-707265636973696f6e:
 
@@ -713,7 +713,7 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; urand01
 
 :spadfun:`urand01`\: () -> % 
-  \ ``urand01()``\  returns a uniformly distributed random number contained in [0,1].
+  \ :code:`urand01()`\  returns a uniformly distributed random number contained in [0,1].
 
 .. _l4a4c4d616368696e65466c6f6174-77686f6c6550617274:
 

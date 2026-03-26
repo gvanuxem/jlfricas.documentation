@@ -8,7 +8,7 @@ MagmaWithUnit
 :viewcode:`naalgc.spad line 44 <naalgc.spad#L44>` :editcode:`[edit on github] <naalgc.spad#L44>`
 
 
-MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a binary operation and a unit element. Axioms leftIdentity("*":(\%,\%)\ ``->``\ \%,1)   1*x=x rightIdentity("*":(\%,\%)\ ``->``\ \%,1)   x*1=x Common Additional Axioms unitsKnown---if "recip" says "failed", that PROVES input wasn\ ``'t``\  a unit
+MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a binary operation and a unit element. Axioms leftIdentity("*":(\%,\%)\ :code:`->`\ \%,1)   1*x=x rightIdentity("*":(\%,\%)\ :code:`->`\ \%,1)   x*1=x Common Additional Axioms unitsKnown---if "recip" says "failed", that PROVES input wasn\ :code:`'t`\  a unit
 
 
 .. _l4d61676d6157697468556e6974-31:
@@ -35,7 +35,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; ^
 
 :spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``a^n``\  returns the \ ``n``\ \ ``-``\ th power of \ ``a``\ , defined by repeated squaring.
+  \ :code:`a^n`\  returns the \ :code:`n`\ \ :code:`-`\ th power of \ :code:`a`\ , defined by repeated squaring.
 
 
 \ :ref:`^ <l4d61676d61-5e>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
@@ -62,7 +62,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; leftPower
 
 :spadfun:`leftPower`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``leftPower(a, n)``\  returns the \ ``n``\ \ ``-``\ th left power of \ ``a``\ , i.e. \ ``leftPower(a, n) := a * leftPower(a, n-1)``\  and \ ``leftPower(a, 0) := 1``\ .
+  \ :code:`leftPower(a, n)`\  returns the \ :code:`n`\ \ :code:`-`\ th left power of \ :code:`a`\ , i.e. \ :code:`leftPower(a, n) := a * leftPower(a, n-1)`\  and \ :code:`leftPower(a, 0) := 1`\ .
 
 
 \ :ref:`leftPower <l4d61676d61-6c656674506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
@@ -74,7 +74,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; leftRecip
 
 :spadfun:`leftRecip`\: % -> Union(%, failed) 
-  \ ``leftRecip(a)``\  returns an element, which is a left inverse of \ ``a``\ , or \ ``"failed"``\  if such an element doesn\ ``'t``\  exist or cannot be determined (see unitsKnown).
+  \ :code:`leftRecip(a)`\  returns an element, which is a left inverse of \ :code:`a`\ , or \ :code:`"failed"`\  if such an element doesn\ :code:`'t`\  exist or cannot be determined (see unitsKnown).
 
 .. _l4d61676d6157697468556e6974-6f6e653f:
 
@@ -82,7 +82,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; one?
 
 :spadfun:`one?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``one?(a)``\  tests whether \ ``a``\  is the unit 1.
+  \ :code:`one?(a)`\  tests whether \ :code:`a`\  is the unit 1.
 
 .. _l4d61676d6157697468556e6974-7265636970:
 
@@ -90,7 +90,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; recip
 
 :spadfun:`recip`\: % -> Union(%, failed) 
-  \ ``recip(a)``\  returns an element, which is both a left and a right inverse of \ ``a``\ , or \ ``"failed"``\  if such an element doesn\ ``'t``\  exist or cannot be determined (see unitsKnown).
+  \ :code:`recip(a)`\  returns an element, which is both a left and a right inverse of \ :code:`a`\ , or \ :code:`"failed"`\  if such an element doesn\ :code:`'t`\  exist or cannot be determined (see unitsKnown).
 
 .. _l4d61676d6157697468556e6974-7269676874506f776572:
 
@@ -98,7 +98,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; rightPower
 
 :spadfun:`rightPower`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``rightPower(a, n)``\  returns the \ ``n``\ \ ``-``\ th right power of \ ``a``\ , i.e. \ ``rightPower(a, n) := rightPower(a, n-1) * a``\  and \ ``rightPower(a, 0) := 1``\ .
+  \ :code:`rightPower(a, n)`\  returns the \ :code:`n`\ \ :code:`-`\ th right power of \ :code:`a`\ , i.e. \ :code:`rightPower(a, n) := rightPower(a, n-1) * a`\  and \ :code:`rightPower(a, 0) := 1`\ .
 
 
 \ :ref:`rightPower <l4d61676d61-7269676874506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
@@ -110,7 +110,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; rightRecip
 
 :spadfun:`rightRecip`\: % -> Union(%, failed) 
-  \ ``rightRecip(a)``\  returns an element, which is a right inverse of \ ``a``\ , or \ ``"failed"``\  if such an element doesn\ ``'t``\  exist or cannot be determined (see unitsKnown).
+  \ :code:`rightRecip(a)`\  returns an element, which is a right inverse of \ :code:`a`\ , or \ :code:`"failed"`\  if such an element doesn\ :code:`'t`\  exist or cannot be determined (see unitsKnown).
 
 .. _l4d61676d6157697468556e6974-73616d706c65:
 
@@ -118,7 +118,7 @@ MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a 
    pair: MagmaWithUnit; sample
 
 :spadfun:`sample`\: % 
-  \ ``sample yields``\  a value of type \%
+  \ :code:`sample yields`\  a value of type \%
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

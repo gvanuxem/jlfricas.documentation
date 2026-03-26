@@ -122,7 +122,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; binomThmExpt
 
 :spadfun:`binomThmExpt`\: (%, %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``binomThmExpt(p, q, n)``\  returns \ ``(p+q)^n``\  by means of the binomial theorem trick.
+  \ :code:`binomThmExpt(p, q, n)`\  returns \ :code:`(p+q)^n`\  by means of the binomial theorem trick.
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-6368617261637465726973746963:
 
@@ -181,7 +181,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; content
 
 :spadfun:`content`\: % -> R if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``content(p)``\  gives the \ ``gcd``\  of the coefficients of polynomial \ ``p``\ .
+  \ :code:`content(p)`\  gives the \ :code:`gcd`\  of the coefficients of polynomial \ :code:`p`\ .
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-646567726565:
 
@@ -198,7 +198,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; exquo
 
 :spadfun:`exquo`\: (%, R) -> Union(%, failed) if R has \ :ref:`EntireRing <l456e7469726552696e67>`\ 
-  \ ``exquo(p,r)``\  returns the exact quotient of polynomial \ ``p``\  by \ ``r``\ , or "failed" if none exists.
+  \ :code:`exquo(p,r)`\  returns the exact quotient of polynomial \ :code:`p`\  by \ :code:`r`\ , or "failed" if none exists.
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-666d656367:
 
@@ -206,7 +206,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; fmecg
 
 :spadfun:`fmecg`\: (%, E, R, %) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``fmecg(p1, e, r, p2)``\  returns \ ``p1 - monomial(r, e) * p2``\ .
+  \ :code:`fmecg(p1, e, r, p2)`\  returns \ :code:`p1 - monomial(r, e) * p2`\ .
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-67726f756e643f:
 
@@ -214,7 +214,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; ground?
 
 :spadfun:`ground?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``ground?(p)``\  tests if polynomial \ ``p``\  is a member of the coefficient ring.
+  \ :code:`ground?(p)`\  tests if polynomial \ :code:`p`\  is a member of the coefficient ring.
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-67726f756e64:
 
@@ -222,7 +222,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; ground
 
 :spadfun:`ground`\: % -> R 
-  \ ``ground(p)``\  retracts polynomial \ ``p``\  to the coefficient ring.
+  \ :code:`ground(p)`\  retracts polynomial \ :code:`p`\  to the coefficient ring.
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-6c61746578:
 
@@ -284,7 +284,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; mapExponents
 
 :spadfun:`mapExponents`\: (E -> E, %) -> % 
-  \ ``mapExponents(fn, u)``\  maps function \ ``fn``\  onto the exponents of the non-zero monomials of polynomial \ ``u``\ .
+  \ :code:`mapExponents(fn, u)`\  maps function \ :code:`fn`\  onto the exponents of the non-zero monomials of polynomial \ :code:`u`\ .
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-6d696e696d756d446567726565:
 
@@ -292,7 +292,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; minimumDegree
 
 :spadfun:`minimumDegree`\: % -> E 
-  \ ``minimumDegree(p)``\  gives the least exponent of a non-zero term of polynomial \ ``p``\ . Error: if applied to 0.
+  \ :code:`minimumDegree(p)`\  gives the least exponent of a non-zero term of polynomial \ :code:`p`\ . Error: if applied to 0.
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-6d6f6e6f6d69616c3f:
 
@@ -335,7 +335,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; pomopo!
 
 :spadfun:`pomopo!`\: (%, R, E, %) -> % 
-  \ ``pomopo!(p1, r, e, p2)``\  returns \ ``p1 + monomial(r, e) * p2``\  and may use \ ``p1``\  as workspace. The constant \ ``r``\  is assumed to be nonzero.
+  \ :code:`pomopo!(p1, r, e, p2)`\  returns \ :code:`p1 + monomial(r, e) * p2`\  and may use \ :code:`p1`\  as workspace. The constant \ :code:`r`\  is assumed to be nonzero.
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-7072696d697469766550617274:
 
@@ -343,7 +343,7 @@ This category is similar to AbelianMonoidRing, except that the sum is assumed to
    pair: FiniteAbelianMonoidRing; primitivePart
 
 :spadfun:`primitivePart`\: % -> % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``primitivePart(p)``\  returns the unit normalized form of polynomial \ ``p``\  divided by the content of \ ``p``\ .
+  \ :code:`primitivePart(p)`\  returns the unit normalized form of polynomial \ :code:`p`\  divided by the content of \ :code:`p`\ .
 
 .. _l46696e6974654162656c69616e4d6f6e6f696452696e67-7265636970:
 

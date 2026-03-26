@@ -17,21 +17,21 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; argumentList!
 
 :spadfun:`argumentList!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``argumentList!(f, l)``\  declares that the argument list for subprogram \ ``f``\  in the global symbol table is \ ``l``\ .
+  \ :code:`argumentList!(f, l)`\  declares that the argument list for subprogram \ :code:`f`\  in the global symbol table is \ :code:`l`\ .
 
 
 .. index::
    pair: TheSymbolTable; argumentList!
 
 :spadfun:`argumentList!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``argumentList!(f, l, tab)``\  declares that the argument list for subprogram \ ``f``\  in symbol table tab is \ ``l``\ .
+  \ :code:`argumentList!(f, l, tab)`\  declares that the argument list for subprogram \ :code:`f`\  in symbol table tab is \ :code:`l`\ .
 
 
 .. index::
    pair: TheSymbolTable; argumentList!
 
 :spadfun:`argumentList!`\: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``argumentList!(l)``\  declares that the argument list for the current subprogram in the global symbol table is \ ``l``\ .
+  \ :code:`argumentList!(l)`\  declares that the argument list for the current subprogram in the global symbol table is \ :code:`l`\ .
 
 .. _l54686553796d626f6c5461626c65-617267756d656e744c6973744f66:
 
@@ -39,7 +39,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; argumentListOf
 
 :spadfun:`argumentListOf`\: (\ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``argumentListOf(f, tab)``\  returns the argument list of \ ``f``\ 
+  \ :code:`argumentListOf(f, tab)`\  returns the argument list of \ :code:`f`\ 
 
 .. _l54686553796d626f6c5461626c65-636c65617254686553796d626f6c5461626c65:
 
@@ -47,14 +47,14 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; clearTheSymbolTable
 
 :spadfun:`clearTheSymbolTable`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``clearTheSymbolTable()``\  clears the current symbol table.
+  \ :code:`clearTheSymbolTable()`\  clears the current symbol table.
 
 
 .. index::
    pair: TheSymbolTable; clearTheSymbolTable
 
 :spadfun:`clearTheSymbolTable`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``clearTheSymbolTable(x)``\  removes the symbol \ ``x``\  from the table
+  \ :code:`clearTheSymbolTable(x)`\  removes the symbol \ :code:`x`\  from the table
 
 .. _l54686553796d626f6c5461626c65-636f65726365:
 
@@ -67,7 +67,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; currentSubProgram
 
 :spadfun:`currentSubProgram`\: () -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``currentSubProgram()``\  returns the name of the current subprogram being processed
+  \ :code:`currentSubProgram()`\  returns the name of the current subprogram being processed
 
 .. _l54686553796d626f6c5461626c65-6465636c61726521:
 
@@ -75,28 +75,28 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; declare!
 
 :spadfun:`declare!`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``declare!(u, t, asp, tab)``\  declares the parameters \ ``u``\  of subprogram \ ``asp``\  to have type \ ``t``\  in symbol table tab.
+  \ :code:`declare!(u, t, asp, tab)`\  declares the parameters \ :code:`u`\  of subprogram \ :code:`asp`\  to have type \ :code:`t`\  in symbol table tab.
 
 
 .. index::
    pair: TheSymbolTable; declare!
 
 :spadfun:`declare!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ ) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``declare!(u, t)``\  declares the parameter \ ``u``\  to have type \ ``t``\  in the current level of the symbol table.
+  \ :code:`declare!(u, t)`\  declares the parameter \ :code:`u`\  to have type \ :code:`t`\  in the current level of the symbol table.
 
 
 .. index::
    pair: TheSymbolTable; declare!
 
 :spadfun:`declare!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``declare!(u, t, asp)``\  declares the parameter \ ``u``\  to have type \ ``t``\  in asp.
+  \ :code:`declare!(u, t, asp)`\  declares the parameter \ :code:`u`\  to have type \ :code:`t`\  in asp.
 
 
 .. index::
    pair: TheSymbolTable; declare!
 
 :spadfun:`declare!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``declare!(u, t, asp, tab)``\  declares the parameter \ ``u``\  of subprogram \ ``asp``\  to have type \ ``t``\  in symbol table tab.
+  \ :code:`declare!(u, t, asp, tab)`\  declares the parameter \ :code:`u`\  of subprogram \ :code:`asp`\  to have type \ :code:`t`\  in symbol table tab.
 
 .. _l54686553796d626f6c5461626c65-656d707479:
 
@@ -104,7 +104,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; empty
 
 :spadfun:`empty`\: () -> % 
-  \ ``empty()``\  creates a new, empty symbol table.
+  \ :code:`empty()`\  creates a new, empty symbol table.
 
 .. _l54686553796d626f6c5461626c65-656e6453756250726f6772616d:
 
@@ -112,7 +112,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; endSubProgram
 
 :spadfun:`endSubProgram`\: () -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``endSubProgram()``\  asserts that we are no longer processing the current subprogram.
+  \ :code:`endSubProgram()`\  asserts that we are no longer processing the current subprogram.
 
 .. _l54686553796d626f6c5461626c65-6e657753756250726f6772616d:
 
@@ -120,7 +120,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; newSubProgram
 
 :spadfun:`newSubProgram`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``newSubProgram(f)``\  asserts that from now on type declarations are part of subprogram \ ``f``\ .
+  \ :code:`newSubProgram(f)`\  asserts that from now on type declarations are part of subprogram \ :code:`f`\ .
 
 .. _l54686553796d626f6c5461626c65-7072696e74486561646572:
 
@@ -128,21 +128,21 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; printHeader
 
 :spadfun:`printHeader`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``printHeader()``\  produces the FORTRAN header for the current subprogram in the global symbol table on the current FORTRAN output stream.
+  \ :code:`printHeader()`\  produces the FORTRAN header for the current subprogram in the global symbol table on the current FORTRAN output stream.
 
 
 .. index::
    pair: TheSymbolTable; printHeader
 
 :spadfun:`printHeader`\: (\ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``printHeader(f, tab)``\  produces the FORTRAN header for subprogram \ ``f``\  in symbol table tab on the current FORTRAN output stream.
+  \ :code:`printHeader(f, tab)`\  produces the FORTRAN header for subprogram \ :code:`f`\  in symbol table tab on the current FORTRAN output stream.
 
 
 .. index::
    pair: TheSymbolTable; printHeader
 
 :spadfun:`printHeader`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``printHeader(f)``\  produces the FORTRAN header for subprogram \ ``f``\  in the global symbol table on the current FORTRAN output stream.
+  \ :code:`printHeader(f)`\  produces the FORTRAN header for subprogram \ :code:`f`\  in the global symbol table on the current FORTRAN output stream.
 
 .. _l54686553796d626f6c5461626c65-7072696e745479706573:
 
@@ -150,7 +150,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; printTypes
 
 :spadfun:`printTypes`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``printTypes(tab)``\  produces FORTRAN type declarations from \ ``tab``\ , on the current FORTRAN output stream
+  \ :code:`printTypes(tab)`\  produces FORTRAN type declarations from \ :code:`tab`\ , on the current FORTRAN output stream
 
 .. _l54686553796d626f6c5461626c65-72657475726e5479706521:
 
@@ -158,21 +158,21 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; returnType!
 
 :spadfun:`returnType!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , Union(fst: \ :ref:`FortranScalarType <l466f727472616e5363616c617254797065>`\ , void: void)) -> \ :ref:`Void <l566f6964>`\  
-  \ ``returnType!(f, t)``\  declares that the return type of subprogram \ ``f``\  in the global symbol table is \ ``t``\ .
+  \ :code:`returnType!(f, t)`\  declares that the return type of subprogram \ :code:`f`\  in the global symbol table is \ :code:`t`\ .
 
 
 .. index::
    pair: TheSymbolTable; returnType!
 
 :spadfun:`returnType!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , Union(fst: \ :ref:`FortranScalarType <l466f727472616e5363616c617254797065>`\ , void: void), %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``returnType!(f, t, tab)``\  declares that the return type of subprogram \ ``f``\  in symbol table tab is \ ``t``\ .
+  \ :code:`returnType!(f, t, tab)`\  declares that the return type of subprogram \ :code:`f`\  in symbol table tab is \ :code:`t`\ .
 
 
 .. index::
    pair: TheSymbolTable; returnType!
 
 :spadfun:`returnType!`\: Union(fst: \ :ref:`FortranScalarType <l466f727472616e5363616c617254797065>`\ , void: void) -> \ :ref:`Void <l566f6964>`\  
-  \ ``returnType!(t)``\  declares that the return type of the current subprogram in the global symbol table is \ ``t``\ .
+  \ :code:`returnType!(t)`\  declares that the return type of the current subprogram in the global symbol table is \ :code:`t`\ .
 
 .. _l54686553796d626f6c5461626c65-72657475726e547970654f66:
 
@@ -180,7 +180,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; returnTypeOf
 
 :spadfun:`returnTypeOf`\: (\ :ref:`Symbol <l53796d626f6c>`\ , %) -> Union(fst: \ :ref:`FortranScalarType <l466f727472616e5363616c617254797065>`\ , void: void) 
-  \ ``returnTypeOf(f, tab)``\  returns the type of the object returned by \ ``f``\ 
+  \ :code:`returnTypeOf(f, tab)`\  returns the type of the object returned by \ :code:`f`\ 
 
 .. _l54686553796d626f6c5461626c65-73686f7754686553796d626f6c5461626c65:
 
@@ -188,7 +188,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; showTheSymbolTable
 
 :spadfun:`showTheSymbolTable`\: () -> % 
-  \ ``showTheSymbolTable()``\  returns the current symbol table.
+  \ :code:`showTheSymbolTable()`\  returns the current symbol table.
 
 .. _l54686553796d626f6c5461626c65-73796d626f6c5461626c654f66:
 
@@ -196,7 +196,7 @@ Creates and manipulates one global symbol table for FORTRAN code generation, con
    pair: TheSymbolTable; symbolTableOf
 
 :spadfun:`symbolTableOf`\: (\ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`SymbolTable <l53796d626f6c5461626c65>`\  
-  \ ``symbolTableOf(f, tab)``\  returns the symbol table of \ ``f``\ 
+  \ :code:`symbolTableOf(f, tab)`\  returns the symbol table of \ :code:`f`\ 
 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

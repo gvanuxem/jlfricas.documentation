@@ -12,7 +12,7 @@ JetLazyFunction(JB, D)
 * D: \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
 
 
-\ :ref:`JetLazyFunction <l4a65744c617a7946756e6374696f6e>`\  takes as argument a domain in \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  and returns another domain in the same category. This domain has basically the same properties as the argument domain, but there is a lazy evaluation mechanism for derivatives. This means that differentiations are not immediately performed. Instead a pointer is established to the function to be differentiated. Only when the exact value of the derivative is needed, the differentiation is executed. Special care is taken for leading derivatives and jet variables to avoid as much as possible the need to evaluate expressions. This entails that the result of \ ``jetVariables``\  may contain spurious variables. Furthermore many functions in \ :ref:`JetLazyFunction <l4a65744c617a7946756e6374696f6e>`\  destructively change their arguments. This affects, however, only their internal representation, not the value obtained after full evaluation.
+\ :ref:`JetLazyFunction <l4a65744c617a7946756e6374696f6e>`\  takes as argument a domain in \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  and returns another domain in the same category. This domain has basically the same properties as the argument domain, but there is a lazy evaluation mechanism for derivatives. This means that differentiations are not immediately performed. Instead a pointer is established to the function to be differentiated. Only when the exact value of the derivative is needed, the differentiation is executed. Special care is taken for leading derivatives and jet variables to avoid as much as possible the need to evaluate expressions. This entails that the result of \ :code:`jetVariables`\  may contain spurious variables. Furthermore many functions in \ :ref:`JetLazyFunction <l4a65744c617a7946756e6374696f6e>`\  destructively change their arguments. This affects, however, only their internal representation, not the value obtained after full evaluation.
 
 
 .. _l4a65744c617a7946756e6374696f6e-30:
@@ -35,7 +35,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; *
 
 :spadfun:`\*`\: (D, %) -> % 
-  \ ``d*exp``\  is provided mainly for internal use, as basically all calculations should be performed within \ :ref:`JetLazyFunction <l4a65744c617a7946756e6374696f6e>`\ .
+  \ :code:`d*exp`\  is provided mainly for internal use, as basically all calculations should be performed within \ :ref:`JetLazyFunction <l4a65744c617a7946756e6374696f6e>`\ .
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -127,7 +127,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; coerce
 
 :spadfun:`coerce`\: % -> D 
-  \ ``coerce(exp)``\  retracts an element to the base domain \ ``D``\ . This looses all information about its leading derivative and its jet variables and requires complete evaluation of the expression.
+  \ :code:`coerce(exp)`\  retracts an element to the base domain \ :code:`D`\ . This looses all information about its leading derivative and its jet variables and requires complete evaluation of the expression.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -138,7 +138,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; coerce
 
 :spadfun:`coerce`\: D -> % 
-  \ ``coerce(d)``\  coerces an element of \ ``D``\  into the new domain. This includes the calculation of its leading derivative and its jet variables.
+  \ :code:`coerce(d)`\  coerces an element of \ :code:`D`\  into the new domain. This includes the calculation of its leading derivative and its jet variables.
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -154,7 +154,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; collect
 
 :spadfun:`collect`\: % -> % 
-  \ ``collect(exp)``\  "collects" former lazy terms which have been meanwhile evaluated.
+  \ :code:`collect(exp)`\  "collects" former lazy terms which have been meanwhile evaluated.
 
 .. _l4a65744c617a7946756e6374696f6e-636f6d6d757461746f72:
 
@@ -225,7 +225,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; eqRep?
 
 :spadfun:`eqRep?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``eqRep?(x, y)``\  compares the representations of \ ``x``\  and \ ``y``\  without any evaluation. Thus it is much weaker than \ ``=``\  and cannot decide equality of the evaluated expressions.
+  \ :code:`eqRep?(x, y)`\  compares the representations of \ :code:`x`\  and \ :code:`y`\  without any evaluation. Thus it is much weaker than \ :code:`=`\  and cannot decide equality of the evaluated expressions.
 
 .. _l4a65744c617a7946756e6374696f6e-6576616c31:
 
@@ -233,7 +233,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; eval1
 
 :spadfun:`eval1`\: % -> % 
-  \ ``eval1(exp)``\  explicitly evaluates the next term in \ ``exp``\ . \ ``exp``\  is destructively altered.
+  \ :code:`eval1(exp)`\  explicitly evaluates the next term in \ :code:`exp`\ . \ :code:`exp`\  is destructively altered.
 
 .. _l4a65744c617a7946756e6374696f6e-6576616c:
 
@@ -241,7 +241,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; eval
 
 :spadfun:`eval`\: % -> % 
-  \ ``eval(exp)``\  explicitly evaluates all terms in \ ``exp``\ . \ ``exp``\  is destructively altered.
+  \ :code:`eval(exp)`\  explicitly evaluates all terms in \ :code:`exp`\ . \ :code:`exp`\  is destructively altered.
 
 .. _l4a65744c617a7946756e6374696f6e-657871756f:
 
@@ -305,7 +305,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; ground?
 
 :spadfun:`ground?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``ground(exp)``\  is \ ``true``\ , if \ ``exp``\  contains only fully evaluated parts.
+  \ :code:`ground(exp)`\  is \ :code:`true`\ , if \ :code:`exp`\  contains only fully evaluated parts.
 
 .. _l4a65744c617a7946756e6374696f6e-6a61636f62694d6174726978:
 
@@ -495,7 +495,7 @@ JetLazyFunction(JB, D)
    pair: JetLazyFunction; statistics
 
 :spadfun:`statistics`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``statistics()``\  prints a statistic on the use of the lazy evaluation mechanism. It displays the number of lazy differentiations performed and how many of them had to be executed explicitly later on.
+  \ :code:`statistics()`\  prints a statistic on the use of the lazy evaluation mechanism. It displays the number of lazy differentiations performed and how many of them had to be executed explicitly later on.
 
 .. _l4a65744c617a7946756e6374696f6e-7375627374:
 

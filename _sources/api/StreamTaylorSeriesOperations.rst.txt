@@ -46,7 +46,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; /
 
 :spadfun:`/`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``a / b``\  returns the power series quotient of \ ``a``\  by \ ``b``\ . An error message is returned if \ ``b``\  is not invertible. This function is used in fixed point computations.
+  \ :code:`a / b`\  returns the power series quotient of \ :code:`a`\  by \ :code:`b`\ . An error message is returned if \ :code:`b`\  is not invertible. This function is used in fixed point computations.
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-616464696167:
 
@@ -79,7 +79,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; evenlambert
 
 :spadfun:`evenlambert`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``evenlambert(st)``\  computes \ ``f(x^2) + f(x^4) + f(x^6) + ...``\  if \ ``st``\  is a stream representing \ ``f(x)``\ . This function is used for computing infinite products. If \ ``f(x)``\  is a power series with constant coefficient 1, then \ ``prod(f(x^(2*n)), n=1..infinity) = exp(evenlambert(log(f(x))))``\ .
+  \ :code:`evenlambert(st)`\  computes \ :code:`f(x^2) + f(x^4) + f(x^6) + ...`\  if \ :code:`st`\  is a stream representing \ :code:`f(x)`\ . This function is used for computing infinite products. If \ :code:`f(x)`\  is a power series with constant coefficient 1, then \ :code:`prod(f(x^(2*n)), n=1..infinity) = exp(evenlambert(log(f(x))))`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-657871756f:
 
@@ -87,7 +87,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; exquo
 
 :spadfun:`exquo`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> Union(\ :ref:`Stream <l53747265616d>`\  A, failed) 
-  \ ``exquo(a, b)``\  returns the power series quotient of \ ``a``\  by \ ``b``\ , if the quotient exists, and "failed" otherwise
+  \ :code:`exquo(a, b)`\  returns the power series quotient of \ :code:`a`\  by \ :code:`b`\ , if the quotient exists, and "failed" otherwise
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-676465726976:
 
@@ -100,7 +100,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; general_Lambert_product
 
 :spadfun:`general_Lambert_product`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``general_Lambert_product(f(x), a, d)``\  returns \ ``f(x^a)*f(x^(a + d))*f(x^(a + 2 d))* ...``\ . \ ``f(x)``\  should have constant coefficient equal to one and \ ``a``\  and \ ``d``\  should be positive.
+  \ :code:`general_Lambert_product(f(x), a, d)`\  returns \ :code:`f(x^a)*f(x^(a + d))*f(x^(a + 2 d))* ...`\ . \ :code:`f(x)`\  should have constant coefficient equal to one and \ :code:`a`\  and \ :code:`d`\  should be positive.
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-67656e6572616c4c616d62657274:
 
@@ -108,7 +108,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; generalLambert
 
 :spadfun:`generalLambert`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``generalLambert(f(x), a, d)``\  returns \ ``f(x^a) + f(x^(a + d)) + f(x^(a + 2 d)) + ...``\ . \ ``f(x)``\  should have zero constant coefficient and \ ``a``\  and \ ``d``\  should be positive.
+  \ :code:`generalLambert(f(x), a, d)`\  returns \ :code:`f(x^a) + f(x^(a + d)) + f(x^(a + 2 d)) + ...`\ . \ :code:`f(x)`\  should have zero constant coefficient and \ :code:`a`\  and \ :code:`d`\  should be positive.
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-696e74:
 
@@ -136,7 +136,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; lagrange
 
 :spadfun:`lagrange`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``lagrange(g)``\  produces the power series for \ ``f``\  where \ ``f``\  is implicitly defined as \ ``f(z) = z*g(f(z))``\ .
+  \ :code:`lagrange(g)`\  produces the power series for \ :code:`f`\  where \ :code:`f`\  is implicitly defined as \ :code:`f(z) = z*g(f(z))`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6c616d62657274:
 
@@ -144,7 +144,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; lambert
 
 :spadfun:`lambert`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``lambert(st)``\  computes \ ``f(x) + f(x^2) + f(x^3) + ...``\  if \ ``st``\  is a stream representing \ ``f(x)``\ . This function is used for computing infinite products. If \ ``f(x)``\  is a power series with constant coefficient 1 then \ ``prod(f(x^n), n = 1..infinity) = exp(lambert(log(f(x))))``\ .
+  \ :code:`lambert(st)`\  computes \ :code:`f(x) + f(x^2) + f(x^3) + ...`\  if \ :code:`st`\  is a stream representing \ :code:`f(x)`\ . This function is used for computing infinite products. If \ :code:`f(x)`\  is a power series with constant coefficient 1 then \ :code:`prod(f(x^n), n = 1..infinity) = exp(lambert(log(f(x))))`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6c617a7947696e74656772617465:
 
@@ -152,7 +152,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; lazyGintegrate
 
 :spadfun:`lazyGintegrate`\: (\ :ref:`Integer <l496e7465676572>`\  -> A, A, () -> \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Field <l4669656c64>`\  and A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``lazyGintegrate(f, r, g)``\  is used for fixed point computations.
+  \ :code:`lazyGintegrate(f, r, g)`\  is used for fixed point computations.
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6c617a79496e74656772617465:
 
@@ -165,7 +165,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; mapdiv
 
 :spadfun:`mapdiv`\: (\ :ref:`Stream <l53747265616d>`\  A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Field <l4669656c64>`\  and A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``mapdiv([a0, a1, ..], [b0, b1, ..])``\  returns \ ``[a0/b0, a1/b1, ..]``\ .
+  \ :code:`mapdiv([a0, a1, ..], [b0, b1, ..])`\  returns \ :code:`[a0/b0, a1/b1, ..]`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6d61706d756c74:
 
@@ -188,7 +188,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; nlde
 
 :spadfun:`nlde`\: \ :ref:`Stream <l53747265616d>`\  \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``nlde(u)``\  solves a first order non-linear differential equation described by \ ``u``\  of the form \ ``[[b<0, 0>, b<0, 1>, ...], [b<1, 0>, b<1, 1>, .], ...]``\ . the differential equation has the form \ ``y' = sum(i=0 to infinity, j=0 to infinity, b<i, j>*(x^i)*(y^j))``\ .
+  \ :code:`nlde(u)`\  solves a first order non-linear differential equation described by \ :code:`u`\  of the form \ :code:`[[b<0, 0>, b<0, 1>, ...], [b<1, 0>, b<1, 1>, .], ...]`\ . the differential equation has the form \ :code:`y' = sum(i=0 to infinity, j=0 to infinity, b<i, j>*(x^i)*(y^j))`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-6f6464696e746567657273:
 
@@ -201,7 +201,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; oddlambert
 
 :spadfun:`oddlambert`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``oddlambert(st)``\  computes \ ``f(x) + f(x^3) + f(x^5) + ...``\  if \ ``st``\  is a stream representing \ ``f(x)``\ . This function is used for computing infinite products. If \ ``f``\ (\ ``x``\ ) is a power series with constant coefficient 1 then \ ``prod(f(x^(2*n-1)), n=1..infinity) = exp(oddlambert(log(f(x))))``\ .
+  \ :code:`oddlambert(st)`\  computes \ :code:`f(x) + f(x^3) + f(x^5) + ...`\  if \ :code:`st`\  is a stream representing \ :code:`f(x)`\ . This function is used for computing infinite products. If \ :code:`f`\ (\ :code:`x`\ ) is a power series with constant coefficient 1 then \ :code:`prod(f(x^(2*n-1)), n=1..infinity) = exp(oddlambert(log(f(x))))`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-706f776572:
 
@@ -209,7 +209,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; power
 
 :spadfun:`power`\: (A, \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Field <l4669656c64>`\  and A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``power(a, f)``\  returns the power series \ ``f``\  raised to the power \ ``a``\ .
+  \ :code:`power(a, f)`\  returns the power series \ :code:`f`\  raised to the power \ :code:`a`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-706f7765726e:
 
@@ -217,7 +217,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; powern
 
 :spadfun:`powern`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Stream <l53747265616d>`\  A) -> \ :ref:`Stream <l53747265616d>`\  A if A has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``powern(r, f)``\  raises power series \ ``f``\  to the power \ ``r``\ .
+  \ :code:`powern(r, f)`\  raises power series \ :code:`f`\  to the power \ :code:`r`\ .
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-70726f64696167:
 
@@ -225,7 +225,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; prodiag
 
 :spadfun:`prodiag`\: \ :ref:`Stream <l53747265616d>`\  \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``prodiag(x)``\  performs "diagonal" infinite product of a stream of streams. When \ ``x(i)``\  is interpreted as stream of coefficients of series \ ``f_i(z), i=1,...``\ , then \ ``prodiag(x) = (1 + z*f_1(z))*(1 + z^2*f_2(x))*...``\ 
+  \ :code:`prodiag(x)`\  performs "diagonal" infinite product of a stream of streams. When \ :code:`x(i)`\  is interpreted as stream of coefficients of series \ :code:`f_i(z), i=1,...`\ , then \ :code:`prodiag(x) = (1 + z*f_1(z))*(1 + z^2*f_2(x))*...`\ 
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-7265636970:
 
@@ -233,7 +233,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; recip
 
 :spadfun:`recip`\: \ :ref:`Stream <l53747265616d>`\  A -> Union(\ :ref:`Stream <l53747265616d>`\  A, failed) 
-  \ ``recip(a)``\  returns the power series reciprocal of \ ``a``\ , or "failed" if not possible.
+  \ :code:`recip(a)`\  returns the power series reciprocal of \ :code:`a`\ , or "failed" if not possible.
 
 .. _l53747265616d5461796c6f725365726965734f7065726174696f6e73-726576657274:
 
@@ -241,7 +241,7 @@ StreamTaylorSeriesOperations implements Taylor series arithmetic, where a Taylor
    pair: StreamTaylorSeriesOperations; revert
 
 :spadfun:`revert`\: \ :ref:`Stream <l53747265616d>`\  A -> \ :ref:`Stream <l53747265616d>`\  A 
-  \ ``revert(a)``\  computes the inverse of a power series \ ``a``\  with respect to composition. the series should have constant coefficient 0 and invertible first order coefficient.
+  \ :code:`revert(a)`\  computes the inverse of a power series \ :code:`a`\  with respect to composition. the series should have constant coefficient 0 and invertible first order coefficient.
 
 
 \ :ref:`StreamTaylorSeriesOperationsCategory <l53747265616d5461796c6f725365726965734f7065726174696f6e7343617465676f7279>`\ (A, A) 

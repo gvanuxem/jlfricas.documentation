@@ -88,14 +88,14 @@ A set category lists a collection of set-theoretic operations useful for both fi
    pair: SetAggregate; difference
 
 :spadfun:`difference`\: (%, %) -> % 
-  \ ``difference(u, v)``\  returns the set aggregate \ ``w``\  consisting of elements in set aggregate \ ``u``\  but not in set aggregate \ ``v``\ . If \ ``u``\  and \ ``v``\  have no elements in common, \ ``difference(u, v)``\  returns a copy of \ ``u``\ . Note: equivalent to the notation (not currently supported) \ ``[x for x in u | not member?(x, v)]``\ .
+  \ :code:`difference(u, v)`\  returns the set aggregate \ :code:`w`\  consisting of elements in set aggregate \ :code:`u`\  but not in set aggregate \ :code:`v`\ . If \ :code:`u`\  and \ :code:`v`\  have no elements in common, \ :code:`difference(u, v)`\  returns a copy of \ :code:`u`\ . Note: equivalent to the notation (not currently supported) \ :code:`[x for x in u | not member?(x, v)]`\ .
 
 
 .. index::
    pair: SetAggregate; difference
 
 :spadfun:`difference`\: (%, S) -> % 
-  \ ``difference(u, x)``\  returns the set aggregate \ ``u``\  with element \ ``x``\  removed. If \ ``u``\  does not contain \ ``x``\ , a copy of \ ``u``\  is returned. Note: \ ``difference(s, x) = difference(s, set [x])``\ .
+  \ :code:`difference(u, x)`\  returns the set aggregate \ :code:`u`\  with element \ :code:`x`\  removed. If \ :code:`u`\  does not contain \ :code:`x`\ , a copy of \ :code:`u`\  is returned. Note: \ :code:`difference(s, x) = difference(s, set [x])`\ .
 
 .. _l536574416767726567617465-656d7074793f:
 
@@ -145,7 +145,7 @@ A set category lists a collection of set-theoretic operations useful for both fi
    pair: SetAggregate; intersect
 
 :spadfun:`intersect`\: (%, %) -> % 
-  \ ``intersect(u, v)``\  returns the set aggregate \ ``w``\  consisting of elements common to both set aggregates \ ``u``\  and \ ``v``\ . Note: equivalent to the notation (not currently supported) [\ ``x``\  for \ ``x``\  in \ ``u``\  | member?(\ ``x``\ , \ ``v``\ )].
+  \ :code:`intersect(u, v)`\  returns the set aggregate \ :code:`w`\  consisting of elements common to both set aggregates \ :code:`u`\  and \ :code:`v`\ . Note: equivalent to the notation (not currently supported) [\ :code:`x`\  for \ :code:`x`\  in \ :code:`u`\  | member?(\ :code:`x`\ , \ :code:`v`\ )].
 
 .. _l536574416767726567617465-6c61746578:
 
@@ -244,14 +244,14 @@ A set category lists a collection of set-theoretic operations useful for both fi
    pair: SetAggregate; set
 
 :spadfun:`set`\: () -> % 
-  \ ``set()``\ \$\ ``D``\  creates an empty set aggregate of type \ ``D``\ .
+  \ :code:`set()`\ \$\ :code:`D`\  creates an empty set aggregate of type \ :code:`D`\ .
 
 
 .. index::
    pair: SetAggregate; set
 
 :spadfun:`set`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``set([x, y, ..., z])``\  creates a set aggregate containing items \ ``x``\ , \ ``y``\ , ..., \ ``z``\ .
+  \ :code:`set([x, y, ..., z])`\  creates a set aggregate containing items \ :code:`x`\ , \ :code:`y`\ , ..., \ :code:`z`\ .
 
 .. _l536574416767726567617465-73697a653f:
 
@@ -264,7 +264,7 @@ A set category lists a collection of set-theoretic operations useful for both fi
    pair: SetAggregate; subset?
 
 :spadfun:`subset?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``subset?(u, v)``\  tests if \ ``u``\  is a subset of \ ``v``\ . Note: equivalent to \ ``reduce(and, [member?(x, v) for x in members(u)], true, false)``\ .
+  \ :code:`subset?(u, v)`\  tests if \ :code:`u`\  is a subset of \ :code:`v`\ . Note: equivalent to \ :code:`reduce(and, [member?(x, v) for x in members(u)], true, false)`\ .
 
 .. _l536574416767726567617465-73796d6d6574726963446966666572656e6365:
 
@@ -272,7 +272,7 @@ A set category lists a collection of set-theoretic operations useful for both fi
    pair: SetAggregate; symmetricDifference
 
 :spadfun:`symmetricDifference`\: (%, %) -> % 
-  \ ``symmetricDifference(u, v)``\  returns the set aggregate of elements \ ``x``\  which are members of set aggregate \ ``u``\  or set aggregate \ ``v``\  but not both. If \ ``u``\  and \ ``v``\  have no elements in common, \ ``symmetricDifference(u, v)``\  returns a copy of \ ``u``\ . Note: \ ``symmetricDifference(u, v) = union(difference(u, v), difference(v, u))``\ 
+  \ :code:`symmetricDifference(u, v)`\  returns the set aggregate of elements \ :code:`x`\  which are members of set aggregate \ :code:`u`\  or set aggregate \ :code:`v`\  but not both. If \ :code:`u`\  and \ :code:`v`\  have no elements in common, \ :code:`symmetricDifference(u, v)`\  returns a copy of \ :code:`u`\ . Note: \ :code:`symmetricDifference(u, v) = union(difference(u, v), difference(v, u))`\ 
 
 .. _l536574416767726567617465-756e696f6e:
 
@@ -280,21 +280,21 @@ A set category lists a collection of set-theoretic operations useful for both fi
    pair: SetAggregate; union
 
 :spadfun:`union`\: (%, %) -> % 
-  \ ``union(u, v)``\  returns the set aggregate of elements which are members of either set aggregate \ ``u``\  or \ ``v``\ .
+  \ :code:`union(u, v)`\  returns the set aggregate of elements which are members of either set aggregate \ :code:`u`\  or \ :code:`v`\ .
 
 
 .. index::
    pair: SetAggregate; union
 
 :spadfun:`union`\: (%, S) -> % 
-  \ ``union(u, x)``\  returns the set aggregate \ ``u``\  with the element \ ``x``\  added. If \ ``u``\  already contains \ ``x``\ , \ ``union(u, x)``\  returns a copy of \ ``u``\ .
+  \ :code:`union(u, x)`\  returns the set aggregate \ :code:`u`\  with the element \ :code:`x`\  added. If \ :code:`u`\  already contains \ :code:`x`\ , \ :code:`union(u, x)`\  returns a copy of \ :code:`u`\ .
 
 
 .. index::
    pair: SetAggregate; union
 
 :spadfun:`union`\: (S, %) -> % 
-  \ ``union(x, u)``\  returns the set aggregate \ ``u``\  with the element \ ``x``\  added. If \ ``u``\  already contains \ ``x``\ , \ ``union(x, u)``\  returns a copy of \ ``u``\ .
+  \ :code:`union(x, u)`\  returns the set aggregate \ :code:`u`\  with the element \ :code:`x`\  added. If \ :code:`u`\  already contains \ :code:`x`\ , \ :code:`union(x, u)`\  returns a copy of \ :code:`u`\ .
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

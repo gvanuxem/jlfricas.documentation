@@ -8,7 +8,7 @@ TexFormat
 :viewcode:`tex.spad line 1 <tex.spad#L1>` :editcode:`[edit on github] <tex.spad#L1>`
 
 
-\ :ref:`TexFormat <l546578466f726d6174>`\  provides a coercion from \ :ref:`OutputForm <l4f7574707574466f726d>`\  to TeX format. The particular dialect of TeX used is LaTeX. The basic object consists of three parts: a prologue, a tex part and an epilogue. The functions \ :spadfun:`prologue`\ , \ :spadfun:`tex`\  and \ :spadfun:`epilogue`\  extract these parts, respectively. The main guts of the expression go into the tex part. The other parts can be set (\ :spadfun:`setPrologue!`\ , \ :spadfun:`setEpilogue!`\ ) so that they contain the appropriate tags for printing. For example, the prologue and epilogue might simply contain \ ``````\ \verb+\ ``\[``\ +\ ``''``\  and \ ``````\ \verb+\ ``\]``\ +\ ``''``\ , respectively, so that the TeX section will be printed in LaTeX display math mode.
+\ :ref:`TexFormat <l546578466f726d6174>`\  provides a coercion from \ :ref:`OutputForm <l4f7574707574466f726d>`\  to TeX format. The particular dialect of TeX used is LaTeX. The basic object consists of three parts: a prologue, a tex part and an epilogue. The functions \ :spadfun:`prologue`\ , \ :spadfun:`tex`\  and \ :spadfun:`epilogue`\  extract these parts, respectively. The main guts of the expression go into the tex part. The other parts can be set (\ :spadfun:`setPrologue!`\ , \ :spadfun:`setEpilogue!`\ ) so that they contain the appropriate tags for printing. For example, the prologue and epilogue might simply contain \ :code:````\ \verb+\ :code:`\[`\ +\ :code:`''`\  and \ :code:````\ \verb+\ :code:`\]`\ +\ :code:`''`\ , respectively, so that the TeX section will be printed in LaTeX display math mode.
 
 
 .. _l546578466f726d6174-3d:
@@ -31,7 +31,7 @@ TexFormat
    pair: TexFormat; coerce
 
 :spadfun:`coerce`\: \ :ref:`OutputForm <l4f7574707574466f726d>`\  -> % 
-  \ ``coerce(o)``\  changes \ ``o``\  in the standard output format to TeX format.
+  \ :code:`coerce(o)`\  changes \ :code:`o`\  in the standard output format to TeX format.
 
 .. _l546578466f726d6174-636f6e76657274:
 
@@ -39,14 +39,14 @@ TexFormat
    pair: TexFormat; convert
 
 :spadfun:`convert`\: (\ :ref:`OutputForm <l4f7574707574466f726d>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``convert(o, step)``\  changes \ ``o``\  in standard output format to TeX format and also adds the given step number. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter step numbers.
+  \ :code:`convert(o, step)`\  changes \ :code:`o`\  in standard output format to TeX format and also adds the given step number. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter step numbers.
 
 
 .. index::
    pair: TexFormat; convert
 
 :spadfun:`convert`\: (\ :ref:`OutputForm <l4f7574707574466f726d>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> % 
-  \ ``convert(o, step, type)``\  changes \ ``o``\  in standard output format to TeX format and also adds the given \ ``step``\  number and type. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter \ ``step``\  numbers.
+  \ :code:`convert(o, step, type)`\  changes \ :code:`o`\  in standard output format to TeX format and also adds the given \ :code:`step`\  number and type. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter \ :code:`step`\  numbers.
 
 .. _l546578466f726d6174-646973706c6179:
 
@@ -54,14 +54,14 @@ TexFormat
    pair: TexFormat; display
 
 :spadfun:`display`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``display(t)``\  outputs the TeX formatted code \ ``t``\  so that each line has length less than or equal to the value set by the system command \spadsys{)set output length}.
+  \ :code:`display(t)`\  outputs the TeX formatted code \ :code:`t`\  so that each line has length less than or equal to the value set by the system command \spadsys{)set output length}.
 
 
 .. index::
    pair: TexFormat; display
 
 :spadfun:`display`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``display(t, width)``\  outputs the TeX formatted code \ ``t``\  so that each line has length less than or equal to \ ``width``\ .
+  \ :code:`display(t, width)`\  outputs the TeX formatted code \ :code:`t`\  so that each line has length less than or equal to \ :code:`width`\ .
 
 .. _l546578466f726d6174-6570696c6f677565:
 
@@ -69,7 +69,7 @@ TexFormat
    pair: TexFormat; epilogue
 
 :spadfun:`epilogue`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``epilogue(t)``\  extracts the epilogue section of a TeX form \ ``t``\ .
+  \ :code:`epilogue(t)`\  extracts the epilogue section of a TeX form \ :code:`t`\ .
 
 .. _l546578466f726d6174-6765744469616c656374:
 
@@ -77,7 +77,7 @@ TexFormat
    pair: TexFormat; getDialect
 
 :spadfun:`getDialect`\: () -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``getDialect()``\  return current dialect setting.
+  \ :code:`getDialect()`\  return current dialect setting.
 
 .. _l546578466f726d6174-6c61746578:
 
@@ -90,7 +90,7 @@ TexFormat
    pair: TexFormat; new
 
 :spadfun:`new`\: () -> % 
-  \ ``new()``\  create a new, empty object. Use \ :spadfun:`setPrologue!`\ , \ :spadfun:`setTex!`\  and \ :spadfun:`setEpilogue!`\  to set the various components of this object.
+  \ :code:`new()`\  create a new, empty object. Use \ :spadfun:`setPrologue!`\ , \ :spadfun:`setTex!`\  and \ :spadfun:`setEpilogue!`\  to set the various components of this object.
 
 .. _l546578466f726d6174-70726f6c6f677565:
 
@@ -98,7 +98,7 @@ TexFormat
    pair: TexFormat; prologue
 
 :spadfun:`prologue`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``prologue(t)``\  extracts the prologue section of a TeX form \ ``t``\ .
+  \ :code:`prologue(t)`\  extracts the prologue section of a TeX form \ :code:`t`\ .
 
 .. _l546578466f726d6174-7365744469616c656374:
 
@@ -106,7 +106,7 @@ TexFormat
    pair: TexFormat; setDialect
 
 :spadfun:`setDialect`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``setDialect(d)``\  sets \ ``s``\  as current dialect and returns previous setting. Possible values are \ ``tex``\  meaning using mostly plain TeX constructs and \ ``latex``\  which means more idiomatic LaTeX.
+  \ :code:`setDialect(d)`\  sets \ :code:`s`\  as current dialect and returns previous setting. Possible values are \ :code:`tex`\  meaning using mostly plain TeX constructs and \ :code:`latex`\  which means more idiomatic LaTeX.
 
 .. _l546578466f726d6174-7365744570696c6f67756521:
 
@@ -114,7 +114,7 @@ TexFormat
    pair: TexFormat; setEpilogue!
 
 :spadfun:`setEpilogue!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``setEpilogue!(t, strings)``\  sets the epilogue section of a TeX form \ ``t``\  to strings.
+  \ :code:`setEpilogue!(t, strings)`\  sets the epilogue section of a TeX form \ :code:`t`\  to strings.
 
 .. _l546578466f726d6174-73657450726f6c6f67756521:
 
@@ -122,7 +122,7 @@ TexFormat
    pair: TexFormat; setPrologue!
 
 :spadfun:`setPrologue!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``setPrologue!(t, strings)``\  sets the prologue section of a TeX form \ ``t``\  to strings.
+  \ :code:`setPrologue!(t, strings)`\  sets the prologue section of a TeX form \ :code:`t`\  to strings.
 
 .. _l546578466f726d6174-73657454657821:
 
@@ -130,7 +130,7 @@ TexFormat
    pair: TexFormat; setTex!
 
 :spadfun:`setTex!`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``setTex!(t, strings)``\  sets the TeX section of a TeX form \ ``t``\  to strings.
+  \ :code:`setTex!(t, strings)`\  sets the TeX section of a TeX form \ :code:`t`\  to strings.
 
 .. _l546578466f726d6174-746578:
 
@@ -138,7 +138,7 @@ TexFormat
    pair: TexFormat; tex
 
 :spadfun:`tex`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``tex(t)``\  extracts the TeX section of a TeX form \ ``t``\ .
+  \ :code:`tex(t)`\  extracts the TeX section of a TeX form \ :code:`t`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

@@ -18,7 +18,7 @@ InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS)
 * TS: \ :ref:`SquareFreeRegularTriangularSetCategory <l53717561726546726565526567756c6172547269616e67756c617253657443617465676f7279>`\ (R, E, V, P)
 
 
-An internal package for computing the rational univariate representation of a zero-dimensional algebraic variety given by a square-free triangular set. The main operation is \ :ref:`rur <l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b616765-727572>`\ . It is based on the \ *generic*\  algorithm description in [1].   References: [1] \ ``D``\ . LAZARD "Solving Zero-dimensional Algebraic Systems" Journal of Symbolic Computation, 1992, 13, 117-131
+An internal package for computing the rational univariate representation of a zero-dimensional algebraic variety given by a square-free triangular set. The main operation is \ :ref:`rur <l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b616765-727572>`\ . It is based on the \ *generic*\  algorithm description in [1].   References: [1] \ :code:`D`\ . LAZARD "Solving Zero-dimensional Algebraic Systems" Journal of Symbolic Computation, 1992, 13, 117-131
 
 
 .. _l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b616765-636865636b527572:
@@ -27,7 +27,7 @@ An internal package for computing the rational univariate representation of a ze
    pair: InternalRationalUnivariateRepresentationPackage; checkRur
 
 :spadfun:`checkRur`\: (TS, \ :ref:`List <l4c697374>`\  TS) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``checkRur(ts, lus)``\  returns \ ``true``\  if \ ``lus``\  is a rational univariate representation of \ ``ts``\ .
+  \ :code:`checkRur(ts, lus)`\  returns \ :code:`true`\  if \ :code:`lus`\  is a rational univariate representation of \ :code:`ts`\ .
 
 .. _l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b616765-727572:
 
@@ -35,6 +35,6 @@ An internal package for computing the rational univariate representation of a ze
    pair: InternalRationalUnivariateRepresentationPackage; rur
 
 :spadfun:`rur`\: (TS, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  TS 
-  \ ``rur(ts, univ?)``\  returns a rational univariate representation of \ ``ts``\ . This assumes that the lowest polynomial in \ ``ts``\  is a variable \ ``v``\  which does not occur in the other polynomials of \ ``ts``\ . This variable will be used to define the simple algebraic extension over which these other polynomials will be rewritten as univariate polynomials with degree one. If \ ``univ?``\  is \ ``true``\  then these polynomials will have a constant initial.
+  \ :code:`rur(ts, univ?)`\  returns a rational univariate representation of \ :code:`ts`\ . This assumes that the lowest polynomial in \ :code:`ts`\  is a variable \ :code:`v`\  which does not occur in the other polynomials of \ :code:`ts`\ . This variable will be used to define the simple algebraic extension over which these other polynomials will be rewritten as univariate polynomials with degree one. If \ :code:`univ?`\  is \ :code:`true`\  then these polynomials will have a constant initial.
 
 

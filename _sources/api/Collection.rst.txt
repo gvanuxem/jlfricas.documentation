@@ -44,7 +44,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
    pair: Collection; construct
 
 :spadfun:`construct`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``construct([x, y, ..., z])``\  returns the collection of elements \ ``x, y, ..., z``\  ordered as given. Equivalently written as \ ``[x, y, ..., z]\$D``\ , where \ ``D``\  is the domain. \ ``D``\  may be omitted for those of type List.
+  \ :code:`construct([x, y, ..., z])`\  returns the collection of elements \ :code:`x, y, ..., z`\  ordered as given. Equivalently written as \ :code:`[x, y, ..., z]\$D`\ , where \ :code:`D`\  is the domain. \ :code:`D`\  may be omitted for those of type List.
 
 .. _l436f6c6c656374696f6e-636f6e76657274:
 
@@ -108,7 +108,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
    pair: Collection; find
 
 :spadfun:`find`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> Union(S, failed) 
-  \ ``find(p, u)``\  returns the first \ ``x``\  in \ ``u``\  such that \ ``p(x)``\  is \ ``true``\ , and "failed" otherwise.
+  \ :code:`find(p, u)`\  returns the first \ :code:`x`\  in \ :code:`u`\  such that \ :code:`p(x)`\  is \ :code:`true`\ , and "failed" otherwise.
 
 .. _l436f6c6c656374696f6e-6c61746578:
 
@@ -170,21 +170,21 @@ A collection is a homogeneous aggregate which can be built from a list of member
    pair: Collection; reduce
 
 :spadfun:`reduce`\: ((S, S) -> S, %) -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``reduce(f, u)``\  reduces the binary operation \ ``f``\  across \ ``u``\ . For example, if \ ``u``\  is \ ``[x, y, ..., z]``\  then \ ``reduce(f, u)``\  returns \ ``f(..f(f(x, y), ...), z)``\ . Note: if \ ``u``\  has one element \ ``x``\ , \ ``reduce(f, u)``\  returns \ ``x``\ . Error: if \ ``u``\  is empty.
+  \ :code:`reduce(f, u)`\  reduces the binary operation \ :code:`f`\  across \ :code:`u`\ . For example, if \ :code:`u`\  is \ :code:`[x, y, ..., z]`\  then \ :code:`reduce(f, u)`\  returns \ :code:`f(..f(f(x, y), ...), z)`\ . Note: if \ :code:`u`\  has one element \ :code:`x`\ , \ :code:`reduce(f, u)`\  returns \ :code:`x`\ . Error: if \ :code:`u`\  is empty.
 
 
 .. index::
    pair: Collection; reduce
 
 :spadfun:`reduce`\: ((S, S) -> S, %, S) -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``reduce(f, u, x)``\  reduces the binary operation \ ``f``\  across \ ``u``\ , where \ ``x``\  is the identity operation of \ ``f``\ . Same as \ ``reduce(f, u)``\  if \ ``u``\  has 2 or more elements. Returns \ ``f(y, x)``\  if \ ``u``\  has one element \ ``y``\ . Returns \ ``x``\  if \ ``u``\  is empty. For example, \ ``reduce(+, u, 0)``\  returns the sum of the elements of \ ``u``\ .
+  \ :code:`reduce(f, u, x)`\  reduces the binary operation \ :code:`f`\  across \ :code:`u`\ , where \ :code:`x`\  is the identity operation of \ :code:`f`\ . Same as \ :code:`reduce(f, u)`\  if \ :code:`u`\  has 2 or more elements. Returns \ :code:`f(y, x)`\  if \ :code:`u`\  has one element \ :code:`y`\ . Returns \ :code:`x`\  if \ :code:`u`\  is empty. For example, \ :code:`reduce(+, u, 0)`\  returns the sum of the elements of \ :code:`u`\ .
 
 
 .. index::
    pair: Collection; reduce
 
 :spadfun:`reduce`\: ((S, S) -> S, %, S, S) -> S if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``reduce(f, u, x, z)``\  reduces the binary operation \ ``f``\  across \ ``u``\ , stopping when an "absorbing element" \ ``z``\  is encountered. As for \ ``reduce(f, u, x)``\ , \ ``x``\  is the identity element of \ ``f``\ . Same as \ ``reduce(f, u, x)``\  when \ ``u``\  contains no element \ ``z``\ . Thus the third argument \ ``x``\  is returned when \ ``u``\  is empty.
+  \ :code:`reduce(f, u, x, z)`\  reduces the binary operation \ :code:`f`\  across \ :code:`u`\ , stopping when an "absorbing element" \ :code:`z`\  is encountered. As for \ :code:`reduce(f, u, x)`\ , \ :code:`x`\  is the identity element of \ :code:`f`\ . Same as \ :code:`reduce(f, u, x)`\  when \ :code:`u`\  contains no element \ :code:`z`\ . Thus the third argument \ :code:`x`\  is returned when \ :code:`u`\  is empty.
 
 .. _l436f6c6c656374696f6e-72656d6f7665:
 
@@ -192,14 +192,14 @@ A collection is a homogeneous aggregate which can be built from a list of member
    pair: Collection; remove
 
 :spadfun:`remove`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``remove(p, u)``\  returns a copy of \ ``u``\  removing all elements \ ``x``\  such that \ ``p(x)``\  is \ ``true``\ . Note: \ ``remove(p, u) = [x for x in u | not p(x)]``\ .
+  \ :code:`remove(p, u)`\  returns a copy of \ :code:`u`\  removing all elements \ :code:`x`\  such that \ :code:`p(x)`\  is \ :code:`true`\ . Note: \ :code:`remove(p, u) = [x for x in u | not p(x)]`\ .
 
 
 .. index::
    pair: Collection; remove
 
 :spadfun:`remove`\: (S, %) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``remove(x, u)``\  returns a copy of \ ``u``\  with all elements equal to \ ``x``\  removed. Note: \ ``remove(x, u) = [y for y in u | y ~= x]``\ .
+  \ :code:`remove(x, u)`\  returns a copy of \ :code:`u`\  with all elements equal to \ :code:`x`\  removed. Note: \ :code:`remove(x, u) = [y for y in u | y ~= x]`\ .
 
 .. _l436f6c6c656374696f6e-72656d6f76654475706c696361746573:
 
@@ -207,7 +207,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
    pair: Collection; removeDuplicates
 
 :spadfun:`removeDuplicates`\: % -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``removeDuplicates(u)``\  returns a copy of \ ``u``\  with all duplicates removed.
+  \ :code:`removeDuplicates(u)`\  returns a copy of \ :code:`u`\  with all duplicates removed.
 
 .. _l436f6c6c656374696f6e-73616d706c65:
 
@@ -220,7 +220,7 @@ A collection is a homogeneous aggregate which can be built from a list of member
    pair: Collection; select
 
 :spadfun:`select`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``select(p, u)``\  returns a copy of \ ``u``\  containing only those elements such \ ``p(x)``\  is \ ``true``\ . Note: \ ``select(p, u) = [x for x in u | p(x)]``\ .
+  \ :code:`select(p, u)`\  returns a copy of \ :code:`u`\  containing only those elements such \ :code:`p(x)`\  is \ :code:`true`\ . Note: \ :code:`select(p, u) = [x for x in u | p(x)]`\ .
 
 .. _l436f6c6c656374696f6e-73697a653f:
 

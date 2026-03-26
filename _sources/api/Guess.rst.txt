@@ -39,7 +39,7 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; algDepHP
 
 :spadfun:`algDepHP`\: (\ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> Record(degreeStream: \ :ref:`Stream <l53747265616d>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , guessStream: \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F, guessModGen: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , testGen: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), exprStream: (EXPRR, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Stream <l53747265616d>`\  EXPRR, kind: \ :ref:`Symbol <l53796d626f6c>`\ , qvar: \ :ref:`Symbol <l53796d626f6c>`\ , A: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S) -> S, AF: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), AX: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , EXPRR) -> EXPRR, C: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  S) 
-  \ ``algDepHP(list, options)``\  returns a specification for Hermite-Pade approximation looking for algebraic dependencies
+  \ :code:`algDepHP(list, options)`\  returns a specification for Hermite-Pade approximation looking for algebraic dependencies
 
 .. _l4775657373-646966664850:
 
@@ -47,14 +47,14 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; diffHP
 
 :spadfun:`diffHP`\: \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\  -> Record(degreeStream: \ :ref:`Stream <l53747265616d>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , guessStream: \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F, guessModGen: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , testGen: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), exprStream: (EXPRR, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Stream <l53747265616d>`\  EXPRR, kind: \ :ref:`Symbol <l53796d626f6c>`\ , qvar: \ :ref:`Symbol <l53796d626f6c>`\ , A: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S) -> S, AF: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), AX: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , EXPRR) -> EXPRR, C: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  S) 
-  \ ``diffHP options``\  returns a specification for Hermite-Pade approximation with the differential operator
+  \ :code:`diffHP options`\  returns a specification for Hermite-Pade approximation with the differential operator
 
 
 .. index::
    pair: Guess; diffHP
 
 :spadfun:`diffHP`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\  -> Record(degreeStream: \ :ref:`Stream <l53747265616d>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , guessStream: \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F, guessModGen: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , testGen: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), exprStream: (EXPRR, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Stream <l53747265616d>`\  EXPRR, kind: \ :ref:`Symbol <l53796d626f6c>`\ , qvar: \ :ref:`Symbol <l53796d626f6c>`\ , A: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S) -> S, AF: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), AX: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , EXPRR) -> EXPRR, C: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  S) if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``diffHP options``\  returns a specification for Hermite-Pade approximation with the \$\ ``q``\ \$-dilation operator
+  \ :code:`diffHP options`\  returns a specification for Hermite-Pade approximation with the \$\ :code:`q`\ \$-dilation operator
 
 .. _l4775657373-6775657373:
 
@@ -62,28 +62,28 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guess
 
 :spadfun:`guess`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guess(l, options)``\  applies recursively \ :spadfun:`guessRat`\  to the successive differences and quotients of the list. The given options are used.
+  \ :code:`guess(l, options)`\  applies recursively \ :spadfun:`guessRat`\  to the successive differences and quotients of the list. The given options are used.
 
 
 .. index::
    pair: Guess; guess
 
 :spadfun:`guess`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\ ((\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guess(l, guessers, ops)``\  applies recursively the given \ ``guessers``\  to the successive differences if ops contains the symbol guessSum and quotients if ops contains the symbol guessProduct to the list. Default options as described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\  are used.
+  \ :code:`guess(l, guessers, ops)`\  applies recursively the given \ :code:`guessers`\  to the successive differences if ops contains the symbol guessSum and quotients if ops contains the symbol guessProduct to the list. Default options as described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\  are used.
 
 
 .. index::
    pair: Guess; guess
 
 :spadfun:`guess`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\ ((\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guess(l, guessers, ops)``\  applies recursively the given \ ``guessers``\  to the successive differences if ops contains the symbol \ ``guessSum``\  and quotients if ops contains the symbol \ ``guessProduct``\  to the list. The given options are used.
+  \ :code:`guess(l, guessers, ops)`\  applies recursively the given \ :code:`guessers`\  to the successive differences if ops contains the symbol \ :code:`guessSum`\  and quotients if ops contains the symbol \ :code:`guessProduct`\  to the list. The given options are used.
 
 
 .. index::
    pair: Guess; guess
 
 :spadfun:`guess`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guess l``\  applies recursively \ :spadfun:`guessRat`\  to the successive differences and quotients of the list. Default options as described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\  are used.
+  \ :code:`guess l`\  applies recursively \ :spadfun:`guessRat`\  to the successive differences and quotients of the list. Default options as described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\  are used.
 
 .. _l4775657373-6775657373414445:
 
@@ -91,21 +91,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessADE
 
 :spadfun:`guessADE`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessADE(l, options)``\  tries to find an algebraic differential equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the given options.
+  \ :code:`guessADE(l, options)`\  tries to find an algebraic differential equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options.
 
 
 .. index::
    pair: Guess; guessADE
 
 :spadfun:`guessADE`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessADE l``\  tries to find an algebraic differential equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
+  \ :code:`guessADE l`\  tries to find an algebraic differential equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
 
 
 .. index::
    pair: Guess; guessADE
 
 :spadfun:`guessADE`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessADE q``\  returns a guesser that tries to find an algebraic differential equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the given options.
+  \ :code:`guessADE q`\  returns a guesser that tries to find an algebraic differential equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options.
 
 .. _l4775657373-6775657373416c67:
 
@@ -113,14 +113,14 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessAlg
 
 :spadfun:`guessAlg`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessAlg(l, options)``\  tries to find an algebraic equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessADE`\ (\ ``l``\ , options) with \ ``maxDerivative == 0``\ .
+  \ :code:`guessAlg(l, options)`\  tries to find an algebraic equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessADE`\ (\ :code:`l`\ , options) with \ :code:`maxDerivative == 0`\ .
 
 
 .. index::
    pair: Guess; guessAlg
 
 :spadfun:`guessAlg`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessAlg l``\  tries to find an algebraic equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessADE`\ (\ ``l``\ , maxDerivative \ ``==``\  0).
+  \ :code:`guessAlg l`\  tries to find an algebraic equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessADE`\ (\ :code:`l`\ , maxDerivative \ :code:`==`\  0).
 
 .. _l4775657373-6775657373416c67446570:
 
@@ -128,14 +128,14 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessAlgDep
 
 :spadfun:`guessAlgDep`\: (\ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessAlgDep ll``\  tries to find an algebraic dependence between several power series whose first Taylor coefficients are given by members of \ ``ll``\ , using the given options.
+  \ :code:`guessAlgDep ll`\  tries to find an algebraic dependence between several power series whose first Taylor coefficients are given by members of \ :code:`ll`\ , using the given options.
 
 
 .. index::
    pair: Guess; guessAlgDep
 
 :spadfun:`guessAlgDep`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessAlgDep ll``\  tries to find an algebraic dependence between several power series whose first Taylor coefficients are given by members of \ ``ll``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
+  \ :code:`guessAlgDep ll`\  tries to find an algebraic dependence between several power series whose first Taylor coefficients are given by members of \ :code:`ll`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
 
 .. _l4775657373-677565737342696e526174:
 
@@ -143,21 +143,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessBinRat
 
 :spadfun:`guessBinRat`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessBinRat(l, options)``\  tries to find a function of the form \ ``n+``\ ->binomial(a+b \ ``n``\ , \ ``n``\ ) \ ``r``\ (\ ``n``\ ), where \ ``r``\ (\ ``n``\ ) is a rational function, that fits \ ``l``\ .
+  \ :code:`guessBinRat(l, options)`\  tries to find a function of the form \ :code:`n+`\ ->binomial(a+b \ :code:`n`\ , \ :code:`n`\ ) \ :code:`r`\ (\ :code:`n`\ ), where \ :code:`r`\ (\ :code:`n`\ ) is a rational function, that fits \ :code:`l`\ .
 
 
 .. index::
    pair: Guess; guessBinRat
 
 :spadfun:`guessBinRat`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessBinRat(l, options)``\  tries to find a function of the form \ ``n+``\ ->binomial(a+b \ ``n``\ , \ ``n``\ ) \ ``r``\ (\ ``n``\ ), where \ ``r``\ (\ ``n``\ ) is a rational function, that fits \ ``l``\ .
+  \ :code:`guessBinRat(l, options)`\  tries to find a function of the form \ :code:`n+`\ ->binomial(a+b \ :code:`n`\ , \ :code:`n`\ ) \ :code:`r`\ (\ :code:`n`\ ), where \ :code:`r`\ (\ :code:`n`\ ) is a rational function, that fits \ :code:`l`\ .
 
 
 .. index::
    pair: Guess; guessBinRat
 
 :spadfun:`guessBinRat`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessBinRat q``\  returns a guesser that tries to find a function of the form \ ``n+``\ ->qbinomial(a+b \ ``n``\ , \ ``n``\ ) \ ``r``\ (\ ``n``\ ), where \ ``r``\ (\ ``q^n``\ ) is a \ ``q``\ -rational function, that fits \ ``l``\ .
+  \ :code:`guessBinRat q`\  returns a guesser that tries to find a function of the form \ :code:`n+`\ ->qbinomial(a+b \ :code:`n`\ , \ :code:`n`\ ) \ :code:`r`\ (\ :code:`n`\ ), where \ :code:`r`\ (\ :code:`q^n`\ ) is a \ :code:`q`\ -rational function, that fits \ :code:`l`\ .
 
 .. _l4775657373-6775657373457870526174:
 
@@ -165,21 +165,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessExpRat
 
 :spadfun:`guessExpRat`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessExpRat(l, options)``\  tries to find a function of the form \ ``n+``\ ->(a+b \ ``n``\ )\ ``^n``\  \ ``r``\ (\ ``n``\ ), where \ ``r``\ (\ ``n``\ ) is a rational function, that fits \ ``l``\ .
+  \ :code:`guessExpRat(l, options)`\  tries to find a function of the form \ :code:`n+`\ ->(a+b \ :code:`n`\ )\ :code:`^n`\  \ :code:`r`\ (\ :code:`n`\ ), where \ :code:`r`\ (\ :code:`n`\ ) is a rational function, that fits \ :code:`l`\ .
 
 
 .. index::
    pair: Guess; guessExpRat
 
 :spadfun:`guessExpRat`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessExpRat l``\  tries to find a function of the form \ ``n+``\ ->(a+b \ ``n``\ )\ ``^n``\  \ ``r``\ (\ ``n``\ ), where \ ``r``\ (\ ``n``\ ) is a rational function, that fits \ ``l``\ .
+  \ :code:`guessExpRat l`\  tries to find a function of the form \ :code:`n+`\ ->(a+b \ :code:`n`\ )\ :code:`^n`\  \ :code:`r`\ (\ :code:`n`\ ), where \ :code:`r`\ (\ :code:`n`\ ) is a rational function, that fits \ :code:`l`\ .
 
 
 .. index::
    pair: Guess; guessExpRat
 
 :spadfun:`guessExpRat`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessExpRat q``\  returns a guesser that tries to find a function of the form \ ``n+``\ ->(a+b \ ``q^n``\ )\ ``^n``\  \ ``r``\ (\ ``q^n``\ ), where \ ``r``\ (\ ``q^n``\ ) is a \ ``q``\ -rational function, that fits \ ``l``\ .
+  \ :code:`guessExpRat q`\  returns a guesser that tries to find a function of the form \ :code:`n+`\ ->(a+b \ :code:`q^n`\ )\ :code:`^n`\  \ :code:`r`\ (\ :code:`q^n`\ ), where \ :code:`r`\ (\ :code:`q^n`\ ) is a \ :code:`q`\ -rational function, that fits \ :code:`l`\ .
 
 .. _l4775657373-67756573734645:
 
@@ -187,14 +187,14 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessFE
 
 :spadfun:`guessFE`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessFE(l, options)``\  tries to find an algebraic substitution equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the given options.
+  \ :code:`guessFE(l, options)`\  tries to find an algebraic substitution equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options.
 
 
 .. index::
    pair: Guess; guessFE
 
 :spadfun:`guessFE`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessFE l``\  tries to find an algebraic substitution equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
+  \ :code:`guessFE l`\  tries to find an algebraic substitution equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
 
 .. _l4775657373-6775657373486f6c6f:
 
@@ -202,21 +202,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessHolo
 
 :spadfun:`guessHolo`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessHolo(l, options)``\  tries to find an ordinary linear differential equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessADE`\ \ ``(l, options)``\  with \ ``maxPower == 1``\ .
+  \ :code:`guessHolo(l, options)`\  tries to find an ordinary linear differential equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessADE`\ \ :code:`(l, options)`\  with \ :code:`maxPower == 1`\ .
 
 
 .. index::
    pair: Guess; guessHolo
 
 :spadfun:`guessHolo`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessHolo l``\  tries to find an ordinary linear differential equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessADE`\ \ ``(l, maxPower == 1)``\ .
+  \ :code:`guessHolo l`\  tries to find an ordinary linear differential equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessADE`\ \ :code:`(l, maxPower == 1)`\ .
 
 
 .. index::
    pair: Guess; guessHolo
 
 :spadfun:`guessHolo`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessHolo q``\  returns a guesser that tries to find a linear differential equation for a generating function whose first Taylor coefficients are given by \ ``l``\ , using the given options.
+  \ :code:`guessHolo q`\  returns a guesser that tries to find a linear differential equation for a generating function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options.
 
 .. _l4775657373-677565737350616465:
 
@@ -224,14 +224,14 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessPade
 
 :spadfun:`guessPade`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessPade(l, options)``\  tries to find a rational function whose first Taylor coefficients are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessADE`\ \ ``(l, maxDerivative == 0, maxPower == 1, allDegrees == true)``\ .
+  \ :code:`guessPade(l, options)`\  tries to find a rational function whose first Taylor coefficients are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessADE`\ \ :code:`(l, maxDerivative == 0, maxPower == 1, allDegrees == true)`\ .
 
 
 .. index::
    pair: Guess; guessPade
 
 :spadfun:`guessPade`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessPade(l, options)``\  tries to find a rational function whose first Taylor coefficients are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessADE`\ \ ``(l, options)``\  with \ ``maxDerivative == 0, maxPower == 1, allDegrees == true``\ .
+  \ :code:`guessPade(l, options)`\  tries to find a rational function whose first Taylor coefficients are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessADE`\ \ :code:`(l, options)`\  with \ :code:`maxDerivative == 0, maxPower == 1, allDegrees == true`\ .
 
 .. _l4775657373-677565737350526563:
 
@@ -239,21 +239,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessPRec
 
 :spadfun:`guessPRec`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessPRec(l, options)``\  tries to find a linear recurrence with polynomial coefficients whose first values are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\ \ ``(l, options)``\  with \ ``maxPower == 1``\ .
+  \ :code:`guessPRec(l, options)`\  tries to find a linear recurrence with polynomial coefficients whose first values are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\ \ :code:`(l, options)`\  with \ :code:`maxPower == 1`\ .
 
 
 .. index::
    pair: Guess; guessPRec
 
 :spadfun:`guessPRec`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessPRec l``\  tries to find a linear recurrence with polynomial coefficients whose first values are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessRec`\ \ ``(l, maxPower == 1)``\ .
+  \ :code:`guessPRec l`\  tries to find a linear recurrence with polynomial coefficients whose first values are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessRec`\ \ :code:`(l, maxPower == 1)`\ .
 
 
 .. index::
    pair: Guess; guessPRec
 
 :spadfun:`guessPRec`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessPRec q``\  returns a guesser that tries to find a linear \ ``q``\ -recurrence with polynomial coefficients whose first values are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\ \ ``(q)``\  with \ ``maxPower == 1``\ .
+  \ :code:`guessPRec q`\  returns a guesser that tries to find a linear \ :code:`q`\ -recurrence with polynomial coefficients whose first values are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\ \ :code:`(q)`\  with \ :code:`maxPower == 1`\ .
 
 .. _l4775657373-6775657373526174:
 
@@ -261,21 +261,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessRat
 
 :spadfun:`guessRat`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessRat(l, options)``\  tries to find a rational function whose first values are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\ \ ``(l, maxShift == 0, maxPower == 1, allDegrees == true)``\ .
+  \ :code:`guessRat(l, options)`\  tries to find a rational function whose first values are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\ \ :code:`(l, maxShift == 0, maxPower == 1, allDegrees == true)`\ .
 
 
 .. index::
    pair: Guess; guessRat
 
 :spadfun:`guessRat`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessRat l``\  tries to find a rational function whose first values are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessRec`\ \ ``(l, maxShift == 0, maxPower == 1, allDegrees == true)``\ .
+  \ :code:`guessRat l`\  tries to find a rational function whose first values are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ . It is equivalent to \ :spadfun:`guessRec`\ \ :code:`(l, maxShift == 0, maxPower == 1, allDegrees == true)`\ .
 
 
 .. index::
    pair: Guess; guessRat
 
 :spadfun:`guessRat`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessRat q``\  returns a guesser that tries to find a \ ``q``\ -rational function whose first values are given by \ ``l``\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\  with \ ``(l, maxShift == 0, maxPower == 1, allDegrees == true)``\ .
+  \ :code:`guessRat q`\  returns a guesser that tries to find a \ :code:`q`\ -rational function whose first values are given by \ :code:`l`\ , using the given options. It is equivalent to \ :spadfun:`guessRec`\  with \ :code:`(l, maxShift == 0, maxPower == 1, allDegrees == true)`\ .
 
 .. _l4775657373-6775657373526563:
 
@@ -283,21 +283,21 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; guessRec
 
 :spadfun:`guessRec`\: (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessRec(l, options)``\  tries to find an ordinary difference equation whose first values are given by \ ``l``\ , using the given options.
+  \ :code:`guessRec(l, options)`\  tries to find an ordinary difference equation whose first values are given by \ :code:`l`\ , using the given options.
 
 
 .. index::
    pair: Guess; guessRec
 
 :spadfun:`guessRec`\: \ :ref:`List <l4c697374>`\  F -> \ :ref:`List <l4c697374>`\  EXPRR 
-  \ ``guessRec l``\  tries to find an ordinary difference equation whose first values are given by \ ``l``\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
+  \ :code:`guessRec l`\  tries to find an ordinary difference equation whose first values are given by \ :code:`l`\ , using the default options described in \ :ref:`GuessOptionFunctions0 <l47756573734f7074696f6e46756e6374696f6e7330>`\ .
 
 
 .. index::
    pair: Guess; guessRec
 
 :spadfun:`guessRec`\: \ :ref:`Symbol <l53796d626f6c>`\  -> (\ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  EXPRR if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``guessRec q``\  returns a guesser that finds an ordinary \ ``q``\ -difference equation whose first values are given by \ ``l``\ , using the given options.
+  \ :code:`guessRec q`\  returns a guesser that finds an ordinary \ :code:`q`\ -difference equation whose first values are given by \ :code:`l`\ , using the given options.
 
 .. _l4775657373-73686966744850:
 
@@ -305,14 +305,14 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; shiftHP
 
 :spadfun:`shiftHP`\: \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\  -> Record(degreeStream: \ :ref:`Stream <l53747265616d>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , guessStream: \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F, guessModGen: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , testGen: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), exprStream: (EXPRR, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Stream <l53747265616d>`\  EXPRR, kind: \ :ref:`Symbol <l53796d626f6c>`\ , qvar: \ :ref:`Symbol <l53796d626f6c>`\ , A: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S) -> S, AF: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), AX: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , EXPRR) -> EXPRR, C: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  S) 
-  \ ``shiftHP options``\  returns a specification for Hermite-Pade approximation with the shift operator
+  \ :code:`shiftHP options`\  returns a specification for Hermite-Pade approximation with the shift operator
 
 
 .. index::
    pair: Guess; shiftHP
 
 :spadfun:`shiftHP`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\  -> Record(degreeStream: \ :ref:`Stream <l53747265616d>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , guessStream: \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F, guessModGen: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , testGen: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), exprStream: (EXPRR, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Stream <l53747265616d>`\  EXPRR, kind: \ :ref:`Symbol <l53796d626f6c>`\ , qvar: \ :ref:`Symbol <l53796d626f6c>`\ , A: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S) -> S, AF: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), AX: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , EXPRR) -> EXPRR, C: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  S) if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\  and F has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
-  \ ``shiftHP options``\  returns a specification for Hermite-Pade approximation with the \$\ ``q``\ \$-shift operator, or, if \ ``maxMixedDegree > 0``\  for mixed shifts
+  \ :code:`shiftHP options`\  returns a specification for Hermite-Pade approximation with the \$\ :code:`q`\ \$-shift operator, or, if \ :code:`maxMixedDegree > 0`\  for mixed shifts
 
 .. _l4775657373-73756273744850:
 
@@ -320,6 +320,6 @@ This package implements guessing of sequences. Packages for the most common case
    pair: Guess; substHP
 
 :spadfun:`substHP`\: \ :ref:`List <l4c697374>`\  \ :ref:`GuessOption <l47756573734f7074696f6e>`\  -> Record(degreeStream: \ :ref:`Stream <l53747265616d>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , guessStream: \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F -> \ :ref:`Stream <l53747265616d>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  F, guessModGen: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , testGen: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), exprStream: (EXPRR, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Stream <l53747265616d>`\  EXPRR, kind: \ :ref:`Symbol <l53796d626f6c>`\ , qvar: \ :ref:`Symbol <l53796d626f6c>`\ , A: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S) -> S, AF: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`UnivariateFormalPowerSeries <l556e6976617269617465466f726d616c506f776572536572696573>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), AX: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , EXPRR) -> EXPRR, C: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`List <l4c697374>`\  S) 
-  \ ``substHP options``\  returns a specification for Hermite-Pade approximation with the substitution operator
+  \ :code:`substHP options`\  returns a specification for Hermite-Pade approximation with the substitution operator
 
 

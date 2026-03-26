@@ -12,7 +12,7 @@ SetOfMIntegersInOneToN(m, n)
 * n: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-\ :ref:`SetOfMIntegersInOneToN <l5365744f664d496e746567657273496e4f6e65546f4e>`\  implements the subsets of \ ``M``\  integers in the interval \ ``[1..n]``\ 
+\ :ref:`SetOfMIntegersInOneToN <l5365744f664d496e746567657273496e4f6e65546f4e>`\  implements the subsets of \ :code:`M`\  integers in the interval \ :code:`[1..n]`\ 
 
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-3d:
@@ -41,7 +41,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; delta
 
 :spadfun:`delta`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``delta(S, k, p)``\  returns the number of elements of \ ``S``\  which are strictly between \ ``p``\  and the \ ``k^``\ {th} element of \ ``S``\ .
+  \ :code:`delta(S, k, p)`\  returns the number of elements of \ :code:`S`\  which are strictly between \ :code:`p`\  and the \ :code:`k^`\ {th} element of \ :code:`S`\ .
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-656c656d656e7473:
 
@@ -49,7 +49,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; elements
 
 :spadfun:`elements`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``elements(S)``\  returns the list of the elements of \ ``S``\  in increasing order.
+  \ :code:`elements(S)`\  returns the list of the elements of \ :code:`S`\  in increasing order.
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-656e756d6572617465:
 
@@ -61,7 +61,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; enumerate
 
 :spadfun:`enumerate`\: () -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``enumerate()``\  returns a vector of all the sets of \ ``M``\  integers in \ ``1..n``\ .
+  \ :code:`enumerate()`\  returns a vector of all the sets of \ :code:`M`\  integers in \ :code:`1..n`\ .
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-68617368:
 
@@ -79,7 +79,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; incrementKthElement
 
 :spadfun:`incrementKthElement`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> Union(%, failed) 
-  \ ``incrementKthElement(S, k)``\  increments the \ ``k^``\ {th} element of \ ``S``\ , and returns "failed" if the result is not a set of \ ``M``\  integers in \ ``1..n``\  any more.
+  \ :code:`incrementKthElement(S, k)`\  increments the \ :code:`k^`\ {th} element of \ :code:`S`\ , and returns "failed" if the result is not a set of \ :code:`M`\  integers in \ :code:`1..n`\  any more.
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-696e646578:
 
@@ -102,7 +102,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; member?
 
 :spadfun:`member?`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``member?(p, s)``\  returns \ ``true``\  is \ ``p``\  is in \ ``s``\ , \ ``false``\  otherwise.
+  \ :code:`member?(p, s)`\  returns \ :code:`true`\  is \ :code:`p`\  is in \ :code:`s`\ , \ :code:`false`\  otherwise.
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-72616e646f6d:
 
@@ -115,7 +115,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; replaceKthElement
 
 :spadfun:`replaceKthElement`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> Union(%, failed) 
-  \ ``replaceKthElement(S, k, p)``\  replaces the \ ``k^``\ {th} element of \ ``S``\  by \ ``p``\ , and returns "failed" if the result is not a set of \ ``M``\  integers in \ ``1..n``\  any more.
+  \ :code:`replaceKthElement(S, k, p)`\  replaces the \ :code:`k^`\ {th} element of \ :code:`S`\  by \ :code:`p`\ , and returns "failed" if the result is not a set of \ :code:`M`\  integers in \ :code:`1..n`\  any more.
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-7365744f664d696e4e:
 
@@ -123,7 +123,7 @@ SetOfMIntegersInOneToN(m, n)
    pair: SetOfMIntegersInOneToN; setOfMinN
 
 :spadfun:`setOfMinN`\: \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``setOfMinN([a_1, ..., a_m])``\  returns the set {\ ``a_1``\ , ..., a_m}. Error if {\ ``a_1``\ , ..., a_m} is not a set of \ ``M``\  integers in \ ``1..n``\ .
+  \ :code:`setOfMinN([a_1, ..., a_m])`\  returns the set {\ :code:`a_1`\ , ..., a_m}. Error if {\ :code:`a_1`\ , ..., a_m} is not a set of \ :code:`M`\  integers in \ :code:`1..n`\ .
 
 .. _l5365744f664d496e746567657273496e4f6e65546f4e-73697a65:
 

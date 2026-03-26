@@ -31,7 +31,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; #
 
 :spadfun:`#`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``\# p``\  returns the number of terms in \ ``p``\ .
+  \ :code:`\# p`\  returns the number of terms in \ :code:`p`\ .
 
 .. _l58506f6c796e6f6d69616c52696e67-2a:
 
@@ -43,7 +43,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; *
 
 :spadfun:`\*`\: (%, R) -> % 
-  \ ``p*r``\  returns the product of \ ``p``\  by \ ``r``\ .
+  \ :code:`p*r`\  returns the product of \ :code:`p`\  by \ :code:`r`\ .
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -81,7 +81,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; /
 
 :spadfun:`/`\: (%, R) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``p/r``\  returns \ ``p*(1/r)``\ .
+  \ :code:`p/r`\  returns \ :code:`p*(1/r)`\ .
 
 .. _l58506f6c796e6f6d69616c52696e67-3d:
 
@@ -128,7 +128,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; coef
 
 :spadfun:`coef`\: (%, E) -> R 
-  \ ``coef(p, e)``\  extracts the coefficient of the monomial \ ``e``\ . Returns zero if \ ``e``\  is not present.
+  \ :code:`coef(p, e)`\  extracts the coefficient of the monomial \ :code:`e`\ . Returns zero if \ :code:`e`\  is not present.
 
 .. _l58506f6c796e6f6d69616c52696e67-636f656666696369656e74:
 
@@ -150,7 +150,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; coerce
 
 :spadfun:`coerce`\: E -> % 
-  \ ``coerce(e)``\  returns \ ``1*e``\ 
+  \ :code:`coerce(e)`\  returns \ :code:`1*e`\ 
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -171,7 +171,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; constant?
 
 :spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``constant?(p)``\  tests whether the polynomial \ ``p``\  belongs to the coefficient ring.
+  \ :code:`constant?(p)`\  tests whether the polynomial \ :code:`p`\  belongs to the coefficient ring.
 
 .. _l58506f6c796e6f6d69616c52696e67-636f6e7374616e74:
 
@@ -179,7 +179,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; constant
 
 :spadfun:`constant`\: % -> R 
-  \ ``constant(p)``\  return the constant term of \ ``p``\ .
+  \ :code:`constant(p)`\  return the constant term of \ :code:`p`\ .
 
 .. _l58506f6c796e6f6d69616c52696e67-636f6e737472756374:
 
@@ -246,7 +246,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; map
 
 :spadfun:`map`\: (R -> R, %) -> % 
-  \ ``map(fn, x)``\  returns \ ``Sum(fn(r_i) w_i)``\  if \ ``x``\  writes \ ``Sum(r_i w_i)``\ .
+  \ :code:`map(fn, x)`\  returns \ :code:`Sum(fn(r_i) w_i)`\  if \ :code:`x`\  writes \ :code:`Sum(r_i w_i)`\ .
 
 .. _l58506f6c796e6f6d69616c52696e67-6d6178646567:
 
@@ -254,7 +254,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; maxdeg
 
 :spadfun:`maxdeg`\: % -> E 
-  \ ``maxdeg(p)``\  returns the greatest word occurring in the polynomial \ ``p``\  with a non-zero coefficient. An error is produced if \ ``p``\  is zero.
+  \ :code:`maxdeg(p)`\  returns the greatest word occurring in the polynomial \ :code:`p`\  with a non-zero coefficient. An error is produced if \ :code:`p`\  is zero.
 
 .. _l58506f6c796e6f6d69616c52696e67-6d696e646567:
 
@@ -262,7 +262,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; mindeg
 
 :spadfun:`mindeg`\: % -> E 
-  \ ``mindeg(p)``\  returns the smallest word occurring in the polynomial \ ``p``\  with a non-zero coefficient. An error is produced if \ ``p``\  is zero.
+  \ :code:`mindeg(p)`\  returns the smallest word occurring in the polynomial \ :code:`p`\  with a non-zero coefficient. An error is produced if \ :code:`p`\  is zero.
 
 .. _l58506f6c796e6f6d69616c52696e67-6d6f6e6f6d69616c3f:
 
@@ -305,7 +305,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; quasiRegular?
 
 :spadfun:`quasiRegular?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``quasiRegular?(x)``\  return \ ``true``\  if \ ``constant(p)``\  is zero.
+  \ :code:`quasiRegular?(x)`\  return \ :code:`true`\  if \ :code:`constant(p)`\  is zero.
 
 .. _l58506f6c796e6f6d69616c52696e67-7175617369526567756c6172:
 
@@ -313,7 +313,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; quasiRegular
 
 :spadfun:`quasiRegular`\: % -> % 
-  \ ``quasiRegular(x)``\  return \ ``x``\  minus its constant term.
+  \ :code:`quasiRegular(x)`\  return \ :code:`x`\  minus its constant term.
 
 .. _l58506f6c796e6f6d69616c52696e67-7265636970:
 
@@ -326,7 +326,7 @@ This domain represents generalized polynomials with coefficients (from a not nec
    pair: XPolynomialRing; reductum
 
 :spadfun:`reductum`\: % -> % 
-  \ ``reductum(p)``\  returns \ ``p``\  minus its leading term. An error is produced if \ ``p``\  is zero.
+  \ :code:`reductum(p)`\  returns \ :code:`p`\  minus its leading term. An error is produced if \ :code:`p`\  is zero.
 
 .. _l58506f6c796e6f6d69616c52696e67-7269676874506f776572:
 

@@ -90,7 +90,7 @@ UnivariateTaylorSeriesCategory Coef
    pair: UnivariateTaylorSeriesCategory; ^
 
 :spadfun:`^`\: (%, Coef) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  and Coef has \ :ref:`Field <l4669656c64>`\ 
-  \ ``f(x) ^ a``\  computes a power of a power series. When the coefficient ring is a field, we may raise a series to an exponent from the coefficient ring provided that the constant coefficient of the series is 1.
+  \ :code:`f(x) ^ a`\  computes a power of a power series. When the coefficient ring is a field, we may raise a series to an exponent from the coefficient ring provided that the constant coefficient of the series is 1.
 
 
 \ :ref:`^ <l5261646963616c43617465676f7279-5e>`\ \: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -215,7 +215,7 @@ UnivariateTaylorSeriesCategory Coef
    pair: UnivariateTaylorSeriesCategory; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``coefficients(a0 + a1 x + a2 x^2 + ...)``\  returns a stream of coefficients: \ ``[a0, a1, a2, ...]``\ . The entries of the stream may be zero.
+  \ :code:`coefficients(a0 + a1 x + a2 x^2 + ...)`\  returns a stream of coefficients: \ :code:`[a0, a1, a2, ...]`\ . The entries of the stream may be zero.
 
 .. _l556e69766172696174655461796c6f7253657269657343617465676f7279-636f65726365:
 
@@ -446,7 +446,7 @@ UnivariateTaylorSeriesCategory Coef
    pair: UnivariateTaylorSeriesCategory; multiplyCoefficients
 
 :spadfun:`multiplyCoefficients`\: (\ :ref:`Integer <l496e7465676572>`\  -> Coef, %) -> % 
-  \ ``multiplyCoefficients(f, sum(n = 0..infinity, a[n] * x^n))``\  returns \ ``sum(n = 0..infinity, f(n) * a[n] * x^n)``\ . This function is used when Laurent series are represented by a Taylor series and an order.
+  \ :code:`multiplyCoefficients(f, sum(n = 0..infinity, a[n] * x^n))`\  returns \ :code:`sum(n = 0..infinity, f(n) * a[n] * x^n)`\ . This function is used when Laurent series are represented by a Taylor series and an order.
 
 .. _l556e69766172696174655461796c6f7253657269657343617465676f7279-6d756c7469706c794578706f6e656e7473:
 
@@ -498,14 +498,14 @@ UnivariateTaylorSeriesCategory Coef
    pair: UnivariateTaylorSeriesCategory; polynomial
 
 :spadfun:`polynomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  Coef 
-  \ ``polynomial(f, k)``\  returns a polynomial consisting of the sum of all terms of \ ``f``\  of degree \ ``<= k``\ .
+  \ :code:`polynomial(f, k)`\  returns a polynomial consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`<= k`\ .
 
 
 .. index::
    pair: UnivariateTaylorSeriesCategory; polynomial
 
 :spadfun:`polynomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  Coef 
-  \ ``polynomial(f, k1, k2)``\  returns a polynomial consisting of the sum of all terms of \ ``f``\  of degree \ ``d``\  with \ ``k1 <= d <= k2``\ .
+  \ :code:`polynomial(f, k1, k2)`\  returns a polynomial consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`d`\  with \ :code:`k1 <= d <= k2`\ .
 
 .. _l556e69766172696174655461796c6f7253657269657343617465676f7279-71756f4279566172:
 
@@ -513,7 +513,7 @@ UnivariateTaylorSeriesCategory Coef
    pair: UnivariateTaylorSeriesCategory; quoByVar
 
 :spadfun:`quoByVar`\: % -> % 
-  \ ``quoByVar(a0 + a1 x + a2 x^2 + ...)``\  returns \ ``a1 + a2 x + a3 x^2 + ...``\  Thus, this function subtracts the constant term and divides by the series variable. This function is used when Laurent series are represented by a Taylor series and an order.
+  \ :code:`quoByVar(a0 + a1 x + a2 x^2 + ...)`\  returns \ :code:`a1 + a2 x + a3 x^2 + ...`\  Thus, this function subtracts the constant term and divides by the series variable. This function is used when Laurent series are represented by a Taylor series and an order.
 
 .. _l556e69766172696174655461796c6f7253657269657343617465676f7279-7265636970:
 
@@ -560,14 +560,14 @@ UnivariateTaylorSeriesCategory Coef
    pair: UnivariateTaylorSeriesCategory; series
 
 :spadfun:`series`\: \ :ref:`Stream <l53747265616d>`\  Coef -> % 
-  \ ``series([a0, a1, a2, ...])``\  is the Taylor series \ ``a0 + a1 x + a2 x^2 + ...``\ .
+  \ :code:`series([a0, a1, a2, ...])`\  is the Taylor series \ :code:`a0 + a1 x + a2 x^2 + ...`\ .
 
 
 .. index::
    pair: UnivariateTaylorSeriesCategory; series
 
 :spadfun:`series`\: \ :ref:`Stream <l53747265616d>`\  Record(k: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , c: Coef) -> % 
-  \ ``series(st)``\  creates a series from a stream of non-zero terms, where a term is an exponent-coefficient pair. The terms in the stream should be ordered by increasing order of exponents.
+  \ :code:`series(st)`\  creates a series from a stream of non-zero terms, where a term is an exponent-coefficient pair. The terms in the stream should be ordered by increasing order of exponents.
 
 .. _l556e69766172696174655461796c6f7253657269657343617465676f7279-73696e:
 

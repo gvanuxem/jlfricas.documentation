@@ -64,28 +64,28 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; concat
 
 :spadfun:`concat`\: (%, %) -> % 
-  \ ``concat(u, v)``\  returns an aggregate consisting of the elements of \ ``u``\  followed by the elements of \ ``v``\ . Note: if \ ``w = concat(u, v)``\  then \ ``w.i = u.i for i in indices u``\  and \ ``w.(j + maxIndex u) = v.j for j in indices v``\ .
+  \ :code:`concat(u, v)`\  returns an aggregate consisting of the elements of \ :code:`u`\  followed by the elements of \ :code:`v`\ . Note: if \ :code:`w = concat(u, v)`\  then \ :code:`w.i = u.i for i in indices u`\  and \ :code:`w.(j + maxIndex u) = v.j for j in indices v`\ .
 
 
 .. index::
    pair: LinearAggregate; concat
 
 :spadfun:`concat`\: (%, S) -> % 
-  \ ``concat(u, x)``\  returns aggregate \ ``u``\  with additional element \ ``x``\  at the end. Note: for lists, \ ``concat(u, x) = concat(u, [x])``\ .
+  \ :code:`concat(u, x)`\  returns aggregate \ :code:`u`\  with additional element \ :code:`x`\  at the end. Note: for lists, \ :code:`concat(u, x) = concat(u, [x])`\ .
 
 
 .. index::
    pair: LinearAggregate; concat
 
 :spadfun:`concat`\: (S, %) -> % 
-  \ ``concat(x, u)``\  returns aggregate \ ``u``\  with additional element \ ``x``\  at the front. Note: for lists: \ ``concat(x, u) = concat([x], u)``\ .
+  \ :code:`concat(x, u)`\  returns aggregate \ :code:`u`\  with additional element \ :code:`x`\  at the front. Note: for lists: \ :code:`concat(x, u) = concat([x], u)`\ .
 
 
 .. index::
    pair: LinearAggregate; concat
 
 :spadfun:`concat`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``concat(u)``\ , where \ ``u``\  is a list of aggregates \ ``[a, b, ..., c]``\ , returns a single aggregate consisting of the elements of \ ``a``\  followed by those of \ ``b``\  followed ... by the elements of \ ``c``\ . Note: \ ``concat([a, b, ..., c]) = concat(a, concat([b, ..., c]))``\ .
+  \ :code:`concat(u)`\ , where \ :code:`u`\  is a list of aggregates \ :code:`[a, b, ..., c]`\ , returns a single aggregate consisting of the elements of \ :code:`a`\  followed by those of \ :code:`b`\  followed ... by the elements of \ :code:`c`\ . Note: \ :code:`concat([a, b, ..., c]) = concat(a, concat([b, ..., c]))`\ .
 
 .. _l4c696e656172416767726567617465-636f6e737472756374:
 
@@ -108,7 +108,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; copyInto!
 
 :spadfun:`copyInto!`\: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``copyInto!(u, v, i)``\  returns aggregate \ ``u``\  containing a copy of \ ``v``\  inserted at element \ ``i``\ .
+  \ :code:`copyInto!(u, v, i)`\  returns aggregate \ :code:`u`\  containing a copy of \ :code:`v`\  inserted at element \ :code:`i`\ .
 
 .. _l4c696e656172416767726567617465-636f756e74:
 
@@ -125,14 +125,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; delete
 
 :spadfun:`delete`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``delete(u, i)``\  returns a copy of \ ``u``\  with the \ ``i``\ th element deleted. Note: \ ``delete(u, i) = concat(u(minIndex(u)..i - 1), u(i + 1..))``\ .
+  \ :code:`delete(u, i)`\  returns a copy of \ :code:`u`\  with the \ :code:`i`\ th element deleted. Note: \ :code:`delete(u, i) = concat(u(minIndex(u)..i - 1), u(i + 1..))`\ .
 
 
 .. index::
    pair: LinearAggregate; delete
 
 :spadfun:`delete`\: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``delete(u, i..j)``\  returns a copy of \ ``u``\  with the \ ``i``\ th through \ ``j``\ th element deleted. Note: \ ``delete(u, i..j) = concat(u(minIndex(u)..i-1), u(j+1..))``\ .
+  \ :code:`delete(u, i..j)`\  returns a copy of \ :code:`u`\  with the \ :code:`i`\ th through \ :code:`j`\ th element deleted. Note: \ :code:`delete(u, i..j) = concat(u(minIndex(u)..i-1), u(j+1..))`\ .
 
 .. _l4c696e656172416767726567617465-656c74:
 
@@ -214,7 +214,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; first
 
 :spadfun:`first`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``first(u, n)``\  returns a copy of the first \ ``n``\  elements of \ ``u``\ . Error: if \ ``u``\  has less than \ ``n``\  elements.
+  \ :code:`first(u, n)`\  returns a copy of the first \ :code:`n`\  elements of \ :code:`u`\ . Error: if \ :code:`u`\  has less than \ :code:`n`\  elements.
 
 .. _l4c696e656172416767726567617465-68617368:
 
@@ -242,14 +242,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; insert
 
 :spadfun:`insert`\: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``insert(v, u, i)``\  returns a copy of \ ``u``\  having \ ``v``\  inserted beginning at the \ ``i``\ th element. Note: \ ``insert(v, u, i) = concat(u(minIndex(u)..i-1), concat(v, u(i..)))``\ .
+  \ :code:`insert(v, u, i)`\  returns a copy of \ :code:`u`\  having \ :code:`v`\  inserted beginning at the \ :code:`i`\ th element. Note: \ :code:`insert(v, u, i) = concat(u(minIndex(u)..i-1), concat(v, u(i..)))`\ .
 
 
 .. index::
    pair: LinearAggregate; insert
 
 :spadfun:`insert`\: (S, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``insert(x, u, i)``\  returns a copy of \ ``u``\  having \ ``x``\  as its \ ``i``\ th element. Note: \ ``insert(x, u, i) = concat(u(minIndex(u)..i-1), concat(x, u(i..)))``\ .
+  \ :code:`insert(x, u, i)`\  returns a copy of \ :code:`u`\  having \ :code:`x`\  as its \ :code:`i`\ th element. Note: \ :code:`insert(x, u, i) = concat(u(minIndex(u)..i-1), concat(x, u(i..)))`\ .
 
 .. _l4c696e656172416767726567617465-6c61746578:
 
@@ -262,7 +262,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; leftTrim
 
 :spadfun:`leftTrim`\: (%, S) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``leftTrim(u, x)``\  returns a copy of \ ``u``\  with all leading \ ``x``\  deleted. For example, \ ``leftTrim(" abc ", char " ")``\  returns \ ``"abc "``\ .
+  \ :code:`leftTrim(u, x)`\  returns a copy of \ :code:`u`\  with all leading \ :code:`x`\  deleted. For example, \ :code:`leftTrim(" abc ", char " ")`\  returns \ :code:`"abc "`\ .
 
 .. _l4c696e656172416767726567617465-6c6573733f:
 
@@ -280,7 +280,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; map
 
 :spadfun:`map`\: ((S, S) -> S, %, %) -> % 
-  \ ``map(f, u, v)``\  returns a new aggregate \ ``w``\  with elements \ ``z = f(x, y)``\  for corresponding elements \ ``x``\  and \ ``y``\  from \ ``u``\  and \ ``v``\ . Note: \ ``w.i = f(u.i, v.i)``\ .
+  \ :code:`map(f, u, v)`\  returns a new aggregate \ :code:`w`\  with elements \ :code:`z = f(x, y)`\  for corresponding elements \ :code:`x`\  and \ :code:`y`\  from \ :code:`u`\  and \ :code:`v`\ . Note: \ :code:`w.i = f(u.i, v.i)`\ .
 
 
 \ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (S -> S, %) -> % 
@@ -320,14 +320,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; merge
 
 :spadfun:`merge`\: (%, %) -> % if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``merge(u, v)``\  merges \ ``u``\  and \ ``v``\  in ascending order. Note: \ ``merge(u, v) = merge(<=, u, v)``\ .
+  \ :code:`merge(u, v)`\  merges \ :code:`u`\  and \ :code:`v`\  in ascending order. Note: \ :code:`merge(u, v) = merge(<=, u, v)`\ .
 
 
 .. index::
    pair: LinearAggregate; merge
 
 :spadfun:`merge`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``merge(p, a, b)``\  returns an aggregate \ ``c``\  which merges \ ``a``\  and \ ``b``\ . The result is produced by examining each element \ ``x``\  of \ ``a``\  and \ ``y``\  of \ ``b``\  successively. If \ ``p(x, y)``\  is \ ``true``\ , then \ ``x``\  is inserted into the result; otherwise \ ``y``\  is inserted. If \ ``x``\  is chosen, the next element of \ ``a``\  is examined, and so on. When all the elements of one aggregate are examined, the remaining elements of the other are appended. For example, \ ``merge(<, [1, 3], [2, 7, 5])``\  returns \ ``[1, 2, 3, 7, 5]``\ .
+  \ :code:`merge(p, a, b)`\  returns an aggregate \ :code:`c`\  which merges \ :code:`a`\  and \ :code:`b`\ . The result is produced by examining each element \ :code:`x`\  of \ :code:`a`\  and \ :code:`y`\  of \ :code:`b`\  successively. If \ :code:`p(x, y)`\  is \ :code:`true`\ , then \ :code:`x`\  is inserted into the result; otherwise \ :code:`y`\  is inserted. If \ :code:`x`\  is chosen, the next element of \ :code:`a`\  is examined, and so on. When all the elements of one aggregate are examined, the remaining elements of the other are appended. For example, \ :code:`merge(<, [1, 3], [2, 7, 5])`\  returns \ :code:`[1, 2, 3, 7, 5]`\ .
 
 .. _l4c696e656172416767726567617465-6d696e:
 
@@ -354,7 +354,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; new
 
 :spadfun:`new`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , S) -> % 
-  \ ``new(n, x)``\  returns a new aggregate of size \ ``n``\  all of whose entries are \ ``x``\ .
+  \ :code:`new(n, x)`\  returns a new aggregate of size \ :code:`n`\  all of whose entries are \ :code:`x`\ .
 
 .. _l4c696e656172416767726567617465-7061727473:
 
@@ -367,21 +367,21 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; position
 
 :spadfun:`position`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``position(p, a)``\  returns the index \ ``i``\  of the first \ ``x``\  in \ ``a``\  such that \ ``p(x)``\  is \ ``true``\ , and \ ``minIndex(a) - 1``\  if there is no such \ ``x``\ .
+  \ :code:`position(p, a)`\  returns the index \ :code:`i`\  of the first \ :code:`x`\  in \ :code:`a`\  such that \ :code:`p(x)`\  is \ :code:`true`\ , and \ :code:`minIndex(a) - 1`\  if there is no such \ :code:`x`\ .
 
 
 .. index::
    pair: LinearAggregate; position
 
 :spadfun:`position`\: (S, %) -> \ :ref:`Integer <l496e7465676572>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``position(x, a)``\  returns the index \ ``i``\  of the first occurrence of \ ``x``\  in a, and \ ``minIndex(a) - 1``\  if there is no such \ ``x``\ .
+  \ :code:`position(x, a)`\  returns the index \ :code:`i`\  of the first occurrence of \ :code:`x`\  in a, and \ :code:`minIndex(a) - 1`\  if there is no such \ :code:`x`\ .
 
 
 .. index::
    pair: LinearAggregate; position
 
 :spadfun:`position`\: (S, %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``position(x, a, n)``\  returns the index \ ``i``\  of the first occurrence of \ ``x``\  in \ ``a``\  where \ ``i >= n``\ , and \ ``minIndex(a) - 1``\  if no such \ ``x``\  is found.
+  \ :code:`position(x, a, n)`\  returns the index \ :code:`i`\  of the first occurrence of \ :code:`x`\  in \ :code:`a`\  where \ :code:`i >= n`\ , and \ :code:`minIndex(a) - 1`\  if no such \ :code:`x`\  is found.
 
 .. _l4c696e656172416767726567617465-71656c74:
 
@@ -426,7 +426,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; reverse!
 
 :spadfun:`reverse!`\: % -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``reverse!(u)``\  returns \ ``u``\  with its elements in reverse order.
+  \ :code:`reverse!(u)`\  returns \ :code:`u`\  with its elements in reverse order.
 
 .. _l4c696e656172416767726567617465-72657665727365:
 
@@ -434,7 +434,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; reverse
 
 :spadfun:`reverse`\: % -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``reverse(a)``\  returns a copy of \ ``a``\  with elements in reverse order.
+  \ :code:`reverse(a)`\  returns a copy of \ :code:`a`\  with elements in reverse order.
 
 .. _l4c696e656172416767726567617465-72696768745472696d:
 
@@ -442,7 +442,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; rightTrim
 
 :spadfun:`rightTrim`\: (%, S) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``rightTrim(u, x)``\  returns a copy of \ ``u``\  with all trailing occurrences of \ ``x``\  deleted. For example, \ ``rightTrim(" abc ", char " ")``\  returns \ ``" abc"``\ .
+  \ :code:`rightTrim(u, x)`\  returns a copy of \ :code:`u`\  with all trailing occurrences of \ :code:`x`\  deleted. For example, \ :code:`rightTrim(" abc ", char " ")`\  returns \ :code:`" abc"`\ .
 
 .. _l4c696e656172416767726567617465-73616d706c65:
 
@@ -464,7 +464,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setelt!(u, i..j, x)``\  (also written: \ ``u(i..j) := x``\ ) destructively replaces each element in the segment \ ``u(i..j)``\  by \ ``x``\ . The value \ ``x``\  is returned. Note: \ ``u``\  is destructively changed so that \ ``u.k := x for k in i..j``\ ; its length remains unchanged.
+  \ :code:`setelt!(u, i..j, x)`\  (also written: \ :code:`u(i..j) := x`\ ) destructively replaces each element in the segment \ :code:`u(i..j)`\  by \ :code:`x`\ . The value \ :code:`x`\  is returned. Note: \ :code:`u`\  is destructively changed so that \ :code:`u.k := x for k in i..j`\ ; its length remains unchanged.
 
 .. _l4c696e656172416767726567617465-73697a653f:
 
@@ -482,14 +482,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; sort!
 
 :spadfun:`sort!`\: % -> % if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``sort!(u)``\  returns \ ``u``\  with its elements in ascending order.
+  \ :code:`sort!(u)`\  returns \ :code:`u`\  with its elements in ascending order.
 
 
 .. index::
    pair: LinearAggregate; sort!
 
 :spadfun:`sort!`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``sort!(p, u)``\  returns \ ``u``\  with its elements ordered by \ ``p``\ .
+  \ :code:`sort!(p, u)`\  returns \ :code:`u`\  with its elements ordered by \ :code:`p`\ .
 
 .. _l4c696e656172416767726567617465-736f7274:
 
@@ -497,14 +497,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; sort
 
 :spadfun:`sort`\: % -> % if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``sort(u)``\  returns an \ ``u``\  with elements in ascending order. Note: \ ``sort(u) = sort(<, u)``\ .
+  \ :code:`sort(u)`\  returns an \ :code:`u`\  with elements in ascending order. Note: \ :code:`sort(u) = sort(<, u)`\ .
 
 
 .. index::
    pair: LinearAggregate; sort
 
 :spadfun:`sort`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``sort(p, a)``\  returns a copy of \ ``a``\  sorted using total ordering predicate \ ``p``\ .
+  \ :code:`sort(p, a)`\  returns a copy of \ :code:`a`\  sorted using total ordering predicate \ :code:`p`\ .
 
 .. _l4c696e656172416767726567617465-736f727465643f:
 
@@ -512,14 +512,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; sorted?
 
 :spadfun:`sorted?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``sorted?(u)``\  tests if the elements of \ ``u``\  are in ascending order.
+  \ :code:`sorted?(u)`\  tests if the elements of \ :code:`u`\  are in ascending order.
 
 
 .. index::
    pair: LinearAggregate; sorted?
 
 :spadfun:`sorted?`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``sorted?(p, a)``\  tests if \ ``a``\  is sorted according to predicate \ ``p``\ .
+  \ :code:`sorted?(p, a)`\  tests if \ :code:`a`\  is sorted according to predicate \ :code:`p`\ .
 
 .. _l4c696e656172416767726567617465-7377617021:
 
@@ -532,7 +532,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; trim
 
 :spadfun:`trim`\: (%, S) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``trim(u, x)``\  returns a copy of \ ``u``\  with all occurrences of \ ``x``\  deleted from right and left ends. For example, \ ``trim(" abc ", char " ")``\  returns \ ``"abc"``\ .
+  \ :code:`trim(u, x)`\  returns a copy of \ :code:`u`\  with all occurrences of \ :code:`x`\  deleted from right and left ends. For example, \ :code:`trim(" abc ", char " ")`\  returns \ :code:`"abc"`\ .
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

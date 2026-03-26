@@ -105,7 +105,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; coefficient
 
 :spadfun:`coefficient`\: (%, %) -> \ :ref:`Expression <l45787072657373696f6e>`\  CoefRing 
-  \ ``coefficient(df, u)``\ , where \ ``df``\  is a differential form, returns the coefficient of \ ``df``\  containing the basis term \ ``u``\  if such a term exists, and 0 otherwise.
+  \ :code:`coefficient(df, u)`\ , where \ :code:`df`\  is a differential form, returns the coefficient of \ :code:`df`\  containing the basis term \ :code:`u`\  if such a term exists, and 0 otherwise.
 
 .. _l44655268616d436f6d706c6578-636f65726365:
 
@@ -131,7 +131,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; degree
 
 :spadfun:`degree`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``degree(df)``\  returns the homogeneous degree of differential form \ ``df``\ .
+  \ :code:`degree(df)`\  returns the homogeneous degree of differential form \ :code:`df`\ .
 
 .. _l44655268616d436f6d706c6578-6578746572696f72446966666572656e7469616c:
 
@@ -139,7 +139,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; exteriorDifferential
 
 :spadfun:`exteriorDifferential`\: % -> % 
-  \ ``exteriorDifferential(df)``\  returns the exterior derivative (gradient, curl, divergence, ...) of the differential form \ ``df``\ .
+  \ :code:`exteriorDifferential(df)`\  returns the exterior derivative (gradient, curl, divergence, ...) of the differential form \ :code:`df`\ .
 
 .. _l44655268616d436f6d706c6578-67656e657261746f72:
 
@@ -147,7 +147,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; generator
 
 :spadfun:`generator`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``generator(n)``\  returns the \ ``n``\ th basis term for a differential form.
+  \ :code:`generator(n)`\  returns the \ :code:`n`\ th basis term for a differential form.
 
 .. _l44655268616d436f6d706c6578-686f6d6f67656e656f75733f:
 
@@ -155,7 +155,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; homogeneous?
 
 :spadfun:`homogeneous?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``homogeneous?(df)``\  tests if all of the terms of differential form \ ``df``\  have the same degree.
+  \ :code:`homogeneous?(df)`\  tests if all of the terms of differential form \ :code:`df`\  have the same degree.
 
 .. _l44655268616d436f6d706c6578-6c61746578:
 
@@ -168,7 +168,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; leadingBasisTerm
 
 :spadfun:`leadingBasisTerm`\: % -> % 
-  \ ``leadingBasisTerm(df)``\  returns the leading basis term of differential form \ ``df``\ .
+  \ :code:`leadingBasisTerm(df)`\  returns the leading basis term of differential form \ :code:`df`\ .
 
 .. _l44655268616d436f6d706c6578-6c656164696e67436f656666696369656e74:
 
@@ -176,7 +176,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; leadingCoefficient
 
 :spadfun:`leadingCoefficient`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  CoefRing 
-  \ ``leadingCoefficient(df)``\  returns the leading coefficient of differential form \ ``df``\ .
+  \ :code:`leadingCoefficient(df)`\  returns the leading coefficient of differential form \ :code:`df`\ .
 
 .. _l44655268616d436f6d706c6578-6c656674506f776572:
 
@@ -198,7 +198,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; map
 
 :spadfun:`map`\: (\ :ref:`Expression <l45787072657373696f6e>`\  CoefRing -> \ :ref:`Expression <l45787072657373696f6e>`\  CoefRing, %) -> % 
-  \ ``map(f, df)``\  replaces each coefficient \ ``x``\  of differential form \ ``df``\  by \ ``f(x)``\ .
+  \ :code:`map(f, df)`\  replaces each coefficient \ :code:`x`\  of differential form \ :code:`df`\  by \ :code:`f(x)`\ .
 
 .. _l44655268616d436f6d706c6578-6f6e653f:
 
@@ -221,7 +221,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; reductum
 
 :spadfun:`reductum`\: % -> % 
-  \ ``reductum(df)``\ , where \ ``df``\  is a differential form, returns \ ``df``\  minus the leading term of \ ``df``\  if \ ``df``\  has two or more terms, and 0 otherwise.
+  \ :code:`reductum(df)`\ , where \ :code:`df`\  is a differential form, returns \ :code:`df`\  minus the leading term of \ :code:`df`\  if \ :code:`df`\  has two or more terms, and 0 otherwise.
 
 .. _l44655268616d436f6d706c6578-72657472616374:
 
@@ -234,7 +234,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; retractable?
 
 :spadfun:`retractable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``retractable?(df)``\  tests if differential form \ ``df``\  is a 0-form, i.e. if degree(\ ``df``\ ) = 0.
+  \ :code:`retractable?(df)`\  tests if differential form \ :code:`df`\  is a 0-form, i.e. if degree(\ :code:`df`\ ) = 0.
 
 .. _l44655268616d436f6d706c6578-72657472616374496643616e:
 
@@ -271,7 +271,7 @@ The deRham complex of Euclidean space, that is, the class of differential forms 
    pair: DeRhamComplex; totalDifferential
 
 :spadfun:`totalDifferential`\: \ :ref:`Expression <l45787072657373696f6e>`\  CoefRing -> % 
-  \ ``totalDifferential(x)``\  returns the total differential (gradient) form for element \ ``x``\ .
+  \ :code:`totalDifferential(x)`\  returns the total differential (gradient) form for element \ :code:`x`\ .
 
 .. _l44655268616d436f6d706c6578-7a65726f3f:
 

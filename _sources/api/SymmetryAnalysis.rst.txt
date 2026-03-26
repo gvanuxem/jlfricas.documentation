@@ -14,7 +14,7 @@ SymmetryAnalysis(JB1, xi, eta)
 * eta: Union(\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ )
 
 
-\ ``SymmetryAnalysis(JB, xi, eta)``\  provides procedures for the symmetry analysis of differential equations over a given jet bundle. Currently there exist only some procedures to set up the determining system for the symmetry generators of Lie point symmetries.
+\ :code:`SymmetryAnalysis(JB, xi, eta)`\  provides procedures for the symmetry analysis of differential equations over a given jet bundle. Currently there exist only some procedures to set up the determining system for the symmetry generators of Lie point symmetries.
 
 
 .. _l53796d6d65747279416e616c79736973-616e7361747a:
@@ -23,7 +23,7 @@ SymmetryAnalysis(JB1, xi, eta)
    pair: SymmetryAnalysis; ansatz
 
 :spadfun:`ansatz`\: () -> \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB1, \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1) 
-  \ ``ansatz()``\  returns a general ansatz for a symmetry generator.
+  \ :code:`ansatz()`\  returns a general ansatz for a symmetry generator.
 
 .. _l53796d6d65747279416e616c79736973-646574537973:
 
@@ -31,21 +31,21 @@ SymmetryAnalysis(JB1, xi, eta)
    pair: SymmetryAnalysis; detSys
 
 :spadfun:`detSys`\: (\ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1, \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB1, \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1)) -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 
-  \ ``detSys(sys, vf)``\  computes the determining system for symmetry generators of the system \ ``sys``\  with a given ansatz for the generators. It is assumed that each equation can be solved for its leading derivative.
+  \ :code:`detSys(sys, vf)`\  computes the determining system for symmetry generators of the system \ :code:`sys`\  with a given ansatz for the generators. It is assumed that each equation can be solved for its leading derivative.
 
 
 .. index::
    pair: SymmetryAnalysis; detSys
 
 :spadfun:`detSys`\: (\ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1, \ :ref:`List <l4c697374>`\  JB1, \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB1, \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1)) -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 
-  \ ``detSys(sys, sjb, vf)``\  computes the determining system for symmetry generators of the system \ ``sys``\  with a given ansatz for the generators. \ ``sjb``\  contains jet variables for which the individual equations can be solved.
+  \ :code:`detSys(sys, sjb, vf)`\  computes the determining system for symmetry generators of the system \ :code:`sys`\  with a given ansatz for the generators. \ :code:`sjb`\  contains jet variables for which the individual equations can be solved.
 
 
 .. index::
    pair: SymmetryAnalysis; detSys
 
 :spadfun:`detSys`\: \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  \ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta) 
-  \ ``detSys(sys)``\  computes the determining system for symmetry generators of the system \ ``sys``\ . It is assumed that each equation can be solved for its leading derivative.
+  \ :code:`detSys(sys)`\  computes the determining system for symmetry generators of the system \ :code:`sys`\ . It is assumed that each equation can be solved for its leading derivative.
 
 .. _l53796d6d65747279416e616c79736973-6465745379734e53:
 
@@ -53,14 +53,14 @@ SymmetryAnalysis(JB1, xi, eta)
    pair: SymmetryAnalysis; detSysNS
 
 :spadfun:`detSysNS`\: (\ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1, \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB1, \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1)) -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 
-  \ ``detSysNS(sys, vf)``\  computes the determining system for symmetry generators without assuming solvability of the equations for some derivatives.
+  \ :code:`detSysNS(sys, vf)`\  computes the determining system for symmetry generators without assuming solvability of the equations for some derivatives.
 
 
 .. index::
    pair: SymmetryAnalysis; detSysNS
 
 :spadfun:`detSysNS`\: \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  \ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta) 
-  \ ``detSysNS(sys, vf)``\  computes the determining system for symmetry generators without assuming solvability of the equations for some derivatives.
+  \ :code:`detSysNS(sys, vf)`\  computes the determining system for symmetry generators without assuming solvability of the equations for some derivatives.
 
 .. _l53796d6d65747279416e616c79736973-6c696e656172697a65:
 
@@ -68,7 +68,7 @@ SymmetryAnalysis(JB1, xi, eta)
    pair: SymmetryAnalysis; linearize
 
 :spadfun:`linearize`\: \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  \ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta) -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleLinearFunction <l4a657442756e646c654c696e65617246756e6374696f6e>`\ (\ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta), \ :ref:`JetBundleXExpression <l4a657442756e646c655845787072657373696f6e>`\  \ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta)) 
-  \ ``linearize(sys)``\  tries to retract all equations in \ ``sys``\  to a linear one. If that is not possible, an error occurs.
+  \ :code:`linearize(sys)`\  tries to retract all equations in \ :code:`sys`\  to a linear one. If that is not possible, an error occurs.
 
 .. _l53796d6d65747279416e616c79736973-6e63446574537973:
 
@@ -76,21 +76,21 @@ SymmetryAnalysis(JB1, xi, eta)
    pair: SymmetryAnalysis; ncDetSys
 
 :spadfun:`ncDetSys`\: (\ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1, \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB1, \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1)) -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 
-  \ ``ncDetSys(sys, vf)``\  computes the determining system for generators of conditional symmetries of \ ``sys``\  with a given ansatz for the vector fields.
+  \ :code:`ncDetSys(sys, vf)`\  computes the determining system for generators of conditional symmetries of \ :code:`sys`\  with a given ansatz for the vector fields.
 
 
 .. index::
    pair: SymmetryAnalysis; ncDetSys
 
 :spadfun:`ncDetSys`\: (\ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1, \ :ref:`List <l4c697374>`\  JB1, \ :ref:`JetVectorField <l4a6574566563746f724669656c64>`\ (JB1, \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1)) -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 
-  \ ``ncDetSys(sys, sjb, vf)``\  computes the determining system for generators of conditional symmetries of \ ``sys``\ . The meaning of the further arguments is the same as in \ ``detSys``\ .
+  \ :code:`ncDetSys(sys, sjb, vf)`\  computes the determining system for generators of conditional symmetries of \ :code:`sys`\ . The meaning of the further arguments is the same as in \ :code:`detSys`\ .
 
 
 .. index::
    pair: SymmetryAnalysis; ncDetSys
 
 :spadfun:`ncDetSys`\: \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 -> \ :ref:`List <l4c697374>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  \ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta) 
-  \ ``ncDetSys(sys)``\  computes the determining system for generators of conditional symmetries of \ ``sys``\ . It makes the same assumptions as \ ``detSys``\ .
+  \ :code:`ncDetSys(sys)`\  computes the determining system for generators of conditional symmetries of \ :code:`sys`\ . It makes the same assumptions as \ :code:`detSys`\ .
 
 .. _l53796d6d65747279416e616c79736973-7472616e73666f726d:
 
@@ -98,6 +98,6 @@ SymmetryAnalysis(JB1, xi, eta)
    pair: SymmetryAnalysis; transform
 
 :spadfun:`transform`\: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB1 -> \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  \ :ref:`JetBundleSymAna <l4a657442756e646c6553796d416e61>`\ (JB1, xi, eta) 
-  \ ``transform(f)``\  transforms expressions between the different function types involved.
+  \ :code:`transform(f)`\  transforms expressions between the different function types involved.
 
 

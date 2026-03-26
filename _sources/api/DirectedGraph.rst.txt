@@ -19,7 +19,7 @@ Category of directed graphs, allows us to model graph theory
    pair: DirectedGraph; *
 
 :spadfun:`\*`\: (%, %) -> \ :ref:`DirectedGraph <l44697265637465644772617068>`\  \ :ref:`Product <l50726f64756374>`\ (S, S) 
-  \ ``"*"``\ (a,\ ``b``\ ) returns a tensor product : the tensor product \ ``G*H``\  of graphs \ ``G``\  and \ ``H``\  is a graph such that the vertex set of \ ``G*H``\  is the Cartesian product \ ``V``\ (\ ``G``\ ) \times \ ``V``\ (\ ``H``\ ); and any two vertices (\ ``u``\ , u') and (\ ``v``\ , \ ``v'``\ ) are adjacent in \ ``G``\  \times \ ``H``\  if and only if u' is adjacent with \ ``v'``\  and \ ``u``\  is adjacent with \ ``v``\ .
+  \ :code:`"*"`\ (a,\ :code:`b`\ ) returns a tensor product : the tensor product \ :code:`G*H`\  of graphs \ :code:`G`\  and \ :code:`H`\  is a graph such that the vertex set of \ :code:`G*H`\  is the Cartesian product \ :code:`V`\ (\ :code:`G`\ ) \times \ :code:`V`\ (\ :code:`H`\ ); and any two vertices (\ :code:`u`\ , u') and (\ :code:`v`\ , \ :code:`v'`\ ) are adjacent in \ :code:`G`\  \times \ :code:`H`\  if and only if u' is adjacent with \ :code:`v'`\  and \ :code:`u`\  is adjacent with \ :code:`v`\ .
 
 .. _l44697265637465644772617068-2b:
 
@@ -106,7 +106,7 @@ Category of directed graphs, allows us to model graph theory
    pair: DirectedGraph; cartesian
 
 :spadfun:`cartesian`\: (%, %) -> \ :ref:`DirectedGraph <l44697265637465644772617068>`\  \ :ref:`Product <l50726f64756374>`\ (S, S) 
-  \ ``cartesian(a, b)``\  returns a Cartesian product: the vertex set of \ ``G``\  \ ``o``\  \ ``H``\  is the Cartesian product \ ``V``\ (\ ``G``\ ) \times \ ``V``\ (\ ``H``\ ) and any two vertices (\ ``u``\ , u') and (\ ``v``\ , \ ``v'``\ ) are adjacent in \ ``G``\  \ ``o``\  \ ``H``\  if and only if either \ ``u``\  = \ ``v``\  and u' is adjacent with \ ``v'``\  in \ ``H``\ , or u' = \ ``v'``\  and \ ``u``\  is adjacent with \ ``v``\  in \ ``G``\ .
+  \ :code:`cartesian(a, b)`\  returns a Cartesian product: the vertex set of \ :code:`G`\  \ :code:`o`\  \ :code:`H`\  is the Cartesian product \ :code:`V`\ (\ :code:`G`\ ) \times \ :code:`V`\ (\ :code:`H`\ ) and any two vertices (\ :code:`u`\ , u') and (\ :code:`v`\ , \ :code:`v'`\ ) are adjacent in \ :code:`G`\  \ :code:`o`\  \ :code:`H`\  if and only if either \ :code:`u`\  = \ :code:`v`\  and u' is adjacent with \ :code:`v'`\  in \ :code:`H`\ , or u' = \ :code:`v'`\  and \ :code:`u`\  is adjacent with \ :code:`v`\  in \ :code:`G`\ .
 
 .. _l44697265637465644772617068-636c6f73656443617274657369616e:
 
@@ -114,7 +114,7 @@ Category of directed graphs, allows us to model graph theory
    pair: DirectedGraph; closedCartesian
 
 :spadfun:`closedCartesian`\: (%, %, (S, S) -> S) -> % 
-  \ ``closedCartesian(a, b, f)``\  builds Cartesian product of a and \ ``b``\  and then maps it back to \% using \ ``f``\ .
+  \ :code:`closedCartesian(a, b, f)`\  builds Cartesian product of a and \ :code:`b`\  and then maps it back to \% using \ :code:`f`\ .
 
 .. _l44697265637465644772617068-636c6f73656454656e736f72:
 
@@ -122,7 +122,7 @@ Category of directed graphs, allows us to model graph theory
    pair: DirectedGraph; closedTensor
 
 :spadfun:`closedTensor`\: (%, %, (S, S) -> S) -> % 
-  \ ``closedTensor(a, b, f)``\  builds tensor product of a and \ ``b``\  and then maps it back to \% using \ ``f``\ .
+  \ :code:`closedTensor(a, b, f)`\  builds tensor product of a and \ :code:`b`\  and then maps it back to \% using \ :code:`f`\ .
 
 .. _l44697265637465644772617068-636f65726365:
 
@@ -134,21 +134,21 @@ Category of directed graphs, allows us to model graph theory
    pair: DirectedGraph; coerce
 
 :spadfun:`coerce`\: \ :ref:`FinitePoset <l46696e697465506f736574>`\  S -> % 
-  \ ``coerce FinitePoset``\  to graph
+  \ :code:`coerce FinitePoset`\  to graph
 
 
 .. index::
    pair: DirectedGraph; coerce
 
 :spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coerce List``\  to graph
+  \ :code:`coerce List`\  to graph
 
 
 .. index::
    pair: DirectedGraph; coerce
 
 :spadfun:`coerce`\: \ :ref:`PermutationGroup <l5065726d75746174696f6e47726f7570>`\  S -> % 
-  \ ``coerce PermutationGroup``\  to graph
+  \ :code:`coerce PermutationGroup`\  to graph
 
 .. _l44697265637465644772617068-6372656174655769647468:
 
@@ -206,49 +206,49 @@ Category of directed graphs, allows us to model graph theory
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: (\ :ref:`List <l4c697374>`\  Record(value: S, posX: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , posY: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`String <l537472696e67>`\ , arrType: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , fromOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , toOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , xOffset: \ :ref:`Integer <l496e7465676572>`\ , yOffset: \ :ref:`Integer <l496e7465676572>`\ , map: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
-  \ ``directedGraph(ob, ar)``\  constructs graph with objects \ ``ob``\  and arrows ar, more objects and arrows can be added later if required.
+  \ :code:`directedGraph(ob, ar)`\  constructs graph with objects \ :code:`ob`\  and arrows ar, more objects and arrows can be added later if required.
 
 
 .. index::
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: (\ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``directedGraph(ob, am)``\  constructs graph with objects \ ``ob``\  and adjacency matrix am.
+  \ :code:`directedGraph(ob, am)`\  constructs graph with objects \ :code:`ob`\  and adjacency matrix am.
 
 
 .. index::
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: (\ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  Record(fromOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , toOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
-  \ ``directedGraph(obs, ars)``\  constructs graph with objects \ ``obs``\  and arrows ars. This constructor just has pure abstract graph information without decoration information.
+  \ :code:`directedGraph(obs, ars)`\  constructs graph with objects \ :code:`obs`\  and arrows ars. This constructor just has pure abstract graph information without decoration information.
 
 
 .. index::
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: \ :ref:`FinitePoset <l46696e697465506f736574>`\  S -> % 
-  \ ``directedGraph(poset)``\  constructs graph from a partially ordered set. This will be a graph with, at most, one arrow between any two nodes.
+  \ :code:`directedGraph(poset)`\  constructs graph from a partially ordered set. This will be a graph with, at most, one arrow between any two nodes.
 
 
 .. index::
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: \ :ref:`List <l4c697374>`\  \ :ref:`Permutation <l5065726d75746174696f6e>`\  S -> % 
-  \ ``directedGraph(perms)``\  constructs graph from a list of permutations: \ ``perms``\ .
+  \ :code:`directedGraph(perms)`\  constructs graph from a list of permutations: \ :code:`perms`\ .
 
 
 .. index::
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: \ :ref:`List <l4c697374>`\  Record(value: S, posX: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , posY: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``directedGraph(ob)``\  is a constructor for graph with given objects \ ``ob``\ , more objects and arrows can be added later if required.
+  \ :code:`directedGraph(ob)`\  is a constructor for graph with given objects \ :code:`ob`\ , more objects and arrows can be added later if required.
 
 
 .. index::
    pair: DirectedGraph; directedGraph
 
 :spadfun:`directedGraph`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``directedGraph(ob)``\  is a constructor for graph with given list of object names and no arrows. Use this version of the constructor if you don\ ``'t``\  want to create specific \ ``x``\ , \ ``y``\  coordinates. more objects and arrows can be added later if required.
+  \ :code:`directedGraph(ob)`\  is a constructor for graph with given list of object names and no arrows. Use this version of the constructor if you don\ :code:`'t`\  want to create specific \ :code:`x`\ , \ :code:`y`\  coordinates. more objects and arrows can be added later if required.
 
 .. _l44697265637465644772617068-64697374616e6365:
 

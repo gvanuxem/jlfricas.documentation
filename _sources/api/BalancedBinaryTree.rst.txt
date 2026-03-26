@@ -10,7 +10,7 @@ BalancedBinaryTree S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-BalancedBinaryTree(S) is the domain of balanced binary trees (bbtree). A balanced binary tree of \ ``2^k``\  leaves, for some \ ``k > 0``\ , is symmetric, that is, the left and right subtree of each interior node have identical shape. In general, the left and right subtree of a given node can differ by at most one leaf node.
+BalancedBinaryTree(S) is the domain of balanced binary trees (bbtree). A balanced binary tree of \ :code:`2^k`\  leaves, for some \ :code:`k > 0`\ , is symmetric, that is, the left and right subtree of each interior node have identical shape. In general, the left and right subtree of a given node can differ by at most one leaf node.
 
 
 .. _l42616c616e63656442696e61727954726565-23:
@@ -39,7 +39,7 @@ BalancedBinaryTree(S) is the domain of balanced binary trees (bbtree). A balance
    pair: BalancedBinaryTree; balancedBinaryTree
 
 :spadfun:`balancedBinaryTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , S) -> % 
-  \ ``balancedBinaryTree(n, s)``\  creates a balanced binary tree with \ ``n``\  nodes each with value \ ``s``\ .
+  \ :code:`balancedBinaryTree(n, s)`\  creates a balanced binary tree with \ :code:`n`\  nodes each with value \ :code:`s`\ .
 
 .. _l42616c616e63656442696e61727954726565-6368696c643f:
 
@@ -181,14 +181,14 @@ BalancedBinaryTree(S) is the domain of balanced binary trees (bbtree). A balance
    pair: BalancedBinaryTree; mapDown!
 
 :spadfun:`mapDown!`\: (%, S, (S, S) -> S) -> % 
-  \ ``mapDown!(t,p,f)``\  returns \ ``t``\  after traversing \ ``t``\  in "preorder" (node then left then right) fashion replacing the successive interior nodes as follows. The root value \ ``x``\  is replaced by \ ``q``\  \ ``:=``\  \ ``f``\ (\ ``p``\ , \ ``x``\ ). The mapDown!(\ ``l``\ , \ ``q``\ , \ ``f``\ ) and mapDown!(\ ``r``\ , \ ``q``\ , \ ``f``\ ) are evaluated for the left and right subtrees \ ``l``\  and \ ``r``\  of \ ``t``\ .
+  \ :code:`mapDown!(t,p,f)`\  returns \ :code:`t`\  after traversing \ :code:`t`\  in "preorder" (node then left then right) fashion replacing the successive interior nodes as follows. The root value \ :code:`x`\  is replaced by \ :code:`q`\  \ :code:`:=`\  \ :code:`f`\ (\ :code:`p`\ , \ :code:`x`\ ). The mapDown!(\ :code:`l`\ , \ :code:`q`\ , \ :code:`f`\ ) and mapDown!(\ :code:`r`\ , \ :code:`q`\ , \ :code:`f`\ ) are evaluated for the left and right subtrees \ :code:`l`\  and \ :code:`r`\  of \ :code:`t`\ .
 
 
 .. index::
    pair: BalancedBinaryTree; mapDown!
 
 :spadfun:`mapDown!`\: (%, S, (S, S, S) -> \ :ref:`List <l4c697374>`\  S) -> % 
-  \ ``mapDown!(t,p,f)``\  returns \ ``t``\  after traversing \ ``t``\  in "preorder" (node then left then right) fashion replacing the successive interior nodes as follows. Let \ ``l``\  and \ ``r``\  denote the left and right subtrees of \ ``t``\ . The root value \ ``x``\  of \ ``t``\  is replaced by \ ``p``\ . Then \ ``f``\ (value \ ``l``\ , value \ ``r``\ , \ ``p``\ ), where \ ``l``\  and \ ``r``\  denote the left and right subtrees of \ ``t``\ , is evaluated producing two values \ ``pl``\  and \ ``pr``\ . Then \ ``mapDown!(l, pl, f)``\  and \ ``mapDown!(l, pr, f)``\  are evaluated.
+  \ :code:`mapDown!(t,p,f)`\  returns \ :code:`t`\  after traversing \ :code:`t`\  in "preorder" (node then left then right) fashion replacing the successive interior nodes as follows. Let \ :code:`l`\  and \ :code:`r`\  denote the left and right subtrees of \ :code:`t`\ . The root value \ :code:`x`\  of \ :code:`t`\  is replaced by \ :code:`p`\ . Then \ :code:`f`\ (value \ :code:`l`\ , value \ :code:`r`\ , \ :code:`p`\ ), where \ :code:`l`\  and \ :code:`r`\  denote the left and right subtrees of \ :code:`t`\ , is evaluated producing two values \ :code:`pl`\  and \ :code:`pr`\ . Then \ :code:`mapDown!(l, pl, f)`\  and \ :code:`mapDown!(l, pr, f)`\  are evaluated.
 
 .. _l42616c616e63656442696e61727954726565-6d6170557021:
 
@@ -196,14 +196,14 @@ BalancedBinaryTree(S) is the domain of balanced binary trees (bbtree). A balance
    pair: BalancedBinaryTree; mapUp!
 
 :spadfun:`mapUp!`\: (%, %, (S, S, S, S) -> S) -> % 
-  \ ``mapUp!(t,t1,f)``\  traverses \ ``t``\  in an "endorder" (left then right then node) fashion returning \ ``t``\  with the value at each successive interior node of \ ``t``\  replaced by \ ``f``\ (\ ``l``\ , \ ``r``\ , \ ``l1``\ , \ ``r1``\ ) where \ ``l``\  and \ ``r``\  are the values at the immediate left and right nodes. Values \ ``l1``\  and \ ``r1``\  are values at the corresponding nodes of a balanced binary tree \ ``t1``\ , of identical shape at \ ``t``\ .
+  \ :code:`mapUp!(t,t1,f)`\  traverses \ :code:`t`\  in an "endorder" (left then right then node) fashion returning \ :code:`t`\  with the value at each successive interior node of \ :code:`t`\  replaced by \ :code:`f`\ (\ :code:`l`\ , \ :code:`r`\ , \ :code:`l1`\ , \ :code:`r1`\ ) where \ :code:`l`\  and \ :code:`r`\  are the values at the immediate left and right nodes. Values \ :code:`l1`\  and \ :code:`r1`\  are values at the corresponding nodes of a balanced binary tree \ :code:`t1`\ , of identical shape at \ :code:`t`\ .
 
 
 .. index::
    pair: BalancedBinaryTree; mapUp!
 
 :spadfun:`mapUp!`\: (%, (S, S) -> S) -> S 
-  \ ``mapUp!(t,f)``\  traverses balanced binary tree \ ``t``\  in an "endorder" (left then right then node) fashion returning \ ``t``\  with the value at each successive interior node of \ ``t``\  replaced by \ ``f``\ (\ ``l``\ , \ ``r``\ ) where \ ``l``\  and \ ``r``\  are the values at the immediate left and right nodes.
+  \ :code:`mapUp!(t,f)`\  traverses balanced binary tree \ :code:`t`\  in an "endorder" (left then right then node) fashion returning \ :code:`t`\  with the value at each successive interior node of \ :code:`t`\  replaced by \ :code:`f`\ (\ :code:`l`\ , \ :code:`r`\ ) where \ :code:`l`\  and \ :code:`r`\  are the values at the immediate left and right nodes.
 
 .. _l42616c616e63656442696e61727954726565-6d6178:
 
@@ -288,7 +288,7 @@ BalancedBinaryTree(S) is the domain of balanced binary trees (bbtree). A balance
    pair: BalancedBinaryTree; setleaves!
 
 :spadfun:`setleaves!`\: (%, \ :ref:`List <l4c697374>`\  S) -> % 
-  \ ``setleaves!(t, ls)``\  sets the leaves of \ ``t``\  in left-to-right order to the elements of \ ``ls``\ .
+  \ :code:`setleaves!(t, ls)`\  sets the leaves of \ :code:`t`\  in left-to-right order to the elements of \ :code:`ls`\ .
 
 .. _l42616c616e63656442696e61727954726565-7365746c65667421:
 

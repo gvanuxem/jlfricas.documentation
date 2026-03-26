@@ -12,7 +12,7 @@ UnivariatePuiseuxSeriesConstructorCategory(Coef, ULS)
 * ULS: \ :ref:`UnivariateLaurentSeriesCategory <l556e69766172696174654c617572656e7453657269657343617465676f7279>`\  Coef
 
 
-This is a category of univariate Puiseux series constructed from univariate Laurent series. A Puiseux series is represented by a pair \ ``[r, f(x)]``\ , where \ ``r``\  is a positive rational number and \ ``f(x)``\  is a Laurent series. This pair represents the Puiseux series \ ``f(x^r)``\ .
+This is a category of univariate Puiseux series constructed from univariate Laurent series. A Puiseux series is represented by a pair \ :code:`[r, f(x)]`\ , where \ :code:`r`\  is a positive rational number and \ :code:`f(x)`\  is a Laurent series. This pair represents the Puiseux series \ :code:`f(x^r)`\ .
 
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-30:
@@ -238,7 +238,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; coerce
 
 :spadfun:`coerce`\: ULS -> % 
-  \ ``coerce(f(x))``\  converts the Laurent series \ ``f(x)``\  to a Puiseux series.
+  \ :code:`coerce(f(x))`\  converts the Laurent series \ :code:`f(x)`\  to a Puiseux series.
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-636f6d6d757461746f72:
 
@@ -321,7 +321,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; degree
 
 :spadfun:`degree`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``degree(f(x))``\  returns the degree of the leading term of the Puiseux series \ ``f(x)``\ , which may have zero as a coefficient.
+  \ :code:`degree(f(x))`\  returns the degree of the leading term of the Puiseux series \ :code:`f(x)`\ , which may have zero as a coefficient.
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-646966666572656e7469617465:
 
@@ -445,7 +445,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; laurent
 
 :spadfun:`laurent`\: % -> ULS 
-  \ ``laurent(f(x))``\  converts the Puiseux series \ ``f(x)``\  to a Laurent series if possible. Error: if this is not possible.
+  \ :code:`laurent(f(x))`\  converts the Puiseux series \ :code:`f(x)`\  to a Laurent series if possible. Error: if this is not possible.
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c617572656e74496643616e:
 
@@ -453,7 +453,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; laurentIfCan
 
 :spadfun:`laurentIfCan`\: % -> Union(ULS, failed) 
-  \ ``laurentIfCan(f(x))``\  converts the Puiseux series \ ``f(x)``\  to a Laurent series if possible. If this is not possible, "failed" is returned.
+  \ :code:`laurentIfCan(f(x))`\  converts the Puiseux series \ :code:`f(x)`\  to a Laurent series if possible. If this is not possible, "failed" is returned.
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c617572656e74526570:
 
@@ -461,7 +461,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; laurentRep
 
 :spadfun:`laurentRep`\: % -> ULS 
-  \ ``laurentRep(f(x))``\  returns \ ``g(x)``\  where the Puiseux series \ ``f(x) = g(x^r)``\  is represented by \ ``[r, g(x)]``\ .
+  \ :code:`laurentRep(f(x))`\  returns \ :code:`g(x)`\  where the Puiseux series \ :code:`f(x) = g(x^r)`\  is represented by \ :code:`[r, g(x)]`\ .
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-6c636d:
 
@@ -600,7 +600,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; puiseux
 
 :spadfun:`puiseux`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , ULS) -> % 
-  \ ``puiseux(r, f(x))``\  returns \ ``f(x^r)``\ .
+  \ :code:`puiseux(r, f(x))`\  returns \ :code:`f(x^r)`\ .
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-71756f:
 
@@ -613,7 +613,7 @@ This is a category of univariate Puiseux series constructed from univariate Laur
    pair: UnivariatePuiseuxSeriesConstructorCategory; rationalPower
 
 :spadfun:`rationalPower`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``rationalPower(f(x))``\  returns \ ``r``\  where the Puiseux series \ ``f(x) = g(x^r)``\ .
+  \ :code:`rationalPower(f(x))`\  returns \ :code:`r`\  where the Puiseux series \ :code:`f(x) = g(x^r)`\ .
 
 .. _l556e697661726961746550756973657578536572696573436f6e7374727563746f7243617465676f7279-7265636970:
 

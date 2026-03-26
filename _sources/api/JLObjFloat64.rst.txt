@@ -8,7 +8,7 @@ JLObjFloat64
 :viewcode:`jimobject.spad line 157 <jimobject.spad#L157>` :editcode:`[edit on github] <jimobject.spad#L157>`
 
 
-Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather, for returned value or function argument for example. Only basic arithmetic operations are supported.
+Convenience domain for Julia \ :code:`Float64`\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather, for returned value or function argument for example. Only basic arithmetic operations are supported.
 
 
 .. _l4a4c4f626a466c6f61743634-30:
@@ -31,7 +31,7 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x*i``\  is the integer multiplication.
+  \ :code:`x*i`\  is the integer multiplication.
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -73,14 +73,14 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x/i``\  is the division by an integer.
+  \ :code:`x/i`\  is the division by an integer.
 
 
 .. index::
    pair: JLObjFloat64; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``i/x``\  is the division of an integer by \ ``x``\ .
+  \ :code:`i/x`\  is the division of an integer by \ :code:`x`\ .
 
 .. _l4a4c4f626a466c6f61743634-3c3d:
 
@@ -113,7 +113,7 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; ^
 
 :spadfun:`^`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x^q``\  is the exponentiation by a rational.
+  \ :code:`x^q`\  is the exponentiation by a rational.
 
 
 \ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
@@ -163,7 +163,7 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; cis
 
 :spadfun:`cis`\: % -> \ :ref:`JLObjComplexF64 <l4a4c4f626a436f6d706c6578463634>`\  
-  \ ``cis(x)``\  returns exp(\%i*x) computed efficiently.
+  \ :code:`cis(x)`\  returns exp(\%i*x) computed efficiently.
 
 .. _l4a4c4f626a466c6f61743634-6369737069:
 
@@ -171,7 +171,7 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; cispi
 
 :spadfun:`cispi`\: % -> \ :ref:`JLObjComplexF64 <l4a4c4f626a436f6d706c6578463634>`\  
-  \ ``cispi(x)``\  returns cis(\%pi*x) computed efficiently.
+  \ :code:`cispi(x)`\  returns cis(\%pi*x) computed efficiently.
 
 .. _l4a4c4f626a466c6f61743634-636f65726365:
 
@@ -191,14 +191,14 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; coerce
 
 :spadfun:`coerce`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  returns \ ``x``\  as a \ ``JLObjFloat64``\ .
+  \ :code:`coerce(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat64`\ .
 
 
 .. index::
    pair: JLObjFloat64; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  returns \ ``x``\  as a \ ``JLObjFloat64``\  (truncate it) Convenience function.
+  \ :code:`coerce(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat64`\  (truncate it). Convenience function.
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -219,7 +219,7 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; convert
 
 :spadfun:`convert`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``convert(x)``\  returns \ ``x``\  as a \ ``JLObjFloat64``\  (truncate it).
+  \ :code:`convert(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat64`\  (truncate it).
 
 .. _l4a4c4f626a466c6f61743634-646976696465:
 
@@ -280,21 +280,21 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; jfloat64
 
 :spadfun:`jfloat64`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jfloat64(x)``\  returns \ ``x``\  as a \ ``JLObjFloat64``\  (truncate it).
+  \ :code:`jfloat64(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat64`\  (truncate it).
 
 
 .. index::
    pair: JLObjFloat64; jfloat64
 
 :spadfun:`jfloat64`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``jfloat64(x)``\  returns \ ``x``\  as a \ ``JLObjFloat64``\  i.e. returns a 64 bits float in the memory area of Julia from the memory area of the underlying Common Lisp implementation.
+  \ :code:`jfloat64(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat64`\  i.e. returns a 64 bits float in the memory area of Julia from the memory area of the underlying Common Lisp implementation.
 
 
 .. index::
    pair: JLObjFloat64; jfloat64
 
 :spadfun:`jfloat64`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jfloat64``\ (\ ``str``\ ) evaluates \ ``str``\  in Julia and returns the Julia \ ``Float64``\  object. For example: \example{jfloat64("sin(\ ``pi``\ )")} \example{jfloat64("0.7")}
+  \ :code:`jfloat64`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float64`\  object. For example: \example{jfloat64("sin(\ :code:`pi`\ )")} \example{jfloat64("0.7")}
 
 .. _l4a4c4f626a466c6f61743634-6a6c41626f7574:
 
@@ -328,14 +328,14 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+  \ :code:`jlApprox?(x,y)`\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
 
 
 .. index::
    pair: JLObjFloat64; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y,atol)``\  computes inexact equality comparison with absolute tolerance \ ``atol``\ . Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+  \ :code:`jlApprox?(x,y,atol)`\  computes inexact equality comparison with absolute tolerance \ :code:`atol`\ . Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
 
 .. _l4a4c4f626a466c6f61743634-6a6c446973706c6179:
 
@@ -353,21 +353,21 @@ Convenience domain for Julia \ ``Float64``\ , objects that are used within Julia
    pair: JLObjFloat64; jlF64CApply
 
 :spadfun:`jlF64CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %) -> % 
-  \ ``jlF64CApply(func, x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrt))} \example{jlF64CApply(squareRoot,jfloat64(2))}
+  \ :code:`jlF64CApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrt))} \example{jlF64CApply(squareRoot,jfloat64(2))}
 
 
 .. index::
    pair: JLObjFloat64; jlF64CApply
 
 :spadfun:`jlF64CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %) -> % 
-  \ ``jlF64CApply(func, x, y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{power:=jlDlSym(libm,jsym(pow))} \example{jlF64CApply(power,jfloat64(2),jfloat64(7))}
+  \ :code:`jlF64CApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{power:=jlDlSym(libm,jsym(pow))} \example{jlF64CApply(power,jfloat64(2),jfloat64(7))}
 
 
 .. index::
    pair: JLObjFloat64; jlF64CApply
 
 :spadfun:`jlF64CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %, %) -> % 
-  \ ``jlF64CApply(func, x, y, z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ . For example with \ ``GSL``\ -2.8: \example{gsl:= jlDlOpen "libgsl.so.28"} \example{hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))} \example{jlF64CApply(hypot3,jfloat64(2),jfloat64(7),jfloat64(9.0))}
+  \ :code:`jlF64CApply(func, x, y, z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . For example with \ :code:`GSL`\ -2.8: \example{gsl:= jlDlOpen "libgsl.so.28"} \example{hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))} \example{jlF64CApply(hypot3,jfloat64(2),jfloat64(7),jfloat64(9.0))}
 
 .. _l4a4c4f626a466c6f61743634-6a6c4669656c644e616d6573:
 

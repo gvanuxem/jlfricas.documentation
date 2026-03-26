@@ -19,7 +19,7 @@ This package contains special case for RDE solver.
    pair: RDEaux; multi_SPDE
 
 :spadfun:`multi_SPDE`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) -> Union(\ :ref:`List <l4c697374>`\  Record(ans: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, remainder: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F), Record(ans: \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, acoeff: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, eegen: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, bpar: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, lcpar: \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, dpar: \ :ref:`Integer <l496e7465676572>`\ )) 
-  \ ``multi_SPDE(a, b, lc, d, der)``\ 
+  \ :code:`multi_SPDE(a, b, lc, d, der)`\ 
 
 .. _l524445617578-5350444531:
 
@@ -27,6 +27,6 @@ This package contains special case for RDE solver.
    pair: RDEaux; SPDE1
 
 :spadfun:`SPDE1`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) -> Record(ans: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, remainder: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) 
-  \ ``SPDE1(b, c, D)``\  solves \ ``Q'``\  + \ ``b``\  \ ``Q``\  = \ ``c``\  and returns [\ ``Q``\ , \ ``r``\ ] where \ ``r``\  = \ ``c``\  - ( \ ``Q'``\  + \ ``b``\  \ ``Q``\ ). That is when \ ``r``\  is zero then \ ``Q``\  is \ ``true``\  solution, otherwise \ ``r``\  represents unsolved part of \ ``c``\ . Moreover def(\ ``r``\ ) < deg(\ ``bQ``\ ). Note: \ ``SPDE1``\  assumes that deg(\ ``Q'``\ ) < deg(\ ``bQ``\ ) for all \ ``Q``\ .
+  \ :code:`SPDE1(b, c, D)`\  solves \ :code:`Q'`\  + \ :code:`b`\  \ :code:`Q`\  = \ :code:`c`\  and returns [\ :code:`Q`\ , \ :code:`r`\ ] where \ :code:`r`\  = \ :code:`c`\  - ( \ :code:`Q'`\  + \ :code:`b`\  \ :code:`Q`\ ). That is when \ :code:`r`\  is zero then \ :code:`Q`\  is \ :code:`true`\  solution, otherwise \ :code:`r`\  represents unsolved part of \ :code:`c`\ . Moreover def(\ :code:`r`\ ) < deg(\ :code:`bQ`\ ). Note: \ :code:`SPDE1`\  assumes that deg(\ :code:`Q'`\ ) < deg(\ :code:`bQ`\ ) for all \ :code:`Q`\ .
 
 

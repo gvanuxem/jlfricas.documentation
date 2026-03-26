@@ -34,7 +34,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; any?
 
 :spadfun:`any?`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``any?(p, u)``\  tests if \ ``p(x)``\  is \ ``true``\  for any element \ ``x``\  of \ ``u``\ . Note: for collections, \ ``any?(p, u) = reduce(or, map(p, u), false, true)``\ . However, \ ``any?(p, u)``\  returns as soon as it finds an element for which \ ``p``\  gives \ ``true``\ .
+  \ :code:`any?(p, u)`\  tests if \ :code:`p(x)`\  is \ :code:`true`\  for any element \ :code:`x`\  of \ :code:`u`\ . Note: for collections, \ :code:`any?(p, u) = reduce(or, map(p, u), false, true)`\ . However, \ :code:`any?(p, u)`\  returns as soon as it finds an element for which \ :code:`p`\  gives \ :code:`true`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-636f65726365:
 
@@ -52,14 +52,14 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; count
 
 :spadfun:`count`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``count(p, u)``\  returns the number of elements \ ``x``\  in \ ``u``\  such that \ ``p(x)``\  is \ ``true``\ . For collections, \ ``count(p, u) = reduce(+, [1 for x in u | p(x)], 0)``\ .
+  \ :code:`count(p, u)`\  returns the number of elements \ :code:`x`\  in \ :code:`u`\  such that \ :code:`p(x)`\  is \ :code:`true`\ . For collections, \ :code:`count(p, u) = reduce(+, [1 for x in u | p(x)], 0)`\ .
 
 
 .. index::
    pair: HomogeneousAggregate; count
 
 :spadfun:`count`\: (S, %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``count(x, u)``\  returns the number of occurrences of \ ``x``\  in \ ``u``\ . For collections, \ ``count(x, u) = reduce(+, [1 for y in u | x = y], 0)``\ .
+  \ :code:`count(x, u)`\  returns the number of occurrences of \ :code:`x`\  in \ :code:`u`\ . For collections, \ :code:`count(x, u) = reduce(+, [1 for y in u | x = y], 0)`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-656d7074793f:
 
@@ -99,7 +99,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; every?
 
 :spadfun:`every?`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``every?(p, u)``\  tests if \ ``p``\ (\ ``x``\ ) is \ ``true``\  for all elements \ ``x``\  of \ ``u``\ . Note: for collections, \ ``every?(p, u) = reduce(and, map(p, u), true, false)``\ . However, \ ``every?(p, u)``\  returns as soon as it finds an element for which \ ``p``\  gives \ ``false``\ .
+  \ :code:`every?(p, u)`\  tests if \ :code:`p`\ (\ :code:`x`\ ) is \ :code:`true`\  for all elements \ :code:`x`\  of \ :code:`u`\ . Note: for collections, \ :code:`every?(p, u) = reduce(and, map(p, u), true, false)`\ . However, \ :code:`every?(p, u)`\  returns as soon as it finds an element for which \ :code:`p`\  gives \ :code:`false`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-6c61746578:
 
@@ -117,7 +117,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; map!
 
 :spadfun:`map!`\: (S -> S, %) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``map!(f, u)``\  destructively replaces each element \ ``x``\  of \ ``u``\  by \ ``f(x)``\ .
+  \ :code:`map!(f, u)`\  destructively replaces each element \ :code:`x`\  of \ :code:`u`\  by \ :code:`f(x)`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d6170:
 
@@ -125,7 +125,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; map
 
 :spadfun:`map`\: (S -> S, %) -> % 
-  \ ``map(f, u)``\  returns a copy of \ ``u``\  with each element \ ``x``\  replaced by \ ``f``\ (\ ``x``\ ). For collections, \ ``map(f, u) = [f(x) for x in u]``\ .
+  \ :code:`map(f, u)`\  returns a copy of \ :code:`u`\  with each element \ :code:`x`\  replaced by \ :code:`f`\ (\ :code:`x`\ ). For collections, \ :code:`map(f, u) = [f(x) for x in u]`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d6178:
 
@@ -133,14 +133,14 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; max
 
 :spadfun:`max`\: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``max(u)``\  returns maximal element of \ ``u``\ . Error if \ ``u``\  is empty.
+  \ :code:`max(u)`\  returns maximal element of \ :code:`u`\ . Error if \ :code:`u`\  is empty.
 
 
 .. index::
    pair: HomogeneousAggregate; max
 
 :spadfun:`max`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``max(p, u)``\  returns maximal element of \ ``u``\  with respect to total ordering predicate \ ``p``\ . Error if \ ``u``\  is empty.
+  \ :code:`max(p, u)`\  returns maximal element of \ :code:`u`\  with respect to total ordering predicate \ :code:`p`\ . Error if \ :code:`u`\  is empty.
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d656d6265723f:
 
@@ -148,7 +148,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; member?
 
 :spadfun:`member?`\: (S, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``member?(x, u)``\  tests if \ ``x``\  is a member of \ ``u``\ . For collections, \ ``member?(x, u) = reduce(or, [x=y for y in u], false)``\ . However, \ ``member?(x, u)``\  returns as soon as it finds a member.
+  \ :code:`member?(x, u)`\  tests if \ :code:`x`\  is a member of \ :code:`u`\ . For collections, \ :code:`member?(x, u) = reduce(or, [x=y for y in u], false)`\ . However, \ :code:`member?(x, u)`\  returns as soon as it finds a member.
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d656d62657273:
 
@@ -156,7 +156,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; members
 
 :spadfun:`members`\: % -> \ :ref:`List <l4c697374>`\  S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``members(u)``\  returns a list of the consecutive elements of \ ``u``\ . For multisets \ :spadfun:`members`\  gives result with no repetition. See also \ :spadfun:`parts`\ .
+  \ :code:`members(u)`\  returns a list of the consecutive elements of \ :code:`u`\ . For multisets \ :spadfun:`members`\  gives result with no repetition. See also \ :spadfun:`parts`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d696e:
 
@@ -164,7 +164,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; min
 
 :spadfun:`min`\: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``min(u)``\  returns minimal element of \ ``u``\ . Error if \ ``u``\  is empty.
+  \ :code:`min(u)`\  returns minimal element of \ :code:`u`\ . Error if \ :code:`u`\  is empty.
 
 .. _l486f6d6f67656e656f7573416767726567617465-6d6f72653f:
 
@@ -177,7 +177,7 @@ A homogeneous aggregate is an aggregate of elements all of the same type. In the
    pair: HomogeneousAggregate; parts
 
 :spadfun:`parts`\: % -> \ :ref:`List <l4c697374>`\  S if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ ``parts(u)``\  returns a list of the consecutive elements of \ ``u``\ . For finite collections, \ ``construct(parts(u)) = u``\ .
+  \ :code:`parts(u)`\  returns a list of the consecutive elements of \ :code:`u`\ . For finite collections, \ :code:`construct(parts(u)) = u`\ .
 
 .. _l486f6d6f67656e656f7573416767726567617465-73616d706c65:
 

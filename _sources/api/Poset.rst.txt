@@ -10,7 +10,7 @@ Poset S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-holds a complete set together with a structure to codify the partial order. for more documentation see: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/index.\ ``htm``\ }
+holds a complete set together with a structure to codify the partial order. for more documentation see: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/index.\ :code:`htm`\ }
 
 
 .. _l506f736574-2b:
@@ -51,7 +51,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; addArrow
 
 :spadfun:`addArrow`\: (%, S, S) -> % 
-  \ ``addArrow(s, nm, n1, n2)``\  constructs new poset by adding to the poset \ ``s``\  arrow from \ ``n1``\  to \ ``n2``\ .
+  \ :code:`addArrow(s, nm, n1, n2)`\  constructs new poset by adding to the poset \ :code:`s`\  arrow from \ :code:`n1`\  to \ :code:`n2`\ .
 
 .. _l506f736574-6164644f626a65637421:
 
@@ -68,7 +68,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; addObject
 
 :spadfun:`addObject`\: (%, S) -> % 
-  \ ``addObject(s, n)``\  constructs new poset by adding object \ ``n``\  to the poset \ ``s``\ .
+  \ :code:`addObject(s, n)`\  constructs new poset by adding object \ :code:`n`\  to the poset \ :code:`s`\ .
 
 .. _l506f736574-61646a6163656e63794d6174726978:
 
@@ -111,7 +111,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; coverMatrix
 
 :spadfun:`coverMatrix`\: % -> \ :ref:`IncidenceAlgebra <l496e636964656e6365416c6765627261>`\ (\ :ref:`Integer <l496e7465676572>`\ , S) 
-  the covering matrix of a list of elements from a comparison function the list is assumed to be topologically sorted, i.e. \ ``w``\ .\ ``r``\ . to a linear extension of the comparison function \ ``f``\  This function is based on code by Franz Lehner. Notes by Martin Baker on the webpage here: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/moebius/}
+  the covering matrix of a list of elements from a comparison function the list is assumed to be topologically sorted, i.e. \ :code:`w`\ .\ :code:`r`\ . to a linear extension of the comparison function \ :code:`f`\  This function is based on code by Franz Lehner. Notes by Martin Baker on the webpage here: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/moebius/}
 
 .. _l506f736574-6372656174655769647468:
 
@@ -179,14 +179,14 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; finitePoset
 
 :spadfun:`finitePoset`\: (\ :ref:`List <l4c697374>`\  S, (S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``finitePoset(c, p)``\  constructs a finite poset where the set and structure is supplied. The structure is supplied as a predicate function.
+  \ :code:`finitePoset(c, p)`\  constructs a finite poset where the set and structure is supplied. The structure is supplied as a predicate function.
 
 
 .. index::
    pair: Poset; finitePoset
 
 :spadfun:`finitePoset`\: (\ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``finitePoset(c, s)``\  constructs a finite poset where the set and structure is supplied.
+  \ :code:`finitePoset(c, s)`\  constructs a finite poset where the set and structure is supplied.
 
 .. _l506f736574-666c617474656e:
 
@@ -199,7 +199,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; getArr
 
 :spadfun:`getArr`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``getArr(s)``\  returns a list of all the arrows (or edges) Note: different from getArrows(\ ``s``\ ) which is inherited from FiniteGraph(\ ``S``\ )
+  \ :code:`getArr(s)`\  returns a list of all the arrows (or edges) Note: different from getArrows(\ :code:`s`\ ) which is inherited from FiniteGraph(\ :code:`S`\ )
 
 .. _l506f736574-6765744172726f77496e646578:
 
@@ -217,7 +217,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; getVert
 
 :spadfun:`getVert`\: % -> \ :ref:`List <l4c697374>`\  S 
-  \ ``getVert(s)``\  returns a list of all the vertices (or objects) of the graph \ ``s``\ . Note: different from getVertices(\ ``s``\ ) which is inherited from FiniteGraph(\ ``S``\ )
+  \ :code:`getVert(s)`\  returns a list of all the vertices (or objects) of the graph \ :code:`s`\ . Note: different from getVertices(\ :code:`s`\ ) which is inherited from FiniteGraph(\ :code:`S`\ )
 
 .. _l506f736574-676574566572746578496e646578:
 
@@ -235,7 +235,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; glb
 
 :spadfun:`glb`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``glb(s, l)``\  'greatest lower bound' or 'infimum' of \ ``l``\ . In this version of \ ``glb``\  nodes are represented as index values. Not every subset of a poset will have a \ ``glb``\  in which case "failed" will be returned as an error indication.
+  \ :code:`glb(s, l)`\  'greatest lower bound' or 'infimum' of \ :code:`l`\ . In this version of \ :code:`glb`\  nodes are represented as index values. Not every subset of a poset will have a \ :code:`glb`\  in which case "failed" will be returned as an error indication.
 
 .. _l506f736574-696d706c696573:
 
@@ -261,7 +261,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; indexToObject
 
 :spadfun:`indexToObject`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> S 
-  \ ``indexToObject returns``\  the object at a given index.
+  \ :code:`indexToObject returns`\  the object at a given index.
 
 .. _l506f736574-696e697469616c:
 
@@ -279,7 +279,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; isAntiChain?
 
 :spadfun:`isAntiChain?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isAntiChain?(s)``\  checks if \ ``s``\  is an antichain, that is any two elements in \ ``s``\  are incomparable.
+  \ :code:`isAntiChain?(s)`\  checks if \ :code:`s`\  is an antichain, that is any two elements in \ :code:`s`\  are incomparable.
 
 .. _l506f736574-6973436861696e3f:
 
@@ -287,7 +287,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; isChain?
 
 :spadfun:`isChain?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isChain?(s)``\  checks if \ ``s``\  is a chain, that is any two elements in \ ``s``\  are comparable.
+  \ :code:`isChain?(s)`\  checks if \ :code:`s`\  is a chain, that is any two elements in \ :code:`s`\  are comparable.
 
 .. _l506f736574-697344697265637465643f:
 
@@ -320,14 +320,14 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; joinIfCan
 
 :spadfun:`joinIfCan`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``joinIfCan returns``\  the join of a subset of lattice given by list of elements.
+  \ :code:`joinIfCan returns`\  the join of a subset of lattice given by list of elements.
 
 
 .. index::
    pair: Poset; joinIfCan
 
 :spadfun:`joinIfCan`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``joinIfCan(s, a, b)``\  returns the join of 'a' and \ ``'b'``\  In this version of join nodes are represented as index values. In the general case, not every poset will have a join in which case "failed" will be returned as an error indication.
+  \ :code:`joinIfCan(s, a, b)`\  returns the join of 'a' and \ :code:`'b'`\  In this version of join nodes are represented as index values. In the general case, not every poset will have a join in which case "failed" will be returned as an error indication.
 
 .. _l506f736574-6b6772617068:
 
@@ -375,7 +375,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; lowerSet
 
 :spadfun:`lowerSet`\: % -> % 
-  a subset \ ``U``\  with the property that, if \ ``x``\  is in \ ``U``\  and \ ``x``\  \ ``>=``\  \ ``y``\ , then \ ``y``\  is in \ ``U``\ 
+  a subset \ :code:`U`\  with the property that, if \ :code:`x`\  is in \ :code:`U`\  and \ :code:`x`\  \ :code:`>=`\  \ :code:`y`\ , then \ :code:`y`\  is in \ :code:`U`\ 
 
 .. _l506f736574-6c7562:
 
@@ -383,7 +383,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; lub
 
 :spadfun:`lub`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``lub(s, l)``\  is 'least upper bound' or 'supremum' of \ ``l``\ . In this version of lub nodes are represented as index values. Not every subset of a poset will have a lub in which case "failed" will be returned as an error indication.
+  \ :code:`lub(s, l)`\  is 'least upper bound' or 'supremum' of \ :code:`l`\ . In this version of lub nodes are represented as index values. Not every subset of a poset will have a lub in which case "failed" will be returned as an error indication.
 
 .. _l506f736574-6d6170:
 
@@ -410,14 +410,14 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; meetIfCan
 
 :spadfun:`meetIfCan`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``meetIfCan returns``\  the meet of a subset of lattice given by list of elements.
+  \ :code:`meetIfCan returns`\  the meet of a subset of lattice given by list of elements.
 
 
 .. index::
    pair: Poset; meetIfCan
 
 :spadfun:`meetIfCan`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , failed) 
-  \ ``meetIfCan(s, a, b)``\  returns the meet of 'a' and \ ``'b'``\  In this version of meet nodes are represented as index values. In the general case, not every poset will have a meet in which case "failed" will be returned as an error indication.
+  \ :code:`meetIfCan(s, a, b)`\  returns the meet of 'a' and \ :code:`'b'`\  In this version of meet nodes are represented as index values. In the general case, not every poset will have a meet in which case "failed" will be returned as an error indication.
 
 .. _l506f736574-6d65726765:
 
@@ -439,7 +439,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; moebius
 
 :spadfun:`moebius`\: % -> \ :ref:`IncidenceAlgebra <l496e636964656e6365416c6765627261>`\ (\ :ref:`Integer <l496e7465676572>`\ , S) 
-  \ ``moebius incidence``\  matrix for this poset This function is based on code by Franz Lehner. Notes by Martin Baker on the webpage here: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/moebius/}
+  \ :code:`moebius incidence`\  matrix for this poset This function is based on code by Franz Lehner. Notes by Martin Baker on the webpage here: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/moebius/}
 
 .. _l506f736574-6e6f646546726f6d4172726f77:
 
@@ -467,7 +467,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; objectToIndex
 
 :spadfun:`objectToIndex`\: (%, S) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``objectToIndex returns``\  the index of a given object.
+  \ :code:`objectToIndex returns`\  the index of a given object.
 
 .. _l506f736574-6f70706f73697465:
 
@@ -475,7 +475,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; opposite
 
 :spadfun:`opposite`\: % -> % 
-  \ ``opposite(s)``\  constructs the opposite in the category theory sense of reversing all the arrows.
+  \ :code:`opposite(s)`\  constructs the opposite in the category theory sense of reversing all the arrows.
 
 .. _l506f736574-6f7574446567726565:
 
@@ -533,7 +533,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; upperSet
 
 :spadfun:`upperSet`\: % -> % 
-  a subset \ ``U``\  with the property that, if \ ``x``\  is in \ ``U``\  and \ ``x``\  \ ``<=``\  \ ``y``\ , then \ ``y``\  is in \ ``U``\ 
+  a subset \ :code:`U`\  with the property that, if \ :code:`x`\  is in \ :code:`U`\  and \ :code:`x`\  \ :code:`<=`\  \ :code:`y`\ , then \ :code:`y`\  is in \ :code:`U`\ 
 
 .. _l506f736574-7a6574614d6174726978:
 
@@ -541,7 +541,7 @@ holds a complete set together with a structure to codify the partial order. for 
    pair: Poset; zetaMatrix
 
 :spadfun:`zetaMatrix`\: % -> \ :ref:`IncidenceAlgebra <l496e636964656e6365416c6765627261>`\ (\ :ref:`Integer <l496e7465676572>`\ , S) 
-  \ ``zetaMatrix(P)``\  returns the matrix of the zeta function. This function is based on code by Franz Lehner. Notes by Martin Baker on the webpage here: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/moebius/}
+  \ :code:`zetaMatrix(P)`\  returns the matrix of the zeta function. This function is based on code by Franz Lehner. Notes by Martin Baker on the webpage here: \url{http://www.euclideanspace.com/prog/scratchpad/mycode/discrete/logic/moebius/}
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

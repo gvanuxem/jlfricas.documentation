@@ -92,7 +92,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(l)</span></code> converts a list <code class="docutils literal notranslate"><span class="pre">l</span></code> to a stream.</p>
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(l)</span></code> converts a list <code class="code docutils literal notranslate"><span class="pre">l</span></code> to a stream.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-636f6d706c657465">
@@ -118,7 +118,7 @@
 </dd>
 </dl>
 <span id="l53747265616d-636f6e73"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">cons</span>: (S, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cons(a,</span> <span class="pre">s)</span></code> returns a stream whose <code class="docutils literal notranslate"><span class="pre">first</span></code> is <code class="docutils literal notranslate"><span class="pre">a</span></code> and whose <code class="docutils literal notranslate"><span class="pre">rest</span></code> is <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">cons(a,</span> <span class="pre">s)</span> <span class="pre">=</span> <span class="pre">concat(a,</span> <span class="pre">s)</span></code>.</p>
+<dt><span class="spadfun">cons</span>: (S, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">cons(a,</span> <span class="pre">s)</span></code> returns a stream whose <code class="code docutils literal notranslate"><span class="pre">first</span></code> is <code class="code docutils literal notranslate"><span class="pre">a</span></code> and whose <code class="code docutils literal notranslate"><span class="pre">rest</span></code> is <code class="code docutils literal notranslate"><span class="pre">s</span></code>. Note: <code class="code docutils literal notranslate"><span class="pre">cons(a,</span> <span class="pre">s)</span> <span class="pre">=</span> <span class="pre">concat(a,</span> <span class="pre">s)</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-636f6e737472756374">
@@ -158,7 +158,7 @@
 </dd>
 </dl>
 <span id="l53747265616d-64656c6179"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">delay</span>: (() -&gt; %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">delay(f)</span></code> creates a stream with a lazy evaluation defined by function <code class="docutils literal notranslate"><span class="pre">f</span></code>. Caution: This function can only be called in compiled code.</p>
+<dt><span class="spadfun">delay</span>: (() -&gt; %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">delay(f)</span></code> creates a stream with a lazy evaluation defined by function <code class="code docutils literal notranslate"><span class="pre">f</span></code>. Caution: This function can only be called in compiled code.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-64656c657465">
@@ -238,11 +238,11 @@
 </dd>
 </dl>
 <span id="l53747265616d-66696c746572556e74696c"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">filterUntil</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">filterUntil(p,</span> <span class="pre">s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">...,</span> <span class="pre">x(n)]</span></code> where <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">..]</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> is the smallest index such that <code class="docutils literal notranslate"><span class="pre">p(xn)</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
+<dt><span class="spadfun">filterUntil</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">filterUntil(p,</span> <span class="pre">s)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">...,</span> <span class="pre">x(n)]</span></code> where <code class="code docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">..]</span></code> and <code class="code docutils literal notranslate"><span class="pre">n</span></code> is the smallest index such that <code class="code docutils literal notranslate"><span class="pre">p(xn)</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
 </dd>
 </dl>
 <span id="l53747265616d-66696c7465725768696c65"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">filterWhile</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">filterWhile(p,</span> <span class="pre">s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">...,</span> <span class="pre">x(n-1)]</span></code> where <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">..]</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code> is the smallest index such that <code class="docutils literal notranslate"><span class="pre">p(xn)</span> <span class="pre">=</span> <span class="pre">false</span></code>.</p>
+<dt><span class="spadfun">filterWhile</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">filterWhile(p,</span> <span class="pre">s)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">...,</span> <span class="pre">x(n-1)]</span></code> where <code class="code docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">..]</span></code> and <code class="code docutils literal notranslate"><span class="pre">n</span></code> is the smallest index such that <code class="code docutils literal notranslate"><span class="pre">p(xn)</span> <span class="pre">=</span> <span class="pre">false</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-66696e64">
@@ -250,7 +250,7 @@
 </dd>
 </dl>
 <span id="l53747265616d-66696e644379636c65"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">findCycle</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; Record(cycle?: <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, prefix: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, period: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">findCycle(n,</span> <span class="pre">st)</span></code> determines if st is periodic within <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<dt><span class="spadfun">findCycle</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; Record(cycle?: <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, prefix: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, period: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">findCycle(n,</span> <span class="pre">st)</span></code> determines if st is periodic within <code class="code docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-6669727374">
@@ -418,11 +418,11 @@
 </dd>
 </dl>
 <span id="l53747265616d-726570656174696e673f"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">repeating?</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">repeating?(l,</span> <span class="pre">s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if a stream <code class="docutils literal notranslate"><span class="pre">s</span></code> is periodic with period <code class="docutils literal notranslate"><span class="pre">l</span></code>, and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+<dt><span class="spadfun">repeating?</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">repeating?(l,</span> <span class="pre">s)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">true</span></code> if a stream <code class="code docutils literal notranslate"><span class="pre">s</span></code> is periodic with period <code class="code docutils literal notranslate"><span class="pre">l</span></code>, and <code class="code docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
 </dd>
 </dl>
 <span id="l53747265616d-726570656174696e67"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">repeating</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">repeating(l)</span></code> is a repeating stream whose period is the list <code class="docutils literal notranslate"><span class="pre">l</span></code>.</p>
+<dt><span class="spadfun">repeating</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">repeating(l)</span></code> is a repeating stream whose period is the list <code class="code docutils literal notranslate"><span class="pre">l</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-72657374">
@@ -482,7 +482,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-9">
-<dt><span class="spadfun">setrest!</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setrest!(x,</span> <span class="pre">n,</span> <span class="pre">y)</span></code> sets rest(<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code>) to <code class="docutils literal notranslate"><span class="pre">y</span></code>. The function will expand cycles if necessary.</p>
+<dt><span class="spadfun">setrest!</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">setrest!(x,</span> <span class="pre">n,</span> <span class="pre">y)</span></code> sets rest(<code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">n</span></code>) to <code class="code docutils literal notranslate"><span class="pre">y</span></code>. The function will expand cycles if necessary.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-73657476616c756521">
@@ -490,15 +490,15 @@
 </dd>
 </dl>
 <span id="l53747265616d-73686f77416c6c3f"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">showAll?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">showAll?()</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if all computed entries of streams will be displayed.</p>
+<dt><span class="spadfun">showAll?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">showAll?()</span></code> returns <code class="code docutils literal notranslate"><span class="pre">true</span></code> if all computed entries of streams will be displayed.</p>
 </dd>
 </dl>
 <span id="l53747265616d-73686f77416c6c456c656d656e7473"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">showAllElements</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">showAllElements(s)</span></code> creates an output form which displays all computed elements.</p>
+<dt><span class="spadfun">showAllElements</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">showAllElements(s)</span></code> creates an output form which displays all computed elements.</p>
 </dd>
 </dl>
 <span id="l53747265616d-73686f77456c656d656e7473"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">showElements</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">showElements(n,</span> <span class="pre">st)</span></code> computes and creates and output form of the first <code class="docutils literal notranslate"><span class="pre">n</span></code> entries of st.</p>
+<dt><span class="spadfun">showElements</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">showElements(n,</span> <span class="pre">st)</span></code> computes and creates and output form of the first <code class="code docutils literal notranslate"><span class="pre">n</span></code> entries of st.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-73697a653f">
@@ -526,11 +526,11 @@
 </dd>
 </dl>
 <span id="l53747265616d-73747265616d"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">stream</span>: (() -&gt; S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stream(f)</span></code> creates an infinite stream all of whose elements are equal to <code class="docutils literal notranslate"><span class="pre">f()</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">stream(f)</span> <span class="pre">=</span> <span class="pre">[f(),</span> <span class="pre">f(),</span> <span class="pre">f(),</span> <span class="pre">...]</span></code>.</p>
+<dt><span class="spadfun">stream</span>: (() -&gt; S) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">stream(f)</span></code> creates an infinite stream all of whose elements are equal to <code class="code docutils literal notranslate"><span class="pre">f()</span></code>. Note: <code class="code docutils literal notranslate"><span class="pre">stream(f)</span> <span class="pre">=</span> <span class="pre">[f(),</span> <span class="pre">f(),</span> <span class="pre">f(),</span> <span class="pre">...]</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-14">
-<dt><span class="spadfun">stream</span>: (S -&gt; S, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stream(f,</span> <span class="pre">x)</span></code> creates an infinite stream whose first element is <code class="docutils literal notranslate"><span class="pre">x</span></code> and whose <code class="docutils literal notranslate"><span class="pre">n</span></code>th element (<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>) is <code class="docutils literal notranslate"><span class="pre">f</span></code> applied to the previous element. Note: <code class="docutils literal notranslate"><span class="pre">stream(f,</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">[x,</span> <span class="pre">f(x),</span> <span class="pre">f(f(x)),</span> <span class="pre">...]</span></code>.</p>
+<dt><span class="spadfun">stream</span>: (S -&gt; S, S) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">stream(f,</span> <span class="pre">x)</span></code> creates an infinite stream whose first element is <code class="code docutils literal notranslate"><span class="pre">x</span></code> and whose <code class="code docutils literal notranslate"><span class="pre">n</span></code>th element (<code class="code docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>) is <code class="code docutils literal notranslate"><span class="pre">f</span></code> applied to the previous element. Note: <code class="code docutils literal notranslate"><span class="pre">stream(f,</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">[x,</span> <span class="pre">f(x),</span> <span class="pre">f(f(x)),</span> <span class="pre">...]</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l53747265616d-7377617021">
@@ -631,7 +631,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

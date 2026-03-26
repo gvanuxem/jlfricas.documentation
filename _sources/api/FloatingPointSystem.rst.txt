@@ -8,7 +8,7 @@ FloatingPointSystem
 :viewcode:`sf.spad line 77 <sf.spad#L77>` :editcode:`[edit on github] <sf.spad#L77>`
 
 
-This category is intended as a model for floating point systems. A floating point system is a model for the real numbers. In fact, it is an approximation in the sense that not all real numbers are exactly representable by floating point numbers. A floating point system is characterized by the following:   1: \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  of the \ :ref:`exponent <l466c6f6174696e67506f696e7453797374656d-6578706f6e656e74>`\ . (actual implementations are usually binary or decimal) 2: \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  of the \ :ref:`mantissa <l466c6f6174696e67506f696e7453797374656d-6d616e7469737361>`\  (arbitrary or fixed) 3: rounding error for operations   Because a Float is an approximation to the real numbers, even though it is defined to be a join of a Field and OrderedRing, some of the attributes do not hold. In particular associative(\ ``"+"``\ ) does not hold. Algorithms defined over a field need special considerations when the field is a floating point system.
+This category is intended as a model for floating point systems. A floating point system is a model for the real numbers. In fact, it is an approximation in the sense that not all real numbers are exactly representable by floating point numbers. A floating point system is characterized by the following:   1: \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  of the \ :ref:`exponent <l466c6f6174696e67506f696e7453797374656d-6578706f6e656e74>`\ . (actual implementations are usually binary or decimal) 2: \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  of the \ :ref:`mantissa <l466c6f6174696e67506f696e7453797374656d-6d616e7469737361>`\  (arbitrary or fixed) 3: rounding error for operations   Because a Float is an approximation to the real numbers, even though it is defined to be a join of a Field and OrderedRing, some of the attributes do not hold. In particular associative(\ :code:`"+"`\ ) does not hold. Algorithms defined over a field need special considerations when the field is a floating point system.
 
 
 .. _l466c6f6174696e67506f696e7453797374656d-30:
@@ -70,7 +70,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x / i``\  computes the division from \ ``x``\  by an integer \ ``i``\ .
+  \ :code:`x / i`\  computes the division from \ :code:`x`\  by an integer \ :code:`i`\ .
 
 .. _l466c6f6174696e67506f696e7453797374656d-3c3d:
 
@@ -150,7 +150,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; base
 
 :spadfun:`base`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``base()``\  returns the base of the \ :ref:`exponent <l466c6f6174696e67506f696e7453797374656d-6578706f6e656e74>`\ .
+  \ :code:`base()`\  returns the base of the \ :ref:`exponent <l466c6f6174696e67506f696e7453797374656d-6578706f6e656e74>`\ .
 
 .. _l466c6f6174696e67506f696e7453797374656d-62697473:
 
@@ -158,14 +158,14 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; bits
 
 :spadfun:`bits`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``bits()``\  returns ceiling\ ``'s``\  precision in bits.
+  \ :code:`bits()`\  returns ceiling\ :code:`'s`\  precision in bits.
 
 
 .. index::
    pair: FloatingPointSystem; bits
 
 :spadfun:`bits`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``bits(n)``\  set the \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  to \ ``n``\  bits.
+  \ :code:`bits(n)`\  set the \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  to \ :code:`n`\  bits.
 
 .. _l466c6f6174696e67506f696e7453797374656d-6365696c696e67:
 
@@ -222,7 +222,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; decreasePrecision
 
 :spadfun:`decreasePrecision`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``decreasePrecision(n)``\  decreases the current \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  precision by \ ``n``\  decimal digits.
+  \ :code:`decreasePrecision(n)`\  decreases the current \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  precision by \ :code:`n`\  decimal digits.
 
 .. _l466c6f6174696e67506f696e7453797374656d-646967697473:
 
@@ -230,14 +230,14 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; digits
 
 :spadfun:`digits`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``digits()``\  returns ceiling\ ``'s``\  precision in decimal digits.
+  \ :code:`digits()`\  returns ceiling\ :code:`'s`\  precision in decimal digits.
 
 
 .. index::
    pair: FloatingPointSystem; digits
 
 :spadfun:`digits`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``digits(d)``\  set the \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  to \ ``d``\  digits.
+  \ :code:`digits(d)`\  set the \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  to \ :code:`d`\  digits.
 
 .. _l466c6f6174696e67506f696e7453797374656d-646976696465:
 
@@ -255,7 +255,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; exponent
 
 :spadfun:`exponent`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``exponent(x)``\  returns the \ :ref:`exponent <l466c6f6174696e67506f696e7453797374656d-6578706f6e656e74>`\  part of \ ``x``\ .
+  \ :code:`exponent(x)`\  returns the \ :ref:`exponent <l466c6f6174696e67506f696e7453797374656d-6578706f6e656e74>`\  part of \ :code:`x`\ .
 
 .. _l466c6f6174696e67506f696e7453797374656d-65787072657373496465616c4d656d626572:
 
@@ -287,14 +287,14 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; float
 
 :spadfun:`float`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``float(a, e)``\  returns \ ``a * base() ^ e``\ .
+  \ :code:`float(a, e)`\  returns \ :code:`a * base() ^ e`\ .
 
 
 .. index::
    pair: FloatingPointSystem; float
 
 :spadfun:`float`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``float(a, e, b)``\  returns \ ``a * b ^ e``\ .
+  \ :code:`float(a, e, b)`\  returns \ :code:`a * b ^ e`\ .
 
 .. _l466c6f6174696e67506f696e7453797374656d-666c6f6f72:
 
@@ -326,7 +326,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; increasePrecision
 
 :spadfun:`increasePrecision`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``increasePrecision(n)``\  increases the current \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  by \ ``n``\  decimal digits.
+  \ :code:`increasePrecision(n)`\  increases the current \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\  by \ :code:`n`\  decimal digits.
 
 .. _l466c6f6174696e67506f696e7453797374656d-696e76:
 
@@ -372,7 +372,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; mantissa
 
 :spadfun:`mantissa`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``mantissa(x)``\  returns the mantissa part of \ ``x``\ .
+  \ :code:`mantissa(x)`\  returns the mantissa part of \ :code:`x`\ .
 
 .. _l466c6f6174696e67506f696e7453797374656d-6d6178:
 
@@ -384,7 +384,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; max
 
 :spadfun:`max`\: () -> % if % hasn't \ :ref:`arbitraryExponent <l6172626974726172794578706f6e656e74>`\  and % hasn't \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``max()``\  returns the maximum floating point number.
+  \ :code:`max()`\  returns the maximum floating point number.
 
 .. _l466c6f6174696e67506f696e7453797374656d-6d696e:
 
@@ -396,7 +396,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; min
 
 :spadfun:`min`\: () -> % if % hasn't \ :ref:`arbitraryExponent <l6172626974726172794578706f6e656e74>`\  and % hasn't \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``min()``\  returns the minimum floating point number.
+  \ :code:`min()`\  returns the minimum floating point number.
 
 .. _l466c6f6174696e67506f696e7453797374656d-6d756c74694575636c696465616e:
 
@@ -434,7 +434,7 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; order
 
 :spadfun:`order`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``order x``\  is the order of magnitude of \ ``x``\ . Note: \ ``base ^ order x <= |x| < base ^ (1 + order x)``\ .
+  \ :code:`order x`\  is the order of magnitude of \ :code:`x`\ . Note: \ :code:`base ^ order x <= |x| < base ^ (1 + order x)`\ .
 
 .. _l466c6f6174696e67506f696e7453797374656d-7061747465726e4d61746368:
 
@@ -457,14 +457,14 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; precision
 
 :spadfun:`precision`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``precision()``\  returns the precision in digits base.
+  \ :code:`precision()`\  returns the precision in digits base.
 
 
 .. index::
    pair: FloatingPointSystem; precision
 
 :spadfun:`precision`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if % has \ :ref:`arbitraryPrecision <l617262697472617279507265636973696f6e>`\ 
-  \ ``precision(n)``\  set the precision in the base to \ ``n``\  decimal digits.
+  \ :code:`precision(n)`\  set the precision in the base to \ :code:`n`\  decimal digits.
 
 .. _l466c6f6174696e67506f696e7453797374656d-7072696d653f:
 
@@ -574,14 +574,14 @@ This category is intended as a model for floating point systems. A floating poin
    pair: FloatingPointSystem; toString
 
 :spadfun:`toString`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``toString(x)``\  returns the string representation of \ ``x``\ .
+  \ :code:`toString(x)`\  returns the string representation of \ :code:`x`\ .
 
 
 .. index::
    pair: FloatingPointSystem; toString
 
 :spadfun:`toString`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`String <l537472696e67>`\  
-  \ ``toString(x, n)``\  returns a string representation of \ ``x``\  truncated to \ ``n``\  decimal digits.
+  \ :code:`toString(x, n)`\  returns a string representation of \ :code:`x`\  truncated to \ :code:`n`\  decimal digits.
 
 .. _l466c6f6174696e67506f696e7453797374656d-7472756e63617465:
 

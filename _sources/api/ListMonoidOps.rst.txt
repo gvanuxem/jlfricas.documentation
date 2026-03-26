@@ -47,7 +47,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; leftMult
 
 :spadfun:`leftMult`\: (S, %) -> % 
-  \ ``leftMult(s, a)``\  returns \ ``s * a``\  where \ ``*``\  is the monoid operation, which is assumed non-commutative.
+  \ :code:`leftMult(s, a)`\  returns \ :code:`s * a`\  where \ :code:`*`\  is the monoid operation, which is assumed non-commutative.
 
 .. _l4c6973744d6f6e6f69644f7073-6c6973744f664d6f6e6f6d73:
 
@@ -55,7 +55,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; listOfMonoms
 
 :spadfun:`listOfMonoms`\: % -> \ :ref:`List <l4c697374>`\  Record(gen: S, exp: E) 
-  \ ``listOfMonoms(l)``\  returns the list of the monomials forming \ ``l``\ .
+  \ :code:`listOfMonoms(l)`\  returns the list of the monomials forming \ :code:`l`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-6d616b654d756c7469:
 
@@ -63,7 +63,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; makeMulti
 
 :spadfun:`makeMulti`\: \ :ref:`List <l4c697374>`\  Record(gen: S, exp: E) -> % 
-  \ ``makeMulti(l)``\  returns the element whose list of monomials is \ ``l``\ .
+  \ :code:`makeMulti(l)`\  returns the element whose list of monomials is \ :code:`l`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-6d616b655465726d:
 
@@ -71,7 +71,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; makeTerm
 
 :spadfun:`makeTerm`\: (S, E) -> % 
-  \ ``makeTerm(s, e)``\  returns the monomial \ ``s``\  exponentiated by \ ``e``\  (e.g. s^e or \ ``e``\  * \ ``s``\ ).
+  \ :code:`makeTerm(s, e)`\  returns the monomial \ :code:`s`\  exponentiated by \ :code:`e`\  (e.g. s^e or \ :code:`e`\  * \ :code:`s`\ ).
 
 .. _l4c6973744d6f6e6f69644f7073-6d616b65556e6974:
 
@@ -79,7 +79,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; makeUnit
 
 :spadfun:`makeUnit`\: () -> % 
-  \ ``makeUnit()``\  returns the unit element of the monomial.
+  \ :code:`makeUnit()`\  returns the unit element of the monomial.
 
 .. _l4c6973744d6f6e6f69644f7073-6d61704578706f6e:
 
@@ -87,7 +87,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; mapExpon
 
 :spadfun:`mapExpon`\: (E -> E, %) -> % 
-  \ ``mapExpon(f, a1\^e1 ... an\^en)``\  returns \ ``a1\^f(e1) ... an\^f(en)``\ .
+  \ :code:`mapExpon(f, a1\^e1 ... an\^en)`\  returns \ :code:`a1\^f(e1) ... an\^f(en)`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-6d617047656e:
 
@@ -95,7 +95,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; mapGen
 
 :spadfun:`mapGen`\: (S -> S, %) -> % 
-  \ ``mapGen(f, a1\^e1 ... an\^en)``\  returns \ ``f(a1)\^e1 ... f(an)\^en``\ .
+  \ :code:`mapGen(f, a1\^e1 ... an\^en)`\  returns \ :code:`f(a1)\^e1 ... f(an)\^en`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-6e74684578706f6e:
 
@@ -103,7 +103,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; nthExpon
 
 :spadfun:`nthExpon`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> E 
-  \ ``nthExpon(l, n)``\  returns the exponent of the n^th monomial of \ ``l``\ .
+  \ :code:`nthExpon(l, n)`\  returns the exponent of the n^th monomial of \ :code:`l`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-6e7468466163746f72:
 
@@ -111,7 +111,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; nthFactor
 
 :spadfun:`nthFactor`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> S 
-  \ ``nthFactor(l, n)``\  returns the factor of the n^th monomial of \ ``l``\ .
+  \ :code:`nthFactor(l, n)`\  returns the factor of the n^th monomial of \ :code:`l`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-6f7574707574466f726d:
 
@@ -119,7 +119,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; outputForm
 
 :spadfun:`outputForm`\: (%, (\ :ref:`OutputForm <l4f7574707574466f726d>`\ , \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> \ :ref:`OutputForm <l4f7574707574466f726d>`\ , (\ :ref:`OutputForm <l4f7574707574466f726d>`\ , \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> \ :ref:`OutputForm <l4f7574707574466f726d>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
-  \ ``outputForm(l, fop, fexp, unit)``\  converts the monoid element represented by \ ``l``\  to an \ :ref:`OutputForm <l4f7574707574466f726d>`\ . Argument unit is the output form for the unit of the monoid (e.g. 0 or 1), \ ``fop(a, b)``\  is the output form for the monoid operation applied to \ ``a``\  and \ ``b``\  (e.g. \ ``a + b``\ , \ ``a * b``\ , \ ``ab``\ ), and \ ``fexp(a, n)``\  is the output form for the exponentiation operation applied to \ ``a``\  and \ ``n``\  (e.g. \ ``n a``\ , \ ``n * a``\ , \ ``a ^ n``\ , \ ``a\^n``\ ).
+  \ :code:`outputForm(l, fop, fexp, unit)`\  converts the monoid element represented by \ :code:`l`\  to an \ :ref:`OutputForm <l4f7574707574466f726d>`\ . Argument unit is the output form for the unit of the monoid (e.g. 0 or 1), \ :code:`fop(a, b)`\  is the output form for the monoid operation applied to \ :code:`a`\  and \ :code:`b`\  (e.g. \ :code:`a + b`\ , \ :code:`a * b`\ , \ :code:`ab`\ ), and \ :code:`fexp(a, n)`\  is the output form for the exponentiation operation applied to \ :code:`a`\  and \ :code:`n`\  (e.g. \ :code:`n a`\ , \ :code:`n * a`\ , \ :code:`a ^ n`\ , \ :code:`a\^n`\ ).
 
 .. _l4c6973744d6f6e6f69644f7073-72657472616374:
 
@@ -137,7 +137,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; reverse!
 
 :spadfun:`reverse!`\: % -> % 
-  \ ``reverse!(l)``\  reverses the list of monomials forming \ ``l``\ , destroying the element \ ``l``\ .
+  \ :code:`reverse!(l)`\  reverses the list of monomials forming \ :code:`l`\ , destroying the element \ :code:`l`\ .
 
 .. _l4c6973744d6f6e6f69644f7073-72657665727365:
 
@@ -145,7 +145,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; reverse
 
 :spadfun:`reverse`\: % -> % 
-  \ ``reverse(l)``\  reverses the list of monomials forming \ ``l``\ . This has some effect if the monoid is non-abelian, i.e. \ ``reverse(a1\^e1 ... an\^en) = an\^en ... a1\^e1``\  which is different.
+  \ :code:`reverse(l)`\  reverses the list of monomials forming \ :code:`l`\ . This has some effect if the monoid is non-abelian, i.e. \ :code:`reverse(a1\^e1 ... an\^en) = an\^en ... a1\^e1`\  which is different.
 
 .. _l4c6973744d6f6e6f69644f7073-72696768744d756c74:
 
@@ -153,7 +153,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; rightMult
 
 :spadfun:`rightMult`\: (%, S) -> % 
-  \ ``rightMult(a, s)``\  returns \ ``a * s``\  where \ ``*``\  is the monoid operation, which is assumed non-commutative.
+  \ :code:`rightMult(a, s)`\  returns \ :code:`a * s`\  where \ :code:`*`\  is the monoid operation, which is assumed non-commutative.
 
 .. _l4c6973744d6f6e6f69644f7073-73697a65:
 
@@ -161,7 +161,7 @@ This internal package represents monoid (abelian or not, with or without inverse
    pair: ListMonoidOps; size
 
 :spadfun:`size`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``size(l)``\  returns the number of monomials forming \ ``l``\ .
+  \ :code:`size(l)`\  returns the number of monomials forming \ :code:`l`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

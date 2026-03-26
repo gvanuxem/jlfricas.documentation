@@ -12,7 +12,7 @@ UnivariateLaurentSeriesConstructorCategory(Coef, UTS)
 * UTS: \ :ref:`UnivariateTaylorSeriesCategory <l556e69766172696174655461796c6f7253657269657343617465676f7279>`\  Coef
 
 
-This is a category of univariate Laurent series constructed from univariate Taylor series. A Laurent series is represented by a pair \ ``[n, f(x)]``\ , where \ ``n``\  is an arbitrary integer and \ ``f(x)``\  is a Taylor series. This pair represents the Laurent series \ ``x^n * f(x)``\ .
+This is a category of univariate Laurent series constructed from univariate Taylor series. A Laurent series is represented by a pair \ :code:`[n, f(x)]`\ , where \ :code:`n`\  is an arbitrary integer and \ :code:`f(x)`\  is a Taylor series. This pair represents the Laurent series \ :code:`x^n * f(x)`\ .
 
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-30:
@@ -293,7 +293,7 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; coerce
 
 :spadfun:`coerce`\: UTS -> % 
-  \ ``coerce(f(x))``\  converts the Taylor series \ ``f(x)``\  to a Laurent series.
+  \ :code:`coerce(f(x))`\  converts the Taylor series \ :code:`f(x)`\  to a Laurent series.
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-636f6d6d757461746f72:
 
@@ -410,7 +410,7 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; degree
 
 :spadfun:`degree`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``degree(f(x))``\  returns the degree of the lowest order term of \ ``f(x)``\ , which may have zero as a coefficient.
+  \ :code:`degree(f(x))`\  returns the degree of the lowest order term of \ :code:`f(x)`\ , which may have zero as a coefficient.
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-64656e6f6d:
 
@@ -609,7 +609,7 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; laurent
 
 :spadfun:`laurent`\: (\ :ref:`Integer <l496e7465676572>`\ , UTS) -> % 
-  \ ``laurent(n, f(x))``\  returns \ ``x^n * f(x)``\ .
+  \ :code:`laurent(n, f(x))`\  returns \ :code:`x^n * f(x)`\ .
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-6c636d:
 
@@ -843,14 +843,14 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; removeZeroes
 
 :spadfun:`removeZeroes`\: % -> % 
-  \ ``removeZeroes(f(x))``\  removes leading zeroes from the representation of the Laurent series \ ``f(x)``\ . A Laurent series is represented by (1) an exponent and (2) a Taylor series which may have leading zero coefficients. When the Taylor series has a leading zero coefficient, the 'leading zero' is removed from the Laurent series as follows: the series is rewritten by increasing the exponent by 1 and dividing the Taylor series by its variable. Note: \ ``removeZeroes(f)``\  removes all leading zeroes from \ ``f``\ 
+  \ :code:`removeZeroes(f(x))`\  removes leading zeroes from the representation of the Laurent series \ :code:`f(x)`\ . A Laurent series is represented by (1) an exponent and (2) a Taylor series which may have leading zero coefficients. When the Taylor series has a leading zero coefficient, the 'leading zero' is removed from the Laurent series as follows: the series is rewritten by increasing the exponent by 1 and dividing the Taylor series by its variable. Note: \ :code:`removeZeroes(f)`\  removes all leading zeroes from \ :code:`f`\ 
 
 
 .. index::
    pair: UnivariateLaurentSeriesConstructorCategory; removeZeroes
 
 :spadfun:`removeZeroes`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``removeZeroes(n, f(x))``\  removes up to \ ``n``\  leading zeroes from the Laurent series \ ``f(x)``\ . A Laurent series is represented by (1) an exponent and (2) a Taylor series which may have leading zero coefficients. When the Taylor series has a leading zero coefficient, the 'leading zero' is removed from the Laurent series as follows: the series is rewritten by increasing the exponent by 1 and dividing the Taylor series by its variable.
+  \ :code:`removeZeroes(n, f(x))`\  removes up to \ :code:`n`\  leading zeroes from the Laurent series \ :code:`f(x)`\ . A Laurent series is represented by (1) an exponent and (2) a Taylor series which may have leading zero coefficients. When the Taylor series has a leading zero coefficient, the 'leading zero' is removed from the Laurent series as follows: the series is rewritten by increasing the exponent by 1 and dividing the Taylor series by its variable.
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-72657472616374:
 
@@ -991,7 +991,7 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; taylor
 
 :spadfun:`taylor`\: % -> UTS 
-  \ ``taylor(f(x))``\  converts the Laurent series \ ``f``\ (\ ``x``\ ) to a Taylor series, if possible. Error: if this is not possible.
+  \ :code:`taylor(f(x))`\  converts the Laurent series \ :code:`f`\ (\ :code:`x`\ ) to a Taylor series, if possible. Error: if this is not possible.
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-7461796c6f72496643616e:
 
@@ -999,7 +999,7 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; taylorIfCan
 
 :spadfun:`taylorIfCan`\: % -> Union(UTS, failed) 
-  \ ``taylorIfCan(f(x))``\  converts the Laurent series \ ``f(x)``\  to a Taylor series, if possible. If this is not possible, "failed" is returned.
+  \ :code:`taylorIfCan(f(x))`\  converts the Laurent series \ :code:`f(x)`\  to a Taylor series, if possible. If this is not possible, "failed" is returned.
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-7461796c6f72526570:
 
@@ -1007,7 +1007,7 @@ This is a category of univariate Laurent series constructed from univariate Tayl
    pair: UnivariateLaurentSeriesConstructorCategory; taylorRep
 
 :spadfun:`taylorRep`\: % -> UTS 
-  \ ``taylorRep(f(x))``\  returns \ ``g(x)``\ , where \ ``f = x^n * g(x)``\  is represented by \ ``[n, g(x)]``\ .
+  \ :code:`taylorRep(f(x))`\  returns \ :code:`g(x)`\ , where \ :code:`f = x^n * g(x)`\  is represented by \ :code:`[n, g(x)]`\ .
 
 .. _l556e69766172696174654c617572656e74536572696573436f6e7374727563746f7243617465676f7279-7465726d73:
 

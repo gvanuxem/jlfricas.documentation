@@ -12,7 +12,7 @@ FiniteRankAlgebra(R, UP)
 * UP: \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
 
-A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a free \ ``R``\ -module of finite rank.
+A FiniteRankAlgebra is an algebra over a commutative ring \ :code:`R`\  which is a free \ :code:`R`\ -module of finite rank.
 
 
 .. _l46696e69746552616e6b416c6765627261-30:
@@ -109,7 +109,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; characteristicPolynomial
 
 :spadfun:`characteristicPolynomial`\: % -> UP 
-  \ ``characteristicPolynomial(a)``\  returns the characteristic polynomial of the regular representation of \ ``a``\  with respect to any basis.
+  \ :code:`characteristicPolynomial(a)`\  returns the characteristic polynomial of the regular representation of \ :code:`a`\  with respect to any basis.
 
 .. _l46696e69746552616e6b416c6765627261-636f65726365:
 
@@ -135,14 +135,14 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; coordinates
 
 :spadfun:`coordinates`\: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Vector <l566563746f72>`\  R 
-  \ ``coordinates(a, basis)``\  returns the coordinates of \ ``a``\  with respect to the basis \ ``basis``\ .
+  \ :code:`coordinates(a, basis)`\  returns the coordinates of \ :code:`a`\  with respect to the basis \ :code:`basis`\ .
 
 
 .. index::
    pair: FiniteRankAlgebra; coordinates
 
 :spadfun:`coordinates`\: (\ :ref:`Vector <l566563746f72>`\  %, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``coordinates([v1, ..., vm], basis)``\  returns the coordinates of the \ ``vi``\ \ ``'s``\  with respect to the basis \ ``basis``\ . The coordinates of \ ``vi``\  are contained in the \ ``i``\ th row of the matrix returned by this function.
+  \ :code:`coordinates([v1, ..., vm], basis)`\  returns the coordinates of the \ :code:`vi`\ \ :code:`'s`\  with respect to the basis \ :code:`basis`\ . The coordinates of \ :code:`vi`\  are contained in the \ :code:`i`\ th row of the matrix returned by this function.
 
 .. _l46696e69746552616e6b416c6765627261-6469736372696d696e616e74:
 
@@ -150,7 +150,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; discriminant
 
 :spadfun:`discriminant`\: \ :ref:`Vector <l566563746f72>`\  % -> R 
-  \ ``discriminant([v1, .., vn])``\  returns \ ``determinant(traceMatrix([v1, .., vn]))``\ .
+  \ :code:`discriminant([v1, .., vn])`\  returns \ :code:`determinant(traceMatrix([v1, .., vn]))`\ .
 
 .. _l46696e69746552616e6b416c6765627261-6c61746578:
 
@@ -177,7 +177,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; minimalPolynomial
 
 :spadfun:`minimalPolynomial`\: % -> UP if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``minimalPolynomial(a)``\  returns the minimal polynomial of \ ``a``\ .
+  \ :code:`minimalPolynomial(a)`\  returns the minimal polynomial of \ :code:`a`\ .
 
 .. _l46696e69746552616e6b416c6765627261-6e6f726d:
 
@@ -185,7 +185,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; norm
 
 :spadfun:`norm`\: % -> R 
-  \ ``norm(a)``\  returns the determinant of the regular representation of \ ``a``\  with respect to any basis.
+  \ :code:`norm(a)`\  returns the determinant of the regular representation of \ :code:`a`\  with respect to any basis.
 
 .. _l46696e69746552616e6b416c6765627261-6f6e653f:
 
@@ -208,7 +208,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; rank
 
 :spadfun:`rank`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``rank()``\  returns the rank of the algebra.
+  \ :code:`rank()`\  returns the rank of the algebra.
 
 .. _l46696e69746552616e6b416c6765627261-7265636970:
 
@@ -221,7 +221,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; regularRepresentation
 
 :spadfun:`regularRepresentation`\: (%, \ :ref:`Vector <l566563746f72>`\  %) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``regularRepresentation(a, basis)``\  returns the matrix \ ``m``\  of the linear map defined by left multiplication by \ ``a``\  with respect to the basis \ ``basis``\ . That is for all \ ``x``\  we have \ ``coordinates(a*x, basis) = m*coordinates(x, basis)``\ .
+  \ :code:`regularRepresentation(a, basis)`\  returns the matrix \ :code:`m`\  of the linear map defined by left multiplication by \ :code:`a`\  with respect to the basis \ :code:`basis`\ . That is for all \ :code:`x`\  we have \ :code:`coordinates(a*x, basis) = m*coordinates(x, basis)`\ .
 
 .. _l46696e69746552616e6b416c6765627261-726570726573656e7473:
 
@@ -229,7 +229,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; represents
 
 :spadfun:`represents`\: (\ :ref:`Vector <l566563746f72>`\  R, \ :ref:`Vector <l566563746f72>`\  %) -> % 
-  \ ``represents([a1, .., an], [v1, .., vn])``\  returns \ ``a1*v1 + ... + an*vn``\ .
+  \ :code:`represents([a1, .., an], [v1, .., vn])`\  returns \ :code:`a1*v1 + ... + an*vn`\ .
 
 .. _l46696e69746552616e6b416c6765627261-7269676874506f776572:
 
@@ -261,7 +261,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; trace
 
 :spadfun:`trace`\: % -> R 
-  \ ``trace(a)``\  returns the trace of the regular representation of \ ``a``\  with respect to any basis.
+  \ :code:`trace(a)`\  returns the trace of the regular representation of \ :code:`a`\  with respect to any basis.
 
 .. _l46696e69746552616e6b416c6765627261-74726163654d6174726978:
 
@@ -269,7 +269,7 @@ A FiniteRankAlgebra is an algebra over a commutative ring \ ``R``\  which is a f
    pair: FiniteRankAlgebra; traceMatrix
 
 :spadfun:`traceMatrix`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``traceMatrix([v1, .., vn])``\  is the \ ``n``\ -by-\ ``n``\  matrix ( \ ``Tr``\ (\ ``vi``\  * \ ``vj``\ ) )
+  \ :code:`traceMatrix([v1, .., vn])`\  is the \ :code:`n`\ -by-\ :code:`n`\  matrix ( \ :code:`Tr`\ (\ :code:`vi`\  * \ :code:`vj`\ ) )
 
 .. _l46696e69746552616e6b416c6765627261-7a65726f3f:
 

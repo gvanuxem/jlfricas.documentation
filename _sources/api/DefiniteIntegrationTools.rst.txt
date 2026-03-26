@@ -21,14 +21,14 @@ DefiniteIntegrationTools(R, F)
    pair: DefiniteIntegrationTools; checkForZero
 
 :spadfun:`checkForZero`\: (\ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, \ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> Union(\ :ref:`Boolean <l426f6f6c65616e>`\ , failed) 
-  \ ``checkForZero(p, x, a, b, incl?)``\  is \ ``true``\  if \ ``p``\  has a zero for \ ``x``\  between a and \ ``b``\ , \ ``false``\  otherwise, "failed" if this cannot be determined. Check for a and \ ``b``\  inclusive if incl? is \ ``true``\ , exclusive otherwise.
+  \ :code:`checkForZero(p, x, a, b, incl?)`\  is \ :code:`true`\  if \ :code:`p`\  has a zero for \ :code:`x`\  between a and \ :code:`b`\ , \ :code:`false`\  otherwise, "failed" if this cannot be determined. Check for a and \ :code:`b`\  inclusive if incl? is \ :code:`true`\ , exclusive otherwise.
 
 
 .. index::
    pair: DefiniteIntegrationTools; checkForZero
 
 :spadfun:`checkForZero`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, \ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, \ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> Union(\ :ref:`Boolean <l426f6f6c65616e>`\ , failed) 
-  \ ``checkForZero(p, a, b, incl?)``\  is \ ``true``\  if \ ``p``\  has a zero between a and \ ``b``\ , \ ``false``\  otherwise, "failed" if this cannot be determined. Check for a and \ ``b``\  inclusive if incl? is \ ``true``\ , exclusive otherwise.
+  \ :code:`checkForZero(p, a, b, incl?)`\  is \ :code:`true`\  if \ :code:`p`\  has a zero between a and \ :code:`b`\ , \ :code:`false`\  otherwise, "failed" if this cannot be determined. Check for a and \ :code:`b`\  inclusive if incl? is \ :code:`true`\ , exclusive otherwise.
 
 .. _l446566696e697465496e746567726174696f6e546f6f6c73-636f6d70757465496e74:
 
@@ -36,7 +36,7 @@ DefiniteIntegrationTools(R, F)
    pair: DefiniteIntegrationTools; computeInt
 
 :spadfun:`computeInt`\: (\ :ref:`Kernel <l4b65726e656c>`\  F, F, \ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, \ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> Union(\ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  F, failed) 
-  \ ``computeInt(x, g, a, b, eval?)``\  returns the integral of \ ``f``\  for \ ``x``\  between a and \ ``b``\ , assuming that \ ``g``\  is an indefinite integral of \ ``f``\  and \ ``f``\  has no pole between a and \ ``b``\ . If \ ``eval?``\  is \ ``true``\ , then \ ``g``\  can be evaluated safely at \ ``a``\  and \ ``b``\ , provided that they are finite values. Otherwise, limits must be computed.
+  \ :code:`computeInt(x, g, a, b, eval?)`\  returns the integral of \ :code:`f`\  for \ :code:`x`\  between a and \ :code:`b`\ , assuming that \ :code:`g`\  is an indefinite integral of \ :code:`f`\  and \ :code:`f`\  has no pole between a and \ :code:`b`\ . If \ :code:`eval?`\  is \ :code:`true`\ , then \ :code:`g`\  can be evaluated safely at \ :code:`a`\  and \ :code:`b`\ , provided that they are finite values. Otherwise, limits must be computed.
 
 .. _l446566696e697465496e746567726174696f6e546f6f6c73-69676e6f72653f:
 
@@ -44,6 +44,6 @@ DefiniteIntegrationTools(R, F)
    pair: DefiniteIntegrationTools; ignore?
 
 :spadfun:`ignore?`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``ignore?(s)``\  is \ ``true``\  if \ ``s``\  is the string that tells the integrator to assume that the function has no pole in the integration interval.
+  \ :code:`ignore?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is the string that tells the integrator to assume that the function has no pole in the integration interval.
 
 

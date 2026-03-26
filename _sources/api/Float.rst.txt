@@ -8,7 +8,7 @@ Float
 :viewcode:`float.spad line 1 <float.spad#L1>` :editcode:`[edit on github] <float.spad#L1>`
 
 
-\ :ref:`Float <l466c6f6174>`\  implements arbitrary precision floating point arithmetic. The number of significant digits of each operation can be set to an arbitrary value (the default is 20 decimal digits). The operation \ :ref:`float <l466c6f6174696e67506f696e7453797374656d-666c6f6174>`\ (mantissa, exponent, \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\ ) for integer \ ``mantissa``\ , \ ``exponent``\  specifies the number \ ``mantissa``\  * \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  ^ \ ``exponent``\  The underlying representation for floats is binary not decimal. The implications of this are described below.   The model adopted is that arithmetic operations are rounded to the nearest unit in the last place, that is, accurate to within 2^(-\ :ref:`bits <l466c6f6174696e67506f696e7453797374656d-62697473>`\ ). Also, the elementary functions and constants are accurate to one unit in the last place. A float is represented as a record of two integers, the mantissa and the exponent. The \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  of the representation is binary, hence a \ ``Record(m: mantissa, e: exponent)``\  represents the number \ ``m * 2 ^ e``\ . Though it is not assumed that the underlying integers are represented with a binary \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\ , the code will be most efficient when this is the case (this is \ ``true``\  in most implementations of Lisp). The decision to choose the \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  to be binary has some unfortunate consequences. First, decimal numbers like 0.3 cannot be represented exactly. Second, there is a further loss of accuracy during conversion to decimal for output. To compensate for this, if \ ``d``\  digits of precision are specified, \ ``1 + ceiling(log2(10^d))``\  bits are used. Two numbers that are displayed identically may therefore be not equal. On the other hand, a significant efficiency loss would be incurred if we chose to use a decimal \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  when the underlying integer base is binary.   Algorithms used: For the elementary functions, the general approach is to apply identities so that the taylor series can be used, and, so that it will converge within \ ``O( sqrt n )``\  steps. For example, using the identity \ ``exp(x) = exp(x/2)^2``\ , we can compute \ ``exp(1/3)``\  to \ ``n``\  digits of precision as follows. We have \ ``exp(1/3) = exp(2 ^ (-sqrt s) / 3) ^ (2 ^ sqrt s)``\ . The taylor series will converge in less than sqrt \ ``n``\  steps and the exponentiation requires sqrt \ ``n``\  multiplications for a total of \ ``2 sqrt n``\  multiplications. Assuming integer multiplication costs \ ``O( n^2 )``\  the overall running time is \ ``O( sqrt(n) n^2 )``\ . This approach is the best known approach for precisions up to about 10, 000 digits at which point the methods of Brent which are \ ``O( log(n) n^2 )``\  become competitive. Note also that summing the terms of the taylor series for the elementary functions is done using integer operations. This avoids the overhead of floating point operations and results in efficient code at low precisions. This implementation makes no attempt to reuse storage, relying on the underlying system to do \spadgloss{garbage collection}. \ ``I``\  estimate that the efficiency of this package at low precisions could be improved by a factor of 2 if in-place operations were available.   Running times: in the following, \ ``n``\  is the number of bits of precision \ ``*``\ , \ ``/``\ , \ ``sqrt``\ , \ ``pi``\ , \ ``exp1``\ , \ ``log2``\ , \ ``log10``\ : \ `` O( n^2 )``\  \ ``exp``\ , \ ``log``\ , \ ``sin``\ , \ ``atan``\ : \ `` O( sqrt(n) n^2 )``\  The other elementary functions are coded in terms of the ones above.
+\ :ref:`Float <l466c6f6174>`\  implements arbitrary precision floating point arithmetic. The number of significant digits of each operation can be set to an arbitrary value (the default is 20 decimal digits). The operation \ :ref:`float <l466c6f6174696e67506f696e7453797374656d-666c6f6174>`\ (mantissa, exponent, \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\ ) for integer \ :code:`mantissa`\ , \ :code:`exponent`\  specifies the number \ :code:`mantissa`\  * \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  ^ \ :code:`exponent`\  The underlying representation for floats is binary not decimal. The implications of this are described below.   The model adopted is that arithmetic operations are rounded to the nearest unit in the last place, that is, accurate to within 2^(-\ :ref:`bits <l466c6f6174696e67506f696e7453797374656d-62697473>`\ ). Also, the elementary functions and constants are accurate to one unit in the last place. A float is represented as a record of two integers, the mantissa and the exponent. The \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  of the representation is binary, hence a \ :code:`Record(m: mantissa, e: exponent)`\  represents the number \ :code:`m * 2 ^ e`\ . Though it is not assumed that the underlying integers are represented with a binary \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\ , the code will be most efficient when this is the case (this is \ :code:`true`\  in most implementations of Lisp). The decision to choose the \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  to be binary has some unfortunate consequences. First, decimal numbers like 0.3 cannot be represented exactly. Second, there is a further loss of accuracy during conversion to decimal for output. To compensate for this, if \ :code:`d`\  digits of precision are specified, \ :code:`1 + ceiling(log2(10^d))`\  bits are used. Two numbers that are displayed identically may therefore be not equal. On the other hand, a significant efficiency loss would be incurred if we chose to use a decimal \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\  when the underlying integer base is binary.   Algorithms used: For the elementary functions, the general approach is to apply identities so that the taylor series can be used, and, so that it will converge within \ :code:`O( sqrt n )`\  steps. For example, using the identity \ :code:`exp(x) = exp(x/2)^2`\ , we can compute \ :code:`exp(1/3)`\  to \ :code:`n`\  digits of precision as follows. We have \ :code:`exp(1/3) = exp(2 ^ (-sqrt s) / 3) ^ (2 ^ sqrt s)`\ . The taylor series will converge in less than sqrt \ :code:`n`\  steps and the exponentiation requires sqrt \ :code:`n`\  multiplications for a total of \ :code:`2 sqrt n`\  multiplications. Assuming integer multiplication costs \ :code:`O( n^2 )`\  the overall running time is \ :code:`O( sqrt(n) n^2 )`\ . This approach is the best known approach for precisions up to about 10, 000 digits at which point the methods of Brent which are \ :code:`O( log(n) n^2 )`\  become competitive. Note also that summing the terms of the taylor series for the elementary functions is done using integer operations. This avoids the overhead of floating point operations and results in efficient code at low precisions. This implementation makes no attempt to reuse storage, relying on the underlying system to do \spadgloss{garbage collection}. \ :code:`I`\  estimate that the efficiency of this package at low precisions could be improved by a factor of 2 if in-place operations were available.   Running times: in the following, \ :code:`n`\  is the number of bits of precision \ :code:`*`\ , \ :code:`/`\ , \ :code:`sqrt`\ , \ :code:`pi`\ , \ :code:`exp1`\ , \ :code:`log2`\ , \ :code:`log10`\ : \ :code:` O( n^2 )`\  \ :code:`exp`\ , \ :code:`log`\ , \ :code:`sin`\ , \ :code:`atan`\ : \ :code:` O( sqrt(n) n^2 )`\  The other elementary functions are coded in terms of the ones above.
 
 
 .. _l466c6f6174-30:
@@ -205,7 +205,7 @@ Float
    pair: Float; atan
 
 :spadfun:`atan`\: (%, %) -> % 
-  \ ``atan(x, y)``\  computes the arc tangent from \ ``x``\  with phase \ ``y``\ .
+  \ :code:`atan(x, y)`\  computes the arc tangent from \ :code:`x`\  with phase \ :code:`y`\ .
 
 .. _l466c6f6174-6174616e68:
 
@@ -288,7 +288,7 @@ Float
    pair: Float; convert
 
 :spadfun:`convert`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``convert(x)``\  converts a \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  \ ``x``\  to a \ :ref:`Float <l466c6f6174>`\ .
+  \ :code:`convert(x)`\  converts a \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  \ :code:`x`\  to a \ :ref:`Float <l466c6f6174>`\ .
 
 .. _l466c6f6174-636f73:
 
@@ -368,7 +368,7 @@ Float
    pair: Float; exp1
 
 :spadfun:`exp1`\: () -> % 
-  \ ``exp1()``\  returns exp 1: \ ``2.7182818284...``\ .
+  \ :code:`exp1()`\  returns exp 1: \ :code:`2.7182818284...`\ .
 
 .. _l466c6f6174-657870:
 
@@ -443,7 +443,7 @@ Float
    pair: Float; get_output_mode
 
 :spadfun:`get_output_mode`\: () -> Record(mode: \ :ref:`String <l537472696e67>`\ , prec: \ :ref:`Integer <l496e7465676572>`\ ) 
-  \ ``get_output_mode()``\  returns current output mode and precision
+  \ :code:`get_output_mode()`\  returns current output mode and precision
 
 .. _l466c6f6174-68617368:
 
@@ -504,14 +504,14 @@ Float
    pair: Float; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  computes the logarithm for \ ``x``\  to base 10.
+  \ :code:`log10(x)`\  computes the logarithm for \ :code:`x`\  to base 10.
 
 
 .. index::
    pair: Float; log10
 
 :spadfun:`log10`\: () -> % 
-  \ ``log10()``\  returns \ ``ln 10``\ : \ ``2.3025809299...``\ .
+  \ :code:`log10()`\  returns \ :code:`ln 10`\ : \ :code:`2.3025809299...`\ .
 
 .. _l466c6f6174-6c6f6732:
 
@@ -519,14 +519,14 @@ Float
    pair: Float; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  computes the logarithm for \ ``x``\  to base 2.
+  \ :code:`log2(x)`\  computes the logarithm for \ :code:`x`\  to base 2.
 
 
 .. index::
    pair: Float; log2
 
 :spadfun:`log2`\: () -> % 
-  \ ``log2()``\  returns \ ``ln 2``\ , i.e. \ ``0.6931471805...``\ .
+  \ :code:`log2()`\  returns \ :code:`ln 2`\ , i.e. \ :code:`0.6931471805...`\ .
 
 .. _l466c6f6174-6c6f67:
 
@@ -577,7 +577,7 @@ Float
    pair: Float; normalize
 
 :spadfun:`normalize`\: % -> % 
-  \ ``normalize(x)``\  normalizes \ ``x``\  at current precision.
+  \ :code:`normalize(x)`\  normalizes \ :code:`x`\  at current precision.
 
 .. _l466c6f6174-6e7468526f6f74:
 
@@ -622,14 +622,14 @@ Float
    pair: Float; outputFixed
 
 :spadfun:`outputFixed`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputFixed()``\  sets the output mode to fixed point notation; the output will contain a decimal point.
+  \ :code:`outputFixed()`\  sets the output mode to fixed point notation; the output will contain a decimal point.
 
 
 .. index::
    pair: Float; outputFixed
 
 :spadfun:`outputFixed`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputFixed(n)``\  sets the output mode to fixed point notation, with \ ``n``\  digits displayed after the decimal point.
+  \ :code:`outputFixed(n)`\  sets the output mode to fixed point notation, with \ :code:`n`\  digits displayed after the decimal point.
 
 .. _l466c6f6174-6f7574707574466c6f6174696e67:
 
@@ -637,14 +637,14 @@ Float
    pair: Float; outputFloating
 
 :spadfun:`outputFloating`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputFloating()``\  sets the output mode to floating (scientific) notation, i.e. \ ``mantissa * 10 exponent``\  is displayed as \ ``0.mantissa E exponent``\ .
+  \ :code:`outputFloating()`\  sets the output mode to floating (scientific) notation, i.e. \ :code:`mantissa * 10 exponent`\  is displayed as \ :code:`0.mantissa E exponent`\ .
 
 
 .. index::
    pair: Float; outputFloating
 
 :spadfun:`outputFloating`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputFloating(n)``\  sets the output mode to floating (scientific) notation with \ ``n``\  significant digits displayed after the decimal point.
+  \ :code:`outputFloating(n)`\  sets the output mode to floating (scientific) notation with \ :code:`n`\  significant digits displayed after the decimal point.
 
 .. _l466c6f6174-6f757470757447656e6572616c:
 
@@ -652,14 +652,14 @@ Float
    pair: Float; outputGeneral
 
 :spadfun:`outputGeneral`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputGeneral()``\  sets the output mode (default mode) to general notation; numbers will be displayed in either fixed or floating (scientific) notation depending on the magnitude.
+  \ :code:`outputGeneral()`\  sets the output mode (default mode) to general notation; numbers will be displayed in either fixed or floating (scientific) notation depending on the magnitude.
 
 
 .. index::
    pair: Float; outputGeneral
 
 :spadfun:`outputGeneral`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``outputGeneral(n)``\  sets the output mode to general notation with \ ``n``\  significant digits displayed.
+  \ :code:`outputGeneral(n)`\  sets the output mode to general notation with \ :code:`n`\  significant digits displayed.
 
 .. _l466c6f6174-6f757470757453706163696e67:
 
@@ -667,7 +667,7 @@ Float
    pair: Float; outputSpacing
 
 :spadfun:`outputSpacing`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``outputSpacing(n)``\  inserts an underscore after \ ``n``\  (default 10) digits on output; outputSpacing(0) means no underscores are inserted. Returns old setting.
+  \ :code:`outputSpacing(n)`\  inserts an underscore after \ :code:`n`\  (default 10) digits on output; outputSpacing(0) means no underscores are inserted. Returns old setting.
 
 .. _l466c6f6174-7061747465726e4d61746368:
 
@@ -719,14 +719,14 @@ Float
    pair: Float; rationalApproximation
 
 :spadfun:`rationalApproximation`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``rationalApproximation(f, n)``\  computes a rational approximation \ ``r``\  to \ ``f``\  with relative error \ ``< 10^(-n)``\ .
+  \ :code:`rationalApproximation(f, n)`\  computes a rational approximation \ :code:`r`\  to \ :code:`f`\  with relative error \ :code:`< 10^(-n)`\ .
 
 
 .. index::
    pair: Float; rationalApproximation
 
 :spadfun:`rationalApproximation`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``rationalApproximation(f, n, b)``\  computes a rational approximation \ ``r``\  to \ ``f``\  with relative error \ ``< b^(-n)``\ , that is \ ``|(r-f)/f| < b^(-n)``\ .
+  \ :code:`rationalApproximation(f, n, b)`\  computes a rational approximation \ :code:`r`\  to \ :code:`f`\  with relative error \ :code:`< b^(-n)`\ , that is \ :code:`|(r-f)/f| < b^(-n)`\ .
 
 .. _l466c6f6174-7265636970:
 
@@ -739,7 +739,7 @@ Float
    pair: Float; relerror
 
 :spadfun:`relerror`\: (%, %) -> % 
-  \ ``relerror(x, y)``\  computes the absolute value of \ ``(x - y)/y``\ , when \ ``y \~= 0``\ .
+  \ :code:`relerror(x, y)`\  computes the absolute value of \ :code:`(x - y)/y`\ , when \ :code:`y \~= 0`\ .
 
 .. _l466c6f6174-72656d:
 
@@ -804,7 +804,7 @@ Float
    pair: Float; set_output_mode
 
 :spadfun:`set_output_mode`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``set_output_mode(mode, precision)``\  sets output \ ``mode``\  and precision.
+  \ :code:`set_output_mode(mode, precision)`\  sets output \ :code:`mode`\  and precision.
 
 .. _l466c6f6174-7368696674:
 
@@ -812,7 +812,7 @@ Float
    pair: Float; shift
 
 :spadfun:`shift`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``shift(x, n)``\  adds \ ``n``\  to the exponent of float \ ``x``\ .
+  \ :code:`shift(x, n)`\  adds \ :code:`n`\  to the exponent of float \ :code:`x`\ .
 
 .. _l466c6f6174-7369676e:
 

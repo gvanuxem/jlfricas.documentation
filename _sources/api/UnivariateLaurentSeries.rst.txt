@@ -14,7 +14,7 @@ UnivariateLaurentSeries(Coef, var, cen)
 * cen: Coef
 
 
-Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e69766172696174654c617572656e74536572696573>`\  is a domain representing Laurent series in one variable with coefficients in an arbitrary ring. The parameters of the type specify the coefficient ring, the power series variable, and the center of the power series expansion. For example, \ ``UnivariateLaurentSeries(Integer, x, 3)``\  represents Laurent series in \ ``(x - 3)``\  with integer coefficients.
+Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e69766172696174654c617572656e74536572696573>`\  is a domain representing Laurent series in one variable with coefficients in an arbitrary ring. The parameters of the type specify the coefficient ring, the power series variable, and the center of the power series expansion. For example, \ :code:`UnivariateLaurentSeries(Integer, x, 3)`\  represents Laurent series in \ :code:`(x - 3)`\  with integer coefficients.
 
 
 .. _l556e69766172696174654c617572656e74536572696573-30:
@@ -299,7 +299,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
    pair: UnivariateLaurentSeries; coerce
 
 :spadfun:`coerce`\: \ :ref:`Variable <l5661726961626c65>`\  var -> % 
-  \ ``coerce(var)``\  converts the series variable \ ``var``\  into a Laurent series.
+  \ :code:`coerce(var)`\  converts the series variable \ :code:`var`\  into a Laurent series.
 
 .. _l556e69766172696174654c617572656e74536572696573-636f6d6d757461746f72:
 
@@ -463,7 +463,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
    pair: UnivariateLaurentSeries; differentiate
 
 :spadfun:`differentiate`\: (%, \ :ref:`Variable <l5661726961626c65>`\  var) -> % 
-  \ ``differentiate(f(x), x)``\  returns the derivative of \ ``f(x)``\  with respect to \ ``x``\ .
+  \ :code:`differentiate(f(x), x)`\  returns the derivative of \ :code:`f(x)`\  with respect to \ :code:`x`\ .
 
 .. _l556e69766172696174654c617572656e74536572696573-646976696465:
 
@@ -604,7 +604,7 @@ Dense Laurent series in one variable. \ :ref:`UnivariateLaurentSeries <l556e6976
    pair: UnivariateLaurentSeries; integrate
 
 :spadfun:`integrate`\: (%, \ :ref:`Variable <l5661726961626c65>`\  var) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(f(x))``\  returns an anti-derivative of the power series \ ``f(x)``\  with constant coefficient 0. We may integrate a series when we can divide coefficients by integers.
+  \ :code:`integrate(f(x))`\  returns an anti-derivative of the power series \ :code:`f(x)`\  with constant coefficient 0. We may integrate a series when we can divide coefficients by integers.
 
 .. _l556e69766172696174654c617572656e74536572696573-696e76:
 

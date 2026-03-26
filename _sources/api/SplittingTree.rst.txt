@@ -12,7 +12,7 @@ SplittingTree(V, C)
 * C: Join(\ :ref:`SetCategory <l53657443617465676f7279>`\ , \ :ref:`Aggregate <l416767726567617465>`\ )
 
 
-This domain exports a modest implementation of splitting trees. Splitting trees are needed when the evaluation of some quantity under some hypothesis requires to split the hypothesis into sub-cases. For instance by adding some new hypothesis on one hand and its negation on another hand. The computations are terminated for a splitting tree \ ``a``\  when \ ``status(value(a))``\  is \ ``true``\ . Thus, if for the splitting tree \ ``a``\  the flag \ ``status(value(a))``\  is \ ``true``\ , then \ ``status(value(d))``\  is \ ``true``\  for any subtree \ ``d``\  of \ ``a``\ . This property of splitting trees is called the termination condition. If no vertex in a splitting tree \ ``a``\  is equal to another, \ ``a``\  is said to satisfy the no-duplicates condition. The splitting tree \ ``a``\  will satisfy this condition if nodes are added to \ ``a``\  by means of \ ``splitNodeOf!``\  and if \ ``construct``\  is only used to create the root of \ ``a``\  with no children.
+This domain exports a modest implementation of splitting trees. Splitting trees are needed when the evaluation of some quantity under some hypothesis requires to split the hypothesis into sub-cases. For instance by adding some new hypothesis on one hand and its negation on another hand. The computations are terminated for a splitting tree \ :code:`a`\  when \ :code:`status(value(a))`\  is \ :code:`true`\ . Thus, if for the splitting tree \ :code:`a`\  the flag \ :code:`status(value(a))`\  is \ :code:`true`\ , then \ :code:`status(value(d))`\  is \ :code:`true`\  for any subtree \ :code:`d`\  of \ :code:`a`\ . This property of splitting trees is called the termination condition. If no vertex in a splitting tree \ :code:`a`\  is equal to another, \ :code:`a`\  is said to satisfy the no-duplicates condition. The splitting tree \ :code:`a`\  will satisfy this condition if nodes are added to \ :code:`a`\  by means of \ :code:`splitNodeOf!`\  and if \ :code:`construct`\  is only used to create the root of \ :code:`a`\  with no children.
 
 
 .. _l53706c697474696e6754726565-23:
@@ -56,7 +56,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; conditions
 
 :spadfun:`conditions`\: % -> \ :ref:`List <l4c697374>`\  C 
-  \ ``conditions(a)``\  returns the list of the conditions of the leaves of a
+  \ :code:`conditions(a)`\  returns the list of the conditions of the leaves of a
 
 .. _l53706c697474696e6754726565-636f6e737472756374:
 
@@ -64,28 +64,28 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; construct
 
 :spadfun:`construct`\: (V, C, \ :ref:`List <l4c697374>`\  %) -> % 
-  \ ``construct(v, t, la)``\  creates a splitting tree with value (i.e. root vertex) given by \ ``[v, t]\$S``\  and with \ ``la``\  as children list.
+  \ :code:`construct(v, t, la)`\  creates a splitting tree with value (i.e. root vertex) given by \ :code:`[v, t]\$S`\  and with \ :code:`la`\  as children list.
 
 
 .. index::
    pair: SplittingTree; construct
 
 :spadfun:`construct`\: (V, C, \ :ref:`List <l4c697374>`\  \ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C)) -> % 
-  \ ``construct(v, t, ls)``\  creates a splitting tree with value (i.e. root vertex) given by \ ``[v, t]\$S``\  and with children list given by \ ``[[s]\$\% for s in ls]``\ .
+  \ :code:`construct(v, t, ls)`\  creates a splitting tree with value (i.e. root vertex) given by \ :code:`[v, t]\$S`\  and with children list given by \ :code:`[[s]\$\% for s in ls]`\ .
 
 
 .. index::
    pair: SplittingTree; construct
 
 :spadfun:`construct`\: (V, C, V, \ :ref:`List <l4c697374>`\  C) -> % 
-  \ ``construct(v1, t, v2, lt)``\  creates a splitting tree with value (i.e. root vertex) given by \ ``[v, t]\$S``\  and with children list given by \ ``[[[v, t]\$S]\$\% for s in ls]``\ .
+  \ :code:`construct(v1, t, v2, lt)`\  creates a splitting tree with value (i.e. root vertex) given by \ :code:`[v, t]\$S`\  and with children list given by \ :code:`[[[v, t]\$S]\$\% for s in ls]`\ .
 
 
 .. index::
    pair: SplittingTree; construct
 
 :spadfun:`construct`\: \ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C) -> % 
-  \ ``construct(s)``\  creates a splitting tree with value (i.e. root vertex) given by \ ``s``\  and no children. Thus, if the status of \ ``s``\  is \ ``false``\ , \ ``[s]``\  represents the starting point of the evaluation \ ``value(s)``\  under the hypothesis \ ``condition(s)``\ .
+  \ :code:`construct(s)`\  creates a splitting tree with value (i.e. root vertex) given by \ :code:`s`\  and no children. Thus, if the status of \ :code:`s`\  is \ :code:`false`\ , \ :code:`[s]`\  represents the starting point of the evaluation \ :code:`value(s)`\  under the hypothesis \ :code:`condition(s)`\ .
 
 .. _l53706c697474696e6754726565-636f7079:
 
@@ -159,7 +159,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; extractSplittingLeaf
 
 :spadfun:`extractSplittingLeaf`\: % -> Union(%, failed) 
-  \ ``extractSplittingLeaf(a)``\  returns the left most leaf (as a tree) whose status is \ ``false``\  if any, else "failed" is returned.
+  \ :code:`extractSplittingLeaf(a)`\  returns the left most leaf (as a tree) whose status is \ :code:`false`\  if any, else "failed" is returned.
 
 .. _l53706c697474696e6754726565-6c61746578:
 
@@ -231,7 +231,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; nodeOf?
 
 :spadfun:`nodeOf?`\: (\ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C), %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nodeOf?(s, a)``\  returns \ ``true``\  iff some node of \ ``a``\  is equal to \ ``s``\ 
+  \ :code:`nodeOf?(s, a)`\  returns \ :code:`true`\  iff some node of \ :code:`a`\  is equal to \ :code:`s`\ 
 
 .. _l53706c697474696e6754726565-6e6f646573:
 
@@ -249,7 +249,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; remove!
 
 :spadfun:`remove!`\: (\ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C), %) -> % 
-  \ ``remove!(s, a)``\  replaces a by remove(\ ``s``\ , a)
+  \ :code:`remove!(s, a)`\  replaces a by remove(\ :code:`s`\ , a)
 
 .. _l53706c697474696e6754726565-72656d6f7665:
 
@@ -257,7 +257,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; remove
 
 :spadfun:`remove`\: (\ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C), %) -> % 
-  \ ``remove(s, a)``\  returns the splitting tree obtained from a by removing every sub-tree \ ``b``\  such that \ ``value(b)``\  and \ ``s``\  have the same value, condition and status.
+  \ :code:`remove(s, a)`\  returns the splitting tree obtained from a by removing every sub-tree \ :code:`b`\  such that \ :code:`value(b)`\  and \ :code:`s`\  have the same value, condition and status.
 
 .. _l53706c697474696e6754726565-726573756c74:
 
@@ -265,7 +265,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; result
 
 :spadfun:`result`\: % -> \ :ref:`List <l4c697374>`\  Record(val: V, tower: C) 
-  \ ``result(a)``\  where \ ``ls``\  is the leaves list of \ ``a``\  returns \ ``[[value(s), condition(s)]\$VT for s in ls]``\  if the computations are terminated in \ ``a``\  else an error is produced.
+  \ :code:`result(a)`\  where \ :code:`ls`\  is the leaves list of \ :code:`a`\  returns \ :code:`[[value(s), condition(s)]\$VT for s in ls]`\  if the computations are terminated in \ :code:`a`\  else an error is produced.
 
 .. _l53706c697474696e6754726565-73616d706c65:
 
@@ -298,14 +298,14 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; splitNodeOf!
 
 :spadfun:`splitNodeOf!`\: (%, %, \ :ref:`List <l4c697374>`\  \ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C)) -> % 
-  \ ``splitNodeOf!(l, a, ls)``\  returns \ ``a``\  where the children list of \ ``l``\  has been set to \ ``[[s]\$\% for s in ls | not nodeOf?(s, a)]``\ . Thus, if \ ``l``\  is not a node of \ ``a``\ , this latter splitting tree is unchanged.
+  \ :code:`splitNodeOf!(l, a, ls)`\  returns \ :code:`a`\  where the children list of \ :code:`l`\  has been set to \ :code:`[[s]\$\% for s in ls | not nodeOf?(s, a)]`\ . Thus, if \ :code:`l`\  is not a node of \ :code:`a`\ , this latter splitting tree is unchanged.
 
 
 .. index::
    pair: SplittingTree; splitNodeOf!
 
 :spadfun:`splitNodeOf!`\: (%, %, \ :ref:`List <l4c697374>`\  \ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C), (C, C) -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``splitNodeOf!(l, a, ls, sub?)``\  returns \ ``a``\  where the children list of \ ``l``\  has been set to \ ``[[s]\$\% for s in ls | not subNodeOf?(s, a, sub?)]``\ . Thus, if \ ``l``\  is not a node of \ ``a``\ , this latter splitting tree is unchanged.
+  \ :code:`splitNodeOf!(l, a, ls, sub?)`\  returns \ :code:`a`\  where the children list of \ :code:`l`\  has been set to \ :code:`[[s]\$\% for s in ls | not subNodeOf?(s, a, sub?)]`\ . Thus, if \ :code:`l`\  is not a node of \ :code:`a`\ , this latter splitting tree is unchanged.
 
 .. _l53706c697474696e6754726565-7375624e6f64654f663f:
 
@@ -313,7 +313,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; subNodeOf?
 
 :spadfun:`subNodeOf?`\: (\ :ref:`SplittingNode <l53706c697474696e674e6f6465>`\ (V, C), %, (C, C) -> \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``subNodeOf?(s, a, sub?)``\  returns \ ``true``\  iff for some node \ ``n``\  in \ ``a``\  we have \ ``s = n``\  or \ ``status(n)``\  and \ ``subNode?(s, n, sub?)``\ .
+  \ :code:`subNodeOf?(s, a, sub?)`\  returns \ :code:`true`\  iff for some node \ :code:`n`\  in \ :code:`a`\  we have \ :code:`s = n`\  or \ :code:`status(n)`\  and \ :code:`subNode?(s, n, sub?)`\ .
 
 .. _l53706c697474696e6754726565-75706461746553746174757321:
 
@@ -321,7 +321,7 @@ This domain exports a modest implementation of splitting trees. Splitting trees 
    pair: SplittingTree; updateStatus!
 
 :spadfun:`updateStatus!`\: % -> % 
-  \ ``updateStatus!(a)``\  returns a where the status of the vertices are updated to satisfy the "termination condition".
+  \ :code:`updateStatus!(a)`\  returns a where the status of the vertices are updated to satisfy the "termination condition".
 
 .. _l53706c697474696e6754726565-76616c7565:
 

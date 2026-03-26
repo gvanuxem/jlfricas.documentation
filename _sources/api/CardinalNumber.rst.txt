@@ -8,7 +8,7 @@ CardinalNumber
 :viewcode:`card.spad line 1 <card.spad#L1>` :editcode:`[edit on github] <card.spad#L1>`
 
 
-Members of the domain CardinalNumber are values indicating the cardinality of sets, both finite and infinite. Arithmetic operations are defined on cardinal numbers as follows.   If \ ``x = \#X``\  and \ ``y = \#Y``\  then \ ``x+y = \#(X+Y)``\   disjoint union \ ``x-y = \#(X-Y)``\   relative complement \ ``x*y = \#(X*Y)``\   cartesian product \ ``x^y = \#(X^Y)``\   \ ``X^Y = \{g| g: Y->X\}``\    The non-negative integers have a natural construction as cardinals \ ``0 = \#\{\}``\ , \ ``1 = \{0\}``\ , \ ``2 = \{0, 1\}``\ , ..., \ ``n = \{i| 0 <= i < n\}``\ .   That \ ``0``\  acts as a zero for the multiplication of cardinals is equivalent to the axiom of choice.   The generalized continuum hypothesis asserts \centerline{\ ``2^Aleph i = Aleph(i+1)``\ } and is independent of the axioms of set theory [Goedel 1940].   Three commonly encountered cardinal numbers are \ ``a = \#Z``\   countable infinity \ ``c = \#R``\   the continuum \ ``f = \#\{g| g: [0, 1]->R\}``\    In this domain, these values are obtained using \ ``a := Aleph 0``\ , \ ``c := 2^a``\ , \ ``f := 2^c``\ .  
+Members of the domain CardinalNumber are values indicating the cardinality of sets, both finite and infinite. Arithmetic operations are defined on cardinal numbers as follows.   If \ :code:`x = \#X`\  and \ :code:`y = \#Y`\  then \ :code:`x+y = \#(X+Y)`\   disjoint union \ :code:`x-y = \#(X-Y)`\   relative complement \ :code:`x*y = \#(X*Y)`\   cartesian product \ :code:`x^y = \#(X^Y)`\   \ :code:`X^Y = \{g| g: Y->X\}`\    The non-negative integers have a natural construction as cardinals \ :code:`0 = \#\{\}`\ , \ :code:`1 = \{0\}`\ , \ :code:`2 = \{0, 1\}`\ , ..., \ :code:`n = \{i| 0 <= i < n\}`\ .   That \ :code:`0`\  acts as a zero for the multiplication of cardinals is equivalent to the axiom of choice.   The generalized continuum hypothesis asserts \centerline{\ :code:`2^Aleph i = Aleph(i+1)`\ } and is independent of the axioms of set theory [Goedel 1940].   Three commonly encountered cardinal numbers are \ :code:`a = \#Z`\   countable infinity \ :code:`c = \#R`\   the continuum \ :code:`f = \#\{g| g: [0, 1]->R\}`\    In this domain, these values are obtained using \ :code:`a := Aleph 0`\ , \ :code:`c := 2^a`\ , \ :code:`f := 2^c`\ .  
 
 
 .. _l43617264696e616c4e756d626572-30:
@@ -45,7 +45,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; -
 
 :spadfun:`-`\: (%, %) -> Union(%, failed) 
-  \ ``x - y``\  returns an element \ ``z``\  such that \ ``z+y=x``\  or "failed" if no such element exists.
+  \ :code:`x - y`\  returns an element \ :code:`z`\  such that \ :code:`z+y=x`\  or "failed" if no such element exists.
 
 .. _l43617264696e616c4e756d626572-3c3d:
 
@@ -78,7 +78,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; ^
 
 :spadfun:`^`\: (%, %) -> % 
-  \ ``x^y``\  returns \ ``\#(X^Y)``\  where \ ``X^Y``\  is defined as \ ``\{g| g: Y->X\}``\ .
+  \ :code:`x^y`\  returns \ :code:`\#(X^Y)`\  where \ :code:`X^Y`\  is defined as \ :code:`\{g| g: Y->X\}`\ .
 
 
 \ :ref:`^ <l4d61676d6157697468556e6974-5e>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -99,7 +99,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; Aleph
 
 :spadfun:`Aleph`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``Aleph(n)``\  provides the named (infinite) cardinal number.
+  \ :code:`Aleph(n)`\  provides the named (infinite) cardinal number.
 
 .. _l43617264696e616c4e756d626572-636f65726365:
 
@@ -116,7 +116,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; countable?
 
 :spadfun:`countable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``countable?(a)``\  determines whether \ ``a``\  is a countable cardinal, i.e. an integer or \ ``Aleph 0``\ .
+  \ :code:`countable?(a)`\  determines whether \ :code:`a`\  is a countable cardinal, i.e. an integer or \ :code:`Aleph 0`\ .
 
 .. _l43617264696e616c4e756d626572-66696e6974653f:
 
@@ -124,7 +124,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; finite?
 
 :spadfun:`finite?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``finite?(a)``\  determines whether \ ``a``\  is a finite cardinal, i.e. an integer.
+  \ :code:`finite?(a)`\  determines whether \ :code:`a`\  is a finite cardinal, i.e. an integer.
 
 .. _l43617264696e616c4e756d626572-67656e6572616c697a6564436f6e74696e75756d4879706f746865736973417373756d65643f:
 
@@ -132,7 +132,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; generalizedContinuumHypothesisAssumed?
 
 :spadfun:`generalizedContinuumHypothesisAssumed?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``generalizedContinuumHypothesisAssumed?()``\  tests if the hypothesis is currently assumed.
+  \ :code:`generalizedContinuumHypothesisAssumed?()`\  tests if the hypothesis is currently assumed.
 
 .. _l43617264696e616c4e756d626572-67656e6572616c697a6564436f6e74696e75756d4879706f746865736973417373756d6564:
 
@@ -140,7 +140,7 @@ Members of the domain CardinalNumber are values indicating the cardinality of se
    pair: CardinalNumber; generalizedContinuumHypothesisAssumed
 
 :spadfun:`generalizedContinuumHypothesisAssumed`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``generalizedContinuumHypothesisAssumed(bool)``\  is used to dictate whether the hypothesis is to be assumed.
+  \ :code:`generalizedContinuumHypothesisAssumed(bool)`\  is used to dictate whether the hypothesis is to be assumed.
 
 .. _l43617264696e616c4e756d626572-6c61746578:
 

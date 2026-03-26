@@ -25,7 +25,7 @@ This package converts expressions in some function space to exponential expansio
    pair: FunctionSpaceToExponentialExpansion; exprToXXP
 
 :spadfun:`exprToXXP`\: (FE, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> Union(%expansion: \ :ref:`ExponentialExpansion <l4578706f6e656e7469616c457870616e73696f6e>`\ (R, FE, x, cen), %problem: Record(func: \ :ref:`String <l537472696e67>`\ , prob: \ :ref:`String <l537472696e67>`\ )) 
-  \ ``exprToXXP(fcn, posCheck?)``\  converts the expression \ ``fcn``\  to an exponential expansion. If \ ``posCheck?``\  is \ ``true``\ , log\ ``'s``\  of negative numbers are not allowed nor are \ ``n``\ th roots of negative numbers with \ ``n``\  even. If \ ``posCheck?``\  is \ ``false``\ , these are allowed.
+  \ :code:`exprToXXP(fcn, posCheck?)`\  converts the expression \ :code:`fcn`\  to an exponential expansion. If \ :code:`posCheck?`\  is \ :code:`true`\ , log\ :code:`'s`\  of negative numbers are not allowed nor are \ :code:`n`\ th roots of negative numbers with \ :code:`n`\  even. If \ :code:`posCheck?`\  is \ :code:`false`\ , these are allowed.
 
 .. _l46756e6374696f6e5370616365546f4578706f6e656e7469616c457870616e73696f6e-6c6f63616c416273:
 
@@ -33,6 +33,6 @@ This package converts expressions in some function space to exponential expansio
    pair: FunctionSpaceToExponentialExpansion; localAbs
 
 :spadfun:`localAbs`\: FE -> FE 
-  \ ``localAbs(fcn)``\  = \ ``abs(fcn)``\  or \ ``sqrt(fcn^2)``\  depending on whether or not FE has a function \ ``abs``\ . This should be a local function, but the compiler won\ ``'t``\  allow it.
+  \ :code:`localAbs(fcn)`\  = \ :code:`abs(fcn)`\  or \ :code:`sqrt(fcn^2)`\  depending on whether or not FE has a function \ :code:`abs`\ . This should be a local function, but the compiler won\ :code:`'t`\  allow it.
 
 

@@ -12,7 +12,7 @@ PseudoRemainderSequence(R, polR)
 * polR: \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
 
-This package contains some functions: \ :ref:`discriminant <l50736575646f52656d61696e64657253657175656e6365-6469736372696d696e616e74>`\ , \ :ref:`resultant <l50736575646f52656d61696e64657253657175656e6365-726573756c74616e74>`\ , \ :ref:`subResultantGcd <l50736575646f52656d61696e64657253657175656e6365-737562526573756c74616e74476364>`\ , \ :ref:`chainSubResultants <l50736575646f52656d61696e64657253657175656e6365-636861696e537562526573756c74616e7473>`\ , \ :ref:`degreeSubResultant <l50736575646f52656d61696e64657253657175656e6365-646567726565537562526573756c74616e74>`\ , \ :ref:`lastSubResultant <l50736575646f52656d61696e64657253657175656e6365-6c617374537562526573756c74616e74>`\ , \ :ref:`resultantEuclidean <l50736575646f52656d61696e64657253657175656e6365-726573756c74616e744575636c696465616e>`\ , \ :ref:`subResultantGcdEuclidean <l50736575646f52656d61696e64657253657175656e6365-737562526573756c74616e744763644575636c696465616e>`\ , \ :ref:`\\ ``semiSubResultantGcdEuclidean1``\\  <l50736575646f52656d61696e64657253657175656e6365-5c20606073656d69537562526573756c74616e744763644575636c696465616e3160605c20>`\ , \ :ref:`\\ ``semiSubResultantGcdEuclidean2``\\  <l50736575646f52656d61696e64657253657175656e6365-5c20606073656d69537562526573756c74616e744763644575636c696465616e3260605c20>`\ , etc. These procedures are coming from improvements of the subresultants algorithm.
+This package contains some functions: \ :ref:`discriminant <l50736575646f52656d61696e64657253657175656e6365-6469736372696d696e616e74>`\ , \ :ref:`resultant <l50736575646f52656d61696e64657253657175656e6365-726573756c74616e74>`\ , \ :ref:`subResultantGcd <l50736575646f52656d61696e64657253657175656e6365-737562526573756c74616e74476364>`\ , \ :ref:`chainSubResultants <l50736575646f52656d61696e64657253657175656e6365-636861696e537562526573756c74616e7473>`\ , \ :ref:`degreeSubResultant <l50736575646f52656d61696e64657253657175656e6365-646567726565537562526573756c74616e74>`\ , \ :ref:`lastSubResultant <l50736575646f52656d61696e64657253657175656e6365-6c617374537562526573756c74616e74>`\ , \ :ref:`resultantEuclidean <l50736575646f52656d61696e64657253657175656e6365-726573756c74616e744575636c696465616e>`\ , \ :ref:`subResultantGcdEuclidean <l50736575646f52656d61696e64657253657175656e6365-737562526573756c74616e744763644575636c696465616e>`\ , \ :ref:`\\ :code:`semiSubResultantGcdEuclidean1`\\  <l50736575646f52656d61696e64657253657175656e6365-5c203a636f64653a6073656d69537562526573756c74616e744763644575636c696465616e31605c20>`\ , \ :ref:`\\ :code:`semiSubResultantGcdEuclidean2`\\  <l50736575646f52656d61696e64657253657175656e6365-5c203a636f64653a6073656d69537562526573756c74616e744763644575636c696465616e32605c20>`\ , etc. These procedures are coming from improvements of the subresultants algorithm.
 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-636861696e537562526573756c74616e7473:
@@ -21,7 +21,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; chainSubResultants
 
 :spadfun:`chainSubResultants`\: (polR, polR) -> \ :ref:`List <l4c697374>`\  polR 
-  \ ``chainSubResultants(P, Q)``\  computes the list of non zero subresultants of \ ``P``\  and \ ``Q``\ .
+  \ :code:`chainSubResultants(P, Q)`\  computes the list of non zero subresultants of \ :code:`P`\  and \ :code:`Q`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-646567726565537562526573756c74616e74:
 
@@ -29,7 +29,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; degreeSubResultant
 
 :spadfun:`degreeSubResultant`\: (polR, polR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> polR 
-  \ ``degreeSubResultant(P, Q, d)``\  computes a subresultant of degree \ ``d``\ .
+  \ :code:`degreeSubResultant(P, Q, d)`\  computes a subresultant of degree \ :code:`d`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-646567726565537562526573756c74616e744575636c696465616e:
 
@@ -37,7 +37,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; degreeSubResultantEuclidean
 
 :spadfun:`degreeSubResultantEuclidean`\: (polR, polR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(coef1: polR, coef2: polR, subResultant: polR) 
-  \ ``degreeSubResultantEuclidean(P, Q, d)``\  returns a subresultant \ ``S_i``\  of degree \ ``d``\  and carries out the equality \ ``coef1*P + coef2*Q = S_i``\ .
+  \ :code:`degreeSubResultantEuclidean(P, Q, d)`\  returns a subresultant \ :code:`S_i`\  of degree \ :code:`d`\  and carries out the equality \ :code:`coef1*P + coef2*Q = S_i`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-6469736372696d696e616e74:
 
@@ -45,7 +45,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; discriminant
 
 :spadfun:`discriminant`\: polR -> R 
-  \ ``discriminant(P)``\  returns the discriminant of \ ``P``\ .
+  \ :code:`discriminant(P)`\  returns the discriminant of \ :code:`P`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-6469736372696d696e616e744575636c696465616e:
 
@@ -53,7 +53,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; discriminantEuclidean
 
 :spadfun:`discriminantEuclidean`\: polR -> Record(coef1: polR, coef2: polR, discriminant: R) 
-  \ ``discriminantEuclidean(P)``\  carries out the equality \ ``coef1 * P + coef2 * D(P) = discriminant(P)``\ .
+  \ :code:`discriminantEuclidean(P)`\  carries out the equality \ :code:`coef1 * P + coef2 * D(P) = discriminant(P)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-646976696465:
 
@@ -61,7 +61,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; divide
 
 :spadfun:`divide`\: (polR, polR) -> Record(quotient: polR, remainder: polR) 
-  \ ``divide(F, G)``\  computes quotient and rest of the exact euclidean division of \ ``F``\  by \ ``G``\ .
+  \ :code:`divide(F, G)`\  computes quotient and rest of the exact euclidean division of \ :code:`F`\  by \ :code:`G`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-676364:
 
@@ -69,7 +69,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; gcd
 
 :spadfun:`gcd`\: (polR, polR) -> polR if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``gcd(P, Q)``\  returns the \ ``gcd``\  of \ ``P``\  and \ ``Q``\ .
+  \ :code:`gcd(P, Q)`\  returns the \ :code:`gcd`\  of \ :code:`P`\  and \ :code:`Q`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-696e64696365537562526573756c74616e74:
 
@@ -77,7 +77,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; indiceSubResultant
 
 :spadfun:`indiceSubResultant`\: (polR, polR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> polR 
-  \ ``indiceSubResultant(P, Q, i)``\  returns the subresultant of index \ ``i``\ .
+  \ :code:`indiceSubResultant(P, Q, i)`\  returns the subresultant of index \ :code:`i`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-696e64696365537562526573756c74616e744575636c696465616e:
 
@@ -85,7 +85,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; indiceSubResultantEuclidean
 
 :spadfun:`indiceSubResultantEuclidean`\: (polR, polR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(coef1: polR, coef2: polR, subResultant: polR) 
-  \ ``indiceSubResultant(P, Q, i)``\  returns the subresultant \ ``S_i(P, Q)``\  and carries out the equality \ ``coef1*P + coef2*Q = S_i(P, Q)``\ 
+  \ :code:`indiceSubResultant(P, Q, i)`\  returns the subresultant \ :code:`S_i(P, Q)`\  and carries out the equality \ :code:`coef1*P + coef2*Q = S_i(P, Q)`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-6c617374537562526573756c74616e74:
 
@@ -93,7 +93,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; lastSubResultant
 
 :spadfun:`lastSubResultant`\: (polR, polR) -> polR 
-  \ ``lastSubResultant(P, Q)``\  computes the last non zero subresultant of \ ``P``\  and \ ``Q``\ 
+  \ :code:`lastSubResultant(P, Q)`\  computes the last non zero subresultant of \ :code:`P`\  and \ :code:`Q`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-6c617374537562526573756c74616e744575636c696465616e:
 
@@ -101,7 +101,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; lastSubResultantEuclidean
 
 :spadfun:`lastSubResultantEuclidean`\: (polR, polR) -> Record(coef1: polR, coef2: polR, subResultant: polR) 
-  \ ``lastSubResultantEuclidean(P, Q)``\  computes the last non zero subresultant \ ``S``\  and carries out the equality \ ``coef1*P + coef2*Q = S``\ .
+  \ :code:`lastSubResultantEuclidean(P, Q)`\  computes the last non zero subresultant \ :code:`S`\  and carries out the equality \ :code:`coef1*P + coef2*Q = S`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-4c617a61726451756f7469656e7432:
 
@@ -109,7 +109,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; LazardQuotient2
 
 :spadfun:`LazardQuotient2`\: (polR, R, R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> polR 
-  \ ``LazardQuotient2(F, x, y, n)``\  computes \ ``(x^(n-1) * F) exquo y^(n-1)``\ 
+  \ :code:`LazardQuotient2(F, x, y, n)`\  computes \ :code:`(x^(n-1) * F) exquo y^(n-1)`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-4c617a61726451756f7469656e74:
 
@@ -117,7 +117,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; LazardQuotient
 
 :spadfun:`LazardQuotient`\: (R, R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> R 
-  \ ``LazardQuotient(x, y, n)``\  computes \ ``x^n exquo y^(n-1)``\ 
+  \ :code:`LazardQuotient(x, y, n)`\  computes \ :code:`x^n exquo y^(n-1)`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-6e6578745f736f7573526573756c74616e7432:
 
@@ -125,7 +125,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; next_sousResultant2
 
 :spadfun:`next_sousResultant2`\: (polR, polR, polR, R) -> polR 
-  \ ``next_sousResultant2(P, Q, Z, s)``\  returns the subresultant \ ``S_{e-1}``\  where \ ``P ~ S_d, Q = S_{d-1}, Z = S_e, s = lc(S_d)``\ 
+  \ :code:`next_sousResultant2(P, Q, Z, s)`\  returns the subresultant \ :code:`S_{e-1}`\  where \ :code:`P ~ S_d, Q = S_{d-1}, Z = S_e, s = lc(S_d)`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-726573756c74616e74:
 
@@ -133,7 +133,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; resultant
 
 :spadfun:`resultant`\: (polR, polR) -> R 
-  \ ``resultant(P, Q)``\  returns the resultant of \ ``P``\  and \ ``Q``\ 
+  \ :code:`resultant(P, Q)`\  returns the resultant of \ :code:`P`\  and \ :code:`Q`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-726573756c74616e744575636c696465616e:
 
@@ -141,7 +141,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; resultantEuclidean
 
 :spadfun:`resultantEuclidean`\: (polR, polR) -> Record(coef1: polR, coef2: polR, resultant: R) 
-  \ ``resultantEuclidean(P, Q)``\  carries out the equality \ ``coef1*P + coef2*Q = resultant(P, Q)``\ 
+  \ :code:`resultantEuclidean(P, Q)`\  carries out the equality \ :code:`coef1*P + coef2*Q = resultant(P, Q)`\ 
 
 .. _l50736575646f52656d61696e64657253657175656e6365-726573756c74616e74526564756974:
 
@@ -149,7 +149,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; resultantReduit
 
 :spadfun:`resultantReduit`\: (polR, polR) -> R if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``resultantReduit(P,Q)``\  returns the "reduce resultant" of \ ``P``\  and \ ``Q``\ .
+  \ :code:`resultantReduit(P,Q)`\  returns the "reduce resultant" of \ :code:`P`\  and \ :code:`Q`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-726573756c74616e745265647569744575636c696465616e:
 
@@ -157,7 +157,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; resultantReduitEuclidean
 
 :spadfun:`resultantReduitEuclidean`\: (polR, polR) -> Record(coef1: polR, coef2: polR, resultantReduit: R) if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``resultantReduitEuclidean(P, Q)``\  returns the "reduce resultant" and carries out the equality \ ``coef1*P + coef2*Q = resultantReduit(P, Q)``\ .
+  \ :code:`resultantReduitEuclidean(P, Q)`\  returns the "reduce resultant" and carries out the equality \ :code:`coef1*P + coef2*Q = resultantReduit(P, Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-736368656d61:
 
@@ -165,7 +165,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; schema
 
 :spadfun:`schema`\: (polR, polR) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``schema(P, Q)``\  returns the list of degrees of non zero subresultants of \ ``P``\  and \ ``Q``\ .
+  \ :code:`schema(P, Q)`\  returns the list of degrees of non zero subresultants of \ :code:`P`\  and \ :code:`Q`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69446567726565537562526573756c74616e744575636c696465616e:
 
@@ -173,7 +173,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiDegreeSubResultantEuclidean
 
 :spadfun:`semiDegreeSubResultantEuclidean`\: (polR, polR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(coef2: polR, subResultant: polR) 
-  \ ``semiDegreeSubResultantEuclidean(P, Q, d)``\  returns a subresultant \ ``S_i``\  of degree \ ``d``\  and carries out the equality \ ``... P + coef2*Q = S_i``\ . Warning: \ ``degree(P) >= degree(Q)``\ .
+  \ :code:`semiDegreeSubResultantEuclidean(P, Q, d)`\  returns a subresultant \ :code:`S_i`\  of degree \ :code:`d`\  and carries out the equality \ :code:`... P + coef2*Q = S_i`\ . Warning: \ :code:`degree(P) >= degree(Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d694469736372696d696e616e744575636c696465616e:
 
@@ -181,7 +181,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiDiscriminantEuclidean
 
 :spadfun:`semiDiscriminantEuclidean`\: polR -> Record(coef2: polR, discriminant: R) 
-  \ ``discriminantEuclidean(P)``\  carries out the equality \ ``... P + coef2 * D(P) = discriminant(P)``\ . Warning: \ ``degree(P) >= degree(Q)``\ .
+  \ :code:`discriminantEuclidean(P)`\  carries out the equality \ :code:`... P + coef2 * D(P) = discriminant(P)`\ . Warning: \ :code:`degree(P) >= degree(Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69496e64696365537562526573756c74616e744575636c696465616e:
 
@@ -189,7 +189,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiIndiceSubResultantEuclidean
 
 :spadfun:`semiIndiceSubResultantEuclidean`\: (polR, polR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> Record(coef2: polR, subResultant: polR) 
-  \ ``semiIndiceSubResultantEuclidean(P, Q, i)``\  returns the subresultant \ ``S_i(P, Q)``\  and carries out the equality \ ``... P + coef2*Q = S_i(P, Q)``\  Warning: \ ``degree(P) >= degree(Q)``\ .
+  \ :code:`semiIndiceSubResultantEuclidean(P, Q, i)`\  returns the subresultant \ :code:`S_i(P, Q)`\  and carries out the equality \ :code:`... P + coef2*Q = S_i(P, Q)`\  Warning: \ :code:`degree(P) >= degree(Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d694c617374537562526573756c74616e744575636c696465616e:
 
@@ -197,7 +197,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiLastSubResultantEuclidean
 
 :spadfun:`semiLastSubResultantEuclidean`\: (polR, polR) -> Record(coef2: polR, subResultant: polR) 
-  \ ``semiLastSubResultantEuclidean(P, Q)``\  computes the last non zero subresultant \ ``S``\  and carries out the equality \ ``... P + coef2*Q = S``\ . Warning: \ ``degree(P) >= degree(Q)``\ .
+  \ :code:`semiLastSubResultantEuclidean(P, Q)`\  computes the last non zero subresultant \ :code:`S`\  and carries out the equality \ :code:`... P + coef2*Q = S`\ . Warning: \ :code:`degree(P) >= degree(Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69526573756c74616e744575636c696465616e31:
 
@@ -205,7 +205,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiResultantEuclidean1
 
 :spadfun:`semiResultantEuclidean1`\: (polR, polR) -> Record(coef1: polR, resultant: R) 
-  \ ``semiResultantEuclidean1(P, Q)``\  carries out the equality \ ``coef1.P + ... Q = resultant(P, Q)``\ .
+  \ :code:`semiResultantEuclidean1(P, Q)`\  carries out the equality \ :code:`coef1.P + ... Q = resultant(P, Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69526573756c74616e744575636c696465616e32:
 
@@ -213,7 +213,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiResultantEuclidean2
 
 :spadfun:`semiResultantEuclidean2`\: (polR, polR) -> Record(coef2: polR, resultant: R) 
-  \ ``semiResultantEuclidean2(P, Q)``\  carries out the equality \ ``... P + coef2*Q = resultant(P, Q)``\ . Warning: \ ``degree(P) >= degree(Q)``\ .
+  \ :code:`semiResultantEuclidean2(P, Q)`\  carries out the equality \ :code:`... P + coef2*Q = resultant(P, Q)`\ . Warning: \ :code:`degree(P) >= degree(Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69526573756c74616e745265647569744575636c696465616e:
 
@@ -221,7 +221,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiResultantReduitEuclidean
 
 :spadfun:`semiResultantReduitEuclidean`\: (polR, polR) -> Record(coef2: polR, resultantReduit: R) if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``semiResultantReduitEuclidean(P, Q)``\  returns the "reduce resultant" and carries out the equality \ ``... P + coef2*Q = resultantReduit(P, Q)``\ .
+  \ :code:`semiResultantReduitEuclidean(P, Q)`\  returns the "reduce resultant" and carries out the equality \ :code:`... P + coef2*Q = resultantReduit(P, Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69537562526573756c74616e744763644575636c696465616e31:
 
@@ -229,7 +229,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiSubResultantGcdEuclidean1
 
 :spadfun:`semiSubResultantGcdEuclidean1`\: (polR, polR) -> Record(coef1: polR, gcd: polR) 
-  \ ``semiSubResultantGcdEuclidean1(P, Q)``\  carries out the equality \ ``coef1*P + ... Q = +/- S_i(P, Q)``\  where the degree (not the index) of the subresultant \ ``S_i(P, Q)``\  is as small as possible.
+  \ :code:`semiSubResultantGcdEuclidean1(P, Q)`\  carries out the equality \ :code:`coef1*P + ... Q = +/- S_i(P, Q)`\  where the degree (not the index) of the subresultant \ :code:`S_i(P, Q)`\  is as small as possible.
 
 .. _l50736575646f52656d61696e64657253657175656e6365-73656d69537562526573756c74616e744763644575636c696465616e32:
 
@@ -237,7 +237,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; semiSubResultantGcdEuclidean2
 
 :spadfun:`semiSubResultantGcdEuclidean2`\: (polR, polR) -> Record(coef2: polR, gcd: polR) 
-  \ ``semiSubResultantGcdEuclidean2(P, Q)``\  carries out the equality \ ``... P + coef2*Q = +/- S_i(P, Q)``\  where the degree (not the index) of the subresultant \ ``S_i(P, Q)``\  is as small as possible. Warning: \ ``degree(P) >= degree(Q)``\ .
+  \ :code:`semiSubResultantGcdEuclidean2(P, Q)`\  carries out the equality \ :code:`... P + coef2*Q = +/- S_i(P, Q)`\  where the degree (not the index) of the subresultant \ :code:`S_i(P, Q)`\  is as small as possible. Warning: \ :code:`degree(P) >= degree(Q)`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-737562526573756c74616e74476364:
 
@@ -245,7 +245,7 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; subResultantGcd
 
 :spadfun:`subResultantGcd`\: (polR, polR) -> polR 
-  \ ``subResultantGcd(P, Q)``\  returns the \ ``gcd``\  of two primitive polynomials \ ``P``\  and \ ``Q``\ .
+  \ :code:`subResultantGcd(P, Q)`\  returns the \ :code:`gcd`\  of two primitive polynomials \ :code:`P`\  and \ :code:`Q`\ .
 
 .. _l50736575646f52656d61696e64657253657175656e6365-737562526573756c74616e744763644575636c696465616e:
 
@@ -253,6 +253,6 @@ This package contains some functions: \ :ref:`discriminant <l50736575646f52656d6
    pair: PseudoRemainderSequence; subResultantGcdEuclidean
 
 :spadfun:`subResultantGcdEuclidean`\: (polR, polR) -> Record(coef1: polR, coef2: polR, gcd: polR) 
-  \ ``subResultantGcdEuclidean(P, Q)``\  carries out the equality \ ``coef1*P + coef2*Q = +/- S_i(P, Q)``\  where the degree (not the index) of the subresultant \ ``S_i(P, Q)``\  is as small as possible.
+  \ :code:`subResultantGcdEuclidean(P, Q)`\  carries out the equality \ :code:`coef1*P + coef2*Q = +/- S_i(P, Q)`\  where the degree (not the index) of the subresultant \ :code:`S_i(P, Q)`\  is as small as possible.
 
 

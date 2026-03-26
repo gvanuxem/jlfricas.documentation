@@ -32,7 +32,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; *
 
 :spadfun:`\*`\: (%, Col) -> Col if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``x * c``\  is the product of the matrix \ ``x``\  and the column vector \ ``c``\ . Error: if the dimensions are incompatible.
+  \ :code:`x * c`\  is the product of the matrix \ :code:`x`\  and the column vector \ :code:`c`\ . Error: if the dimensions are incompatible.
 
 
 \ :ref:`\* <l4d61747269784f7065726174696f6e7343617465676f7279-2a>`\ \: (%, R) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
@@ -51,7 +51,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; *
 
 :spadfun:`\*`\: (Row, %) -> Row if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``r * x``\  is the product of the row vector \ ``r``\  and the matrix \ ``x``\ . Error: if the dimensions are incompatible.
+  \ :code:`r * x`\  is the product of the row vector \ :code:`r`\  and the matrix \ :code:`x`\ . Error: if the dimensions are incompatible.
 
 .. _l4d617472697843617465676f7279-2b:
 
@@ -83,14 +83,14 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; ^
 
 :spadfun:`^`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``m^n``\  computes an integral power of the matrix \ ``m``\ . Error: if matrix is not square or if the matrix is square but not invertible.
+  \ :code:`m^n`\  computes an integral power of the matrix \ :code:`m`\ . Error: if matrix is not square or if the matrix is square but not invertible.
 
 
 .. index::
    pair: MatrixCategory; ^
 
 :spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`Monoid <l4d6f6e6f6964>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``x ^ n``\  computes a non-negative integral power of the matrix \ ``x``\ . Error: if the matrix is not square.
+  \ :code:`x ^ n`\  computes a non-negative integral power of the matrix \ :code:`x`\ . Error: if the matrix is not square.
 
 .. _l4d617472697843617465676f7279-7e3d:
 
@@ -136,7 +136,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; coerce
 
 :spadfun:`coerce`\: Col -> % 
-  \ ``coerce(col)``\  converts the column \ ``col``\  to a column matrix.
+  \ :code:`coerce(col)`\  converts the column \ :code:`col`\  to a column matrix.
 
 .. _l4d617472697843617465676f7279-636f6c536c696365:
 
@@ -173,7 +173,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; determinant
 
 :spadfun:`determinant`\: % -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``determinant(m)``\  returns the determinant of the matrix \ ``m``\ . Error: if the matrix is not square.
+  \ :code:`determinant(m)`\  returns the determinant of the matrix \ :code:`m`\ . Error: if the matrix is not square.
 
 .. _l4d617472697843617465676f7279-646961676f6e616c3f:
 
@@ -186,14 +186,14 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; diagonalMatrix
 
 :spadfun:`diagonalMatrix`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``diagonalMatrix([m1, ..., mk])``\  creates a block diagonal matrix \ ``M``\  with block matrices \ *m1*\ , ..., \ *mk*\  down the diagonal, with 0 block matrices elsewhere. More precisely: if \ ``ri := nrows mi``\ , \ ``ci := ncols mi``\ , then \ ``m``\  is an (\ ``r1+``\ ..\ ``+rk``\ ) by (\ ``c1+``\ ..\ ``+ck``\ ) matrix with entries \ ``m.i.j = ml.(i-r1-..-r(l-1)).(j-c1-..-c(l-1))``\ , if \ ``(r1+..+r(l-1)) < i <= r1+..+rl``\  and \ ``(c1+..+c(l-1)) < i <= c1+..+cl``\ , \ ``m.i.j = 0``\  otherwise.
+  \ :code:`diagonalMatrix([m1, ..., mk])`\  creates a block diagonal matrix \ :code:`M`\  with block matrices \ *m1*\ , ..., \ *mk*\  down the diagonal, with 0 block matrices elsewhere. More precisely: if \ :code:`ri := nrows mi`\ , \ :code:`ci := ncols mi`\ , then \ :code:`m`\  is an (\ :code:`r1+`\ ..\ :code:`+rk`\ ) by (\ :code:`c1+`\ ..\ :code:`+ck`\ ) matrix with entries \ :code:`m.i.j = ml.(i-r1-..-r(l-1)).(j-c1-..-c(l-1))`\ , if \ :code:`(r1+..+r(l-1)) < i <= r1+..+rl`\  and \ :code:`(c1+..+c(l-1)) < i <= c1+..+cl`\ , \ :code:`m.i.j = 0`\  otherwise.
 
 
 .. index::
    pair: MatrixCategory; diagonalMatrix
 
 :spadfun:`diagonalMatrix`\: \ :ref:`List <l4c697374>`\  R -> % 
-  \ ``diagonalMatrix(l)``\  returns a diagonal matrix with the elements of \ ``l``\  on the diagonal.
+  \ :code:`diagonalMatrix(l)`\  returns a diagonal matrix with the elements of \ :code:`l`\  on the diagonal.
 
 .. _l4d617472697843617465676f7279-656c74:
 
@@ -329,7 +329,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; inverse
 
 :spadfun:`inverse`\: % -> Union(%, failed) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``inverse(m)``\  returns the inverse of the matrix \ ``m``\ . If the matrix is not invertible, "failed" is returned. Error: if the matrix is not square.
+  \ :code:`inverse(m)`\  returns the inverse of the matrix \ :code:`m`\ . If the matrix is not invertible, "failed" is returned. Error: if the matrix is not square.
 
 .. _l4d617472697843617465676f7279-6b726f6e65636b65725f70726f6431:
 
@@ -345,14 +345,14 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; kroneckerProduct
 
 :spadfun:`kroneckerProduct`\: (%, %) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``kroneckerProduct(a, b)``\  calculates the Kronecker product of the matrices a and \ ``b``\ . This corresponds to tensor product of corresponding operators.
+  \ :code:`kroneckerProduct(a, b)`\  calculates the Kronecker product of the matrices a and \ :code:`b`\ . This corresponds to tensor product of corresponding operators.
 
 
 .. index::
    pair: MatrixCategory; kroneckerProduct
 
 :spadfun:`kroneckerProduct`\: \ :ref:`List <l4c697374>`\  % -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``kroneckerProduct([a1, a2, ..., an])``\  calculates the Kronecker product of the matrices \ ``a1``\ , \ ``a2``\ , ..., an. This corresponds to tensor product of corresponding operators.
+  \ :code:`kroneckerProduct([a1, a2, ..., an])`\  calculates the Kronecker product of the matrices \ :code:`a1`\ , \ :code:`a2`\ , ..., an. This corresponds to tensor product of corresponding operators.
 
 .. _l4d617472697843617465676f7279-6b726f6e65636b657253756d:
 
@@ -360,14 +360,14 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; kroneckerSum
 
 :spadfun:`kroneckerSum`\: (%, %) -> % 
-  \ ``kroneckerSum(a, b)``\  calculates the Kronecker sum of the matrices a and \ ``b``\ .
+  \ :code:`kroneckerSum(a, b)`\  calculates the Kronecker sum of the matrices a and \ :code:`b`\ .
 
 
 .. index::
    pair: MatrixCategory; kroneckerSum
 
 :spadfun:`kroneckerSum`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``kroneckerSum([a1, a2, ..., an])``\  calculates the Kronecker sum of the matrices \ ``a1``\ , \ ``a2``\ , ..., an.
+  \ :code:`kroneckerSum([a1, a2, ..., an])`\  calculates the Kronecker sum of the matrices \ :code:`a1`\ , \ :code:`a2`\ , ..., an.
 
 .. _l4d617472697843617465676f7279-6c61746578:
 
@@ -408,14 +408,14 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; matrix
 
 :spadfun:`matrix`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> R) -> % 
-  \ ``matrix(n,m,f)``\  constructs an \ ``n * m``\  matrix with the \ ``(i,j)``\  entry equal to \ ``f(i,j)``\ .
+  \ :code:`matrix(n,m,f)`\  constructs an \ :code:`n * m`\  matrix with the \ :code:`(i,j)`\  entry equal to \ :code:`f(i,j)`\ .
 
 
 .. index::
    pair: MatrixCategory; matrix
 
 :spadfun:`matrix`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  R -> % 
-  \ ``matrix(l)``\  converts the list of lists \ ``l``\  to a matrix, where the list of lists is viewed as a list of the rows of the matrix.
+  \ :code:`matrix(l)`\  converts the list of lists \ :code:`l`\  to a matrix, where the list of lists is viewed as a list of the rows of the matrix.
 
 .. _l4d617472697843617465676f7279-6d6178:
 
@@ -462,7 +462,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; minordet
 
 :spadfun:`minordet`\: % -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``minordet(m)``\  computes the determinant of the matrix \ ``m``\  using minors. Error: if the matrix is not square.
+  \ :code:`minordet(m)`\  computes the determinant of the matrix \ :code:`m`\  using minors. Error: if the matrix is not square.
 
 .. _l4d617472697843617465676f7279-6d696e526f77496e646578:
 
@@ -510,7 +510,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; Pfaffian
 
 :spadfun:`Pfaffian`\: % -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``Pfaffian(m)``\  returns the Pfaffian of the matrix \ ``m``\ . Error: if the matrix is not antisymmetric.
+  \ :code:`Pfaffian(m)`\  returns the Pfaffian of the matrix \ :code:`m`\ . Error: if the matrix is not antisymmetric.
 
 .. _l4d617472697843617465676f7279-706f736974697665506f776572:
 
@@ -518,7 +518,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; positivePower
 
 :spadfun:`positivePower`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``positivePower(x, n)``\  computes a positive integral power of the matrix \ ``x``\ . Error: if the matrix is not square.
+  \ :code:`positivePower(x, n)`\  computes a positive integral power of the matrix \ :code:`x`\ . Error: if the matrix is not square.
 
 .. _l4d617472697843617465676f7279-71656c74:
 
@@ -566,7 +566,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; scalarMatrix
 
 :spadfun:`scalarMatrix`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , R) -> % 
-  \ ``scalarMatrix(n, r)``\  returns an \ ``n``\ -by-\ ``n``\  matrix with \ ``r``\ \ ``'s``\  on the diagonal and zeroes elsewhere.
+  \ :code:`scalarMatrix(n, r)`\  returns an \ :code:`n`\ -by-\ :code:`n`\  matrix with \ :code:`r`\ \ :code:`'s`\  on the diagonal and zeroes elsewhere.
 
 .. _l4d617472697843617465676f7279-736574436f6c756d6e21:
 
@@ -682,7 +682,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; transpose
 
 :spadfun:`transpose`\: Row -> % 
-  \ ``transpose(r)``\  converts the row \ ``r``\  to a row matrix.
+  \ :code:`transpose(r)`\  converts the row \ :code:`r`\  to a row matrix.
 
 .. _l4d617472697843617465676f7279-76657274436f6e636174:
 
@@ -713,7 +713,7 @@ MatrixCategory(R, Row, Col)
    pair: MatrixCategory; zero
 
 :spadfun:`zero`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``zero(m, n)``\  returns an \ ``m``\ -by-\ ``n``\  zero matrix.
+  \ :code:`zero(m, n)`\  returns an \ :code:`m`\ -by-\ :code:`n`\  zero matrix.
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

@@ -14,7 +14,7 @@ LieExponentials(VarSet, R, Order)
 * Order: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-Management of the Lie Group associated with a free nilpotent Lie algebra. Every Lie bracket with length greater than \ ``Order``\  are assumed to be null. The implementation inherits from the \ :ref:`XPBWPolynomial <l58504257506f6c796e6f6d69616c>`\  domain constructor: Lyndon coordinates are exponential coordinates of the second kind.
+Management of the Lie Group associated with a free nilpotent Lie algebra. Every Lie bracket with length greater than \ :code:`Order`\  are assumed to be null. The implementation inherits from the \ :ref:`XPBWPolynomial <l58504257506f6c796e6f6d69616c>`\  domain constructor: Lyndon coordinates are exponential coordinates of the second kind.
 
 
 .. _l4c69654578706f6e656e7469616c73-31:
@@ -65,14 +65,14 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\ (VarSet, R) 
-  \ ``coerce(g)``\  returns the internal representation of \ ``g``\ .
+  \ :code:`coerce(g)`\  returns the internal representation of \ :code:`g`\ .
 
 
 .. index::
    pair: LieExponentials; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`XPBWPolynomial <l58504257506f6c796e6f6d69616c>`\ (VarSet, R) 
-  \ ``coerce(g)``\  returns the internal representation of \ ``g``\ .
+  \ :code:`coerce(g)`\  returns the internal representation of \ :code:`g`\ .
 
 .. _l4c69654578706f6e656e7469616c73-636f6d6d757461746f72:
 
@@ -90,7 +90,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; exp
 
 :spadfun:`exp`\: \ :ref:`LiePolynomial <l4c6965506f6c796e6f6d69616c>`\ (VarSet, R) -> % 
-  \ ``exp(p)``\  returns the exponential of \ ``p``\ .
+  \ :code:`exp(p)`\  returns the exponential of \ :code:`p`\ .
 
 .. _l4c69654578706f6e656e7469616c73-6964656e74696669636174696f6e:
 
@@ -98,7 +98,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; identification
 
 :spadfun:`identification`\: (%, %) -> \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  R 
-  \ ``identification(g, h)``\  returns the list of equations \ ``g_i = h_i``\ , where \ ``g_i``\  (resp. \ ``h_i``\ ) are exponential coordinates of \ ``g``\  (resp. \ ``h``\ ).
+  \ :code:`identification(g, h)`\  returns the list of equations \ :code:`g_i = h_i`\ , where \ :code:`g_i`\  (resp. \ :code:`h_i`\ ) are exponential coordinates of \ :code:`g`\  (resp. \ :code:`h`\ ).
 
 .. _l4c69654578706f6e656e7469616c73-696e76:
 
@@ -130,7 +130,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; listOfTerms
 
 :spadfun:`listOfTerms`\: % -> \ :ref:`List <l4c697374>`\  Record(k: \ :ref:`PoincareBirkhoffWittLyndonBasis <l506f696e636172654269726b686f6666576974744c796e646f6e4261736973>`\  VarSet, c: R) 
-  \ ``listOfTerms(p)``\  returns the internal representation of \ ``p``\ .
+  \ :code:`listOfTerms(p)`\  returns the internal representation of \ :code:`p`\ .
 
 .. _l4c69654578706f6e656e7469616c73-6c6f67:
 
@@ -138,7 +138,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; log
 
 :spadfun:`log`\: % -> \ :ref:`LiePolynomial <l4c6965506f6c796e6f6d69616c>`\ (VarSet, R) 
-  \ ``log(p)``\  returns the logarithm of \ ``p``\ .
+  \ :code:`log(p)`\  returns the logarithm of \ :code:`p`\ .
 
 .. _l4c69654578706f6e656e7469616c73-4c796e646f6e4261736973:
 
@@ -146,7 +146,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; LyndonBasis
 
 :spadfun:`LyndonBasis`\: \ :ref:`List <l4c697374>`\  VarSet -> \ :ref:`List <l4c697374>`\  \ :ref:`LiePolynomial <l4c6965506f6c796e6f6d69616c>`\ (VarSet, R) 
-  \ ``LyndonBasis(lv)``\  returns the Lyndon basis of the nilpotent free Lie algebra.
+  \ :code:`LyndonBasis(lv)`\  returns the Lyndon basis of the nilpotent free Lie algebra.
 
 .. _l4c69654578706f6e656e7469616c73-4c796e646f6e436f6f7264696e61746573:
 
@@ -154,7 +154,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; LyndonCoordinates
 
 :spadfun:`LyndonCoordinates`\: % -> \ :ref:`List <l4c697374>`\  Record(k: \ :ref:`LyndonWord <l4c796e646f6e576f7264>`\  VarSet, c: R) 
-  \ ``LyndonCoordinates(g)``\  returns the exponential coordinates of \ ``g``\ .
+  \ :code:`LyndonCoordinates(g)`\  returns the exponential coordinates of \ :code:`g`\ .
 
 .. _l4c69654578706f6e656e7469616c73-6d6972726f72:
 
@@ -162,7 +162,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; mirror
 
 :spadfun:`mirror`\: % -> % 
-  \ ``mirror(g)``\  is the mirror of the internal representation of \ ``g``\ .
+  \ :code:`mirror(g)`\  is the mirror of the internal representation of \ :code:`g`\ .
 
 .. _l4c69654578706f6e656e7469616c73-6f6e653f:
 
@@ -199,7 +199,7 @@ Management of the Lie Group associated with a free nilpotent Lie algebra. Every 
    pair: LieExponentials; varList
 
 :spadfun:`varList`\: % -> \ :ref:`List <l4c697374>`\  VarSet 
-  \ ``varList(g)``\  returns the list of variables of \ ``g``\ .
+  \ :code:`varList(g)`\  returns the list of variables of \ :code:`g`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

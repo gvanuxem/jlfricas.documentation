@@ -12,7 +12,7 @@ FreeModuleCategory(R, S)
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-A domain of this category implements formal linear combinations of elements from a domain \ ``Basis``\  with coefficients in a domain \ ``R``\ . The domain \ ``Basis``\  needs only to belong to the category \ :ref:`SetCategory <l53657443617465676f7279>`\  and \ ``R``\  to the category \ :ref:`Ring <l52696e67>`\ . Thus the coefficient ring may be non-commutative. See the \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\  constructor for examples of domains built with the \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\  category constructor. Author: Michel Petitot (petitot@lifl.\ ``fr``\ )   Note (Franz Lehner, June 2009): \ ``FreeModule``\  originally was not of FreeModuleCategory. Some functions (like \ ``support``\ , \ ``coefficients``\ , \ ``monomials``\ , ...) from here could be moved to \ ``IndexedDirectProductCategory``\  but at the moment there is no need for this.
+A domain of this category implements formal linear combinations of elements from a domain \ :code:`Basis`\  with coefficients in a domain \ :code:`R`\ . The domain \ :code:`Basis`\  needs only to belong to the category \ :ref:`SetCategory <l53657443617465676f7279>`\  and \ :code:`R`\  to the category \ :ref:`Ring <l52696e67>`\ . Thus the coefficient ring may be non-commutative. See the \ :ref:`XDistributedPolynomial <l584469737472696275746564506f6c796e6f6d69616c>`\  constructor for examples of domains built with the \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\  category constructor. Author: Michel Petitot (petitot@lifl.\ :code:`fr`\ )   Note (Franz Lehner, June 2009): \ :code:`FreeModule`\  originally was not of FreeModuleCategory. Some functions (like \ :code:`support`\ , \ :code:`coefficients`\ , \ :code:`monomials`\ , ...) from here could be moved to \ :code:`IndexedDirectProductCategory`\  but at the moment there is no need for this.
 
 
 .. _l467265654d6f64756c6543617465676f7279-30:
@@ -71,7 +71,7 @@ A domain of this category implements formal linear combinations of elements from
    pair: FreeModuleCategory; coefficient
 
 :spadfun:`coefficient`\: (%, S) -> R 
-  \ ``coefficient(x, s)``\  returns the coefficient of the basis element \ ``s``\ 
+  \ :code:`coefficient(x, s)`\  returns the coefficient of the basis element \ :code:`s`\ 
 
 .. _l467265654d6f64756c6543617465676f7279-636f656666696369656e7473:
 
@@ -79,7 +79,7 @@ A domain of this category implements formal linear combinations of elements from
    pair: FreeModuleCategory; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`List <l4c697374>`\  R 
-  \ ``coefficients(x)``\  returns the list of coefficients of \ ``x``\ .
+  \ :code:`coefficients(x)`\  returns the list of coefficients of \ :code:`x`\ .
 
 .. _l467265654d6f64756c6543617465676f7279-636f65726365:
 
@@ -127,7 +127,7 @@ A domain of this category implements formal linear combinations of elements from
    pair: FreeModuleCategory; linearExtend
 
 :spadfun:`linearExtend`\: (S -> R, %) -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``linearExtend: (f, x)``\  returns the linear extension of a map defined on the basis applied to a linear combination
+  \ :code:`linearExtend: (f, x)`\  returns the linear extension of a map defined on the basis applied to a linear combination
 
 .. _l467265654d6f64756c6543617465676f7279-6c6973744f665465726d73:
 
@@ -155,7 +155,7 @@ A domain of this category implements formal linear combinations of elements from
    pair: FreeModuleCategory; monomials
 
 :spadfun:`monomials`\: % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``monomials(x)``\  returns the list of \ ``r_i*b_i``\  whose sum is \ ``x``\ .
+  \ :code:`monomials(x)`\  returns the list of \ :code:`r_i*b_i`\  whose sum is \ :code:`x`\ .
 
 .. _l467265654d6f64756c6543617465676f7279-6e756d6265724f664d6f6e6f6d69616c73:
 
@@ -193,7 +193,7 @@ A domain of this category implements formal linear combinations of elements from
    pair: FreeModuleCategory; support
 
 :spadfun:`support`\: % -> \ :ref:`List <l4c697374>`\  S 
-  \ ``support(x)``\  returns the list of basis elements with nonzero coefficients.
+  \ :code:`support(x)`\  returns the list of basis elements with nonzero coefficients.
 
 .. _l467265654d6f64756c6543617465676f7279-7a65726f3f:
 

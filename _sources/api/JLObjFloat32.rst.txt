@@ -8,7 +8,7 @@ JLObjFloat32
 :viewcode:`jimobject.spad line 31 <jimobject.spad#L31>` :editcode:`[edit on github] <jimobject.spad#L31>`
 
 
-Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather, for returned value or function argument for example. Only basic arithmetic operations are supported.
+Convenience domain for Julia \ :code:`Float32`\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather, for returned value or function argument for example. Only basic arithmetic operations are supported.
 
 
 .. _l4a4c4f626a466c6f61743332-30:
@@ -31,7 +31,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x*i``\  is the multiplication of \ ``x``\  by an integer.
+  \ :code:`x*i`\  is the multiplication of \ :code:`x`\  by an integer.
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -73,14 +73,14 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x/i``\  is the division of \ ``x``\  by an integer.
+  \ :code:`x/i`\  is the division of \ :code:`x`\  by an integer.
 
 
 .. index::
    pair: JLObjFloat32; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``i/x``\  is the division of an integer by \ ``x``\ .
+  \ :code:`i/x`\  is the division of an integer by \ :code:`x`\ .
 
 .. _l4a4c4f626a466c6f61743332-3c3d:
 
@@ -113,7 +113,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; ^
 
 :spadfun:`^`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x^q``\  is the exponentiation by a rational.
+  \ :code:`x^q`\  is the exponentiation by a rational.
 
 
 \ :ref:`^ <l4469766973696f6e52696e67-5e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
@@ -163,7 +163,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; cis
 
 :spadfun:`cis`\: % -> \ :ref:`JLObjComplexF32 <l4a4c4f626a436f6d706c6578463332>`\  
-  \ ``cis(x)``\  returns exp(\%i*x) computed efficiently.
+  \ :code:`cis(x)`\  returns exp(\%i*x) computed efficiently.
 
 .. _l4a4c4f626a466c6f61743332-6369737069:
 
@@ -171,7 +171,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; cispi
 
 :spadfun:`cispi`\: % -> \ :ref:`JLObjComplexF32 <l4a4c4f626a436f6d706c6578463332>`\  
-  \ ``cispi(x)``\  returns cis(\%pi*x) computed efficiently.
+  \ :code:`cispi(x)`\  returns cis(\%pi*x) computed efficiently.
 
 .. _l4a4c4f626a466c6f61743332-636f65726365:
 
@@ -191,14 +191,14 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; coerce
 
 :spadfun:`coerce`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it). Convenience function.
+  \ :code:`coerce(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat32`\  (truncate it). Convenience function.
 
 
 .. index::
    pair: JLObjFloat32; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it). Convenience function.
+  \ :code:`coerce(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat32`\  (truncate it). Convenience function.
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -219,7 +219,7 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; convert
 
 :spadfun:`convert`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``convert(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it).
+  \ :code:`convert(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat32`\  (truncate it).
 
 .. _l4a4c4f626a466c6f61743332-646976696465:
 
@@ -280,21 +280,21 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; jfloat32
 
 :spadfun:`jfloat32`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jfloat32(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it).
+  \ :code:`jfloat32(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat32`\  (truncate it).
 
 
 .. index::
    pair: JLObjFloat32; jfloat32
 
 :spadfun:`jfloat32`\: \ :ref:`JLFloat32 <l4a4c466c6f61743332>`\  -> % 
-  \ ``jfloat32(x)``\  returns \ ``x``\  as a \ ``JLObjFloat32``\  (truncate it).
+  \ :code:`jfloat32(x)`\  returns \ :code:`x`\  as a \ :code:`JLObjFloat32`\  (truncate it).
 
 
 .. index::
    pair: JLObjFloat32; jfloat32
 
 :spadfun:`jfloat32`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jfloat32``\ (\ ``str``\ ) evaluates \ ``str``\  in Julia and returns the Julia \ ``Float32``\  object. For example: \example{jfloat32("sin(\ ``pi``\ )")} \example{jfloat32("0.7")}
+  \ :code:`jfloat32`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float32`\  object. For example: \example{jfloat32("sin(\ :code:`pi`\ )")} \example{jfloat32("0.7")}
 
 .. _l4a4c4f626a466c6f61743332-6a6c41626f7574:
 
@@ -328,14 +328,14 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+  \ :code:`jlApprox?(x,y)`\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
 
 
 .. index::
    pair: JLObjFloat32; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y,atol)``\  computes inexact equality comparison with absolute tolerance \ ``atol``\ . Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
+  \ :code:`jlApprox?(x,y,atol)`\  computes inexact equality comparison with absolute tolerance \ :code:`atol`\ . Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds.
 
 .. _l4a4c4f626a466c6f61743332-6a6c446973706c6179:
 
@@ -353,21 +353,21 @@ Convenience domain for Julia \ ``Float32``\ , objects that are used within Julia
    pair: JLObjFloat32; jlF32CApply
 
 :spadfun:`jlF32CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %) -> % 
-  \ ``jlF32CApply(func, x)``\  applies the function pointer \ ``func``\  to \ ``x``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrtf))} \example{jlF32CApply(squareRoot,jfloat32(2))}
+  \ :code:`jlF32CApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{squareRoot:=jlDlSym(libm,jsym(sqrtf))} \example{jlF32CApply(squareRoot,jfloat32(2))}
 
 
 .. index::
    pair: JLObjFloat32; jlF32CApply
 
 :spadfun:`jlF32CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %) -> % 
-  \ ``jlF32CApply(func, x, y)``\  applies the function pointer \ ``func``\  to \ ``x``\  and \ ``y``\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{power:=jlDlSym(libm,jsym(powf))} \example{jlF32CApply(power,jfloat32(2),jfloat32(7))}
+  \ :code:`jlF32CApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . For example: \example{libm:= jlDlOpen "libopenlibm"} \example{power:=jlDlSym(libm,jsym(powf))} \example{jlF32CApply(power,jfloat32(2),jfloat32(7))}
 
 
 .. index::
    pair: JLObjFloat32; jlF32CApply
 
 :spadfun:`jlF32CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %, %) -> % 
-  \ ``jlF32CApply(func, x, y, z)``\  applies the function pointer \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ .
+  \ :code:`jlF32CApply(func, x, y, z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ .
 
 .. _l4a4c4f626a466c6f61743332-6a6c4669656c644e616d6573:
 

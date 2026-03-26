@@ -19,7 +19,7 @@ Domains for transform from SPoint to SPoint STransform transform domain can by u
    pair: STransform; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
-  \ ``coerce(tr)``\  output
+  \ :code:`coerce(tr)`\  output
 
 .. _l535472616e73666f726d-636f6d706f756e64:
 
@@ -27,7 +27,7 @@ Domains for transform from SPoint to SPoint STransform transform domain can by u
    pair: STransform; compound
 
 :spadfun:`compound`\: (%, %) -> % 
-  \ ``compound(tr, inpt)``\  combine two transforms
+  \ :code:`compound(tr, inpt)`\  combine two transforms
 
 .. _l535472616e73666f726d-6964656e74697479:
 
@@ -35,7 +35,7 @@ Domains for transform from SPoint to SPoint STransform transform domain can by u
    pair: STransform; identity
 
 :spadfun:`identity`\: () -> % 
-  \ ``identity()``\  returns the identity element which is do nothing transform
+  \ :code:`identity()`\  returns the identity element which is do nothing transform
 
 .. _l535472616e73666f726d-737472616e73666f726d:
 
@@ -43,28 +43,28 @@ Domains for transform from SPoint to SPoint STransform transform domain can by u
    pair: STransform; stransform
 
 :spadfun:`stransform`\: (\ :ref:`Complex <l436f6d706c6578>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`Complex <l436f6d706c6578>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``stransform(cpx)``\  construct transform as function of complex variable can only be used when \ ``PT``\  is SArgand so this can be converted to \ ``PT``\  \ ``->``\  \ ``PT``\ 
+  \ :code:`stransform(cpx)`\  construct transform as function of complex variable can only be used when \ :code:`PT`\  is SArgand so this can be converted to \ :code:`PT`\  \ :code:`->`\  \ :code:`PT`\ 
 
 
 .. index::
    pair: STransform; stransform
 
 :spadfun:`stransform`\: (PT -> PT) -> % 
-  \ ``stransform(gen)``\  construct transform in general form as a mapping from \ ``PT``\  to \ ``PT``\ 
+  \ :code:`stransform(gen)`\  construct transform in general form as a mapping from \ :code:`PT`\  to \ :code:`PT`\ 
 
 
 .. index::
    pair: STransform; stransform
 
 :spadfun:`stransform`\: \ :ref:`List <l4c697374>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``stransform(m)``\  construct transform using a multivector
+  \ :code:`stransform(m)`\  construct transform using a multivector
 
 
 .. index::
    pair: STransform; stransform
 
 :spadfun:`stransform`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``stransform(m)``\  constructs transform with given matrix elements
+  \ :code:`stransform(m)`\  constructs transform with given matrix elements
 
 .. _l535472616e73666f726d-737472616e736c617465:
 
@@ -72,7 +72,7 @@ Domains for transform from SPoint to SPoint STransform transform domain can by u
    pair: STransform; stranslate
 
 :spadfun:`stranslate`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``stranslate(offsetx, offsety, offsetz, scalex, scaley, scalez)``\  constructs a transform which represents pure translation we can also combine with scale which, for instance, is useful when writing to \ ``SVG``\  file because the \ ``y``\  dimension is inverted
+  \ :code:`stranslate(offsetx, offsety, offsetz, scalex, scaley, scalez)`\  constructs a transform which represents pure translation we can also combine with scale which, for instance, is useful when writing to \ :code:`SVG`\  file because the \ :code:`y`\  dimension is inverted
 
 .. _l535472616e73666f726d-78666f726d:
 
@@ -80,6 +80,6 @@ Domains for transform from SPoint to SPoint STransform transform domain can by u
    pair: STransform; xform
 
 :spadfun:`xform`\: (%, PT) -> PT 
-  \ ``xform(tr, inpt)``\  apply transform to a point producing another point
+  \ :code:`xform(tr, inpt)`\  apply transform to a point producing another point
 
 

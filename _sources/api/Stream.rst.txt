@@ -63,7 +63,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; coerce
 
 :spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coerce(l)``\  converts a list \ ``l``\  to a stream.
+  \ :code:`coerce(l)`\  converts a list \ :code:`l`\  to a stream.
 
 .. _l53747265616d-636f6d706c657465:
 
@@ -106,7 +106,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; cons
 
 :spadfun:`cons`\: (S, %) -> % 
-  \ ``cons(a, s)``\  returns a stream whose \ ``first``\  is \ ``a``\  and whose \ ``rest``\  is \ ``s``\ . Note: \ ``cons(a, s) = concat(a, s)``\ .
+  \ :code:`cons(a, s)`\  returns a stream whose \ :code:`first`\  is \ :code:`a`\  and whose \ :code:`rest`\  is \ :code:`s`\ . Note: \ :code:`cons(a, s) = concat(a, s)`\ .
 
 .. _l53747265616d-636f6e737472756374:
 
@@ -159,7 +159,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; delay
 
 :spadfun:`delay`\: (() -> %) -> % 
-  \ ``delay(f)``\  creates a stream with a lazy evaluation defined by function \ ``f``\ . Caution: This function can only be called in compiled code.
+  \ :code:`delay(f)`\  creates a stream with a lazy evaluation defined by function \ :code:`f`\ . Caution: This function can only be called in compiled code.
 
 .. _l53747265616d-64656c657465:
 
@@ -277,7 +277,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; filterUntil
 
 :spadfun:`filterUntil`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``filterUntil(p, s)``\  returns \ ``[x0, x1, ..., x(n)]``\  where \ ``s = [x0, x1, x2, ..]``\  and \ ``n``\  is the smallest index such that \ ``p(xn) = true``\ .
+  \ :code:`filterUntil(p, s)`\  returns \ :code:`[x0, x1, ..., x(n)]`\  where \ :code:`s = [x0, x1, x2, ..]`\  and \ :code:`n`\  is the smallest index such that \ :code:`p(xn) = true`\ .
 
 .. _l53747265616d-66696c7465725768696c65:
 
@@ -285,7 +285,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; filterWhile
 
 :spadfun:`filterWhile`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``filterWhile(p, s)``\  returns \ ``[x0, x1, ..., x(n-1)]``\  where \ ``s = [x0, x1, x2, ..]``\  and \ ``n``\  is the smallest index such that \ ``p(xn) = false``\ .
+  \ :code:`filterWhile(p, s)`\  returns \ :code:`[x0, x1, ..., x(n-1)]`\  where \ :code:`s = [x0, x1, x2, ..]`\  and \ :code:`n`\  is the smallest index such that \ :code:`p(xn) = false`\ .
 
 .. _l53747265616d-66696e64:
 
@@ -298,7 +298,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; findCycle
 
 :spadfun:`findCycle`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> Record(cycle?: \ :ref:`Boolean <l426f6f6c65616e>`\ , prefix: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , period: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``findCycle(n, st)``\  determines if st is periodic within \ ``n``\ .
+  \ :code:`findCycle(n, st)`\  determines if st is periodic within \ :code:`n`\ .
 
 .. _l53747265616d-6669727374:
 
@@ -523,7 +523,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; repeating?
 
 :spadfun:`repeating?`\: (\ :ref:`List <l4c697374>`\  S, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
-  \ ``repeating?(l, s)``\  returns \ ``true``\  if a stream \ ``s``\  is periodic with period \ ``l``\ , and \ ``false``\  otherwise.
+  \ :code:`repeating?(l, s)`\  returns \ :code:`true`\  if a stream \ :code:`s`\  is periodic with period \ :code:`l`\ , and \ :code:`false`\  otherwise.
 
 .. _l53747265616d-726570656174696e67:
 
@@ -531,7 +531,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; repeating
 
 :spadfun:`repeating`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``repeating(l)``\  is a repeating stream whose period is the list \ ``l``\ .
+  \ :code:`repeating(l)`\  is a repeating stream whose period is the list \ :code:`l`\ .
 
 .. _l53747265616d-72657374:
 
@@ -617,7 +617,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; setrest!
 
 :spadfun:`setrest!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``setrest!(x, n, y)``\  sets rest(\ ``x``\ , \ ``n``\ ) to \ ``y``\ . The function will expand cycles if necessary.
+  \ :code:`setrest!(x, n, y)`\  sets rest(\ :code:`x`\ , \ :code:`n`\ ) to \ :code:`y`\ . The function will expand cycles if necessary.
 
 .. _l53747265616d-73657476616c756521:
 
@@ -630,7 +630,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; showAll?
 
 :spadfun:`showAll?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
-  \ ``showAll?()``\  returns \ ``true``\  if all computed entries of streams will be displayed.
+  \ :code:`showAll?()`\  returns \ :code:`true`\  if all computed entries of streams will be displayed.
 
 .. _l53747265616d-73686f77416c6c456c656d656e7473:
 
@@ -638,7 +638,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; showAllElements
 
 :spadfun:`showAllElements`\: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
-  \ ``showAllElements(s)``\  creates an output form which displays all computed elements.
+  \ :code:`showAllElements(s)`\  creates an output form which displays all computed elements.
 
 .. _l53747265616d-73686f77456c656d656e7473:
 
@@ -646,7 +646,7 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; showElements
 
 :spadfun:`showElements`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  if S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
-  \ ``showElements(n, st)``\  computes and creates and output form of the first \ ``n``\  entries of st.
+  \ :code:`showElements(n, st)`\  computes and creates and output form of the first \ :code:`n`\  entries of st.
 
 .. _l53747265616d-73697a653f:
 
@@ -684,14 +684,14 @@ A stream is an implementation of a possibly infinite sequence using a list of te
    pair: Stream; stream
 
 :spadfun:`stream`\: (() -> S) -> % 
-  \ ``stream(f)``\  creates an infinite stream all of whose elements are equal to \ ``f()``\ . Note: \ ``stream(f) = [f(), f(), f(), ...]``\ .
+  \ :code:`stream(f)`\  creates an infinite stream all of whose elements are equal to \ :code:`f()`\ . Note: \ :code:`stream(f) = [f(), f(), f(), ...]`\ .
 
 
 .. index::
    pair: Stream; stream
 
 :spadfun:`stream`\: (S -> S, S) -> % 
-  \ ``stream(f, x)``\  creates an infinite stream whose first element is \ ``x``\  and whose \ ``n``\ th element (\ ``n > 1``\ ) is \ ``f``\  applied to the previous element. Note: \ ``stream(f, x) = [x, f(x), f(f(x)), ...]``\ .
+  \ :code:`stream(f, x)`\  creates an infinite stream whose first element is \ :code:`x`\  and whose \ :code:`n`\ th element (\ :code:`n > 1`\ ) is \ :code:`f`\  applied to the previous element. Note: \ :code:`stream(f, x) = [x, f(x), f(f(x)), ...]`\ .
 
 .. _l53747265616d-7377617021:
 

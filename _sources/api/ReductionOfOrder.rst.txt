@@ -21,13 +21,13 @@ ReductionOfOrder(F, L)
    pair: ReductionOfOrder; ReduceOrder
 
 :spadfun:`ReduceOrder`\: (L, F) -> L 
-  \ ``ReduceOrder(op, s)``\  returns \ ``op1``\  such that for any solution \ ``z``\  of \ ``op1 z = 0``\ , \ ``y = s \int z``\  is a solution of \ ``op y = 0``\ . \ ``s``\  must satisfy \ ``op s = 0``\ .
+  \ :code:`ReduceOrder(op, s)`\  returns \ :code:`op1`\  such that for any solution \ :code:`z`\  of \ :code:`op1 z = 0`\ , \ :code:`y = s \int z`\  is a solution of \ :code:`op y = 0`\ . \ :code:`s`\  must satisfy \ :code:`op s = 0`\ .
 
 
 .. index::
    pair: ReductionOfOrder; ReduceOrder
 
 :spadfun:`ReduceOrder`\: (L, \ :ref:`List <l4c697374>`\  F) -> Record(eq: L, op: \ :ref:`List <l4c697374>`\  F) 
-  \ ``ReduceOrder(op, [f1, ..., fk])``\  returns \ ``[op1, [g1, ..., gk]]``\  such that for any solution \ ``z``\  of \ ``op1 z = 0``\ , \ ``y = gk \int(g_{k-1} \int(... \int(g1 \int z)...))``\  is a solution of \ ``op y = 0``\ . Each \ ``fi``\  must satisfy \ ``op fi = 0``\ .
+  \ :code:`ReduceOrder(op, [f1, ..., fk])`\  returns \ :code:`[op1, [g1, ..., gk]]`\  such that for any solution \ :code:`z`\  of \ :code:`op1 z = 0`\ , \ :code:`y = gk \int(g_{k-1} \int(... \int(g1 \int z)...))`\  is a solution of \ :code:`op y = 0`\ . Each \ :code:`fi`\  must satisfy \ :code:`op fi = 0`\ .
 
 

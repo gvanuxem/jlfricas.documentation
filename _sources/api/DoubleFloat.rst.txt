@@ -8,7 +8,7 @@ DoubleFloat
 :viewcode:`sf.spad line 301 <sf.spad#L301>` :editcode:`[edit on github] <sf.spad#L301>`
 
 
-\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  is intended to make accessible hardware floating point arithmetic in \Language{}, either native double precision, or IEEE. On most machines, there will be hardware support for the arithmetic operations: \ :ref:`+ <l446f75626c65466c6f6174-2b>`\ , \ :ref:`\* <l446f75626c65466c6f6174-2a>`\ , \ :ref:`/ <l446f75626c65466c6f6174-2f>`\  and possibly also the \ :ref:`sqrt <l446f75626c65466c6f6174-73717274>`\  operation. The operations \ :ref:`exp <l446f75626c65466c6f6174-657870>`\ , \ :ref:`log <l446f75626c65466c6f6174-6c6f67>`\ , \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\ , \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\ , \ :ref:`atan <l446f75626c65466c6f6174-6174616e>`\  are normally coded in software based on minimax polynomial/rational approximations. Some general comments about the accuracy of the operations: the operations \ :ref:`+ <l446f75626c65466c6f6174-2b>`\ , \ :ref:`\* <l446f75626c65466c6f6174-2a>`\ , \ :ref:`/ <l446f75626c65466c6f6174-2f>`\  and \ :ref:`sqrt <l446f75626c65466c6f6174-73717274>`\  are expected to be fully accurate. The operations \ :ref:`exp <l446f75626c65466c6f6174-657870>`\ , \ :ref:`log <l446f75626c65466c6f6174-6c6f67>`\ , \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\ , \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\  and \ :ref:`atan <l446f75626c65466c6f6174-6174616e>`\  are not expected to be fully accurate. In particular, \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\  and \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\  will lose all precision for large arguments.   The \ :ref:`Float <l466c6f6174>`\  domain provides an alternative to the \ ``DoubleFloat``\  domain. It provides an arbitrary precision model of floating point arithmetic. This means that accuracy problems like those above are eliminated by increasing the working precision where necessary. \ :ref:`Float <l466c6f6174>`\  provides some special functions such as erf, the error function in addition to the elementary functions. The disadvantage of \ :ref:`Float <l466c6f6174>`\  is that it is much more expensive than small floats when the latter can be used.
+\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  is intended to make accessible hardware floating point arithmetic in \Language{}, either native double precision, or IEEE. On most machines, there will be hardware support for the arithmetic operations: \ :ref:`+ <l446f75626c65466c6f6174-2b>`\ , \ :ref:`\* <l446f75626c65466c6f6174-2a>`\ , \ :ref:`/ <l446f75626c65466c6f6174-2f>`\  and possibly also the \ :ref:`sqrt <l446f75626c65466c6f6174-73717274>`\  operation. The operations \ :ref:`exp <l446f75626c65466c6f6174-657870>`\ , \ :ref:`log <l446f75626c65466c6f6174-6c6f67>`\ , \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\ , \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\ , \ :ref:`atan <l446f75626c65466c6f6174-6174616e>`\  are normally coded in software based on minimax polynomial/rational approximations. Some general comments about the accuracy of the operations: the operations \ :ref:`+ <l446f75626c65466c6f6174-2b>`\ , \ :ref:`\* <l446f75626c65466c6f6174-2a>`\ , \ :ref:`/ <l446f75626c65466c6f6174-2f>`\  and \ :ref:`sqrt <l446f75626c65466c6f6174-73717274>`\  are expected to be fully accurate. The operations \ :ref:`exp <l446f75626c65466c6f6174-657870>`\ , \ :ref:`log <l446f75626c65466c6f6174-6c6f67>`\ , \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\ , \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\  and \ :ref:`atan <l446f75626c65466c6f6174-6174616e>`\  are not expected to be fully accurate. In particular, \ :ref:`sin <l446f75626c65466c6f6174-73696e>`\  and \ :ref:`cos <l446f75626c65466c6f6174-636f73>`\  will lose all precision for large arguments.   The \ :ref:`Float <l466c6f6174>`\  domain provides an alternative to the \ :code:`DoubleFloat`\  domain. It provides an arbitrary precision model of floating point arithmetic. This means that accuracy problems like those above are eliminated by increasing the working precision where necessary. \ :ref:`Float <l466c6f6174>`\  provides some special functions such as erf, the error function in addition to the elementary functions. The disadvantage of \ :ref:`Float <l466c6f6174>`\  is that it is much more expensive than small floats when the latter can be used.
 
 
 .. _l446f75626c65466c6f6174-30:
@@ -230,7 +230,7 @@ DoubleFloat
    pair: DoubleFloat; atan
 
 :spadfun:`atan`\: (%, %) -> % 
-  \ ``atan(x, y)``\  computes the arc tangent from \ ``x``\  with phase \ ``y``\ .
+  \ :code:`atan(x, y)`\  computes the arc tangent from \ :code:`x`\  with phase \ :code:`y`\ .
 
 .. _l446f75626c65466c6f6174-6174616e68:
 
@@ -450,7 +450,7 @@ DoubleFloat
    pair: DoubleFloat; exp1
 
 :spadfun:`exp1`\: () -> % 
-  \ ``exp1()``\  returns the natural log base \ ``2.718281828...``\ .
+  \ :code:`exp1()`\  returns the natural log base \ :code:`2.718281828...`\ .
 
 .. _l446f75626c65466c6f6174-657870:
 
@@ -712,7 +712,7 @@ DoubleFloat
    pair: DoubleFloat; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  computes the logarithm with base 10 for \ ``x``\ .
+  \ :code:`log10(x)`\  computes the logarithm with base 10 for \ :code:`x`\ .
 
 .. _l446f75626c65466c6f6174-6c6f6732:
 
@@ -720,7 +720,7 @@ DoubleFloat
    pair: DoubleFloat; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  computes the logarithm with base 2 for \ ``x``\ .
+  \ :code:`log2(x)`\  computes the logarithm with base 2 for \ :code:`x`\ .
 
 .. _l446f75626c65466c6f6174-6c6f67:
 
@@ -878,7 +878,7 @@ DoubleFloat
    pair: DoubleFloat; qlog
 
 :spadfun:`qlog`\: % -> % 
-  \ ``qlog(x)``\  computes natural logarithm of \ ``x``\ . It assumes that \ ``x > 0``\ .
+  \ :code:`qlog(x)`\  computes natural logarithm of \ :code:`x`\ . It assumes that \ :code:`x > 0`\ .
 
 .. _l446f75626c65466c6f6174-7173717274:
 
@@ -886,7 +886,7 @@ DoubleFloat
    pair: DoubleFloat; qsqrt
 
 :spadfun:`qsqrt`\: % -> % 
-  \ ``qsqrt(x)``\  computes square root of \ ``x``\ . It assumes that \ ``x >= 0``\ .
+  \ :code:`qsqrt(x)`\  computes square root of \ :code:`x`\ . It assumes that \ :code:`x >= 0`\ .
 
 .. _l446f75626c65466c6f6174-71756f:
 
@@ -904,14 +904,14 @@ DoubleFloat
    pair: DoubleFloat; rationalApproximation
 
 :spadfun:`rationalApproximation`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``rationalApproximation(f, n)``\  computes a rational approximation \ ``r``\  to \ ``f``\  with relative error \ ``< 10^(-n)``\ .
+  \ :code:`rationalApproximation(f, n)`\  computes a rational approximation \ :code:`r`\  to \ :code:`f`\  with relative error \ :code:`< 10^(-n)`\ .
 
 
 .. index::
    pair: DoubleFloat; rationalApproximation
 
 :spadfun:`rationalApproximation`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``rationalApproximation(f, n, b)``\  computes a rational approximation \ ``r``\  to \ ``f``\  with relative error \ ``< b^(-n)``\  (that is, \ ``|(r-f)/f| < b^(-n)``\ ).
+  \ :code:`rationalApproximation(f, n, b)`\  computes a rational approximation \ :code:`r`\  to \ :code:`f`\  with relative error \ :code:`< b^(-n)`\  (that is, \ :code:`|(r-f)/f| < b^(-n)`\ ).
 
 .. _l446f75626c65466c6f6174-7265636970:
 

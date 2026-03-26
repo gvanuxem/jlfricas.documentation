@@ -87,7 +87,7 @@ Entire Rings (non-commutative Integral Domains), i.e. a ring not necessarily com
    pair: EntireRing; associates?
 
 :spadfun:`associates?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``associates?(x, y)``\  tests whether \ ``x``\  and \ ``y``\  are associates, i.e. differ by a unit factor.
+  \ :code:`associates?(x, y)`\  tests whether \ :code:`x`\  and \ :code:`y`\  are associates, i.e. differ by a unit factor.
 
 .. _l456e7469726552696e67-6173736f636961746f72:
 
@@ -119,7 +119,7 @@ Entire Rings (non-commutative Integral Domains), i.e. a ring not necessarily com
    pair: EntireRing; exquo
 
 :spadfun:`exquo`\: (%, %) -> Union(%, failed) 
-  \ ``exquo(a, b)``\  either returns an element \ ``c``\  such that \ ``c*b=a``\  or "failed" if no such element can be found.
+  \ :code:`exquo(a, b)`\  either returns an element \ :code:`c`\  such that \ :code:`c*b=a`\  or "failed" if no such element can be found.
 
 .. _l456e7469726552696e67-6c61746578:
 
@@ -185,7 +185,7 @@ Entire Rings (non-commutative Integral Domains), i.e. a ring not necessarily com
    pair: EntireRing; unit?
 
 :spadfun:`unit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``unit?(x)``\  tests whether \ ``x``\  is a unit, i.e. is invertible.
+  \ :code:`unit?(x)`\  tests whether \ :code:`x`\  is a unit, i.e. is invertible.
 
 .. _l456e7469726552696e67-756e697443616e6f6e6963616c:
 
@@ -193,7 +193,7 @@ Entire Rings (non-commutative Integral Domains), i.e. a ring not necessarily com
    pair: EntireRing; unitCanonical
 
 :spadfun:`unitCanonical`\: % -> % 
-  \ ``unitCanonical(x)``\  returns \ ``unitNormal(x).canonical``\ .
+  \ :code:`unitCanonical(x)`\  returns \ :code:`unitNormal(x).canonical`\ .
 
 .. _l456e7469726552696e67-756e69744e6f726d616c:
 
@@ -201,7 +201,7 @@ Entire Rings (non-commutative Integral Domains), i.e. a ring not necessarily com
    pair: EntireRing; unitNormal
 
 :spadfun:`unitNormal`\: % -> Record(unit: %, canonical: %, associate: %) 
-  \ ``unitNormal(x)``\  tries to choose a canonical element from the associate class of \ ``x``\ . The attribute canonicalUnitNormal, if asserted, means that the "canonical" element is the same across all associates of \ ``x``\  if \ ``unitNormal(x) = [u, c, a]``\  then \ ``u*c = x``\ , \ ``a*u = 1``\ .
+  \ :code:`unitNormal(x)`\  tries to choose a canonical element from the associate class of \ :code:`x`\ . The attribute canonicalUnitNormal, if asserted, means that the "canonical" element is the same across all associates of \ :code:`x`\  if \ :code:`unitNormal(x) = [u, c, a]`\  then \ :code:`u*c = x`\ , \ :code:`a*u = 1`\ .
 
 .. _l456e7469726552696e67-7a65726f3f:
 

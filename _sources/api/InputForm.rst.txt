@@ -17,7 +17,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; 0
 
 :spadfun:`0`\: % 
-  \ ``0``\  returns the input form corresponding to 0.
+  \ :code:`0`\  returns the input form corresponding to 0.
 
 .. _l496e707574466f726d-31:
 
@@ -25,7 +25,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; 1
 
 :spadfun:`1`\: % 
-  \ ``1``\  returns the input form corresponding to 1.
+  \ :code:`1`\  returns the input form corresponding to 1.
 
 .. _l496e707574466f726d-23:
 
@@ -38,7 +38,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; *
 
 :spadfun:`\*`\: (%, %) -> % 
-  \ ``a * b``\  returns the input form corresponding to \ ``a * b``\ .
+  \ :code:`a * b`\  returns the input form corresponding to \ :code:`a * b`\ .
 
 .. _l496e707574466f726d-2b:
 
@@ -46,7 +46,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; +
 
 :spadfun:`+`\: (%, %) -> % 
-  \ ``a + b``\  returns the input form corresponding to \ ``a + b``\ .
+  \ :code:`a + b`\  returns the input form corresponding to \ :code:`a + b`\ .
 
 .. _l496e707574466f726d-2f:
 
@@ -54,7 +54,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; /
 
 :spadfun:`/`\: (%, %) -> % 
-  \ ``a / b``\  returns the input form corresponding to \ ``a / b``\ .
+  \ :code:`a / b`\  returns the input form corresponding to \ :code:`a / b`\ .
 
 .. _l496e707574466f726d-3d:
 
@@ -67,14 +67,14 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; ^
 
 :spadfun:`^`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``a ^ b``\  returns the input form corresponding to \ ``a ^ b``\ .
+  \ :code:`a ^ b`\  returns the input form corresponding to \ :code:`a ^ b`\ .
 
 
 .. index::
    pair: InputForm; ^
 
 :spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``a ^ b``\  returns the input form corresponding to \ ``a ^ b``\ .
+  \ :code:`a ^ b`\  returns the input form corresponding to \ :code:`a ^ b`\ .
 
 .. _l496e707574466f726d-7e3d:
 
@@ -92,7 +92,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; binary
 
 :spadfun:`binary`\: (%, \ :ref:`List <l4c697374>`\  %) -> % 
-  \ ``binary(op, [a1, ..., an])``\  returns the input form corresponding to \ ``a1 op a2 op ... op an``\ .
+  \ :code:`binary(op, [a1, ..., an])`\  returns the input form corresponding to \ :code:`a1 op a2 op ... op an`\ .
 
 .. _l496e707574466f726d-636172:
 
@@ -115,7 +115,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; compile
 
 :spadfun:`compile`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  %) -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``compile(f, [t1, ..., tn])``\  forces the interpreter to compile the function \ ``f``\  with signature \ ``(t1, ..., tn) -> ?``\ . returns the symbol \ ``f``\  if successful. Error: if \ ``f``\  was not defined beforehand in the interpreter, or if the \ ``ti``\ \ ``'s``\  are not valid types, or if the compiler fails.
+  \ :code:`compile(f, [t1, ..., tn])`\  forces the interpreter to compile the function \ :code:`f`\  with signature \ :code:`(t1, ..., tn) -> ?`\ . returns the symbol \ :code:`f`\  if successful. Error: if \ :code:`f`\  was not defined beforehand in the interpreter, or if the \ :code:`ti`\ \ :code:`'s`\  are not valid types, or if the compiler fails.
 
 .. _l496e707574466f726d-636f6e76657274:
 
@@ -143,7 +143,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; convert
 
 :spadfun:`convert`\: \ :ref:`SExpression <l5345787072657373696f6e>`\  -> % 
-  \ ``convert(s)``\  makes \ ``s``\  into an input form.
+  \ :code:`convert(s)`\  makes \ :code:`s`\  into an input form.
 
 
 \ :ref:`convert <l5345787072657373696f6e43617465676f7279-636f6e76657274>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
@@ -159,7 +159,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; declare
 
 :spadfun:`declare`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``declare(t)``\  returns a name \ ``f``\  such that \ ``f``\  has been declared to the interpreter to be of type \ ``t``\ , but has not been assigned a value yet. Note: \ ``t``\  should be created as \ ``devaluate(T)\$Lisp``\  where \ ``T``\  is the actual type of \ ``f``\  (this hack is required for the case where \ ``T``\  is a mapping type).
+  \ :code:`declare(t)`\  returns a name \ :code:`f`\  such that \ :code:`f`\  has been declared to the interpreter to be of type \ :code:`t`\ , but has not been assigned a value yet. Note: \ :code:`t`\  should be created as \ :code:`devaluate(T)\$Lisp`\  where \ :code:`T`\  is the actual type of \ :code:`f`\  (this hack is required for the case where \ :code:`T`\  is a mapping type).
 
 .. _l496e707574466f726d-6465737472756374:
 
@@ -186,7 +186,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; flatten
 
 :spadfun:`flatten`\: % -> % 
-  \ ``flatten(s)``\  returns an input form corresponding to \ ``s``\  with all the nested operations flattened to triples using new local variables. If \ ``s``\  is a piece of code, this speeds up the compilation tremendously later on.
+  \ :code:`flatten(s)`\  returns an input form corresponding to \ :code:`s`\  with all the nested operations flattened to triples using new local variables. If \ :code:`s`\  is a piece of code, this speeds up the compilation tremendously later on.
 
 .. _l496e707574466f726d-666c6f61743f:
 
@@ -204,7 +204,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; function
 
 :spadfun:`function`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``function(code, [x1, ..., xn], f)``\  returns the input form corresponding to \ ``f(x1, ..., xn) == code``\ .
+  \ :code:`function(code, [x1, ..., xn], f)`\  returns the input form corresponding to \ :code:`f(x1, ..., xn) == code`\ .
 
 .. _l496e707574466f726d-68617368:
 
@@ -232,7 +232,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; interpret
 
 :spadfun:`interpret`\: % -> \ :ref:`Any <l416e79>`\  
-  \ ``interpret(f)``\  passes \ ``f``\  to the interpreter.
+  \ :code:`interpret(f)`\  passes \ :code:`f`\  to the interpreter.
 
 .. _l496e707574466f726d-696e746572707265745f696e5f6e65775f656e76:
 
@@ -240,7 +240,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; interpret_in_new_env
 
 :spadfun:`interpret_in_new_env`\: % -> \ :ref:`Any <l416e79>`\  
-  \ ``interpret_in_new_env(f)``\  evaluates \ ``f``\  in the interpreter using fresh environment which is discarded after evaluation
+  \ :code:`interpret_in_new_env(f)`\  evaluates \ :code:`f`\  in the interpreter using fresh environment which is discarded after evaluation
 
 .. _l496e707574466f726d-6c616d626461:
 
@@ -248,7 +248,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; lambda
 
 :spadfun:`lambda`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``lambda(code, [x1, ..., xn])``\  returns the input form corresponding to \ ``(x1, ..., xn) +-> code``\  if \ ``n > 1``\ , or to \ ``x1 +-> code``\  if \ ``n = 1``\ .
+  \ :code:`lambda(code, [x1, ..., xn])`\  returns the input form corresponding to \ :code:`(x1, ..., xn) +-> code`\  if \ :code:`n > 1`\ , or to \ :code:`x1 +-> code`\  if \ :code:`n = 1`\ .
 
 .. _l496e707574466f726d-6c61746578:
 
@@ -276,7 +276,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; parse
 
 :spadfun:`parse`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``parse(s)``\  is the inverse of unparse. It parses a string to InputForm
+  \ :code:`parse(s)`\  is the inverse of unparse. It parses a string to InputForm
 
 .. _l496e707574466f726d-737472696e673f:
 
@@ -304,7 +304,7 @@ Domain of parsed forms which can be passed to the interpreter. This is also the 
    pair: InputForm; unparse
 
 :spadfun:`unparse`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``unparse(f)``\  returns a string \ ``s``\  such that the parser would transform \ ``s``\  to \ ``f``\ . Error: if \ ``f``\  is not the parsed form of a string.
+  \ :code:`unparse(f)`\  returns a string \ :code:`s`\  such that the parser would transform \ :code:`s`\  to \ :code:`f`\ . Error: if \ :code:`f`\  is not the parsed form of a string.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

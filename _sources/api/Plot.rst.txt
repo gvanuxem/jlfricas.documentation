@@ -17,7 +17,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; adaptive?
 
 :spadfun:`adaptive?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``adaptive?()``\  determines whether plotting is done adaptively
+  \ :code:`adaptive?()`\  determines whether plotting is done adaptively
 
 .. _l506c6f74-636f65726365:
 
@@ -30,7 +30,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; debug
 
 :spadfun:`debug`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``debug(true)``\  turns debug mode on \ ``debug(false)``\  turns debug mode off
+  \ :code:`debug(true)`\  turns debug mode on \ :code:`debug(false)`\  turns debug mode off
 
 .. _l506c6f74-6c6973744272616e63686573:
 
@@ -43,7 +43,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; maxPoints
 
 :spadfun:`maxPoints`\: () -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``maxPoints()``\  returns the maximum number of points in a plot
+  \ :code:`maxPoints()`\  returns the maximum number of points in a plot
 
 .. _l506c6f74-6d696e506f696e7473:
 
@@ -51,7 +51,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; minPoints
 
 :spadfun:`minPoints`\: () -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``minPoints()``\  returns the minimum number of points in a plot
+  \ :code:`minPoints()`\  returns the minimum number of points in a plot
 
 .. _l506c6f74-6e756d46756e4576616c73:
 
@@ -59,7 +59,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; numFunEvals
 
 :spadfun:`numFunEvals`\: () -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``numFunEvals()``\  returns the number of points computed
+  \ :code:`numFunEvals()`\  returns the number of points computed
 
 .. _l506c6f74-706172616d65747269633f:
 
@@ -67,7 +67,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; parametric?
 
 :spadfun:`parametric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``parametric? determines``\  whether it is a parametric plot?
+  \ :code:`parametric? determines`\  whether it is a parametric plot?
 
 .. _l506c6f74-706c6f74:
 
@@ -75,49 +75,49 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; plot
 
 :spadfun:`plot`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot(x, r)``\  \undocumented
+  \ :code:`plot(x, r)`\  \undocumented
 
 
 .. index::
    pair: Plot; plot
 
 :spadfun:`plot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot(f, g, a..b)``\  plots the parametric curve \ ``x = f(t)``\ , \ ``y = g(t)``\  as \ ``t``\  ranges over the interval \ ``[a, b]``\ .
+  \ :code:`plot(f, g, a..b)`\  plots the parametric curve \ :code:`x = f(t)`\ , \ :code:`y = g(t)`\  as \ :code:`t`\  ranges over the interval \ :code:`[a, b]`\ .
 
 
 .. index::
    pair: Plot; plot
 
 :spadfun:`plot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot(f, g, a..b, c..d, e..f)``\  plots the parametric curve \ ``x = f(t)``\ , \ ``y = g(t)``\  as \ ``t``\  ranges over the interval \ ``[a, b]``\ ; \ ``x``\ -range of \ ``[c, d]``\  and \ ``y``\ -range of \ ``[e, f]``\  are noted in Plot object.
+  \ :code:`plot(f, g, a..b, c..d, e..f)`\  plots the parametric curve \ :code:`x = f(t)`\ , \ :code:`y = g(t)`\  as \ :code:`t`\  ranges over the interval \ :code:`[a, b]`\ ; \ :code:`x`\ -range of \ :code:`[c, d]`\  and \ :code:`y`\ -range of \ :code:`[e, f]`\  are noted in Plot object.
 
 
 .. index::
    pair: Plot; plot
 
 :spadfun:`plot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot(f, a..b)``\  plots the function \ ``f(x)``\  on the interval \ ``[a, b]``\ .
+  \ :code:`plot(f, a..b)`\  plots the function \ :code:`f(x)`\  on the interval \ :code:`[a, b]`\ .
 
 
 .. index::
    pair: Plot; plot
 
 :spadfun:`plot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot(f, a..b, c..d)``\  plots the function \ ``f(x)``\  on the interval \ ``[a, b]``\ ; \ ``y``\ -range of \ ``[c, d]``\  is noted in Plot object.
+  \ :code:`plot(f, a..b, c..d)`\  plots the function \ :code:`f(x)`\  on the interval \ :code:`[a, b]`\ ; \ :code:`y`\ -range of \ :code:`[c, d]`\  is noted in Plot object.
 
 
 .. index::
    pair: Plot; plot
 
 :spadfun:`plot`\: (\ :ref:`List <l4c697374>`\ (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ), \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot([f1, ..., fm], a..b)``\  plots the functions \ ``y = f1(x)``\ , ..., \ ``y = fm(x)``\  on the interval \ ``a..b``\ .
+  \ :code:`plot([f1, ..., fm], a..b)`\  plots the functions \ :code:`y = f1(x)`\ , ..., \ :code:`y = fm(x)`\  on the interval \ :code:`a..b`\ .
 
 
 .. index::
    pair: Plot; plot
 
 :spadfun:`plot`\: (\ :ref:`List <l4c697374>`\ (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ), \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plot([f1, ..., fm], a..b, c..d)``\  plots the functions \ ``y = f1(x)``\ , ..., \ ``y = fm(x)``\  on the interval \ ``a..b``\ ; \ ``y``\ -range of \ ``[c, d]``\  is noted in Plot object.
+  \ :code:`plot([f1, ..., fm], a..b, c..d)`\  plots the functions \ :code:`y = f1(x)`\ , ..., \ :code:`y = fm(x)`\  on the interval \ :code:`a..b`\ ; \ :code:`y`\ -range of \ :code:`[c, d]`\  is noted in Plot object.
 
 .. _l506c6f74-706c6f74506f6c6172:
 
@@ -125,14 +125,14 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; plotPolar
 
 :spadfun:`plotPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plotPolar(f)``\  plots the polar curve \ ``r = f(theta)``\  as theta ranges over the interval \ ``[0, 2*\%pi]``\ ; this is the same as the parametric curve \ ``x = f(t) * cos(t)``\ , \ ``y = f(t) * sin(t)``\ .
+  \ :code:`plotPolar(f)`\  plots the polar curve \ :code:`r = f(theta)`\  as theta ranges over the interval \ :code:`[0, 2*\%pi]`\ ; this is the same as the parametric curve \ :code:`x = f(t) * cos(t)`\ , \ :code:`y = f(t) * sin(t)`\ .
 
 
 .. index::
    pair: Plot; plotPolar
 
 :spadfun:`plotPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``plotPolar(f, a..b)``\  plots the polar curve \ ``r = f(theta)``\  as theta ranges over the interval \ ``[a, b]``\ ; this is the same as the parametric curve \ ``x = f(t) * cos(t)``\ , \ ``y = f(t) * sin(t)``\ .
+  \ :code:`plotPolar(f, a..b)`\  plots the polar curve \ :code:`r = f(theta)`\  as theta ranges over the interval \ :code:`[a, b]`\ ; this is the same as the parametric curve \ :code:`x = f(t) * cos(t)`\ , \ :code:`y = f(t) * sin(t)`\ .
 
 .. _l506c6f74-706f696e74506c6f74:
 
@@ -140,14 +140,14 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; pointPlot
 
 :spadfun:`pointPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``pointPlot(t +-> (f(t), g(t)), a..b)``\  plots the parametric curve \ ``x = f(t)``\ , \ ``y = g(t)``\  as \ ``t``\  ranges over the interval \ ``[a, b]``\ .
+  \ :code:`pointPlot(t +-> (f(t), g(t)), a..b)`\  plots the parametric curve \ :code:`x = f(t)`\ , \ :code:`y = g(t)`\  as \ :code:`t`\  ranges over the interval \ :code:`[a, b]`\ .
 
 
 .. index::
    pair: Plot; pointPlot
 
 :spadfun:`pointPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`Point <l506f696e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``pointPlot(t +-> (f(t), g(t)), a..b, c..d, e..f)``\  plots the parametric curve \ ``x = f(t)``\ , \ ``y = g(t)``\  as \ ``t``\  ranges over the interval \ ``[a, b]``\ ; \ ``x``\ -range of \ ``[c, d]``\  and \ ``y``\ -range of \ ``[e, f]``\  are noted in Plot object.
+  \ :code:`pointPlot(t +-> (f(t), g(t)), a..b, c..d, e..f)`\  plots the parametric curve \ :code:`x = f(t)`\ , \ :code:`y = g(t)`\  as \ :code:`t`\  ranges over the interval \ :code:`[a, b]`\ ; \ :code:`x`\ -range of \ :code:`[c, d]`\  and \ :code:`y`\ -range of \ :code:`[e, f]`\  are noted in Plot object.
 
 .. _l506c6f74-726566696e65:
 
@@ -155,14 +155,14 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; refine
 
 :spadfun:`refine`\: % -> % 
-  \ ``refine(p)``\  performs a refinement on the plot \ ``p``\ 
+  \ :code:`refine(p)`\  performs a refinement on the plot \ :code:`p`\ 
 
 
 .. index::
    pair: Plot; refine
 
 :spadfun:`refine`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``refine(x, r)``\  \undocumented
+  \ :code:`refine(x, r)`\  \undocumented
 
 .. _l506c6f74-73637265656e5265736f6c7574696f6e:
 
@@ -170,7 +170,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; screenResolution
 
 :spadfun:`screenResolution`\: () -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``screenResolution()``\  returns the screen resolution
+  \ :code:`screenResolution()`\  returns the screen resolution
 
 .. _l506c6f74-7365744164617074697665:
 
@@ -178,7 +178,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; setAdaptive
 
 :spadfun:`setAdaptive`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``setAdaptive(true)``\  turns adaptive plotting on \ ``setAdaptive(false)``\  turns adaptive plotting off
+  \ :code:`setAdaptive(true)`\  turns adaptive plotting on \ :code:`setAdaptive(false)`\  turns adaptive plotting off
 
 .. _l506c6f74-7365744d6178506f696e7473:
 
@@ -186,7 +186,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; setMaxPoints
 
 :spadfun:`setMaxPoints`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``setMaxPoints(i)``\  sets the maximum number of points in a plot to \ ``i``\ 
+  \ :code:`setMaxPoints(i)`\  sets the maximum number of points in a plot to \ :code:`i`\ 
 
 .. _l506c6f74-7365744d696e506f696e7473:
 
@@ -194,7 +194,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; setMinPoints
 
 :spadfun:`setMinPoints`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``setMinPoints(i)``\  sets the minimum number of points in a plot to \ ``i``\ 
+  \ :code:`setMinPoints(i)`\  sets the minimum number of points in a plot to \ :code:`i`\ 
 
 .. _l506c6f74-73657453637265656e5265736f6c7574696f6e:
 
@@ -202,7 +202,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; setScreenResolution
 
 :spadfun:`setScreenResolution`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``setScreenResolution(i)``\  sets the screen resolution to \ ``i``\ 
+  \ :code:`setScreenResolution(i)`\  sets the screen resolution to \ :code:`i`\ 
 
 .. _l506c6f74-7452616e6765:
 
@@ -210,7 +210,7 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; tRange
 
 :spadfun:`tRange`\: % -> \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  
-  \ ``tRange(p)``\  returns the range of the parameter in a parametric plot \ ``p``\ 
+  \ :code:`tRange(p)`\  returns the range of the parameter in a parametric plot \ :code:`p`\ 
 
 .. _l506c6f74-7852616e6765:
 
@@ -228,14 +228,14 @@ The Plot domain supports plotting of functions defined over a real number system
    pair: Plot; zoom
 
 :spadfun:`zoom`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``zoom(x, r)``\  \undocumented
+  \ :code:`zoom(x, r)`\  \undocumented
 
 
 .. index::
    pair: Plot; zoom
 
 :spadfun:`zoom`\: (%, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> % 
-  \ ``zoom(x, r, s)``\  \undocumented
+  \ :code:`zoom(x, r, s)`\  \undocumented
 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

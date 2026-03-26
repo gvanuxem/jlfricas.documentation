@@ -27,13 +27,13 @@ Elimination of an algebraic from the coefficients of a linear ordinary different
    pair: ReduceLODE; reduceLODE
 
 :spadfun:`reduceLODE`\: (LO, A) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  L, vec: \ :ref:`Vector <l566563746f72>`\  F) 
-  \ ``reduceLODE(op, g)``\  returns \ ``[m, v]``\  such that any solution in \ ``A``\  of \ ``op z = g``\  is of the form \ ``z = (z_1, ..., z_m) . (b_1, ..., b_m)``\  where the \ ``b_i's``\  are the basis of \ ``A``\  over \ ``F``\  returned by \ :spadfun:`basis`\ () from \ ``A``\ , and the \ ``z_i's``\  satisfy the differential system \ ``M.z = v``\ .
+  \ :code:`reduceLODE(op, g)`\  returns \ :code:`[m, v]`\  such that any solution in \ :code:`A`\  of \ :code:`op z = g`\  is of the form \ :code:`z = (z_1, ..., z_m) . (b_1, ..., b_m)`\  where the \ :code:`b_i's`\  are the basis of \ :code:`A`\  over \ :code:`F`\  returned by \ :spadfun:`basis`\ () from \ :code:`A`\ , and the \ :code:`z_i's`\  satisfy the differential system \ :code:`M.z = v`\ .
 
 
 .. index::
    pair: ReduceLODE; reduceLODE
 
 :spadfun:`reduceLODE`\: (LO, \ :ref:`List <l4c697374>`\  A) -> Record(mat: \ :ref:`Matrix <l4d6174726978>`\  L, vecs: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  F) 
-  \ ``reduceLODE(op, [g1, ..., gn])``\  returns \ ``[m, [v1, ..., vn]]``\  such that any solution in \ ``A``\  of \ ``op z = c1*g1 + ... + cn*gn``\  where \ ``ci``\  are constants satisfy the differential system \ ``M.z = c1*v1 + ... + cn*vn``\ 
+  \ :code:`reduceLODE(op, [g1, ..., gn])`\  returns \ :code:`[m, [v1, ..., vn]]`\  such that any solution in \ :code:`A`\  of \ :code:`op z = c1*g1 + ... + cn*gn`\  where \ :code:`ci`\  are constants satisfy the differential system \ :code:`M.z = c1*v1 + ... + cn*vn`\ 
 
 

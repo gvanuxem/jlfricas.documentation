@@ -64,14 +64,14 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; concat!
 
 :spadfun:`concat!`\: (%, %) -> % 
-  \ ``concat!(u, v)``\  destructively appends \ ``v``\  to the end of \ ``u``\ . \ ``v``\  is unchanged
+  \ :code:`concat!(u, v)`\  destructively appends \ :code:`v`\  to the end of \ :code:`u`\ . \ :code:`v`\  is unchanged
 
 
 .. index::
    pair: ExtensibleLinearAggregate; concat!
 
 :spadfun:`concat!`\: (%, S) -> % 
-  \ ``concat!(u, x)``\  destructively adds element \ ``x``\  to the end of \ ``u``\ .
+  \ :code:`concat!(u, x)`\  destructively adds element \ :code:`x`\  to the end of \ :code:`u`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-636f6e636174:
 
@@ -125,14 +125,14 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``delete!(u, i)``\  destructively deletes the \ ``i``\ th element of \ ``u``\ .
+  \ :code:`delete!(u, i)`\  destructively deletes the \ :code:`i`\ th element of \ :code:`u`\ .
 
 
 .. index::
    pair: ExtensibleLinearAggregate; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``delete!(u, i..j)``\  destructively deletes elements \ ``u``\ .\ ``i``\  through \ ``u``\ .\ ``j``\ .
+  \ :code:`delete!(u, i..j)`\  destructively deletes elements \ :code:`u`\ .\ :code:`i`\  through \ :code:`u`\ .\ :code:`j`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-64656c657465:
 
@@ -248,14 +248,14 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; insert!
 
 :spadfun:`insert!`\: (%, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``insert!(v, u, i)``\  destructively inserts aggregate \ ``v``\  into \ ``u``\  at position \ ``i``\ .
+  \ :code:`insert!(v, u, i)`\  destructively inserts aggregate \ :code:`v`\  into \ :code:`u`\  at position \ :code:`i`\ .
 
 
 .. index::
    pair: ExtensibleLinearAggregate; insert!
 
 :spadfun:`insert!`\: (S, %, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``insert!(x, u, i)``\  destructively inserts \ ``x``\  into \ ``u``\  at position \ ``i``\ .
+  \ :code:`insert!(x, u, i)`\  destructively inserts \ :code:`x`\  into \ :code:`u`\  at position \ :code:`i`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-696e73657274:
 
@@ -329,14 +329,14 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; merge!
 
 :spadfun:`merge!`\: (%, %) -> % if S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
-  \ ``merge!(u, v)``\  destructively merges \ ``u``\  and \ ``v``\  in ascending order.
+  \ :code:`merge!(u, v)`\  destructively merges \ :code:`u`\  and \ :code:`v`\  in ascending order.
 
 
 .. index::
    pair: ExtensibleLinearAggregate; merge!
 
 :spadfun:`merge!`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % 
-  \ ``merge!(p, u, v)``\  destructively merges \ ``u``\  and \ ``v``\  using predicate \ ``p``\ .
+  \ :code:`merge!(p, u, v)`\  destructively merges \ :code:`u`\  and \ :code:`v`\  using predicate \ :code:`p`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-6d65726765:
 
@@ -418,14 +418,14 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; remove!
 
 :spadfun:`remove!`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``remove!(p, u)``\  destructively removes all elements \ ``x``\  of \ ``u``\  such that \ ``p(x)``\  is \ ``true``\ .
+  \ :code:`remove!(p, u)`\  destructively removes all elements \ :code:`x`\  of \ :code:`u`\  such that \ :code:`p(x)`\  is \ :code:`true`\ .
 
 
 .. index::
    pair: ExtensibleLinearAggregate; remove!
 
 :spadfun:`remove!`\: (S, %) -> % if S has \ :ref:`BasicType <l426173696354797065>`\ 
-  \ ``remove!(x, u)``\  destructively removes all values \ ``x``\  from \ ``u``\ .
+  \ :code:`remove!(x, u)`\  destructively removes all values \ :code:`x`\  from \ :code:`u`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-72656d6f7665:
 
@@ -442,7 +442,7 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; removeDuplicates!
 
 :spadfun:`removeDuplicates!`\: % -> % if S has \ :ref:`BasicType <l426173696354797065>`\ 
-  \ ``removeDuplicates!(u)``\  destructively removes duplicates from \ ``u``\ .
+  \ :code:`removeDuplicates!(u)`\  destructively removes duplicates from \ :code:`u`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-72656d6f76654475706c696361746573:
 
@@ -475,7 +475,7 @@ An extensible aggregate is one which allows insertion and deletion of entries. T
    pair: ExtensibleLinearAggregate; select!
 
 :spadfun:`select!`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``select!(p, u)``\  destructively changes \ ``u``\  by keeping only values \ ``x``\  such that \ ``p(x)``\ .
+  \ :code:`select!(p, u)`\  destructively changes \ :code:`u`\  by keeping only values \ :code:`x`\  such that \ :code:`p(x)`\ .
 
 .. _l457874656e7369626c654c696e656172416767726567617465-73656c656374:
 

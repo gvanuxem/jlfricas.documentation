@@ -32,7 +32,7 @@ Group represented by its generators and relations. Here we use it to hold homoto
    pair: GroupPresentation; cyclicGroup
 
 :spadfun:`cyclicGroup`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``cyclicGroup(n)``\  constructs the cyclic group of order \ ``n``\  acting on the integers 1, ..., \ ``n``\ .
+  \ :code:`cyclicGroup(n)`\  constructs the cyclic group of order \ :code:`n`\  acting on the integers 1, ..., \ :code:`n`\ .
 
 .. _l47726f757050726573656e746174696f6e-646968656472616c47726f7570:
 
@@ -40,7 +40,7 @@ Group represented by its generators and relations. Here we use it to hold homoto
    pair: GroupPresentation; dihedralGroup
 
 :spadfun:`dihedralGroup`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``dihedralGroup(n)``\  constructs the dihedral group of order 2n acting on integers 1, ..., \ ``N``\ .
+  \ :code:`dihedralGroup(n)`\  constructs the dihedral group of order 2n acting on integers 1, ..., \ :code:`N`\ .
 
 .. _l47726f757050726573656e746174696f6e-64697265637450726f64756374:
 
@@ -48,7 +48,7 @@ Group represented by its generators and relations. Here we use it to hold homoto
    pair: GroupPresentation; directProduct
 
 :spadfun:`directProduct`\: (%, %) -> % 
-  \ ``directProduct of``\  two groups
+  \ :code:`directProduct of`\  two groups
 
 .. _l47726f757050726573656e746174696f6e-67726f757050726573656e746174696f6e:
 
@@ -106,7 +106,7 @@ Group represented by its generators and relations. Here we use it to hold homoto
    pair: GroupPresentation; simplify
 
 :spadfun:`simplify`\: % -> % 
-  \ ``simplify(s)``\  tries to simplify \ ``s``\ . There may not be a simplest form but it is possible to do some simplifications as follows: 1. Remove all zero terms in relations. 2. If a relation consists of a single generator then remove that generator. 3. If a relation consists of a pair of generators then make the second generator the inverse of the first. 4. If a generator is adjacent to its inverse then cancel them out. 5. Remove duplicate relations. 6. Substitute one relation in another.
+  \ :code:`simplify(s)`\  tries to simplify \ :code:`s`\ . There may not be a simplest form but it is possible to do some simplifications as follows: 1. Remove all zero terms in relations. 2. If a relation consists of a single generator then remove that generator. 3. If a relation consists of a pair of generators then make the second generator the inverse of the first. 4. If a generator is adjacent to its inverse then cancel them out. 5. Remove duplicate relations. 6. Substitute one relation in another.
 
 
 .. index::
@@ -121,7 +121,7 @@ Group represented by its generators and relations. Here we use it to hold homoto
    pair: GroupPresentation; symmetricGroup
 
 :spadfun:`symmetricGroup`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``symmetricGroup(n)``\  constructs the symmetric group of order \ ``n``\ -1. Note: generates all possible relations may not be minimal.
+  \ :code:`symmetricGroup(n)`\  constructs the symmetric group of order \ :code:`n`\ -1. Note: generates all possible relations may not be minimal.
 
 .. _l47726f757050726573656e746174696f6e-746f5065726d75746174696f6e496643616e:
 
@@ -143,7 +143,7 @@ Group represented by its generators and relations. Here we use it to hold homoto
    pair: GroupPresentation; toPermutationIfCan
 
 :spadfun:`toPermutationIfCan`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> Union(\ :ref:`PermutationGroup <l5065726d75746174696f6e47726f7570>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) 
-  \ ``toPermutationIfCan(a, sg, trace)``\  returns permutation representation of a on cosets of subgroup generate by \ ``sg``\  or "failed" if computation exceed resource limit. trace activates debugging printouts.
+  \ :code:`toPermutationIfCan(a, sg, trace)`\  returns permutation representation of a on cosets of subgroup generate by \ :code:`sg`\  or "failed" if computation exceed resource limit. trace activates debugging printouts.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

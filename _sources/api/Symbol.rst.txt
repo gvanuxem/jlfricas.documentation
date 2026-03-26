@@ -47,7 +47,7 @@ Basic and scripted symbols.
    pair: Symbol; argscript
 
 :spadfun:`argscript`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> % 
-  \ ``argscript(s, [a1, ..., an])``\  returns \ ``s``\  arg-scripted by \ ``[a1, ..., an]``\ .
+  \ :code:`argscript(s, [a1, ..., an])`\  returns \ :code:`s`\  arg-scripted by \ :code:`[a1, ..., an]`\ .
 
 .. _l53796d626f6c-636f65726365:
 
@@ -59,7 +59,7 @@ Basic and scripted symbols.
    pair: Symbol; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce(s)``\  converts the string \ ``s``\  to a symbol.
+  \ :code:`coerce(s)`\  converts the string \ :code:`s`\  to a symbol.
 
 .. _l53796d626f6c-636f6e76657274:
 
@@ -84,7 +84,7 @@ Basic and scripted symbols.
    pair: Symbol; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> % 
-  \ ``elt(s, [a1, ..., an])``\  or \ ``s``\ ([\ ``a1``\ , ..., an]) returns \ ``s``\  subscripted by \ ``[a1, ..., an]``\ .
+  \ :code:`elt(s, [a1, ..., an])`\  or \ :code:`s`\ ([\ :code:`a1`\ , ..., an]) returns \ :code:`s`\  subscripted by \ :code:`[a1, ..., an]`\ .
 
 .. _l53796d626f6c-68617368:
 
@@ -117,7 +117,7 @@ Basic and scripted symbols.
    pair: Symbol; name
 
 :spadfun:`name`\: % -> % 
-  \ ``name(s)``\  returns \ ``s``\  without its scripts.
+  \ :code:`name(s)`\  returns \ :code:`s`\  without its scripts.
 
 .. _l53796d626f6c-6e6577:
 
@@ -125,14 +125,14 @@ Basic and scripted symbols.
    pair: Symbol; new
 
 :spadfun:`new`\: % -> % 
-  \ ``new(s)``\  returns a new symbol whose name starts with \%\ ``s``\ .
+  \ :code:`new(s)`\  returns a new symbol whose name starts with \%\ :code:`s`\ .
 
 
 .. index::
    pair: Symbol; new
 
 :spadfun:`new`\: () -> % 
-  \ ``new()``\  returns a new symbol whose name starts with \%.
+  \ :code:`new()`\  returns a new symbol whose name starts with \%.
 
 .. _l53796d626f6c-4f4d7772697465:
 
@@ -166,7 +166,7 @@ Basic and scripted symbols.
    pair: Symbol; resetNew
 
 :spadfun:`resetNew`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``resetNew()``\  resets the internals counters that new() and new(\ ``s``\ ) use to return distinct symbols every time.
+  \ :code:`resetNew()`\  resets the internals counters that new() and new(\ :code:`s`\ ) use to return distinct symbols every time.
 
 .. _l53796d626f6c-73616d706c65:
 
@@ -174,7 +174,7 @@ Basic and scripted symbols.
    pair: Symbol; sample
 
 :spadfun:`sample`\: % 
-  \ ``sample()``\  returns a sample of \%
+  \ :code:`sample()`\  returns a sample of \%
 
 .. _l53796d626f6c-736372697074:
 
@@ -182,14 +182,14 @@ Basic and scripted symbols.
    pair: Symbol; script
 
 :spadfun:`script`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> % 
-  \ ``script(s, [a, b, c, d, e])``\  returns \ ``s``\  with subscripts a, superscripts \ ``b``\ , pre-superscripts \ ``c``\ , pre-subscripts \ ``d``\ , and argument-scripts \ ``e``\ . Omitted components are taken to be empty. For example, \ ``script(s, [a, b, c])``\  is equivalent to \ ``script(s, [a, b, c, [], []])``\ .
+  \ :code:`script(s, [a, b, c, d, e])`\  returns \ :code:`s`\  with subscripts a, superscripts \ :code:`b`\ , pre-superscripts \ :code:`c`\ , pre-subscripts \ :code:`d`\ , and argument-scripts \ :code:`e`\ . Omitted components are taken to be empty. For example, \ :code:`script(s, [a, b, c])`\  is equivalent to \ :code:`script(s, [a, b, c, [], []])`\ .
 
 
 .. index::
    pair: Symbol; script
 
 :spadfun:`script`\: (%, Record(sub: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , sup: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , presup: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , presub: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , args: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ )) -> % 
-  \ ``script(s, [a, b, c, d, e])``\  returns \ ``s``\  with subscripts a, superscripts \ ``b``\ , pre-superscripts \ ``c``\ , pre-subscripts \ ``d``\ , and argument-scripts \ ``e``\ .
+  \ :code:`script(s, [a, b, c, d, e])`\  returns \ :code:`s`\  with subscripts a, superscripts \ :code:`b`\ , pre-superscripts \ :code:`c`\ , pre-subscripts \ :code:`d`\ , and argument-scripts \ :code:`e`\ .
 
 .. _l53796d626f6c-73637269707465643f:
 
@@ -197,7 +197,7 @@ Basic and scripted symbols.
    pair: Symbol; scripted?
 
 :spadfun:`scripted?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``scripted?(s)``\  is \ ``true``\  if \ ``s``\  has been given any scripts.
+  \ :code:`scripted?(s)`\  is \ :code:`true`\  if \ :code:`s`\  has been given any scripts.
 
 .. _l53796d626f6c-73637269707473:
 
@@ -205,7 +205,7 @@ Basic and scripted symbols.
    pair: Symbol; scripts
 
 :spadfun:`scripts`\: % -> Record(sub: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , sup: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , presup: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , presub: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ , args: \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) 
-  \ ``scripts(s)``\  returns all the scripts of \ ``s``\ .
+  \ :code:`scripts(s)`\  returns all the scripts of \ :code:`s`\ .
 
 .. _l53796d626f6c-736d616c6c65723f:
 
@@ -218,7 +218,7 @@ Basic and scripted symbols.
    pair: Symbol; string
 
 :spadfun:`string`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``string(s)``\  converts the symbol \ ``s``\  to a string. Error: if the symbol is subscripted.
+  \ :code:`string(s)`\  converts the symbol \ :code:`s`\  to a string. Error: if the symbol is subscripted.
 
 .. _l53796d626f6c-737562736372697074:
 
@@ -226,7 +226,7 @@ Basic and scripted symbols.
    pair: Symbol; subscript
 
 :spadfun:`subscript`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> % 
-  \ ``subscript(s, [a1, ..., an])``\  returns \ ``s``\  subscripted by \ ``[a1, ..., an]``\ .
+  \ :code:`subscript(s, [a1, ..., an])`\  returns \ :code:`s`\  subscripted by \ :code:`[a1, ..., an]`\ .
 
 .. _l53796d626f6c-7375706572736372697074:
 
@@ -234,7 +234,7 @@ Basic and scripted symbols.
    pair: Symbol; superscript
 
 :spadfun:`superscript`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> % 
-  \ ``superscript(s, [a1, ..., an])``\  returns \ ``s``\  superscripted by \ ``[a1, ..., an]``\ .
+  \ :code:`superscript(s, [a1, ..., an])`\  returns \ :code:`s`\  superscripted by \ :code:`[a1, ..., an]`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

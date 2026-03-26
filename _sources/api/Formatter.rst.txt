@@ -38,7 +38,7 @@ undocumented
    pair: Formatter; epilogue
 
 :spadfun:`epilogue`\: % -> \ :ref:`OutputBox <l4f7574707574426f78>`\  
-  \ ``epilogue(t)``\  extracts the epilogue section of the form \ ``t``\ . This is a function \ ``f``\  such that \ ``f``\ (\ ``l``\ ) returns a box with label \ ``l``\ .
+  \ :code:`epilogue(t)`\  extracts the epilogue section of the form \ :code:`t`\ . This is a function \ :code:`f`\  such that \ :code:`f`\ (\ :code:`l`\ ) returns a box with label \ :code:`l`\ .
 
 .. _l466f726d6174746572-666f726d6174:
 
@@ -46,14 +46,14 @@ undocumented
    pair: Formatter; format
 
 :spadfun:`format`\: % -> \ :ref:`OutputBox <l4f7574707574426f78>`\  
-  \ ``format(t)``\  extracts the \ ``fmt``\  section of a 2D-form \ ``t``\ .
+  \ :code:`format(t)`\  extracts the \ :code:`fmt`\  section of a 2D-form \ :code:`t`\ .
 
 
 .. index::
    pair: Formatter; format
 
 :spadfun:`format`\: \ :ref:`OutputForm <l4f7574707574466f726d>`\  -> % 
-  \ ``format(o)``\  creates a formatted form of the \ ``OutputForm``\  \ ``o``\ .
+  \ :code:`format(o)`\  creates a formatted form of the \ :code:`OutputForm`\  \ :code:`o`\ .
 
 .. _l466f726d6174746572-666f726d617453746570:
 
@@ -61,7 +61,7 @@ undocumented
    pair: Formatter; formatStep
 
 :spadfun:`formatStep`\: (\ :ref:`OutputForm <l4f7574707574466f726d>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``format(o, n)``\  creates a formatted form of the \ ``OutputForm``\  \ ``o``\  with step number \ ``n``\ .
+  \ :code:`format(o, n)`\  creates a formatted form of the \ :code:`OutputForm`\  \ :code:`o`\  with step number \ :code:`n`\ .
 
 .. _l466f726d6174746572-6e6577:
 
@@ -69,7 +69,7 @@ undocumented
    pair: Formatter; new
 
 :spadfun:`new`\: () -> % 
-  \ ``new()``\  create a new, empty object with defaultPrologue(\ ``""``\ ) and defaultEpilogue(\ ``""``\ ). Use \ :spadfun:`setPrologue!`\ , \ :spadfun:`setFormat!`\  and \ :spadfun:`setEpilogue!`\  to set the various components of this object.
+  \ :code:`new()`\  create a new, empty object with defaultPrologue(\ :code:`""`\ ) and defaultEpilogue(\ :code:`""`\ ). Use \ :spadfun:`setPrologue!`\ , \ :spadfun:`setFormat!`\  and \ :spadfun:`setEpilogue!`\  to set the various components of this object.
 
 .. _l466f726d6174746572-6f70657261746f7248616e646c657273:
 
@@ -77,7 +77,7 @@ undocumented
    pair: Formatter; operatorHandlers
 
 :spadfun:`operatorHandlers`\: () -> \ :ref:`OperatorHandlers <l4f70657261746f7248616e646c657273>`\ ((\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> \ :ref:`OutputBox <l4f7574707574426f78>`\ ) 
-  \ ``operatorHandlers()``\  returns an internal data structure that is used for the selection of respective handlers.
+  \ :code:`operatorHandlers()`\  returns an internal data structure that is used for the selection of respective handlers.
 
 .. _l466f726d6174746572-70726f6c6f677565:
 
@@ -85,7 +85,7 @@ undocumented
    pair: Formatter; prologue
 
 :spadfun:`prologue`\: % -> \ :ref:`OutputBox <l4f7574707574426f78>`\  
-  \ ``prologue(t)``\  extracts the prologue section of the form \ ``t``\ .
+  \ :code:`prologue(t)`\  extracts the prologue section of the form \ :code:`t`\ .
 
 .. _l466f726d6174746572-73657444656661756c7421:
 
@@ -101,7 +101,7 @@ undocumented
    pair: Formatter; setEpilogue!
 
 :spadfun:`setEpilogue!`\: (%, \ :ref:`OutputBox <l4f7574707574426f78>`\ ) -> \ :ref:`OutputBox <l4f7574707574426f78>`\  
-  \ ``setEpilogue!(t, epi)``\  sets the epilogue section of the form \ ``t``\  to epi and returns the previous epilogue.
+  \ :code:`setEpilogue!(t, epi)`\  sets the epilogue section of the form \ :code:`t`\  to epi and returns the previous epilogue.
 
 .. _l466f726d6174746572-736574466f726d617421:
 
@@ -109,7 +109,7 @@ undocumented
    pair: Formatter; setFormat!
 
 :spadfun:`setFormat!`\: (%, \ :ref:`OutputBox <l4f7574707574426f78>`\ ) -> \ :ref:`OutputBox <l4f7574707574426f78>`\  
-  \ ``setFormat!(t, box)``\  sets the \ ``fmt``\  section of a form \ ``t``\  and returns the previous box.
+  \ :code:`setFormat!(t, box)`\  sets the \ :code:`fmt`\  section of a form \ :code:`t`\  and returns the previous box.
 
 .. _l466f726d6174746572-73657450726f6c6f67756521:
 
@@ -117,7 +117,7 @@ undocumented
    pair: Formatter; setPrologue!
 
 :spadfun:`setPrologue!`\: (%, \ :ref:`OutputBox <l4f7574707574426f78>`\ ) -> \ :ref:`OutputBox <l4f7574707574426f78>`\  
-  \ ``setPrologue!(t, pro)``\  sets the prologue section of the form \ ``t``\  to pro and returns the previous prologue.
+  \ :code:`setPrologue!(t, pro)`\  sets the prologue section of the form \ :code:`t`\  to pro and returns the previous prologue.
 
 
 \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

@@ -8,7 +8,7 @@ Any
 :viewcode:`any.spad line 40 <any.spad#L40>` :editcode:`[edit on github] <any.spad#L40>`
 
 
-\ :ref:`Any <l416e79>`\  implements a type that packages up objects and their types in objects of \ :ref:`Any <l416e79>`\ . Roughly speaking that means that if \ ``s : S``\  then when converted to \ :ref:`Any <l416e79>`\ , the new object will include both the original object and its type. This is a way of converting arbitrary objects into a single type without losing any of the original information. Any object can be converted to one of \ :ref:`Any <l416e79>`\ .
+\ :ref:`Any <l416e79>`\  implements a type that packages up objects and their types in objects of \ :ref:`Any <l416e79>`\ . Roughly speaking that means that if \ :code:`s : S`\  then when converted to \ :ref:`Any <l416e79>`\ , the new object will include both the original object and its type. This is a way of converting arbitrary objects into a single type without losing any of the original information. Any object can be converted to one of \ :ref:`Any <l416e79>`\ .
 
 
 .. _l416e79-3d:
@@ -27,7 +27,7 @@ Any
    pair: Any; any
 
 :spadfun:`any`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`None <l4e6f6e65>`\ ) -> % 
-  \ ``any(type, object)``\  is a technical function for creating an object of \ :ref:`Any <l416e79>`\ . Argument \ ``type``\  is a \spadgloss{LISP} form for the \ ``type``\  of \ ``object``\ .
+  \ :code:`any(type, object)`\  is a technical function for creating an object of \ :ref:`Any <l416e79>`\ . Argument \ :code:`type`\  is a \spadgloss{LISP} form for the \ :code:`type`\  of \ :code:`object`\ .
 
 .. _l416e79-636f65726365:
 
@@ -40,7 +40,7 @@ Any
    pair: Any; dom
 
 :spadfun:`dom`\: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
-  \ ``dom(a)``\  returns a \spadgloss{LISP} form of the type of the original object that was converted to \ :ref:`Any <l416e79>`\ .
+  \ :code:`dom(a)`\  returns a \spadgloss{LISP} form of the type of the original object that was converted to \ :ref:`Any <l416e79>`\ .
 
 .. _l416e79-646f6d61696e4f66:
 
@@ -48,7 +48,7 @@ Any
    pair: Any; domainOf
 
 :spadfun:`domainOf`\: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
-  \ ``domainOf(a)``\  returns a printable form of the type of the original object that was converted to \ :ref:`Any <l416e79>`\ .
+  \ :code:`domainOf(a)`\  returns a printable form of the type of the original object that was converted to \ :ref:`Any <l416e79>`\ .
 
 .. _l416e79-6c61746578:
 
@@ -61,7 +61,7 @@ Any
    pair: Any; obj
 
 :spadfun:`obj`\: % -> \ :ref:`None <l4e6f6e65>`\  
-  \ ``obj(a)``\  essentially returns the original object that was converted to \ :ref:`Any <l416e79>`\  except that the type is forced to be \ :ref:`None <l4e6f6e65>`\ .
+  \ :code:`obj(a)`\  essentially returns the original object that was converted to \ :ref:`Any <l416e79>`\  except that the type is forced to be \ :ref:`None <l4e6f6e65>`\ .
 
 .. _l416e79-6f626a6563744f66:
 
@@ -69,7 +69,7 @@ Any
    pair: Any; objectOf
 
 :spadfun:`objectOf`\: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
-  \ ``objectOf(a)``\  returns a printable form of the original object that was converted to \ :ref:`Any <l416e79>`\ .
+  \ :code:`objectOf(a)`\  returns a printable form of the original object that was converted to \ :ref:`Any <l416e79>`\ .
 
 .. _l416e79-73686f7754797065496e4f7574707574:
 
@@ -77,7 +77,7 @@ Any
    pair: Any; showTypeInOutput
 
 :spadfun:`showTypeInOutput`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`String <l537472696e67>`\  
-  \ ``showTypeInOutput(bool)``\  affects the way objects of \ :ref:`Any <l416e79>`\  are displayed. If \ ``bool``\  is \ ``true``\  then the type of the original object that was converted to \ :ref:`Any <l416e79>`\  will be printed. If \ ``bool``\  is \ ``false``\ , it will not be printed.
+  \ :code:`showTypeInOutput(bool)`\  affects the way objects of \ :ref:`Any <l416e79>`\  are displayed. If \ :code:`bool`\  is \ :code:`true`\  then the type of the original object that was converted to \ :ref:`Any <l416e79>`\  will be printed. If \ :code:`bool`\  is \ :code:`false`\ , it will not be printed.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

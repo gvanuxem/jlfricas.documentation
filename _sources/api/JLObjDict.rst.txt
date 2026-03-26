@@ -51,21 +51,21 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`Any <l416e79>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``delete!(dict, key)``\  deletes the mapping corresponding to the the key of \ ``dict``\ .
+  \ :code:`delete!(dict, key)`\  deletes the mapping corresponding to the the key of \ :code:`dict`\ .
 
 
 .. index::
    pair: JLObjDict; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``delete!(dict, key)``\  deletes the mapping corresponding to the the key of \ ``dict``\ .
+  \ :code:`delete!(dict, key)`\  deletes the mapping corresponding to the the key of \ :code:`dict`\ .
 
 
 .. index::
    pair: JLObjDict; delete!
 
 :spadfun:`delete!`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``delete!(dict, key)``\  deletes the mapping corresponding to the the key of \ ``dict``\ .
+  \ :code:`delete!(dict, key)`\  deletes the mapping corresponding to the the key of \ :code:`dict`\ .
 
 .. _l4a4c4f626a44696374-656c74:
 
@@ -73,7 +73,7 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Any <l416e79>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``elt(dict, key)``\  returns the value associated to the key of \ ``dict``\ .
+  \ :code:`elt(dict, key)`\  returns the value associated to the key of \ :code:`dict`\ .
 
 
 \ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -84,14 +84,14 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``elt(dict, ind)``\  returns the element at index ind of \ ``dict``\ . It can be used, for example, with a Tuple or a Vector.
+  \ :code:`elt(dict, ind)`\  returns the element at index ind of \ :code:`dict`\ . It can be used, for example, with a Tuple or a Vector.
 
 
 .. index::
    pair: JLObjDict; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``elt(dict, sym)``\  returns the value associated to the key \ ``sym``\  of \ ``dict``\ .
+  \ :code:`elt(dict, sym)`\  returns the value associated to the key \ :code:`sym`\  of \ :code:`dict`\ .
 
 .. _l4a4c4f626a44696374-656d7074793f:
 
@@ -114,7 +114,7 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; jdict
 
 :spadfun:`jdict`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jdict(str)``\  returns a Julia Dict from the Julia command \ ``str``\ . For example: \example{jdict("Dict([(_"A_", 1), (_"B_", 2)])")."B"}
+  \ :code:`jdict(str)`\  returns a Julia Dict from the Julia command \ :code:`str`\ . For example: \example{jdict("Dict([(_"A_", 1), (_"B_", 2)])")."B"}
 
 .. _l4a4c4f626a44696374-6a6c41626f7574:
 
@@ -243,7 +243,7 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`Any <l416e79>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``qelt(dict, key)``\  returns the value associated to the key of \ ``dict``\ . No checks are done regarding the existence of the key at the FriCAS level. Returns the Julia missing value if the key does not exist.
+  \ :code:`qelt(dict, key)`\  returns the value associated to the key of \ :code:`dict`\ . No checks are done regarding the existence of the key at the FriCAS level. Returns the Julia missing value if the key does not exist.
 
 
 \ :ref:`qelt <l4a4c4f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -254,14 +254,14 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``qelt(dict, ind)``\  returns the element at index ind of \ ``dict``\ . It can be used, for example, with a Tuple or a Vector.
+  \ :code:`qelt(dict, ind)`\  returns the element at index ind of \ :code:`dict`\ . It can be used, for example, with a Tuple or a Vector.
 
 
 .. index::
    pair: JLObjDict; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``qelt(dict, sym)``\  returns the value associated to the key \ ``sym``\  of \ ``dict``\ . No checks are done regarding the existence of the key \ ``sym``\  at the FriCAS level. Returns the Julia missing value if the key does not exist.
+  \ :code:`qelt(dict, sym)`\  returns the value associated to the key \ :code:`sym`\  of \ :code:`dict`\ . No checks are done regarding the existence of the key \ :code:`sym`\  at the FriCAS level. Returns the Julia missing value if the key does not exist.
 
 .. _l4a4c4f626a44696374-73616d706c65:
 
@@ -274,21 +274,21 @@ Convenience domain for Julia Dictionaries, objects that are used within Julia, a
    pair: JLObjDict; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`Any <l416e79>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
-  \ ``setelt!(dict, key, val)``\  sets the val to the \ ``key``\  of \ ``dict``\ . If the \ ``key``\  does not exist it will be created.
+  \ :code:`setelt!(dict, key, val)`\  sets the val to the \ :code:`key`\  of \ :code:`dict`\ . If the \ :code:`key`\  does not exist it will be created.
 
 
 .. index::
    pair: JLObjDict; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
-  \ ``setelt!(dict, ind, val)``\  sets the val to the index \ ``ind``\  of \ ``dict``\ . If the index does not exist it will be created.
+  \ :code:`setelt!(dict, ind, val)`\  sets the val to the index \ :code:`ind`\  of \ :code:`dict`\ . If the index does not exist it will be created.
 
 
 .. index::
    pair: JLObjDict; setelt!
 
 :spadfun:`setelt!`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
-  \ ``setelt!(dict, key, val)``\  sets the val to the \ ``key``\  of \ ``dict``\ . If the \ ``key``\  does not exist it will be created.
+  \ :code:`setelt!(dict, key, val)`\  sets the val to the \ :code:`key`\  of \ :code:`dict`\ . If the \ :code:`key`\  does not exist it will be created.
 
 .. _l4a4c4f626a44696374-73697a653f:
 

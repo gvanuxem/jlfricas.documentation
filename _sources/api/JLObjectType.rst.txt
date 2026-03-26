@@ -27,7 +27,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``coerce(obj)``\  coerces \ ``obj``\  to JLObject. Convenience function.
+  \ :code:`coerce(obj)`\  coerces \ :code:`obj`\  to JLObject. Convenience function.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -44,7 +44,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlAbout
 
 :spadfun:`jlAbout`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlAbout(obj)``\  displays Julia information about \ ``obj``\  if you have About.\ ``jl``\  installed in Julia. In the Julia interpreter, enter in the package management mode with ']', and issue: pkg> add "https://github.com/tecosaur/About.\ ``jl"``\ 
+  \ :code:`jlAbout(obj)`\  displays Julia information about \ :code:`obj`\  if you have About.\ :code:`jl`\  installed in Julia. In the Julia interpreter, enter in the package management mode with ']', and issue: pkg> add "https://github.com/tecosaur/About.\ :code:`jl"`\ 
 
 .. _l4a4c4f626a65637454797065-6a6c4170706c79:
 
@@ -52,35 +52,35 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(func, obj)``\  applies the function \ ``func``\  with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(\ ``JLObjFloat64``\ ): \example{M:=nrand(4,4);} \example{jlApply("svd", M::JLMatrix(JLObjFloat64)).S} should be "equivalent" to svdvals(\ ``M``\ ).
+  \ :code:`jlApply(func, obj)`\  applies the function \ :code:`func`\  with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(\ :code:`JLObjFloat64`\ ): \example{M:=nrand(4,4);} \example{jlApply("svd", M::JLMatrix(JLObjFloat64)).S} should be "equivalent" to svdvals(\ :code:`M`\ ).
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(func, obj1, obj2)``\  applies the function \ ``func``\  with \ ``obj1``\  and \ ``obj2``\  as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, \ ``v``\ )): \example{v:=urand01(5)\$JLVector(JLFloat)} \example{jlApply("map", "cos", coerce v)}
+  \ :code:`jlApply(func, obj1, obj2)`\  applies the function \ :code:`func`\  with \ :code:`obj1`\  and \ :code:`obj2`\  as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, \ :code:`v`\ )): \example{v:=urand01(5)\$JLVector(JLFloat)} \example{jlApply("map", "cos", coerce v)}
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(func, obj1, obj2, obj3)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\  and \ ``obj3``\  as parameters and returns the result as a FriCAS JLObject.
+  \ :code:`jlApply(func, obj1, obj2, obj3)`\  applies the function \ :code:`func`\  with \ :code:`obj1`\ , \ :code:`obj2`\  and \ :code:`obj3`\  as parameters and returns the result as a FriCAS JLObject.
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(func, obj1, obj2, obj3, obj4)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\  and \ ``obj4``\  as parameters and returns the result as a FriCAS JLObject.
+  \ :code:`jlApply(func, obj1, obj2, obj3, obj4)`\  applies the function \ :code:`func`\  with \ :code:`obj1`\ , \ :code:`obj2`\ , \ :code:`obj3`\  and \ :code:`obj4`\  as parameters and returns the result as a FriCAS JLObject.
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlApply(func, obj1, obj2, obj3, obj4, obj5)``\  applies the function \ ``func``\  with \ ``obj1``\ , \ ``obj2``\ , \ ``obj3``\ , \ ``obj4``\  and \ ``obj5``\  as parameters and returns the result as a FriCAS JLObject.
+  \ :code:`jlApply(func, obj1, obj2, obj3, obj4, obj5)`\  applies the function \ :code:`func`\  with \ :code:`obj1`\ , \ :code:`obj2`\ , \ :code:`obj3`\ , \ :code:`obj4`\  and \ :code:`obj5`\  as parameters and returns the result as a FriCAS JLObject.
 
 .. _l4a4c4f626a65637454797065-6a6c446973706c6179:
 
@@ -88,7 +88,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlDisplay
 
 :spadfun:`jlDisplay`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlDisplay(v)``\  pretty prints \ ``v``\  (\ ``à``\  la Julia).
+  \ :code:`jlDisplay(v)`\  pretty prints \ :code:`v`\  (\ :code:`à`\  la Julia).
 
 .. _l4a4c4f626a65637454797065-6a6c44756d70:
 
@@ -96,7 +96,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlDump
 
 :spadfun:`jlDump`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlDump(obj)``\  dumps (shows) the Julia object (internal structure with type).
+  \ :code:`jlDump(obj)`\  dumps (shows) the Julia object (internal structure with type).
 
 .. _l4a4c4f626a65637454797065-6a6c4669656c644e616d6573:
 
@@ -104,7 +104,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlFieldNames
 
 :spadfun:`jlFieldNames`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlFieldNames(obj)``\  returns the field names of \ ``obj``\ .
+  \ :code:`jlFieldNames(obj)`\  returns the field names of \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6a6c4765744669656c64:
 
@@ -112,7 +112,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlGetField
 
 :spadfun:`jlGetField`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlGetField(obj, sym)``\  returns the property/element \ ``sym``\  of \ ``obj``\ .
+  \ :code:`jlGetField(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578:
 
@@ -120,7 +120,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlGetJuliaIndex
 
 :spadfun:`jlGetJuliaIndex`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlGetJuliaIndex(obj)``\  returns the Julia indexed dictionary index referencing the object \ ``obj``\ . Convenience function for use in the interpreter.
+  \ :code:`jlGetJuliaIndex(obj)`\  returns the Julia indexed dictionary index referencing the object \ :code:`obj`\ . Convenience function for use in the interpreter.
 
 .. _l4a4c4f626a65637454797065-6a6c47657450726f7065727479:
 
@@ -128,7 +128,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlGetProperty
 
 :spadfun:`jlGetProperty`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlGetProperty(obj, sym)``\  returns the property/element \ ``sym``\  of \ ``obj``\ .
+  \ :code:`jlGetProperty(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6a6c4964:
 
@@ -136,7 +136,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlId
 
 :spadfun:`jlId`\: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
-  \ ``jlId(obj)``\  returns the Julia indexed dictionary index referencing the object \ ``obj``\ .
+  \ :code:`jlId(obj)`\  returns the Julia indexed dictionary index referencing the object \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6a6c696d726566:
 
@@ -144,7 +144,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlimref
 
 :spadfun:`jlimref`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jlimref(str)``\  evaluates the Julia command \ ``str``\  and returns the corresponding FriCAS Julia immutable object wrapped in a Julia RefValue{Any}
+  \ :code:`jlimref(str)`\  evaluates the Julia command \ :code:`str`\  and returns the corresponding FriCAS Julia immutable object wrapped in a Julia RefValue{Any}
 
 .. _l4a4c4f626a65637454797065-6a6c4f626a656374:
 
@@ -152,7 +152,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlObject
 
 :spadfun:`jlObject`\: () -> \ :ref:`String <l537472696e67>`\  
-  \ ``jlObject()``\  returns the internal Julia name of the Julia module used. For example: \example{jlObject()\$NMUnivariatePolynomial(NINT,'x)}
+  \ :code:`jlObject()`\  returns the internal Julia name of the Julia module used. For example: \example{jlObject()\$NMUnivariatePolynomial(NINT,'x)}
 
 .. _l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573:
 
@@ -160,7 +160,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlPropertyNames
 
 :spadfun:`jlPropertyNames`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlPropertyNames(obj)``\  returns the property/element names of \ ``obj``\ .
+  \ :code:`jlPropertyNames(obj)`\  returns the property/element names of \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6a6c526566:
 
@@ -168,7 +168,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlRef
 
 :spadfun:`jlRef`\: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
-  \ ``jlRef(obj)``\  returns the internal Lisp representation of the Julia object \ ``obj``\ .
+  \ :code:`jlRef(obj)`\  returns the internal Lisp representation of the Julia object \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6a6c726566:
 
@@ -176,7 +176,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlref
 
 :spadfun:`jlref`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jlref(str)``\  evaluates the Julia command \ ``str``\  and returns the corresponding FriCAS Julia mutable object.
+  \ :code:`jlref(str)`\  evaluates the Julia command \ :code:`str`\  and returns the corresponding FriCAS Julia mutable object.
 
 .. _l4a4c4f626a65637454797065-6a6c54657874:
 
@@ -184,7 +184,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlText
 
 :spadfun:`jlText`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``jlText(obj, mimest)``\  returns the text representation of \ ``obj``\  as a list of String lines with mime subtype mimest, for example "plain" for "text/plain" or "html" for "text/html" if implemented at Julia level. Use internally the 'show' method. For example: \example{df:=jdframe nrand(6,3)} \example{jlText(df, "plain")} \example{jlText(df, "html")} \example{jlText(df, "csv")} \example{jlText(df, "latex")}
+  \ :code:`jlText(obj, mimest)`\  returns the text representation of \ :code:`obj`\  as a list of String lines with mime subtype mimest, for example "plain" for "text/plain" or "html" for "text/html" if implemented at Julia level. Use internally the 'show' method. For example: \example{df:=jdframe nrand(6,3)} \example{jlText(df, "plain")} \example{jlText(df, "html")} \example{jlText(df, "csv")} \example{jlText(df, "latex")}
 
 .. _l4a4c4f626a65637454797065-6a6c54797065:
 
@@ -192,7 +192,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlType
 
 :spadfun:`jlType`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``jlType(obj)``\  returns the Julia type of \ ``obj``\ .
+  \ :code:`jlType(obj)`\  returns the Julia type of \ :code:`obj`\ .
 
 .. _l4a4c4f626a65637454797065-6c61746578:
 
@@ -205,7 +205,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; mutable?
 
 :spadfun:`mutable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``mutable?(obj)``\  checks whether or not \ ``obj``\  is mutable.
+  \ :code:`mutable?(obj)`\  checks whether or not \ :code:`obj`\  is mutable.
 
 .. _l4a4c4f626a65637454797065-6e6f7468696e673f:
 
@@ -213,7 +213,7 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; nothing?
 
 :spadfun:`nothing?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nothing?(obj)``\  checks whether or not \ ``obj``\  is nothing.
+  \ :code:`nothing?(obj)`\  checks whether or not \ :code:`obj`\  is nothing.
 
 .. _l4a4c4f626a65637454797065-737472696e67:
 

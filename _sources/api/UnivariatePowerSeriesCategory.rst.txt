@@ -112,7 +112,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; approximate
 
 :spadfun:`approximate`\: (%, Expon) -> Coef if Coef has ^\: (Coef, Expon) -> Coef and Coef has coerce\: \ :ref:`Symbol <l53796d626f6c>`\  -> Coef
-  \ ``approximate(f)``\  returns a truncated power series with the series variable viewed as an element of the coefficient domain.
+  \ :code:`approximate(f)`\  returns a truncated power series with the series variable viewed as an element of the coefficient domain.
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-6173736f6369617465733f:
 
@@ -130,7 +130,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; center
 
 :spadfun:`center`\: % -> Coef 
-  \ ``center(f)``\  returns the point about which the series \ ``f``\  is expanded.
+  \ :code:`center(f)`\  returns the point about which the series \ :code:`f`\  is expanded.
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-6368617261637465726973746963:
 
@@ -248,7 +248,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; elt
 
 :spadfun:`elt`\: (%, Expon) -> Coef 
-  \ ``elt(f(x), r)``\  returns the coefficient of the term of degree \ ``r``\  in \ ``f(x)``\ . This is the same as the function \ :spadfun:`coefficient`\ .
+  \ :code:`elt(f(x), r)`\  returns the coefficient of the term of degree \ :code:`r`\  in \ :code:`f(x)`\ . This is the same as the function \ :spadfun:`coefficient`\ .
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-6576616c:
 
@@ -256,7 +256,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; eval
 
 :spadfun:`eval`\: (%, Coef) -> \ :ref:`Stream <l53747265616d>`\  Coef if Coef has ^\: (Coef, Expon) -> Coef
-  \ ``eval(f, a)``\  evaluates a power series at a value in the ground ring by returning a stream of partial sums.
+  \ :code:`eval(f, a)`\  evaluates a power series at a value in the ground ring by returning a stream of partial sums.
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-657871756f:
 
@@ -269,7 +269,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; extend
 
 :spadfun:`extend`\: (%, Expon) -> % 
-  \ ``extend(f, n)``\  causes all terms of \ ``f``\  of degree \ ``<=``\  \ ``n``\  to be computed.
+  \ :code:`extend(f, n)`\  causes all terms of \ :code:`f`\  of degree \ :code:`<=`\  \ :code:`n`\  to be computed.
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-6c61746578:
 
@@ -331,7 +331,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; multiplyExponents
 
 :spadfun:`multiplyExponents`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``multiplyExponents(f, n)``\  multiplies all exponents of the power series \ ``f``\  by the positive integer \ ``n``\ .
+  \ :code:`multiplyExponents(f, n)`\  multiplies all exponents of the power series \ :code:`f`\  by the positive integer \ :code:`n`\ .
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-6f6e653f:
 
@@ -349,14 +349,14 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; order
 
 :spadfun:`order`\: % -> Expon 
-  \ ``order(f)``\  is the degree of the lowest order non-zero term in \ ``f``\ . This will result in an infinite loop if \ ``f``\  has no non-zero terms.
+  \ :code:`order(f)`\  is the degree of the lowest order non-zero term in \ :code:`f`\ . This will result in an infinite loop if \ :code:`f`\  has no non-zero terms.
 
 
 .. index::
    pair: UnivariatePowerSeriesCategory; order
 
 :spadfun:`order`\: (%, Expon) -> Expon 
-  \ ``order(f, n) = min(m, n)``\ , where \ ``m``\  is the degree of the lowest order non-zero term in \ ``f``\ .
+  \ :code:`order(f, n) = min(m, n)`\ , where \ :code:`m`\  is the degree of the lowest order non-zero term in \ :code:`f`\ .
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-706c656e617279506f776572:
 
@@ -408,7 +408,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; terms
 
 :spadfun:`terms`\: % -> \ :ref:`Stream <l53747265616d>`\  Record(k: Expon, c: Coef) 
-  \ ``terms(f(x))``\  returns a stream of non-zero terms, where a a term is an exponent-coefficient pair. The terms in the stream are ordered by increasing order of exponents. Warning: If the series \ ``f``\  has only finitely many non-zero terms, then accessing the resulting stream might lead to an infinite search for the next non-zero coefficient.
+  \ :code:`terms(f(x))`\  returns a stream of non-zero terms, where a a term is an exponent-coefficient pair. The terms in the stream are ordered by increasing order of exponents. Warning: If the series \ :code:`f`\  has only finitely many non-zero terms, then accessing the resulting stream might lead to an infinite search for the next non-zero coefficient.
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-7472756e63617465:
 
@@ -416,14 +416,14 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; truncate
 
 :spadfun:`truncate`\: (%, Expon) -> % 
-  \ ``truncate(f, k)``\  returns a (finite) power series consisting of the sum of all terms of \ ``f``\  of degree \ ``<= k``\ .
+  \ :code:`truncate(f, k)`\  returns a (finite) power series consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`<= k`\ .
 
 
 .. index::
    pair: UnivariatePowerSeriesCategory; truncate
 
 :spadfun:`truncate`\: (%, Expon, Expon) -> % 
-  \ ``truncate(f, k1, k2)``\  returns a (finite) power series consisting of the sum of all terms of \ ``f``\  of degree \ ``d``\  with \ ``k1 <= d <= k2``\ .
+  \ :code:`truncate(f, k1, k2)`\  returns a (finite) power series consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`d`\  with \ :code:`k1 <= d <= k2`\ .
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-756e69743f:
 
@@ -446,7 +446,7 @@ UnivariatePowerSeriesCategory(Coef, Expon)
    pair: UnivariatePowerSeriesCategory; variable
 
 :spadfun:`variable`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``variable(f)``\  returns the (unique) power series variable of the power series \ ``f``\ .
+  \ :code:`variable(f)`\  returns the (unique) power series variable of the power series \ :code:`f`\ .
 
 .. _l556e6976617269617465506f77657253657269657343617465676f7279-7a65726f3f:
 

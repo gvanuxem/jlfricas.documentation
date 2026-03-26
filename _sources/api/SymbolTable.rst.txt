@@ -21,7 +21,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`Table <l5461626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ ) 
-  \ ``coerce(x)``\  returns a table view of \ ``x``\ 
+  \ :code:`coerce(x)`\  returns a table view of \ :code:`x`\ 
 
 .. _l53796d626f6c5461626c65-6465636c61726521:
 
@@ -29,14 +29,14 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; declare!
 
 :spadfun:`declare!`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ , %) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``declare!(l, t, tab)``\  creates new entries in tab, declaring each of \ ``l``\  to be of type \ ``t``\ 
+  \ :code:`declare!(l, t, tab)`\  creates new entries in tab, declaring each of \ :code:`l`\  to be of type \ :code:`t`\ 
 
 
 .. index::
    pair: SymbolTable; declare!
 
 :spadfun:`declare!`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`FortranType <l466f727472616e54797065>`\ , %) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``declare!(u, t, tab)``\  creates a new entry in tab, declaring \ ``u``\  to be of type \ ``t``\ 
+  \ :code:`declare!(u, t, tab)`\  creates a new entry in tab, declaring \ :code:`u`\  to be of type \ :code:`t`\ 
 
 .. _l53796d626f6c5461626c65-656d707479:
 
@@ -44,7 +44,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; empty
 
 :spadfun:`empty`\: () -> % 
-  \ ``empty()``\  returns a new, empty symbol table
+  \ :code:`empty()`\  returns a new, empty symbol table
 
 .. _l53796d626f6c5461626c65-65787465726e616c4c697374:
 
@@ -52,7 +52,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; externalList
 
 :spadfun:`externalList`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``externalList(tab)``\  returns a list of all the external symbols in \ ``tab``\ 
+  \ :code:`externalList(tab)`\  returns a list of all the external symbols in \ :code:`tab`\ 
 
 .. _l53796d626f6c5461626c65-666f727472616e547970654f66:
 
@@ -60,7 +60,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; fortranTypeOf
 
 :spadfun:`fortranTypeOf`\: (\ :ref:`Symbol <l53796d626f6c>`\ , %) -> \ :ref:`FortranType <l466f727472616e54797065>`\  
-  \ ``fortranTypeOf(u, tab)``\  returns the type of \ ``u``\  in tab
+  \ :code:`fortranTypeOf(u, tab)`\  returns the type of \ :code:`u`\  in tab
 
 .. _l53796d626f6c5461626c65-6e6577547970654c69737473:
 
@@ -68,7 +68,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; newTypeLists
 
 :spadfun:`newTypeLists`\: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
-  \ ``newTypeLists(x)``\  \undocumented
+  \ :code:`newTypeLists(x)`\  \undocumented
 
 .. _l53796d626f6c5461626c65-706172616d65746572734f66:
 
@@ -76,7 +76,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; parametersOf
 
 :spadfun:`parametersOf`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
-  \ ``parametersOf(tab)``\  returns a list of all the symbols declared in \ ``tab``\ 
+  \ :code:`parametersOf(tab)`\  returns a list of all the symbols declared in \ :code:`tab`\ 
 
 .. _l53796d626f6c5461626c65-7072696e745479706573:
 
@@ -84,7 +84,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; printTypes
 
 :spadfun:`printTypes`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``printTypes(tab)``\  produces FORTRAN type declarations from \ ``tab``\ , on the current FORTRAN output stream
+  \ :code:`printTypes(tab)`\  produces FORTRAN type declarations from \ :code:`tab`\ , on the current FORTRAN output stream
 
 .. _l53796d626f6c5461626c65-73796d626f6c5461626c65:
 
@@ -92,7 +92,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; symbolTable
 
 :spadfun:`symbolTable`\: \ :ref:`List <l4c697374>`\  Record(key: \ :ref:`Symbol <l53796d626f6c>`\ , entry: \ :ref:`FortranType <l466f727472616e54797065>`\ ) -> % 
-  \ ``symbolTable(l)``\  creates a symbol table from the elements of \ ``l``\ .
+  \ :code:`symbolTable(l)`\  creates a symbol table from the elements of \ :code:`l`\ .
 
 .. _l53796d626f6c5461626c65-747970654c697374:
 
@@ -100,7 +100,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; typeList
 
 :spadfun:`typeList`\: (\ :ref:`FortranScalarType <l466f727472616e5363616c617254797065>`\ , %) -> \ :ref:`List <l4c697374>`\  Union(name: \ :ref:`Symbol <l53796d626f6c>`\ , bounds: \ :ref:`List <l4c697374>`\  Union(S: \ :ref:`Symbol <l53796d626f6c>`\ , P: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\ )) 
-  \ ``typeList(t, tab)``\  returns a list of all the objects of type \ ``t``\  in tab
+  \ :code:`typeList(t, tab)`\  returns a list of all the objects of type \ :code:`t`\  in tab
 
 .. _l53796d626f6c5461626c65-747970654c69737473:
 
@@ -108,7 +108,7 @@ Create and manipulate a symbol table for generated FORTRAN code
    pair: SymbolTable; typeLists
 
 :spadfun:`typeLists`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  Union(name: \ :ref:`Symbol <l53796d626f6c>`\ , bounds: \ :ref:`List <l4c697374>`\  Union(S: \ :ref:`Symbol <l53796d626f6c>`\ , P: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\ )) 
-  \ ``typeLists(tab)``\  returns a list of lists of types of objects in \ ``tab``\ 
+  \ :code:`typeLists(tab)`\  returns a list of lists of types of objects in \ :code:`tab`\ 
 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

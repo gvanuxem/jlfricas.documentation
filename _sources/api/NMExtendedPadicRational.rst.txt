@@ -14,7 +14,7 @@ NMExtendedPadicRational(p, deg, prec)
 * prec: \ :ref:`Integer <l496e7465676572>`\ 
 
 
-This is a domain for \ ``Qp``\ .
+This is a domain for \ :code:`Qp`\ .
 
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-30:
@@ -49,14 +49,14 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; *
 
 :spadfun:`\*`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``x * q``\  is the multiplication of a \ ``q``\ -adic number and a Julia Nemo Fraction integer.
+  \ :code:`x * q`\  is the multiplication of a \ :code:`q`\ -adic number and a Julia Nemo Fraction integer.
 
 
 .. index::
    pair: NMExtendedPadicRational; *
 
 :spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``x * i``\  is the multiplication of an Integer and a \ ``q``\ -adic number. For example: \example{p := 1 + 2*7 + 4*7^2 + O()\$NPADICZ(7)}
+  \ :code:`x * i`\  is the multiplication of an Integer and a \ :code:`q`\ -adic number. For example: \example{p := 1 + 2*7 + 4*7^2 + O()\$NPADICZ(7)}
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -75,14 +75,14 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; *
 
 :spadfun:`\*`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ ``q * x``\  is the multiplication of a Julia Nemo Fraction integer and a \ ``q``\ -adic number.
+  \ :code:`q * x`\  is the multiplication of a Julia Nemo Fraction integer and a \ :code:`q`\ -adic number.
 
 
 .. index::
    pair: NMExtendedPadicRational; *
 
 :spadfun:`\*`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ ``i * x``\  is the multiplication of a NemoInteger and a \ ``q``\ -adic number.
+  \ :code:`i * x`\  is the multiplication of a NemoInteger and a \ :code:`q`\ -adic number.
 
 
 \ :ref:`\* <l4a4c4f626a65637452696e67-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -106,28 +106,28 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; +
 
 :spadfun:`+`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``x + q``\  is the addition of a \ ``q``\ -adic number and a Julia Nemo Fraction integer.
+  \ :code:`x + q`\  is the addition of a \ :code:`q`\ -adic number and a Julia Nemo Fraction integer.
 
 
 .. index::
    pair: NMExtendedPadicRational; +
 
 :spadfun:`+`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``x + i``\  is the addition of a \ ``q``\ -adic number and a Julia Nemo integer.
+  \ :code:`x + i`\  is the addition of a \ :code:`q`\ -adic number and a Julia Nemo integer.
 
 
 .. index::
    pair: NMExtendedPadicRational; +
 
 :spadfun:`+`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ ``q + x``\  is the addition of a Julia Nemo Fraction integer and a \ ``q``\ -adic number.
+  \ :code:`q + x`\  is the addition of a Julia Nemo Fraction integer and a \ :code:`q`\ -adic number.
 
 
 .. index::
    pair: NMExtendedPadicRational; +
 
 :spadfun:`+`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ ``i + x``\  is the addition of a Julia Nemo Integer and a \ ``q``\ -adic number.
+  \ :code:`i + x`\  is the addition of a Julia Nemo Integer and a \ :code:`q`\ -adic number.
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-2d:
 
@@ -268,7 +268,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; coerce
 
 :spadfun:`coerce`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``coerce(x)``\  returns \ ``x``\  as the \ ``q``\ -adic completion of the Nemo Integer.
+  \ :code:`coerce(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> % if \ :ref:`NMExtendedPadicInteger <l4e4d457874656e6465645061646963496e7465676572>`\ (p, prec) has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
@@ -495,7 +495,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; frobenius
 
 :spadfun:`frobenius`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``frobenius(x,i)``\  returns the image of the \ ``i``\ -th power of Frobenius of \ ``x``\ .
+  \ :code:`frobenius(x,i)`\  returns the image of the \ :code:`i`\ -th power of Frobenius of \ :code:`x`\ .
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-676364:
 
@@ -628,14 +628,14 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; jnpadic
 
 :spadfun:`jnpadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnpadic(x)``\  returns \ ``x``\  as the \ ``q``\ -adic completion of the Nemo Integer.
+  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
 
 
 .. index::
    pair: NMExtendedPadicRational; jnpadic
 
 :spadfun:`jnpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ ``jnpadic(x)``\  returns \ ``x``\  as the \ ``q``\ -adic completion of the Nemo Integer.
+  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-6c61746578:
 
@@ -676,7 +676,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; liftZ
 
 :spadfun:`liftZ`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  \ ``liftZ(x)``\  lifts \ ``x``\  to a Nemo Integer if possible.
+  \ :code:`liftZ(x)`\  lifts \ :code:`x`\  to a Nemo Integer if possible.
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-6c6f67:
 
@@ -704,7 +704,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; modulus
 
 :spadfun:`modulus`\: () -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``modulus()``\  returns the value of \ ``p``\ .
+  \ :code:`modulus()`\  returns the value of \ :code:`p`\ .
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-6d756c74694575636c696465616e:
 
@@ -752,7 +752,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; O
 
 :spadfun:`O`\: () -> % 
-  \ ``O()``\  returns the default Big-oh from domain parameters.
+  \ :code:`O()`\  returns the default Big-oh from domain parameters.
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-6f6e653f:
 
@@ -789,7 +789,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; precision
 
 :spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``precision(x)``\  returns the precision used for \ ``x``\ .
+  \ :code:`precision(x)`\  returns the precision used for \ :code:`x`\ .
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-7072696d653f:
 
@@ -802,7 +802,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; prime
 
 :spadfun:`prime`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``prime(x)``\  returns the modulus used for \ ``x``\ . Convenience function.
+  \ :code:`prime(x)`\  returns the modulus used for \ :code:`x`\ . Convenience function.
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-7072696e636970616c496465616c:
 
@@ -950,7 +950,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; teichmuller
 
 :spadfun:`teichmuller`\: % -> % 
-  \ ``teichmuller(x)``\  computes the Teichmuller lift of \ ``x``\ . The valuation of \ ``x``\  must be non negative.
+  \ :code:`teichmuller(x)`\  computes the Teichmuller lift of \ :code:`x`\ . The valuation of \ :code:`x`\  must be non negative.
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-756e69743f:
 
@@ -973,7 +973,7 @@ This is a domain for \ ``Qp``\ .
    pair: NMExtendedPadicRational; valuation
 
 :spadfun:`valuation`\: % -> % 
-  \ ``valuation(x)``\  is the valuation of \ ``x``\ .
+  \ :code:`valuation(x)`\  is the valuation of \ :code:`x`\ .
 
 .. _l4e4d457874656e6465645061646963526174696f6e616c-77686f6c6550617274:
 

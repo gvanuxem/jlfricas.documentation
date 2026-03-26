@@ -21,7 +21,7 @@ This package provides generic interface to modular Hermite-Pade solver.
    pair: ModularHermitePadeSolver; gen_Monte_Carlo_check
 
 :spadfun:`gen_Monte_Carlo_check`\: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S -> Union(good, reject, no_solution), \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  F, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S -> Union(good, reject, no_solution) 
-  \ ``gen_Monte_Carlo_check(check, l, kind, qvar, sigma, gen)``\  returns Monte Carlo \ ``check``\  for solutions to guessing problem. If Monte Carlo \ ``check``\  is unavailable returns \ ``check``\ .
+  \ :code:`gen_Monte_Carlo_check(check, l, kind, qvar, sigma, gen)`\  returns Monte Carlo \ :code:`check`\  for solutions to guessing problem. If Monte Carlo \ :code:`check`\  is unavailable returns \ :code:`check`\ .
 
 .. _l4d6f64756c61724865726d69746550616465536f6c766572-48505f736f6c7665:
 
@@ -29,7 +29,7 @@ This package provides generic interface to modular Hermite-Pade solver.
    pair: ModularHermitePadeSolver; HP_solve
 
 :spadfun:`HP_solve`\: (\ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  F, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , (\ :ref:`List <l4c697374>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Vector <l566563746f72>`\  \ :ref:`U32Vector <l553332566563746f72>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S -> Union(good, reject, no_solution)) -> Union(\ :ref:`Matrix <l4d6174726978>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  S, \ :ref:`Boolean <l426f6f6c65616e>`\ ) 
-  \ ``HP_solve(l, degs, kind, sigma, gen check)``\  finds a \ ``sigma``\  basis with degree bounds given by \ ``degs``\ . It returns \ ``false``\  if there is no interpolating vector that is correct up to (and including) \ ``z^``\ (\ ``sigma``\ -1) with \ ``sigma``\  \ ``>=``\  |degs+[1, 1, ..., 1]| or if check rejects all solutions. It returns \ ``true``\  if it can not handle given problem.
+  \ :code:`HP_solve(l, degs, kind, sigma, gen check)`\  finds a \ :code:`sigma`\  basis with degree bounds given by \ :code:`degs`\ . It returns \ :code:`false`\  if there is no interpolating vector that is correct up to (and including) \ :code:`z^`\ (\ :code:`sigma`\ -1) with \ :code:`sigma`\  \ :code:`>=`\  |degs+[1, 1, ..., 1]| or if check rejects all solutions. It returns \ :code:`true`\  if it can not handle given problem.
 
 .. _l4d6f64756c61724865726d69746550616465536f6c766572-4c4c465f746f5f4c5041:
 

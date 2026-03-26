@@ -8,7 +8,7 @@ WSExpression
 :viewcode:`jwsexpr.spad line 1 <jwsexpr.spad#L1>` :editcode:`[edit on github] <jwsexpr.spad#L1>`
 
 
-Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports the Eltable category (interface) so, for example using Fibonacci polynomials fibonacci(12,jWSExpr \ ``x``\ ) \ ``=>``\  3 5 7 9 11 6 \ ``x``\  + 35 \ ``x``\  + 56 \ ``x``\  + 36 \ ``x``\  + 10 \ ``x``\  + \ ``x``\  \%.5 \ ``=>``\  10*x^9
+Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports the Eltable category (interface) so, for example using Fibonacci polynomials fibonacci(12,jWSExpr \ :code:`x`\ ) \ :code:`=>`\  3 5 7 9 11 6 \ :code:`x`\  + 35 \ :code:`x`\  + 56 \ :code:`x`\  + 36 \ :code:`x`\  + 10 \ :code:`x`\  + \ :code:`x`\  \%.5 \ :code:`=>`\  10*x^9
 
 
 .. _l575345787072657373696f6e-30:
@@ -139,14 +139,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; accountingForm
 
 :spadfun:`accountingForm`\: % -> % 
-  \ ``accountingForm(x,n)``\  returns the accounting printed representation of \ ``x``\ .
+  \ :code:`accountingForm(x,n)`\  returns the accounting printed representation of \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; accountingForm
 
 :spadfun:`accountingForm`\: (%, %) -> % 
-  \ ``accountingForm(x,n)``\  returns the accounting printed representation of \ ``x``\  with \ ``n``\  digits of precision.
+  \ :code:`accountingForm(x,n)`\  returns the accounting printed representation of \ :code:`x`\  with \ :code:`n`\  digits of precision.
 
 .. _l575345787072657373696f6e-61636f73:
 
@@ -194,14 +194,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; airyAiZero
 
 :spadfun:`airyAiZero`\: % -> % 
-  \ ``airyAiZero(n)``\  is the \ ``n``\ -th zero of the Airy function \ ``Ai(z)``\ .
+  \ :code:`airyAiZero(n)`\  is the \ :code:`n`\ -th zero of the Airy function \ :code:`Ai(z)`\ .
 
 
 .. index::
    pair: WSExpression; airyAiZero
 
 :spadfun:`airyAiZero`\: (%, %) -> % 
-  \ ``airyAiZero(n,x)``\  is the \ ``n``\ -th zero of the Airy function \ ``Ai(z)``\  less than \ ``x``\ .
+  \ :code:`airyAiZero(n,x)`\  is the \ :code:`n`\ -th zero of the Airy function \ :code:`Ai(z)`\  less than \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-616972794269:
 
@@ -219,14 +219,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; airyBiZero
 
 :spadfun:`airyBiZero`\: % -> % 
-  \ ``airyBiZero(n)``\  is the \ ``n``\ -th zero of the Airy function \ ``Bi(z)``\ .
+  \ :code:`airyBiZero(n)`\  is the \ :code:`n`\ -th zero of the Airy function \ :code:`Bi(z)`\ .
 
 
 .. index::
    pair: WSExpression; airyBiZero
 
 :spadfun:`airyBiZero`\: (%, %) -> % 
-  \ ``airyBiZero(n,x)``\  is the \ ``n``\ -th zero of the Airy function \ ``Bi(z)``\  less than \ ``x``\ .
+  \ :code:`airyBiZero(n,x)`\  is the \ :code:`n`\ -th zero of the Airy function \ :code:`Bi(z)`\  less than \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-616c67746f776572:
 
@@ -247,7 +247,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; angerJ
 
 :spadfun:`angerJ`\: (%, %, %) -> % 
-  \ ``angerJ(v, n, z)``\  is the associated Anger \ ``J``\  function.
+  \ :code:`angerJ(v, n, z)`\  is the associated Anger \ :code:`J`\  function.
 
 .. _l575345787072657373696f6e-616e6e6968696c6174653f:
 
@@ -265,14 +265,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; apart
 
 :spadfun:`apart`\: % -> % 
-  \ ``apart(expr)``\  converts a rational expression as a sum of terms, reducing denominator(\ ``s``\ ).
+  \ :code:`apart(expr)`\  converts a rational expression as a sum of terms, reducing denominator(\ :code:`s`\ ).
 
 
 .. index::
    pair: WSExpression; apart
 
 :spadfun:`apart`\: (%, %) -> % 
-  \ ``apart(expr, vars)``\  converts a rational expression as a sum of terms as the one arg apart does but only for vars (the others are considered as constants).
+  \ :code:`apart(expr, vars)`\  converts a rational expression as a sum of terms as the one arg apart does but only for vars (the others are considered as constants).
 
 .. _l575345787072657373696f6e-617070656e64:
 
@@ -341,7 +341,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; assuming
 
 :spadfun:`assuming`\: (%, %) -> % 
-  \ ``assuming(assumption(s), expr)``\  uses the assumptions for use of expr with refine, simplify and integrate for example. The assumption(\ ``s``\ ) are not always supported by MathLink. Use assumptions with 'refine' etc. directly instead.
+  \ :code:`assuming(assumption(s), expr)`\  uses the assumptions for use of expr with refine, simplify and integrate for example. The assumption(\ :code:`s`\ ) are not always supported by MathLink. Use assumptions with 'refine' etc. directly instead.
 
 .. _l575345787072657373696f6e-6174616e:
 
@@ -353,7 +353,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; atan
 
 :spadfun:`atan`\: (%, %) -> % 
-  \ ``atan(x,y)``\  computes the arc tangent of \ ``y/x``\ .
+  \ :code:`atan(x,y)`\  computes the arc tangent of \ :code:`y/x`\ .
 
 .. _l575345787072657373696f6e-6174616e68:
 
@@ -366,7 +366,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; barnesG
 
 :spadfun:`barnesG`\: % -> % 
-  \ ``barnesG(z)``\  computes the Barnes \ ``G``\ -function of \ ``z``\ .
+  \ :code:`barnesG(z)`\  computes the Barnes \ :code:`G`\ -function of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-62617365466f726d:
 
@@ -374,7 +374,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; baseForm
 
 :spadfun:`baseForm`\: (%, %) -> % 
-  \ ``baseForm(x, n)``\  returns the printed representation of \ ``x``\  in base \ ``b``\ .
+  \ :code:`baseForm(x, n)`\  returns the printed representation of \ :code:`x`\  in base \ :code:`b`\ .
 
 .. _l575345787072657373696f6e-6261736973:
 
@@ -402,7 +402,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; besselJZero
 
 :spadfun:`besselJZero`\: (%, %) -> % 
-  \ ``besselJZero(n,x)``\  returns the \ ``n``\ -th zero of the Bessel \ ``J``\  \ ``n``\ -th function.
+  \ :code:`besselJZero(n,x)`\  returns the \ :code:`n`\ -th zero of the Bessel \ :code:`J`\  \ :code:`n`\ -th function.
 
 .. _l575345787072657373696f6e-62657373656c4b:
 
@@ -420,7 +420,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; besselYZero
 
 :spadfun:`besselYZero`\: (%, %) -> % 
-  \ ``besselYZero(n,x)``\  returns the \ ``n``\ -th zero of the Bessel \ ``Y``\  \ ``n``\ -th function.
+  \ :code:`besselYZero(n,x)`\  returns the \ :code:`n`\ -th zero of the Bessel \ :code:`Y`\  \ :code:`n`\ -th function.
 
 .. _l575345787072657373696f6e-42657461:
 
@@ -437,7 +437,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; betaRegularized
 
 :spadfun:`betaRegularized`\: (%, %, %) -> % 
-  \ ``betaRegularized(x,a,b)``\  computes the regularized incomplete Beta function.
+  \ :code:`betaRegularized(x,a,b)`\  computes the regularized incomplete Beta function.
 
 .. _l575345787072657373696f6e-62696e6f6d69616c:
 
@@ -455,7 +455,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; cancel
 
 :spadfun:`cancel`\: % -> % 
-  \ ``cancel(expr)``\  cancels common factors in numerators and denominators of the rational expression \ ``expr``\ .
+  \ :code:`cancel(expr)`\  cancels common factors in numerators and denominators of the rational expression \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-636174616c616e:
 
@@ -463,7 +463,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; catalan
 
 :spadfun:`catalan`\: () -> % 
-  \ ``catalan()``\  returns Catalan\ ``'s``\  constant.
+  \ :code:`catalan()`\  returns Catalan\ :code:`'s`\  constant.
 
 .. _l575345787072657373696f6e-6365696c696e67:
 
@@ -471,7 +471,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ceiling
 
 :spadfun:`ceiling`\: % -> % 
-  \ ``ceiling(x)``\  returns the smallest integer greater than or equal to \ ``x``\ .
+  \ :code:`ceiling(x)`\  returns the smallest integer greater than or equal to \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-6368617261637465726973746963:
 
@@ -494,7 +494,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; chebyshevT
 
 :spadfun:`chebyshevT`\: (%, %) -> % 
-  \ ``chebyshevT(n, x)``\  returns the Chebyshev polynomial of the first kind or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`chebyshevT(n, x)`\  returns the Chebyshev polynomial of the first kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-63686562797368657655:
 
@@ -502,7 +502,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; chebyshevU
 
 :spadfun:`chebyshevU`\: (%, %) -> % 
-  \ ``chebyshevU(n, x)``\  returns Chebyshev polynomial of the second kind or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`chebyshevU(n, x)`\  returns Chebyshev polynomial of the second kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-436869:
 
@@ -520,14 +520,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coefficient
 
 :spadfun:`coefficient`\: (%, %) -> % 
-  \ ``coefficient(p,expr)``\  returns the coefficient of \ ``expr``\  in \ ``p``\ . \example{x:= jWSExpr x} \example{coefficient((x - y)^4, x * y^3)}
+  \ :code:`coefficient(p,expr)`\  returns the coefficient of \ :code:`expr`\  in \ :code:`p`\ . \example{x:= jWSExpr x} \example{coefficient((x - y)^4, x * y^3)}
 
 
 .. index::
    pair: WSExpression; coefficient
 
 :spadfun:`coefficient`\: (%, %, %) -> % 
-  \ ``coefficient(p, expr, n)``\  returns the coefficient of expr^n in \ ``p``\ .
+  \ :code:`coefficient(p, expr, n)`\  returns the coefficient of expr^n in \ :code:`p`\ .
 
 .. _l575345787072657373696f6e-636f656666696369656e744c697374:
 
@@ -535,7 +535,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coefficientList
 
 :spadfun:`coefficientList`\: (%, %) -> % 
-  \ ``coefficientList(p,expr)``\  returns the list of coefficients of \ ``expr``\  in \ ``p``\ .
+  \ :code:`coefficientList(p,expr)`\  returns the list of coefficients of \ :code:`expr`\  in \ :code:`p`\ .
 
 .. _l575345787072657373696f6e-636f656666696369656e7452756c6573:
 
@@ -543,14 +543,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coefficientRules
 
 :spadfun:`coefficientRules`\: % -> % 
-  \ ``coefficientRules(p)``\  returns the coefficients and exponents of \ ``p``\  as \ ``WS``\  rules.
+  \ :code:`coefficientRules(p)`\  returns the coefficients and exponents of \ :code:`p`\  as \ :code:`WS`\  rules.
 
 
 .. index::
    pair: WSExpression; coefficientRules
 
 :spadfun:`coefficientRules`\: (%, %) -> % 
-  \ ``coefficientRules(p,vars)``\  returns the coefficients and exponents of \ ``p``\  with respect to var(\ ``s``\ ) as \ ``WS``\  rules.
+  \ :code:`coefficientRules(p,vars)`\  returns the coefficients and exponents of \ :code:`p`\  with respect to var(\ :code:`s`\ ) as \ :code:`WS`\  rules.
 
 .. _l575345787072657373696f6e-636f65726365:
 
@@ -574,28 +574,35 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSInteger <l5753496e7465676572>`\  
-  \ ``coerce(expr)``\  coerces \ ``expr``\  to a WSInteger if possible.
+  \ :code:`coerce(expr)`\  coerces \ :code:`expr`\  to a WSInteger if possible.
 
 
 .. index::
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`WSRational <l5753526174696f6e616c>`\  
-  \ ``coerce(expr)``\  coerces \ ``expr``\  to a WSRational if possible.
+  \ :code:`coerce(expr)`\  coerces \ :code:`expr`\  to a WSRational if possible.
 
 
 .. index::
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Complex <l436f6d706c6578>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce(gi)``\  coerces \ ``gi``\  to a WSExpression. Convenience function.
+  \ :code:`coerce(gi)`\  coerces \ :code:`gi`\  to a WSExpression. Convenience function.
+
+
+.. index::
+   pair: WSExpression; coerce
+
+:spadfun:`coerce`\: \ :ref:`Equation <l4571756174696f6e>`\  % -> % 
+  \ :code:`coerce(eq)`\  coerces the equation \ :code:`eq`\  to a WSExpression rule.
 
 
 .. index::
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce(f)``\  coerces the floating point number \ ``f``\  to a WSExpression. Convenience function.
+  \ :code:`coerce(f)`\  coerces the floating point number \ :code:`f`\  to a WSExpression. Convenience function.
 
 
 \ :ref:`coerce <l46756e6374696f6e537061636532-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  % -> % 
@@ -606,7 +613,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce(q)``\  coerces the rational \ ``q``\  to a WSExpression. Convenience function.
+  \ :code:`coerce(q)`\  coerces the rational \ :code:`q`\  to a WSExpression. Convenience function.
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> % 
@@ -621,7 +628,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce(z)``\  coerces the integer \ ``z``\  to a WSExpression. Convenience function.
+  \ :code:`coerce(z)`\  coerces the integer \ :code:`z`\  to a WSExpression. Convenience function.
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Kernel <l4b65726e656c>`\  % -> % 
@@ -632,7 +639,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``coerce(list)``\  coerces \ ``list``\  of WSExpression.
+  \ :code:`coerce(list)`\  coerces \ :code:`list`\  of WSExpression.
 
 
 \ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  % -> % 
@@ -651,21 +658,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce(str)``\  coerces the string \ ``str``\  to a WSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language Expression. For example: \example{expr := "Sqrt[x]"::WSEXPR;jlEval(expr,"x=2.0")}
+  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language Expression. For example: \example{expr := "Sqrt[x]"::WSEXPR;jlEval(expr,"x=2.0")}
 
 
 .. index::
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``coerce(sym)``\  coerces \ ``sym``\  to a WSExpression.
+  \ :code:`coerce(sym)`\  coerces \ :code:`sym`\  to a WSExpression.
 
 
 .. index::
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`WSSymbol <l575353796d626f6c>`\  -> % 
-  \ ``coerce(sym)``\  coerces \ ``sym``\  to a WSExpression.
+  \ :code:`coerce(sym)`\  coerces \ :code:`sym`\  to a WSExpression.
 
 .. _l575345787072657373696f6e-636f6c6c656374:
 
@@ -673,14 +680,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; collect
 
 :spadfun:`collect`\: (%, %) -> % 
-  \ ``collect(expr, var)``\  collects same power terms with respect to variable var.
+  \ :code:`collect(expr, var)`\  collects same power terms with respect to variable var.
 
 
 .. index::
    pair: WSExpression; collect
 
 :spadfun:`collect`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> % 
-  \ ``collect(expr, vars)``\  collects same power terms with respect to variables in vars.
+  \ :code:`collect(expr, vars)`\  collects same power terms with respect to variables in vars.
 
 .. _l575345787072657373696f6e-636f6d6d757461746f72:
 
@@ -698,14 +705,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; complexExpand
 
 :spadfun:`complexExpand`\: % -> % 
-  \ ``complexExpand(expr)``\  expands \ ``expr``\  assuming variables are real.
+  \ :code:`complexExpand(expr)`\  expands \ :code:`expr`\  assuming variables are real.
 
 
 .. index::
    pair: WSExpression; complexExpand
 
 :spadfun:`complexExpand`\: (%, %) -> % 
-  \ ``complexExpand(expr, cvars)``\  expands \ ``expr``\  assuming all but cvars variables are real.
+  \ :code:`complexExpand(expr, cvars)`\  expands \ :code:`expr`\  assuming all but cvars variables are real.
 
 .. _l575345787072657373696f6e-636f6e6a7567617465:
 
@@ -780,7 +787,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coulombF
 
 :spadfun:`coulombF`\: (%, %, %) -> % 
-  \ ``coulombF(l,eta,ro)``\  is the regular Coulomb wave function.
+  \ :code:`coulombF(l,eta,ro)`\  is the regular Coulomb wave function.
 
 .. _l575345787072657373696f6e-636f756c6f6d6247:
 
@@ -788,7 +795,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coulombG
 
 :spadfun:`coulombG`\: (%, %, %) -> % 
-  \ ``coulombG(l,eta,ro)``\  is the irregular Coulomb wave function.
+  \ :code:`coulombG(l,eta,ro)`\  is the irregular Coulomb wave function.
 
 .. _l575345787072657373696f6e-636f756c6f6d624831:
 
@@ -796,7 +803,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coulombH1
 
 :spadfun:`coulombH1`\: (%, %, %) -> % 
-  \ ``coulombH1(l,eta,ro)``\  is the incoming irregular Coulomb wave function \ ``H^``\ (+).
+  \ :code:`coulombH1(l,eta,ro)`\  is the incoming irregular Coulomb wave function \ :code:`H^`\ (+).
 
 .. _l575345787072657373696f6e-636f756c6f6d624832:
 
@@ -804,7 +811,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coulombH2
 
 :spadfun:`coulombH2`\: (%, %, %) -> % 
-  \ ``coulombH2(l,eta,ro)``\  is the incoming irregular Coulomb wave function \ ``H^``\ (-).
+  \ :code:`coulombH2(l,eta,ro)`\  is the incoming irregular Coulomb wave function \ :code:`H^`\ (-).
 
 .. _l575345787072657373696f6e-637363:
 
@@ -863,7 +870,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dawson
 
 :spadfun:`dawson`\: % -> % 
-  \ ``dawson(x)``\  computes the Dawson integral of \ ``x``\ .
+  \ :code:`dawson(x)`\  computes the Dawson integral of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-646563696d616c466f726d:
 
@@ -871,14 +878,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; decimalForm
 
 :spadfun:`decimalForm`\: % -> % 
-  \ ``decimalForm(x)``\  returns the printed representation of \ ``x``\  in decimal form i.e. without scientific notation.
+  \ :code:`decimalForm(x)`\  returns the printed representation of \ :code:`x`\  in decimal form i.e. without scientific notation.
 
 
 .. index::
    pair: WSExpression; decimalForm
 
 :spadfun:`decimalForm`\: (%, %) -> % 
-  \ ``decimalForm(x, expr)``\  returns the printed representation of \ ``x``\  in decimal form with expr as specification (number of digits of precision or a 2-list of number of digits and the number of digits after the decimal point).
+  \ :code:`decimalForm(x, expr)`\  returns the printed representation of \ :code:`x`\  in decimal form with expr as specification (number of digits of precision or a 2-list of number of digits and the number of digits after the decimal point).
 
 .. _l575345787072657373696f6e-6465636f6d706f7365:
 
@@ -886,7 +893,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; decompose
 
 :spadfun:`decompose`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``decompose(poly, x)``\  is a polynomial decomposition function, here, related to \ ``x``\ .
+  \ :code:`decompose(poly, x)`\  is a polynomial decomposition function, here, related to \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-646564656b696e64457461:
 
@@ -894,7 +901,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dedekindEta
 
 :spadfun:`dedekindEta`\: % -> % 
-  \ ``dedekindEta(tau)``\  computes the Dedekind modular elliptic eta.
+  \ :code:`dedekindEta(tau)`\  computes the Dedekind modular elliptic eta.
 
 .. _l575345787072657373696f6e-646566696e65643f:
 
@@ -902,7 +909,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; defined?
 
 :spadfun:`defined?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``defined?(sym)``\  checks whether or not \ ``sym``\  is a \ ``WS``\  symbol.
+  \ :code:`defined?(sym)`\  checks whether or not \ :code:`sym`\  is a \ :code:`WS`\  symbol.
 
 .. _l575345787072657373696f6e-646566696e696e67506f6c796e6f6d69616c:
 
@@ -919,7 +926,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; degree
 
 :spadfun:`degree`\: () -> % 
-  \ ``degree()``\  returns conversion factor from degrees to radians, \ ``π/180``\ .
+  \ :code:`degree()`\  returns conversion factor from degrees to radians, \ :code:`π/180`\ .
 
 .. _l575345787072657373696f6e-64656c657465:
 
@@ -937,7 +944,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; denominator
 
 :spadfun:`denominator`\: % -> % 
-  \ ``denominator(expr)``\  returns the denominator of \ ``expr``\ .
+  \ :code:`denominator(expr)`\  returns the denominator of \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-64657269766174696f6e436f6f7264696e61746573:
 
@@ -950,14 +957,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; derivative
 
 :spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , %) -> % 
-  \ ``derivative(func,n)``\  returns the derivative of order \ ``n``\  of \ ``func``\ . \example{fprime:=derivative(operator('f),1)}
+  \ :code:`derivative(func,n)`\  returns the derivative of order \ :code:`n`\  of \ :code:`func`\ . \example{fprime:=derivative(operator('f),1)}
 
 
 .. index::
    pair: WSExpression; derivative
 
 :spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , %, %) -> % 
-  \ ``derivative(func, n, var)``\  returns the derivative of order \ ``n``\  of \ ``func``\  applied to var. \example{x := jWSExpr x} \example{fprimex:=derivative(operator('f),1,x)}
+  \ :code:`derivative(func, n, var)`\  returns the derivative of order \ :code:`n`\  of \ :code:`func`\  applied to var. \example{x := jWSExpr x} \example{fprimex:=derivative(operator('f),1,x)}
 
 .. _l575345787072657373696f6e-646966666572656e7469617465:
 
@@ -1010,7 +1017,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; digamma
 
 :spadfun:`digamma`\: (%, %) -> % 
-  \ ``digamma(n,z)``\  is the \ ``n``\ -th derivative of the digamma function.
+  \ :code:`digamma(n,z)`\  is the \ :code:`n`\ -th derivative of the digamma function.
 
 .. _l575345787072657373696f6e-64696c6f67:
 
@@ -1033,7 +1040,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dirichletEta
 
 :spadfun:`dirichletEta`\: % -> % 
-  \ ``dirichletEta(z)``\  computes the Dirichlet eta.
+  \ :code:`dirichletEta(z)`\  computes the Dirichlet eta.
 
 .. _l575345787072657373696f6e-6469726963686c65744c:
 
@@ -1041,7 +1048,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dirichletL
 
 :spadfun:`dirichletL`\: (%, %, %) -> % 
-  \ ``dirichletL(k,j,s)``\  returns Dirichlet \ ``L``\ -function of \ ``s``\ , modulus \ ``k``\ , index \ ``j``\ .
+  \ :code:`dirichletL(k,j,s)`\  returns Dirichlet \ :code:`L`\ -function of \ :code:`s`\ , modulus \ :code:`k`\ , index \ :code:`j`\ .
 
 .. _l575345787072657373696f6e-6469736372696d696e616e74:
 
@@ -1049,7 +1056,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; discriminant
 
 :spadfun:`discriminant`\: (%, %) -> % 
-  \ ``discriminant(p, x)``\  returns the discriminant of \ ``p``\  with respect to \ ``x``\ .
+  \ :code:`discriminant(p, x)`\  returns the discriminant of \ :code:`p`\  with respect to \ :code:`x`\ .
 
 
 \ :ref:`discriminant <l4672616d6564416c6765627261-6469736372696d696e616e74>`\ \: () -> % 
@@ -1065,14 +1072,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; distribute
 
 :spadfun:`distribute`\: % -> % 
-  \ ``distribute(expr)``\  distributes \ ``expr``\  over addition. For illustration: \example{distribute(jWSExpr "(x + y) * (a + b + c)")}
+  \ :code:`distribute(expr)`\  distributes \ :code:`expr`\  over addition. For illustration: \example{distribute(jWSExpr "(x + y) * (a + b + c)")}
 
 
 .. index::
    pair: WSExpression; distribute
 
 :spadfun:`distribute`\: (%, %) -> % 
-  \ ``distribute(f,g)``\  distributes \ ``f``\  over \ ``g``\ .
+  \ :code:`distribute(f,g)`\  distributes \ :code:`f`\  over \ :code:`g`\ .
 
 .. _l575345787072657373696f6e-646976696465:
 
@@ -1085,14 +1092,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dSolve
 
 :spadfun:`dSolve`\: (%, %, %) -> % 
-  \ ``dSolve(expr, funcs, vars)``\  solves the (list of) differential equation(\ ``s``\ ) \ ``expr``\  for the function(\ ``s``\ ) \ ``funcs``\  with independent variable(\ ``s``\ ) vars. \example{x:=jWSExpr x;} \example{fx:=derivative(operator('f),0,x)} \example{fprimex:=derivative(operator('f),1,x)} \example{dSolve(jWSEqual(fprimex + fx , a *sin(x)),fx,x)}
+  \ :code:`dSolve(expr, funcs, vars)`\  solves the (list of) differential equation(\ :code:`s`\ ) \ :code:`expr`\  for the function(\ :code:`s`\ ) \ :code:`funcs`\  with independent variable(\ :code:`s`\ ) vars. \example{x:=jWSExpr x;} \example{fx:=derivative(operator('f),0,x)} \example{fprimex:=derivative(operator('f),1,x)} \example{dSolve(jWSEqual(fprimex + fx , a *sin(x)),fx,x)}
 
 
 .. index::
    pair: WSExpression; dSolve
 
 :spadfun:`dSolve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> % 
-  \ ``dSolve(eq, func,var)``\  solves the differential equation \ ``eq``\  for the function(\ ``s``\ ) funcs with independent variable(\ ``s``\ ) vars. \example{x:=jWSExpr x;} \example{fx:=derivative(operator('f),0,x)} \example{fprimex:=derivative(operator('f),1,x)} \example{dSolve(fprimex + fx = a * sin(x)/cos(x),fx,x)}
+  \ :code:`dSolve(eq, func,var)`\  solves the differential equation \ :code:`eq`\  for the function(\ :code:`s`\ ) funcs with independent variable(\ :code:`s`\ ) vars. \example{x:=jWSExpr x;} \example{fx:=derivative(operator('f),0,x)} \example{fprimex:=derivative(operator('f),1,x)} \example{dSolve(fprimex + fx = a * sin(x)/cos(x),fx,x)}
 
 .. _l575345787072657373696f6e-64536f6c766556616c7565:
 
@@ -1100,14 +1107,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dSolveValue
 
 :spadfun:`dSolveValue`\: (%, %, %) -> % 
-  \ ``dSolveValue(expr,funcs, vars)``\  returns the value determined by the differential equation(\ ``s``\ ) in \ ``expr``\  for the function(\ ``s``\ ) \ ``funcs``\  with independent variable(\ ``s``\ ) vars. \example{x:=jWSExpr x;} \example{f:=derivative(operator('f),0)} \example{f0:=derivative(operator('f),0,0)} \example{fx:=derivative(operator('f),0,x)} \example{fprimex:=derivative(operator('f),1,x)} \example{dSolveValue(jWSExpr([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)}
+  \ :code:`dSolveValue(expr,funcs, vars)`\  returns the value determined by the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function(\ :code:`s`\ ) \ :code:`funcs`\  with independent variable(\ :code:`s`\ ) vars. \example{x:=jWSExpr x;} \example{f:=derivative(operator('f),0)} \example{f0:=derivative(operator('f),0,0)} \example{fx:=derivative(operator('f),0,x)} \example{fprimex:=derivative(operator('f),1,x)} \example{dSolveValue(jWSExpr([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)}
 
 
 .. index::
    pair: WSExpression; dSolveValue
 
 :spadfun:`dSolveValue`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> % 
-  \ ``dSolveValue(eq, func,var)``\  returns the value determined by the differential equation \ ``eq``\  for the function \ ``func``\  with independent variable \ ``var``\ .
+  \ :code:`dSolveValue(eq, func,var)`\  returns the value determined by the differential equation \ :code:`eq`\  for the function \ :code:`func`\  with independent variable \ :code:`var`\ .
 
 .. _l575345787072657373696f6e-4569:
 
@@ -1120,7 +1127,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; EiEn
 
 :spadfun:`EiEn`\: (%, %) -> % 
-  \ ``EiEn(n,z)``\  returns the exponential integral En(\ ``z``\ ).
+  \ :code:`EiEn(n,z)`\  returns the exponential integral En(\ :code:`z`\ ).
 
 .. _l575345787072657373696f6e-656c6c697074696345:
 
@@ -1128,14 +1135,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ellipticE
 
 :spadfun:`ellipticE`\: % -> % 
-  \ ``ellipticE(x)``\  computes the complete elliptic integral of the second kind.
+  \ :code:`ellipticE(x)`\  computes the complete elliptic integral of the second kind.
 
 
 .. index::
    pair: WSExpression; ellipticE
 
 :spadfun:`ellipticE`\: (%, %) -> % 
-  \ ``ellipticE(phi,m)``\  computes the elliptic integral of the second kind.
+  \ :code:`ellipticE(phi,m)`\  computes the elliptic integral of the second kind.
 
 .. _l575345787072657373696f6e-656c6c697074696346:
 
@@ -1143,7 +1150,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ellipticF
 
 :spadfun:`ellipticF`\: (%, %) -> % 
-  \ ``ellipticF(phi,m)``\  computes the elliptic integral of the first kind.
+  \ :code:`ellipticF(phi,m)`\  computes the elliptic integral of the first kind.
 
 .. _l575345787072657373696f6e-656c6c69707469634b:
 
@@ -1151,7 +1158,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ellipticK
 
 :spadfun:`ellipticK`\: % -> % 
-  \ ``ellipticK(m)``\  computes the complete elliptic integral of the first kind.
+  \ :code:`ellipticK(m)`\  computes the complete elliptic integral of the first kind.
 
 .. _l575345787072657373696f6e-656c6c69707469635069:
 
@@ -1159,14 +1166,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ellipticPi
 
 :spadfun:`ellipticPi`\: (%, %) -> % 
-  \ ``ellipticPi(n,m)``\  computes the complete elliptic integral of the third kind.
+  \ :code:`ellipticPi(n,m)`\  computes the complete elliptic integral of the third kind.
 
 
 .. index::
    pair: WSExpression; ellipticPi
 
 :spadfun:`ellipticPi`\: (%, %, %) -> % 
-  \ ``ellipticPi(n,phi,m)``\  computes the elliptic integral of the third kind.
+  \ :code:`ellipticPi(n,phi,m)`\  computes the elliptic integral of the third kind.
 
 .. _l575345787072657373696f6e-656c6c69707469635468657461:
 
@@ -1174,7 +1181,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ellipticTheta
 
 :spadfun:`ellipticTheta`\: (%, %, %) -> % 
-  \ ``ellipticTheta(a, u, q)``\  computes the theta function, a ranges from 1 to 4.
+  \ :code:`ellipticTheta(a, u, q)`\  computes the theta function, a ranges from 1 to 4.
 
 .. _l575345787072657373696f6e-656c6c697074696354686574615072696d65:
 
@@ -1182,7 +1189,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ellipticThetaPrime
 
 :spadfun:`ellipticThetaPrime`\: (%, %, %) -> % 
-  \ ``ellipticThetaPrime(a, u, q)``\  computes the derivative of the theta function, a ranges from 1 to 4.
+  \ :code:`ellipticThetaPrime(a, u, q)`\  computes the derivative of the theta function, a ranges from 1 to 4.
 
 .. _l575345787072657373696f6e-656c74:
 
@@ -1235,14 +1242,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; engineeringForm
 
 :spadfun:`engineeringForm`\: % -> % 
-  \ ``engineeringForm(x)``\  returns the printed representation of \ ``x``\  in engineering form.
+  \ :code:`engineeringForm(x)`\  returns the printed representation of \ :code:`x`\  in engineering form.
 
 
 .. index::
    pair: WSExpression; engineeringForm
 
 :spadfun:`engineeringForm`\: (%, %) -> % 
-  \ ``engineeringForm(x,n)``\  returns the printed representation of \ ``x``\  in engineering form with \ ``n``\  digits of precision.
+  \ :code:`engineeringForm(x,n)`\  returns the printed representation of \ :code:`x`\  in engineering form with \ :code:`n`\  digits of precision.
 
 .. _l575345787072657373696f6e-656e756d6572617465:
 
@@ -1259,7 +1266,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; erf
 
 :spadfun:`erf`\: (%, %) -> % 
-  \ ``erf(x,x1)``\  computes the generalized error function.
+  \ :code:`erf(x,x1)`\  computes the generalized error function.
 
 .. _l575345787072657373696f6e-65726663:
 
@@ -1267,7 +1274,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; erfc
 
 :spadfun:`erfc`\: % -> % 
-  \ ``erfc(x)``\  computes the complementary error function.
+  \ :code:`erfc(x)`\  computes the complementary error function.
 
 .. _l575345787072657373696f6e-65726669:
 
@@ -1285,14 +1292,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; eulerE
 
 :spadfun:`eulerE`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %) -> % 
-  \ ``eulerE(n,z)``\  returns the Euler \ ``E``\  polynomial of degree \ ``n``\ .
+  \ :code:`eulerE(n,z)`\  returns the Euler \ :code:`E`\  polynomial of degree \ :code:`n`\ .
 
 
 .. index::
    pair: WSExpression; eulerE
 
 :spadfun:`eulerE`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> % 
-  \ ``eulerE(n)``\  returns the Euler number En.
+  \ :code:`eulerE(n)`\  returns the Euler number En.
 
 .. _l575345787072657373696f6e-65756c657247616d6d61:
 
@@ -1300,7 +1307,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; eulerGamma
 
 :spadfun:`eulerGamma`\: () -> % 
-  \ ``eulerGamma()``\  returns Euler\ ``'s``\  constant Gamma(\ ``γ``\ ).
+  \ :code:`eulerGamma()`\  returns Euler\ :code:`'s`\  constant Gamma(\ :code:`γ`\ ).
 
 .. _l575345787072657373696f6e-65756c6572506869:
 
@@ -1308,7 +1315,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; eulerPhi
 
 :spadfun:`eulerPhi`\: \ :ref:`WSInteger <l5753496e7465676572>`\  -> % 
-  \ ``eulerPhi(n)``\  is the totient function, i.e. the number of integers that are relatively prime to \ ``n``\  in the range [1,\ ``n``\ ].
+  \ :code:`eulerPhi(n)`\  is the totient function, i.e. the number of integers that are relatively prime to \ :code:`n`\  in the range [1,\ :code:`n`\ ].
 
 .. _l575345787072657373696f6e-6576616c:
 
@@ -1389,7 +1396,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; exactNumber?
 
 :spadfun:`exactNumber?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``exactNumber?(x)``\  checks whether or not \ ``x``\  is an exact number.
+  \ :code:`exactNumber?(x)`\  checks whether or not \ :code:`x`\  is an exact number.
 
 .. _l575345787072657373696f6e-657870:
 
@@ -1401,7 +1408,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; exp
 
 :spadfun:`exp`\: () -> % 
-  \ ``exp()``\  returns \ ``ℯ``\  (\%\ ``e``\  or exp(1)).
+  \ :code:`exp()`\  returns \ :code:`ℯ`\  (\%\ :code:`e`\  or exp(1)).
 
 .. _l575345787072657373696f6e-657870616e64:
 
@@ -1409,14 +1416,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; expand
 
 :spadfun:`expand`\: % -> % 
-  \ ``expand(expr)``\  puts out products and positive powers of integers of the expression \ ``expr``\ .
+  \ :code:`expand(expr)`\  puts out products and positive powers of integers of the expression \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; expand
 
 :spadfun:`expand`\: (%, %) -> % 
-  \ ``expand(expr, opt)``\  is the expand version with excluded pattern-\ ``s``\  or any other options available (for example "Modulus-\ ``>p"``\ ).
+  \ :code:`expand(expr, opt)`\  is the expand version with excluded pattern-\ :code:`s`\  or any other options available (for example "Modulus-\ :code:`>p"`\ ).
 
 .. _l575345787072657373696f6e-657870616e6444656e6f6d696e61746f72:
 
@@ -1424,7 +1431,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; expandDenominator
 
 :spadfun:`expandDenominator`\: % -> % 
-  \ ``expandDenominator(expr)``\  expands denominators of rational expression \ ``expr``\ .
+  \ :code:`expandDenominator(expr)`\  expands denominators of rational expression \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-657870616e644e756d657261746f72:
 
@@ -1432,7 +1439,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; expandNumerator
 
 :spadfun:`expandNumerator`\: % -> % 
-  \ ``expandNumerator(expr)``\  expands numerators of rational expression \ ``expr``\ .
+  \ :code:`expandNumerator(expr)`\  expands numerators of rational expression \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6578706f6e656e74:
 
@@ -1440,14 +1447,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; exponent
 
 :spadfun:`exponent`\: (%, %) -> % 
-  \ ``exponent(p,expr)``\  returns the maximum exponent of \ ``p``\  for \ ``expr``\ . \example{x:= jWSExpr x;y := jWSExpr y} \example{p:=(x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y)} \example{exponent(\%,(x^2-2))}
+  \ :code:`exponent(p,expr)`\  returns the maximum exponent of \ :code:`p`\  for \ :code:`expr`\ . \example{x:= jWSExpr x;y := jWSExpr y} \example{p:=(x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y)} \example{exponent(\%,(x^2-2))}
 
 
 .. index::
    pair: WSExpression; exponent
 
 :spadfun:`exponent`\: (%, %, %) -> % 
-  \ ``exponent(p, expr, map)``\  applies map to the exponents related to \ ``expr``\  and returns it. By default map = "Max". \example{x:= jWSExpr x;y := jWSExpr y} \example{p:=expand((x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y))} \example{exponent(p,x,"Min")}
+  \ :code:`exponent(p, expr, map)`\  applies map to the exponents related to \ :code:`expr`\  and returns it. By default map = "Max". \example{x:= jWSExpr x;y := jWSExpr y} \example{p:=expand((x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y))} \example{exponent(p,x,"Min")}
 
 .. _l575345787072657373696f6e-65787072657373496465616c4d656d626572:
 
@@ -1460,7 +1467,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; expToTrig
 
 :spadfun:`expToTrig`\: % -> % 
-  \ ``expToTrig(expr)``\  returns \ ``expr``\  with exponentials converted to (hyperbolic) trigonometric functions.
+  \ :code:`expToTrig(expr)`\  returns \ :code:`expr`\  with exponentials converted to (hyperbolic) trigonometric functions.
 
 .. _l575345787072657373696f6e-657871756f:
 
@@ -1482,7 +1489,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; extendedExpand
 
 :spadfun:`extendedExpand`\: % -> % 
-  \ ``extendedExpand(expr)``\  puts out all products and positive powers of integers.
+  \ :code:`extendedExpand(expr)`\  puts out all products and positive powers of integers.
 
 .. _l575345787072657373696f6e-657874656e64656453696d706c696679:
 
@@ -1490,14 +1497,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; extendedSimplify
 
 :spadfun:`extendedSimplify`\: % -> % 
-  \ ``extendedSimplify(expr)``\  is the extended version of simplify. This is the full version of simplify. \example{x:= jWSExpr x} \example{expr := Gamma(x)/Gamma(x-1)} Compare with simplify(\ ``expr``\ ). \example{extendedSimplify(expr)}
+  \ :code:`extendedSimplify(expr)`\  is the extended version of simplify. This is the full version of simplify. \example{x:= jWSExpr x} \example{expr := Gamma(x)/Gamma(x-1)} Compare with simplify(\ :code:`expr`\ ). \example{extendedSimplify(expr)}
 
 
 .. index::
    pair: WSExpression; extendedSimplify
 
 :spadfun:`extendedSimplify`\: (%, %) -> % 
-  \ ``extendedSimplify(expr, assumptions)``\  is the extended version of simplify with respect to assumptions or ExcludedForms. This is the full version.
+  \ :code:`extendedSimplify(expr, assumptions)`\  is the extended version of simplify with respect to assumptions or ExcludedForms. This is the full version.
 
 .. _l575345787072657373696f6e-65787472616374:
 
@@ -1505,7 +1512,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; extract
 
 :spadfun:`extract`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``extract(expr,i)``\  returns the \ ``i``\ -th element of \ ``expr``\  seen as a list.
+  \ :code:`extract(expr,i)`\  returns the \ :code:`i`\ -th element of \ :code:`expr`\  seen as a list.
 
 
 \ :ref:`extract <l5753416767726567617465-65787472616374>`\ \: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> % 
@@ -1517,7 +1524,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factor
 
 :spadfun:`factor`\: % -> % 
-  \ ``factor(expr)``\  factors the expression or polynomial \ ``expr``\ .
+  \ :code:`factor(expr)`\  factors the expression or polynomial \ :code:`expr`\ .
 
 
 \ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
@@ -1528,7 +1535,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factor
 
 :spadfun:`factor`\: (%, %) -> % 
-  \ ``factor(expr, opt)``\  factors the expression or polynomial \ ``expr``\ . For example: \example{x := jWSExpr x;} \example{factor(1 + x^2, "GaussianIntegers -> True")}
+  \ :code:`factor(expr, opt)`\  factors the expression or polynomial \ :code:`expr`\ . For example: \example{x := jWSExpr x;} \example{factor(1 + x^2, "GaussianIntegers -> True")}
 
 .. _l575345787072657373696f6e-666163746f7269616c:
 
@@ -1550,7 +1557,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorList
 
 :spadfun:`factorList`\: % -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``factorList(expr)``\  factors the expression or polynomial \ ``expr``\ , but returns the result as a list of pairs (factor, exponent).
+  \ :code:`factorList(expr)`\  factors the expression or polynomial \ :code:`expr`\ , but returns the result as a list of pairs (factor, exponent).
 
 .. _l575345787072657373696f6e-666163746f72506f6c796e6f6d69616c:
 
@@ -1558,7 +1565,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorPolynomial
 
 :spadfun:`factorPolynomial`\: % -> % 
-  \ ``factorPolynomial(p)``\  factorizes the polynomial \ ``p``\ . For example: \example{x := jWSExpr x} \example{p:=expand(chebyshevT(7,x)* chebyshevU(9,x))} \example{factorPolynomial p}
+  \ :code:`factorPolynomial(p)`\  factorizes the polynomial \ :code:`p`\ . For example: \example{x := jWSExpr x} \example{p:=expand(chebyshevT(7,x)* chebyshevU(9,x))} \example{factorPolynomial p}
 
 
 \ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
@@ -1570,7 +1577,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorSquareFree
 
 :spadfun:`factorSquareFree`\: % -> % 
-  \ ``factorSquareFree(expr)``\  factors the expression or polynomial \ ``expr``\  in square free factors.
+  \ :code:`factorSquareFree(expr)`\  factors the expression or polynomial \ :code:`expr`\  in square free factors.
 
 .. _l575345787072657373696f6e-666163746f72537175617265467265654c697374:
 
@@ -1578,7 +1585,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorSquareFreeList
 
 :spadfun:`factorSquareFreeList`\: % -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``factorSquareFreeList(expr)``\  factors the expression or polynomial \ ``expr``\  in square free factors but returns the result as a list of pairs (factor, exponent).
+  \ :code:`factorSquareFreeList(expr)`\  factors the expression or polynomial \ :code:`expr`\  in square free factors but returns the result as a list of pairs (factor, exponent).
 
 .. _l575345787072657373696f6e-666163746f7253717561726546726565506f6c796e6f6d69616c:
 
@@ -1591,21 +1598,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorTerms
 
 :spadfun:`factorTerms`\: % -> % 
-  \ ``factorTerms(p)``\  factors out numerical factors of the expression or polynomial expr.
+  \ :code:`factorTerms(p)`\  factors out numerical factors of the expression or polynomial expr.
 
 
 .. index::
    pair: WSExpression; factorTerms
 
 :spadfun:`factorTerms`\: (%, %) -> % 
-  \ ``factorTerms(p, var)``\  factors out numerical factors of the expression or polynomial expr without those related to var.
+  \ :code:`factorTerms(p, var)`\  factors out numerical factors of the expression or polynomial expr without those related to var.
 
 
 .. index::
    pair: WSExpression; factorTerms
 
 :spadfun:`factorTerms`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> % 
-  \ ``factorTerms(p, vars)``\  factors the expression or polynomial expr by pulling out numerical factors without those related to var(\ ``s``\ ).
+  \ :code:`factorTerms(p, vars)`\  factors the expression or polynomial expr by pulling out numerical factors without those related to var(\ :code:`s`\ ).
 
 .. _l575345787072657373696f6e-666163746f725465726d734c697374:
 
@@ -1613,14 +1620,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorTermsList
 
 :spadfun:`factorTermsList`\: % -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``factorTermsList(expr)``\  is the counterpart of factorTerms but here returned as a list of pairs (numerical factor, polynomial factor).
+  \ :code:`factorTermsList(expr)`\  is the counterpart of factorTerms but here returned as a list of pairs (numerical factor, polynomial factor).
 
 
 .. index::
    pair: WSExpression; factorTermsList
 
 :spadfun:`factorTermsList`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``factorTermsList(expr, vars)``\  is the counterpart of factorTerms but here returned as a list of pairs (numerical factor, polynomial factor). The numerical factors related to var(\ ``s``\ ) are not factored.
+  \ :code:`factorTermsList(expr, vars)`\  is the counterpart of factorTerms but here returned as a list of pairs (numerical factor, polynomial factor). The numerical factors related to var(\ :code:`s`\ ) are not factored.
 
 .. _l575345787072657373696f6e-6669626f6e61636369:
 
@@ -1628,7 +1635,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; fibonacci
 
 :spadfun:`fibonacci`\: (%, %) -> % 
-  \ ``fibonacci(n, x)``\  returns the Fibonacci polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`fibonacci(n, x)`\  returns the Fibonacci polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-66696e64496e7374616e6365:
 
@@ -1636,42 +1643,42 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; findInstance
 
 :spadfun:`findInstance`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``findInstance(expr,lvars)``\  tries to find an instance of the (in)equation in \ ``expr``\ .
+  \ :code:`findInstance(expr,lvars)`\  tries to find an instance of the (in)equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; findInstance
 
 :spadfun:`findInstance`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``findInstance(expr,lvars,dom)``\  tries to find an instance to the equation in \ ``expr``\ .
+  \ :code:`findInstance(expr,lvars,dom)`\  tries to find an instance to the equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; findInstance
 
 :spadfun:`findInstance`\: (%, %, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``findInstance(expr,lvars,dom, n)``\  tries to find \ ``n``\  instance(\ ``s``\ ) to the (in)equation in \ ``expr``\ .
+  \ :code:`findInstance(expr,lvars,dom, n)`\  tries to find \ :code:`n`\  instance(\ :code:`s`\ ) to the (in)equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; findInstance
 
 :spadfun:`findInstance`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``findInstance(expr,lvars)``\  tries to find an instance of the equation in \ ``expr``\ .
+  \ :code:`findInstance(expr,lvars)`\  tries to find an instance of the equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; findInstance
 
 :spadfun:`findInstance`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``findInstance(expr,lvars,dom)``\  tries to find an instance of the equation in \ ``expr``\ .
+  \ :code:`findInstance(expr,lvars,dom)`\  tries to find an instance of the equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; findInstance
 
 :spadfun:`findInstance`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``findInstance(expr,lvars,dom,n)``\  tries to find \ ``n``\  instance(\ ``s``\ ) to the equation in \ ``expr``\ .
+  \ :code:`findInstance(expr,lvars,dom,n)`\  tries to find \ :code:`n`\  instance(\ :code:`s`\ ) to the equation in \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-66696e64526f6f74:
 
@@ -1679,7 +1686,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; findRoot
 
 :spadfun:`findRoot`\: (%, %) -> % 
-  \ ``findRoot(expr,start)``\  tries to find the root of \ ``expr``\  starting at \ ``start``\ . \example{x:= jWSExpr x} \example{findRoot(sin(x) + cos(x), "\{x, 0\}")}
+  \ :code:`findRoot(expr,start)`\  tries to find the root of \ :code:`expr`\  starting at \ :code:`start`\ . \example{x:= jWSExpr x} \example{findRoot(sin(x) + cos(x), "\{x, 0\}")}
 
 .. _l575345787072657373696f6e-6669727374:
 
@@ -1692,7 +1699,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; floor
 
 :spadfun:`floor`\: % -> % 
-  \ ``floor(x)``\  returns the greatest integer less than or equal to \ ``x``\ 
+  \ :code:`floor(x)`\  returns the greatest integer less than or equal to \ :code:`x`\ 
 
 .. _l575345787072657373696f6e-666f7572696572:
 
@@ -1700,28 +1707,28 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; fourier
 
 :spadfun:`fourier`\: % -> % 
-  \ ``fourier(expr)``\  returns the discrete Fourier transform from a list of numbers.
+  \ :code:`fourier(expr)`\  returns the discrete Fourier transform from a list of numbers.
 
 
 .. index::
    pair: WSExpression; fourier
 
 :spadfun:`fourier`\: (%, %) -> % 
-  \ ``fourier(expr, pos)``\  returns the elements of the discrete Fourier transform from a list of numbers with position(\ ``s``\ ) in the list pos.
+  \ :code:`fourier(expr, pos)`\  returns the elements of the discrete Fourier transform from a list of numbers with position(\ :code:`s`\ ) in the list pos.
 
 
 .. index::
    pair: WSExpression; fourier
 
 :spadfun:`fourier`\: (\ :ref:`WSList <l57534c697374>`\  %, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``fourier(list, lpos)``\  returns the elements of the discrete Fourier transform from a \ ``list``\  of numbers with position(\ ``s``\ ) in the \ ``list``\  lpos.
+  \ :code:`fourier(list, lpos)`\  returns the elements of the discrete Fourier transform from a \ :code:`list`\  of numbers with position(\ :code:`s`\ ) in the \ :code:`list`\  lpos.
 
 
 .. index::
    pair: WSExpression; fourier
 
 :spadfun:`fourier`\: \ :ref:`WSList <l57534c697374>`\  % -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``fourier(list)``\  returns the discrete Fourier transform from the \ ``list``\  of numbers.
+  \ :code:`fourier(list)`\  returns the discrete Fourier transform from the \ :code:`list`\  of numbers.
 
 .. _l575345787072657373696f6e-6672616374696f6e50617274:
 
@@ -1753,7 +1760,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; fromCoefficientRules
 
 :spadfun:`fromCoefficientRules`\: (%, %) -> % 
-  \ ``fromCoefficientRules(list, vars)``\  constructs the polynomial from the \ ``list``\  of coefficients and exponents rules. \example{x:= jWSExpr x;y := jWSExpr y} \example{coefficientRules((x + y)^2+x^11,jWSExpr [x,y])} \example{fromCoefficientRules(\%, jWSExpr [x,y])}
+  \ :code:`fromCoefficientRules(list, vars)`\  constructs the polynomial from the \ :code:`list`\  of coefficients and exponents rules. \example{x:= jWSExpr x;y := jWSExpr y} \example{coefficientRules((x + y)^2+x^11,jWSExpr [x,y])} \example{fromCoefficientRules(\%, jWSExpr [x,y])}
 
 .. _l575345787072657373696f6e-66756e6374696f6e457870616e64:
 
@@ -1761,14 +1768,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; functionExpand
 
 :spadfun:`functionExpand`\: % -> % 
-  \ ``functionExpand(expr)``\  tries to expand functions in \ ``expr``\  to more elementary functions. For example: \example{functionExpand sphericalBesselJ(3,8)}
+  \ :code:`functionExpand(expr)`\  tries to expand functions in \ :code:`expr`\  to more elementary functions. For example: \example{functionExpand sphericalBesselJ(3,8)}
 
 
 .. index::
    pair: WSExpression; functionExpand
 
 :spadfun:`functionExpand`\: (%, %) -> % 
-  \ ``functionExpand(expr,assumptions)``\  tries to expand functions in \ ``expr``\  to more elementary functions assuming that \ ``assumptions``\  are satisfied.
+  \ :code:`functionExpand(expr,assumptions)`\  tries to expand functions in \ :code:`expr`\  to more elementary functions assuming that \ :code:`assumptions`\  are satisfied.
 
 .. _l575345787072657373696f6e-47616d6d61:
 
@@ -1784,7 +1791,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; Gamma
 
 :spadfun:`Gamma`\: (%, %, %) -> % 
-  \ ``Gamma(a,z1,z2)``\  computes the generalized incomplete Gamma function.
+  \ :code:`Gamma(a,z1,z2)`\  computes the generalized incomplete Gamma function.
 
 .. _l575345787072657373696f6e-67616d6d61526567756c6172697a6564:
 
@@ -1792,7 +1799,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; gammaRegularized
 
 :spadfun:`gammaRegularized`\: (%, %) -> % 
-  \ ``gammaRegularized(a,x)``\  computes the regularized incomplete Gamma function.
+  \ :code:`gammaRegularized(a,x)`\  computes the regularized incomplete Gamma function.
 
 .. _l575345787072657373696f6e-676364:
 
@@ -1814,14 +1821,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; gegenbauerC
 
 :spadfun:`gegenbauerC`\: (%, %) -> % 
-  \ ``gegenbauerC(n,x)``\  returns the renormalized form of the Gegenbauer polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`gegenbauerC(n,x)`\  returns the renormalized form of the Gegenbauer polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 
 .. index::
    pair: WSExpression; gegenbauerC
 
 :spadfun:`gegenbauerC`\: (%, %, %) -> % 
-  \ ``gegenbauerC(n,lambda,x)``\  returns the Gegenbauer polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`gegenbauerC(n,lambda,x)`\  returns the Gegenbauer polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-67656e657261746f72:
 
@@ -1834,7 +1841,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; goldenRatio
 
 :spadfun:`goldenRatio`\: () -> % 
-  \ ``goldenRatio()``\  returns the golden ratio.
+  \ :code:`goldenRatio()`\  returns the golden ratio.
 
 .. _l575345787072657373696f6e-67726f65626e65724261736973:
 
@@ -1842,14 +1849,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; groebnerBasis
 
 :spadfun:`groebnerBasis`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``groebnerBasis(lpoly, lvar)``\  computes a Groebner basis from the list of polynomials \ ``lpoly``\  relative to the list of vars lvars.
+  \ :code:`groebnerBasis(lpoly, lvar)`\  computes a Groebner basis from the list of polynomials \ :code:`lpoly`\  relative to the list of vars lvars.
 
 
 .. index::
    pair: WSExpression; groebnerBasis
 
 :spadfun:`groebnerBasis`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``groebnerBasis(lpoly, lvar, opt)``\  computes a Groebner basis from the list of polynomials \ ``lpoly``\  relative to the list of variables in lvars without variables in opt. Opt can also give the modulus to compute it: "Modulus \ ``->``\  \ ``p"``\ .
+  \ :code:`groebnerBasis(lpoly, lvar, opt)`\  computes a Groebner basis from the list of polynomials \ :code:`lpoly`\  relative to the list of variables in lvars without variables in opt. Opt can also give the modulus to compute it: "Modulus \ :code:`->`\  \ :code:`p"`\ .
 
 .. _l575345787072657373696f6e-67726f756e643f:
 
@@ -1867,7 +1874,44 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; gudermannian
 
 :spadfun:`gudermannian`\: % -> % 
-  \ ``gudermannian(z)``\  computes the Gudermannian of \ ``z``\ .
+  \ :code:`gudermannian(z)`\  computes the Gudermannian of \ :code:`z`\ .
+
+.. _l575345787072657373696f6e-677565737347656e65726174696e6746756e6374696f6e:
+
+.. index::
+   pair: WSExpression; guessGeneratingFunction
+
+:spadfun:`guessGeneratingFunction`\: (%, %) -> % 
+  \ :code:`guessGeneratingFunction(l,x)`\  finds the generating function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example: \example{guessGeneratingFunction(jWSExpr("{1,2,4,8}"),x)}
+
+
+.. index::
+   pair: WSExpression; guessGeneratingFunction
+
+:spadfun:`guessGeneratingFunction`\: (\ :ref:`WSList <l57534c697374>`\  %, %) -> % 
+  \ :code:`guessGeneratingFunction(l,x)`\  finds the generating function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . Or from the \ :code:`lst`\  of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example: \example{guessGeneratingFunction([1,2,4,8],x)}
+
+.. _l575345787072657373696f6e-677565737353657175656e636546756e6374696f6e:
+
+.. index::
+   pair: WSExpression; guessSequenceFunction
+
+:spadfun:`guessSequenceFunction`\: % -> \ :ref:`WSSymbol <l575353796d626f6c>`\  
+  \ :code:`guessSequenceFunction(l)`\  finds the sequence from the list of coefficients \ :code:`l`\  Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example: \example{guessSequenceFunction(jWSExpr("{1,2,4,8}"))}
+
+
+.. index::
+   pair: WSExpression; guessSequenceFunction
+
+:spadfun:`guessSequenceFunction`\: (%, %) -> % 
+  \ :code:`guessSequenceFunction(l,x)`\  finds the sequence function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . For example: \example{guessSequenceFunction([1,2,4,jWSInt 8]::WSList(WSInteger),x)}
+
+
+.. index::
+   pair: WSExpression; guessSequenceFunction
+
+:spadfun:`guessSequenceFunction`\: \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  -> % 
+  \ :code:`guessSequenceFunction(l)`\  finds the sequence from the list of coefficients \ :code:`l`\ . For example: \example{guessSequenceFunction(jWSExpr("{1,2,4,8}"))}
 
 .. _l575345787072657373696f6e-6861686e5f70:
 
@@ -1910,7 +1954,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; haversine
 
 :spadfun:`haversine`\: % -> % 
-  \ ``haversine(z)``\  computes the Haversine of \ ``z``\ .
+  \ :code:`haversine(z)`\  computes the Haversine of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-686569676874:
 
@@ -1923,7 +1967,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hermiteH
 
 :spadfun:`hermiteH`\: (%, %) -> % 
-  \ ``hermiteH(n, x)``\  returns the Hermite polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`hermiteH(n, x)`\  returns the Hermite polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-686f726e6572466f726d:
 
@@ -1931,7 +1975,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hornerForm
 
 :spadfun:`hornerForm`\: (%, %) -> % 
-  \ ``hornerForm(expr, x)``\  returns the Horner form of \ ``expr``\  (minimizing multiplications).
+  \ :code:`hornerForm(expr, x)`\  returns the Horner form of \ :code:`expr`\  (minimizing multiplications).
 
 .. _l575345787072657373696f6e-6875727769747a4c65726368506869:
 
@@ -1939,7 +1983,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hurwitzLerchPhi
 
 :spadfun:`hurwitzLerchPhi`\: (%, %, %) -> % 
-  \ ``hurwitzLerchPhi(z,s,a)``\  computes the Hurwitz–Lerch transcendent phi function.
+  \ :code:`hurwitzLerchPhi(z,s,a)`\  computes the Hurwitz–Lerch transcendent phi function.
 
 .. _l575345787072657373696f6e-6875727769747a5a657461:
 
@@ -1947,7 +1991,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hurwitzZeta
 
 :spadfun:`hurwitzZeta`\: (%, %) -> % 
-  \ ``hurwitzZeta(s,a)``\  computes the Hurwitz zeta.
+  \ :code:`hurwitzZeta(s,a)`\  computes the Hurwitz zeta.
 
 .. _l575345787072657373696f6e-6879706572466163746f7269616c:
 
@@ -1955,7 +1999,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hyperFactorial
 
 :spadfun:`hyperFactorial`\: % -> % 
-  \ ``hyperFactorial(n)``\  computes the hyperfactorial of \ ``n``\ .
+  \ :code:`hyperFactorial(n)`\  computes the hyperfactorial of \ :code:`n`\ .
 
 .. _l575345787072657373696f6e-687970657267656f6d6574726963304631:
 
@@ -1963,7 +2007,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hypergeometric0F1
 
 :spadfun:`hypergeometric0F1`\: (%, %) -> % 
-  \ ``hypergeometric0F1(a,z)``\  is the hypergeometric 0F1.
+  \ :code:`hypergeometric0F1(a,z)`\  is the hypergeometric 0F1.
 
 .. _l575345787072657373696f6e-687970657267656f6d6574726963304631526567756c6172697a6564:
 
@@ -1971,7 +2015,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hypergeometric0F1Regularized
 
 :spadfun:`hypergeometric0F1Regularized`\: (%, %) -> % 
-  \ ``hypergeometric0F1Regularized(a,z)``\  is the regularized hypergeometric 0F1.
+  \ :code:`hypergeometric0F1Regularized(a,z)`\  is the regularized hypergeometric 0F1.
 
 .. _l575345787072657373696f6e-687970657267656f6d6574726963314631:
 
@@ -1979,7 +2023,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hypergeometric1F1
 
 :spadfun:`hypergeometric1F1`\: (%, %, %) -> % 
-  \ ``hypergeometric1F1(a,b,z)``\  is the Kummer confluent hypergeometric function 1F1.
+  \ :code:`hypergeometric1F1(a,b,z)`\  is the Kummer confluent hypergeometric function 1F1.
 
 .. _l575345787072657373696f6e-687970657267656f6d6574726963314631526567756c6172697a6564:
 
@@ -1987,7 +2031,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hypergeometric1F1Regularized
 
 :spadfun:`hypergeometric1F1Regularized`\: (%, %, %) -> % 
-  \ ``hypergeometric1F1Regularized(a,b,z)``\  is the regularized confluent hypergeometric function 1F1.
+  \ :code:`hypergeometric1F1Regularized(a,b,z)`\  is the regularized confluent hypergeometric function 1F1.
 
 .. _l575345787072657373696f6e-687970657267656f6d657472696355:
 
@@ -1995,7 +2039,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; hypergeometricU
 
 :spadfun:`hypergeometricU`\: (%, %, %) -> % 
-  \ ``hypergeometricU(a,b,z)``\  is the confluent hypergeometric function \ ``U``\ .
+  \ :code:`hypergeometricU(a,b,z)`\  is the confluent hypergeometric function \ :code:`U`\ .
 
 .. _l575345787072657373696f6e-696d6167:
 
@@ -2018,7 +2062,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; integer?
 
 :spadfun:`integer?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integer?(i)``\  checks whether or not \ ``i``\  is an integer.
+  \ :code:`integer?(i)`\  checks whether or not \ :code:`i`\  is an integer.
 
 .. _l575345787072657373696f6e-696e74656772616c:
 
@@ -2035,21 +2079,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; integrate
 
 :spadfun:`integrate`\: (%, %) -> % 
-  \ ``integrate(expr, opts|var)``\  integrates \ ``expr``\  with respect to opt or var as options. For example: \example{x:=jWSExpr x;integrate(1/(x^4-1),x)} \example{opt:=jWSList [x,-1,1]} \example{integrate(cos(x),opt)} \ ``=>``\  2 sin(1) \example{integrate(cos(x),"\{x,-1.0,1.0\}")} \ ``=>``\  1.68294
+  \ :code:`integrate(expr, opts|var)`\  integrates \ :code:`expr`\  with respect to opt or var as options. For example: \example{x:=jWSExpr x;integrate(1/(x^4-1),x)} \example{opt:=jWSList [x,-1,1]} \example{integrate(cos(x),opt)} \ :code:`=>`\  2 sin(1) \example{integrate(cos(x),"\{x,-1.0,1.0\}")} \ :code:`=>`\  1.68294
 
 
 .. index::
    pair: WSExpression; integrate
 
 :spadfun:`integrate`\: (%, %, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``integrate(expr, var, seg)``\  is the definite integration of \ ``expr``\  with respect to \ ``var``\  using segment seg.
+  \ :code:`integrate(expr, var, seg)`\  is the definite integration of \ :code:`expr`\  with respect to \ :code:`var`\  using segment seg.
 
 
 .. index::
    pair: WSExpression; integrate
 
 :spadfun:`integrate`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``integrate(expr, var)``\  is the indefinite integration of \ ``expr``\  with respect to var.
+  \ :code:`integrate(expr, var)`\  is the indefinite integration of \ :code:`expr`\  with respect to var.
 
 .. _l575345787072657373696f6e-696e746572706f6c6174696e67506f6c796e6f6d69616c:
 
@@ -2057,7 +2101,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; interpolatingPolynomial
 
 :spadfun:`interpolatingPolynomial`\: (%, %) -> % 
-  \ ``interpolatingPolynomial(lpoly,x)``\  interpolates the list of polynomials \ ``lpoly``\  with respect to \ ``x``\ .
+  \ :code:`interpolatingPolynomial(lpoly,x)`\  interpolates the list of polynomials \ :code:`lpoly`\  with respect to \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-696e74657273656374696f6e:
 
@@ -2075,7 +2119,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseBetaRegularized
 
 :spadfun:`inverseBetaRegularized`\: (%, %, %) -> % 
-  \ ``inverseBetaRegularized(s,a,b)``\  computes the inverse Beta regularized function.
+  \ :code:`inverseBetaRegularized(s,a,b)`\  computes the inverse Beta regularized function.
 
 .. _l575345787072657373696f6e-696e7665727365457266:
 
@@ -2083,7 +2127,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseErf
 
 :spadfun:`inverseErf`\: % -> % 
-  \ ``inverseErf(x)``\  computes the inverse error function of \ ``x``\ .
+  \ :code:`inverseErf(x)`\  computes the inverse error function of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-696e766572736545726663:
 
@@ -2091,7 +2135,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseErfc
 
 :spadfun:`inverseErfc`\: % -> % 
-  \ ``inverseErfc(x)``\  computes the inverse complementary error function of \ ``x``\ .
+  \ :code:`inverseErfc(x)`\  computes the inverse complementary error function of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-696e7665727365466f7572696572:
 
@@ -2099,28 +2143,28 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseFourier
 
 :spadfun:`inverseFourier`\: % -> % 
-  \ ``inverseFourier(expr)``\  returns the discrete inverse Fourier transform from a list of numbers.
+  \ :code:`inverseFourier(expr)`\  returns the discrete inverse Fourier transform from a list of numbers.
 
 
 .. index::
    pair: WSExpression; inverseFourier
 
 :spadfun:`inverseFourier`\: (%, %) -> % 
-  \ ``inverseFourier(expr, pos)``\  returns the elements of the discrete inverse Fourier transform from a list of numbers with position(\ ``s``\ ) in the list pos.
+  \ :code:`inverseFourier(expr, pos)`\  returns the elements of the discrete inverse Fourier transform from a list of numbers with position(\ :code:`s`\ ) in the list pos.
 
 
 .. index::
    pair: WSExpression; inverseFourier
 
 :spadfun:`inverseFourier`\: (\ :ref:`WSList <l57534c697374>`\  %, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``inverseFourier(list, lpos)``\  returns the elements of the discrete inverse Fourier transform from a \ ``list``\  of numbers with position(\ ``s``\ ) in the \ ``list``\  lpos.
+  \ :code:`inverseFourier(list, lpos)`\  returns the elements of the discrete inverse Fourier transform from a \ :code:`list`\  of numbers with position(\ :code:`s`\ ) in the \ :code:`list`\  lpos.
 
 
 .. index::
    pair: WSExpression; inverseFourier
 
 :spadfun:`inverseFourier`\: \ :ref:`WSList <l57534c697374>`\  % -> % 
-  \ ``inverseFourier(expr)``\  returns the discrete inverse Fourier transform from a list of numbers.
+  \ :code:`inverseFourier(expr)`\  returns the discrete inverse Fourier transform from a list of numbers.
 
 .. _l575345787072657373696f6e-696e766572736547616d6d61526567756c6172697a6564:
 
@@ -2128,7 +2172,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseGammaRegularized
 
 :spadfun:`inverseGammaRegularized`\: (%, %) -> % 
-  \ ``inverseGammaRegularized(a,s)``\  computes the inverse Gamma regularized function.
+  \ :code:`inverseGammaRegularized(a,s)`\  computes the inverse Gamma regularized function.
 
 .. _l575345787072657373696f6e-696e766572736547756465726d616e6e69616e:
 
@@ -2136,7 +2180,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseGudermannian
 
 :spadfun:`inverseGudermannian`\: % -> % 
-  \ ``inverseGudermannian(z)``\  computes the inverse Gudermannian.
+  \ :code:`inverseGudermannian(z)`\  computes the inverse Gudermannian.
 
 .. _l575345787072657373696f6e-696e7665727365486176657273696e65:
 
@@ -2144,7 +2188,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseHaversine
 
 :spadfun:`inverseHaversine`\: % -> % 
-  \ ``inverseHaversine(z)``\  computes the inverse Haversine.
+  \ :code:`inverseHaversine(z)`\  computes the inverse Haversine.
 
 .. _l575345787072657373696f6e-696e76657273654a61636f6269436e:
 
@@ -2152,7 +2196,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseJacobiCn
 
 :spadfun:`inverseJacobiCn`\: (%, %) -> % 
-  \ ``inverseJacobiCn(nu, m)``\  computes the inverse Jacobi \ ``CN``\  elliptic function.
+  \ :code:`inverseJacobiCn(nu, m)`\  computes the inverse Jacobi \ :code:`CN`\  elliptic function.
 
 .. _l575345787072657373696f6e-696e76657273654a61636f6269536e:
 
@@ -2160,7 +2204,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; inverseJacobiSn
 
 :spadfun:`inverseJacobiSn`\: (%, %) -> % 
-  \ ``inverseJacobiSn(nu, m)``\  computes the inverse Jacobi \ ``SN``\  elliptic function.
+  \ :code:`inverseJacobiSn(nu, m)`\  computes the inverse Jacobi \ :code:`SN`\  elliptic function.
 
 .. _l575345787072657373696f6e-6972726564756369626c653f:
 
@@ -2168,14 +2212,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; irreducible?
 
 :spadfun:`irreducible?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``irreducible?(p)``\  checks whether or not \ ``p``\  is irreducible.
+  \ :code:`irreducible?(p)`\  checks whether or not \ :code:`p`\  is irreducible.
 
 
 .. index::
    pair: WSExpression; irreducible?
 
 :spadfun:`irreducible?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``irreducible?(p)``\  checks whether or not \ ``p``\  is irreducible over Gaussian rationals or algebraic extensions.
+  \ :code:`irreducible?(p)`\  checks whether or not \ :code:`p`\  is irreducible over Gaussian rationals or algebraic extensions.
 
 .. _l575345787072657373696f6e-69733f:
 
@@ -2225,7 +2269,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jacobiAmplitude
 
 :spadfun:`jacobiAmplitude`\: (%, %) -> % 
-  \ ``jacobiAmplitude(u,m)``\  computes the amplitude function am.
+  \ :code:`jacobiAmplitude(u,m)`\  computes the amplitude function am.
 
 .. _l575345787072657373696f6e-6a61636f6269436e:
 
@@ -2243,7 +2287,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jacobiP
 
 :spadfun:`jacobiP`\: (%, %, %, %) -> % 
-  \ ``jacobiP(n, a, b, x)``\  returns the Jacobi polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`jacobiP(n, a, b, x)`\  returns the Jacobi polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-6a61636f6269536e:
 
@@ -2260,7 +2304,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jacobiTheta
 
 :spadfun:`jacobiTheta`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %, %) -> % 
-  \ ``jacobiTheta(n, z, m)``\  are the Jacobi Theta functions.
+  \ :code:`jacobiTheta(n, z, m)`\  are the Jacobi Theta functions.
 
 .. _l575345787072657373696f6e-6a61636f62695a657461:
 
@@ -2268,7 +2312,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jacobiZeta
 
 :spadfun:`jacobiZeta`\: (%, %) -> % 
-  \ ``jacobiZeta(ϕ,m)``\  computes the Jacobi Zeta function.
+  \ :code:`jacobiZeta(ϕ,m)`\  computes the Jacobi Zeta function.
 
 .. _l575345787072657373696f6e-6a6c41626f7574:
 
@@ -2306,14 +2350,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlDisplay
 
 :spadfun:`jlDisplay`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlDisplay(expr, form)``\  returns the `form` form of \ ``expr``\  resulting for example in: "Format[Sin[\ ``x``\ ], TeXForm]" \ ``=>``\  \sin \ ``x``\ 
+  \ :code:`jlDisplay(expr, form)`\  returns the `form` form of \ :code:`expr`\  resulting for example in: "Format[Sin[\ :code:`x`\ ], TeXForm]" \ :code:`=>`\  \sin \ :code:`x`\ 
 
 
 .. index::
    pair: WSExpression; jlDisplay
 
 :spadfun:`jlDisplay`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``jlDisplay(expr)``\  returns the traditional form of \ ``expr``\ . This is equivalent to: jWSExpr "Format[Sin[\ ``x``\ ]]" \ ``=>``\  sin(\ ``x``\ )
+  \ :code:`jlDisplay(expr)`\  returns the traditional form of \ :code:`expr`\ . This is equivalent to: jWSExpr "Format[Sin[\ :code:`x`\ ]]" \ :code:`=>`\  sin(\ :code:`x`\ )
 
 .. _l575345787072657373696f6e-6a6c44756d70:
 
@@ -2330,21 +2374,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlEval
 
 :spadfun:`jlEval`\: (%, \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jlEval(expr, param)``\  evaluates expression \ ``expr``\  with param as parameter(\ ``s``\ ). For example: \example{x:=jWSExpr("x");jlEval(sqrt(x),"x=2.0")}
+  \ :code:`jlEval(expr, param)`\  evaluates expression \ :code:`expr`\  with param as parameter(\ :code:`s`\ ). See also `eval` or `replaceAll`. For example: \example{x:=jWSExpr("x");jlEval(sqrt(x),"x=2.0")}
 
 
 .. index::
    pair: WSExpression; jlEval
 
 :spadfun:`jlEval`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jlEval(expr, param1, param2)``\  evaluates expression \ ``expr``\  with \ ``param1``\  and \ ``param2``\  as parameters. \example{a:=jWSExpr("a");b:=jWSExpr("b");} \example{jlEval(sqrt(a^2+b^2),"a=1.0","b=1.0")}
+  \ :code:`jlEval(expr, param1, param2)`\  evaluates expression \ :code:`expr`\  with \ :code:`param1`\  and \ :code:`param2`\  as parameters. See also `eval` or `replaceAll`. \example{a:=jWSExpr("a");b:=jWSExpr("b");} \example{jlEval(sqrt(a^2+b^2),"a=1.0","b=1.0")}
 
 
 .. index::
    pair: WSExpression; jlEval
 
 :spadfun:`jlEval`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jlEval(expr, param11, param2, param3)``\  evaluates expression \ ``expr``\  with \ ``param1``\ , \ ``param2``\  and \ ``param3``\  as parameters.
+  \ :code:`jlEval(expr, param11, param2, param3)`\  evaluates expression \ :code:`expr`\  with \ :code:`param1`\ , \ :code:`param2`\  and \ :code:`param3`\  as parameters. See also `eval` or `replaceAll`.
 
 .. _l575345787072657373696f6e-6a6c4669656c644e616d6573:
 
@@ -2372,7 +2416,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlGreedyEval
 
 :spadfun:`jlGreedyEval`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlGreedyEval(bool)``\  toggles automatic arithmetic operations. Plus[a, a] can become Times[2, a] using or not Julia `weval`.
+  \ :code:`jlGreedyEval(bool)`\  toggles automatic arithmetic operations. Plus[a, a] can become Times[2, a] using or not Julia `weval`.
 
 .. _l575345787072657373696f6e-6a6c48656164:
 
@@ -2430,7 +2474,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSAccuracy
 
 :spadfun:`jlWSAccuracy`\: % -> % 
-  \ ``jlWSAccuracy(expr)``\  get accuracy of \ ``expr``\ .
+  \ :code:`jlWSAccuracy(expr)`\  get accuracy of \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6a6c5753446566696e65643f:
 
@@ -2438,7 +2482,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSDefined?
 
 :spadfun:`jlWSDefined?`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlWSDefined?(sym)``\  checks whether or not the symbol \ ``sym``\  is defined in the \ ``WS``\  language. For example: \example{jlWSDefined? "Sin"} \ ``=>``\  \ ``true``\ 
+  \ :code:`jlWSDefined?(sym)`\  checks whether or not the symbol \ :code:`sym`\  is defined in the \ :code:`WS`\  language. For example: \example{jlWSDefined? "Sin"} \ :code:`=>`\  \ :code:`true`\ 
 
 .. _l575345787072657373696f6e-6a6c5753507265636973696f6e:
 
@@ -2446,7 +2490,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSPrecision
 
 :spadfun:`jlWSPrecision`\: % -> % 
-  \ ``jlWSPrecision get``\  precision of expr.
+  \ :code:`jlWSPrecision get`\  precision of expr.
 
 .. _l575345787072657373696f6e-6a6c57535365744163637572616379:
 
@@ -2454,7 +2498,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSSetAccuracy
 
 :spadfun:`jlWSSetAccuracy`\: (%, %) -> % 
-  \ ``jlWSSetAccuracy(expr, acc)``\  sets accuracy of \ ``expr``\  to acc.
+  \ :code:`jlWSSetAccuracy(expr, acc)`\  sets accuracy of \ :code:`expr`\  to acc.
 
 .. _l575345787072657373696f6e-6a6c57535365744f7074696f6e73:
 
@@ -2462,7 +2506,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSSetOptions
 
 :spadfun:`jlWSSetOptions`\: (%, %) -> % 
-  \ ``jlWSSetOptions(type, opts)``\  sets some internal engine options.
+  \ :code:`jlWSSetOptions(type, opts)`\  sets some internal engine options.
 
 .. _l575345787072657373696f6e-6a6c5753536574507265636973696f6e:
 
@@ -2470,7 +2514,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSSetPrecision
 
 :spadfun:`jlWSSetPrecision`\: (%, %) -> % 
-  \ ``jlWSSetPrecision(expr, prec)``\  sets precision of \ ``expr``\  to prec.
+  \ :code:`jlWSSetPrecision(expr, prec)`\  sets precision of \ :code:`expr`\  to prec.
 
 .. _l575345787072657373696f6e-6a6f696e:
 
@@ -2488,49 +2532,49 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: % -> % 
-  \ ``jWSData(sym)``\  returns the entity(ies) associated to \ ``sym``\ (\ ``s``\ ).
+  \ :code:`jWSData(sym)`\  returns the entity(ies) associated to \ :code:`sym`\ (\ :code:`s`\ ).
 
 
 .. index::
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: (%, %) -> % 
-  \ ``jWSData(sym, prop)``\  returns the property of \ ``sym``\ .
+  \ :code:`jWSData(sym, prop)`\  returns the property of \ :code:`sym`\ .
 
 
 .. index::
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: (%, %, %) -> % 
-  \ ``jWSData(sym, prop, ann)``\  returns the annotation for the property of \ ``sym``\ .
+  \ :code:`jWSData(sym, prop, ann)`\  returns the annotation for the property of \ :code:`sym`\ .
 
 
 .. index::
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: () -> % 
-  \ ``jWSData()``\  returns the list of \ ``WS``\  symbols. Note: Currently unprintable.
+  \ :code:`jWSData()`\  returns the list of \ :code:`WS`\  symbols. Note: Currently unprintable.
 
 
 .. index::
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jWSData(sym, prop)``\  returns the property of \ ``sym``\ .
+  \ :code:`jWSData(sym, prop)`\  returns the property of \ :code:`sym`\ .
 
 
 .. index::
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``jWSData(sym, prop, ann)``\  returns the annotation for the property of \ ``sym``\ .
+  \ :code:`jWSData(sym, prop, ann)`\  returns the annotation for the property of \ :code:`sym`\ .
 
 
 .. index::
    pair: WSExpression; jWSData
 
 :spadfun:`jWSData`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSData(sym)``\  returns the entity(ies) associated to \ ``sym``\ (\ ``s``\ ).
+  \ :code:`jWSData(sym)`\  returns the entity(ies) associated to \ :code:`sym`\ (\ :code:`s`\ ).
 
 .. _l575345787072657373696f6e-6a5753457175616c:
 
@@ -2538,7 +2582,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSEqual
 
 :spadfun:`jWSEqual`\: (%, %) -> % 
-  \ ``jWSEqual(lhs,rhs)``\  returns the Julia \ ``WS``\  equality \ ``lhs``\  \ ``==``\  \ ``rhs``\ .
+  \ :code:`jWSEqual(lhs,rhs)`\  returns the Julia \ :code:`WS`\  equality \ :code:`lhs`\  \ :code:`==`\  \ :code:`rhs`\ .
 
 .. _l575345787072657373696f6e-6a575345787072:
 
@@ -2546,63 +2590,63 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``jWSExpr(r)``\  returns the DoubleFloat as a WSExpression.
+  \ :code:`jWSExpr(r)`\  returns the DoubleFloat as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jWSExpr(r)``\  returns the Float \ ``r``\  as a WSExpression.
+  \ :code:`jWSExpr(r)`\  returns the Float \ :code:`r`\  as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jWSExpr(q)``\  returns the Fraction(Integer) \ ``q``\  as a WSExpression.
+  \ :code:`jWSExpr(q)`\  returns the Fraction(Integer) \ :code:`q`\  as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jWSExpr(z)``\  returns the Integer \ ``z``\  as a WSExpression.
+  \ :code:`jWSExpr(z)`\  returns the Integer \ :code:`z`\  as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`JLFloat <l4a4c466c6f6174>`\  -> % 
-  \ ``jWSExpr(r)``\  returns the JLFloat \ ``r``\  as a WSExpression.
+  \ :code:`jWSExpr(r)`\  returns the JLFloat \ :code:`r`\  as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``jWSExpr(r)``\  returns the \ ``JLFloat64``\  as a WSExpression.
+  \ :code:`jWSExpr(r)`\  returns the \ :code:`JLFloat64`\  as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``jWSExpr(list)``\  returns the \ ``list``\  of WSExpression as a WSExpression.
+  \ :code:`jWSExpr(list)`\  returns the \ :code:`list`\  of WSExpression as a WSExpression.
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSExpr(str)``\  constructs \ ``str``\  as a WSExpression evaluating \ ``str``\  as a Wolfram Symbolic Language expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{jlWSDateString(jWSExpr "Tomorrow")} \example{toString jWSExpr "TextSentences[WikipediaData[_"Sun_"]][[;; 40]]"} Example: jWSExpr "Probability[\ ``x``\  < 1, \ ``x``\  \ ``\[``\ Distributed] NormalDistribution[]]"
+  \ :code:`jWSExpr(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language expression. For example: \example{jWSExpr "Factorial[5]"} \example{jWSExpr "3.14159"} \example{jlWSDateString(jWSExpr "Tomorrow")} \example{toString jWSExpr "TextSentences[WikipediaData[_"Sun_"]][[;; 40]]"} Example: jWSExpr "Probability[\ :code:`x`\  < 1, \ :code:`x`\  \ :code:`\[`\ Distributed] NormalDistribution[]]"
 
 
 .. index::
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``jWSExpr(sym)``\  coerces \ ``sym``\  to a WSExpression. For example: \ ``x``\  \ ``:=``\  jWSExpr \ ``x``\ 
+  \ :code:`jWSExpr(sym)`\  coerces \ :code:`sym`\  to a WSExpression. For example: \ :code:`x`\  \ :code:`:=`\  jWSExpr \ :code:`x`\ 
 
 .. _l575345787072657373696f6e-6a575347726561746572:
 
@@ -2610,7 +2654,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSGreater
 
 :spadfun:`jWSGreater`\: (%, %) -> % 
-  \ ``jWSGreater(lhs,rhs)``\  returns the Julia \ ``WS``\  inequality \ ``lhs``\  > \ ``rhs``\ .
+  \ :code:`jWSGreater(lhs,rhs)`\  returns the Julia \ :code:`WS`\  inequality \ :code:`lhs`\  > \ :code:`rhs`\ .
 
 .. _l575345787072657373696f6e-6a575347726561746572457175616c:
 
@@ -2618,7 +2662,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSGreaterEqual
 
 :spadfun:`jWSGreaterEqual`\: (%, %) -> % 
-  \ ``jWSGreaterEqual(lhs,rhs)``\  returns the Julia \ ``WS``\  inequality \ ``lhs``\  \ ``>=``\  \ ``rhs``\ .
+  \ :code:`jWSGreaterEqual(lhs,rhs)`\  returns the Julia \ :code:`WS`\  inequality \ :code:`lhs`\  \ :code:`>=`\  \ :code:`rhs`\ .
 
 .. _l575345787072657373696f6e-6a5753496e74657270726574:
 
@@ -2639,7 +2683,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSLess
 
 :spadfun:`jWSLess`\: (%, %) -> % 
-  \ ``jWSLess(lhs,rhs)``\  returns the Julia \ ``WS``\  inequality \ ``lhs``\  < \ ``rhs``\ .
+  \ :code:`jWSLess(lhs,rhs)`\  returns the Julia \ :code:`WS`\  inequality \ :code:`lhs`\  < \ :code:`rhs`\ .
 
 .. _l575345787072657373696f6e-6a57534c657373457175616c:
 
@@ -2647,7 +2691,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSLessEqual
 
 :spadfun:`jWSLessEqual`\: (%, %) -> % 
-  \ ``jWSLessEqual(lhs,rhs)``\  returns the Julia \ ``WS``\  inequality \ ``lhs``\  \ ``<=``\  \ ``rhs``\ .
+  \ :code:`jWSLessEqual(lhs,rhs)`\  returns the Julia \ :code:`WS`\  inequality \ :code:`lhs`\  \ :code:`<=`\  \ :code:`rhs`\ .
 
 .. _l575345787072657373696f6e-6a57534e6f74457175616c:
 
@@ -2655,7 +2699,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSNotEqual
 
 :spadfun:`jWSNotEqual`\: (%, %) -> % 
-  \ ``jWSNotEqual(lhs,rhs)``\  returns the Julia \ ``WS``\  inequality \ ``lhs``\  \ ``!=``\  \ ``rhs``\ .
+  \ :code:`jWSNotEqual(lhs,rhs)`\  returns the Julia \ :code:`WS`\  inequality \ :code:`lhs`\  \ :code:`!=`\  \ :code:`rhs`\ .
 
 .. _l575345787072657373696f6e-6a57535175616e74697479:
 
@@ -2663,14 +2707,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSQuantity
 
 :spadfun:`jWSQuantity`\: % -> % 
-  \ ``jWSQuantity(jWSString(u))``\  returns quantity unit \ ``u``\  of 1. For example: \example{jWSQuantity jWSString "Meter"}
+  \ :code:`jWSQuantity(jWSString(u))`\  returns quantity unit \ :code:`u`\  of 1. For example: \example{jWSQuantity jWSString "Meter"}
 
 
 .. index::
    pair: WSExpression; jWSQuantity
 
 :spadfun:`jWSQuantity`\: (%, %) -> % 
-  \ ``jWSQuantity(x,jWSString(u))``\  returns quantity unit \ ``u``\  of \ ``x``\ . For example: \example{jWSQuantity(1.2, jWSString "Meter")}
+  \ :code:`jWSQuantity(x,jWSString(u))`\  returns quantity unit \ :code:`u`\  of \ :code:`x`\ . For example: \example{jWSQuantity(1.2, jWSString "Meter")}
 
 .. _l575345787072657373696f6e-6a575352756c65:
 
@@ -2678,7 +2722,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSRule
 
 :spadfun:`jWSRule`\: (%, %) -> % 
-  \ ``jWSRule(lhs,rhs)``\  returns the Julia \ ``WS``\  rule \ ``lhs``\ ->rhs.
+  \ :code:`jWSRule(lhs,rhs)`\  returns the Julia \ :code:`WS`\  rule \ :code:`lhs`\ ->rhs.
+
+
+.. index::
+   pair: WSExpression; jWSRule
+
+:spadfun:`jWSRule`\: \ :ref:`Equation <l4571756174696f6e>`\  % -> % 
+  \ :code:`jWSRule(eq)`\  returns the Julia \ :code:`WS`\  rule \ :code:`lhs`\ ->rhs for the equation \ :code:`eq`\ . For example: \example{x := jWSExpr x} \example{p := 1/2 * legendreQ(5,x)} \example{replaceAll(p, jWSRule(x = jWSExpr "1.55555556444883838383833777333333333"))}
 
 .. _l575345787072657373696f6e-6a57535461626c65:
 
@@ -2686,14 +2737,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSTable
 
 :spadfun:`jWSTable`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``jWSTable(expr, range)``\  applies the \ ``expr``\  to the defined range.
+  \ :code:`jWSTable(expr, range)`\  applies the \ :code:`expr`\  to the defined range.
 
 
 .. index::
    pair: WSExpression; jWSTable
 
 :spadfun:`jWSTable`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``jWSTable(expr, range1, range2)``\  applies the \ ``expr``\  to the defined ranges.
+  \ :code:`jWSTable(expr, range1, range2)`\  applies the \ :code:`expr`\  to the defined ranges.
 
 .. _l575345787072657373696f6e-6b656c76696e426569:
 
@@ -2739,7 +2790,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; key?
 
 :spadfun:`key?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``key?(assoc,key)``\  checks whether or not \ ``key``\  exists in the association \ ``assoc``\ .
+  \ :code:`key?(assoc,key)`\  checks whether or not \ :code:`key`\  exists in the association \ :code:`assoc`\ .
 
 .. _l575345787072657373696f6e-6b657973:
 
@@ -2747,7 +2798,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; keys
 
 :spadfun:`keys`\: % -> % 
-  \ ``keys(expr)``\  returns the key elements in \ ``expr``\  if any.
+  \ :code:`keys(expr)`\  returns the key elements in \ :code:`expr`\  if any.
 
 .. _l575345787072657373696f6e-6b6c65696e496e76617269616e744a:
 
@@ -2755,7 +2806,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; kleinInvariantJ
 
 :spadfun:`kleinInvariantJ`\: % -> % 
-  \ ``kleinInvariantJ(tau)``\  computes the Klein\ ``'s``\  absolute invariant.
+  \ :code:`kleinInvariantJ(tau)`\  computes the Klein\ :code:`'s`\  absolute invariant.
 
 .. _l575345787072657373696f6e-6b7261777463686f756b4b:
 
@@ -2778,14 +2829,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; laguerreL
 
 :spadfun:`laguerreL`\: (%, %) -> % 
-  \ ``laguerreL(n, x)``\  returns the Laguerre polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number. For example: \example{laguerreL(5, jWSExpr x)}
+  \ :code:`laguerreL(n, x)`\  returns the Laguerre polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number. For example: \example{laguerreL(5, jWSExpr x)}
 
 
 .. index::
    pair: WSExpression; laguerreL
 
 :spadfun:`laguerreL`\: (%, %, %) -> % 
-  \ ``laguerreL(n, a, x)``\  returns the generalized Laguerre polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`laguerreL(n, a, x)`\  returns the generalized Laguerre polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-6c616d6265727457:
 
@@ -2797,7 +2848,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; lambertW
 
 :spadfun:`lambertW`\: (\ :ref:`WSInteger <l5753496e7465676572>`\ , %) -> % 
-  \ ``lambertW(k,z)``\  returns the \ ``k``\ -th solution to the LambertW function.
+  \ :code:`lambertW(k,z)`\  returns the \ :code:`k`\ -th solution to the LambertW function.
 
 .. _l575345787072657373696f6e-6c617374:
 
@@ -2843,14 +2894,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; legendreP
 
 :spadfun:`legendreP`\: (%, %) -> % 
-  \ ``legendreP(n, x)``\  returns the Legendre polynomial of the first kind or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`legendreP(n, x)`\  returns the Legendre polynomial of the first kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 
 .. index::
    pair: WSExpression; legendreP
 
 :spadfun:`legendreP`\: (%, %, %) -> % 
-  \ ``legendreP(n, m, x)``\  returns the associated Legendre polynomial of the first type or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`legendreP(n, m, x)`\  returns the associated Legendre polynomial of the first type or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-6c6567656e64726551:
 
@@ -2858,14 +2909,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; legendreQ
 
 :spadfun:`legendreQ`\: (%, %) -> % 
-  \ ``legendreQ(n, x)``\  returns the Legendre function of the second kind or evaluates it at \ ``x``\  if \ ``x``\  is a number. \example{legendreQ(3,jWSExpr x)}
+  \ :code:`legendreQ(n, x)`\  returns the Legendre function of the second kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number. \example{legendreQ(3,jWSExpr x)}
 
 
 .. index::
    pair: WSExpression; legendreQ
 
 :spadfun:`legendreQ`\: (%, %, %) -> % 
-  \ ``legendreQ(n, m, x)``\  returns the associated Legendre function of the second kind or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`legendreQ(n, m, x)`\  returns the associated Legendre function of the second kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-6c656e677468:
 
@@ -2873,7 +2924,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; length
 
 :spadfun:`length`\: % -> % 
-  \ ``length(expr)``\  returns the length of \ ``expr``\  seen as a list.
+  \ :code:`length(expr)`\  returns the length of \ :code:`expr`\  seen as a list.
 
 
 \ :ref:`length <l5753416767726567617465-6c656e677468>`\ \: % -> \ :ref:`WSInteger <l5753496e7465676572>`\  
@@ -2885,7 +2936,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; lerchPhi
 
 :spadfun:`lerchPhi`\: (%, %, %) -> % 
-  \ ``lerchPhi(z,s,a)``\  returns Lerch\ ``'s``\  transcendent phi of arguments.
+  \ :code:`lerchPhi(z,s,a)`\  returns Lerch\ :code:`'s`\  transcendent phi of arguments.
 
 .. _l575345787072657373696f6e-6c6576656c:
 
@@ -2893,14 +2944,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; level
 
 :spadfun:`level`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``level(expr, lev)``\  returns the list of expression \ ``expr``\  at level lev.
+  \ :code:`level(expr, lev)`\  returns the list of expression \ :code:`expr`\  at level lev.
 
 
 .. index::
    pair: WSExpression; level
 
 :spadfun:`level`\: (%, %, \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``level(expr, lev, head)``\  returns the list of expression \ ``expr``\  at level \ ``lev``\  with heads if head is \ ``true``\ .
+  \ :code:`level(expr, lev, head)`\  returns the list of expression \ :code:`expr`\  at level \ :code:`lev`\  with heads if head is \ :code:`true`\ .
 
 .. _l575345787072657373696f6e-6c69:
 
@@ -2918,7 +2969,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; limit
 
 :spadfun:`limit`\: (%, %) -> % 
-  \ ``limit(expr, params)``\  returns the limit, eventually nested or multivariate, of \ ``expr``\ . For example: \example{x:=jWSExpr x; limit(sin(x)-sin(x-1/x),"x->Infinity")}
+  \ :code:`limit(expr, params)`\  returns the limit, eventually nested or multivariate, of \ :code:`expr`\ . For example: \example{x:=jWSExpr x; limit(sin(x)-sin(x-1/x),"x->Infinity")}
 
 .. _l575345787072657373696f6e-6c6f673130:
 
@@ -2926,7 +2977,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; log10
 
 :spadfun:`log10`\: % -> % 
-  \ ``log10(x)``\  computes the logarithm of \ ``x``\  in base 10.
+  \ :code:`log10(x)`\  computes the logarithm of \ :code:`x`\  in base 10.
 
 .. _l575345787072657373696f6e-6c6f6732:
 
@@ -2934,7 +2985,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; log2
 
 :spadfun:`log2`\: % -> % 
-  \ ``log2(x)``\  computes the logarithm of \ ``x``\  in base 2.
+  \ :code:`log2(x)`\  computes the logarithm of \ :code:`x`\  in base 2.
 
 .. _l575345787072657373696f6e-6c6f67:
 
@@ -2947,7 +2998,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; logBarnesG
 
 :spadfun:`logBarnesG`\: % -> % 
-  \ ``logBarnesG(x)``\  is the logarithm of the Barnes \ ``G``\ -function.
+  \ :code:`logBarnesG(x)`\  is the logarithm of the Barnes \ :code:`G`\ -function.
 
 .. _l575345787072657373696f6e-6c6f6747616d6d61:
 
@@ -2955,7 +3006,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; logGamma
 
 :spadfun:`logGamma`\: % -> % 
-  \ ``logGamma(z)``\  returns the log-Gamma of \ ``z``\ .
+  \ :code:`logGamma(z)`\  returns the log-Gamma of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-6c6f6d6d656c5331:
 
@@ -2977,14 +3028,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; lookup
 
 :spadfun:`lookup`\: (%, %) -> % 
-  \ ``lookup(assocs,keys)``\  returns value(\ ``s``\ ) associated to key(\ ``s``\ ).
+  \ :code:`lookup(assocs,keys)`\  returns value(\ :code:`s`\ ) associated to key(\ :code:`s`\ ).
 
 
 .. index::
    pair: WSExpression; lookup
 
 :spadfun:`lookup`\: (%, %, %) -> % 
-  \ ``lookup(assocs,keys, defaultval)``\  returns value(\ ``s``\ ) associated to key(\ ``s``\ ) if key(\ ``s``\ ) exist(\ ``s``\ ), otherwise defaultval
+  \ :code:`lookup(assocs,keys, defaultval)`\  returns value(\ :code:`s`\ ) associated to key(\ :code:`s`\ ) if key(\ :code:`s`\ ) exist(\ :code:`s`\ ), otherwise defaultval
 
 .. _l575345787072657373696f6e-6d616368696e654e756d6265723f:
 
@@ -2992,7 +3043,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; machineNumber?
 
 :spadfun:`machineNumber?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``machineNumber?(expr)``\  checks whether or not \ ``expr``\  is a CPU/GPU supported number.
+  \ :code:`machineNumber?(expr)`\  checks whether or not \ :code:`expr`\  is a CPU/GPU supported number.
 
 .. _l575345787072657373696f6e-6d61696e4b65726e656c:
 
@@ -3014,7 +3065,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuC
 
 :spadfun:`mathieuC`\: (%, %, %) -> % 
-  \ ``mathieuC(a,q,z)``\  is the even Mathieu function with characteristic a and parameter \ ``q``\ .
+  \ :code:`mathieuC(a,q,z)`\  is the even Mathieu function with characteristic a and parameter \ :code:`q`\ .
 
 .. _l575345787072657373696f6e-6d617468696575436861726163746572697374696341:
 
@@ -3022,7 +3073,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuCharacteristicA
 
 :spadfun:`mathieuCharacteristicA`\: (%, %) -> % 
-  \ ``mathieuCharacteristicA(r,q)``\  returns the characteristic for even Mathieu function.
+  \ :code:`mathieuCharacteristicA(r,q)`\  returns the characteristic for even Mathieu function.
 
 .. _l575345787072657373696f6e-6d617468696575436861726163746572697374696342:
 
@@ -3030,7 +3081,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuCharacteristicB
 
 :spadfun:`mathieuCharacteristicB`\: (%, %) -> % 
-  \ ``mathieuCharacteristicB(r,q)``\  returns the characteristic for odd Mathieu function.
+  \ :code:`mathieuCharacteristicB(r,q)`\  returns the characteristic for odd Mathieu function.
 
 .. _l575345787072657373696f6e-6d61746869657543686172616374657269737469634578706f6e656e74:
 
@@ -3038,7 +3089,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuCharacteristicExponent
 
 :spadfun:`mathieuCharacteristicExponent`\: (%, %) -> % 
-  \ ``mathieuCharacteristicExponent(a,q)``\  returns the characteristic exponent of the Mathieu function.
+  \ :code:`mathieuCharacteristicExponent(a,q)`\  returns the characteristic exponent of the Mathieu function.
 
 .. _l575345787072657373696f6e-6d617468696575435072696d65:
 
@@ -3046,7 +3097,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuCPrime
 
 :spadfun:`mathieuCPrime`\: (%, %, %) -> % 
-  \ ``mathieuCPrime(a,q,z)``\  is the derivative of the even Mathieu function.
+  \ :code:`mathieuCPrime(a,q,z)`\  is the derivative of the even Mathieu function.
 
 .. _l575345787072657373696f6e-6d61746869657553:
 
@@ -3054,7 +3105,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuS
 
 :spadfun:`mathieuS`\: (%, %, %) -> % 
-  \ ``mathieuS(b,q,z)``\  is the odd Mathieu function with characteristic \ ``b``\  and parameter \ ``q``\ .
+  \ :code:`mathieuS(b,q,z)`\  is the odd Mathieu function with characteristic \ :code:`b`\  and parameter \ :code:`q`\ .
 
 .. _l575345787072657373696f6e-6d617468696575535072696d65:
 
@@ -3062,7 +3113,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; mathieuSPrime
 
 :spadfun:`mathieuSPrime`\: (%, %, %) -> % 
-  \ ``mathieuSPrime(b,q,z)``\  is the derivative of the odd Mathieu function.
+  \ :code:`mathieuSPrime(b,q,z)`\  is the derivative of the odd Mathieu function.
 
 .. _l575345787072657373696f6e-6d6174726978466f726d:
 
@@ -3070,7 +3121,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; matrixForm
 
 :spadfun:`matrixForm`\: % -> % 
-  \ ``matrixForm(mat)``\  returns a pretty-printable form of \ ``mat``\  i.e. its \ ``WS``\  'MatrixForm'.
+  \ :code:`matrixForm(mat)`\  returns a pretty-printable form of \ :code:`mat`\  i.e. its \ :code:`WS`\  'MatrixForm'.
 
 .. _l575345787072657373696f6e-6d6178696d697a65:
 
@@ -3078,21 +3129,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; maximize
 
 :spadfun:`maximize`\: (%, %) -> % 
-  \ ``maximize(expr, vars)``\  is the \ ``WS``\  symbolic maximization function. \ ``expr``\  can contain constraints if it is a \ ``WS``\  list of constraints with function to maximize as the first element. Global optimization function otherwise.
+  \ :code:`maximize(expr, vars)`\  is the \ :code:`WS`\  symbolic maximization function. \ :code:`expr`\  can contain constraints if it is a \ :code:`WS`\  list of constraints with function to maximize as the first element. Global optimization function otherwise.
 
 
 .. index::
    pair: WSExpression; maximize
 
 :spadfun:`maximize`\: (%, %, %) -> % 
-  \ ``maximize(expr, vars, dom)``\  is the \ ``WS``\  symbolic maximization function. dom restricts the domain of variables, for example, Integers.
+  \ :code:`maximize(expr, vars, dom)`\  is the \ :code:`WS`\  symbolic maximization function. dom restricts the domain of variables, for example, Integers.
 
 
 .. index::
    pair: WSExpression; maximize
 
 :spadfun:`maximize`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``maximize(expr, sym)``\  symbolically maximizes expression function \ ``expr``\  with respect to \ ``sym``\ . \ ``expr``\  can contain constraints if it is a \ ``WS``\  list of constraints with function to maximize as the first element. Global optimization function otherwise.
+  \ :code:`maximize(expr, sym)`\  symbolically maximizes expression function \ :code:`expr`\  with respect to \ :code:`sym`\ . \ :code:`expr`\  can contain constraints if it is a \ :code:`WS`\  list of constraints with function to maximize as the first element. Global optimization function otherwise.
 
 .. _l575345787072657373696f6e-6d61784c696d6974:
 
@@ -3100,7 +3151,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; maxLimit
 
 :spadfun:`maxLimit`\: (%, %) -> % 
-  \ ``maxLimit(expr, params)``\  returns the max limit, eventually nested or multivariate, of \ ``expr``\ .
+  \ :code:`maxLimit(expr, params)`\  returns the max limit, eventually nested or multivariate, of \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6d6569786e65724d:
 
@@ -3118,7 +3169,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; member?
 
 :spadfun:`member?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``member?(list, expr)``\  checks if expr is in \ ``list``\ .
+  \ :code:`member?(list, expr)`\  checks if expr is in \ :code:`list`\ .
 
 .. _l575345787072657373696f6e-6d696e696d616c506f6c796e6f6d69616c:
 
@@ -3130,14 +3181,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; minimalPolynomial
 
 :spadfun:`minimalPolynomial`\: (%, %) -> % 
-  \ ``minimalPolynomial(expr,var)``\  returns the minimal polynomial in the variable \ ``var``\  of the expression \ ``expr``\ .
+  \ :code:`minimalPolynomial(expr,var)`\  returns the minimal polynomial in the variable \ :code:`var`\  of the expression \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; minimalPolynomial
 
 :spadfun:`minimalPolynomial`\: (%, %, %) -> % 
-  \ ``minimalPolynomial(expr,var, elem)``\  returns the minimal polynomial in the variable \ ``var``\  of the expression \ ``expr``\ .
+  \ :code:`minimalPolynomial(expr,var, elem)`\  returns the minimal polynomial in the variable \ :code:`var`\  of the expression \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6d696e696d697a65:
 
@@ -3145,21 +3196,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; minimize
 
 :spadfun:`minimize`\: (%, %) -> % 
-  \ ``minimize(expr, vars)``\  is the \ ``WS``\  symbolic minimization function. \ ``expr``\  can contain constraints if it is a \ ``WS``\  list of constraints with function to minimize as the first element. Global optimization function otherwise.
+  \ :code:`minimize(expr, vars)`\  is the \ :code:`WS`\  symbolic minimization function. \ :code:`expr`\  can contain constraints if it is a \ :code:`WS`\  list of constraints with function to minimize as the first element. Global optimization function otherwise.
 
 
 .. index::
    pair: WSExpression; minimize
 
 :spadfun:`minimize`\: (%, %, %) -> % 
-  \ ``minimize(expr, vars, dom)``\  is the \ ``WS``\  symbolic minimization function. dom restricts the domain of variables, for example, Integers.
+  \ :code:`minimize(expr, vars, dom)`\  is the \ :code:`WS`\  symbolic minimization function. dom restricts the domain of variables, for example, Integers.
 
 
 .. index::
    pair: WSExpression; minimize
 
 :spadfun:`minimize`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``minimize(expr, sym)``\  symbolically minimizes expression function \ ``expr``\  with respect to \ ``sym``\ . \ ``expr``\  can contain constraints if it is a \ ``WS``\  list of constraints with function to minimize as the first element. Global optimization function otherwise.
+  \ :code:`minimize(expr, sym)`\  symbolically minimizes expression function \ :code:`expr`\  with respect to \ :code:`sym`\ . \ :code:`expr`\  can contain constraints if it is a \ :code:`WS`\  list of constraints with function to minimize as the first element. Global optimization function otherwise.
 
 .. _l575345787072657373696f6e-6d696e4c696d6974:
 
@@ -3167,7 +3218,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; minLimit
 
 :spadfun:`minLimit`\: (%, %) -> % 
-  \ ``minLimit(expr, params)``\  returns the min limit, eventually nested or multivariate, of \ ``expr``\ .
+  \ :code:`minLimit(expr, params)`\  returns the min limit, eventually nested or multivariate, of \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6d696e506f6c79:
 
@@ -3180,7 +3231,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; missing?
 
 :spadfun:`missing?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``missing?(data)``\  checks whether or not \ ``data``\  is Missing.
+  \ :code:`missing?(data)`\  checks whether or not \ :code:`data`\  is Missing.
 
 .. _l575345787072657373696f6e-6d6f64756c61724c616d626461:
 
@@ -3188,7 +3239,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; modularLambda
 
 :spadfun:`modularLambda`\: % -> % 
-  \ ``modularLambda()``\  computes the lambda modular function.
+  \ :code:`modularLambda()`\  computes the lambda modular function.
 
 .. _l575345787072657373696f6e-6d6f6e6f6d69616c4c697374:
 
@@ -3196,7 +3247,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; monomialList
 
 :spadfun:`monomialList`\: % -> % 
-  \ ``monomialList(p)``\  returns the list of monomials in \ ``p``\ .
+  \ :code:`monomialList(p)`\  returns the list of monomials in \ :code:`p`\ .
 
 .. _l575345787072657373696f6e-6d756c74694575636c696465616e:
 
@@ -3214,7 +3265,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; negative?
 
 :spadfun:`negative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``negative?(expr)``\  checks whether or not \ ``expr``\  is negative.
+  \ :code:`negative?(expr)`\  checks whether or not \ :code:`expr`\  is negative.
 
 .. _l575345787072657373696f6e-6e6f726d:
 
@@ -3227,14 +3278,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; normal
 
 :spadfun:`normal`\: % -> % 
-  \ ``normal(expr)``\  converts \ ``expr``\  to a normal expression from different expression types. Can be applied to a power series for example. For example: \example{x:=jWSExpr x} \example{s:=series(exp(x),jWSExpr "\{x,0,10\}")} \example{normal(s)::EXPR INT}
+  \ :code:`normal(expr)`\  converts \ :code:`expr`\  to a normal expression from different expression types. Can be applied to a power series for example. For example: \example{x:=jWSExpr x} \example{s:=series(exp(x),jWSExpr "\{x,0,10\}")} \example{normal(s)::EXPR INT}
 
 
 .. index::
    pair: WSExpression; normal
 
 :spadfun:`normal`\: (%, %) -> % 
-  \ ``normal(expr, list(Head)||Head)``\  converts objects in \ ``expr``\  to a normal expression form from different expression types, with Head, or a list of Head-\ ``s``\ .
+  \ :code:`normal(expr, list(Head)||Head)`\  converts objects in \ :code:`expr`\  to a normal expression form from different expression types, with Head, or a list of Head-\ :code:`s`\ .
 
 .. _l575345787072657373696f6e-6e6f7468696e673f:
 
@@ -3252,7 +3303,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; number?
 
 :spadfun:`number?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``number?(expr)``\  checks whether or not \ ``expr``\  is a number.
+  \ :code:`number?(expr)`\  checks whether or not \ :code:`expr`\  is a number.
 
 .. _l575345787072657373696f6e-6e756d626572466f726d:
 
@@ -3260,14 +3311,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numberForm
 
 :spadfun:`numberForm`\: % -> % 
-  \ ``numberForm(x)``\  returns the default printed representation of \ ``x``\ .
+  \ :code:`numberForm(x)`\  returns the default printed representation of \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; numberForm
 
 :spadfun:`numberForm`\: (%, %) -> % 
-  \ ``numberForm(x, expr)``\  returns the approximate printed representation of \ ``x``\  with expr as specification (number of digits of precision or a 2-list of number of digits and the number of digits after the decimal point).
+  \ :code:`numberForm(x, expr)`\  returns the approximate printed representation of \ :code:`x`\  with expr as specification (number of digits of precision or a 2-list of number of digits and the number of digits after the decimal point).
 
 .. _l575345787072657373696f6e-6e756d6572:
 
@@ -3280,7 +3331,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numerator
 
 :spadfun:`numerator`\: % -> % 
-  \ ``numerator(expr)``\  returns the numerator of \ ``expr``\ .
+  \ :code:`numerator(expr)`\  returns the numerator of \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6e756d657244656e6f6d:
 
@@ -3288,7 +3339,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numerDenom
 
 :spadfun:`numerDenom`\: % -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``numerDenom(expr)``\  returns the numerator and denominator of \ ``expr``\ .
+  \ :code:`numerDenom(expr)`\  returns the numerator and denominator of \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-6e756d65726963:
 
@@ -3305,21 +3356,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericDSolve
 
 :spadfun:`numericDSolve`\: (%, %, %) -> % 
-  \ ``numericDSolve(expr,fun,xrange)``\  solves numerically the differential equation(\ ``s``\ ) in \ ``expr``\  for the function \ ``fun``\ , in the range \ ``xrange``\ . Other combinations of parameters are also available.
+  \ :code:`numericDSolve(expr,fun,xrange)`\  solves numerically the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function \ :code:`fun`\ , in the range \ :code:`xrange`\ . Other combinations of parameters are also available.
 
 
 .. index::
    pair: WSExpression; numericDSolve
 
 :spadfun:`numericDSolve`\: (%, %, %, %) -> % 
-  \ ``numericDSolve(expr,fun,xrange,yrange)``\  solves numerically the differential equation(\ ``s``\ ) in \ ``expr``\  for the function \ ``fun``\ , in the ranges \ ``xrange``\  and \ ``yrange``\ . Other combinations of parameters are also available (see documentation).
+  \ :code:`numericDSolve(expr,fun,xrange,yrange)`\  solves numerically the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function \ :code:`fun`\ , in the ranges \ :code:`xrange`\  and \ :code:`yrange`\ . Other combinations of parameters are also available (see documentation).
 
 
 .. index::
    pair: WSExpression; numericDSolve
 
 :spadfun:`numericDSolve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> % 
-  \ ``numericDSolve(eq,fun,xrange)``\  solves numerically the differential equation \ ``eq``\  for the function \ ``fun``\ , in the range \ ``xrange``\ .
+  \ :code:`numericDSolve(eq,fun,xrange)`\  solves numerically the differential equation \ :code:`eq`\  for the function \ :code:`fun`\ , in the range \ :code:`xrange`\ .
 
 .. _l575345787072657373696f6e-6e756d6572696344536f6c766556616c7565:
 
@@ -3327,21 +3378,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericDSolveValue
 
 :spadfun:`numericDSolveValue`\: (%, %, %) -> % 
-  \ ``numericDSolveValue(expr,fun,xrange)``\  returns the numerical value solution of the differential equation(\ ``s``\ ) in \ ``expr``\  for the function \ ``fun``\ , in the range \ ``xrange``\ . Other combinations of parameters are also available (see documentation).
+  \ :code:`numericDSolveValue(expr,fun,xrange)`\  returns the numerical value solution of the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function \ :code:`fun`\ , in the range \ :code:`xrange`\ . Other combinations of parameters are also available (see documentation).
 
 
 .. index::
    pair: WSExpression; numericDSolveValue
 
 :spadfun:`numericDSolveValue`\: (%, %, %, %) -> % 
-  \ ``numericDSolveValue(expr,fun,xrange,yrange)``\  returns the numerical solution of the differential equation(\ ``s``\ ) in \ ``expr``\  for the function \ ``fun``\ , in the ranges \ ``xrange``\  and \ ``yrange``\ . Other combinations of parameters are also available (see documentation).
+  \ :code:`numericDSolveValue(expr,fun,xrange,yrange)`\  returns the numerical solution of the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function \ :code:`fun`\ , in the ranges \ :code:`xrange`\  and \ :code:`yrange`\ . Other combinations of parameters are also available (see documentation).
 
 
 .. index::
    pair: WSExpression; numericDSolveValue
 
 :spadfun:`numericDSolveValue`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> % 
-  \ ``numericDSolveValue(eq,fun,xrange)``\  returns the numerical solution of the differential equation \ ``eq``\  for the function \ ``fun``\ , in the range \ ``xrange``\ .
+  \ :code:`numericDSolveValue(eq,fun,xrange)`\  returns the numerical solution of the differential equation \ :code:`eq`\  for the function \ :code:`fun`\ , in the range \ :code:`xrange`\ .
 
 .. _l575345787072657373696f6e-6e756d65726963496e74656772617465:
 
@@ -3349,14 +3400,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericIntegrate
 
 :spadfun:`numericIntegrate`\: (%, %) -> % 
-  \ ``numericIntegrate(expr, opt|var)``\  integrates numerically \ ``expr``\  with respect to opt or var as options.
+  \ :code:`numericIntegrate(expr, opt|var)`\  integrates numerically \ :code:`expr`\  with respect to opt or var as options.
 
 
 .. index::
    pair: WSExpression; numericIntegrate
 
 :spadfun:`numericIntegrate`\: (%, %, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``numericIntegrate(expr, var, seg)``\  integrates \ ``expr``\  using segment seg with respect to \ ``var``\ .
+  \ :code:`numericIntegrate(expr, var, seg)`\  integrates \ :code:`expr`\  using segment seg with respect to \ :code:`var`\ .
 
 .. _l575345787072657373696f6e-6e756d657269634d6178696d697a65:
 
@@ -3364,21 +3415,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericMaximize
 
 :spadfun:`numericMaximize`\: (%, %) -> % 
-  \ ``numericMaximize(expr, vars)``\  maximizes numerically the expression function \ ``expr``\  with respect to vars.
+  \ :code:`numericMaximize(expr, vars)`\  maximizes numerically the expression function \ :code:`expr`\  with respect to vars.
 
 
 .. index::
    pair: WSExpression; numericMaximize
 
 :spadfun:`numericMaximize`\: (%, %, %) -> % 
-  \ ``numericMaximize(expr, vars, dom)``\  maximizes numerically the expression function \ ``expr``\  with respect to \ ``vars``\  and \ ``vars``\  restricted to the domain dom.
+  \ :code:`numericMaximize(expr, vars, dom)`\  maximizes numerically the expression function \ :code:`expr`\  with respect to \ :code:`vars`\  and \ :code:`vars`\  restricted to the domain dom.
 
 
 .. index::
    pair: WSExpression; numericMaximize
 
 :spadfun:`numericMaximize`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``numericMaximize(expr, sym)``\  maximizes numerically the expression function \ ``expr``\  with respect to \ ``sym``\ .
+  \ :code:`numericMaximize(expr, sym)`\  maximizes numerically the expression function \ :code:`expr`\  with respect to \ :code:`sym`\ .
 
 .. _l575345787072657373696f6e-6e756d657269634d696e696d697a65:
 
@@ -3386,21 +3437,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericMinimize
 
 :spadfun:`numericMinimize`\: (%, %) -> % 
-  \ ``numericMinimize(expr, vars)``\  minimizes numerically the expression function \ ``expr``\  with respect to vars. For example, global optimization from the SIAM 100 digits challenge: \example{x := jWSExpr(x);y:=jWSExpr y;} \example{expr := exp(sin(50*x))+sin(60*exp(y))+ sin(70*sin(x))+ sin(sin(80*y))-sin(10*(x+y))+(x^2+y^2)/4} \example{numericMinimize(expr, jWSList [x,y])}
+  \ :code:`numericMinimize(expr, vars)`\  minimizes numerically the expression function \ :code:`expr`\  with respect to vars. For example, global optimization from the SIAM 100 digits challenge: \example{x := jWSExpr(x);y:=jWSExpr y;} \example{expr := exp(sin(50*x))+sin(60*exp(y))+ sin(70*sin(x))+ sin(sin(80*y))-sin(10*(x+y))+(x^2+y^2)/4} \example{numericMinimize(expr, jWSList [x,y])}
 
 
 .. index::
    pair: WSExpression; numericMinimize
 
 :spadfun:`numericMinimize`\: (%, %, %) -> % 
-  \ ``numericMinimize(expr, vars, dom)``\  minimizes numerically the expression function \ ``expr``\  with respect to \ ``vars``\  and \ ``vars``\  restricted to the domain dom.
+  \ :code:`numericMinimize(expr, vars, dom)`\  minimizes numerically the expression function \ :code:`expr`\  with respect to \ :code:`vars`\  and \ :code:`vars`\  restricted to the domain dom.
 
 
 .. index::
    pair: WSExpression; numericMinimize
 
 :spadfun:`numericMinimize`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``numericMinimize(expr, sym)``\  minimizes numerically the expression function \ ``expr``\  with respect to \ ``sym``\ .
+  \ :code:`numericMinimize(expr, sym)`\  minimizes numerically the expression function \ :code:`expr`\  with respect to \ :code:`sym`\ .
 
 .. _l575345787072657373696f6e-6e756d6572696350726f64756374:
 
@@ -3408,14 +3459,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericProduct
 
 :spadfun:`numericProduct`\: (%, %) -> % 
-  \ ``numericProduct(f(n),range)``\  returns an evaluated numerical approximation of the sum \ ``f``\ (imin) + ... + \ ``f``\ (imax) defined by the list \ ``range``\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram language specifications.
+  \ :code:`numericProduct(f(n),range)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram language specifications.
 
 
 .. index::
    pair: WSExpression; numericProduct
 
 :spadfun:`numericProduct`\: (%, %, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``numericProduct(f(n),n, a..b)``\  returns an evaluated numerical approximation of the product \ ``f``\ (a) * ... * \ ``f``\ (\ ``b``\ ).
+  \ :code:`numericProduct(f(n),n, a..b)`\  returns an evaluated numerical approximation of the product \ :code:`f`\ (a) * ... * \ :code:`f`\ (\ :code:`b`\ ).
 
 .. _l575345787072657373696f6e-6e756d65726963536f6c7665:
 
@@ -3423,14 +3474,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericSolve
 
 :spadfun:`numericSolve`\: (%, %) -> % 
-  \ ``numericSolve(expr, vars)``\  returns the solution(\ ``s``\ ) to the expression \ ``expr``\ .
+  \ :code:`numericSolve(expr, vars)`\  returns the solution(\ :code:`s`\ ) to the expression \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; numericSolve
 
 :spadfun:`numericSolve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %) -> % 
-  \ ``numericSolve(eq, vars)``\  returns the solution(\ ``s``\ ) to the equation \ ``eq``\ .
+  \ :code:`numericSolve(eq, vars)`\  returns the solution(\ :code:`s`\ ) to the equation \ :code:`eq`\ .
 
 .. _l575345787072657373696f6e-6e756d6572696353756d:
 
@@ -3438,14 +3489,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericSum
 
 :spadfun:`numericSum`\: (%, %) -> % 
-  \ ``numericSum(f(n),range)``\  returns an evaluated numerical approximation of the sum \ ``f``\ (imin) + ... + \ ``f``\ (imax) defined by the list \ ``range``\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram language specifications.
+  \ :code:`numericSum(f(n),range)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram language specifications.
 
 
 .. index::
    pair: WSExpression; numericSum
 
 :spadfun:`numericSum`\: (%, %, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``numericSum(f(n),n, a..b)``\  returns an evaluated numerical approximation of the sum \ ``f``\ (a) + ... + \ ``f``\ (\ ``b``\ ).
+  \ :code:`numericSum(f(n),n, a..b)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (a) + ... + \ :code:`f`\ (\ :code:`b`\ ).
 
 .. _l575345787072657373696f6e-6f6e653f:
 
@@ -3473,7 +3524,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; padeApproximant
 
 :spadfun:`padeApproximant`\: (%, %) -> % 
-  \ ``padeApproximant(expr, "{x,x0, {n,m}"})``\  returns the Padé approximant at \ ``x0``\ .
+  \ :code:`padeApproximant(expr, "{x,x0, {n,m}"})`\  returns the Padé approximant at \ :code:`x0`\ .
 
 .. _l575345787072657373696f6e-70617261626f6c696343796c696e64657244:
 
@@ -3481,7 +3532,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; parabolicCylinderD
 
 :spadfun:`parabolicCylinderD`\: (%, %) -> % 
-  \ ``parabolicCylinderD(nu,x)``\  computes the parabolic cylinder function \ ``D``\  of \ ``x``\ .
+  \ :code:`parabolicCylinderD(nu,x)`\  computes the parabolic cylinder function \ :code:`D`\  of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-706172656e:
 
@@ -3499,14 +3550,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; percentForm
 
 :spadfun:`percentForm`\: % -> % 
-  \ ``percentForm(x)``\  returns the printed representation of \ ``x``\  in percent form. For example: \example{percentForm jWSExpr 0.50}
+  \ :code:`percentForm(x)`\  returns the printed representation of \ :code:`x`\  in percent form. For example: \example{percentForm jWSExpr 0.50}
 
 
 .. index::
    pair: WSExpression; percentForm
 
 :spadfun:`percentForm`\: (%, %) -> % 
-  \ ``percentForm(x,n)``\  returns the printed representation of \ ``x``\  in percent with \ ``n``\  digits of precision.
+  \ :code:`percentForm(x,n)`\  returns the printed representation of \ :code:`x`\  in percent with \ :code:`n`\  digits of precision.
 
 .. _l575345787072657373696f6e-7065726d75746174696f6e:
 
@@ -3529,7 +3580,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; pochhammer
 
 :spadfun:`pochhammer`\: (%, %) -> % 
-  \ ``pochhammer(a,n)``\  returns the Pochhammer symbol.
+  \ :code:`pochhammer(a,n)`\  returns the Pochhammer symbol.
 
 .. _l575345787072657373696f6e-706f6c7967616d6d61:
 
@@ -3546,7 +3597,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polylog
 
 :spadfun:`polylog`\: (%, %, %) -> % 
-  \ ``polylog(n,p,x)``\  is the Nielsen generalized polylogarithm function.
+  \ :code:`polylog(n,p,x)`\  is the Nielsen generalized polylogarithm function.
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c3f:
 
@@ -3554,14 +3605,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomial?
 
 :spadfun:`polynomial?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomial?(p,x)``\  checks whether or not \ ``p``\  is a polynomial in \ ``x``\ .
+  \ :code:`polynomial?(p,x)`\  checks whether or not \ :code:`p`\  is a polynomial in \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; polynomial?
 
 :spadfun:`polynomial?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomial?(p,vlist)``\  checks whether or not \ ``p``\  is a polynomial in the list of variables \ ``vlist``\ .
+  \ :code:`polynomial?(p,vlist)`\  checks whether or not \ :code:`p`\  is a polynomial in the list of variables \ :code:`vlist`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c45787072657373696f6e3f:
 
@@ -3569,14 +3620,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialExpression?
 
 :spadfun:`polynomialExpression?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomialExpression?(p,x)``\  checks whether or not \ ``p``\  is a polynomial expression in \ ``x``\ .
+  \ :code:`polynomialExpression?(p,x)`\  checks whether or not \ :code:`p`\  is a polynomial expression in \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; polynomialExpression?
 
 :spadfun:`polynomialExpression?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``polynomialExpression?(p,vlist)``\  checks whether or not \ ``p``\  is a polynomial expression in the list of variables \ ``vlist``\ .
+  \ :code:`polynomialExpression?(p,vlist)`\  checks whether or not \ :code:`p`\  is a polynomial expression in the list of variables \ :code:`vlist`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c457874656e646564474344:
 
@@ -3584,7 +3635,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialExtendedGCD
 
 :spadfun:`polynomialExtendedGCD`\: (%, %, %) -> % 
-  \ ``polynomialExtendedGCD(p1, p2, x)``\  returns the greatest common divisor of \ ``p1``\  and \ ``p2``\  considered as univariate polynomials in \ ``x``\ 
+  \ :code:`polynomialExtendedGCD(p1, p2, x)`\  returns the greatest common divisor of \ :code:`p1`\  and \ :code:`p2`\  considered as univariate polynomials in \ :code:`x`\ 
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c474344:
 
@@ -3592,14 +3643,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialGCD
 
 :spadfun:`polynomialGCD`\: (%, %) -> % 
-  \ ``polynomialGCD(p1, p2)``\  returns the greatest common divisor of \ ``p1``\  and \ ``p2``\ .
+  \ :code:`polynomialGCD(p1, p2)`\  returns the greatest common divisor of \ :code:`p1`\  and \ :code:`p2`\ .
 
 
 .. index::
    pair: WSExpression; polynomialGCD
 
 :spadfun:`polynomialGCD`\: (%, %, %) -> % 
-  \ ``polynomialGCD(p1, p2, opt)``\  returns the greatest common divisor of \ ``p1``\  and \ ``p2``\  with options opt, for example Modulus-\ ``>p``\ .
+  \ :code:`polynomialGCD(p1, p2, opt)`\  returns the greatest common divisor of \ :code:`p1`\  and \ :code:`p2`\  with options opt, for example Modulus-\ :code:`>p`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c4c434d:
 
@@ -3607,14 +3658,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialLCM
 
 :spadfun:`polynomialLCM`\: (%, %) -> % 
-  \ ``polynomialLCM(p1,p2)``\  returns the least common divisor of \ ``p1``\  and \ ``p2``\ .
+  \ :code:`polynomialLCM(p1,p2)`\  returns the least common divisor of \ :code:`p1`\  and \ :code:`p2`\ .
 
 
 .. index::
    pair: WSExpression; polynomialLCM
 
 :spadfun:`polynomialLCM`\: (%, %, %) -> % 
-  \ ``polynomialLCM(p1,p2,opt)``\  returns the least common divisor of \ ``p1``\  and \ ``p2``\  with options \ ``opt``\ , for example an Extension rule.
+  \ :code:`polynomialLCM(p1,p2,opt)`\  returns the least common divisor of \ :code:`p1`\  and \ :code:`p2`\  with options \ :code:`opt`\ , for example an Extension rule.
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c4d6f64:
 
@@ -3622,7 +3673,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialMod
 
 :spadfun:`polynomialMod`\: (%, %) -> % 
-  \ ``polynomialMod(p,mod)``\  reduces modulo \ ``p``\  the integer coefficients of the polynomial \ ``p``\ .
+  \ :code:`polynomialMod(p,mod)`\  reduces modulo \ :code:`p`\  the integer coefficients of the polynomial \ :code:`p`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c51756f7469656e74:
 
@@ -3630,7 +3681,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialQuotient
 
 :spadfun:`polynomialQuotient`\: (%, %, %) -> % 
-  \ ``polynomialQuotient(p1, p2, x)``\  returns the quotient of \ ``p1``\  and \ ``p2``\  in \ ``x``\ .
+  \ :code:`polynomialQuotient(p1, p2, x)`\  returns the quotient of \ :code:`p1`\  and \ :code:`p2`\  in \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c51756f7469656e7452656d61696e646572:
 
@@ -3638,7 +3689,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialQuotientRemainder
 
 :spadfun:`polynomialQuotientRemainder`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``polynomialQuotientRemainder(p1,p2,var)``\  returns the quotient and remainder of \ ``p1``\  and \ ``p2``\  in \ ``x``\ .
+  \ :code:`polynomialQuotientRemainder(p1,p2,var)`\  returns the quotient and remainder of \ :code:`p1`\  and \ :code:`p2`\  in \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c526564756365:
 
@@ -3646,7 +3697,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialReduce
 
 :spadfun:`polynomialReduce`\: (%, %, %) -> % 
-  \ ``polynomialReduce(poly,lpoly,lvar)``\  returns a minimal representation of the polynomial \ ``poly``\  in terms of the polynomial list \ ``lpoly``\  with respect to the list of variables \ ``lvar``\ .
+  \ :code:`polynomialReduce(poly,lpoly,lvar)`\  returns a minimal representation of the polynomial \ :code:`poly`\  in terms of the polynomial list \ :code:`lpoly`\  with respect to the list of variables \ :code:`lvar`\ .
 
 .. _l575345787072657373696f6e-706f6c796e6f6d69616c52656d61696e646572:
 
@@ -3654,7 +3705,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; polynomialRemainder
 
 :spadfun:`polynomialRemainder`\: (%, %, %) -> % 
-  \ ``polynomialRemainder(p1,p2, x)``\  returns the remainder of \ ``p1``\  and \ ``p2``\  in \ ``x``\ .
+  \ :code:`polynomialRemainder(p1,p2, x)`\  returns the remainder of \ :code:`p1`\  and \ :code:`p2`\  in \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-706f7369746976653f:
 
@@ -3662,7 +3713,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; positive?
 
 :spadfun:`positive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``positive?(expr)``\  checks whether or not \ ``expr``\  is positive.
+  \ :code:`positive?(expr)`\  checks whether or not \ :code:`expr`\  is positive.
 
 .. _l575345787072657373696f6e-706f736974697665496e66696e697479:
 
@@ -3670,7 +3721,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; positiveInfinity
 
 :spadfun:`positiveInfinity`\: () -> % 
-  \ ``positiveInfinity()``\  returns positive infinity (∞).
+  \ :code:`positiveInfinity()`\  returns positive infinity (∞).
 
 .. _l575345787072657373696f6e-706f776572457870616e64:
 
@@ -3678,14 +3729,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; powerExpand
 
 :spadfun:`powerExpand`\: % -> % 
-  \ ``powerExpand(expr)``\  expands powers in \ ``expr``\  assuming no branch cut.
+  \ :code:`powerExpand(expr)`\  expands powers in \ :code:`expr`\  assuming no branch cut.
 
 
 .. index::
    pair: WSExpression; powerExpand
 
 :spadfun:`powerExpand`\: (%, %) -> % 
-  \ ``powerExpand(expr, sym)``\  expands powers in \ ``expr``\  with respect to \ ``sym``\ , assuming no branch cut.
+  \ :code:`powerExpand(expr, sym)`\  expands powers in \ :code:`expr`\  with respect to \ :code:`sym`\ , assuming no branch cut.
 
 .. _l575345787072657373696f6e-70726570656e64:
 
@@ -3708,14 +3759,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; product
 
 :spadfun:`product`\: (%, %) -> % 
-  \ ``product(f(n),range)``\  returns the product \ ``f``\ (imin) * ... * \ ``f``\ (imax) defined by the list \ ``range``\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram language specifications.
+  \ :code:`product(f(n),range)`\  returns the product \ :code:`f`\ (imin) * ... * \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram language specifications.
 
 
 .. index::
    pair: WSExpression; product
 
 :spadfun:`product`\: (%, %, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``product(f(n),n, a..b)``\  returns the product \ ``f``\ (a) * ... * \ ``f``\ (\ ``b``\ ).
+  \ :code:`product(f(n),n, a..b)`\  returns the product \ :code:`f`\ (a) * ... * \ :code:`f`\ (\ :code:`b`\ ).
 
 
 \ :ref:`product <l436f6d62696e61746f7269616c4f707343617465676f7279-70726f64756374>`\ \: (%, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  %) -> % 
@@ -3726,7 +3777,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; product
 
 :spadfun:`product`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``product(f(n),n)``\  returns the indefinite product of \ ``f``\ (\ ``n``\ ).
+  \ :code:`product(f(n),n)`\  returns the indefinite product of \ :code:`f`\ (\ :code:`n`\ ).
 
 .. _l575345787072657373696f6e-7142696e6f6d69616c:
 
@@ -3734,7 +3785,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; qBinomial
 
 :spadfun:`qBinomial`\: (%, %, %) -> % 
-  \ ``qBinomial(n,m,q)``\  returns the \ ``q``\ -analog of binomial coefficient.
+  \ :code:`qBinomial(n,m,q)`\  returns the \ :code:`q`\ -analog of binomial coefficient.
 
 .. _l575345787072657373696f6e-71656c74:
 
@@ -3747,7 +3798,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; qFactorial
 
 :spadfun:`qFactorial`\: (%, %) -> % 
-  \ ``qFactorial(x,q)``\  returns the \ ``q``\ -analog of factorial of \ ``x``\ .
+  \ :code:`qFactorial(x,q)`\  returns the \ :code:`q`\ -analog of factorial of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-7147616d6d61:
 
@@ -3755,7 +3806,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; qGamma
 
 :spadfun:`qGamma`\: (%, %) -> % 
-  \ ``qGamma(x,q)``\  returns the \ ``q``\ -analog of Euler Gamma of \ ``x``\ .
+  \ :code:`qGamma(x,q)`\  returns the \ :code:`q`\ -analog of Euler Gamma of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-71506f636868616d6d6572:
 
@@ -3763,14 +3814,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; qPochhammer
 
 :spadfun:`qPochhammer`\: (%, %) -> % 
-  \ ``qPochhammer(x,q)``\  returns the \ ``q``\ -Pochhammer symbol of \ ``x``\ .
+  \ :code:`qPochhammer(x,q)`\  returns the \ :code:`q`\ -Pochhammer symbol of \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; qPochhammer
 
 :spadfun:`qPochhammer`\: (%, %, %) -> % 
-  \ ``qPochhammer(x,q,n)``\  returns the \ ``q``\ -Pochhammer symbol of \ ``x``\ .
+  \ :code:`qPochhammer(x,q,n)`\  returns the \ :code:`q`\ -Pochhammer symbol of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-71506f6c7947616d6d61:
 
@@ -3778,14 +3829,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; qPolyGamma
 
 :spadfun:`qPolyGamma`\: (%, %) -> % 
-  \ ``qPolyGamma(x,q)``\  returns the \ ``q``\ -Digamma of \ ``x``\ .
+  \ :code:`qPolyGamma(x,q)`\  returns the \ :code:`q`\ -Digamma of \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; qPolyGamma
 
 :spadfun:`qPolyGamma`\: (%, %, %) -> % 
-  \ ``qPolyGamma(n,x,q)``\  returns the \ ``n``\ -th derivative of the \ ``q``\ -digamma function of \ ``x``\ .
+  \ :code:`qPolyGamma(n,x,q)`\  returns the \ :code:`n`\ -th derivative of the \ :code:`q`\ -digamma function of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-71736574656c7421:
 
@@ -3803,14 +3854,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; quantityForm
 
 :spadfun:`quantityForm`\: (%, %) -> % 
-  \ ``quantityForm(expr,form)``\  returns \ ``expr``\  as a quantity with format \ ``form``\ .
+  \ :code:`quantityForm(expr,form)`\  returns \ :code:`expr`\  as a quantity with format \ :code:`form`\ .
 
 
 .. index::
    pair: WSExpression; quantityForm
 
 :spadfun:`quantityForm`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> % 
-  \ ``quantityForm(expr,lform)``\  returns \ ``expr``\  as a quantity with a list of formats \ ``lform``\ .
+  \ :code:`quantityForm(expr,lform)`\  returns \ :code:`expr`\  as a quantity with a list of formats \ :code:`lform`\ .
 
 .. _l575345787072657373696f6e-7175616e746974794d61676e6974756465:
 
@@ -3818,7 +3869,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; quantityMagnitude
 
 :spadfun:`quantityMagnitude`\: % -> % 
-  \ ``quantityMagnitude(val)``\  returns magnitude of \ ``val``\ .
+  \ :code:`quantityMagnitude(val)`\  returns magnitude of \ :code:`val`\ .
 
 .. _l575345787072657373696f6e-7175616e74697479556e6974:
 
@@ -3826,7 +3877,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; quantityUnit
 
 :spadfun:`quantityUnit`\: % -> % 
-  \ ``quantityUnit(val)``\  returns unit of \ ``val``\ .
+  \ :code:`quantityUnit(val)`\  returns unit of \ :code:`val`\ .
 
 .. _l575345787072657373696f6e-71756f:
 
@@ -3844,7 +3895,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ramanujanTau
 
 :spadfun:`ramanujanTau`\: % -> % 
-  \ ``ramanujanTau(n)``\  returns the Ramanujan tau of \ ``n``\ .
+  \ :code:`ramanujanTau(n)`\  returns the Ramanujan tau of \ :code:`n`\ .
 
 .. _l575345787072657373696f6e-72616d616e756a616e5461754c:
 
@@ -3852,7 +3903,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ramanujanTauL
 
 :spadfun:`ramanujanTauL`\: % -> % 
-  \ ``ramanujanTauL(s)``\  computes the Ramanujan tau Dirichlet \ ``L``\ -function of \ ``s``\ .
+  \ :code:`ramanujanTauL(s)`\  computes the Ramanujan tau Dirichlet \ :code:`L`\ -function of \ :code:`s`\ .
 
 .. _l575345787072657373696f6e-72616d616e756a616e5461755468657461:
 
@@ -3860,7 +3911,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ramanujanTauTheta
 
 :spadfun:`ramanujanTauTheta`\: % -> % 
-  \ ``ramanujanTauTheta(z)``\  returns the Ramanujan tau theta of \ ``z``\ .
+  \ :code:`ramanujanTauTheta(z)`\  returns the Ramanujan tau theta of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-72616d616e756a616e5461755a:
 
@@ -3868,7 +3919,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; ramanujanTauZ
 
 :spadfun:`ramanujanTauZ`\: % -> % 
-  \ ``ramanujanTauZ(t)``\  computes the Ramanujan tau \ ``Z``\ -function of \ ``t``\ .
+  \ :code:`ramanujanTauZ(t)`\  computes the Ramanujan tau \ :code:`Z`\ -function of \ :code:`t`\ .
 
 .. _l575345787072657373696f6e-72616e646f6d:
 
@@ -3886,7 +3937,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; rational?
 
 :spadfun:`rational?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rational?(q)``\  checks whether or not \ ``q``\  is a rational number.
+  \ :code:`rational?(q)`\  checks whether or not \ :code:`q`\  is a rational number.
 
 .. _l575345787072657373696f6e-726174696f6e616c417070726f78696d6174696f6e:
 
@@ -3894,14 +3945,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; rationalApproximation
 
 :spadfun:`rationalApproximation`\: % -> % 
-  \ ``rationalApproximation(expr)``\  tries to find a rational approximation of the expression \ ``expr``\ .
+  \ :code:`rationalApproximation(expr)`\  tries to find a rational approximation of the expression \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; rationalApproximation
 
 :spadfun:`rationalApproximation`\: (%, %) -> % 
-  \ ``rationalApproximation(expr, dx)``\  tries to find a rational approximation of the expression \ ``expr``\  within tolerance \ ``dx``\ .
+  \ :code:`rationalApproximation(expr, dx)`\  tries to find a rational approximation of the expression \ :code:`expr`\  within tolerance \ :code:`dx`\ .
 
 .. _l575345787072657373696f6e-726174696f6e616c45787072657373696f6e3f:
 
@@ -3909,14 +3960,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; rationalExpression?
 
 :spadfun:`rationalExpression?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rationalExpression?(p,x)``\  checks whether or not \ ``p``\  is a rational expression in \ ``x``\ .
+  \ :code:`rationalExpression?(p,x)`\  checks whether or not \ :code:`p`\  is a rational expression in \ :code:`x`\ .
 
 
 .. index::
    pair: WSExpression; rationalExpression?
 
 :spadfun:`rationalExpression?`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rationalExpression?(p,vlist)``\  checks whether or not \ ``p``\  is a rational expression in the list of variables \ ``vlist``\ .
+  \ :code:`rationalExpression?(p,vlist)`\  checks whether or not \ :code:`p`\  is a rational expression in the list of variables \ :code:`vlist`\ .
 
 .. _l575345787072657373696f6e-7265616c3f:
 
@@ -3924,7 +3975,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; real?
 
 :spadfun:`real?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``real?(x)``\  checks whether or not \ ``x``\  represents a real number.
+  \ :code:`real?(x)`\  checks whether or not \ :code:`x`\  represents a real number.
 
 .. _l575345787072657373696f6e-7265616c:
 
@@ -3937,7 +3988,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; realNumeric?
 
 :spadfun:`realNumeric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``realNumeric?(x)``\  checks whether or not \ ``x``\  represents a real value (numeric).
+  \ :code:`realNumeric?(x)`\  checks whether or not \ :code:`x`\  represents a real value (numeric).
 
 .. _l575345787072657373696f6e-7265636970:
 
@@ -3950,42 +4001,42 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; reduce
 
 :spadfun:`reduce`\: (%, %) -> % 
-  \ ``reduce(expr,lvars)``\  tries to reduce the (in)equation in \ ``expr``\ .
+  \ :code:`reduce(expr,lvars)`\  tries to reduce the (in)equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; reduce
 
 :spadfun:`reduce`\: (%, %, %) -> % 
-  \ ``reduce(expr,lvars,dom)``\  tries to reduce the (in)equation in \ ``expr``\ .
+  \ :code:`reduce(expr,lvars,dom)`\  tries to reduce the (in)equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; reduce
 
 :spadfun:`reduce`\: (%, \ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``reduce(lhs, rel, rhs,lvars)``\  tries to reduce the (in)equation in expr where \ ``rel``\  is the relation operator ("==" or "<=" for example).
+  \ :code:`reduce(lhs, rel, rhs,lvars)`\  tries to reduce the (in)equation in expr where \ :code:`rel`\  is the relation operator ("==" or "<=" for example).
 
 
 .. index::
    pair: WSExpression; reduce
 
 :spadfun:`reduce`\: (%, \ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``reduce(lhs, rel,rhs,lvars,dom)``\  tries to reduce the (in)equation in expr where \ ``rel``\  is the relation operator (\ ``"="``\  or "<=" for example).
+  \ :code:`reduce(lhs, rel,rhs,lvars,dom)`\  tries to reduce the (in)equation in expr where \ :code:`rel`\  is the relation operator (\ :code:`"="`\  or "<=" for example).
 
 
 .. index::
    pair: WSExpression; reduce
 
 :spadfun:`reduce`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %) -> % 
-  \ ``reduce(expr,lvars)``\  tries to reduce the equation in \ ``expr``\ .
+  \ :code:`reduce(expr,lvars)`\  tries to reduce the equation in \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; reduce
 
 :spadfun:`reduce`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> % 
-  \ ``reduce(expr,lvars,dom)``\  tries to reduce the equation in \ ``expr``\ .
+  \ :code:`reduce(expr,lvars,dom)`\  tries to reduce the equation in \ :code:`expr`\ .
 
 
 \ :ref:`reduce <l4d6f6e6f67656e6963416c6765627261-726564756365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> Union(%, failed) 
@@ -4010,7 +4061,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; refine
 
 :spadfun:`refine`\: (%, %) -> % 
-  \ ``refine(expr, assums)``\  refines the expression \ ``expr``\  with assumptions assums.
+  \ :code:`refine(expr, assums)`\  refines the expression \ :code:`expr`\  with assumptions assums.
 
 .. _l575345787072657373696f6e-726567756c6172526570726573656e746174696f6e:
 
@@ -4037,14 +4088,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; replace
 
 :spadfun:`replace`\: (%, %) -> % 
-  \ ``replace(expr, rule)``\  applies rule(\ ``s``\ ) to \ ``expr``\ .
+  \ :code:`replace(expr, rule)`\  applies rule(\ :code:`s`\ ) to \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; replace
 
 :spadfun:`replace`\: (%, %, %) -> % 
-  \ ``replace(expr, rule, lev)``\  applies \ ``rule``\  to \ ``expr``\  with level lev.
+  \ :code:`replace(expr, rule, lev)`\  applies \ :code:`rule`\  to \ :code:`expr`\  with level lev.
 
 .. _l575345787072657373696f6e-7265706c616365416c6c:
 
@@ -4052,7 +4103,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; replaceAll
 
 :spadfun:`replaceAll`\: (%, %) -> % 
-  \ ``replaceAll(expr, rule)``\  applies rule(\ ``s``\ ) to \ ``expr``\ .
+  \ :code:`replaceAll(expr, rule)`\  applies rule(\ :code:`s`\ ) to \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-7265706c6163654174:
 
@@ -4060,7 +4111,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; replaceAt
 
 :spadfun:`replaceAt`\: (%, %, %) -> % 
-  \ ``replaceAt(expr, part, n)``\  replaces the \ ``n``\ -th element of \ ``expr``\  using rule(\ ``s``\ ).
+  \ :code:`replaceAt(expr, part, n)`\  replaces the \ :code:`n`\ -th element of \ :code:`expr`\  using rule(\ :code:`s`\ ).
 
 .. _l575345787072657373696f6e-7265706c61636550617274:
 
@@ -4068,7 +4119,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; replacePart
 
 :spadfun:`replacePart`\: (%, %) -> % 
-  \ ``replacePart(expr, part)``\  replaces \ ``expr``\  using rule(\ ``s``\ ) expressing position(\ ``s``\ ).
+  \ :code:`replacePart(expr, part)`\  replaces \ :code:`expr`\  using rule(\ :code:`s`\ ) expressing position(\ :code:`s`\ ).
 
 .. _l575345787072657373696f6e-7265706c6163655265706561746564:
 
@@ -4076,7 +4127,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; replaceRepeated
 
 :spadfun:`replaceRepeated`\: (%, %) -> % 
-  \ ``replaceRepeated(expr, rule)``\  applies rule(\ ``s``\ ) to \ ``expr``\ , but repeatedly.
+  \ :code:`replaceRepeated(expr, rule)`\  applies rule(\ :code:`s`\ ) to \ :code:`expr`\ , but repeatedly.
 
 .. _l575345787072657373696f6e-726570726573656e7473:
 
@@ -4093,7 +4144,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; residue
 
 :spadfun:`residue`\: (%, %) -> % 
-  \ ``residue(expr, {x,x0})``\  returns the residue of \ ``expr``\  at \ ``x0``\ .
+  \ :code:`residue(expr, {x,x0})`\  returns the residue of \ :code:`expr`\  at \ :code:`x0`\ .
 
 .. _l575345787072657373696f6e-7265736964756553756d:
 
@@ -4101,7 +4152,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; residueSum
 
 :spadfun:`residueSum`\: (%, %) -> % 
-  \ ``residueSum(expr, var)``\  returns the residue of \ ``expr``\ . \example{residueSum(Gamma(x),x)}
+  \ :code:`residueSum(expr, var)`\  returns the residue of \ :code:`expr`\ . \example{residueSum(Gamma(x),x)}
 
 .. _l575345787072657373696f6e-72657374:
 
@@ -4114,7 +4165,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; resultant
 
 :spadfun:`resultant`\: (%, %, %) -> % 
-  \ ``resultant(p1,p2,x)``\  returns the resultant of \ ``p1``\  and \ ``p2``\ .
+  \ :code:`resultant(p1,p2,x)`\  returns the resultant of \ :code:`p1`\  and \ :code:`p2`\ .
 
 .. _l575345787072657373696f6e-72657472616374:
 
@@ -4126,14 +4177,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; retract
 
 :spadfun:`retract`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Float <l466c6f6174>`\  
-  \ ``retract(expr)``\  tries to retract \ ``expr``\  to an Expression(Integer). Throws an error otherwise.
+  \ :code:`retract(expr)`\  tries to retract \ :code:`expr`\  to an Expression(Integer). Throws an error otherwise.
 
 
 .. index::
    pair: WSExpression; retract
 
 :spadfun:`retract`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``retract(expr)``\  tries to retract \ ``expr``\  to an Expression(Integer). Throws an error otherwise.
+  \ :code:`retract(expr)`\  tries to retract \ :code:`expr`\  to an Expression(Integer). Throws an error otherwise.
 
 
 \ :ref:`retract <l5265747261637461626c65546f-72657472616374>`\ \: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or % has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -4165,21 +4216,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; retractIfCan
 
 :spadfun:`retractIfCan`\: % -> Union(\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , failed) 
-  \ ``retractIfCan(expr)``\  retracts \ ``expr``\  to a DoubleFloat if it can be retracted to a Lisp machine float.
+  \ :code:`retractIfCan(expr)`\  retracts \ :code:`expr`\  to a DoubleFloat if it can be retracted to a Lisp machine float.
 
 
 .. index::
    pair: WSExpression; retractIfCan
 
 :spadfun:`retractIfCan`\: % -> Union(\ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Float <l466c6f6174>`\ , failed) 
-  \ ``retractIfCan(expr)``\  tries to retract \ ``expr``\  to an Expression(Float).
+  \ :code:`retractIfCan(expr)`\  tries to retract \ :code:`expr`\  to an Expression(Float).
 
 
 .. index::
    pair: WSExpression; retractIfCan
 
 :spadfun:`retractIfCan`\: % -> Union(\ :ref:`Expression <l45787072657373696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) 
-  \ ``retractIfCan(expr)``\  tries to retract \ ``expr``\  to an Expression(Integer).
+  \ :code:`retractIfCan(expr)`\  tries to retract \ :code:`expr`\  to an Expression(Integer).
 
 
 \ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) if % has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or % has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -4194,7 +4245,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; retractIfCan
 
 :spadfun:`retractIfCan`\: % -> Union(\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , failed) 
-  \ ``retractIfCan(expr)``\  retracts \ ``expr``\  to a \ ``JLFloat64``\  if it can be retracted to a 64 bits machine float.
+  \ :code:`retractIfCan(expr)`\  retracts \ :code:`expr`\  to a \ :code:`JLFloat64`\  if it can be retracted to a 64 bits machine float.
 
 
 \ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`Kernel <l4b65726e656c>`\  %, failed) 
@@ -4227,7 +4278,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; riemannSiegelTheta
 
 :spadfun:`riemannSiegelTheta`\: % -> % 
-  \ ``riemannSiegelTheta(t)``\  returns the Riemann-Siegel theta function of \ ``t``\ .
+  \ :code:`riemannSiegelTheta(t)`\  returns the Riemann-Siegel theta function of \ :code:`t`\ .
 
 .. _l575345787072657373696f6e-7269656d616e6e53696567656c5a:
 
@@ -4235,7 +4286,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; riemannSiegelZ
 
 :spadfun:`riemannSiegelZ`\: % -> % 
-  \ ``riemannSiegelZ(t)``\  computes the Riemann-Siegel \ ``Z``\  function of \ ``t``\ .
+  \ :code:`riemannSiegelZ(t)`\  computes the Riemann-Siegel \ :code:`Z`\  function of \ :code:`t`\ .
 
 .. _l575345787072657373696f6e-7269656d616e6e5a657461:
 
@@ -4247,7 +4298,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; riemannZeta
 
 :spadfun:`riemannZeta`\: (%, %) -> % 
-  \ ``riemannZeta(s,a)``\  is the generalized Riemann zeta function.
+  \ :code:`riemannZeta(s,a)`\  is the generalized Riemann zeta function.
 
 .. _l575345787072657373696f6e-726966666c65:
 
@@ -4299,7 +4350,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; rootReduce
 
 :spadfun:`rootReduce`\: % -> % 
-  \ ``rootReduce(expr)``\  reduces root functions.
+  \ :code:`rootReduce(expr)`\  reduces root functions.
 
 .. _l575345787072657373696f6e-726f6f74734f66:
 
@@ -4333,7 +4384,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; round
 
 :spadfun:`round`\: % -> % 
-  \ ``round(x)``\  returns the integer closest to \ ``x``\ .
+  \ :code:`round(x)`\  returns the integer closest to \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-73616d706c65:
 
@@ -4346,14 +4397,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; scientificForm
 
 :spadfun:`scientificForm`\: % -> % 
-  \ ``scientificForm(x)``\  returns the printed representation of \ ``x``\  in scientific form.
+  \ :code:`scientificForm(x)`\  returns the printed representation of \ :code:`x`\  in scientific form.
 
 
 .. index::
    pair: WSExpression; scientificForm
 
 :spadfun:`scientificForm`\: (%, %) -> % 
-  \ ``scientificForm(x,n)``\  returns the printed representation of \ ``x``\  in scientific form with \ ``n``\  digits of precision.
+  \ :code:`scientificForm(x,n)`\  returns the printed representation of \ :code:`x`\  in scientific form with \ :code:`n`\  digits of precision.
 
 .. _l575345787072657373696f6e-736563:
 
@@ -4371,7 +4422,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; series
 
 :spadfun:`series`\: (%, %) -> % 
-  \ ``series(expr, opt)``\  returns a series from \ ``expr``\ . \example{x:=jWSExpr(x);a:=jWSExpr(a);} \example{opt:=jWSList [x,\ ``pi``\ ()\$WSEXPR/4,7]} \example{series(sin(a*x),opt)} \example{series(cos(x),"\{x, 0, 12\}")} \example{series(inverseErfc(x),"\{x,0,3\}")}
+  \ :code:`series(expr, opt)`\  returns a series from \ :code:`expr`\ . \example{x:=jWSExpr(x);a:=jWSExpr(a);} \example{opt:=jWSList [x,\ :code:`pi`\ ()\$WSEXPR/4,7]} \example{series(sin(a*x),opt)} \example{series(cos(x),"\{x, 0, 12\}")} \example{series(inverseErfc(x),"\{x,0,3\}")}
 
 .. _l575345787072657373696f6e-736574656c7421:
 
@@ -4404,14 +4455,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; siegelTheta
 
 :spadfun:`siegelTheta`\: (%, %) -> % 
-  \ ``siegelTheta(tau, s)``\  computes the Siegel theta function.
+  \ :code:`siegelTheta(tau, s)`\  computes the Siegel theta function.
 
 
 .. index::
    pair: WSExpression; siegelTheta
 
 :spadfun:`siegelTheta`\: (%, %, %) -> % 
-  \ ``siegelTheta(nu, tau, s)``\  computes the Siegel theta function.
+  \ :code:`siegelTheta(nu, tau, s)`\  computes the Siegel theta function.
 
 .. _l575345787072657373696f6e-7369676e:
 
@@ -4424,14 +4475,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; simplify
 
 :spadfun:`simplify`\: % -> % 
-  \ ``simplify(expr)``\  simplifies the \ ``expr``\ . \example{x:=jWSExpr("x"); simplify(sqrt(x^2)^2)}
+  \ :code:`simplify(expr)`\  simplifies the \ :code:`expr`\ . \example{x:=jWSExpr("x"); simplify(sqrt(x^2)^2)}
 
 
 .. index::
    pair: WSExpression; simplify
 
 :spadfun:`simplify`\: (%, %) -> % 
-  \ ``simplify(expr, assumptions)``\  simplifies the expression \ ``expr``\  assuming that assumptions are satisfied. For example: \example{x:=jWSExpr("x"); simplify(sqrt(x^2), "x>0")}
+  \ :code:`simplify(expr, assumptions)`\  simplifies the expression \ :code:`expr`\  assuming that assumptions are satisfied. For example: \example{x:=jWSExpr("x"); simplify(sqrt(x^2), "x>0")}
 
 .. _l575345787072657373696f6e-73696e:
 
@@ -4444,7 +4495,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sinc
 
 :spadfun:`sinc`\: % -> % 
-  \ ``sinc(x)``\  computes the unnormalized sinc of \ ``x``\ , sin(\ ``x``\ )\ ``/x``\  and 0 if \ ``x``\  = 0.
+  \ :code:`sinc(x)`\  computes the unnormalized sinc of \ :code:`x`\ , sin(\ :code:`x`\ )\ :code:`/x`\  and 0 if \ :code:`x`\  = 0.
 
 .. _l575345787072657373696f6e-73696e68:
 
@@ -4472,42 +4523,42 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; solve
 
 :spadfun:`solve`\: (%, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``solve(expr, vars)``\  tries to solve the expression \ ``expr``\ .
+  \ :code:`solve(expr, vars)`\  tries to solve the expression \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; solve
 
 :spadfun:`solve`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``solve(expr, vars, dom)``\  tries to solve the expression \ ``expr``\ .
+  \ :code:`solve(expr, vars, dom)`\  tries to solve the expression \ :code:`expr`\ .
 
 
 .. index::
    pair: WSExpression; solve
 
 :spadfun:`solve`\: (%, \ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``solve(lhs, rel, rhs,lvars)``\  tries to solve the (in)equation in expr where \ ``rel``\  is the relation operator ("==" for example).
+  \ :code:`solve(lhs, rel, rhs,lvars)`\  tries to solve the (in)equation in expr where \ :code:`rel`\  is the relation operator ("==" for example).
 
 
 .. index::
    pair: WSExpression; solve
 
 :spadfun:`solve`\: (%, \ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``solve(lhs, rel,rhs,lvars,dom)``\  tries to solve the (in)equation in expr where \ ``rel``\  is the relation operator ("==" for example).
+  \ :code:`solve(lhs, rel,rhs,lvars,dom)`\  tries to solve the (in)equation in expr where \ :code:`rel`\  is the relation operator ("==" for example).
 
 
 .. index::
    pair: WSExpression; solve
 
 :spadfun:`solve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``solve(eq, vars)``\  tries to solve the equation \ ``eq``\ .
+  \ :code:`solve(eq, vars)`\  tries to solve the equation \ :code:`eq`\ .
 
 
 .. index::
    pair: WSExpression; solve
 
 :spadfun:`solve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``solve(expr, vars, dom)``\  tries to solve the expression \ ``expr``\ .
+  \ :code:`solve(expr, vars, dom)`\  tries to solve the expression \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e:
 
@@ -4530,7 +4581,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sphericalBesselJ
 
 :spadfun:`sphericalBesselJ`\: (%, %) -> % 
-  \ ``sphericalBesselJ(n,z)``\  returns the spherical Bessel of the first kind of \ ``z``\ .
+  \ :code:`sphericalBesselJ(n,z)`\  returns the spherical Bessel of the first kind of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-73706865726963616c42657373656c59:
 
@@ -4538,7 +4589,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sphericalBesselY
 
 :spadfun:`sphericalBesselY`\: (%, %) -> % 
-  \ ``sphericalBesselY(n,z)``\  returns the spherical Bessel of the second kind of \ ``z``\ .
+  \ :code:`sphericalBesselY(n,z)`\  returns the spherical Bessel of the second kind of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-73706865726963616c48616e6b656c4831:
 
@@ -4546,7 +4597,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sphericalHankelH1
 
 :spadfun:`sphericalHankelH1`\: (%, %) -> % 
-  \ ``sphericalHankelH1(n,z)``\  returns the spherical Hankel function of the first kind of \ ``z``\ .
+  \ :code:`sphericalHankelH1(n,z)`\  returns the spherical Hankel function of the first kind of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-73706865726963616c48616e6b656c4832:
 
@@ -4554,7 +4605,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sphericalHankelH2
 
 :spadfun:`sphericalHankelH2`\: (%, %) -> % 
-  \ ``sphericalHankelH2(n,z)``\  returns the spherical Hankel function of the second kind of \ ``z``\ .
+  \ :code:`sphericalHankelH2(n,z)`\  returns the spherical Hankel function of the second kind of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-73706865726963616c4861726d6f6e696359:
 
@@ -4562,7 +4613,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sphericalHarmonicY
 
 :spadfun:`sphericalHarmonicY`\: (%, %, %, %) -> % 
-  \ ``sphericalHarmonicY(l, m, theta, phi)``\  returns the spherical harmonic \ ``Y``\  function or evaluates it.
+  \ :code:`sphericalHarmonicY(l, m, theta, phi)`\  returns the spherical harmonic \ :code:`Y`\  function or evaluates it.
 
 .. _l575345787072657373696f6e-73717274:
 
@@ -4590,19 +4641,19 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; stieltjesGamma
 
 :spadfun:`stieltjesGamma`\: % -> % 
-  \ ``stieltjesGamma(n)``\  returns the \ ``n``\ -th Stieltjes constant.
+  \ :code:`stieltjesGamma(n)`\  returns the \ :code:`n`\ -th Stieltjes constant.
 
 
 .. index::
    pair: WSExpression; stieltjesGamma
 
 :spadfun:`stieltjesGamma`\: (%, %) -> % 
-  \ ``stieltjesGamma(n,a)``\  returns the generalized \ ``n``\ -th Stieltjes constant.
+  \ :code:`stieltjesGamma(n,a)`\  returns the generalized \ :code:`n`\ -th Stieltjes constant.
 
 .. _l575345787072657373696f6e-737472696e67:
 
-\ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
-  from \ :ref:`JLType <l4a4c54797065>`\ 
+\ :ref:`string <l57534f626a656374-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
 
 .. _l575345787072657373696f6e-73747275766548:
 
@@ -4620,7 +4671,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; subResultants
 
 :spadfun:`subResultants`\: (%, %, %) -> % 
-  \ ``subResultants(p1,p2,x)``\  returns the subresultant of \ ``p1``\  and \ ``p2``\  with respect to \ ``x``\ .
+  \ :code:`subResultants(p1,p2,x)`\  returns the subresultant of \ :code:`p1`\  and \ :code:`p2`\  with respect to \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-7375627374:
 
@@ -4646,21 +4697,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sum
 
 :spadfun:`sum`\: (%, %) -> % 
-  \ ``sum(f(n),range)``\  returns the sum \ ``f``\ (imin) + ... + \ ``f``\ (imax) defined by the list \ ``range``\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram Language specifications.
+  \ :code:`sum(f(n),range)`\  returns the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example \example{jWSExpr("\{i, imin, imax\}")}. See Wolfram Language specifications.
 
 
 .. index::
    pair: WSExpression; sum
 
 :spadfun:`sum`\: (%, %, \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``sum(f(n),n, a..b)``\  returns the sum \ ``f``\ (a) + ... + \ ``f``\ (\ ``b``\ ).
+  \ :code:`sum(f(n),n, a..b)`\  returns the sum \ :code:`f`\ (a) + ... + \ :code:`f`\ (\ :code:`b`\ ).
 
 
 .. index::
    pair: WSExpression; sum
 
 :spadfun:`sum`\: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
-  \ ``sum(f(n),n)``\  returns the indefinite sum of \ ``f``\ (\ ``n``\ ).
+  \ :code:`sum(f(n),n)`\  returns the indefinite sum of \ :code:`f`\ (\ :code:`n`\ ).
 
 .. _l575345787072657373696f6e-73756d6d6174696f6e:
 
@@ -4677,7 +4728,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; symmetricPolynomial
 
 :spadfun:`symmetricPolynomial`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> % 
-  \ ``symmetricPolynomial(n,lvars)``\  returns the \ ``n``\ -th elementary symmetric polynomial with respect to variables in \ ``lvars``\ .
+  \ :code:`symmetricPolynomial(n,lvars)`\  returns the \ :code:`n`\ -th elementary symmetric polynomial with respect to variables in \ :code:`lvars`\ .
 
 .. _l575345787072657373696f6e-73796d6d6574726963526564756374696f6e:
 
@@ -4685,14 +4736,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; symmetricReduction
 
 :spadfun:`symmetricReduction`\: (%, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``symmetricReduction(f,lvars)``\  returns a pair of polynomials representing \ ``f``\  = \ ``p+q``\  where \ ``p``\  is a symmetric polynomial, \ ``q``\  the remainder.
+  \ :code:`symmetricReduction(f,lvars)`\  returns a pair of polynomials representing \ :code:`f`\  = \ :code:`p+q`\  where \ :code:`p`\  is a symmetric polynomial, \ :code:`q`\  the remainder.
 
 
 .. index::
    pair: WSExpression; symmetricReduction
 
 :spadfun:`symmetricReduction`\: (%, \ :ref:`WSList <l57534c697374>`\  %, \ :ref:`WSList <l57534c697374>`\  %) -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``symmetricReduction(f, lvars, replnt)``\  returns a pair of polynomials representing \ ``f``\  = \ ``p+q``\  where \ ``p``\  is a symmetric polynomial, \ ``q``\  the remainder where variables in \ ``p``\  replaced by the ones in replnt.
+  \ :code:`symmetricReduction(f, lvars, replnt)`\  returns a pair of polynomials representing \ :code:`f`\  = \ :code:`p+q`\  where \ :code:`p`\  is a symmetric polynomial, \ :code:`q`\  the remainder where variables in \ :code:`p`\  replaced by the ones in replnt.
 
 .. _l575345787072657373696f6e-74616b65:
 
@@ -4719,21 +4770,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; toExpression
 
 :spadfun:`toExpression`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``toExpression(expr, form)``\  converts \ ``expr``\  to a \ ``WS``\  expression and evaluates it with output in the format form.
+  \ :code:`toExpression(expr, form)`\  converts \ :code:`expr`\  to a \ :code:`WS`\  expression and evaluates it with output in the format form.
 
 
 .. index::
    pair: WSExpression; toExpression
 
 :spadfun:`toExpression`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``toExpression(expr, form, h)``\  converts \ ``expr``\  to a \ ``WS``\  expression and evaluates it with output in the format \ ``form``\  but wrapping the head with \ ``h``\ . `Hold` for example.
+  \ :code:`toExpression(expr, form, h)`\  converts \ :code:`expr`\  to a \ :code:`WS`\  expression and evaluates it with output in the format \ :code:`form`\  but wrapping the head with \ :code:`h`\ . `Hold` for example.
 
 
 .. index::
    pair: WSExpression; toExpression
 
 :spadfun:`toExpression`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``toExpression(expr)``\  converts \ ``expr``\  to a \ ``WS``\  expression and evaluates it.
+  \ :code:`toExpression(expr)`\  converts \ :code:`expr`\  to a \ :code:`WS`\  expression and evaluates it.
 
 .. _l575345787072657373696f6e-746f676574686572:
 
@@ -4741,7 +4792,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; together
 
 :spadfun:`together`\: % -> % 
-  \ ``together(expr)``\  puts together terms over a common denominator cancelling common factors.
+  \ :code:`together(expr)`\  puts together terms over a common denominator cancelling common factors.
 
 .. _l575345787072657373696f6e-746f537472696e67:
 
@@ -4753,7 +4804,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; toString
 
 :spadfun:`toString`\: (%, %) -> \ :ref:`String <l537472696e67>`\  
-  \ ``toString(expr, form)``\  returns the string representation of \ ``expr``\  with \ ``WS``\  language format form.
+  \ :code:`toString(expr, form)`\  returns the string representation of \ :code:`expr`\  with \ :code:`WS`\  language format form.
 
 .. _l575345787072657373696f6e-746f776572:
 
@@ -4784,7 +4835,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; traditionalForm
 
 :spadfun:`traditionalForm`\: % -> % 
-  \ ``traditionalForm(expr)``\  returns a traditional form of \ ``expr``\  i.e. its \ ``WS``\  'TraditionalForm'.
+  \ :code:`traditionalForm(expr)`\  returns a traditional form of \ :code:`expr`\  i.e. its \ :code:`WS`\  'TraditionalForm'.
 
 .. _l575345787072657373696f6e-74726967457870616e64:
 
@@ -4792,7 +4843,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; trigExpand
 
 :spadfun:`trigExpand`\: % -> % 
-  \ ``trigExpand(expr)``\  tries to expand (hyperbolic) trigonometric functions in \ ``expr``\ .
+  \ :code:`trigExpand(expr)`\  tries to expand (hyperbolic) trigonometric functions in \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-74726967466163746f72:
 
@@ -4800,7 +4851,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; trigFactor
 
 :spadfun:`trigFactor`\: % -> % 
-  \ ``trigFactor(expr)``\  factors (hyperbolic) trigonometric functions in \ ``expr``\ .
+  \ :code:`trigFactor(expr)`\  factors (hyperbolic) trigonometric functions in \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-74726967466163746f724c697374:
 
@@ -4808,7 +4859,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; trigFactorList
 
 :spadfun:`trigFactorList`\: % -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``trigFactorList(expr)``\  returns a list of factors of (hyperbolic) trigonometric functions in \ ``expr``\ .
+  \ :code:`trigFactorList(expr)`\  returns a list of factors of (hyperbolic) trigonometric functions in \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-74726967526564756365:
 
@@ -4816,7 +4867,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; trigReduce
 
 :spadfun:`trigReduce`\: % -> % 
-  \ ``trigReduce(expr)``\  reduces power and products of trigonometric functions.
+  \ :code:`trigReduce(expr)`\  reduces power and products of trigonometric functions.
 
 .. _l575345787072657373696f6e-74726967546f457870:
 
@@ -4824,7 +4875,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; trigToExp
 
 :spadfun:`trigToExp`\: % -> % 
-  \ ``trigToExp(expr)``\  returns \ ``expr``\  with (hyperbolic) trigonometric functions converted to, eventually complex, exponentials.
+  \ :code:`trigToExp(expr)`\  returns \ :code:`expr`\  with (hyperbolic) trigonometric functions converted to, eventually complex, exponentials.
 
 .. _l575345787072657373696f6e-756e696f6e:
 
@@ -4862,7 +4913,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; values
 
 :spadfun:`values`\: % -> % 
-  \ ``values(expr)``\  returns the values elements in \ ``expr``\ .
+  \ :code:`values(expr)`\  returns the values elements in \ :code:`expr`\ .
 
 .. _l575345787072657373696f6e-7661726961626c6573:
 
@@ -4874,7 +4925,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; variables
 
 :spadfun:`variables`\: % -> \ :ref:`WSList <l57534c697374>`\  % 
-  \ ``variables(p)``\  returns the list of variables in \ ``p``\ .
+  \ :code:`variables(p)`\  returns the list of variables in \ :code:`p`\ .
 
 
 \ :ref:`variables <l46756e6374696f6e537061636532-7661726961626c6573>`\ \: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
@@ -4890,7 +4941,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; weberE
 
 :spadfun:`weberE`\: (%, %, %) -> % 
-  \ ``weberE(v,n,z)``\  is the associated Weber \ ``E``\  function.
+  \ :code:`weberE(v,n,z)`\  is the associated Weber \ :code:`E`\  function.
 
 .. _l575345787072657373696f6e-776569657273747261737350:
 
@@ -4898,7 +4949,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; weierstrassP
 
 :spadfun:`weierstrassP`\: (%, %, %) -> % 
-  \ ``weierstrassP(g2, g3, z)``\  is the Weierstrass \ ``P``\  function.
+  \ :code:`weierstrassP(g2, g3, z)`\  is the Weierstrass \ :code:`P`\  function.
 
 .. _l575345787072657373696f6e-776569657273747261737350496e7665727365:
 
@@ -4906,7 +4957,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; weierstrassPInverse
 
 :spadfun:`weierstrassPInverse`\: (%, %, %) -> % 
-  \ ``weierstrassPInverse(g2, g3, z)``\  is the inverse of Weierstrass \ ``P``\  function, defined by the formula \ ``WeierstrassP(g2, g3, WeierstrassPInverse(g2, g3, z)) = z``\ .
+  \ :code:`weierstrassPInverse(g2, g3, z)`\  is the inverse of Weierstrass \ :code:`P`\  function, defined by the formula \ :code:`WeierstrassP(g2, g3, WeierstrassPInverse(g2, g3, z)) = z`\ .
 
 .. _l575345787072657373696f6e-7765696572737472617373505072696d65:
 
@@ -4914,7 +4965,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; weierstrassPPrime
 
 :spadfun:`weierstrassPPrime`\: (%, %, %) -> % 
-  \ ``weierstrassPPrime(g2, g3, z)``\  is the derivative of the Weierstrass \ ``P``\  function.
+  \ :code:`weierstrassPPrime(g2, g3, z)`\  is the derivative of the Weierstrass \ :code:`P`\  function.
 
 .. _l575345787072657373696f6e-77656965727374726173735369676d61:
 
@@ -4922,7 +4973,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; weierstrassSigma
 
 :spadfun:`weierstrassSigma`\: (%, %, %) -> % 
-  \ ``weierstrassSigma(g2, g3, z)``\  is the Weierstrass sigma function.
+  \ :code:`weierstrassSigma(g2, g3, z)`\  is the Weierstrass sigma function.
 
 .. _l575345787072657373696f6e-77656965727374726173735a657461:
 
@@ -4930,7 +4981,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; weierstrassZeta
 
 :spadfun:`weierstrassZeta`\: (%, %, %) -> % 
-  \ ``weierstrassZeta(g2, g3, z)``\  is the Weierstrass Zeta function.
+  \ :code:`weierstrassZeta(g2, g3, z)`\  is the Weierstrass Zeta function.
 
 .. _l575345787072657373696f6e-7768697474616b65724d:
 
@@ -4938,7 +4989,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; whittakerM
 
 :spadfun:`whittakerM`\: (%, %, %) -> % 
-  \ ``whittakerM(k,m,x)``\  computes the Whittaker function \ ``M``\  of \ ``x``\ .
+  \ :code:`whittakerM(k,m,x)`\  computes the Whittaker function \ :code:`M`\  of \ :code:`x`\ .
 
 .. _l575345787072657373696f6e-7768697474616b657257:
 
@@ -4946,7 +4997,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; whittakerW
 
 :spadfun:`whittakerW`\: (%, %, %) -> % 
-  \ ``whittakerW(k,m,z)``\  computes the Whittaker function \ ``W``\  of \ ``z``\ .
+  \ :code:`whittakerW(k,m,z)`\  computes the Whittaker function \ :code:`W`\  of \ :code:`z`\ .
 
 .. _l575345787072657373696f6e-77696c736f6e57:
 
@@ -4959,7 +5010,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; zernikeR
 
 :spadfun:`zernikeR`\: (%, %, %) -> % 
-  \ ``zernikeR(n, m, x)``\  returns the Zernike radial polynomial or evaluates it at \ ``x``\  if \ ``x``\  is a number.
+  \ :code:`zernikeR(n, m, x)`\  returns the Zernike radial polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
 .. _l575345787072657373696f6e-7a65726f3f:
 
@@ -4967,7 +5018,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; zero?
 
 :spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``zero? x``\  tries to determine if \ ``x``\  is 0. For example: \example{expr:=0\$WSEXPR/1*sqrt(17::WSEXPR); zero? expr}
+  \ :code:`zero? x`\  tries to determine if \ :code:`x`\  is 0. For example: \example{expr:=0\$WSEXPR/1*sqrt(17::WSEXPR); zero? expr}
 
 .. _l575345787072657373696f6e-7a65726f4f66:
 

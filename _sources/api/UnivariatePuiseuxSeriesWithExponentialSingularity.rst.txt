@@ -16,7 +16,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity(R, FE, var, cen)
 * cen: FE
 
 
-UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent functions with essential singularities. Objects in this domain are sums, where each term in the sum is a univariate Puiseux series times the exponential of a univariate Puiseux series. Thus, the elements of this domain are sums of expressions of the form \ ``g(x) * exp(f(x))``\ , where \ ``g``\ (\ ``x``\ ) is a univariate Puiseux series and \ ``f``\ (\ ``x``\ ) is a univariate Puiseux series with no terms of non-negative degree.
+UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent functions with essential singularities. Objects in this domain are sums, where each term in the sum is a univariate Puiseux series times the exponential of a univariate Puiseux series. Thus, the elements of this domain are sums of expressions of the form \ :code:`g(x) * exp(f(x))`\ , where \ :code:`g`\ (\ :code:`x`\ ) is a univariate Puiseux series and \ :code:`f`\ (\ :code:`x`\ ) is a univariate Puiseux series with no terms of non-negative degree.
 
 
 .. _l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479-30:
@@ -192,7 +192,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
    pair: UnivariatePuiseuxSeriesWithExponentialSingularity; dominantTerm
 
 :spadfun:`dominantTerm`\: % -> Union(Record(%term: Record(%coef: \ :ref:`UnivariatePuiseuxSeries <l556e697661726961746550756973657578536572696573>`\ (FE, var, cen), %expon: \ :ref:`ExponentialOfUnivariatePuiseuxSeries <l4578706f6e656e7469616c4f66556e697661726961746550756973657578536572696573>`\ (FE, var, cen), %expTerms: \ :ref:`List <l4c697374>`\  Record(k: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , c: FE)), %type: \ :ref:`String <l537472696e67>`\ ), failed) 
-  \ ``dominantTerm(f(var))``\  returns the term that dominates the limiting behavior of \ ``f(var)``\  as \ ``var -> cen+``\  together with a \ :ref:`String <l537472696e67>`\  which briefly describes that behavior. The value of the \ :ref:`String <l537472696e67>`\  will be \ ``"zero"``\  (resp. \ ``"infinity"``\ ) if the term tends to zero (resp. infinity) exponentially and will \ ``"series"``\  if the term is a Puiseux series.
+  \ :code:`dominantTerm(f(var))`\  returns the term that dominates the limiting behavior of \ :code:`f(var)`\  as \ :code:`var -> cen+`\  together with a \ :ref:`String <l537472696e67>`\  which briefly describes that behavior. The value of the \ :ref:`String <l537472696e67>`\  will be \ :code:`"zero"`\  (resp. \ :code:`"infinity"`\ ) if the term tends to zero (resp. infinity) exponentially and will \ :code:`"series"`\  if the term is a Puiseux series.
 
 .. _l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479-657871756f:
 
@@ -263,7 +263,7 @@ UnivariatePuiseuxSeriesWithExponentialSingularity is a domain used to represent 
    pair: UnivariatePuiseuxSeriesWithExponentialSingularity; limitPlus
 
 :spadfun:`limitPlus`\: % -> Union(\ :ref:`OrderedCompletion <l4f726465726564436f6d706c6574696f6e>`\  FE, failed) 
-  \ ``limitPlus(f(var))``\  returns \ ``limit(var -> cen+, f(var))``\ .
+  \ :code:`limitPlus(f(var))`\  returns \ :code:`limit(var -> cen+, f(var))`\ .
 
 .. _l556e697661726961746550756973657578536572696573576974684578706f6e656e7469616c53696e67756c6172697479-6c696e656172457874656e64:
 

@@ -78,6 +78,10 @@
 <li><p><a class="reference internal" href="#why-do-fricas-input-defined-functions-fail-in-fricas" id="id20">Why do .fricas.input defined functions fail in fricas?</a></p></li>
 <li><p><a class="reference internal" href="#how-can-i-debug-algebra-code" id="id21">How can I debug algebra code?</a></p></li>
 <li><p><a class="reference internal" href="#how-can-i-access-lisp-code-from-the-fricas-command-line" id="id22">How can I access lisp code from the FriCAS command line?</a></p></li>
+<li><p><a class="reference internal" href="#is-there-exception-handling-in-fricas" id="id23">Is there exception handling in FriCAS?</a></p></li>
+<li><p><a class="reference internal" href="#can-i-run-a-function-under-a-time-constraint" id="id24">Can I run a function under a time constraint?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-compile-fspace-spad" id="id25">How can I compile fspace.spad?</a></p></li>
+<li><p><a class="reference internal" href="#are-there-things-in-fricas-that-do-not-work-properly" id="id26">Are there things in FriCAS that do not work properly?</a></p></li>
 </ul>
 </li>
 </ul>
@@ -98,6 +102,8 @@ removing functionality). FriCAS fixed a lot of bugs and added new
 functionality. As of April 2013, in the src/algebra subdirectory,
 which hosts mathematical functionality about 25% of code was added
 after the fork.</p>
+<p>See also
+<a class="reference external" href="https://wiki.fricas.org/FriCASAdvantages">FriCAS advantages</a></p>
 </section>
 <section id="what-does-the-fricas-name-mean">
 <h3>What does the FriCAS name mean?<a class="headerlink" href="#what-does-the-fricas-name-mean" title="Link to this heading">¶</a></h3>
@@ -162,6 +168,19 @@ specify all parameters. Then click on ‘Operations’ and finally on
 ‘Implementations’. If you are interested in a single operation, after
 clicking on ‘Operations’ click on an operation name and then click on
 ‘Implementations’.</p>
+<p>In a direct way you can just type the function name with a full
+specification from which domain, for example:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>antiCommutator $ Polynomial(Integer)
+</pre></div>
+</div>
+<p>The output will be</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>theMap(NASRNG-;antiCommutator;3S;1,10)
+</pre></div>
+</div>
+<p>The part between <code class="docutils literal notranslate"><span class="pre">(</span></code> and the first <code class="docutils literal notranslate"><span class="pre">;</span></code> is an abbreviation of the
+domain in which the function is implemented. In the above case
+<code class="docutils literal notranslate"><span class="pre">NASRNG-</span></code> stands for the default package of the category
+<code class="docutils literal notranslate"><span class="pre">NonAssociativeSemiRng</span></code>.</p>
 </section>
 <section id="clef-does-not-work-is-there-an-alternative">
 <h3>Clef does not work.  Is there an alternative?<a class="headerlink" href="#clef-does-not-work-is-there-an-alternative" title="Link to this heading">¶</a></h3>
@@ -569,6 +588,54 @@ the BOOT package. To restart FriCAS type</p>
 </pre></div>
 </div>
 <p>Note: for ECL you need to type <code class="docutils literal notranslate"><span class="pre">(in-package</span> <span class="pre">&quot;BOOT&quot;)</span></code> before <code class="docutils literal notranslate"><span class="pre">(|runspad|)</span></code>.</p>
+</section>
+<section id="is-there-exception-handling-in-fricas">
+<h3>Is there exception handling in FriCAS?<a class="headerlink" href="#is-there-exception-handling-in-fricas" title="Link to this heading">¶</a></h3>
+<p>You can use a construction like</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>foo() ==
+    l := bits()$Float;
+    try
+         -- set new precision
+         bits(128)
+         -- do your work
+     finally
+         bits(l)
+</pre></div>
+</div>
+<p>to temporarily set the floating poing precision and have it reset
+after the computation even if the computation (your work) results in
+an error.</p>
+</section>
+<section id="can-i-run-a-function-under-a-time-constraint">
+<h3>Can I run a function under a time constraint?<a class="headerlink" href="#can-i-run-a-function-under-a-time-constraint" title="Link to this heading">¶</a></h3>
+<p>Checkout the
+<a class="reference external" href="http://fricas.github.io/api/TimeoutPackage.html">TimeoutPackage</a>.</p>
+</section>
+<section id="how-can-i-compile-fspace-spad">
+<h3>How can I compile fspace.spad?<a class="headerlink" href="#how-can-i-compile-fspace-spad" title="Link to this heading">¶</a></h3>
+<p>The file <code class="docutils literal notranslate"><span class="pre">fspace.spad</span></code> needs a special bootstrap sequence:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>)boot $bootStrapMode := true
+)compile fspace.spad
+)boot $bootStrapMode := false
+)compile fspace.spad
+</pre></div>
+</div>
+<p>When developing similar changes you need to recompile all things which
+depend on the change and which you want to use, directly or
+indirectly.</p>
+<p>Full build takes care of bootstrapping and recompiles everything, so
+after that things works in expected way.</p>
+</section>
+<section id="are-there-things-in-fricas-that-do-not-work-properly">
+<h3>Are there things in FriCAS that do not work properly?<a class="headerlink" href="#are-there-things-in-fricas-that-do-not-work-properly" title="Link to this heading">¶</a></h3>
+<p>Yes, there are certainly, a number of them. We list here a few.</p>
+<ul>
+<li><p>Functions that have types as their parameters work in in the
+compiler, but not in the interpreter.</p>
+<p>See
+<a class="reference external" href="https://groups.google.com/d/msgid/fricas-devel/aUgPGQyo6_coDs5q%40fricas.org">https://groups.google.com/d/msgid/fricas-devel/aUgPGQyo6_coDs5q%40fricas.org</a>.</p>
+</li>
+</ul>
 <span class="target" id="jlfricas-mailing-list"></span></section>
 </section>
 </section>
@@ -634,7 +701,7 @@ the BOOT package. To restart FriCAS type</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

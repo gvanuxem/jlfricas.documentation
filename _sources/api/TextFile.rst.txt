@@ -37,7 +37,7 @@ This domain provides an implementation of text files. Text is stored in these fi
    pair: TextFile; endOfFile?
 
 :spadfun:`endOfFile?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``endOfFile?(f)``\  tests whether the file \ ``f``\  is positioned after the end of all text. If the file is open for output, then this test is always \ ``true``\ .
+  \ :code:`endOfFile?(f)`\  tests whether the file \ :code:`f`\  is positioned after the end of all text. If the file is open for output, then this test is always \ :code:`true`\ .
 
 .. _l5465787446696c65-666c757368:
 
@@ -79,7 +79,7 @@ This domain provides an implementation of text files. Text is stored in these fi
    pair: TextFile; readIfCan!
 
 :spadfun:`readIfCan!`\: % -> Union(\ :ref:`String <l537472696e67>`\ , failed) 
-  \ ``readIfCan!(f)``\  returns a string of the contents of a line from file \ ``f``\ , if possible. If \ ``f``\  is not readable or if it is positioned at the end of file, then \ ``"failed"``\  is returned.
+  \ :code:`readIfCan!(f)`\  returns a string of the contents of a line from file \ :code:`f`\ , if possible. If \ :code:`f`\  is not readable or if it is positioned at the end of file, then \ :code:`"failed"`\  is returned.
 
 .. _l5465787446696c65-726561644c696e6521:
 
@@ -87,7 +87,7 @@ This domain provides an implementation of text files. Text is stored in these fi
    pair: TextFile; readLine!
 
 :spadfun:`readLine!`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``readLine!(f)``\  returns a string of the contents of a line from the file \ ``f``\ .
+  \ :code:`readLine!(f)`\  returns a string of the contents of a line from the file \ :code:`f`\ .
 
 .. _l5465787446696c65-726561644c696e65496643616e21:
 
@@ -95,7 +95,7 @@ This domain provides an implementation of text files. Text is stored in these fi
    pair: TextFile; readLineIfCan!
 
 :spadfun:`readLineIfCan!`\: % -> Union(\ :ref:`String <l537472696e67>`\ , failed) 
-  \ ``readLineIfCan!(f)``\  returns a string of the contents of a line from file \ ``f``\ , if possible. If \ ``f``\  is not readable or if it is positioned at the end of file, then \ ``"failed"``\  is returned.
+  \ :code:`readLineIfCan!(f)`\  returns a string of the contents of a line from file \ :code:`f`\ , if possible. If \ :code:`f`\  is not readable or if it is positioned at the end of file, then \ :code:`"failed"`\  is returned.
 
 .. _l5465787446696c65-72656f70656e21:
 
@@ -113,14 +113,14 @@ This domain provides an implementation of text files. Text is stored in these fi
    pair: TextFile; writeLine!
 
 :spadfun:`writeLine!`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``writeLine!(f)``\  finishes the current line in the file \ ``f``\ . An empty string is returned. The call \ ``writeLine!(f)``\  is equivalent to \ ``writeLine!(f,"")``\ .
+  \ :code:`writeLine!(f)`\  finishes the current line in the file \ :code:`f`\ . An empty string is returned. The call \ :code:`writeLine!(f)`\  is equivalent to \ :code:`writeLine!(f,"")`\ .
 
 
 .. index::
    pair: TextFile; writeLine!
 
 :spadfun:`writeLine!`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`String <l537472696e67>`\  
-  \ ``writeLine!(f, s)``\  writes the contents of the string \ ``s``\  and finishes the current line in the file \ ``f``\ . The value of \ ``s``\  is returned.
+  \ :code:`writeLine!(f, s)`\  writes the contents of the string \ :code:`s`\  and finishes the current line in the file \ :code:`f`\ . The value of \ :code:`s`\  is returned.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

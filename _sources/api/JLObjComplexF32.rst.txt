@@ -8,7 +8,7 @@ JLObjComplexF32
 :viewcode:`jimobject.spad line 288 <jimobject.spad#L288>` :editcode:`[edit on github] <jimobject.spad#L288>`
 
 
-Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported.
+Convenience domain for Julia \ :code:`ComplexF32`\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather for returned value or function argument for example. Only basic arithmetic operations are supported.
 
 
 .. _l4a4c4f626a436f6d706c6578463332-30:
@@ -31,7 +31,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x*i``\  is the integer multiplication.
+  \ :code:`x*i`\  is the integer multiplication.
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -73,14 +73,14 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; /
 
 :spadfun:`/`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x/i``\  is the division by an integer.
+  \ :code:`x/i`\  is the division by an integer.
 
 
 .. index::
    pair: JLObjComplexF32; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``i/x``\  is the division of an integer by \ ``x``\ .
+  \ :code:`i/x`\  is the division of an integer by \ :code:`x`\ .
 
 .. _l4a4c4f626a436f6d706c6578463332-3d:
 
@@ -136,7 +136,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; cis
 
 :spadfun:`cis`\: % -> % 
-  \ ``cis(x)``\  returns exp(\%i*x) computed efficiently.
+  \ :code:`cis(x)`\  returns exp(\%i*x) computed efficiently.
 
 .. _l4a4c4f626a436f6d706c6578463332-6369737069:
 
@@ -144,7 +144,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; cispi
 
 :spadfun:`cispi`\: % -> % 
-  \ ``cispi(x)``\  returns cis(\%pi*x) computed efficiently.
+  \ :code:`cispi(x)`\  returns cis(\%pi*x) computed efficiently.
 
 .. _l4a4c4f626a436f6d706c6578463332-636f65726365:
 
@@ -232,7 +232,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; jcfloat32
 
 :spadfun:`jcfloat32`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jcfloat32(str)``\  evaluates \ ``str``\  in Julia and returns the Julia Complex{\ ``Float32``\ } object. For example: \example{jcfloat32 "cos(2pi)im"}
+  \ :code:`jcfloat32(str)`\  evaluates \ :code:`str`\  in Julia and returns the Julia Complex{\ :code:`Float32`\ } object. For example: \example{jcfloat32 "cos(2pi)im"}
 
 .. _l4a4c4f626a436f6d706c6578463332-6a6c41626f7574:
 
@@ -245,7 +245,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, x)``\  applies the function \ ``func``\  with \ ``x``\  as parameter.
+  \ :code:`jlApply(func, x)`\  applies the function \ :code:`func`\  with \ :code:`x`\  as parameter.
 
 
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -256,7 +256,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlApply(func, x, y)``\  applies the function \ ``func``\  to \ ``x``\  and \ ``y``\ .
+  \ :code:`jlApply(func, x, y)`\  applies the function \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ .
 
 
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -267,7 +267,7 @@ Convenience domain for Julia \ ``ComplexF32``\ , objects that are used within Ju
    pair: JLObjComplexF32; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlApply(func, x, y, z)``\  applies the function \ ``func``\  to \ ``x``\ , \ ``y``\  and \ ``z``\ .
+  \ :code:`jlApply(func, x, y, z)`\  applies the function \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ .
 
 
 \ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  

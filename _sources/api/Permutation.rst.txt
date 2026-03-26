@@ -10,7 +10,7 @@ Permutation S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ , which move only a finite number of points. A permutation is considered as a map from \ ``S``\  into \ ``S``\ . In particular multiplication is defined as composition of maps: \ *pi1 * pi2 = pi1 o pi2*\ . The internal representation of permutations are two lists of equal length representing preimages and images.
+Permutation(\ :code:`S`\ ) implements the group of all bijections on a set \ :code:`S`\ , which move only a finite number of points. A permutation is considered as a map from \ :code:`S`\  into \ :code:`S`\ . In particular multiplication is defined as composition of maps: \ *pi1 * pi2 = pi1 o pi2*\ . The internal representation of permutations are two lists of equal length representing preimages and images.
 
 
 .. _l5065726d75746174696f6e-31:
@@ -81,14 +81,14 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; coerce
 
 :spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coerce(lls)``\  coerces a list of cycles \ *lls*\  to a permutation, each cycle being a list with no repetitions, is coerced to the permutation, which maps \ *ls.i*\  to \ *ls.i+1*\ , indices modulo the length of the list, then these permutations are multiplied. Error: if repetitions occur in one cycle.
+  \ :code:`coerce(lls)`\  coerces a list of cycles \ *lls*\  to a permutation, each cycle being a list with no repetitions, is coerced to the permutation, which maps \ *ls.i*\  to \ *ls.i+1*\ , indices modulo the length of the list, then these permutations are multiplied. Error: if repetitions occur in one cycle.
 
 
 .. index::
    pair: Permutation; coerce
 
 :spadfun:`coerce`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coerce(ls)``\  coerces a cycle \ *ls*\ , i.e. a list with no repetitions to a permutation, which maps \ *ls.i*\  to \ *ls.i+1*\ , indices modulo the length of the list. Error: if repetitions occur.
+  \ :code:`coerce(ls)`\  coerces a cycle \ *ls*\ , i.e. a list with no repetitions to a permutation, which maps \ *ls.i*\  to \ *ls.i+1*\ , indices modulo the length of the list. Error: if repetitions occur.
 
 .. _l5065726d75746174696f6e-636f65726365496d61676573:
 
@@ -96,7 +96,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; coerceImages
 
 :spadfun:`coerceImages`\: \ :ref:`List <l4c697374>`\  S -> % if S has \ :ref:`Finite <l46696e697465>`\  or S has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``coerceImages(ls)``\  coerces the list \ *ls*\  to a permutation whose image is given by \ *ls*\  and the preimage is fixed to be \ *[1, ..., n]*\ . Note: {coerceImages(\ ``ls``\ )=coercePreimagesImages([1, ..., \ ``n``\ ], \ ``ls``\ )}. We assume that both preimage and image do not contain repetitions.
+  \ :code:`coerceImages(ls)`\  coerces the list \ *ls*\  to a permutation whose image is given by \ *ls*\  and the preimage is fixed to be \ *[1, ..., n]*\ . Note: {coerceImages(\ :code:`ls`\ )=coercePreimagesImages([1, ..., \ :code:`n`\ ], \ :code:`ls`\ )}. We assume that both preimage and image do not contain repetitions.
 
 .. _l5065726d75746174696f6e-636f657263654c6973744f665061697273:
 
@@ -104,7 +104,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; coerceListOfPairs
 
 :spadfun:`coerceListOfPairs`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coerceListOfPairs(lls)``\  coerces a list of pairs \ *lls*\  to a permutation. Error: if not consistent, i.e. the set of the first elements coincides with the set of second elements. coerce(\ ``p``\ ) generates output of the permutation \ ``p``\  with domain OutputForm.
+  \ :code:`coerceListOfPairs(lls)`\  coerces a list of pairs \ *lls*\  to a permutation. Error: if not consistent, i.e. the set of the first elements coincides with the set of second elements. coerce(\ :code:`p`\ ) generates output of the permutation \ :code:`p`\  with domain OutputForm.
 
 .. _l5065726d75746174696f6e-636f65726365507265696d61676573496d61676573:
 
@@ -112,7 +112,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; coercePreimagesImages
 
 :spadfun:`coercePreimagesImages`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``coercePreimagesImages(lls)``\  coerces the representation \ *lls*\  of a permutation as a list of preimages and images to a permutation. We assume that both preimage and image do not contain repetitions.
+  \ :code:`coercePreimagesImages(lls)`\  coerces the representation \ *lls*\  of a permutation as a list of preimages and images to a permutation. We assume that both preimage and image do not contain repetitions.
 
 .. _l5065726d75746174696f6e-636f6d6d757461746f72:
 
@@ -135,7 +135,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; cyclePartition
 
 :spadfun:`cyclePartition`\: % -> \ :ref:`Partition <l506172746974696f6e>`\  
-  \ ``cyclePartition(p)``\  returns the cycle structure of a permutation \ ``p``\  including cycles of length 1 only if \ ``S``\  is finite.
+  \ :code:`cyclePartition(p)`\  returns the cycle structure of a permutation \ :code:`p`\  including cycles of length 1 only if \ :code:`S`\  is finite.
 
 .. _l5065726d75746174696f6e-6379636c6573:
 
@@ -148,7 +148,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; degree
 
 :spadfun:`degree`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``degree(p)``\  returns the number of points moved by the permutation \ ``p``\ .
+  \ :code:`degree(p)`\  returns the number of points moved by the permutation \ :code:`p`\ .
 
 .. _l5065726d75746174696f6e-656c74:
 
@@ -166,7 +166,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; even?
 
 :spadfun:`even?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``even?(p)``\  returns \ ``true``\  if and only if \ ``p``\  is an even permutation, i.e. \ *sign(p)*\  is 1.
+  \ :code:`even?(p)`\  returns \ :code:`true`\  if and only if \ :code:`p`\  is an even permutation, i.e. \ *sign(p)*\  is 1.
 
 .. _l5065726d75746174696f6e-6669786564506f696e7473:
 
@@ -174,7 +174,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; fixedPoints
 
 :spadfun:`fixedPoints`\: % -> \ :ref:`Set <l536574>`\  S if S has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``fixedPoints(p)``\  returns the points fixed by the permutation \ ``p``\ .
+  \ :code:`fixedPoints(p)`\  returns the points fixed by the permutation \ :code:`p`\ .
 
 .. _l5065726d75746174696f6e-696e76:
 
@@ -206,7 +206,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; listRepresentation
 
 :spadfun:`listRepresentation`\: % -> Record(preimage: \ :ref:`List <l4c697374>`\  S, image: \ :ref:`List <l4c697374>`\  S) 
-  \ ``listRepresentation(p)``\  produces a representation \ *rep*\  of the permutation \ ``p``\  as a list of preimages and images, \ ``i``\ .\ ``e``\  \ ``p``\  maps \ *(rep.preimage).k*\  to \ *(rep.image).k*\  for all indices \ ``k``\ . Elements of \ ``S``\  not in \ *(rep.preimage).k*\  are fixed points, and these are the only fixed points of the permutation.
+  \ :code:`listRepresentation(p)`\  produces a representation \ *rep*\  of the permutation \ :code:`p`\  as a list of preimages and images, \ :code:`i`\ .\ :code:`e`\  \ :code:`p`\  maps \ *(rep.preimage).k*\  to \ *(rep.image).k*\  for all indices \ :code:`k`\ . Elements of \ :code:`S`\  not in \ *(rep.preimage).k*\  are fixed points, and these are the only fixed points of the permutation.
 
 .. _l5065726d75746174696f6e-6d6178:
 
@@ -224,7 +224,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; movedPoints
 
 :spadfun:`movedPoints`\: % -> \ :ref:`Set <l536574>`\  S 
-  \ ``movedPoints(p)``\  returns the set of points moved by the permutation \ ``p``\ .
+  \ :code:`movedPoints(p)`\  returns the set of points moved by the permutation \ :code:`p`\ .
 
 .. _l5065726d75746174696f6e-6e756d6265724f664379636c6573:
 
@@ -232,7 +232,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; numberOfCycles
 
 :spadfun:`numberOfCycles`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``numberOfCycles(p)``\  returns the number of non-trivial cycles of the permutation \ ``p``\ .
+  \ :code:`numberOfCycles(p)`\  returns the number of non-trivial cycles of the permutation \ :code:`p`\ .
 
 .. _l5065726d75746174696f6e-6f64643f:
 
@@ -240,7 +240,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; odd?
 
 :spadfun:`odd?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``odd?(p)``\  returns \ ``true``\  if and only if \ ``p``\  is an odd permutation i.e. \ *sign(p)*\  is \ *-1*\ .
+  \ :code:`odd?(p)`\  returns \ :code:`true`\  if and only if \ :code:`p`\  is an odd permutation i.e. \ *sign(p)*\  is \ *-1*\ .
 
 .. _l5065726d75746174696f6e-6f6e653f:
 
@@ -258,7 +258,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; order
 
 :spadfun:`order`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``order(p)``\  returns the order of a permutation \ ``p``\  as a group element.
+  \ :code:`order(p)`\  returns the order of a permutation \ :code:`p`\  as a group element.
 
 .. _l5065726d75746174696f6e-7265636970:
 
@@ -290,7 +290,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; sign
 
 :spadfun:`sign`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``sign(p)``\  returns the signum of the permutation \ ``p``\ , \ ``+1``\  or \ ``-1``\ .
+  \ :code:`sign(p)`\  returns the signum of the permutation \ :code:`p`\ , \ :code:`+1`\  or \ :code:`-1`\ .
 
 .. _l5065726d75746174696f6e-736d616c6c65723f:
 
@@ -303,7 +303,7 @@ Permutation(\ ``S``\ ) implements the group of all bijections on a set \ ``S``\ 
    pair: Permutation; sort
 
 :spadfun:`sort`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``sort(lp)``\  sorts a list of permutations \ *lp*\  according to cycle structure first according to length of cycles, second, if \ ``S``\  has \ :ref:`Finite <l46696e697465>`\  or \ ``S``\  has \ :ref:`OrderedSet <l4f726465726564536574>`\  according to lexicographical order of entries in cycles of equal length.
+  \ :code:`sort(lp)`\  sorts a list of permutations \ *lp*\  according to cycle structure first according to length of cycles, second, if \ :code:`S`\  has \ :ref:`Finite <l46696e697465>`\  or \ :code:`S`\  has \ :ref:`OrderedSet <l4f726465726564536574>`\  according to lexicographical order of entries in cycles of equal length.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

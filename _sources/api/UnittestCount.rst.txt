@@ -17,7 +17,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; addWarning
 
 :spadfun:`addWarning`\: \ :ref:`OutputForm <l4f7574707574466f726d>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``addWarning s``\  is an internal function that adds \ ``s``\ , together with an indication of the current testcase and the current testsuite to the list of warnings.
+  \ :code:`addWarning s`\  is an internal function that adds \ :code:`s`\ , together with an indication of the current testcase and the current testsuite to the list of warnings.
 
 .. _l556e697474657374436f756e74-696e634661696c:
 
@@ -25,7 +25,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; incFail
 
 :spadfun:`incFail`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``incFail(s, o)``\  is an internal function that steps the number of failed tests and records in- and output.
+  \ :code:`incFail(s, o)`\  is an internal function that steps the number of failed tests and records in- and output.
 
 .. _l556e697474657374436f756e74-696e63466174616c:
 
@@ -33,7 +33,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; incFatal
 
 :spadfun:`incFatal`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``incFatal s``\  is an internal function that steps the number of fatal tests and records input.
+  \ :code:`incFatal s`\  is an internal function that steps the number of fatal tests and records input.
 
 .. _l556e697474657374436f756e74-696e634c6962726172794572726f72:
 
@@ -65,7 +65,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; incXfFail
 
 :spadfun:`incXfFail`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``incXfFail()``\  is an internal function that steps the number expected failures.
+  \ :code:`incXfFail()`\  is an internal function that steps the number expected failures.
 
 .. _l556e697474657374436f756e74-696e635866466174616c:
 
@@ -89,7 +89,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; incXfPass
 
 :spadfun:`incXfPass`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ ``incXfPass(s, o)``\  is an internal function that steps the number of tests that passed but were expected to fail and records in- and output.
+  \ :code:`incXfPass(s, o)`\  is an internal function that steps the number of tests that passed but were expected to fail and records in- and output.
 
 .. _l556e697474657374436f756e74-73746174697374696373:
 
@@ -97,7 +97,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; statistics
 
 :spadfun:`statistics`\: () -> \ :ref:`Void <l566f6964>`\  
-  \ ``statistics()``\  prints out a summary of the outcome of the testcases so far. Use \ ``clear completely``\  to reset the statistics.
+  \ :code:`statistics()`\  prints out a summary of the outcome of the testcases so far. Use \ :code:`clear completely`\  to reset the statistics.
 
 .. _l556e697474657374436f756e74-7465737463617365:
 
@@ -105,7 +105,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; testcase
 
 :spadfun:`testcase`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``testcase s``\  starts a new testcase with \ ``s``\  as title. It also calls \ ``clear all``\ . A testcase is composed of several tests.
+  \ :code:`testcase s`\  starts a new testcase with \ :code:`s`\  as title. It also calls \ :code:`clear all`\ . A testcase is composed of several tests.
 
 .. _l556e697474657374436f756e74-74657374636173654e6f436c656172:
 
@@ -113,7 +113,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; testcaseNoClear
 
 :spadfun:`testcaseNoClear`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``testcaseNoClear s``\ , starts a new testcase with \ ``s``\  as title, without calling \ ``clear all``\ . A testcase is composed of several tests.
+  \ :code:`testcaseNoClear s`\ , starts a new testcase with \ :code:`s`\  as title, without calling \ :code:`clear all`\ . A testcase is composed of several tests.
 
 .. _l556e697474657374436f756e74-746573747375697465:
 
@@ -121,7 +121,7 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; testsuite
 
 :spadfun:`testsuite`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``testsuite s``\  starts a new testsuite with \ ``s``\  as title. It also calls \ ``clear all``\ . A testsuite is composed of several testcases.
+  \ :code:`testsuite s`\  starts a new testsuite with \ :code:`s`\  as title. It also calls \ :code:`clear all`\ . A testsuite is composed of several testcases.
 
 .. _l556e697474657374436f756e74-7465737473756974654e6f436c656172:
 
@@ -129,6 +129,6 @@ UnittestCount is a package that keeps track of statistics collected during testi
    pair: UnittestCount; testsuiteNoClear
 
 :spadfun:`testsuiteNoClear`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``testsuiteNoClear s``\  starts a new testsuite with \ ``s``\  as title, without calling \ ``clear all``\ . A testsuite is composed of several testcases.
+  \ :code:`testsuiteNoClear s`\  starts a new testsuite with \ :code:`s`\  as title, without calling \ :code:`clear all`\ . A testsuite is composed of several testcases.
 
 

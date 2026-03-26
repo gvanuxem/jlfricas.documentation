@@ -16,7 +16,7 @@ LinearSystemMatrixPackage(F, Row, Col, M)
 * M: \ :ref:`MatrixCategory <l4d617472697843617465676f7279>`\ (F, Row, Col)
 
 
-This package solves linear system in the matrix form \ ``AX = B``\ .
+This package solves linear system in the matrix form \ :code:`AX = B`\ .
 
 
 .. _l4c696e65617253797374656d4d61747269785061636b616765-686173536f6c7574696f6e3f:
@@ -25,7 +25,7 @@ This package solves linear system in the matrix form \ ``AX = B``\ .
    pair: LinearSystemMatrixPackage; hasSolution?
 
 :spadfun:`hasSolution?`\: (M, Col) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``hasSolution?(A, B)``\  tests if the linear system \ ``AX = B``\  has a solution.
+  \ :code:`hasSolution?(A, B)`\  tests if the linear system \ :code:`AX = B`\  has a solution.
 
 .. _l4c696e65617253797374656d4d61747269785061636b616765-706172746963756c6172536f6c7574696f6e:
 
@@ -33,7 +33,7 @@ This package solves linear system in the matrix form \ ``AX = B``\ .
    pair: LinearSystemMatrixPackage; particularSolution
 
 :spadfun:`particularSolution`\: (M, Col) -> Union(Col, failed) 
-  \ ``particularSolution(A, B)``\  finds a particular solution of the linear system \ ``AX = B``\ .
+  \ :code:`particularSolution(A, B)`\  finds a particular solution of the linear system \ :code:`AX = B`\ .
 
 .. _l4c696e65617253797374656d4d61747269785061636b616765-72616e6b:
 
@@ -41,7 +41,7 @@ This package solves linear system in the matrix form \ ``AX = B``\ .
    pair: LinearSystemMatrixPackage; rank
 
 :spadfun:`rank`\: (M, Col) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``rank(A, B)``\  computes the rank of the complete matrix \ ``(A|B)``\  of the linear system \ ``AX = B``\ .
+  \ :code:`rank(A, B)`\  computes the rank of the complete matrix \ :code:`(A|B)`\  of the linear system \ :code:`AX = B`\ .
 
 .. _l4c696e65617253797374656d4d61747269785061636b616765-736f6c7665:
 
@@ -49,13 +49,13 @@ This package solves linear system in the matrix form \ ``AX = B``\ .
    pair: LinearSystemMatrixPackage; solve
 
 :spadfun:`solve`\: (M, Col) -> Record(particular: Union(Col, failed), basis: \ :ref:`List <l4c697374>`\  Col) 
-  \ ``solve(A, B)``\  finds a particular solution of the system \ ``AX = B``\  and a basis of the associated homogeneous system \ ``AX = 0``\ .
+  \ :code:`solve(A, B)`\  finds a particular solution of the system \ :code:`AX = B`\  and a basis of the associated homogeneous system \ :code:`AX = 0`\ .
 
 
 .. index::
    pair: LinearSystemMatrixPackage; solve
 
 :spadfun:`solve`\: (M, \ :ref:`List <l4c697374>`\  Col) -> \ :ref:`List <l4c697374>`\  Record(particular: Union(Col, failed), basis: \ :ref:`List <l4c697374>`\  Col) 
-  \ ``solve(A, LB)``\  finds a particular solution of the systems \ ``AX = B``\  and a basis of the associated homogeneous systems \ ``AX = 0``\  where \ ``B``\  varies in the list of column vectors \ ``LB``\ .
+  \ :code:`solve(A, LB)`\  finds a particular solution of the systems \ :code:`AX = B`\  and a basis of the associated homogeneous systems \ :code:`AX = 0`\  where \ :code:`B`\  varies in the list of column vectors \ :code:`LB`\ .
 
 

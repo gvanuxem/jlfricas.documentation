@@ -17,7 +17,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; display_math?
 
 :spadfun:`display_math?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``display_math?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a display math node.
+  \ :code:`display_math?(t)`\  returns \ :code:`true`\  if and only if \ :code:`t`\  is a display math node.
 
 .. _l54655854726565-646973706c61795f6d617468:
 
@@ -25,7 +25,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; display_math
 
 :spadfun:`display_math`\: % -> % 
-  \ ``display_math(t)``\  builds a display math node with content \ ``t``\ .
+  \ :code:`display_math(t)`\  builds a display math node with content \ :code:`t`\ .
 
 .. _l54655854726565-6765745f63616c6c:
 
@@ -33,7 +33,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; get_call
 
 :spadfun:`get_call`\: % -> Record(name: \ :ref:`String <l537472696e67>`\ , args: \ :ref:`List <l4c697374>`\  %) 
-  \ ``get_call(t)``\  extracts name and actual arguments from a macro call node.
+  \ :code:`get_call(t)`\  extracts name and actual arguments from a macro call node.
 
 .. _l54655854726565-6765745f6d617468:
 
@@ -41,7 +41,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; get_math
 
 :spadfun:`get_math`\: % -> % 
-  \ ``get_math(t)``\  extracts content of text or display math node.
+  \ :code:`get_math(t)`\  extracts content of text or display math node.
 
 .. _l54655854726565-6765745f74657874:
 
@@ -49,7 +49,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; get_text
 
 :spadfun:`get_text`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``get_text(t)``\  extracts text from a node representing text.
+  \ :code:`get_text(t)`\  extracts text from a node representing text.
 
 .. _l54655854726565-67726f75703f:
 
@@ -57,7 +57,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; group?
 
 :spadfun:`group?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  group(\ ``t``\ ) returns \ ``true``\  if and only if \ ``t``\  is a group node.
+  group(\ :code:`t`\ ) returns \ :code:`true`\  if and only if \ :code:`t`\  is a group node.
 
 .. _l54655854726565-67726f7570:
 
@@ -65,7 +65,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; group
 
 :spadfun:`group`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``group(l)``\  builds group node from a list \ ``l``\ .
+  \ :code:`group(l)`\  builds group node from a list \ :code:`l`\ .
 
 .. _l54655854726565-6d5f63616c6c3f:
 
@@ -73,7 +73,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; m_call?
 
 :spadfun:`m_call?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``m_call?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a macro call node.
+  \ :code:`m_call?(t)`\  returns \ :code:`true`\  if and only if \ :code:`t`\  is a macro call node.
 
 .. _l54655854726565-6d5f63616c6c:
 
@@ -81,7 +81,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; m_call
 
 :spadfun:`m_call`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
-  \ ``m_call(s, l)``\  builds macro call node for macro with name \ ``s``\  and with actual arguments \ ``l``\ .
+  \ :code:`m_call(s, l)`\  builds macro call node for macro with name \ :code:`s`\  and with actual arguments \ :code:`l`\ .
 
 .. _l54655854726565-746578743f:
 
@@ -89,7 +89,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; text?
 
 :spadfun:`text?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``text?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a node representing text.
+  \ :code:`text?(t)`\  returns \ :code:`true`\  if and only if \ :code:`t`\  is a node representing text.
 
 .. _l54655854726565-74657874:
 
@@ -97,7 +97,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; text
 
 :spadfun:`text`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``text(s)``\  builds a node representing text \ ``s``\ .
+  \ :code:`text(s)`\  builds a node representing text \ :code:`s`\ .
 
 .. _l54655854726565-746578745f6d6174683f:
 
@@ -105,7 +105,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; text_math?
 
 :spadfun:`text_math?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``text_math?(t)``\  returns \ ``true``\  if and only if \ ``t``\  is a text math node.
+  \ :code:`text_math?(t)`\  returns \ :code:`true`\  if and only if \ :code:`t`\  is a text math node.
 
 .. _l54655854726565-746578745f6d617468:
 
@@ -113,7 +113,7 @@ This domain represents TeX parse tree.
    pair: TeXTree; text_math
 
 :spadfun:`text_math`\: % -> % 
-  \ ``text_math(t)``\  builds a text math node with content \ ``t``\ .
+  \ :code:`text_math(t)`\  builds a text math node with content \ :code:`t`\ .
 
 .. _l54655854726565-756e67726f7570:
 
@@ -121,6 +121,6 @@ This domain represents TeX parse tree.
    pair: TeXTree; ungroup
 
 :spadfun:`ungroup`\: % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``ungroup(t)``\  extracts underlying list from a group node.
+  \ :code:`ungroup(t)`\  extracts underlying list from a group node.
 
 

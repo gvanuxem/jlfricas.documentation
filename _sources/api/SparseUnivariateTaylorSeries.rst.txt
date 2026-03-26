@@ -14,7 +14,7 @@ SparseUnivariateTaylorSeries(Coef, var, cen)
 * cen: Coef
 
 
-Sparse Taylor series in one variable \ :ref:`SparseUnivariateTaylorSeries <l537061727365556e69766172696174655461796c6f72536572696573>`\  is a domain representing Taylor series in one variable with coefficients in an arbitrary ring. The parameters of the type specify the coefficient ring, the power series variable, and the center of the power series expansion. For example, \ :ref:`SparseUnivariateTaylorSeries <l537061727365556e69766172696174655461796c6f72536572696573>`\ (Integer, \ ``x``\ , 3) represents Taylor series in \ ``(x - 3)``\  with \ :ref:`Integer <l496e7465676572>`\  coefficients.
+Sparse Taylor series in one variable \ :ref:`SparseUnivariateTaylorSeries <l537061727365556e69766172696174655461796c6f72536572696573>`\  is a domain representing Taylor series in one variable with coefficients in an arbitrary ring. The parameters of the type specify the coefficient ring, the power series variable, and the center of the power series expansion. For example, \ :ref:`SparseUnivariateTaylorSeries <l537061727365556e69766172696174655461796c6f72536572696573>`\ (Integer, \ :code:`x`\ , 3) represents Taylor series in \ :code:`(x - 3)`\  with \ :ref:`Integer <l496e7465676572>`\  coefficients.
 
 
 .. _l537061727365556e69766172696174655461796c6f72536572696573-30:
@@ -241,14 +241,14 @@ Sparse Taylor series in one variable \ :ref:`SparseUnivariateTaylorSeries <l5370
    pair: SparseUnivariateTaylorSeries; coerce
 
 :spadfun:`coerce`\: \ :ref:`UnivariatePolynomial <l556e6976617269617465506f6c796e6f6d69616c>`\ (var, Coef) -> % 
-  \ ``coerce(p)``\  converts a univariate polynomial \ ``p``\  in the variable \ ``var``\  to a univariate Taylor series in \ ``var``\ .
+  \ :code:`coerce(p)`\  converts a univariate polynomial \ :code:`p`\  in the variable \ :code:`var`\  to a univariate Taylor series in \ :code:`var`\ .
 
 
 .. index::
    pair: SparseUnivariateTaylorSeries; coerce
 
 :spadfun:`coerce`\: \ :ref:`Variable <l5661726961626c65>`\  var -> % 
-  \ ``coerce(var)``\  converts the series variable \ ``var``\  into a Taylor series.
+  \ :code:`coerce(var)`\  converts the series variable \ :code:`var`\  into a Taylor series.
 
 .. _l537061727365556e69766172696174655461796c6f72536572696573-636f6d6d757461746f72:
 
@@ -360,7 +360,7 @@ Sparse Taylor series in one variable \ :ref:`SparseUnivariateTaylorSeries <l5370
    pair: SparseUnivariateTaylorSeries; differentiate
 
 :spadfun:`differentiate`\: (%, \ :ref:`Variable <l5661726961626c65>`\  var) -> % 
-  \ ``differentiate(f(x), x)``\  computes the derivative of \ ``f(x)``\  with respect to \ ``x``\ .
+  \ :code:`differentiate(f(x), x)`\  computes the derivative of \ :code:`f(x)`\  with respect to \ :code:`x`\ .
 
 .. _l537061727365556e69766172696174655461796c6f72536572696573-656c74:
 
@@ -405,7 +405,7 @@ Sparse Taylor series in one variable \ :ref:`SparseUnivariateTaylorSeries <l5370
    pair: SparseUnivariateTaylorSeries; integrate
 
 :spadfun:`integrate`\: (%, \ :ref:`Variable <l5661726961626c65>`\  var) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(f(x), x)``\  returns an anti-derivative of the power series \ ``f(x)``\  with constant coefficient 0. We may integrate a series when we can divide coefficients by integers.
+  \ :code:`integrate(f(x), x)`\  returns an anti-derivative of the power series \ :code:`f(x)`\  with constant coefficient 0. We may integrate a series when we can divide coefficients by integers.
 
 .. _l537061727365556e69766172696174655461796c6f72536572696573-6c61746578:
 
@@ -642,7 +642,7 @@ Sparse Taylor series in one variable \ :ref:`SparseUnivariateTaylorSeries <l5370
    pair: SparseUnivariateTaylorSeries; univariatePolynomial
 
 :spadfun:`univariatePolynomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`UnivariatePolynomial <l556e6976617269617465506f6c796e6f6d69616c>`\ (var, Coef) 
-  \ ``univariatePolynomial(f, k)``\  returns a univariate polynomial consisting of the sum of all terms of \ ``f``\  of degree \ ``<= k``\ .
+  \ :code:`univariatePolynomial(f, k)`\  returns a univariate polynomial consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`<= k`\ .
 
 .. _l537061727365556e69766172696174655461796c6f72536572696573-7661726961626c65:
 

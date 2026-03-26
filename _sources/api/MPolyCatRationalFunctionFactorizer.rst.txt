@@ -18,7 +18,7 @@ MPolyCatRationalFunctionFactorizer(E, OV, R, PRF)
 * PRF: \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, E, OV)
 
 
-This package exports a factor operation for multivariate polynomials with coefficients which are rational functions over some ring \ ``R``\  over which we can factor. It is used internally by packages such as primary decomposition which need to work with polynomials with rational function coefficients, i.e. themselves fractions of polynomials.
+This package exports a factor operation for multivariate polynomials with coefficients which are rational functions over some ring \ :code:`R`\  over which we can factor. It is used internally by packages such as primary decomposition which need to work with polynomials with rational function coefficients, i.e. themselves fractions of polynomials.
 
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-666163746f72:
@@ -27,7 +27,7 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; factor
 
 :spadfun:`factor`\: PRF -> \ :ref:`Factored <l466163746f726564>`\  PRF 
-  \ ``factor(prf)``\  factors a polynomial with rational function coefficients.
+  \ :code:`factor(prf)`\  factors a polynomial with rational function coefficients.
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-70757368646f776e:
 
@@ -35,7 +35,7 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; pushdown
 
 :spadfun:`pushdown`\: (PRF, OV) -> PRF 
-  \ ``pushdown(prf, var)``\  pushes all top level occurrences of the variable var into the coefficient domain for the polynomial \ ``prf``\ .
+  \ :code:`pushdown(prf, var)`\  pushes all top level occurrences of the variable var into the coefficient domain for the polynomial \ :code:`prf`\ .
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-70757368647465726d:
 
@@ -43,7 +43,7 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; pushdterm
 
 :spadfun:`pushdterm`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  PRF, OV) -> PRF 
-  \ ``pushdterm(monom, var)``\  pushes all top level occurrences of the variable var into the coefficient domain for the monomial \ ``monom``\ .
+  \ :code:`pushdterm(monom, var)`\  pushes all top level occurrences of the variable var into the coefficient domain for the monomial \ :code:`monom`\ .
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-7075736875636f6566:
 
@@ -51,7 +51,7 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; pushucoef
 
 :spadfun:`pushucoef`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, OV) -> PRF 
-  \ ``pushucoef(upoly, var)``\  converts the anonymous univariate polynomial \ ``upoly``\  to a polynomial in var over rational functions.
+  \ :code:`pushucoef(upoly, var)`\  converts the anonymous univariate polynomial \ :code:`upoly`\  to a polynomial in var over rational functions.
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-7075736875636f6e7374:
 
@@ -59,7 +59,7 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; pushuconst
 
 :spadfun:`pushuconst`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, OV) -> PRF 
-  \ ``pushuconst(r, var)``\  takes a rational function and raises all occurrences of the variable var to the polynomial level.
+  \ :code:`pushuconst(r, var)`\  takes a rational function and raises all occurrences of the variable var to the polynomial level.
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-707573687570:
 
@@ -67,7 +67,7 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; pushup
 
 :spadfun:`pushup`\: (PRF, OV) -> PRF 
-  \ ``pushup(prf, var)``\  raises all occurrences of the variable var in the coefficients of the polynomial \ ``prf``\  back to the polynomial level.
+  \ :code:`pushup(prf, var)`\  raises all occurrences of the variable var in the coefficients of the polynomial \ :code:`prf`\  back to the polynomial level.
 
 .. _l4d506f6c79436174526174696f6e616c46756e6374696f6e466163746f72697a6572-746f74616c6672616374:
 
@@ -75,6 +75,6 @@ This package exports a factor operation for multivariate polynomials with coeffi
    pair: MPolyCatRationalFunctionFactorizer; totalfract
 
 :spadfun:`totalfract`\: PRF -> Record(sup: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, inf: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R) 
-  \ ``totalfract(prf)``\  takes a polynomial whose coefficients are themselves fractions of polynomials and returns a record containing the numerator and denominator resulting from putting \ ``prf``\  over a common denominator.
+  \ :code:`totalfract(prf)`\  takes a polynomial whose coefficients are themselves fractions of polynomials and returns a record containing the numerator and denominator resulting from putting \ :code:`prf`\  over a common denominator.
 
 

@@ -8,7 +8,7 @@ JLFloat64Vector
 :viewcode:`jarray64.spad line 71 <jarray64.spad#L71>` :editcode:`[edit on github] <jarray64.spad#L71>`
 
 
-This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking on elt\ ``'s``\ . Minimum index is 1.
+This domain provides a fast \ :code:`JLFloat64`\  vector type with no bound checking on elt\ :code:`'s`\ . Minimum index is 1.
 
 
 .. _l4a4c466c6f61743634566563746f72-23:
@@ -84,7 +84,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; coerce!
 
 :spadfun:`coerce!`\: % -> \ :ref:`DoubleFloatVector <l446f75626c65466c6f6174566563746f72>`\  
-  \ ``coerce!(v)``\  coerces \ ``v``\  to a DoubleFloatVector.
+  \ :code:`coerce!(v)`\  coerces \ :code:`v`\  to a DoubleFloatVector.
 
 .. _l4a4c466c6f61743634566563746f72-636f65726365:
 
@@ -92,7 +92,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`DoubleFloatVector <l446f75626c65466c6f6174566563746f72>`\  
-  \ ``coerce(v)``\  coerces a copy of \ ``v``\  to a DoubleFloatVector.
+  \ :code:`coerce(v)`\  coerces a copy of \ :code:`v`\  to a DoubleFloatVector.
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -131,7 +131,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; copy!
 
 :spadfun:`copy!`\: (%, %) -> % 
-  \ ``copy!(b,a)``\  efficiently copies a to \ ``b``\ . No checks are performed on array dimensions.
+  \ :code:`copy!(b,a)`\  efficiently copies a to \ :code:`b`\ . No checks are performed on array dimensions.
 
 .. _l4a4c466c6f61743634566563746f72-636f7079:
 
@@ -237,7 +237,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; exprand
 
 :spadfun:`exprand`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``exprand(n)``\  returns a Julia vector of size \ ``n``\  with random elements from the exponential distribution with scale 1.
+  \ :code:`exprand(n)`\  returns a Julia vector of size \ :code:`n`\  with random elements from the exponential distribution with scale 1.
 
 .. _l4a4c466c6f61743634566563746f72-66696c6c21:
 
@@ -293,42 +293,42 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\  and returns a JLFloat64Vector.
+  \ :code:`jlApply(func, v)`\  applies \ :code:`func`\  to argument \ :code:`v`\  and returns a JLFloat64Vector.
 
 
 .. index::
    pair: JLFloat64Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\  and returns a Julia \ ``Float64``\ .
+  \ :code:`jlApply(func, v)`\  applies \ :code:`func`\  to argument \ :code:`v`\  and returns a Julia \ :code:`Float64`\ .
 
 
 .. index::
    pair: JLFloat64Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApply(func, v)``\  applies \ ``func``\  to argument \ ``v``\ .
+  \ :code:`jlApply(func, v)`\  applies \ :code:`func`\  to argument \ :code:`v`\ .
 
 
 .. index::
    pair: JLFloat64Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApply(func, v1, v2)``\  applies \ ``func``\  to arguments \ ``v1``\  and \ ``v2``\ .
+  \ :code:`jlApply(func, v1, v2)`\  applies \ :code:`func`\  to arguments \ :code:`v1`\  and \ :code:`v2`\ .
 
 
 .. index::
    pair: JLFloat64Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlApply(func, v1, v2, v3)``\  applies \ ``func``\  to arguments \ ``v1``\ , \ ``v2``\  and \ ``v3``\ .
+  \ :code:`jlApply(func, v1, v2, v3)`\  applies \ :code:`func`\  to arguments \ :code:`v1`\ , \ :code:`v2`\  and \ :code:`v3`\ .
 
 
 .. index::
    pair: JLFloat64Vector; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
-  \ ``jlApply(func, v, val)``\  applies \ ``func``\  to arguments \ ``v``\  and val and returns a Julia \ ``Float64``\ .
+  \ :code:`jlApply(func, v, val)`\  applies \ :code:`func`\  to arguments \ :code:`v`\  and val and returns a Julia \ :code:`Float64`\ .
 
 .. _l4a4c466c6f61743634566563746f72-6a6c417070726f783f:
 
@@ -336,7 +336,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; jlApprox?
 
 :spadfun:`jlApprox?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``jlApprox?(x,y)``\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.
+  \ :code:`jlApprox?(x,y)`\  computes inexact equality comparison with default parameters. Two numbers compare equal if their relative distance or their absolute distance is within tolerance bounds. Applied component-wise.
 
 .. _l4a4c466c6f61743634566563746f72-6a6c446973706c6179:
 
@@ -344,7 +344,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; jlDisplay
 
 :spadfun:`jlDisplay`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlDisplay(v)``\  pretty prints \ ``v``\  (\ ``à``\  la Julia).
+  \ :code:`jlDisplay(v)`\  pretty prints \ :code:`v`\  (\ :code:`à`\  la Julia).
 
 .. _l4a4c466c6f61743634566563746f72-6a756c6961565072696e74:
 
@@ -352,7 +352,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; juliaVPrint
 
 :spadfun:`juliaVPrint`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``juliaVPrint(b)``\  defines whether or not FriCAS uses the printing version of Julia for vectors instead of its OutputForm version. Returns previous value. By default it is the Julia version.
+  \ :code:`juliaVPrint(b)`\  defines whether or not FriCAS uses the printing version of Julia for vectors instead of its OutputForm version. Returns previous value. By default it is the Julia version.
 
 .. _l4a4c466c6f61743634566563746f72-6c61746578:
 
@@ -455,7 +455,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; nrand
 
 :spadfun:`nrand`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``nrand(n)``\  returns a Julia vector of size \ ``n``\  with random elements from the normal distribution with \ ``mean=0``\  and standard \ ``deviation=1``\ .
+  \ :code:`nrand(n)`\  returns a Julia vector of size \ :code:`n`\  with random elements from the normal distribution with \ :code:`mean=0`\  and standard \ :code:`deviation=1`\ .
 
 .. _l4a4c466c6f61743634566563746f72-6f7574657250726f64756374:
 
@@ -491,7 +491,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; qnew
 
 :spadfun:`qnew`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``qnew(n)``\  returns an uninitialized vector of dimension \ ``n``\ .
+  \ :code:`qnew(n)`\  returns an uninitialized vector of dimension \ :code:`n`\ .
 
 .. _l4a4c466c6f61743634566563746f72-71736574656c7421:
 
@@ -612,7 +612,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; urand01
 
 :spadfun:`urand01`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``urand01(n)``\  returns a uniform(0..1) Julia vector of size \ ``n``\ .
+  \ :code:`urand01(n)`\  returns a uniform(0..1) Julia vector of size \ :code:`n`\ .
 
 .. _l4a4c466c6f61743634566563746f72-7572616e64:
 
@@ -620,7 +620,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; urand
 
 :spadfun:`urand`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> % 
-  \ ``urand(n, x)``\  returns a uniform(0..\ ``x``\ ) Julia vector of size \ ``n``\ . Use the underlying Common Lisp random number generator so jlSeed! will not affect it.
+  \ :code:`urand(n, x)`\  returns a uniform(0..\ :code:`x`\ ) Julia vector of size \ :code:`n`\ . Use the underlying Common Lisp random number generator so jlSeed! will not affect it.
 
 .. _l4a4c466c6f61743634566563746f72-766563746f72:
 
@@ -628,7 +628,7 @@ This domain provides a fast \ ``JLFloat64``\  vector type with no bound checking
    pair: JLFloat64Vector; vector
 
 :spadfun:`vector`\: \ :ref:`List <l4c697374>`\  \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``vector(l)``\  converts the list \ ``l``\  to a vector.
+  \ :code:`vector(l)`\  converts the list \ :code:`l`\  to a vector.
 
 .. _l4a4c466c6f61743634566563746f72-7a65726f3f:
 

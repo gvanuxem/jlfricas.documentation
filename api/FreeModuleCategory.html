@@ -55,7 +55,7 @@
 <li><p>R: Join(<a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
 <li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
-<p>A domain of this category implements formal linear combinations of elements from a domain <code class="docutils literal notranslate"><span class="pre">Basis</span></code> with coefficients in a domain <code class="docutils literal notranslate"><span class="pre">R</span></code>. The domain <code class="docutils literal notranslate"><span class="pre">Basis</span></code> needs only to belong to the category <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a> and <code class="docutils literal notranslate"><span class="pre">R</span></code> to the category <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a>. Thus the coefficient ring may be non-commutative. See the <a class="reference internal" href="XDistributedPolynomial.html#l584469737472696275746564506f6c796e6f6d69616c"><span class="std std-ref">XDistributedPolynomial</span></a> constructor for examples of domains built with the <a class="reference internal" href="#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a> category constructor. Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>)   Note (Franz Lehner, June 2009): <code class="docutils literal notranslate"><span class="pre">FreeModule</span></code> originally was not of FreeModuleCategory. Some functions (like <code class="docutils literal notranslate"><span class="pre">support</span></code>, <code class="docutils literal notranslate"><span class="pre">coefficients</span></code>, <code class="docutils literal notranslate"><span class="pre">monomials</span></code>, …) from here could be moved to <code class="docutils literal notranslate"><span class="pre">IndexedDirectProductCategory</span></code> but at the moment there is no need for this.</p>
+<p>A domain of this category implements formal linear combinations of elements from a domain <code class="code docutils literal notranslate"><span class="pre">Basis</span></code> with coefficients in a domain <code class="code docutils literal notranslate"><span class="pre">R</span></code>. The domain <code class="code docutils literal notranslate"><span class="pre">Basis</span></code> needs only to belong to the category <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a> and <code class="code docutils literal notranslate"><span class="pre">R</span></code> to the category <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a>. Thus the coefficient ring may be non-commutative. See the <a class="reference internal" href="XDistributedPolynomial.html#l584469737472696275746564506f6c796e6f6d69616c"><span class="std std-ref">XDistributedPolynomial</span></a> constructor for examples of domains built with the <a class="reference internal" href="#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a> category constructor. Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="code docutils literal notranslate"><span class="pre">fr</span></code>)   Note (Franz Lehner, June 2009): <code class="code docutils literal notranslate"><span class="pre">FreeModule</span></code> originally was not of FreeModuleCategory. Some functions (like <code class="code docutils literal notranslate"><span class="pre">support</span></code>, <code class="code docutils literal notranslate"><span class="pre">coefficients</span></code>, <code class="code docutils literal notranslate"><span class="pre">monomials</span></code>, …) from here could be moved to <code class="code docutils literal notranslate"><span class="pre">IndexedDirectProductCategory</span></code> but at the moment there is no need for this.</p>
 <dl class="simple" id="l467265654d6f64756c6543617465676f7279-30">
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
@@ -91,11 +91,11 @@
 </dd>
 </dl>
 <span id="l467265654d6f64756c6543617465676f7279-636f656666696369656e74"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coefficient</span>: (%, S) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coefficient(x,</span> <span class="pre">s)</span></code> returns the coefficient of the basis element <code class="docutils literal notranslate"><span class="pre">s</span></code></p>
+<dt><span class="spadfun">coefficient</span>: (%, S) -&gt; R</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coefficient(x,</span> <span class="pre">s)</span></code> returns the coefficient of the basis element <code class="code docutils literal notranslate"><span class="pre">s</span></code></p>
 </dd>
 </dl>
 <span id="l467265654d6f64756c6543617465676f7279-636f656666696369656e7473"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">coefficients</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coefficients(x)</span></code> returns the list of coefficients of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">coefficients</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coefficients(x)</span></code> returns the list of coefficients of <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l467265654d6f64756c6543617465676f7279-636f65726365">
@@ -131,7 +131,7 @@
 </dd>
 </dl>
 <span id="l467265654d6f64756c6543617465676f7279-6c696e656172457874656e64"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">linearExtend</span>: (S -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearExtend:</span> <span class="pre">(f,</span> <span class="pre">x)</span></code> returns the linear extension of a map defined on the basis applied to a linear combination</p>
+<dt><span class="spadfun">linearExtend</span>: (S -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">linearExtend:</span> <span class="pre">(f,</span> <span class="pre">x)</span></code> returns the linear extension of a map defined on the basis applied to a linear combination</p>
 </dd>
 </dl>
 <dl class="simple" id="l467265654d6f64756c6543617465676f7279-6c6973744f665465726d73">
@@ -151,7 +151,7 @@
 </dd>
 </dl>
 <span id="l467265654d6f64756c6543617465676f7279-6d6f6e6f6d69616c73"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">monomials</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomials(x)</span></code> returns the list of <code class="docutils literal notranslate"><span class="pre">r_i*b_i</span></code> whose sum is <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">monomials</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">monomials(x)</span></code> returns the list of <code class="code docutils literal notranslate"><span class="pre">r_i*b_i</span></code> whose sum is <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l467265654d6f64756c6543617465676f7279-6e756d6265724f664d6f6e6f6d69616c73">
@@ -179,7 +179,7 @@
 </dd>
 </dl>
 <span id="l467265654d6f64756c6543617465676f7279-737570706f7274"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">support</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">support(x)</span></code> returns the list of basis elements with nonzero coefficients.</p>
+<dt><span class="spadfun">support</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">support(x)</span></code> returns the list of basis elements with nonzero coefficients.</p>
 </dd>
 </dl>
 <dl class="simple" id="l467265654d6f64756c6543617465676f7279-7a65726f3f">
@@ -256,7 +256,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

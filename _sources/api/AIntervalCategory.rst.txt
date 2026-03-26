@@ -10,7 +10,7 @@ AIntervalCategory R
 * R: \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
 
 
-AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals. Although these operations should be similar to the arithmetic operations of a Ring, we do not export Ring, since the ring axioms are not fulfilled.
+AIntervalCategory(\ :code:`R`\ ) exports operations that can be done with intervals. Although these operations should be similar to the arithmetic operations of a Ring, we do not export Ring, since the ring axioms are not fulfilled.
 
 
 .. _l41496e74657276616c43617465676f7279-30:
@@ -32,14 +32,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; *
 
 :spadfun:`\*`\: (%, %) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``x*y``\  creates an interval such that for any elements \ ``u``\  and \ ``v``\  with contains?(\ ``x``\ ,\ ``u``\ ) and contains?(\ ``y``\ ,\ ``v``\ ) it holds contains?(x*y,u*v).
+  \ :code:`x*y`\  creates an interval such that for any elements \ :code:`u`\  and \ :code:`v`\  with contains?(\ :code:`x`\ ,\ :code:`u`\ ) and contains?(\ :code:`y`\ ,\ :code:`v`\ ) it holds contains?(x*y,u*v).
 
 
 .. index::
    pair: AIntervalCategory; *
 
 :spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``z*x``\  creates interval(\ ``z``\  * inf \ ``x``\ , \ ``z``\  * sup \ ``x``\ ).
+  \ :code:`z*x`\  creates interval(\ :code:`z`\  * inf \ :code:`x`\ , \ :code:`z`\  * sup \ :code:`x`\ ).
 
 
 \ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
@@ -50,14 +50,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; *
 
 :spadfun:`\*`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % 
-  \ ``z*x``\  creates the interval \ ``[z * inf x, z * sup x]``\ .
+  \ :code:`z*x`\  creates the interval \ :code:`[z * inf x, z * sup x]`\ .
 
 
 .. index::
    pair: AIntervalCategory; *
 
 :spadfun:`\*`\: (R, %) -> % if R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``r*x``\  creates the interval(\ ``r``\  * inf \ ``x``\ , \ ``r``\  * sup \ ``x``\ ).
+  \ :code:`r*x`\  creates the interval(\ :code:`r`\  * inf \ :code:`x`\ , \ :code:`r`\  * sup \ :code:`x`\ ).
 
 .. _l41496e74657276616c43617465676f7279-2b:
 
@@ -65,14 +65,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; +
 
 :spadfun:`+`\: (%, %) -> % 
-  \ ``x+y``\  creates the interval \ ``[inf x + inf y, sup x + sup y]``\ . x+y creates an interval such that for any \ ``u``\  and \ ``v``\  with contains?(\ ``x``\ ,\ ``u``\ ) and contains?(\ ``y``\ ,\ ``v``\ ) it holds contains?(x+y,u+v).
+  \ :code:`x+y`\  creates the interval \ :code:`[inf x + inf y, sup x + sup y]`\ . x+y creates an interval such that for any \ :code:`u`\  and \ :code:`v`\  with contains?(\ :code:`x`\ ,\ :code:`u`\ ) and contains?(\ :code:`y`\ ,\ :code:`v`\ ) it holds contains?(x+y,u+v).
 
 
 .. index::
    pair: AIntervalCategory; +
 
 :spadfun:`+`\: (%, R) -> % 
-  \ ``x+r``\  creates the interval \ ``[inf x + r, sup x + r]``\ .
+  \ :code:`x+r`\  creates the interval \ :code:`[inf x + r, sup x + r]`\ .
 
 .. _l41496e74657276616c43617465676f7279-2d:
 
@@ -80,14 +80,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; -
 
 :spadfun:`-`\: % -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``-x``\  creates the interval \ ``[- sup x, - inf x]``\ .
+  \ :code:`-x`\  creates the interval \ :code:`[- sup x, - inf x]`\ .
 
 
 .. index::
    pair: AIntervalCategory; -
 
 :spadfun:`-`\: (%, %) -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``x-y``\  creates the interval \ ``x+(-y)``\ .
+  \ :code:`x-y`\  creates the interval \ :code:`x+(-y)`\ .
 
 .. _l41496e74657276616c43617465676f7279-2f:
 
@@ -95,7 +95,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; /
 
 :spadfun:`/`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
-  \ ``x/y``\  returns x*inv(\ ``y``\ ). If positive?(\ ``x``\ ) and positive?(\ ``y``\ ), then this is equal to interval(inf(\ ``x``\ )/sup(\ ``y``\ ),sup(\ ``x``\ )/inf(\ ``y``\ )).
+  \ :code:`x/y`\  returns x*inv(\ :code:`y`\ ). If positive?(\ :code:`x`\ ) and positive?(\ :code:`y`\ ), then this is equal to interval(inf(\ :code:`x`\ )/sup(\ :code:`y`\ ),sup(\ :code:`x`\ )/inf(\ :code:`y`\ )).
 
 .. _l41496e74657276616c43617465676f7279-3d:
 
@@ -103,7 +103,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; =
 
 :spadfun:`=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``x=y``\  returns \ ``true``\  iff inf(\ ``x``\ )=inf(\ ``y``\ ) and sup(\ ``x``\ )=sup(\ ``y``\ ).
+  \ :code:`x=y`\  returns \ :code:`true`\  iff inf(\ :code:`x`\ )=inf(\ :code:`y`\ ) and sup(\ :code:`x`\ )=sup(\ :code:`y`\ ).
 
 .. _l41496e74657276616c43617465676f7279-5e:
 
@@ -111,14 +111,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; ^
 
 :spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
-  \ ``x^n``\  returns interval(1,1) if \ ``x``\  is not zero and \ ``n=0``\ . Otherwise it creates an interval such that for any elements \ ``u``\  and \ ``v``\  with contains?(\ ``x``\ ,\ ``u``\ ) it holds contains?(\ ``x^n``\ ,u^n).
+  \ :code:`x^n`\  returns interval(1,1) if \ :code:`x`\  is not zero and \ :code:`n=0`\ . Otherwise it creates an interval such that for any elements \ :code:`u`\  and \ :code:`v`\  with contains?(\ :code:`x`\ ,\ :code:`u`\ ) it holds contains?(\ :code:`x^n`\ ,u^n).
 
 
 .. index::
    pair: AIntervalCategory; ^
 
 :spadfun:`^`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``x^n``\  creates an interval such that for any elements \ ``u``\  with contains?(\ ``x``\ ,\ ``u``\ ) it holds contains?(\ ``x^n``\ ,u^n).
+  \ :code:`x^n`\  creates an interval such that for any elements \ :code:`u`\  with contains?(\ :code:`x`\ ,\ :code:`u`\ ) it holds contains?(\ :code:`x^n`\ ,u^n).
 
 .. _l41496e74657276616c43617465676f7279-7e3d:
 
@@ -131,7 +131,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; abs
 
 :spadfun:`abs`\: % -> % if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
-  \ ``abs(x)``\  returns the tightest interval such that for all \ ``r``\  with contains?(\ ``x``\ ,\ ``r``\ ) it holds contains?(abs(\ ``x``\ ),abs(\ ``r``\ )).
+  \ :code:`abs(x)`\  returns the tightest interval such that for all \ :code:`r`\  with contains?(\ :code:`x`\ ,\ :code:`r`\ ) it holds contains?(abs(\ :code:`x`\ ),abs(\ :code:`r`\ )).
 
 .. _l41496e74657276616c43617465676f7279-616e7469436f6d6d757461746f72:
 
@@ -144,7 +144,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`List <l4c697374>`\  R 
-  \ ``coerce(x)``\  returns [inf(\ ``x``\ ),sup(\ ``x``\ )].
+  \ :code:`coerce(x)`\  returns [inf(\ :code:`x`\ ),sup(\ :code:`x`\ )].
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -156,14 +156,14 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; contains?
 
 :spadfun:`contains?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(x,y)``\  returns \ ``true``\  if \ ``inf(x)<=inf(y)``\  and \ ``sup(y)<=sup(x)``\  and \ ``false``\  otherwise.
+  \ :code:`contains?(x,y)`\  returns \ :code:`true`\  if \ :code:`inf(x)<=inf(y)`\  and \ :code:`sup(y)<=sup(x)`\  and \ :code:`false`\  otherwise.
 
 
 .. index::
    pair: AIntervalCategory; contains?
 
 :spadfun:`contains?`\: (%, R) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(x,r)``\  returns \ ``true``\  if \ ``inf(x)<=r<=sup(x)``\  and \ ``false``\  otherwise.
+  \ :code:`contains?(x,r)`\  returns \ :code:`true`\  if \ :code:`inf(x)<=r<=sup(x)`\  and \ :code:`false`\  otherwise.
 
 .. _l41496e74657276616c43617465676f7279-6572726f723f:
 
@@ -171,7 +171,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; error?
 
 :spadfun:`error?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``error?(x)``\  returns \ ``true``\  if the lower bound is bigger than the upper bound. That can happen if such an interval is created by the qinterval function.
+  \ :code:`error?(x)`\  returns \ :code:`true`\  if the lower bound is bigger than the upper bound. That can happen if such an interval is created by the qinterval function.
 
 .. _l41496e74657276616c43617465676f7279-696e66:
 
@@ -179,7 +179,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; inf
 
 :spadfun:`inf`\: % -> R 
-  \ ``inf(x)``\  returns the infimum of \ ``x``\ .
+  \ :code:`inf(x)`\  returns the infimum of \ :code:`x`\ .
 
 .. _l41496e74657276616c43617465676f7279-696e74657276616c:
 
@@ -187,7 +187,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; interval
 
 :spadfun:`interval`\: (R, R) -> % 
-  \ ``interval(x,y)``\  creates a new interval \ ``[x,y]``\ , if \ ``x<=y``\  and \$\ ``[y,x]``\ , if \ ``y<x``\ .
+  \ :code:`interval(x,y)`\  creates a new interval \ :code:`[x,y]`\ , if \ :code:`x<=y`\  and \$\ :code:`[y,x]`\ , if \ :code:`y<x`\ .
 
 .. _l41496e74657276616c43617465676f7279-696e76:
 
@@ -195,7 +195,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; inv
 
 :spadfun:`inv`\: % -> % if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
-  \ ``inv(x)``\  returns interval(1/sup(\ ``x``\ ),1/inf(\ ``x``\ )) if not contains?(\ ``x``\ ,0). It is an error, if the interval contains 0.
+  \ :code:`inv(x)`\  returns interval(1/sup(\ :code:`x`\ ),1/inf(\ :code:`x`\ )) if not contains?(\ :code:`x`\ ,0). It is an error, if the interval contains 0.
 
 .. _l41496e74657276616c43617465676f7279-6c61746578:
 
@@ -222,7 +222,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; negative?
 
 :spadfun:`negative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
-  \ ``negative?(x)``\  returns \ ``true``\  iff \ ``u<0``\  for every element \ ``u``\  of \ ``x``\ , i.e. sup(\ ``x``\ )\ ``<0``\ .
+  \ :code:`negative?(x)`\  returns \ :code:`true`\  iff \ :code:`u<0`\  for every element \ :code:`u`\  of \ :code:`x`\ , i.e. sup(\ :code:`x`\ )\ :code:`<0`\ .
 
 .. _l41496e74657276616c43617465676f7279-6f6e653f:
 
@@ -240,7 +240,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; positive?
 
 :spadfun:`positive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
-  \ ``positive?(x)``\  returns \ ``true``\  iff \ ``u>0``\  for every element \ ``u``\  of \ ``x``\ , i.e. 0<inf(\ ``x``\ ).
+  \ :code:`positive?(x)`\  returns \ :code:`true`\  iff \ :code:`u>0`\  for every element \ :code:`u`\  of \ :code:`x`\ , i.e. 0<inf(\ :code:`x`\ ).
 
 .. _l41496e74657276616c43617465676f7279-71696e74657276616c:
 
@@ -248,7 +248,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; qinterval
 
 :spadfun:`qinterval`\: (R, R) -> % 
-  \ ``qinterval(inf,sup)``\  creates a new interval without checking the ordering on the elements.
+  \ :code:`qinterval(inf,sup)`\  creates a new interval without checking the ordering on the elements.
 
 .. _l41496e74657276616c43617465676f7279-7265636970:
 
@@ -285,7 +285,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; sup
 
 :spadfun:`sup`\: % -> R 
-  \ ``sup(x)``\  returns the supremum of \ ``x``\ .
+  \ :code:`sup(x)`\  returns the supremum of \ :code:`x`\ .
 
 .. _l41496e74657276616c43617465676f7279-756e69743f:
 
@@ -293,7 +293,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; unit?
 
 :spadfun:`unit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
-  \ ``unit?(x)``\  returns \ ``true``\  if every element in \ ``x``\  can be inverted, i.e. if not contains?(\ ``x``\ ,0).
+  \ :code:`unit?(x)`\  returns \ :code:`true`\  if every element in \ :code:`x`\  can be inverted, i.e. if not contains?(\ :code:`x`\ ,0).
 
 .. _l41496e74657276616c43617465676f7279-7769647468:
 
@@ -301,7 +301,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; width
 
 :spadfun:`width`\: % -> R if R has \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
-  \ ``width(x)``\  returns \ ``sup(x) - inf(x)``\ .
+  \ :code:`width(x)`\  returns \ :code:`sup(x) - inf(x)`\ .
 
 .. _l41496e74657276616c43617465676f7279-7a65726f3f:
 
@@ -309,7 +309,7 @@ AIntervalCategory(\ ``R``\ ) exports operations that can be done with intervals.
    pair: AIntervalCategory; zero?
 
 :spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  or R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`SemiRng <l53656d69526e67>`\  and % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\ 
-  \ ``zero?(x)``\  returns \ ``true``\  if x=interval(0,0).
+  \ :code:`zero?(x)`\  returns \ :code:`true`\  if x=interval(0,0).
 
 
 \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  and R has \ :ref:`SemiRing <l53656d6952696e67>`\  or R has \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 

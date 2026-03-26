@@ -12,7 +12,7 @@ FiniteFieldCyclicGroup(p, extdeg)
 * extdeg: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ 
 
 
-FiniteFieldCyclicGroup(\ ``p``\ , \ ``n``\ ) implements a finite field extension of degee \ ``n``\  over the prime field with \ ``p``\  elements. Its elements are represented by powers of a primitive element, i.e. a generator of the multiplicative (cyclic) group. As primitive element we choose the root of the extension polynomial, which is created by \ *createPrimitivePoly*\  from \ :ref:`FiniteFieldPolynomialPackage <l46696e6974654669656c64506f6c796e6f6d69616c5061636b616765>`\ . The Zech logarithms are stored in a table of size half of the field size, and use \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  for representing field elements, hence, there are restrictions on the size of the field.
+FiniteFieldCyclicGroup(\ :code:`p`\ , \ :code:`n`\ ) implements a finite field extension of degee \ :code:`n`\  over the prime field with \ :code:`p`\  elements. Its elements are represented by powers of a primitive element, i.e. a generator of the multiplicative (cyclic) group. As primitive element we choose the root of the extension polynomial, which is created by \ *createPrimitivePoly*\  from \ :ref:`FiniteFieldPolynomialPackage <l46696e6974654669656c64506f6c796e6f6d69616c5061636b616765>`\ . The Zech logarithms are stored in a table of size half of the field size, and use \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  for representing field elements, hence, there are restrictions on the size of the field.
 
 
 .. _l46696e6974654669656c644379636c696347726f7570-30:
@@ -375,7 +375,7 @@ FiniteFieldCyclicGroup(\ ``p``\ , \ ``n``\ ) implements a finite field extension
    pair: FiniteFieldCyclicGroup; getZechTable
 
 :spadfun:`getZechTable`\: () -> \ :ref:`PrimitiveArray <l5072696d69746976654172726179>`\  \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  
-  \ ``getZechTable()``\  returns the zech logarithm table of the field. This table is used to perform additions in the field quickly.
+  \ :code:`getZechTable()`\  returns the zech logarithm table of the field. This table is used to perform additions in the field quickly.
 
 .. _l46696e6974654669656c644379636c696347726f7570-68617368:
 

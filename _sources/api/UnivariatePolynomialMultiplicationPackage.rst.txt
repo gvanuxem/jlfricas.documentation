@@ -12,7 +12,7 @@ UnivariatePolynomialMultiplicationPackage(R, U)
 * U: \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
 
 
-This package implements Karatsuba\ ``'s``\  trick for multiplying (large) univariate polynomials. It could be improved with a version doing the work on place and also with a special case for squares. We've done this in Basicmath, but we believe that this out of the scope of FriCAS.
+This package implements Karatsuba\ :code:`'s`\  trick for multiplying (large) univariate polynomials. It could be improved with a version doing the work on place and also with a special case for squares. We've done this in Basicmath, but we believe that this out of the scope of FriCAS.
 
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4d756c7469706c69636174696f6e5061636b616765-6b6172617473756261:
@@ -21,7 +21,7 @@ This package implements Karatsuba\ ``'s``\  trick for multiplying (large) univar
    pair: UnivariatePolynomialMultiplicationPackage; karatsuba
 
 :spadfun:`karatsuba`\: (U, U, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> U 
-  \ ``karatsuba(a, b, l, k)``\  returns \ ``a*b``\  by applying Karatsuba\ ``'s``\  trick provided that both \ ``a``\  and \ ``b``\  have at least \ ``l``\  terms and \ ``k > 0``\  holds and by calling \ ``noKaratsuba``\  otherwise. The other multiplications are performed by recursive calls with the same third argument and \ ``k-1``\  as fourth argument.
+  \ :code:`karatsuba(a, b, l, k)`\  returns \ :code:`a*b`\  by applying Karatsuba\ :code:`'s`\  trick provided that both \ :code:`a`\  and \ :code:`b`\  have at least \ :code:`l`\  terms and \ :code:`k > 0`\  holds and by calling \ :code:`noKaratsuba`\  otherwise. The other multiplications are performed by recursive calls with the same third argument and \ :code:`k-1`\  as fourth argument.
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4d756c7469706c69636174696f6e5061636b616765-6b61726174737562614f6e6365:
 
@@ -29,7 +29,7 @@ This package implements Karatsuba\ ``'s``\  trick for multiplying (large) univar
    pair: UnivariatePolynomialMultiplicationPackage; karatsubaOnce
 
 :spadfun:`karatsubaOnce`\: (U, U) -> U 
-  \ ``karatsuba(a, b)``\  returns \ ``a*b``\  by applying Karatsuba\ ``'s``\  trick once. The other multiplications are performed by calling \ ``*``\  from \ ``U``\ .
+  \ :code:`karatsuba(a, b)`\  returns \ :code:`a*b`\  by applying Karatsuba\ :code:`'s`\  trick once. The other multiplications are performed by calling \ :code:`*`\  from \ :code:`U`\ .
 
 .. _l556e6976617269617465506f6c796e6f6d69616c4d756c7469706c69636174696f6e5061636b616765-6e6f4b6172617473756261:
 
@@ -37,6 +37,6 @@ This package implements Karatsuba\ ``'s``\  trick for multiplying (large) univar
    pair: UnivariatePolynomialMultiplicationPackage; noKaratsuba
 
 :spadfun:`noKaratsuba`\: (U, U) -> U 
-  \ ``noKaratsuba(a, b)``\  returns \ ``a*b``\  without using Karatsuba\ ``'s``\  trick at all.
+  \ :code:`noKaratsuba(a, b)`\  returns \ :code:`a*b`\  without using Karatsuba\ :code:`'s`\  trick at all.
 
 

@@ -21,13 +21,13 @@ FunctionsSpacePrimitiveElement provides functions to compute primitive elements 
    pair: FunctionSpacePrimitiveElement; primitiveElement
 
 :spadfun:`primitiveElement`\: (F, F) -> Record(primelt: F, pol1: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, pol2: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, prim: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) if F has \ :ref:`AlgebraicallyClosedField <l416c67656272616963616c6c79436c6f7365644669656c64>`\ 
-  \ ``primitiveElement(a1, a2)``\  returns \ ``[a, q1, q2, q]``\  such that \ ``k(a1, a2) = k(a)``\ , \ ``ai = qi(a)``\ , and \ ``q(a) = 0``\ . The minimal polynomial for \ ``a2``\  may involve \ ``a1``\ , but the minimal polynomial for \ ``a1``\  may not involve \ ``a2``\ ; This operations uses \ :spadfun:`resultant`\ .
+  \ :code:`primitiveElement(a1, a2)`\  returns \ :code:`[a, q1, q2, q]`\  such that \ :code:`k(a1, a2) = k(a)`\ , \ :code:`ai = qi(a)`\ , and \ :code:`q(a) = 0`\ . The minimal polynomial for \ :code:`a2`\  may involve \ :code:`a1`\ , but the minimal polynomial for \ :code:`a1`\  may not involve \ :code:`a2`\ ; This operations uses \ :spadfun:`resultant`\ .
 
 
 .. index::
    pair: FunctionSpacePrimitiveElement; primitiveElement
 
 :spadfun:`primitiveElement`\: \ :ref:`List <l4c697374>`\  F -> Record(primelt: F, poly: \ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F, prim: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F) 
-  \ ``primitiveElement([a1, ..., an])``\  returns \ ``[a, [q1, ..., qn], q]``\  such that \ ``k(a1, ..., an) = k(a)``\ , \ ``ai = qi(a)``\ , and \ ``q(a) = 0``\ . This operation uses the technique of \spadglossSee{groebner bases}{Groebner basis}.
+  \ :code:`primitiveElement([a1, ..., an])`\  returns \ :code:`[a, [q1, ..., qn], q]`\  such that \ :code:`k(a1, ..., an) = k(a)`\ , \ :code:`ai = qi(a)`\ , and \ :code:`q(a) = 0`\ . This operation uses the technique of \spadglossSee{groebner bases}{Groebner basis}.
 
 

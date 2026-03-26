@@ -8,7 +8,7 @@ JLFloat64
 :viewcode:`julia.spad line 415 <julia.spad#L415>` :editcode:`[edit on github] <julia.spad#L415>`
 
 
-\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  implements 64 bits floating point arithmetic using Julia \ ``Float64``\  type. Bear in mind that, like \ ``JLInt64``\ , the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the computation is performed at machine level using Julia (generally in \ ``C``\  language, or even using assembly language).
+\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  implements 64 bits floating point arithmetic using Julia \ :code:`Float64`\  type. Bear in mind that, like \ :code:`JLInt64`\ , the internal representation depends on the underlying Lisp implementation, so the usual pure arithmetic operations occur there. For other functions like sqrt, log, exp, transcendental functions etc. the computation is performed at machine level using Julia (generally in \ :code:`C`\  language, or even using assembly language).
 
 
 .. _l4a4c466c6f61743634-30:
@@ -454,21 +454,21 @@ JLFloat64
    pair: JLFloat64; jf64
 
 :spadfun:`jf64`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ ``jf64(x)``\  coerces \ ``x``\  to a Julia \ ``Float64``\ .
+  \ :code:`jf64(x)`\  coerces \ :code:`x`\  to a Julia \ :code:`Float64`\ .
 
 
 .. index::
    pair: JLFloat64; jf64
 
 :spadfun:`jf64`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jf64(i)``\  coerces \ ``i``\  to a Julia \ ``Float64``\ .
+  \ :code:`jf64(i)`\  coerces \ :code:`i`\  to a Julia \ :code:`Float64`\ .
 
 
 .. index::
    pair: JLFloat64; jf64
 
 :spadfun:`jf64`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jf64(str)``\  read the string at the Common Lisp level using read-from-string. It is expected that the string represent a \ ``CL``\  floating point number and not for example an integer. Convenience function.
+  \ :code:`jf64(str)`\  read the string at the Common Lisp level using read-from-string. It is expected that the string represent a \ :code:`CL`\  floating point number and not for example an integer. Convenience function.
 
 .. _l4a4c466c6f61743634-6a6c4170706c79:
 

@@ -8,7 +8,7 @@ EuclideanDomain
 :viewcode:`catdef.spad line 408 <catdef.spad#L408>` :editcode:`[edit on github] <catdef.spad#L408>`
 
 
-A constructive euclidean domain, i.e. one can divide producing a quotient and a remainder where the remainder is either zero or is smaller (\ :spadfun:`euclideanSize`\ ) than the divisor.   Conditional attributes: multiplicativeValuation \ ``Size(a*b)=Size(a)*Size(b)``\  additiveValuation \ ``Size(a*b)=Size(a)+Size(b)``\ 
+A constructive euclidean domain, i.e. one can divide producing a quotient and a remainder where the remainder is either zero or is smaller (\ :spadfun:`euclideanSize`\ ) than the divisor.   Conditional attributes: multiplicativeValuation \ :code:`Size(a*b)=Size(a)*Size(b)`\  additiveValuation \ :code:`Size(a*b)=Size(a)+Size(b)`\ 
 
 
 .. _l4575636c696465616e446f6d61696e-30:
@@ -120,7 +120,7 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; divide
 
 :spadfun:`divide`\: (%, %) -> Record(quotient: %, remainder: %) 
-  \ ``divide(x, y)``\  divides \ ``x``\  by \ ``y``\  producing a record containing a \ ``quotient``\  and \ ``remainder``\ , where the remainder is smaller (see \ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ ) than the divisor \ ``y``\ .
+  \ :code:`divide(x, y)`\  divides \ :code:`x`\  by \ :code:`y`\  producing a record containing a \ :code:`quotient`\  and \ :code:`remainder`\ , where the remainder is smaller (see \ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ ) than the divisor \ :code:`y`\ .
 
 .. _l4575636c696465616e446f6d61696e-6575636c696465616e53697a65:
 
@@ -128,7 +128,7 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; euclideanSize
 
 :spadfun:`euclideanSize`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``euclideanSize(x)``\  returns the euclidean size of the element \ ``x``\ . Error: if \ ``x``\  is zero.
+  \ :code:`euclideanSize(x)`\  returns the euclidean size of the element \ :code:`x`\ . Error: if \ :code:`x`\  is zero.
 
 .. _l4575636c696465616e446f6d61696e-65787072657373496465616c4d656d626572:
 
@@ -146,14 +146,14 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; extendedEuclidean
 
 :spadfun:`extendedEuclidean`\: (%, %) -> Record(coef1: %, coef2: %, generator: %) 
-  \ ``extendedEuclidean(x, y)``\  returns a record rec where \ ``rec.coef1*x+rec.coef2*y = rec.generator``\  and rec.generator is a \ ``gcd``\  of \ ``x``\  and \ ``y``\ . The \ ``gcd``\  is unique only up to associates if \ :ref:`canonicalUnitNormal <l63616e6f6e6963616c556e69744e6f726d616c>`\  is not asserted. \ :spadfun:`principalIdeal`\  provides a version of this operation which accepts an arbitrary length list of arguments.
+  \ :code:`extendedEuclidean(x, y)`\  returns a record rec where \ :code:`rec.coef1*x+rec.coef2*y = rec.generator`\  and rec.generator is a \ :code:`gcd`\  of \ :code:`x`\  and \ :code:`y`\ . The \ :code:`gcd`\  is unique only up to associates if \ :ref:`canonicalUnitNormal <l63616e6f6e6963616c556e69744e6f726d616c>`\  is not asserted. \ :spadfun:`principalIdeal`\  provides a version of this operation which accepts an arbitrary length list of arguments.
 
 
 .. index::
    pair: EuclideanDomain; extendedEuclidean
 
 :spadfun:`extendedEuclidean`\: (%, %, %) -> Union(Record(coef1: %, coef2: %), failed) 
-  \ ``extendedEuclidean(x, y, z)``\  either returns a record rec where \ ``rec.coef1*x+rec.coef2*y=z``\  or returns "failed" if \ ``z``\  cannot be expressed as a linear combination of \ ``x``\  and \ ``y``\ .
+  \ :code:`extendedEuclidean(x, y, z)`\  either returns a record rec where \ :code:`rec.coef1*x+rec.coef2*y=z`\  or returns "failed" if \ :code:`z`\  cannot be expressed as a linear combination of \ :code:`x`\  and \ :code:`y`\ .
 
 .. _l4575636c696465616e446f6d61696e-676364:
 
@@ -208,7 +208,7 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; multiEuclidean
 
 :spadfun:`multiEuclidean`\: (\ :ref:`List <l4c697374>`\  %, %) -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``multiEuclidean([f1, ..., fn], z)``\  returns a list of coefficients \ ``[a1, ..., an]``\  such that \ `` z / prod fi = sum aj/fj``\ . If no such list of coefficients exists, "failed" is returned.
+  \ :code:`multiEuclidean([f1, ..., fn], z)`\  returns a list of coefficients \ :code:`[a1, ..., an]`\  such that \ :code:` z / prod fi = sum aj/fj`\ . If no such list of coefficients exists, "failed" is returned.
 
 .. _l4575636c696465616e446f6d61696e-6f6e653f:
 
@@ -236,7 +236,7 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; quo
 
 :spadfun:`quo`\: (%, %) -> % 
-  \ ``x quo y``\  is the same as \ ``divide(x, y).quotient``\ . See \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ .
+  \ :code:`x quo y`\  is the same as \ :code:`divide(x, y).quotient`\ . See \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ .
 
 .. _l4575636c696465616e446f6d61696e-7265636970:
 
@@ -249,7 +249,7 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; rem
 
 :spadfun:`rem`\: (%, %) -> % 
-  \ ``x rem y``\  is the same as \ ``divide(x, y).remainder``\ . See \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ .
+  \ :code:`x rem y`\  is the same as \ :code:`divide(x, y).remainder`\ . See \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ .
 
 .. _l4575636c696465616e446f6d61696e-7269676874506f776572:
 
@@ -276,7 +276,7 @@ A constructive euclidean domain, i.e. one can divide producing a quotient and a 
    pair: EuclideanDomain; sizeLess?
 
 :spadfun:`sizeLess?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``sizeLess?(x, y)``\  tests whether \ ``x``\  is strictly smaller than \ ``y``\  with respect to the \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ . Note: zero is considered smaller than every nonzero element.
+  \ :code:`sizeLess?(x, y)`\  tests whether \ :code:`x`\  is strictly smaller than \ :code:`y`\  with respect to the \ :ref:`euclideanSize <l4575636c696465616e446f6d61696e-6575636c696465616e53697a65>`\ . Note: zero is considered smaller than every nonzero element.
 
 .. _l4575636c696465616e446f6d61696e-7375627472616374496643616e:
 

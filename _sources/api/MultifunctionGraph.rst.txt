@@ -19,7 +19,7 @@ allows us to model graph theory
    pair: MultifunctionGraph; *
 
 :spadfun:`\*`\: (%, %) -> \ :ref:`MultifunctionGraph <l4d756c746966756e6374696f6e4772617068>`\  \ :ref:`Product <l50726f64756374>`\ (S, S) 
-  tensor product : the tensor product \ ``G*H``\  of graphs \ ``G``\  and \ ``H``\  is a graph such that the vertex set of \ ``G*H``\  is the Cartesian product \ ``V``\ (\ ``G``\ ) \times \ ``V``\ (\ ``H``\ ); and any two vertices (\ ``u``\ , u') and (\ ``v``\ , \ ``v'``\ ) are adjacent in \ ``G``\  \times \ ``H``\  if and only if u' is adjacent with \ ``v'``\  and \ ``u``\  is adjacent with \ ``v``\ .
+  tensor product : the tensor product \ :code:`G*H`\  of graphs \ :code:`G`\  and \ :code:`H`\  is a graph such that the vertex set of \ :code:`G*H`\  is the Cartesian product \ :code:`V`\ (\ :code:`G`\ ) \times \ :code:`V`\ (\ :code:`H`\ ); and any two vertices (\ :code:`u`\ , u') and (\ :code:`v`\ , \ :code:`v'`\ ) are adjacent in \ :code:`G`\  \times \ :code:`H`\  if and only if u' is adjacent with \ :code:`v'`\  and \ :code:`u`\  is adjacent with \ :code:`v`\ .
 
 .. _l4d756c746966756e6374696f6e4772617068-2b:
 
@@ -81,7 +81,7 @@ allows us to model graph theory
    pair: MultifunctionGraph; apply
 
 :spadfun:`apply`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``apply '``\ function' represented by this graph to vertex index 'a'
+  \ :code:`apply '`\ function' represented by this graph to vertex index 'a'
 
 .. _l4d756c746966756e6374696f6e4772617068-6172726f774e616d65:
 
@@ -150,7 +150,7 @@ allows us to model graph theory
    pair: MultifunctionGraph; coerce
 
 :spadfun:`coerce`\: \ :ref:`PermutationGroup <l5065726d75746174696f6e47726f7570>`\  S -> % 
-  \ ``coerce PermutationGroup``\  to graph which represents the generators of the group
+  \ :code:`coerce PermutationGroup`\  to graph which represents the generators of the group
 
 .. _l4d756c746966756e6374696f6e4772617068-636f6e74726141646a6f696e74:
 
@@ -372,14 +372,14 @@ allows us to model graph theory
    pair: MultifunctionGraph; multifunctionGraph
 
 :spadfun:`multifunctionGraph`\: (\ :ref:`List <l4c697374>`\  Record(value: S, posX: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , posY: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`String <l537472696e67>`\ , arrType: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , fromOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , toOb: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , xOffset: \ :ref:`Integer <l496e7465676572>`\ , yOffset: \ :ref:`Integer <l496e7465676572>`\ , map: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
-  \ ``multifunctionGraph(lo, la)``\  constructs a graph with given list of objects la and list of arrows la. More objects and arrows can be added later if required.
+  \ :code:`multifunctionGraph(lo, la)`\  constructs a graph with given list of objects la and list of arrows la. More objects and arrows can be added later if required.
 
 
 .. index::
    pair: MultifunctionGraph; multifunctionGraph
 
 :spadfun:`multifunctionGraph`\: (\ :ref:`List <l4c697374>`\  S, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``multifunctionGraph(lo, am)``\  constructs a graph given list of objects \ ``lo``\  and adjacency matrix am.
+  \ :code:`multifunctionGraph(lo, am)`\  constructs a graph given list of objects \ :code:`lo`\  and adjacency matrix am.
 
 
 .. index::
@@ -393,14 +393,14 @@ allows us to model graph theory
    pair: MultifunctionGraph; multifunctionGraph
 
 :spadfun:`multifunctionGraph`\: \ :ref:`List <l4c697374>`\  Record(value: S, posX: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , posY: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , next: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , map: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``multifunctionGraph(l)``\  constructs a graph with given list \ ``l``\  of objects. More objects and arrows can be added later if required.
+  \ :code:`multifunctionGraph(l)`\  constructs a graph with given list \ :code:`l`\  of objects. More objects and arrows can be added later if required.
 
 
 .. index::
    pair: MultifunctionGraph; multifunctionGraph
 
 :spadfun:`multifunctionGraph`\: \ :ref:`List <l4c697374>`\  S -> % 
-  \ ``multifunctionGraph(l)``\  constructs a graph with given list \ ``l``\  of object names. Use this version of the constructor if you don\ ``'t``\  intend to create diagrams and therefore don\ ``'t``\  care about \ ``x``\ , \ ``y``\  coordinates. More objects and arrows can be added later if required.
+  \ :code:`multifunctionGraph(l)`\  constructs a graph with given list \ :code:`l`\  of object names. Use this version of the constructor if you don\ :code:`'t`\  intend to create diagrams and therefore don\ :code:`'t`\  care about \ :code:`x`\ , \ :code:`y`\  coordinates. More objects and arrows can be added later if required.
 
 .. _l4d756c746966756e6374696f6e4772617068-6e6f646546726f6d4172726f77:
 

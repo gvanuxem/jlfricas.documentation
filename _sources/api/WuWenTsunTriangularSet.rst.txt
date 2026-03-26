@@ -69,14 +69,14 @@ A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e657261
    pair: WuWenTsunTriangularSet; characteristicSerie
 
 :spadfun:`characteristicSerie`\: (\ :ref:`List <l4c697374>`\  P, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , (P, P) -> P) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``characteristicSerie(ps, redOp?, redOp)``\  returns a list \ ``lts``\  of triangular sets such that the zero set of \ ``ps``\  is the union of the regular zero sets of the members of \ ``lts``\ . This is made by the Ritt and Wu Wen Tsun process applying the operation \ ``characteristicSet(ps, redOp?, redOp)``\  to compute characteristic sets in Wu Wen Tsun sense.
+  \ :code:`characteristicSerie(ps, redOp?, redOp)`\  returns a list \ :code:`lts`\  of triangular sets such that the zero set of \ :code:`ps`\  is the union of the regular zero sets of the members of \ :code:`lts`\ . This is made by the Ritt and Wu Wen Tsun process applying the operation \ :code:`characteristicSet(ps, redOp?, redOp)`\  to compute characteristic sets in Wu Wen Tsun sense.
 
 
 .. index::
    pair: WuWenTsunTriangularSet; characteristicSerie
 
 :spadfun:`characteristicSerie`\: \ :ref:`List <l4c697374>`\  P -> \ :ref:`List <l4c697374>`\  % 
-  \ ``characteristicSerie(ps)``\  returns the same as \ ``characteristicSerie(ps, initiallyReduced?, initiallyReduce)``\ .
+  \ :code:`characteristicSerie(ps)`\  returns the same as \ :code:`characteristicSerie(ps, initiallyReduced?, initiallyReduce)`\ .
 
 .. _l577557656e5473756e547269616e67756c6172536574-6368617261637465726973746963536574:
 
@@ -84,14 +84,14 @@ A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e657261
    pair: WuWenTsunTriangularSet; characteristicSet
 
 :spadfun:`characteristicSet`\: (\ :ref:`List <l4c697374>`\  P, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , (P, P) -> P) -> Union(%, failed) 
-  \ ``characteristicSet(ps, redOp?, redOp)``\  returns a non-contradictory characteristic set of \ ``ps``\  in Wu Wen Tsun sense with respect to the reduction-test \ ``redOp?``\  (using \ ``redOp``\  to reduce polynomials with respect to a \ ``redOp?``\  basic set), if no non-zero constant polynomial appear during those reductions, else \ ``"failed"``\  is returned. The operations \ ``redOp``\  and \ ``redOp?``\  must satisfy the following conditions: \ ``redOp?(redOp(p, q), q)``\  holds for every polynomials \ ``p, q``\  and there exists an integer \ ``e``\  and a polynomial \ ``f``\  such that we have \ ``init(q)^e*p = f*q + redOp(p, q)``\ .
+  \ :code:`characteristicSet(ps, redOp?, redOp)`\  returns a non-contradictory characteristic set of \ :code:`ps`\  in Wu Wen Tsun sense with respect to the reduction-test \ :code:`redOp?`\  (using \ :code:`redOp`\  to reduce polynomials with respect to a \ :code:`redOp?`\  basic set), if no non-zero constant polynomial appear during those reductions, else \ :code:`"failed"`\  is returned. The operations \ :code:`redOp`\  and \ :code:`redOp?`\  must satisfy the following conditions: \ :code:`redOp?(redOp(p, q), q)`\  holds for every polynomials \ :code:`p, q`\  and there exists an integer \ :code:`e`\  and a polynomial \ :code:`f`\  such that we have \ :code:`init(q)^e*p = f*q + redOp(p, q)`\ .
 
 
 .. index::
    pair: WuWenTsunTriangularSet; characteristicSet
 
 :spadfun:`characteristicSet`\: \ :ref:`List <l4c697374>`\  P -> Union(%, failed) 
-  \ ``characteristicSet(ps)``\  returns the same as \ ``characteristicSet(ps, initiallyReduced?, initiallyReduce)``\ .
+  \ :code:`characteristicSet(ps)`\  returns the same as \ :code:`characteristicSet(ps, initiallyReduced?, initiallyReduce)`\ .
 
 .. _l577557656e5473756e547269616e67756c6172536574-636f65726365:
 
@@ -311,14 +311,14 @@ A domain constructor of the category \ :ref:`GeneralTriangularSet <l47656e657261
    pair: WuWenTsunTriangularSet; medialSet
 
 :spadfun:`medialSet`\: (\ :ref:`List <l4c697374>`\  P, (P, P) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , (P, P) -> P) -> Union(%, failed) 
-  \ ``medialSet(ps, redOp?, redOp)``\  returns \ ``bs``\  a basic set (in Wu Wen Tsun sense with respect to the reduction-test \ ``redOp?``\ ) of some set generating the same ideal as \ ``ps``\  (with rank not higher than any basic set of \ ``ps``\ ), if no non-zero constant polynomials appear during the computations, else \ ``"failed"``\  is returned. In the former case, \ ``bs``\  has to be understood as a candidate for being a characteristic set of \ ``ps``\ . In the original algorithm, \ ``bs``\  is simply a basic set of \ ``ps``\ .
+  \ :code:`medialSet(ps, redOp?, redOp)`\  returns \ :code:`bs`\  a basic set (in Wu Wen Tsun sense with respect to the reduction-test \ :code:`redOp?`\ ) of some set generating the same ideal as \ :code:`ps`\  (with rank not higher than any basic set of \ :code:`ps`\ ), if no non-zero constant polynomials appear during the computations, else \ :code:`"failed"`\  is returned. In the former case, \ :code:`bs`\  has to be understood as a candidate for being a characteristic set of \ :code:`ps`\ . In the original algorithm, \ :code:`bs`\  is simply a basic set of \ :code:`ps`\ .
 
 
 .. index::
    pair: WuWenTsunTriangularSet; medialSet
 
 :spadfun:`medialSet`\: \ :ref:`List <l4c697374>`\  P -> Union(%, failed) 
-  \ ``medial(ps)``\  returns the same as \ ``medialSet(ps, initiallyReduced?, initiallyReduce)``\ .
+  \ :code:`medial(ps)`\  returns the same as \ :code:`medialSet(ps, initiallyReduced?, initiallyReduce)`\ .
 
 .. _l577557656e5473756e547269616e67756c6172536574-6d656d6265723f:
 

@@ -25,7 +25,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; #
 
 :spadfun:`#`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``\#((a1, ..., an))``\  returns \ ``n``\ .
+  \ :code:`\#((a1, ..., an))`\  returns \ :code:`n`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-3d:
 
@@ -43,7 +43,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; atom?
 
 :spadfun:`atom?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``atom?(s)``\  is \ ``true``\  if \ ``s``\  is a Lisp atom.
+  \ :code:`atom?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is a Lisp atom.
 
 .. _l5345787072657373696f6e43617465676f7279-636172:
 
@@ -51,7 +51,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; car
 
 :spadfun:`car`\: % -> % 
-  \ ``car((a1, ..., an))``\  returns \ ``a1``\ .
+  \ :code:`car((a1, ..., an))`\  returns \ :code:`a1`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-636472:
 
@@ -59,7 +59,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; cdr
 
 :spadfun:`cdr`\: % -> % 
-  \ ``cdr((a1, ..., an))``\  returns \ ``(a2, ..., an)``\ .
+  \ :code:`cdr((a1, ..., an))`\  returns \ :code:`(a2, ..., an)`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-636f65726365:
 
@@ -72,35 +72,35 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; convert
 
 :spadfun:`convert`\: Flt -> % 
-  \ ``convert(x)``\  returns the Lisp atom \ ``x``\ .
+  \ :code:`convert(x)`\  returns the Lisp atom \ :code:`x`\ .
 
 
 .. index::
    pair: SExpressionCategory; convert
 
 :spadfun:`convert`\: Int -> % 
-  \ ``convert(x)``\  returns the Lisp atom \ ``x``\ .
+  \ :code:`convert(x)`\  returns the Lisp atom \ :code:`x`\ .
 
 
 .. index::
    pair: SExpressionCategory; convert
 
 :spadfun:`convert`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``convert([a1, ..., an])``\  returns the \ ``S``\ -expression \ ``(a1, ..., an)``\ .
+  \ :code:`convert([a1, ..., an])`\  returns the \ :code:`S`\ -expression \ :code:`(a1, ..., an)`\ .
 
 
 .. index::
    pair: SExpressionCategory; convert
 
 :spadfun:`convert`\: Str -> % 
-  \ ``convert(x)``\  returns the Lisp atom \ ``x``\ .
+  \ :code:`convert(x)`\  returns the Lisp atom \ :code:`x`\ .
 
 
 .. index::
    pair: SExpressionCategory; convert
 
 :spadfun:`convert`\: Sym -> % 
-  \ ``convert(x)``\  returns the Lisp atom \ ``x``\ .
+  \ :code:`convert(x)`\  returns the Lisp atom \ :code:`x`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-6465737472756374:
 
@@ -108,7 +108,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; destruct
 
 :spadfun:`destruct`\: % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``destruct((a1, ..., an))``\  returns the list [\ ``a1``\ , ..., an].
+  \ :code:`destruct((a1, ..., an))`\  returns the list [\ :code:`a1`\ , ..., an].
 
 .. _l5345787072657373696f6e43617465676f7279-656c74:
 
@@ -116,14 +116,14 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt((a1, ..., an), i)``\  returns \ ``ai``\ .
+  \ :code:`elt((a1, ..., an), i)`\  returns \ :code:`ai`\ .
 
 
 .. index::
    pair: SExpressionCategory; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``elt(s, [i1, ..., im])``\  recursively selects subexpression, that is elt(\ ``s``\ , []) is just \ ``s``\  and elt(\ ``s``\ , [\ ``i1``\ , ..., im]) is the same as elt(elt(\ ``s``\ , \ ``i1``\ ), [\ ``i2``\ , ..., im]).
+  \ :code:`elt(s, [i1, ..., im])`\  recursively selects subexpression, that is elt(\ :code:`s`\ , []) is just \ :code:`s`\  and elt(\ :code:`s`\ , [\ :code:`i1`\ , ..., im]) is the same as elt(elt(\ :code:`s`\ , \ :code:`i1`\ ), [\ :code:`i2`\ , ..., im]).
 
 .. _l5345787072657373696f6e43617465676f7279-6571:
 
@@ -131,7 +131,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; eq
 
 :spadfun:`eq`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``eq(s, t)``\  is \ ``true``\  if EQ(\ ``s``\ , \ ``t``\ ) is \ ``true``\  in Lisp.
+  \ :code:`eq(s, t)`\  is \ :code:`true`\  if EQ(\ :code:`s`\ , \ :code:`t`\ ) is \ :code:`true`\  in Lisp.
 
 .. _l5345787072657373696f6e43617465676f7279-666c6f61743f:
 
@@ -139,7 +139,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; float?
 
 :spadfun:`float?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``float?(s)``\  is \ ``true``\  if \ ``s``\  is an atom and belong to \ ``Flt``\ .
+  \ :code:`float?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is an atom and belong to \ :code:`Flt`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-666c6f6174:
 
@@ -147,7 +147,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; float
 
 :spadfun:`float`\: % -> Flt 
-  \ ``float(s)``\  returns \ ``s``\  as an element of \ ``Flt``\ ; Error: if \ ``s``\  is not an atom that also belongs to \ ``Flt``\ .
+  \ :code:`float(s)`\  returns \ :code:`s`\  as an element of \ :code:`Flt`\ ; Error: if \ :code:`s`\  is not an atom that also belongs to \ :code:`Flt`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-68617368:
 
@@ -165,7 +165,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; integer?
 
 :spadfun:`integer?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integer?(s)``\  is \ ``true``\  if \ ``s``\  is an atom and belong to Int.
+  \ :code:`integer?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is an atom and belong to Int.
 
 .. _l5345787072657373696f6e43617465676f7279-696e7465676572:
 
@@ -173,7 +173,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; integer
 
 :spadfun:`integer`\: % -> Int 
-  \ ``integer(s)``\  returns \ ``s``\  as an element of Int. Error: if \ ``s``\  is not an atom that also belongs to Int.
+  \ :code:`integer(s)`\  returns \ :code:`s`\  as an element of Int. Error: if \ :code:`s`\  is not an atom that also belongs to Int.
 
 .. _l5345787072657373696f6e43617465676f7279-6c61746578:
 
@@ -186,7 +186,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; list?
 
 :spadfun:`list?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``list?(s)``\  is \ ``true``\  if \ ``s``\  is a Lisp list, possibly ().
+  \ :code:`list?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is a Lisp list, possibly ().
 
 .. _l5345787072657373696f6e43617465676f7279-6e756c6c3f:
 
@@ -194,7 +194,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; null?
 
 :spadfun:`null?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``null?(s)``\  is \ ``true``\  if \ ``s``\  is the \ ``S``\ -expression ().
+  \ :code:`null?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is the \ :code:`S`\ -expression ().
 
 .. _l5345787072657373696f6e43617465676f7279-706169723f:
 
@@ -202,7 +202,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; pair?
 
 :spadfun:`pair?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``pair?(s)``\  is \ ``true``\  if \ ``s``\  has is a non-null Lisp list.
+  \ :code:`pair?(s)`\  is \ :code:`true`\  if \ :code:`s`\  has is a non-null Lisp list.
 
 .. _l5345787072657373696f6e43617465676f7279-737472696e673f:
 
@@ -210,7 +210,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; string?
 
 :spadfun:`string?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``string?(s)``\  is \ ``true``\  if \ ``s``\  is an atom and belong to \ ``Str``\ .
+  \ :code:`string?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is an atom and belong to \ :code:`Str`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-737472696e67:
 
@@ -218,7 +218,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; string
 
 :spadfun:`string`\: % -> Str 
-  \ ``string(s)``\  returns \ ``s``\  as an element of \ ``Str``\ . Error: if \ ``s``\  is not an atom that also belongs to \ ``Str``\ .
+  \ :code:`string(s)`\  returns \ :code:`s`\  as an element of \ :code:`Str`\ . Error: if \ :code:`s`\  is not an atom that also belongs to \ :code:`Str`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-73796d626f6c3f:
 
@@ -226,7 +226,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; symbol?
 
 :spadfun:`symbol?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``symbol?(s)``\  is \ ``true``\  if \ ``s``\  is an atom and belong to \ ``Sym``\ .
+  \ :code:`symbol?(s)`\  is \ :code:`true`\  if \ :code:`s`\  is an atom and belong to \ :code:`Sym`\ .
 
 .. _l5345787072657373696f6e43617465676f7279-73796d626f6c:
 
@@ -234,7 +234,7 @@ This category allows the manipulation of Lisp values while keeping the grunge fa
    pair: SExpressionCategory; symbol
 
 :spadfun:`symbol`\: % -> Sym 
-  \ ``symbol(s)``\  returns \ ``s``\  as an element of \ ``Sym``\ . Error: if \ ``s``\  is not an atom that also belongs to \ ``Sym``\ .
+  \ :code:`symbol(s)`\  returns \ :code:`s`\  as an element of \ :code:`Sym`\ . Error: if \ :code:`s`\  is not an atom that also belongs to \ :code:`Sym`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

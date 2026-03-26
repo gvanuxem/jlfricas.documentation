@@ -47,7 +47,7 @@ This domain provides the basic character data type.
    pair: Character; alphabetic?
 
 :spadfun:`alphabetic?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``alphabetic?(c)``\  tests if \ ``c``\  is a letter, i.e. one of a..\ ``z``\  or A..\ ``Z``\ .
+  \ :code:`alphabetic?(c)`\  tests if \ :code:`c`\  is a letter, i.e. one of a..\ :code:`z`\  or A..\ :code:`Z`\ .
 
 .. _l436861726163746572-616c7068616e756d657269633f:
 
@@ -55,7 +55,7 @@ This domain provides the basic character data type.
    pair: Character; alphanumeric?
 
 :spadfun:`alphanumeric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``alphanumeric?(c)``\  tests if \ ``c``\  is either a letter or number, i.e. one of 0..9, a..\ ``z``\  or A..\ ``Z``\ .
+  \ :code:`alphanumeric?(c)`\  tests if \ :code:`c`\  is either a letter or number, i.e. one of 0..9, a..\ :code:`z`\  or A..\ :code:`Z`\ .
 
 .. _l436861726163746572-63686172:
 
@@ -63,14 +63,14 @@ This domain provides the basic character data type.
    pair: Character; char
 
 :spadfun:`char`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``char(i)``\  provides a character corresponding to the integer code \ ``i``\ . It is always \ ``true``\  that \ ``ord char i = i``\ .
+  \ :code:`char(i)`\  provides a character corresponding to the integer code \ :code:`i`\ . It is always \ :code:`true`\  that \ :code:`ord char i = i`\ .
 
 
 .. index::
    pair: Character; char
 
 :spadfun:`char`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``char(s)``\  provides a character from a string \ ``s``\  of length one.
+  \ :code:`char(s)`\  provides a character from a string \ :code:`s`\  of length one.
 
 .. _l436861726163746572-636f65726365:
 
@@ -88,7 +88,7 @@ This domain provides the basic character data type.
    pair: Character; digit?
 
 :spadfun:`digit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``digit?(c)``\  tests if \ ``c``\  is a digit character, i.e. one of 0..9.
+  \ :code:`digit?(c)`\  tests if \ :code:`c`\  is a digit character, i.e. one of 0..9.
 
 .. _l436861726163746572-656e756d6572617465:
 
@@ -111,7 +111,7 @@ This domain provides the basic character data type.
    pair: Character; hexDigit?
 
 :spadfun:`hexDigit?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``hexDigit?(c)``\  tests if \ ``c``\  is a hexadecimal numeral, i.e. one of 0..9, a..\ ``f``\  or A..\ ``F``\ .
+  \ :code:`hexDigit?(c)`\  tests if \ :code:`c`\  is a hexadecimal numeral, i.e. one of 0..9, a..\ :code:`f`\  or A..\ :code:`F`\ .
 
 .. _l436861726163746572-696e646578:
 
@@ -134,7 +134,7 @@ This domain provides the basic character data type.
    pair: Character; lowerCase?
 
 :spadfun:`lowerCase?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``lowerCase?(c)``\  tests if \ ``c``\  is an lower case letter, i.e. one of a..\ ``z``\ .
+  \ :code:`lowerCase?(c)`\  tests if \ :code:`c`\  is an lower case letter, i.e. one of a..\ :code:`z`\ .
 
 .. _l436861726163746572-6c6f77657243617365:
 
@@ -142,7 +142,7 @@ This domain provides the basic character data type.
    pair: Character; lowerCase
 
 :spadfun:`lowerCase`\: % -> % 
-  \ ``lowerCase(c)``\  converts an upper case letter to the corresponding lower case letter. If \ ``c``\  is not an upper case letter, then it is returned unchanged.
+  \ :code:`lowerCase(c)`\  converts an upper case letter to the corresponding lower case letter. If \ :code:`c`\  is not an upper case letter, then it is returned unchanged.
 
 .. _l436861726163746572-6d6178:
 
@@ -160,7 +160,7 @@ This domain provides the basic character data type.
    pair: Character; newline
 
 :spadfun:`newline`\: () -> % 
-  \ ``newline()``\  provides the newline character.
+  \ :code:`newline()`\  provides the newline character.
 
 .. _l436861726163746572-6f7264:
 
@@ -168,7 +168,7 @@ This domain provides the basic character data type.
    pair: Character; ord
 
 :spadfun:`ord`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``ord(c)``\  provides an integral code corresponding to the character \ ``c``\ . It is always \ ``true``\  that \ ``char ord c = c``\ .
+  \ :code:`ord(c)`\  provides an integral code corresponding to the character \ :code:`c`\ . It is always \ :code:`true`\  that \ :code:`char ord c = c`\ .
 
 .. _l436861726163746572-71756f7465:
 
@@ -176,7 +176,7 @@ This domain provides the basic character data type.
    pair: Character; quote
 
 :spadfun:`quote`\: () -> % 
-  \ ``quote()``\  provides the string quote character, \ ``"``\ .
+  \ :code:`quote()`\  provides the string quote character, \ :code:`"`\ .
 
 .. _l436861726163746572-72616e646f6d:
 
@@ -199,7 +199,7 @@ This domain provides the basic character data type.
    pair: Character; space
 
 :spadfun:`space`\: () -> % 
-  \ ``space()``\  provides the blank character.
+  \ :code:`space()`\  provides the blank character.
 
 .. _l436861726163746572-756e64657273636f7265:
 
@@ -207,7 +207,7 @@ This domain provides the basic character data type.
    pair: Character; underscore
 
 :spadfun:`underscore`\: () -> % 
-  \ ``underscore()``\  provides the underscore character, \ ``_``\ , which is used to allow quotes and other characters \ *within*\  strings.
+  \ :code:`underscore()`\  provides the underscore character, \ :code:`_`\ , which is used to allow quotes and other characters \ *within*\  strings.
 
 .. _l436861726163746572-7570706572436173653f:
 
@@ -215,7 +215,7 @@ This domain provides the basic character data type.
    pair: Character; upperCase?
 
 :spadfun:`upperCase?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``upperCase?(c)``\  tests if \ ``c``\  is an upper case letter, i.e. one of A..\ ``Z``\ .
+  \ :code:`upperCase?(c)`\  tests if \ :code:`c`\  is an upper case letter, i.e. one of A..\ :code:`Z`\ .
 
 .. _l436861726163746572-757070657243617365:
 
@@ -223,7 +223,7 @@ This domain provides the basic character data type.
    pair: Character; upperCase
 
 :spadfun:`upperCase`\: % -> % 
-  \ ``upperCase(c)``\  converts a lower case letter to the corresponding upper case letter. If \ ``c``\  is not a lower case letter, then it is returned unchanged.
+  \ :code:`upperCase(c)`\  converts a lower case letter to the corresponding upper case letter. If \ :code:`c`\  is not a lower case letter, then it is returned unchanged.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

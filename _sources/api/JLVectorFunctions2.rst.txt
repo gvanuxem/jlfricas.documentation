@@ -12,7 +12,7 @@ JLVectorFunctions2(A, B)
 * B: \ :ref:`JLObjectRing <l4a4c4f626a65637452696e67>`\ 
 
 
-This package provides operations which all take as arguments Julia vectors of elements of some type \ ``A``\  and functions from \ ``A``\  to another of type \ ``B``\ . The operations all iterate over their vector argument and either return a value of type \ ``B``\  or a vector over \ ``B``\ .
+This package provides operations which all take as arguments Julia vectors of elements of some type \ :code:`A`\  and functions from \ :code:`A`\  to another of type \ :code:`B`\ . The operations all iterate over their vector argument and either return a value of type \ :code:`B`\  or a vector over \ :code:`B`\ .
 
 
 .. _l4a4c566563746f7246756e6374696f6e7332-6d6170:
@@ -21,14 +21,14 @@ This package provides operations which all take as arguments Julia vectors of el
    pair: JLVectorFunctions2; map
 
 :spadfun:`map`\: (A -> B, \ :ref:`JLVector <l4a4c566563746f72>`\  A) -> \ :ref:`JLVector <l4a4c566563746f72>`\  B 
-  \ ``map(f, v)``\  applies the function \ ``f``\  to every element of the vector \ ``v``\  producing a new vector containing the values.
+  \ :code:`map(f, v)`\  applies the function \ :code:`f`\  to every element of the vector \ :code:`v`\  producing a new vector containing the values.
 
 
 .. index::
    pair: JLVectorFunctions2; map
 
 :spadfun:`map`\: (A -> Union(B, failed), \ :ref:`JLVector <l4a4c566563746f72>`\  A) -> Union(\ :ref:`JLVector <l4a4c566563746f72>`\  B, failed) 
-  \ ``map(f, v)``\  applies the function \ ``f``\  to every element of the vector \ ``v``\  producing a new vector containing the values or \ ``"failed"``\ .
+  \ :code:`map(f, v)`\  applies the function \ :code:`f`\  to every element of the vector \ :code:`v`\  producing a new vector containing the values or \ :code:`"failed"`\ .
 
 .. _l4a4c566563746f7246756e6374696f6e7332-726564756365:
 
@@ -36,7 +36,7 @@ This package provides operations which all take as arguments Julia vectors of el
    pair: JLVectorFunctions2; reduce
 
 :spadfun:`reduce`\: ((A, B) -> B, \ :ref:`JLVector <l4a4c566563746f72>`\  A, B) -> B 
-  \ ``reduce(func, vec, ident)``\  combines the elements in \ ``vec``\  using the binary function \ ``func``\ . Argument ident is returned if \ ``vec``\  is empty.
+  \ :code:`reduce(func, vec, ident)`\  combines the elements in \ :code:`vec`\  using the binary function \ :code:`func`\ . Argument ident is returned if \ :code:`vec`\  is empty.
 
 .. _l4a4c566563746f7246756e6374696f6e7332-7363616e:
 
@@ -44,6 +44,6 @@ This package provides operations which all take as arguments Julia vectors of el
    pair: JLVectorFunctions2; scan
 
 :spadfun:`scan`\: ((A, B) -> B, \ :ref:`JLVector <l4a4c566563746f72>`\  A, B) -> \ :ref:`JLVector <l4a4c566563746f72>`\  B 
-  \ ``scan(func, vec, ident)``\  creates a new vector whose elements are the result of applying reduce to the binary function \ ``func``\ , increasing initial subsequences of the vector \ ``vec``\ , and the element ident.
+  \ :code:`scan(func, vec, ident)`\  creates a new vector whose elements are the result of applying reduce to the binary function \ :code:`func`\ , increasing initial subsequences of the vector \ :code:`vec`\ , and the element ident.
 
 

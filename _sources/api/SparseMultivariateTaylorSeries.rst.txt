@@ -14,7 +14,7 @@ SparseMultivariateTaylorSeries(Coef, Var, SMP)
 * SMP: \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (Coef, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  Var, Var)
 
 
-This domain provides multivariate Taylor series with variables from an arbitrary ordered set. A Taylor series is represented by a stream of polynomials from the polynomial domain \ ``SMP``\ . The \ ``n``\ th element of the stream is a form of degree \ ``n``\ . SMTS is an internal domain.
+This domain provides multivariate Taylor series with variables from an arbitrary ordered set. A Taylor series is represented by a stream of polynomials from the polynomial domain \ :code:`SMP`\ . The \ :code:`n`\ th element of the stream is a form of degree \ :code:`n`\ . SMTS is an internal domain.
 
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-30:
@@ -65,7 +65,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; *
 
 :spadfun:`\*`\: (SMP, %) -> % 
-  \ ``smp*ts``\  multiplies a TaylorSeries \ ``ts``\  by a monomial \ ``smp``\ .
+  \ :code:`smp*ts`\  multiplies a TaylorSeries \ :code:`ts`\  by a monomial \ :code:`smp`\ .
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-2b:
 
@@ -212,7 +212,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; coefficient
 
 :spadfun:`coefficient`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> SMP 
-  \ ``coefficient(s, n)``\  gives the terms of total degree \ ``n``\ .
+  \ :code:`coefficient(s, n)`\  gives the terms of total degree \ :code:`n`\ .
 
 
 \ :ref:`coefficient <l4d756c7469766172696174655461796c6f7253657269657343617465676f7279-636f656666696369656e74>`\ \: (%, Var, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -224,7 +224,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`Stream <l53747265616d>`\  SMP 
-  \ ``coefficients(s)``\  gives stream of coefficients of \ ``s``\ , i.e. [coefficient(\ ``s``\ ,0), coefficient(\ ``s``\ ,1), ...]
+  \ :code:`coefficients(s)`\  gives stream of coefficients of \ :code:`s`\ , i.e. [coefficient(\ :code:`s`\ ,0), coefficient(\ :code:`s`\ ,1), ...]
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-636f65726365:
 
@@ -252,14 +252,14 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; coerce
 
 :spadfun:`coerce`\: SMP -> % 
-  \ ``coerce(poly)``\  regroups the terms by total degree and forms a series.
+  \ :code:`coerce(poly)`\  regroups the terms by total degree and forms a series.
 
 
 .. index::
    pair: SparseMultivariateTaylorSeries; coerce
 
 :spadfun:`coerce`\: Var -> % 
-  \ ``coerce(var)``\  converts a variable to a Taylor series
+  \ :code:`coerce(var)`\  converts a variable to a Taylor series
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-636f6d6d757461746f72:
 
@@ -317,7 +317,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; csubst
 
 :spadfun:`csubst`\: (\ :ref:`List <l4c697374>`\  Var, \ :ref:`List <l4c697374>`\  \ :ref:`Stream <l53747265616d>`\  SMP) -> SMP -> \ :ref:`Stream <l53747265616d>`\  SMP 
-  \ ``csubst(a, b)``\  is for internal use only
+  \ :code:`csubst(a, b)`\  is for internal use only
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-44:
 
@@ -404,7 +404,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; fintegrate
 
 :spadfun:`fintegrate`\: (() -> %, Var, Coef) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``fintegrate(f, v, c)``\  is the integral of \ ``f()``\  with respect to \ ``v``\  and having \ ``c``\  as the constant of integration. The evaluation of \ ``f()``\  is delayed.
+  \ :code:`fintegrate(f, v, c)`\  is the integral of \ :code:`f()`\  with respect to \ :code:`v`\  and having \ :code:`c`\  as the constant of integration. The evaluation of \ :code:`f()`\  is delayed.
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-696e74656772617465:
 
@@ -416,7 +416,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; integrate
 
 :spadfun:`integrate`\: (%, Var, Coef) -> % if Coef has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
-  \ ``integrate(s, v, c)``\  is the integral of \ ``s``\  with respect to \ ``v``\  and having \ ``c``\  as the constant of integration.
+  \ :code:`integrate(s, v, c)`\  is the integral of \ :code:`s`\  with respect to \ :code:`v`\  and having \ :code:`c`\  as the constant of integration.
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-6c61746578:
 
@@ -578,7 +578,7 @@ This domain provides multivariate Taylor series with variables from an arbitrary
    pair: SparseMultivariateTaylorSeries; series
 
 :spadfun:`series`\: \ :ref:`Stream <l53747265616d>`\  SMP -> % 
-  \ ``series(st)``\  creates a series from a stream of coefficients.
+  \ :code:`series(st)`\  creates a series from a stream of coefficients.
 
 .. _l5370617273654d756c7469766172696174655461796c6f72536572696573-73696e:
 

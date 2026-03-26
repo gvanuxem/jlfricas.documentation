@@ -8,7 +8,7 @@ LLLReduction
 :viewcode:`lll.spad line 1 <lll.spad#L1>` :editcode:`[edit on github] <lll.spad#L1>`
 
 
-This package implements \ ``LLL``\  reduction. Before use user must set appropriate floating point precision. Too low precision may cause nontermination. Higher precisions require more compute time.
+This package implements \ :code:`LLL`\  reduction. Before use user must set appropriate floating point precision. Too low precision may cause nontermination. Higher precisions require more compute time.
 
 
 .. _l4c4c4c526564756374696f6e-657874656e6465644c4c4c21:
@@ -17,7 +17,7 @@ This package implements \ ``LLL``\  reduction. Before use user must set appropri
    pair: LLLReduction; extendedLLL!
 
 :spadfun:`extendedLLL!`\: (\ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``extendedLLL!(m, n)``\  with 1 \ ``<=``\  \ ``n``\  \ ``<=``\  ncols(\ ``m``\ ) performs the \ ``LLL``\  reduction of \ ``m``\  where only the first \ ``n``\  columns are considered significant. All matrix transformations, however, will be executed on the full matrix. \ ``m``\  is destructively modified and will be lost after this call.
+  \ :code:`extendedLLL!(m, n)`\  with 1 \ :code:`<=`\  \ :code:`n`\  \ :code:`<=`\  ncols(\ :code:`m`\ ) performs the \ :code:`LLL`\  reduction of \ :code:`m`\  where only the first \ :code:`n`\  columns are considered significant. All matrix transformations, however, will be executed on the full matrix. \ :code:`m`\  is destructively modified and will be lost after this call.
 
 .. _l4c4c4c526564756374696f6e-657874656e6465644c4c4c:
 
@@ -25,7 +25,7 @@ This package implements \ ``LLL``\  reduction. Before use user must set appropri
    pair: LLLReduction; extendedLLL
 
 :spadfun:`extendedLLL`\: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  -> Record(lll: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ , trf: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
-  \ ``extendedLLL(m)``\  returns the \ ``LLL``\  reductions of \ ``m``\  together with the transformation matrix, i.e. if [\ ``l``\ , \ ``t``\ ] is returned then it holds \ ``l``\  = \ ``t*m``\ .
+  \ :code:`extendedLLL(m)`\  returns the \ :code:`LLL`\  reductions of \ :code:`m`\  together with the transformation matrix, i.e. if [\ :code:`l`\ , \ :code:`t`\ ] is returned then it holds \ :code:`l`\  = \ :code:`t*m`\ .
 
 .. _l4c4c4c526564756374696f6e-66696e645f72656c6174696f6e:
 
@@ -33,7 +33,7 @@ This package implements \ ``LLL``\  reduction. Before use user must set appropri
    pair: LLLReduction; find_relation
 
 :spadfun:`find_relation`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``find_relation(lf, k)``\  finds short integer relation between elements of \ ``lf``\  rounded to \ ``k``\  decimal places.
+  \ :code:`find_relation(lf, k)`\  finds short integer relation between elements of \ :code:`lf`\  rounded to \ :code:`k`\  decimal places.
 
 .. _l4c4c4c526564756374696f6e-4c4c4c:
 
@@ -41,6 +41,6 @@ This package implements \ ``LLL``\  reduction. Before use user must set appropri
    pair: LLLReduction; LLL
 
 :spadfun:`LLL`\: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``LLL(m)``\  computes \ ``LLL``\  reduction of \ ``m``\  \ ``LLL``\ (\ ``m``\ ) is the same as extendedLLL!(copy \ ``m``\ , ncols \ ``m``\ ).
+  \ :code:`LLL(m)`\  computes \ :code:`LLL`\  reduction of \ :code:`m`\  \ :code:`LLL`\ (\ :code:`m`\ ) is the same as extendedLLL!(copy \ :code:`m`\ , ncols \ :code:`m`\ ).
 
 

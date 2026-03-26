@@ -12,7 +12,7 @@ FileCategory(Name, S)
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-This category provides an interface to operate on files in the computer\ ``'s``\  file system. The precise method of naming files is determined by the Name parameter. The type of the contents of the file is determined by \ ``S``\ .
+This category provides an interface to operate on files in the computer\ :code:`'s`\  file system. The precise method of naming files is determined by the Name parameter. The type of the contents of the file is determined by \ :code:`S`\ .
 
 
 .. _l46696c6543617465676f7279-3d:
@@ -31,7 +31,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; close!
 
 :spadfun:`close!`\: % -> % 
-  \ ``close!(f)``\  returns the file \ ``f``\  closed to input and output.
+  \ :code:`close!(f)`\  returns the file \ :code:`f`\  closed to input and output.
 
 .. _l46696c6543617465676f7279-636f65726365:
 
@@ -44,7 +44,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; flush
 
 :spadfun:`flush`\: % -> \ :ref:`Void <l566f6964>`\  
-  \ ``flush(f)``\  makes sure that buffered data is written out to the operating system.
+  \ :code:`flush(f)`\  makes sure that buffered data is written out to the operating system.
 
 .. _l46696c6543617465676f7279-696f6d6f6465:
 
@@ -52,7 +52,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; iomode
 
 :spadfun:`iomode`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``iomode(f)``\  returns the status of the file \ ``f``\ . The input/output status of \ ``f``\  may be "input", "output" or "closed" mode.
+  \ :code:`iomode(f)`\  returns the status of the file \ :code:`f`\ . The input/output status of \ :code:`f`\  may be "input", "output" or "closed" mode.
 
 .. _l46696c6543617465676f7279-6c61746578:
 
@@ -65,7 +65,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; name
 
 :spadfun:`name`\: % -> Name 
-  \ ``name(f)``\  returns the external name of the file \ ``f``\ .
+  \ :code:`name(f)`\  returns the external name of the file \ :code:`f`\ .
 
 .. _l46696c6543617465676f7279-6f70656e:
 
@@ -73,14 +73,14 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; open
 
 :spadfun:`open`\: (Name, \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``open(s, mode)``\  returns a file \ ``s``\  open for operation in the indicated mode: "input" or "output".
+  \ :code:`open(s, mode)`\  returns a file \ :code:`s`\  open for operation in the indicated mode: "input" or "output".
 
 
 .. index::
    pair: FileCategory; open
 
 :spadfun:`open`\: Name -> % 
-  \ ``open(s)``\  returns the file \ ``s``\  open for input.
+  \ :code:`open(s)`\  returns the file \ :code:`s`\  open for input.
 
 .. _l46696c6543617465676f7279-7265616421:
 
@@ -88,7 +88,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; read!
 
 :spadfun:`read!`\: % -> S 
-  \ ``read!(f)``\  extracts a value from file \ ``f``\ . The state of \ ``f``\  is modified so a subsequent call to \ :spadfun:`read!`\  will return the next element.
+  \ :code:`read!(f)`\  extracts a value from file \ :code:`f`\ . The state of \ :code:`f`\  is modified so a subsequent call to \ :spadfun:`read!`\  will return the next element.
 
 .. _l46696c6543617465676f7279-72656f70656e21:
 
@@ -96,7 +96,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; reopen!
 
 :spadfun:`reopen!`\: (%, \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``reopen!(f, mode)``\  returns a file \ ``f``\  reopened for operation in the indicated mode: "input" or "output". \ ``reopen!(f,"input")``\  will reopen the file \ ``f``\  for input.
+  \ :code:`reopen!(f, mode)`\  returns a file \ :code:`f`\  reopened for operation in the indicated mode: "input" or "output". \ :code:`reopen!(f,"input")`\  will reopen the file \ :code:`f`\  for input.
 
 .. _l46696c6543617465676f7279-777269746521:
 
@@ -104,7 +104,7 @@ This category provides an interface to operate on files in the computer\ ``'s``\
    pair: FileCategory; write!
 
 :spadfun:`write!`\: (%, S) -> S 
-  \ ``write!(f, s)``\  puts the value \ ``s``\  into the file \ ``f``\ . The state of \ ``f``\  is modified so subsequent calls to \ ``write!``\  will append one after another.
+  \ :code:`write!(f, s)`\  puts the value \ :code:`s`\  into the file \ :code:`f`\ . The state of \ :code:`f`\  is modified so subsequent calls to \ :code:`write!`\  will append one after another.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

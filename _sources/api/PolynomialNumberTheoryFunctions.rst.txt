@@ -17,7 +17,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; bernoulli
 
 :spadfun:`bernoulli`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``bernoulli(n)``\  returns the \ ``n``\ th Bernoulli polynomial \ ``B[n](x)``\ . Note: Bernoulli polynomials denoted \ ``B(n, x)``\  computed by solving the differential equation \ ``differentiate(B(n, x), x) = n B(n-1, x)``\  where \ ``B(0, x) = 1``\  and initial condition comes from \ ``B(n) = B(n, 0)``\ .
+  \ :code:`bernoulli(n)`\  returns the \ :code:`n`\ th Bernoulli polynomial \ :code:`B[n](x)`\ . Note: Bernoulli polynomials denoted \ :code:`B(n, x)`\  computed by solving the differential equation \ :code:`differentiate(B(n, x), x) = n B(n-1, x)`\  where \ :code:`B(0, x) = 1`\  and initial condition comes from \ :code:`B(n) = B(n, 0)`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-63686562797368657654:
 
@@ -25,7 +25,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; chebyshevT
 
 :spadfun:`chebyshevT`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``chebyshevT(n)``\  returns the \ ``n``\ th Chebyshev polynomial \ ``T[n](x)``\ . Note: Chebyshev polynomials of the first kind, denoted \ ``T[n](x)``\ , computed from the two term recurrence. The generating function \ ``(1-t*x)/(1-2*t*x+t^2) = sum(T[n](x)*t^n, n=0..infinity)``\ .
+  \ :code:`chebyshevT(n)`\  returns the \ :code:`n`\ th Chebyshev polynomial \ :code:`T[n](x)`\ . Note: Chebyshev polynomials of the first kind, denoted \ :code:`T[n](x)`\ , computed from the two term recurrence. The generating function \ :code:`(1-t*x)/(1-2*t*x+t^2) = sum(T[n](x)*t^n, n=0..infinity)`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-63686562797368657655:
 
@@ -33,7 +33,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; chebyshevU
 
 :spadfun:`chebyshevU`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``chebyshevU(n)``\  returns the \ ``n``\ th Chebyshev polynomial \ ``U[n](x)``\ . Note: Chebyshev polynomials of the second kind, denoted \ ``U[n](x)``\ , computed from the two term recurrence. The generating function \ ``1/(1-2*t*x+t^2) = sum(T[n](x)*t^n, n=0..infinity)``\ .
+  \ :code:`chebyshevU(n)`\  returns the \ :code:`n`\ th Chebyshev polynomial \ :code:`U[n](x)`\ . Note: Chebyshev polynomials of the second kind, denoted \ :code:`U[n](x)`\ , computed from the two term recurrence. The generating function \ :code:`1/(1-2*t*x+t^2) = sum(T[n](x)*t^n, n=0..infinity)`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-6379636c6f746f6d6963:
 
@@ -41,7 +41,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; cyclotomic
 
 :spadfun:`cyclotomic`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``cyclotomic(n)``\  returns the \ ``n``\ th cyclotomic polynomial \ ``phi[n](x)``\ . Note: \ ``phi[n](x)``\  is the factor of \ ``x^n - 1``\  whose roots are the primitive \ ``n``\ th roots of unity.
+  \ :code:`cyclotomic(n)`\  returns the \ :code:`n`\ th cyclotomic polynomial \ :code:`phi[n](x)`\ . Note: \ :code:`phi[n](x)`\  is the factor of \ :code:`x^n - 1`\  whose roots are the primitive \ :code:`n`\ th roots of unity.
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-65756c6572:
 
@@ -49,7 +49,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; euler
 
 :spadfun:`euler`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``euler(n)``\  returns the \ ``n``\ th Euler polynomial \ ``E[n](x)``\ . Note: Euler polynomials denoted \ ``E(n, x)``\  are computed by solving the differential equation \ ``differentiate(E(n, x), x) = n E(n-1, x)``\  where \ ``E(0, x) = 1``\  and initial condition comes from \ ``E(n) = 2^n E(n, 1/2)``\ .
+  \ :code:`euler(n)`\  returns the \ :code:`n`\ th Euler polynomial \ :code:`E[n](x)`\ . Note: Euler polynomials denoted \ :code:`E(n, x)`\  are computed by solving the differential equation \ :code:`differentiate(E(n, x), x) = n E(n-1, x)`\  where \ :code:`E(0, x) = 1`\  and initial condition comes from \ :code:`E(n) = 2^n E(n, 1/2)`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-666978656444697669736f72:
 
@@ -57,7 +57,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; fixedDivisor
 
 :spadfun:`fixedDivisor`\: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``fixedDivisor(a)``\  for \ ``a(x)``\  in \ ``Z[x]``\  is the largest integer \ ``f``\  such that \ ``f``\  divides \ ``a(x=k)``\  for all integers \ ``k``\ . Note: fixed divisor of \ ``a``\  is \ ``reduce(gcd, [a(x=k) for k in 0..degree(a)])``\ .
+  \ :code:`fixedDivisor(a)`\  for \ :code:`a(x)`\  in \ :code:`Z[x]`\  is the largest integer \ :code:`f`\  such that \ :code:`f`\  divides \ :code:`a(x=k)`\  for all integers \ :code:`k`\ . Note: fixed divisor of \ :code:`a`\  is \ :code:`reduce(gcd, [a(x=k) for k in 0..degree(a)])`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-6865726d697465:
 
@@ -65,7 +65,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; hermite
 
 :spadfun:`hermite`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``hermite(n)``\  returns the \ ``n``\ th Hermite polynomial \ ``H[n](x)``\ . Note: Hermite polynomials, denoted \ ``H[n](x)``\ , are computed from the two term recurrence. The generating function is: \ ``exp(2*t*x-t^2) = sum(H[n](x)*t^n/n!, n=0..infinity)``\ .
+  \ :code:`hermite(n)`\  returns the \ :code:`n`\ th Hermite polynomial \ :code:`H[n](x)`\ . Note: Hermite polynomials, denoted \ :code:`H[n](x)`\ , are computed from the two term recurrence. The generating function is: \ :code:`exp(2*t*x-t^2) = sum(H[n](x)*t^n/n!, n=0..infinity)`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-6c61677565727265:
 
@@ -73,7 +73,7 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; laguerre
 
 :spadfun:`laguerre`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``laguerre(n)``\  returns the \ ``n``\ th Laguerre polynomial \ ``L[n](x)``\ . Note: Laguerre polynomials, denoted \ ``L[n](x)``\ , are computed from the two term recurrence. The generating function is: \ ``exp(x*t/(t-1))/(1-t) = sum(L[n](x)*t^n/n!, n=0..infinity)``\ .
+  \ :code:`laguerre(n)`\  returns the \ :code:`n`\ th Laguerre polynomial \ :code:`L[n](x)`\ . Note: Laguerre polynomials, denoted \ :code:`L[n](x)`\ , are computed from the two term recurrence. The generating function is: \ :code:`exp(x*t/(t-1))/(1-t) = sum(L[n](x)*t^n/n!, n=0..infinity)`\ .
 
 .. _l506f6c796e6f6d69616c4e756d6265725468656f727946756e6374696f6e73-6c6567656e647265:
 
@@ -81,6 +81,6 @@ This package provides various polynomial number theoretic functions over the int
    pair: PolynomialNumberTheoryFunctions; legendre
 
 :spadfun:`legendre`\: \ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``legendre(n)``\  returns the \ ``n``\ th Legendre polynomial \ ``P[n](x)``\ . Note: Legendre polynomials, denoted \ ``P[n](x)``\ , are computed from the two term recurrence. The generating function is: \ ``1/sqrt(1-2*t*x+t^2) = sum(P[n](x)*t^n, n=0..infinity)``\ .
+  \ :code:`legendre(n)`\  returns the \ :code:`n`\ th Legendre polynomial \ :code:`P[n](x)`\ . Note: Legendre polynomials, denoted \ :code:`P[n](x)`\ , are computed from the two term recurrence. The generating function is: \ :code:`1/sqrt(1-2*t*x+t^2) = sum(P[n](x)*t^n, n=0..infinity)`\ .
 
 

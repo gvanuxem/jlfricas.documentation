@@ -60,27 +60,27 @@
 </dd>
 </dl>
 <span id="l496e66696e6974655475706c65-636f6e737472756374"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">construct</span>: % -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct(t)</span></code> converts an infinite tuple to a stream.</p>
+<dt><span class="spadfun">construct</span>: % -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">construct(t)</span></code> converts an infinite tuple to a stream.</p>
 </dd>
 </dl>
 <span id="l496e66696e6974655475706c65-66696c746572556e74696c"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">filterUntil</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">filterUntil(p,</span> <span class="pre">t)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t</span> <span class="pre">while</span> <span class="pre">not</span> <span class="pre">p(x)]</span></code>.</p>
+<dt><span class="spadfun">filterUntil</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">filterUntil(p,</span> <span class="pre">t)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t</span> <span class="pre">while</span> <span class="pre">not</span> <span class="pre">p(x)]</span></code>.</p>
 </dd>
 </dl>
 <span id="l496e66696e6974655475706c65-66696c7465725768696c65"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">filterWhile</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">filterWhile(p,</span> <span class="pre">t)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t</span> <span class="pre">while</span> <span class="pre">p(x)]</span></code>.</p>
+<dt><span class="spadfun">filterWhile</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">filterWhile(p,</span> <span class="pre">t)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t</span> <span class="pre">while</span> <span class="pre">p(x)]</span></code>.</p>
 </dd>
 </dl>
 <span id="l496e66696e6974655475706c65-6d6170"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">map</span>: (S -&gt; S, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">t)</span></code> replaces the tuple <code class="docutils literal notranslate"><span class="pre">t</span></code> by <code class="docutils literal notranslate"><span class="pre">[f(x)</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t]</span></code>.</p>
+<dt><span class="spadfun">map</span>: (S -&gt; S, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">t)</span></code> replaces the tuple <code class="code docutils literal notranslate"><span class="pre">t</span></code> by <code class="code docutils literal notranslate"><span class="pre">[f(x)</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t]</span></code>.</p>
 </dd>
 </dl>
 <span id="l496e66696e6974655475706c65-73656c656374"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">select</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">select(p,</span> <span class="pre">t)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t</span> <span class="pre">|</span> <span class="pre">p(x)]</span></code>.</p>
+<dt><span class="spadfun">select</span>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">select(p,</span> <span class="pre">t)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">t</span> <span class="pre">|</span> <span class="pre">p(x)]</span></code>.</p>
 </dd>
 </dl>
 <span id="l496e66696e6974655475706c65-73747265616d"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">stream</span>: (S -&gt; S, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stream(f,</span> <span class="pre">s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[s,</span> <span class="pre">f(s),</span> <span class="pre">f(f(s)),</span> <span class="pre">...]</span></code>.</p>
+<dt><span class="spadfun">stream</span>: (S -&gt; S, S) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">stream(f,</span> <span class="pre">s)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">[s,</span> <span class="pre">f(s),</span> <span class="pre">f(f(s)),</span> <span class="pre">...]</span></code>.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
@@ -139,7 +139,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

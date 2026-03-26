@@ -22,7 +22,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; =
 
 :spadfun:`=`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  returns \ ``true``\  (boolean \ ``true``\ ) if intuitionisticLogic values are the same. Translates from Intuitionistic Logic to Boolean Logic
+  returns \ :code:`true`\  (boolean \ :code:`true`\ ) if intuitionisticLogic values are the same. Translates from Intuitionistic Logic to Boolean Logic
 
 .. _l4c6174746963654a6f696e4f664d65657473-5c2f:
 
@@ -45,7 +45,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; atom?
 
 :spadfun:`atom?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  returns \ ``true``\  if this is an atom, that is a leaf node otherwise return \ ``false``\  if this is a compound term
+  returns \ :code:`true`\  if this is an atom, that is a leaf node otherwise return \ :code:`false`\  if this is a compound term
 
 .. _l4c6174746963654a6f696e4f664d65657473-636f65726365:
 
@@ -72,7 +72,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; deductions
 
 :spadfun:`deductions`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  % 
-  assumes \ ``ln``\  contains a list of factors which must be \ ``true``\  for the whole to be \ ``true``\  (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be \ ``true``\  by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.
+  assumes \ :code:`ln`\  contains a list of factors which must be \ :code:`true`\  for the whole to be \ :code:`true`\  (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be \ :code:`true`\  by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.
 
 .. _l4c6174746963654a6f696e4f664d65657473-656d7074793f:
 
@@ -80,7 +80,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; empty?
 
 :spadfun:`empty?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``true``\  if empty
+  \ :code:`true`\  if empty
 
 .. _l4c6174746963654a6f696e4f664d65657473-656d7074794c617474696365:
 
@@ -96,7 +96,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; factor
 
 :spadfun:`factor`\: % -> \ :ref:`List <l4c697374>`\  % 
-  splits \ ``n``\  into a list of factors which must be \ ``true``\  for the whole to be \ ``true``\ . This assumes that the top level is already a set of factors separated by \ ``/\``\  otherwise the result will just be a list with one entry: \ ``'n'``\ . This is used when converting ILogic to types by using the Curry-Howard isomorphism.
+  splits \ :code:`n`\  into a list of factors which must be \ :code:`true`\  for the whole to be \ :code:`true`\ . This assumes that the top level is already a set of factors separated by \ :code:`/\`\  otherwise the result will just be a list with one entry: \ :code:`'n'`\ . This is used when converting ILogic to types by using the Curry-Howard isomorphism.
 
 .. _l4c6174746963654a6f696e4f664d65657473-6765744368696c6472656e:
 
@@ -112,7 +112,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; join
 
 :spadfun:`join`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``join of``\  set of elements
+  \ :code:`join of`\  set of elements
 
 .. _l4c6174746963654a6f696e4f664d65657473-6c61746578:
 
@@ -133,7 +133,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; logicF
 
 :spadfun:`logicF`\: () -> % 
-  construct \ ``false``\  (contradiction): a logical constant.
+  construct \ :code:`false`\  (contradiction): a logical constant.
 
 .. _l4c6174746963654a6f696e4f664d65657473-6c6f67696354:
 
@@ -149,7 +149,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; meet
 
 :spadfun:`meet`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ ``meet of``\  set of elements
+  \ :code:`meet of`\  set of elements
 
 .. _l4c6174746963654a6f696e4f664d65657473-6f7054797065:
 
@@ -157,7 +157,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; opType
 
 :spadfun:`opType`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  if this is a compound op then opType returns the type of that op: "IMPLY"::Symbol =implies "AND"::Symbol=/\ "OR"::Symbol=\ ``\/``\  "NOT"::Symbol=~ "OTHER"::Symbol=not compound op
+  if this is a compound op then opType returns the type of that op: "IMPLY"::Symbol =implies "AND"::Symbol=/\ "OR"::Symbol=\ :code:`\/`\  "NOT"::Symbol=~ "OTHER"::Symbol=not compound op
 
 .. _l4c6174746963654a6f696e4f664d65657473-7265647578:
 
@@ -194,7 +194,7 @@ Infinite Lattice which is distributive. Representation held as join of meets.
    pair: LatticeJoinOfMeets; value
 
 :spadfun:`value`\: % -> \ :ref:`Symbol <l53796d626f6c>`\  
-  returns: "T"::Symbol = \ ``T``\  "F"::Symbol = \ ``_|_``\  "E"::Symbol = error "P"::Symbol = proposition "C"::Symbol = compound Constructs lambda term and bind any variables with the name provided
+  returns: "T"::Symbol = \ :code:`T`\  "F"::Symbol = \ :code:`_|_`\  "E"::Symbol = error "P"::Symbol = proposition "C"::Symbol = compound Constructs lambda term and bind any variables with the name provided
 
 .. _l4c6174746963654a6f696e4f664d65657473-7661726961626c65:
 

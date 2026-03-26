@@ -10,7 +10,7 @@ UnivariateSkewPolynomialCategory R
 * R: \ :ref:`Ring <l52696e67>`\ 
 
 
-This is the category of univariate skew polynomials over an Ore coefficient ring. The multiplication is given by \ ``x a = \sigma(a) x + \delta a``\ . This category is an evolution of the types MonogenicLinearOperator, OppositeMonogenicLinearOperator, and NonCommutativeOperatorDivision developed by Jean Della Dora and Stephen \ ``M``\ . Watt.
+This is the category of univariate skew polynomials over an Ore coefficient ring. The multiplication is given by \ :code:`x a = \sigma(a) x + \delta a`\ . This category is an evolution of the types MonogenicLinearOperator, OppositeMonogenicLinearOperator, and NonCommutativeOperatorDivision developed by Jean Della Dora and Stephen \ :code:`M`\ . Watt.
 
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-30:
@@ -114,7 +114,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; apply
 
 :spadfun:`apply`\: (%, R, R) -> R 
-  \ ``apply(p, c, m)``\  returns \ ``p(m)``\  where the action is given by \ ``x m = c sigma(m) + delta(m)``\ .
+  \ :code:`apply(p, c, m)`\  returns \ :code:`p(m)`\  where the action is given by \ :code:`x m = c sigma(m) + delta(m)`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6173736f6369617465733f:
 
@@ -218,7 +218,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; exquo
 
 :spadfun:`exquo`\: (%, R) -> Union(%, failed) if R has \ :ref:`EntireRing <l456e7469726552696e67>`\ 
-  \ ``exquo(l, a)``\  returns the exact quotient of \ ``l``\  by a, returning \ ``"failed"``\  if this is not possible.
+  \ :code:`exquo(l, a)`\  returns the exact quotient of \ :code:`l`\  by a, returning \ :code:`"failed"`\  if this is not possible.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-666d656367:
 
@@ -266,7 +266,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftDivide
 
 :spadfun:`leftDivide`\: (%, %) -> Record(quotient: %, remainder: %) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftDivide(a, b)``\  returns the pair \ ``[q, r]``\  such that \ ``a = b*q + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . This process is called ``left division\ ``''``\ .
+  \ :code:`leftDivide(a, b)`\  returns the pair \ :code:`[q, r]`\  such that \ :code:`a = b*q + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . This process is called ``left division\ :code:`''`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c656674457861637451756f7469656e74:
 
@@ -274,7 +274,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftExactQuotient
 
 :spadfun:`leftExactQuotient`\: (%, %) -> Union(%, failed) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftExactQuotient(a, b)``\  computes the value \ ``q``\ , if it exists, such that \ ``a = b*q``\ .
+  \ :code:`leftExactQuotient(a, b)`\  computes the value \ :code:`q`\ , if it exists, such that \ :code:`a = b*q`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c656674457874656e646564476364:
 
@@ -282,7 +282,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftExtendedGcd
 
 :spadfun:`leftExtendedGcd`\: (%, %) -> Record(coef1: %, coef2: %, generator: %) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftExtendedGcd(a, b)``\  returns \ ``[c, d, g]``\  such that \ ``g = a * c + b * d = leftGcd(a, b)``\ .
+  \ :code:`leftExtendedGcd(a, b)`\  returns \ :code:`[c, d, g]`\  such that \ :code:`g = a * c + b * d = leftGcd(a, b)`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c656674476364:
 
@@ -290,7 +290,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftGcd
 
 :spadfun:`leftGcd`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftGcd(a, b)``\  computes the value \ ``g``\  of highest degree such that \ ``a = g*aa``\  \ ``b = g*bb``\  for some values \ ``aa``\  and \ ``bb``\ . The value \ ``g``\  is computed using left-division.
+  \ :code:`leftGcd(a, b)`\  computes the value \ :code:`g`\  of highest degree such that \ :code:`a = g*aa`\  \ :code:`b = g*bb`\  for some values \ :code:`aa`\  and \ :code:`bb`\ . The value \ :code:`g`\  is computed using left-division.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c6566744c636d:
 
@@ -298,7 +298,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftLcm
 
 :spadfun:`leftLcm`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftLcm(a, b)``\  computes the value \ ``m``\  of lowest degree such that \ ``m = aa*a = bb*b``\  for some values \ ``aa``\  and \ ``bb``\ . The value \ ``m``\  is computed using right-division.
+  \ :code:`leftLcm(a, b)`\  computes the value \ :code:`m`\  of lowest degree such that \ :code:`m = aa*a = bb*b`\  for some values \ :code:`aa`\  and \ :code:`bb`\ . The value \ :code:`m`\  is computed using right-division.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c656674506f776572:
 
@@ -315,7 +315,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftQuotient
 
 :spadfun:`leftQuotient`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftQuotient(a, b)``\  computes the pair \ ``[q, r]``\  such that \ ``a = b*q + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . The value \ ``q``\  is returned.
+  \ :code:`leftQuotient(a, b)`\  computes the pair \ :code:`[q, r]`\  such that \ :code:`a = b*q + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . The value \ :code:`q`\  is returned.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c6566745265636970:
 
@@ -328,7 +328,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; leftRemainder
 
 :spadfun:`leftRemainder`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``leftRemainder(a, b)``\  computes the pair \ ``[q, r]``\  such that \ ``a = b*q + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . The value \ ``r``\  is returned.
+  \ :code:`leftRemainder(a, b)`\  computes the pair \ :code:`[q, r]`\  such that \ :code:`a = b*q + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . The value \ :code:`r`\  is returned.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6c696e656172457874656e64:
 
@@ -366,7 +366,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; monicLeftDivide
 
 :spadfun:`monicLeftDivide`\: (%, %) -> Record(quotient: %, remainder: %) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``monicLeftDivide(a, b)``\  returns the pair \ ``[q, r]``\  such that \ ``a = b*q + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . \ ``b``\  must be monic. This process is called ``left division\ ``''``\ .
+  \ :code:`monicLeftDivide(a, b)`\  returns the pair \ :code:`[q, r]`\  such that \ :code:`a = b*q + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . \ :code:`b`\  must be monic. This process is called ``left division\ :code:`''`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e69635269676874446976696465:
 
@@ -374,7 +374,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; monicRightDivide
 
 :spadfun:`monicRightDivide`\: (%, %) -> Record(quotient: %, remainder: %) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``monicRightDivide(a, b)``\  returns the pair \ ``[q, r]``\  such that \ ``a = q*b + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . \ ``b``\  must be monic. This process is called ``right division\ ``''``\ .
+  \ :code:`monicRightDivide(a, b)`\  returns the pair \ :code:`[q, r]`\  such that \ :code:`a = q*b + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . \ :code:`b`\  must be monic. This process is called ``right division\ :code:`''`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c3f:
 
@@ -493,7 +493,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; right_ext_ext_GCD
 
 :spadfun:`right_ext_ext_GCD`\: (%, %) -> Record(generator: %, coef1: %, coef2: %, coefu: %, coefv: %) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``right_ext_ext_GCD(a, b)``\  returns \ ``g, c, d, u, v``\  such that \ ``g = c * a + d * b = rightGcd(a, b)``\ , \ ``u * a = - v * b = leftLcm(a, b)``\  and matrix \ ``matrix([[c, d], [u, v]])``\  is invertible.
+  \ :code:`right_ext_ext_GCD(a, b)`\  returns \ :code:`g, c, d, u, v`\  such that \ :code:`g = c * a + d * b = rightGcd(a, b)`\ , \ :code:`u * a = - v * b = leftLcm(a, b)`\  and matrix \ :code:`matrix([[c, d], [u, v]])`\  is invertible.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-7269676874446976696465:
 
@@ -501,7 +501,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightDivide
 
 :spadfun:`rightDivide`\: (%, %) -> Record(quotient: %, remainder: %) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightDivide(a, b)``\  returns the pair \ ``[q, r]``\  such that \ ``a = q*b + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . This process is called ``right division\ ``''``\ .
+  \ :code:`rightDivide(a, b)`\  returns the pair \ :code:`[q, r]`\  such that \ :code:`a = q*b + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . This process is called ``right division\ :code:`''`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-7269676874457861637451756f7469656e74:
 
@@ -509,7 +509,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightExactQuotient
 
 :spadfun:`rightExactQuotient`\: (%, %) -> Union(%, failed) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightExactQuotient(a, b)``\  computes the value \ ``q``\ , if it exists such that \ ``a = q*b``\ .
+  \ :code:`rightExactQuotient(a, b)`\  computes the value \ :code:`q`\ , if it exists such that \ :code:`a = q*b`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-7269676874457874656e646564476364:
 
@@ -517,7 +517,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightExtendedGcd
 
 :spadfun:`rightExtendedGcd`\: (%, %) -> Record(coef1: %, coef2: %, generator: %) if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightExtendedGcd(a, b)``\  returns \ ``[c, d, g]``\  such that \ ``g = c * a + d * b = rightGcd(a, b)``\ .
+  \ :code:`rightExtendedGcd(a, b)`\  returns \ :code:`[c, d, g]`\  such that \ :code:`g = c * a + d * b = rightGcd(a, b)`\ .
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-7269676874476364:
 
@@ -525,7 +525,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightGcd
 
 :spadfun:`rightGcd`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightGcd(a, b)``\  computes the value \ ``g``\  of highest degree such that \ ``a = aa*g``\  \ ``b = bb*g``\  for some values \ ``aa``\  and \ ``bb``\ . The value \ ``g``\  is computed using right-division.
+  \ :code:`rightGcd(a, b)`\  computes the value \ :code:`g`\  of highest degree such that \ :code:`a = aa*g`\  \ :code:`b = bb*g`\  for some values \ :code:`aa`\  and \ :code:`bb`\ . The value \ :code:`g`\  is computed using right-division.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-72696768744c636d:
 
@@ -533,7 +533,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightLcm
 
 :spadfun:`rightLcm`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightLcm(a, b)``\  computes the value \ ``m``\  of lowest degree such that \ ``m = a*aa = b*bb``\  for some values \ ``aa``\  and \ ``bb``\ . The value \ ``m``\  is computed using left-division.
+  \ :code:`rightLcm(a, b)`\  computes the value \ :code:`m`\  of lowest degree such that \ :code:`m = a*aa = b*bb`\  for some values \ :code:`aa`\  and \ :code:`bb`\ . The value \ :code:`m`\  is computed using left-division.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-7269676874506f776572:
 
@@ -550,7 +550,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightQuotient
 
 :spadfun:`rightQuotient`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightQuotient(a, b)``\  computes the pair \ ``[q, r]``\  such that \ ``a = q*b + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . The value \ ``q``\  is returned.
+  \ :code:`rightQuotient(a, b)`\  computes the pair \ :code:`[q, r]`\  such that \ :code:`a = q*b + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . The value \ :code:`q`\  is returned.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-72696768745265636970:
 
@@ -563,7 +563,7 @@ This is the category of univariate skew polynomials over an Ore coefficient ring
    pair: UnivariateSkewPolynomialCategory; rightRemainder
 
 :spadfun:`rightRemainder`\: (%, %) -> % if R has \ :ref:`Field <l4669656c64>`\ 
-  \ ``rightRemainder(a, b)``\  computes the pair \ ``[q, r]``\  such that \ ``a = q*b + r``\  and the degree of \ ``r``\  is less than the degree of \ ``b``\ . The value \ ``r``\  is returned.
+  \ :code:`rightRemainder(a, b)`\  computes the pair \ :code:`[q, r]`\  such that \ :code:`a = q*b + r`\  and the degree of \ :code:`r`\  is less than the degree of \ :code:`b`\ . The value \ :code:`r`\  is returned.
 
 .. _l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279-73616d706c65:
 

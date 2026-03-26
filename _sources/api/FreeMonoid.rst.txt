@@ -10,7 +10,7 @@ FreeMonoid S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-The free monoid on a set \ ``S``\  is the monoid of finite products of the form \ ``reduce(*, [si ^ ni])``\  where the \ ``si``\ \ ``'s``\  are in \ ``S``\ , and the \ ``ni``\ \ ``'s``\  are nonnegative integers. The multiplication is not commutative. When \ ``S``\  is an OrderedSet, then FreeMonoid(\ ``S``\ ) has order: for two elements \ ``x``\  and \ ``y``\  the relation \ ``x < y``\  holds if either \ ``length(x) < length(y)``\  holds or if these lengths are equal and if \ ``x``\  is smaller than \ ``y``\  with respect to the lexicographical ordering induced by \ ``S``\ .
+The free monoid on a set \ :code:`S`\  is the monoid of finite products of the form \ :code:`reduce(*, [si ^ ni])`\  where the \ :code:`si`\ \ :code:`'s`\  are in \ :code:`S`\ , and the \ :code:`ni`\ \ :code:`'s`\  are nonnegative integers. The multiplication is not commutative. When \ :code:`S`\  is an OrderedSet, then FreeMonoid(\ :code:`S`\ ) has order: for two elements \ :code:`x`\  and \ :code:`y`\  the relation \ :code:`x < y`\  holds if either \ :code:`length(x) < length(y)`\  holds or if these lengths are equal and if \ :code:`x`\  is smaller than \ :code:`y`\  with respect to the lexicographical ordering induced by \ :code:`S`\ .
 
 
 .. _l467265654d6f6e6f6964-31:
@@ -28,14 +28,14 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; *
 
 :spadfun:`\*`\: (%, S) -> % 
-  \ ``x * s``\  returns the product of \ ``x``\  by \ ``s``\  on the right.
+  \ :code:`x * s`\  returns the product of \ :code:`x`\  by \ :code:`s`\  on the right.
 
 
 .. index::
    pair: FreeMonoid; *
 
 :spadfun:`\*`\: (S, %) -> % 
-  \ ``s * x``\  returns the product of \ ``x``\  by \ ``s``\  on the left.
+  \ :code:`s * x`\  returns the product of \ :code:`x`\  by \ :code:`s`\  on the left.
 
 .. _l467265654d6f6e6f6964-3c3d:
 
@@ -76,7 +76,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; ^
 
 :spadfun:`^`\: (S, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``s ^ n``\  returns the product of \ ``s``\  by itself \ ``n``\  times.
+  \ :code:`s ^ n`\  returns the product of \ :code:`s`\  by itself \ :code:`n`\  times.
 
 .. _l467265654d6f6e6f6964-7e3d:
 
@@ -98,7 +98,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; divide
 
 :spadfun:`divide`\: (%, %) -> Union(Record(lm: %, rm: %), failed) 
-  \ ``divide(x, y)``\  returns the left and right exact quotients of \ ``x``\  by \ ``y``\ , i.e. \ ``[l, r]``\  such that \ ``x = l * y * r``\ , "failed" if \ ``x``\  is not of the form \ ``l * y * r``\ .
+  \ :code:`divide(x, y)`\  returns the left and right exact quotients of \ :code:`x`\  by \ :code:`y`\ , i.e. \ :code:`[l, r]`\  such that \ :code:`x = l * y * r`\ , "failed" if \ :code:`x`\  is not of the form \ :code:`l * y * r`\ .
 
 .. _l467265654d6f6e6f6964-666163746f7273:
 
@@ -106,7 +106,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; factors
 
 :spadfun:`factors`\: % -> \ :ref:`List <l4c697374>`\  Record(gen: S, exp: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``factors(a1\^e1, ..., an\^en)``\  returns \ ``[[a1, e1], ..., [an, en]]``\ .
+  \ :code:`factors(a1\^e1, ..., an\^en)`\  returns \ :code:`[[a1, e1], ..., [an, en]]`\ .
 
 .. _l467265654d6f6e6f6964-6669727374:
 
@@ -114,7 +114,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; first
 
 :spadfun:`first`\: % -> S 
-  \ ``first(x)``\  returns the first letter of \ ``x``\ .
+  \ :code:`first(x)`\  returns the first letter of \ :code:`x`\ .
 
 .. _l467265654d6f6e6f6964-68636c66:
 
@@ -122,7 +122,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; hclf
 
 :spadfun:`hclf`\: (%, %) -> % 
-  \ ``hclf(x, y)``\  returns the highest common left factor of \ ``x``\  and \ ``y``\ , i.e. the largest \ ``d``\  such that \ ``x = d a``\  and \ ``y = d b``\ .
+  \ :code:`hclf(x, y)`\  returns the highest common left factor of \ :code:`x`\  and \ :code:`y`\ , i.e. the largest \ :code:`d`\  such that \ :code:`x = d a`\  and \ :code:`y = d b`\ .
 
 .. _l467265654d6f6e6f6964-68637266:
 
@@ -130,7 +130,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; hcrf
 
 :spadfun:`hcrf`\: (%, %) -> % 
-  \ ``hcrf(x, y)``\  returns the highest common right factor of \ ``x``\  and \ ``y``\ , i.e. the largest \ ``d``\  such that \ ``x = a d``\  and \ ``y = b d``\ .
+  \ :code:`hcrf(x, y)`\  returns the highest common right factor of \ :code:`x`\  and \ :code:`y`\ , i.e. the largest \ :code:`d`\  such that \ :code:`x = a d`\  and \ :code:`y = b d`\ .
 
 .. _l467265654d6f6e6f6964-6c61746578:
 
@@ -157,7 +157,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; length
 
 :spadfun:`length`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``length(x)``\  returns the length of \ ``x``\ .
+  \ :code:`length(x)`\  returns the length of \ :code:`x`\ .
 
 .. _l467265654d6f6e6f6964-6c657869636f:
 
@@ -165,7 +165,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; lexico
 
 :spadfun:`lexico`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
-  \ ``lexico(x, y)``\  returns \ ``true``\  iff \ ``x``\  is smaller than \ ``y``\  with respect to the pure lexicographical ordering induced by \ ``S``\ .
+  \ :code:`lexico(x, y)`\  returns \ :code:`true`\  iff \ :code:`x`\  is smaller than \ :code:`y`\  with respect to the pure lexicographical ordering induced by \ :code:`S`\ .
 
 .. _l467265654d6f6e6f6964-6c71756f:
 
@@ -173,14 +173,14 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; lquo
 
 :spadfun:`lquo`\: (%, %) -> Union(%, failed) 
-  \ ``lquo(x, y)``\  returns the exact left quotient of \ ``x``\  by \ ``y``\  i.e. \ ``q``\  such that \ ``x = y * q``\ , "failed" if \ ``x``\  is not of the form \ ``y * q``\ .
+  \ :code:`lquo(x, y)`\  returns the exact left quotient of \ :code:`x`\  by \ :code:`y`\  i.e. \ :code:`q`\  such that \ :code:`x = y * q`\ , "failed" if \ :code:`x`\  is not of the form \ :code:`y * q`\ .
 
 
 .. index::
    pair: FreeMonoid; lquo
 
 :spadfun:`lquo`\: (%, S) -> Union(%, failed) 
-  \ ``lquo(x, s)``\  returns the exact left quotient of \ ``x``\  by \ ``s``\ .
+  \ :code:`lquo(x, s)`\  returns the exact left quotient of \ :code:`x`\  by \ :code:`s`\ .
 
 .. _l467265654d6f6e6f6964-6d61704578706f6e:
 
@@ -188,7 +188,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; mapExpon
 
 :spadfun:`mapExpon`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
-  \ ``mapExpon(f, a1\^e1 ... an\^en)``\  returns \ ``a1\^f(e1) ... an\^f(en)``\ .
+  \ :code:`mapExpon(f, a1\^e1 ... an\^en)`\  returns \ :code:`a1\^f(e1) ... an\^f(en)`\ .
 
 .. _l467265654d6f6e6f6964-6d617047656e:
 
@@ -196,7 +196,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; mapGen
 
 :spadfun:`mapGen`\: (S -> S, %) -> % 
-  \ ``mapGen(f, a1\^e1 ... an\^en)``\  returns \ ``f(a1)\^e1 ... f(an)\^en``\ .
+  \ :code:`mapGen(f, a1\^e1 ... an\^en)`\  returns \ :code:`f(a1)\^e1 ... f(an)\^en`\ .
 
 .. _l467265654d6f6e6f6964-6d6178:
 
@@ -214,7 +214,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; mirror
 
 :spadfun:`mirror`\: % -> % 
-  \ ``mirror(x)``\  returns the reversed word of \ ``x``\ .
+  \ :code:`mirror(x)`\  returns the reversed word of \ :code:`x`\ .
 
 .. _l467265654d6f6e6f6964-6e74684578706f6e:
 
@@ -222,7 +222,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; nthExpon
 
 :spadfun:`nthExpon`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``nthExpon(x, n)``\  returns the exponent of the n^th monomial of \ ``x``\ .
+  \ :code:`nthExpon(x, n)`\  returns the exponent of the n^th monomial of \ :code:`x`\ .
 
 .. _l467265654d6f6e6f6964-6e7468466163746f72:
 
@@ -230,7 +230,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; nthFactor
 
 :spadfun:`nthFactor`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> S 
-  \ ``nthFactor(x, n)``\  returns the factor of the n^th monomial of \ ``x``\ .
+  \ :code:`nthFactor(x, n)`\  returns the factor of the n^th monomial of \ :code:`x`\ .
 
 .. _l467265654d6f6e6f6964-6f6e653f:
 
@@ -243,7 +243,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; overlap
 
 :spadfun:`overlap`\: (%, %) -> Record(lm: %, mm: %, rm: %) 
-  \ ``overlap(x, y)``\  returns \ ``[l, m, r]``\  such that \ ``x = l * m``\ , \ ``y = m * r``\  and \ ``l``\  and \ ``r``\  have no overlap, i.e. \ ``overlap(l, r) = [l, 1, r]``\ .
+  \ :code:`overlap(x, y)`\  returns \ :code:`[l, m, r]`\  such that \ :code:`x = l * m`\ , \ :code:`y = m * r`\  and \ :code:`l`\  and \ :code:`r`\  have no overlap, i.e. \ :code:`overlap(l, r) = [l, 1, r]`\ .
 
 .. _l467265654d6f6e6f6964-7265636970:
 
@@ -256,7 +256,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; rest
 
 :spadfun:`rest`\: % -> % 
-  \ ``rest(x)``\  returns \ ``x``\  except the first letter.
+  \ :code:`rest(x)`\  returns \ :code:`x`\  except the first letter.
 
 .. _l467265654d6f6e6f6964-72657472616374:
 
@@ -288,14 +288,14 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; rquo
 
 :spadfun:`rquo`\: (%, %) -> Union(%, failed) 
-  \ ``rquo(x, y)``\  returns the exact right quotient of \ ``x``\  by \ ``y``\  i.e. \ ``q``\  such that \ ``x = q * y``\ , "failed" if \ ``x``\  is not of the form \ ``q * y``\ .
+  \ :code:`rquo(x, y)`\  returns the exact right quotient of \ :code:`x`\  by \ :code:`y`\  i.e. \ :code:`q`\  such that \ :code:`x = q * y`\ , "failed" if \ :code:`x`\  is not of the form \ :code:`q * y`\ .
 
 
 .. index::
    pair: FreeMonoid; rquo
 
 :spadfun:`rquo`\: (%, S) -> Union(%, failed) 
-  \ ``rquo(x, s)``\  returns the exact right quotient of \ ``x``\  by \ ``s``\ .
+  \ :code:`rquo(x, s)`\  returns the exact right quotient of \ :code:`x`\  by \ :code:`s`\ .
 
 .. _l467265654d6f6e6f6964-73616d706c65:
 
@@ -308,7 +308,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; size
 
 :spadfun:`size`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``size(x)``\  returns the number of monomials in \ ``x``\ .
+  \ :code:`size(x)`\  returns the number of monomials in \ :code:`x`\ .
 
 .. _l467265654d6f6e6f6964-736d616c6c65723f:
 
@@ -321,7 +321,7 @@ The free monoid on a set \ ``S``\  is the monoid of finite products of the form 
    pair: FreeMonoid; varList
 
 :spadfun:`varList`\: % -> \ :ref:`List <l4c697374>`\  S 
-  \ ``varList(x)``\  returns the list of variables of \ ``x``\ .
+  \ :code:`varList(x)`\  returns the list of variables of \ :code:`x`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

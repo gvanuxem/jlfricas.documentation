@@ -35,7 +35,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; *
 
 :spadfun:`\*`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``p * q``\  is the product of \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
+  \ :code:`p * q`\  is the product of \ :code:`p`\  with a rational number \ :code:`q`\  (Fraction(Integer))
 
 
 \ :ref:`\* <l52696768744d6f64756c65-2a>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`LinearlyExplicitOver <l4c696e6561726c794578706c696369744f766572>`\  \ :ref:`Integer <l496e7465676572>`\ 
@@ -64,7 +64,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; *
 
 :spadfun:`\*`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``q * p``\  is the product of \ ``p``\  with a rational \ ``q``\  (Fraction(Integer))
+  \ :code:`q * p`\  is the product of \ :code:`p`\  with a rational \ :code:`q`\  (Fraction(Integer))
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -96,14 +96,14 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; +
 
 :spadfun:`+`\: (%, \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``p + q``\  is the sum of a \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
+  \ :code:`p + q`\  is the sum of a \ :code:`p`\  with a rational number \ :code:`q`\  (Fraction(Integer))
 
 
 .. index::
    pair: InnerNMPolynomial; +
 
 :spadfun:`+`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ ``q + p``\  is the sum of a \ ``p``\  with a rational number \ ``q``\  (Fraction(Integer))
+  \ :code:`q + p`\  is the sum of a \ :code:`p`\  with a rational number \ :code:`q`\  (Fraction(Integer))
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-2d:
 
@@ -192,7 +192,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; coefficients
 
 :spadfun:`coefficients`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  R 
-  \ ``coefficients(p)``\  returns a Julia vector of coefficients of \ ``p``\ .
+  \ :code:`coefficients(p)`\  returns a Julia vector of coefficients of \ :code:`p`\ .
 
 
 \ :ref:`coefficients <l467265654d6f64756c6543617465676f7279-636f656666696369656e7473>`\ \: % -> \ :ref:`List <l4c697374>`\  R 
@@ -243,7 +243,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; constant?
 
 :spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``constant?(p)``\  checks whether or not \ ``p``\  is a constant polynomial.
+  \ :code:`constant?(p)`\  checks whether or not \ :code:`p`\  is a constant polynomial.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-636f6e7374616e74436f656666696369656e74:
 
@@ -251,7 +251,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; constantCoefficient
 
 :spadfun:`constantCoefficient`\: % -> R 
-  \ ``constantCoefficient(p)``\  returns the constant of \ ``p``\ .
+  \ :code:`constantCoefficient(p)`\  returns the constant of \ :code:`p`\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-636f6e737472756374:
 
@@ -320,7 +320,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; degree
 
 :spadfun:`degree`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``degree(p,i)``\  returns the degree of the \ ``i``\ -th variable.
+  \ :code:`degree(p,i)`\  returns the degree of the \ :code:`i`\ -th variable.
 
 
 \ :ref:`degree <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-646567726565>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
@@ -397,7 +397,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; exactDivide
 
 :spadfun:`exactDivide`\: (%, %) -> % 
-  \ ``exactDivide(p,q)``\  divides \ ``p``\  by \ ``q``\  if the division is exact.
+  \ :code:`exactDivide(p,q)`\  divides \ :code:`p`\  by \ :code:`q`\  if the division is exact.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-657871756f:
 
@@ -418,7 +418,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; factor
 
 :spadfun:`factor`\: % -> \ :ref:`NMFactored <l4e4d466163746f726564>`\  % 
-  \ ``factor(p)``\  returns the factorization of \ ``p``\ .
+  \ :code:`factor(p)`\  returns the factorization of \ :code:`p`\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-666163746f72506f6c796e6f6d69616c:
 
@@ -475,7 +475,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; internalOrdering
 
 :spadfun:`internalOrdering`\: () -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``internalOrdering()``\  returns the internal ordering used by Nemo. It is determined at instantiation time.
+  \ :code:`internalOrdering()`\  returns the internal ordering used by Nemo. It is determined at instantiation time.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-697345787074:
 
@@ -652,7 +652,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; length
 
 :spadfun:`length`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``length(p)``\  returns the number of terms of \ ``p``\ .
+  \ :code:`length(p)`\  returns the number of terms of \ :code:`p`\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6c696e656172457874656e64:
 
@@ -703,7 +703,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; monomial?
 
 :spadfun:`monomial?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomial?(p)``\  checks whether or not \ ``p``\  is a monomial.
+  \ :code:`monomial?(p)`\  checks whether or not \ :code:`p`\  is a monomial.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6d6f6e6f6d69616c:
 
@@ -724,7 +724,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; monomialRecursive?
 
 :spadfun:`monomialRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomialRecursive?(p)``\  checks whether or not \ ``p``\  is monomial recursively (all scalar types).
+  \ :code:`monomialRecursive?(p)`\  checks whether or not \ :code:`p`\  is monomial recursively (all scalar types).
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6d6f6e6f6d69616c73:
 
@@ -732,7 +732,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; monomials
 
 :spadfun:`monomials`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  % 
-  \ ``monomials(p)``\  returns the list of non-zero monomials of \ ``p``\  including its coefficients.
+  \ :code:`monomials(p)`\  returns the list of non-zero monomials of \ :code:`p`\  including its coefficients.
 
 
 \ :ref:`monomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
@@ -758,7 +758,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; nemoPPrint
 
 :spadfun:`nemoPPrint`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nemoPPrint(bool)``\  set the output mode. If set to \ ``false``\  (default), use the FriCAS output mode if possible. Otherwise use the Nemo one.
+  \ :code:`nemoPPrint(bool)`\  set the output mode. If set to \ :code:`false`\  (default), use the FriCAS output mode if possible. Otherwise use the Nemo one.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-6e6f7468696e673f:
 
@@ -810,7 +810,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; primitiveMonomials
 
 :spadfun:`primitiveMonomials`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  % 
-  \ ``primitiveMonomials(p)``\  returns the list of non-zero primitive monomials of \ ``p``\  i.e. not including its coefficients.
+  \ :code:`primitiveMonomials(p)`\  returns the list of non-zero primitive monomials of \ :code:`p`\  i.e. not including its coefficients.
 
 
 \ :ref:`primitiveMonomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7072696d69746976654d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
@@ -926,7 +926,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; square?
 
 :spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``square?(p)``\  checks whether or not \ ``p``\  is a perfect square.
+  \ :code:`square?(p)`\  checks whether or not \ :code:`p`\  is a perfect square.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-73717561726546726565:
 
@@ -964,7 +964,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; term?
 
 :spadfun:`term?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``term?(p)``\  checks whether or not \ ``p``\  is a one term polynomial.
+  \ :code:`term?(p)`\  checks whether or not \ :code:`p`\  is a one term polynomial.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-7465726d5265637572736976653f:
 
@@ -972,7 +972,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; termRecursive?
 
 :spadfun:`termRecursive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``termRecursive?(p)``\  checks whether or not \ ``p``\  as one term polynomial recursively on all scalar types.
+  \ :code:`termRecursive?(p)`\  checks whether or not \ :code:`p`\  as one term polynomial recursively on all scalar types.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-746f74616c446567726565:
 
@@ -994,7 +994,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; trailingCoefficient
 
 :spadfun:`trailingCoefficient`\: % -> R 
-  \ ``trailingCoefficient(p)``\  returns the trailing coefficient of \ ``p``\ .
+  \ :code:`trailingCoefficient(p)`\  returns the trailing coefficient of \ :code:`p`\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-756e69743f:
 
@@ -1017,7 +1017,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; univariate?
 
 :spadfun:`univariate?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``univariate?(p)``\  checks whether or not \ ``p``\  is a univariate polynomial.
+  \ :code:`univariate?(p)`\  checks whether or not \ :code:`p`\  is a univariate polynomial.
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-756e6976617269617465:
 
@@ -1039,7 +1039,7 @@ This type is a basic representation of generic sparse distributed multivariable 
    pair: InnerNMPolynomial; vectorOfTerms
 
 :spadfun:`vectorOfTerms`\: % -> \ :ref:`JLVector <l4a4c566563746f72>`\  % 
-  \ ``vectorOfTerms(p)``\  returns the Julia vector whose elements are terms of \ ``p``\ .
+  \ :code:`vectorOfTerms(p)`\  returns the Julia vector whose elements are terms of \ :code:`p`\ .
 
 .. _l496e6e65724e4d506f6c796e6f6d69616c-7a65726f3f:
 

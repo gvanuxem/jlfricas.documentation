@@ -16,7 +16,7 @@ FiniteLinearAggregateFunctions2(S, A, R, B)
 * B: Join(\ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  R, \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ )
 
 
-\ ``FiniteLinearAggregateFunctions2``\  provides functions involving two FiniteLinearAggregates where the underlying domains might be different. An example of this might be creating a list of rational numbers by mapping a function across a list of integers where the function divides each integer by 1000.
+\ :code:`FiniteLinearAggregateFunctions2`\  provides functions involving two FiniteLinearAggregates where the underlying domains might be different. An example of this might be creating a list of rational numbers by mapping a function across a list of integers where the function divides each integer by 1000.
 
 
 .. _l46696e6974654c696e65617241676772656761746546756e6374696f6e7332-6d6170:
@@ -25,7 +25,7 @@ FiniteLinearAggregateFunctions2(S, A, R, B)
    pair: FiniteLinearAggregateFunctions2; map
 
 :spadfun:`map`\: (S -> R, A) -> B 
-  \ ``map(f, a)``\  applies function \ ``f``\  to each member of aggregate \ ``a``\  resulting in a new aggregate over a possibly different underlying domain.
+  \ :code:`map(f, a)`\  applies function \ :code:`f`\  to each member of aggregate \ :code:`a`\  resulting in a new aggregate over a possibly different underlying domain.
 
 .. _l46696e6974654c696e65617241676772656761746546756e6374696f6e7332-726564756365:
 
@@ -33,7 +33,7 @@ FiniteLinearAggregateFunctions2(S, A, R, B)
    pair: FiniteLinearAggregateFunctions2; reduce
 
 :spadfun:`reduce`\: ((S, R) -> R, A, R) -> R 
-  \ ``reduce(f, a, r)``\  applies function \ ``f``\  to each successive element of the aggregate \ ``a``\  and an accumulant initialized to \ ``r``\ . For example, \ ``reduce(_+\$Integer, [1, 2, 3], 0)``\  does \ ``3+(2+(1+0))``\ . Note: third argument \ ``r``\  may be regarded as the identity element for the function \ ``f``\ .
+  \ :code:`reduce(f, a, r)`\  applies function \ :code:`f`\  to each successive element of the aggregate \ :code:`a`\  and an accumulant initialized to \ :code:`r`\ . For example, \ :code:`reduce(_+\$Integer, [1, 2, 3], 0)`\  does \ :code:`3+(2+(1+0))`\ . Note: third argument \ :code:`r`\  may be regarded as the identity element for the function \ :code:`f`\ .
 
 .. _l46696e6974654c696e65617241676772656761746546756e6374696f6e7332-7363616e:
 
@@ -41,6 +41,6 @@ FiniteLinearAggregateFunctions2(S, A, R, B)
    pair: FiniteLinearAggregateFunctions2; scan
 
 :spadfun:`scan`\: ((S, R) -> R, A, R) -> B 
-  \ ``scan(f, a, r)``\  successively applies \ ``reduce(f, x, r)``\  to more and more leading sub-aggregates \ ``x``\  of aggregate \ ``a``\ . More precisely, if \ ``a``\  is \ ``[a1, a2, ...]``\ , then \ ``scan(f, a, r)``\  returns \ ``[reduce(f, [a1], r), reduce(f, [a1, a2], r), ...]``\ .
+  \ :code:`scan(f, a, r)`\  successively applies \ :code:`reduce(f, x, r)`\  to more and more leading sub-aggregates \ :code:`x`\  of aggregate \ :code:`a`\ . More precisely, if \ :code:`a`\  is \ :code:`[a1, a2, ...]`\ , then \ :code:`scan(f, a, r)`\  returns \ :code:`[reduce(f, [a1], r), reduce(f, [a1, a2], r), ...]`\ .
 
 

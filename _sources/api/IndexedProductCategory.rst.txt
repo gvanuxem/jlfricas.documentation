@@ -12,7 +12,7 @@ IndexedProductCategory(A, S)
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-This category represents the product of some set with respect to an indexing set. The set \ ``S``\  is considered as the ``basis elements\ ``''``\  and the elements from \ ``A``\  as ``coefficients\ ``''``\ . Elements may have infinite support. For \ ``Comparable``\  (ordered) \ ``S``\  we assume that support of each element is well-ordered.
+This category represents the product of some set with respect to an indexing set. The set \ :code:`S`\  is considered as the ``basis elements\ :code:`''`\  and the elements from \ :code:`A`\  as ``coefficients\ :code:`''`\ . Elements may have infinite support. For \ :code:`Comparable`\  (ordered) \ :code:`S`\  we assume that support of each element is well-ordered.
 
 
 .. _l496e646578656450726f6475637443617465676f7279-30:
@@ -68,7 +68,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; construct
 
 :spadfun:`construct`\: \ :ref:`List <l4c697374>`\  Record(k: S, c: A) -> % 
-  \ ``construct(l)``\  takes a list of terms and creates the object with these components. First components of elements of \ ``l``\  should be different.
+  \ :code:`construct(l)`\  takes a list of terms and creates the object with these components. First components of elements of \ :code:`l`\  should be different.
 
 .. _l496e646578656450726f6475637443617465676f7279-636f6e7374727563744f726465726564:
 
@@ -76,7 +76,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; constructOrdered
 
 :spadfun:`constructOrdered`\: \ :ref:`List <l4c697374>`\  Record(k: S, c: A) -> % if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``constructOrdered(l)``\  takes a list of terms and creates the object with these components. The list is assumed to be sorted (in reverse order) with respect to the ordering of \ ``S``\ . If \ ``R``\  is a monoid, then the list is assumed to contain no zero elements. Caution: No checking is performed, so this should only be used in cases where those conditions are assured. If in doubt use \ ``construct``\ .
+  \ :code:`constructOrdered(l)`\  takes a list of terms and creates the object with these components. The list is assumed to be sorted (in reverse order) with respect to the ordering of \ :code:`S`\ . If \ :code:`R`\  is a monoid, then the list is assumed to contain no zero elements. Caution: No checking is performed, so this should only be used in cases where those conditions are assured. If in doubt use \ :code:`construct`\ .
 
 .. _l496e646578656450726f6475637443617465676f7279-6c61746578:
 
@@ -89,7 +89,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; leadingCoefficient
 
 :spadfun:`leadingCoefficient`\: % -> A if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``leadingCoefficient(z)``\  returns the coefficient of the leading (with respect to the ordering on the indexing set) monomial of \ ``z``\ . Error: if \ ``z``\  has no support.
+  \ :code:`leadingCoefficient(z)`\  returns the coefficient of the leading (with respect to the ordering on the indexing set) monomial of \ :code:`z`\ . Error: if \ :code:`z`\  has no support.
 
 .. _l496e646578656450726f6475637443617465676f7279-6c656164696e674d6f6e6f6d69616c:
 
@@ -97,7 +97,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; leadingMonomial
 
 :spadfun:`leadingMonomial`\: % -> % if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``leadingMonomial(x)``\  returns the monomial supported by the first element from \ ``S``\ . Error: if \ ``x``\  has no support.
+  \ :code:`leadingMonomial(x)`\  returns the monomial supported by the first element from \ :code:`S`\ . Error: if \ :code:`x`\  has no support.
 
 .. _l496e646578656450726f6475637443617465676f7279-6c656164696e67537570706f7274:
 
@@ -105,7 +105,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; leadingSupport
 
 :spadfun:`leadingSupport`\: % -> S if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``leadingSupport(z)``\  returns the index of leading (with respect to the ordering on the indexing set) monomial of \ ``z``\ . Error: if \ ``z``\  has no support.
+  \ :code:`leadingSupport(z)`\  returns the index of leading (with respect to the ordering on the indexing set) monomial of \ :code:`z`\ . Error: if \ :code:`z`\  has no support.
 
 .. _l496e646578656450726f6475637443617465676f7279-6c656164696e675465726d:
 
@@ -113,7 +113,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; leadingTerm
 
 :spadfun:`leadingTerm`\: % -> Record(k: S, c: A) if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``leadingTerm(z)``\  returns the leading (with respect to the ordering on the indexing set) term of \ ``z``\ . Error: if \ ``z``\  has no support.
+  \ :code:`leadingTerm(z)`\  returns the leading (with respect to the ordering on the indexing set) term of \ :code:`z`\ . Error: if \ :code:`z`\  has no support.
 
 .. _l496e646578656450726f6475637443617465676f7279-6d6170:
 
@@ -121,7 +121,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; map
 
 :spadfun:`map`\: (A -> A, %) -> % 
-  \ ``map(f, z)``\  returns the new element created by applying the function \ ``f``\  to each component of the direct product element \ ``z``\ .
+  \ :code:`map(f, z)`\  returns the new element created by applying the function \ :code:`f`\  to each component of the direct product element \ :code:`z`\ .
 
 .. _l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c3f:
 
@@ -129,7 +129,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; monomial?
 
 :spadfun:`monomial?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomial?(x)``\  returns \ ``true``\  if \ ``x``\  is a single monomial, that is support of \ ``x``\  consists of a single element.
+  \ :code:`monomial?(x)`\  returns \ :code:`true`\  if \ :code:`x`\  is a single monomial, that is support of \ :code:`x`\  consists of a single element.
 
 .. _l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c:
 
@@ -137,7 +137,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; monomial
 
 :spadfun:`monomial`\: (A, S) -> % 
-  \ ``monomial(a, s)``\  constructs a direct product element with the \ ``s``\  component set to \ ``a``\ 
+  \ :code:`monomial(a, s)`\  constructs a direct product element with the \ :code:`s`\  component set to \ :code:`a`\ 
 
 .. _l496e646578656450726f6475637443617465676f7279-6f70706f736974653f:
 
@@ -150,7 +150,7 @@ This category represents the product of some set with respect to an indexing set
    pair: IndexedProductCategory; reductum
 
 :spadfun:`reductum`\: % -> % if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``reductum(z)``\  returns a new element created by removing the leading coefficient/support pair from the element \ ``z``\ . Error: if \ ``z``\  has no support.
+  \ :code:`reductum(z)`\  returns a new element created by removing the leading coefficient/support pair from the element \ :code:`z`\ . Error: if \ :code:`z`\  has no support.
 
 .. _l496e646578656450726f6475637443617465676f7279-73616d706c65:
 

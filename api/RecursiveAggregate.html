@@ -54,7 +54,7 @@
 <ul class="simple">
 <li><p>S: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
-<p>A recursive aggregate over a type <code class="docutils literal notranslate"><span class="pre">S</span></code> is a model for a directed graph containing values of type <code class="docutils literal notranslate"><span class="pre">S</span></code>. Recursively, a recursive aggregate is either empty or a <em>node</em> consisting of a <span class="spadfun">value</span> from <code class="docutils literal notranslate"><span class="pre">S</span></code> and 0 or more <span class="spadfun">children</span> which are also nodes. A node with no children is called a <span class="spadfun">leaf</span> node. A recursive aggregate may be cyclic for which some operations as noted may go into an infinite loop.</p>
+<p>A recursive aggregate over a type <code class="code docutils literal notranslate"><span class="pre">S</span></code> is a model for a directed graph containing values of type <code class="code docutils literal notranslate"><span class="pre">S</span></code>. Recursively, a recursive aggregate is either empty or a <em>node</em> consisting of a <span class="spadfun">value</span> from <code class="code docutils literal notranslate"><span class="pre">S</span></code> and 0 or more <span class="spadfun">children</span> which are also nodes. A node with no children is called a <span class="spadfun">leaf</span> node. A recursive aggregate may be cyclic for which some operations as noted may go into an infinite loop.</p>
 <dl class="simple" id="l526563757273697665416767726567617465-23">
 <dt><a class="reference internal" href="Aggregate.html#l416767726567617465-23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if % has <a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
@@ -72,11 +72,11 @@
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6368696c643f"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">child?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">child?(u,</span> <span class="pre">v)</span></code> tests if node <code class="docutils literal notranslate"><span class="pre">u</span></code> is a child of node <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<dt><span class="spadfun">child?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">child?(u,</span> <span class="pre">v)</span></code> tests if node <code class="code docutils literal notranslate"><span class="pre">u</span></code> is a child of node <code class="code docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6368696c6472656e"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">children</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">children(u)</span></code> returns a list of the children of aggregate <code class="docutils literal notranslate"><span class="pre">u</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">u</span></code> is empty.</p>
+<dt><span class="spadfun">children</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">children(u)</span></code> returns a list of the children of aggregate <code class="code docutils literal notranslate"><span class="pre">u</span></code>. Error: if <code class="code docutils literal notranslate"><span class="pre">u</span></code> is empty.</p>
 </dd>
 </dl>
 <dl class="simple" id="l526563757273697665416767726567617465-636f65726365">
@@ -94,15 +94,15 @@
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6379636c69633f"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">cyclic?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclic?(u)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> has a cycle.</p>
+<dt><span class="spadfun">cyclic?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">cyclic?(u)</span></code> tests if <code class="code docutils literal notranslate"><span class="pre">u</span></code> has a cycle.</p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-64697374616e6365"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">distance</span>: (%, %) -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">distance(u,</span> <span class="pre">v)</span></code> returns the path length (an integer) from node <code class="docutils literal notranslate"><span class="pre">u</span></code> to <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<dt><span class="spadfun">distance</span>: (%, %) -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">distance(u,</span> <span class="pre">v)</span></code> returns the path length (an integer) from node <code class="code docutils literal notranslate"><span class="pre">u</span></code> to <code class="code docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-656c74"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">elt</span>: (%, value) -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(u,</span> <span class="pre">&quot;value&quot;)</span></code> (also written: <code class="docutils literal notranslate"><span class="pre">u.value</span></code>) is equivalent to <code class="docutils literal notranslate"><span class="pre">value(u)</span></code>.</p>
+<dt><span class="spadfun">elt</span>: (%, value) -&gt; S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(u,</span> <span class="pre">&quot;value&quot;)</span></code> (also written: <code class="code docutils literal notranslate"><span class="pre">u.value</span></code>) is equivalent to <code class="code docutils literal notranslate"><span class="pre">value(u)</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l526563757273697665416767726567617465-656d7074793f">
@@ -136,11 +136,11 @@
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6c6561663f"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">leaf?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leaf?(u)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> is a terminal node.</p>
+<dt><span class="spadfun">leaf?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">leaf?(u)</span></code> tests if <code class="code docutils literal notranslate"><span class="pre">u</span></code> is a terminal node.</p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6c6561766573"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">leaves</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leaves(u)</span></code> returns the list of leaves in aggregate <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
+<dt><span class="spadfun">leaves</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">leaves(u)</span></code> returns the list of leaves in aggregate <code class="code docutils literal notranslate"><span class="pre">u</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l526563757273697665416767726567617465-6c6573733f">
@@ -178,11 +178,11 @@
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6e6f64653f"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">node?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">node?(u,</span> <span class="pre">v)</span></code> tests if node <code class="docutils literal notranslate"><span class="pre">u</span></code> is contained in node <code class="docutils literal notranslate"><span class="pre">v</span></code> (either as a child, a child of a child, etc.).</p>
+<dt><span class="spadfun">node?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">node?(u,</span> <span class="pre">v)</span></code> tests if node <code class="code docutils literal notranslate"><span class="pre">u</span></code> is contained in node <code class="code docutils literal notranslate"><span class="pre">v</span></code> (either as a child, a child of a child, etc.).</p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-6e6f646573"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">nodes</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nodes(u)</span></code> returns a list of all of the nodes of aggregate <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
+<dt><span class="spadfun">nodes</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">nodes(u)</span></code> returns a list of all of the nodes of aggregate <code class="code docutils literal notranslate"><span class="pre">u</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l526563757273697665416767726567617465-7061727473">
@@ -194,15 +194,15 @@
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-7365746368696c6472656e21"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">setchildren!</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; % if % has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setchildren!(u,</span> <span class="pre">v)</span></code> replaces the current children of node <code class="docutils literal notranslate"><span class="pre">u</span></code> with the members of <code class="docutils literal notranslate"><span class="pre">v</span></code> in left-to-right order.</p>
+<dt><span class="spadfun">setchildren!</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; % if % has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">setchildren!(u,</span> <span class="pre">v)</span></code> replaces the current children of node <code class="code docutils literal notranslate"><span class="pre">u</span></code> with the members of <code class="code docutils literal notranslate"><span class="pre">v</span></code> in left-to-right order.</p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-736574656c7421"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">setelt!</span>: (%, value, S) -&gt; S if % has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setelt!(u,</span> <span class="pre">&quot;value&quot;,</span> <span class="pre">x)</span></code> (also written <code class="docutils literal notranslate"><span class="pre">u.value</span> <span class="pre">:=</span> <span class="pre">x</span></code>) is equivalent to <code class="docutils literal notranslate"><span class="pre">setvalue!(u,</span> <span class="pre">x)</span></code></p>
+<dt><span class="spadfun">setelt!</span>: (%, value, S) -&gt; S if % has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">setelt!(u,</span> <span class="pre">&quot;value&quot;,</span> <span class="pre">x)</span></code> (also written <code class="code docutils literal notranslate"><span class="pre">u.value</span> <span class="pre">:=</span> <span class="pre">x</span></code>) is equivalent to <code class="code docutils literal notranslate"><span class="pre">setvalue!(u,</span> <span class="pre">x)</span></code></p>
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-73657476616c756521"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">setvalue!</span>: (%, S) -&gt; S if % has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setvalue!(u,</span> <span class="pre">x)</span></code> sets the value of node <code class="docutils literal notranslate"><span class="pre">u</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">setvalue!</span>: (%, S) -&gt; S if % has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">setvalue!(u,</span> <span class="pre">x)</span></code> sets the value of node <code class="code docutils literal notranslate"><span class="pre">u</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l526563757273697665416767726567617465-73697a653f">
@@ -210,7 +210,7 @@
 </dd>
 </dl>
 <span id="l526563757273697665416767726567617465-76616c7565"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">value</span>: % -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">value(u)</span></code> returns the value of the node <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
+<dt><span class="spadfun">value</span>: % -&gt; S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">value(u)</span></code> returns the value of the node <code class="code docutils literal notranslate"><span class="pre">u</span></code>.</p>
 </dd>
 </dl>
 <p><a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
@@ -275,7 +275,7 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2007-2025, FriCAS Team.
+    &#169; Copyright 2007-@PACKAGE_YEAR@, FriCAS Team.
     </div>
   </body>
 </html>

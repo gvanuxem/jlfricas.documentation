@@ -14,7 +14,7 @@ PolynomialCategory(R, E, VarSet)
 * VarSet: \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 
-The category for general multi-variate polynomials over a ring \ ``R``\ , in variables from VarSet, with exponents from the \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\ . Here variables commute with the coefficients.
+The category for general multi-variate polynomials over a ring \ :code:`R`\ , in variables from VarSet, with exponents from the \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\ . Here variables commute with the coefficients.
 
 
 .. _l506f6c796e6f6d69616c43617465676f7279-30:
@@ -210,7 +210,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; content
 
 :spadfun:`content`\: (%, VarSet) -> % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``content(p, v)``\  is the \ ``gcd``\  of the coefficients of the polynomial \ ``p``\  when \ ``p``\  is viewed as a univariate polynomial with respect to the variable \ ``v``\ . Thus, for polynomial 7*x^2*y + 14*x*y^2, the \ ``gcd``\  of the coefficients with respect to \ ``x``\  is 7*y.
+  \ :code:`content(p, v)`\  is the \ :code:`gcd`\  of the coefficients of the polynomial \ :code:`p`\  when \ :code:`p`\  is viewed as a univariate polynomial with respect to the variable \ :code:`v`\ . Thus, for polynomial 7*x^2*y + 14*x*y^2, the \ :code:`gcd`\  of the coefficients with respect to \ :code:`x`\  is 7*y.
 
 .. _l506f6c796e6f6d69616c43617465676f7279-636f6e76657274:
 
@@ -278,7 +278,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; discriminant
 
 :spadfun:`discriminant`\: (%, VarSet) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``discriminant(p, v)``\  returns the discriminant of the polynomial \ ``p``\  with respect to the variable \ ``v``\ .
+  \ :code:`discriminant(p, v)`\  returns the discriminant of the polynomial \ :code:`p`\  with respect to the variable \ :code:`v`\ .
 
 .. _l506f6c796e6f6d69616c43617465676f7279-6576616c:
 
@@ -382,7 +382,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; isExpt
 
 :spadfun:`isExpt`\: % -> Union(Record(var: VarSet, exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ), failed) if R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
-  \ ``isExpt(p)``\  returns \ ``[x, n]``\  if polynomial \ ``p``\  has the form \ ``x^n``\  and \ ``n > 0``\ .
+  \ :code:`isExpt(p)`\  returns \ :code:`[x, n]`\  if polynomial \ :code:`p`\  has the form \ :code:`x^n`\  and \ :code:`n > 0`\ .
 
 .. _l506f6c796e6f6d69616c43617465676f7279-6973506c7573:
 
@@ -390,7 +390,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; isPlus
 
 :spadfun:`isPlus`\: % -> Union(\ :ref:`List <l4c697374>`\  %, failed) 
-  \ ``isPlus(p)``\  returns \ ``[m1, ..., mn]``\  if polynomial \ ``p = m1 + ... + mn``\  and \ ``n >= 2``\  and each \ ``mi``\  is a nonzero monomial.
+  \ :code:`isPlus(p)`\  returns \ :code:`[m1, ..., mn]`\  if polynomial \ :code:`p = m1 + ... + mn`\  and \ :code:`n >= 2`\  and each \ :code:`mi`\  is a nonzero monomial.
 
 .. _l506f6c796e6f6d69616c43617465676f7279-697354696d6573:
 
@@ -398,7 +398,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; isTimes
 
 :spadfun:`isTimes`\: % -> Union(\ :ref:`List <l4c697374>`\  %, failed) if R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
-  \ ``isTimes(p)``\  returns \ ``[a1, ..., an]``\  if polynomial \ ``p = a1 ... an``\  and \ ``n >= 2``\ , and, for each \ ``i``\ , \ ``ai``\  is either a nontrivial constant in \ ``R``\  or else of the form \ ``x^e``\ , where \ ``e > 0``\  is an integer and \ ``x``\  is a member of VarSet.
+  \ :code:`isTimes(p)`\  returns \ :code:`[a1, ..., an]`\  if polynomial \ :code:`p = a1 ... an`\  and \ :code:`n >= 2`\ , and, for each \ :code:`i`\ , \ :code:`ai`\  is either a nontrivial constant in \ :code:`R`\  or else of the form \ :code:`x^e`\ , where \ :code:`e > 0`\  is an integer and \ :code:`x`\  is a member of VarSet.
 
 .. _l506f6c796e6f6d69616c43617465676f7279-6c61746578:
 
@@ -488,14 +488,14 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; minimumDegree
 
 :spadfun:`minimumDegree`\: (%, \ :ref:`List <l4c697374>`\  VarSet) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``minimumDegree(p, lv)``\  gives the list of minimum degrees of the polynomial \ ``p``\  with respect to each of the variables in the list \ ``lv``\ 
+  \ :code:`minimumDegree(p, lv)`\  gives the list of minimum degrees of the polynomial \ :code:`p`\  with respect to each of the variables in the list \ :code:`lv`\ 
 
 
 .. index::
    pair: PolynomialCategory; minimumDegree
 
 :spadfun:`minimumDegree`\: (%, VarSet) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``minimumDegree(p, v)``\  gives the minimum degree of polynomial \ ``p``\  with respect to \ ``v``\ , i.e. viewed a univariate polynomial in \ ``v``\ 
+  \ :code:`minimumDegree(p, v)`\  gives the minimum degree of polynomial \ :code:`p`\  with respect to \ :code:`v`\ , i.e. viewed a univariate polynomial in \ :code:`v`\ 
 
 .. _l506f6c796e6f6d69616c43617465676f7279-6d6f6e6963446976696465:
 
@@ -503,7 +503,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; monicDivide
 
 :spadfun:`monicDivide`\: (%, %, VarSet) -> Record(quotient: %, remainder: %) if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``monicDivide(a, b, v)``\  divides the polynomial a by the polynomial \ ``b``\ , with each viewed as a univariate polynomial in \ ``v``\  returning both the quotient and remainder. Error: if \ ``b``\  is not monic with respect to \ ``v``\ .
+  \ :code:`monicDivide(a, b, v)`\  divides the polynomial a by the polynomial \ :code:`b`\ , with each viewed as a univariate polynomial in \ :code:`v`\  returning both the quotient and remainder. Error: if \ :code:`b`\  is not monic with respect to \ :code:`v`\ .
 
 .. _l506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c3f:
 
@@ -534,14 +534,14 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; multivariate
 
 :spadfun:`multivariate`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, VarSet) -> % 
-  \ ``multivariate(sup, v)``\  converts an anonymous univariable polynomial \ ``sup``\  to a polynomial in the variable \ ``v``\ .
+  \ :code:`multivariate(sup, v)`\  converts an anonymous univariable polynomial \ :code:`sup`\  to a polynomial in the variable \ :code:`v`\ .
 
 
 .. index::
    pair: PolynomialCategory; multivariate
 
 :spadfun:`multivariate`\: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R, VarSet) -> % 
-  \ ``multivariate(sup, v)``\  converts an anonymous univariable polynomial \ ``sup``\  to a polynomial in the variable \ ``v``\ .
+  \ :code:`multivariate(sup, v)`\  converts an anonymous univariable polynomial \ :code:`sup`\  to a polynomial in the variable \ :code:`v`\ .
 
 .. _l506f6c796e6f6d69616c43617465676f7279-6e756d6265724f664d6f6e6f6d69616c73:
 
@@ -593,14 +593,14 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; primitivePart
 
 :spadfun:`primitivePart`\: % -> % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``primitivePart(p)``\  returns the unitCanonical associate of the polynomial \ ``p``\  with its content divided out.
+  \ :code:`primitivePart(p)`\  returns the unitCanonical associate of the polynomial \ :code:`p`\  with its content divided out.
 
 
 .. index::
    pair: PolynomialCategory; primitivePart
 
 :spadfun:`primitivePart`\: (%, VarSet) -> % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``primitivePart(p, v)``\  returns the unitCanonical associate of the polynomial \ ``p``\  with its content with respect to the variable \ ``v``\  divided out.
+  \ :code:`primitivePart(p, v)`\  returns the unitCanonical associate of the polynomial \ :code:`p`\  with its content with respect to the variable \ :code:`v`\  divided out.
 
 .. _l506f6c796e6f6d69616c43617465676f7279-7265636970:
 
@@ -635,7 +635,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; resultant
 
 :spadfun:`resultant`\: (%, %, VarSet) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``resultant(p, q, v)``\  returns the resultant of the polynomials \ ``p``\  and \ ``q``\  with respect to the variable \ ``v``\ .
+  \ :code:`resultant(p, q, v)`\  returns the resultant of the polynomials \ :code:`p`\  and \ :code:`q`\  with respect to the variable \ :code:`v`\ .
 
 .. _l506f6c796e6f6d69616c43617465676f7279-72657472616374:
 
@@ -706,7 +706,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; squareFree
 
 :spadfun:`squareFree`\: % -> \ :ref:`Factored <l466163746f726564>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``squareFree(p)``\  returns the square free factorization of the polynomial \ ``p``\ .
+  \ :code:`squareFree(p)`\  returns the square free factorization of the polynomial \ :code:`p`\ .
 
 .. _l506f6c796e6f6d69616c43617465676f7279-7371756172654672656550617274:
 
@@ -714,7 +714,7 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; squareFreePart
 
 :spadfun:`squareFreePart`\: % -> % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
-  \ ``squareFreePart(p)``\  returns product of all the irreducible factors of polynomial \ ``p``\  each taken with multiplicity one.
+  \ :code:`squareFreePart(p)`\  returns product of all the irreducible factors of polynomial \ :code:`p`\  each taken with multiplicity one.
 
 .. _l506f6c796e6f6d69616c43617465676f7279-73717561726546726565506f6c796e6f6d69616c:
 
@@ -766,14 +766,14 @@ The category for general multi-variate polynomials over a ring \ ``R``\ , in var
    pair: PolynomialCategory; univariate
 
 :spadfun:`univariate`\: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
-  \ ``univariate(p)``\  converts the multivariate polynomial \ ``p``\ , which should actually involve only one variable, into a univariate polynomial in that variable, whose coefficients are in the ground ring. Error: if polynomial is genuinely multivariate
+  \ :code:`univariate(p)`\  converts the multivariate polynomial \ :code:`p`\ , which should actually involve only one variable, into a univariate polynomial in that variable, whose coefficients are in the ground ring. Error: if polynomial is genuinely multivariate
 
 
 .. index::
    pair: PolynomialCategory; univariate
 
 :spadfun:`univariate`\: (%, VarSet) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
-  \ ``univariate(p, v)``\  converts the multivariate polynomial \ ``p``\  into a univariate polynomial in \ ``v``\ , whose coefficients are still multivariate polynomials (in all the other variables).
+  \ :code:`univariate(p, v)`\  converts the multivariate polynomial \ :code:`p`\  into a univariate polynomial in \ :code:`v`\ , whose coefficients are still multivariate polynomials (in all the other variables).
 
 .. _l506f6c796e6f6d69616c43617465676f7279-7661726961626c6573:
 

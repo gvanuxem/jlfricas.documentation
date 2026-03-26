@@ -21,7 +21,7 @@ A package for solving polynomial systems with finitely many solutions. The decom
    pair: LexTriangularPackage; fglmIfCan
 
 :spadfun:`fglmIfCan`\: \ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls), failed) 
-  \ ``fglmIfCan(lp)``\  returns the lexicographical Groebner basis of \ ``lp``\  by using the \ *FGLM*\  strategy, if \ ``zeroDimensional?(lp)``\  holds .
+  \ :code:`fglmIfCan(lp)`\  returns the lexicographical Groebner basis of \ :code:`lp`\  by using the \ *FGLM*\  strategy, if \ :code:`zeroDimensional?(lp)`\  holds .
 
 .. _l4c6578547269616e67756c61725061636b616765-67726f65626e6572:
 
@@ -29,7 +29,7 @@ A package for solving polynomial systems with finitely many solutions. The decom
    pair: LexTriangularPackage; groebner
 
 :spadfun:`groebner`\: \ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls) -> \ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls) 
-  \ ``groebner(lp)``\  returns the lexicographical Groebner basis of \ ``lp``\ . If \ ``lp``\  generates a zero-dimensional ideal then the \ *FGLM*\  strategy is used, otherwise the \ *Sugar*\  strategy is used.
+  \ :code:`groebner(lp)`\  returns the lexicographical Groebner basis of \ :code:`lp`\ . If \ :code:`lp`\  generates a zero-dimensional ideal then the \ *FGLM*\  strategy is used, otherwise the \ *Sugar*\  strategy is used.
 
 .. _l4c6578547269616e67756c61725061636b616765-6c6578547269616e67756c6172:
 
@@ -37,7 +37,7 @@ A package for solving polynomial systems with finitely many solutions. The decom
    pair: LexTriangularPackage; lexTriangular
 
 :spadfun:`lexTriangular`\: (\ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls), \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`RegularChain <l526567756c6172436861696e>`\ (R, ls) 
-  \ ``lexTriangular(base, norm?)``\  decomposes the variety associated with \ ``base``\  into regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ ``base``\  needs to be a lexicographical Groebner basis of a zero-dimensional ideal. If \ ``norm?``\  is \ ``true``\  then the regular sets are normalized.
+  \ :code:`lexTriangular(base, norm?)`\  decomposes the variety associated with \ :code:`base`\  into regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ :code:`base`\  needs to be a lexicographical Groebner basis of a zero-dimensional ideal. If \ :code:`norm?`\  is \ :code:`true`\  then the regular sets are normalized.
 
 .. _l4c6578547269616e67756c61725061636b616765-737175617265467265654c6578547269616e67756c6172:
 
@@ -45,7 +45,7 @@ A package for solving polynomial systems with finitely many solutions. The decom
    pair: LexTriangularPackage; squareFreeLexTriangular
 
 :spadfun:`squareFreeLexTriangular`\: (\ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls), \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`SquareFreeRegularTriangularSet <l53717561726546726565526567756c6172547269616e67756c6172536574>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls, \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls)) 
-  \ ``squareFreeLexTriangular(base, norm?)``\  decomposes the variety associated with \ ``base``\  into square-free regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ ``base``\  needs to be a lexicographical Groebner basis of a zero-dimensional ideal. If \ ``norm?``\  is \ ``true``\  then the regular sets are normalized.
+  \ :code:`squareFreeLexTriangular(base, norm?)`\  decomposes the variety associated with \ :code:`base`\  into square-free regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ :code:`base`\  needs to be a lexicographical Groebner basis of a zero-dimensional ideal. If \ :code:`norm?`\  is \ :code:`true`\  then the regular sets are normalized.
 
 .. _l4c6578547269616e67756c61725061636b616765-7a65726f44696d656e73696f6e616c3f:
 
@@ -53,7 +53,7 @@ A package for solving polynomial systems with finitely many solutions. The decom
    pair: LexTriangularPackage; zeroDimensional?
 
 :spadfun:`zeroDimensional?`\: \ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``zeroDimensional?(lp)``\  returns \ ``true``\  iff \ ``lp``\  generates a zero-dimensional ideal with respect to the variables involved in \ ``lp``\ .
+  \ :code:`zeroDimensional?(lp)`\  returns \ :code:`true`\  iff \ :code:`lp`\  generates a zero-dimensional ideal with respect to the variables involved in \ :code:`lp`\ .
 
 .. _l4c6578547269616e67756c61725061636b616765-7a65726f53657453706c6974:
 
@@ -61,13 +61,13 @@ A package for solving polynomial systems with finitely many solutions. The decom
    pair: LexTriangularPackage; zeroSetSplit
 
 :spadfun:`zeroSetSplit`\: (\ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls), \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`RegularChain <l526567756c6172436861696e>`\ (R, ls) 
-  \ ``zeroSetSplit(lp, norm?)``\  decomposes the variety associated with \ ``lp``\  into regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ ``lp``\  needs to generate a zero-dimensional ideal. If \ ``norm?``\  is \ ``true``\  then the regular sets are normalized.
+  \ :code:`zeroSetSplit(lp, norm?)`\  decomposes the variety associated with \ :code:`lp`\  into regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ :code:`lp`\  needs to generate a zero-dimensional ideal. If \ :code:`norm?`\  is \ :code:`true`\  then the regular sets are normalized.
 
 
 .. index::
    pair: LexTriangularPackage; zeroSetSplit
 
 :spadfun:`zeroSetSplit`\: (\ :ref:`List <l4c697374>`\  \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls), \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`SquareFreeRegularTriangularSet <l53717561726546726565526567756c6172547269616e67756c6172536574>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls, \ :ref:`NewSparseMultivariatePolynomial <l4e65775370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (R, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  ls)) 
-  \ ``zeroSetSplit(lp, norm?)``\  decomposes the variety associated with \ ``lp``\  into square-free regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ ``lp``\  needs to generate a zero-dimensional ideal. If \ ``norm?``\  is \ ``true``\  then the regular sets are normalized.
+  \ :code:`zeroSetSplit(lp, norm?)`\  decomposes the variety associated with \ :code:`lp`\  into square-free regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that \ :code:`lp`\  needs to generate a zero-dimensional ideal. If \ :code:`norm?`\  is \ :code:`true`\  then the regular sets are normalized.
 
 

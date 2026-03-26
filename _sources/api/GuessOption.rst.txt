@@ -27,7 +27,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; allDegrees
 
 :spadfun:`allDegrees`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``allDegrees(d)``\  specifies whether all possibilities of the degree vector - taking into account maxDegree - should be tried. This is mainly interesting for rational interpolation. This option is expressed in the form \ ``allDegrees == d``\ .
+  \ :code:`allDegrees(d)`\  specifies whether all possibilities of the degree vector - taking into account maxDegree - should be tried. This is mainly interesting for rational interpolation. This option is expressed in the form \ :code:`allDegrees == d`\ .
 
 .. _l47756573734f7074696f6e-636865636b:
 
@@ -35,7 +35,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; check
 
 :spadfun:`check`\: Union(skip, MonteCarlo, deterministic) -> % 
-  \ ``check(d)``\  specifies how we want to check the solution. If the value is "skip", we return the solutions found by the interpolation routine without checking. If the value is "MonteCarlo", we use a probabilistic check. This option is expressed in the form \ ``check == d``\ 
+  \ :code:`check(d)`\  specifies how we want to check the solution. If the value is "skip", we return the solutions found by the interpolation routine without checking. If the value is "MonteCarlo", we use a probabilistic check. This option is expressed in the form \ :code:`check == d`\ 
 
 .. _l47756573734f7074696f6e-636865636b457874726156616c756573:
 
@@ -43,7 +43,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; checkExtraValues
 
 :spadfun:`checkExtraValues`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``checkExtraValues(d)``\  specifies whether we want to check the solution beyond the order given by the degree bounds. This option is expressed in the form \ ``checkExtraValues == d``\ 
+  \ :code:`checkExtraValues(d)`\  specifies whether we want to check the solution beyond the order given by the degree bounds. This option is expressed in the form \ :code:`checkExtraValues == d`\ 
 
 .. _l47756573734f7074696f6e-636f65726365:
 
@@ -56,7 +56,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; debug
 
 :spadfun:`debug`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``debug(d)``\  specifies whether we want additional output on the progress. This option is expressed in the form \ ``debug == d``\ .
+  \ :code:`debug(d)`\  specifies whether we want additional output on the progress. This option is expressed in the form \ :code:`debug == d`\ .
 
 .. _l47756573734f7074696f6e-646973706c61794b696e64:
 
@@ -64,7 +64,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; displayKind
 
 :spadfun:`displayKind`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``displayKind(d)``\  specifies the kind of the result: generating function, recurrence or equation. This option should not be set by the user, but rather by the \ ``HP``\ -specification.
+  \ :code:`displayKind(d)`\  specifies the kind of the result: generating function, recurrence or equation. This option should not be set by the user, but rather by the \ :code:`HP`\ -specification.
 
 .. _l47756573734f7074696f6e-66756e6374696f6e4e616d65:
 
@@ -72,7 +72,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; functionName
 
 :spadfun:`functionName`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``functionName(d)``\  specifies the name of the function given by the algebraic differential equation or recurrence. This option is expressed in the form \ ``functionName == d``\ .
+  \ :code:`functionName(d)`\  specifies the name of the function given by the algebraic differential equation or recurrence. This option is expressed in the form \ :code:`functionName == d`\ .
 
 .. _l47756573734f7074696f6e-66756e6374696f6e4e616d6573:
 
@@ -80,7 +80,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; functionNames
 
 :spadfun:`functionNames`\: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``functionNames(d)``\  specifies the names for the function in algebraic dependence. This option is expressed in the form \ ``functionNames == d``\ .
+  \ :code:`functionNames(d)`\  specifies the names for the function in algebraic dependence. This option is expressed in the form \ :code:`functionNames == d`\ .
 
 .. _l47756573734f7074696f6e-686f6d6f67656e656f7573:
 
@@ -88,7 +88,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; homogeneous
 
 :spadfun:`homogeneous`\: Union(\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``homogeneous(d)``\  specifies whether we allow only homogeneous algebraic differential equations. This option is expressed in the form \ ``homogeneous == d``\ . If \ ``true``\ , then maxPower must be set, too, and ADEs with constant total degree are allowed. If a PositiveInteger is given, only ADE\ ``'s``\  with this total degree are allowed.
+  \ :code:`homogeneous(d)`\  specifies whether we allow only homogeneous algebraic differential equations. This option is expressed in the form \ :code:`homogeneous == d`\ . If \ :code:`true`\ , then maxPower must be set, too, and ADEs with constant total degree are allowed. If a PositiveInteger is given, only ADE\ :code:`'s`\  with this total degree are allowed.
 
 .. _l47756573734f7074696f6e-696e6465784e616d65:
 
@@ -96,7 +96,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; indexName
 
 :spadfun:`indexName`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``indexName(d)``\  specifies the index variable used for the formulas. This option is expressed in the form \ ``indexName == d``\ .
+  \ :code:`indexName(d)`\  specifies the index variable used for the formulas. This option is expressed in the form \ :code:`indexName == d`\ .
 
 .. _l47756573734f7074696f6e-6c61746578:
 
@@ -109,7 +109,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxDegree
 
 :spadfun:`maxDegree`\: Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , arbitrary) -> % 
-  \ ``maxDegree(d)``\  specifies the maximum degree of the coefficient polynomials in an algebraic differential equation or a recursion with polynomial coefficients. For rational functions with an exponential term, \ ``maxDegree``\  bounds the degree of the denominator polynomial. This option is expressed in the form \ ``maxDegree == d``\ .
+  \ :code:`maxDegree(d)`\  specifies the maximum degree of the coefficient polynomials in an algebraic differential equation or a recursion with polynomial coefficients. For rational functions with an exponential term, \ :code:`maxDegree`\  bounds the degree of the denominator polynomial. This option is expressed in the form \ :code:`maxDegree == d`\ .
 
 .. _l47756573734f7074696f6e-6d617844657269766174697665:
 
@@ -117,7 +117,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxDerivative
 
 :spadfun:`maxDerivative`\: Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , arbitrary) -> % 
-  \ ``maxDerivative(d)``\  specifies the maximum derivative in an algebraic differential equation. This option is expressed in the form \ ``maxDerivative == d``\ .
+  \ :code:`maxDerivative(d)`\  specifies the maximum derivative in an algebraic differential equation. This option is expressed in the form \ :code:`maxDerivative == d`\ .
 
 .. _l47756573734f7074696f6e-6d61784c6576656c:
 
@@ -125,7 +125,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxLevel
 
 :spadfun:`maxLevel`\: Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , arbitrary) -> % 
-  \ ``maxLevel(d)``\  specifies the maximum number of recursion levels operators guessProduct and guessSum will be applied. This option is expressed in the form spad{maxLevel \ ``==``\  \ ``d``\ }.
+  \ :code:`maxLevel(d)`\  specifies the maximum number of recursion levels operators guessProduct and guessSum will be applied. This option is expressed in the form spad{maxLevel \ :code:`==`\  \ :code:`d`\ }.
 
 .. _l47756573734f7074696f6e-6d61784d69786564446567726565:
 
@@ -133,7 +133,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxMixedDegree
 
 :spadfun:`maxMixedDegree`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``maxMixedDegree(d)``\  specifies the maximum \ ``q``\ -degree of the coefficient polynomials in a recurrence with polynomial coefficients, in the case of mixed shifts. Although slightly inconsistent, maxMixedDegree(0) specifies that no mixed shifts are allowed. This option is expressed in the form \ ``maxMixedDegree == d``\ .
+  \ :code:`maxMixedDegree(d)`\  specifies the maximum \ :code:`q`\ -degree of the coefficient polynomials in a recurrence with polynomial coefficients, in the case of mixed shifts. Although slightly inconsistent, maxMixedDegree(0) specifies that no mixed shifts are allowed. This option is expressed in the form \ :code:`maxMixedDegree == d`\ .
 
 .. _l47756573734f7074696f6e-6d6178506f776572:
 
@@ -141,7 +141,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxPower
 
 :spadfun:`maxPower`\: Union(\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , arbitrary) -> % 
-  \ ``maxPower(d)``\  specifies the maximum degree in an algebraic differential equation. For example, the degree of (\ ``f``\ \ ``''``\ )\ ``^3``\  \ ``f'``\  is 4. maxPower(\ ``-1``\ ) specifies that the maximum exponent can be arbitrary. This option is expressed in the form \ ``maxPower == d``\ .
+  \ :code:`maxPower(d)`\  specifies the maximum degree in an algebraic differential equation. For example, the degree of (\ :code:`f`\ \ :code:`''`\ )\ :code:`^3`\  \ :code:`f'`\  is 4. maxPower(\ :code:`-1`\ ) specifies that the maximum exponent can be arbitrary. This option is expressed in the form \ :code:`maxPower == d`\ .
 
 .. _l47756573734f7074696f6e-6d61785368696674:
 
@@ -149,7 +149,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxShift
 
 :spadfun:`maxShift`\: Union(\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , arbitrary) -> % 
-  \ ``maxShift(d)``\  specifies the maximum shift in a recurrence equation. This option is expressed in the form \ ``maxShift == d``\ .
+  \ :code:`maxShift(d)`\  specifies the maximum shift in a recurrence equation. This option is expressed in the form \ :code:`maxShift == d`\ .
 
 .. _l47756573734f7074696f6e-6d61785375627374:
 
@@ -157,7 +157,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; maxSubst
 
 :spadfun:`maxSubst`\: Union(\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , arbitrary) -> % 
-  \ ``maxSubst(d)``\  specifies the maximum degree of the monomial substituted into the function we are looking for. That is, if \ ``maxSubst == d``\ , we look for polynomials such that \$\ ``p``\ (\ ``f``\ (\ ``x``\ ), \ ``f``\ (\ ``x^2``\ ), ..., \ ``f``\ (\ ``x^d``\ ))\ ``=0``\ \$. This option is expressed in the form \ ``maxSubst == d``\ .
+  \ :code:`maxSubst(d)`\  specifies the maximum degree of the monomial substituted into the function we are looking for. That is, if \ :code:`maxSubst == d`\ , we look for polynomials such that \$\ :code:`p`\ (\ :code:`f`\ (\ :code:`x`\ ), \ :code:`f`\ (\ :code:`x^2`\ ), ..., \ :code:`f`\ (\ :code:`x^d`\ ))\ :code:`=0`\ \$. This option is expressed in the form \ :code:`maxSubst == d`\ .
 
 .. _l47756573734f7074696f6e-6f6e65:
 
@@ -165,7 +165,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; one
 
 :spadfun:`one`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> % 
-  \ ``one(d)``\  specifies whether we are happy with one solution. This option is expressed in the form \ ``one == d``\ .
+  \ :code:`one(d)`\  specifies whether we are happy with one solution. This option is expressed in the form \ :code:`one == d`\ .
 
 .. _l47756573734f7074696f6e-6f7074696f6e:
 
@@ -173,7 +173,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; option
 
 :spadfun:`option`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`Symbol <l53796d626f6c>`\ ) -> Union(\ :ref:`Any <l416e79>`\ , failed) 
-  \ ``option(l, option)``\  returns which options are given.
+  \ :code:`option(l, option)`\  returns which options are given.
 
 .. _l47756573734f7074696f6e-736166657479:
 
@@ -181,7 +181,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; safety
 
 :spadfun:`safety`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``safety(d)``\  specifies the number of values reserved for testing any solutions found. This option is expressed in the form \ ``safety == d``\ .
+  \ :code:`safety(d)`\  specifies the number of values reserved for testing any solutions found. This option is expressed in the form \ :code:`safety == d`\ .
 
 .. _l47756573734f7074696f6e-536f6d6f73:
 
@@ -189,7 +189,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; Somos
 
 :spadfun:`Somos`\: Union(\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ ``Somos(d)``\  specifies whether we want that the total degree of the differential operators is constant, and equal to \ ``d``\ , or maxDerivative if \ ``true``\ . If \ ``true``\ , maxDerivative must be set, too.
+  \ :code:`Somos(d)`\  specifies whether we want that the total degree of the differential operators is constant, and equal to \ :code:`d`\ , or maxDerivative if \ :code:`true`\ . If \ :code:`true`\ , maxDerivative must be set, too.
 
 .. _l47756573734f7074696f6e-7661726961626c654e616d65:
 
@@ -197,7 +197,7 @@ GuessOption is a domain whose elements are various options used by \ :ref:`Guess
    pair: GuessOption; variableName
 
 :spadfun:`variableName`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ ``variableName(d)``\  specifies the variable used by the algebraic differential equation. This option is expressed in the form \ ``variableName == d``\ .
+  \ :code:`variableName(d)`\  specifies the variable used by the algebraic differential equation. This option is expressed in the form \ :code:`variableName == d`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

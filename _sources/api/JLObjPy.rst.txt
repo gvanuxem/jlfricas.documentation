@@ -35,21 +35,21 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce(f)``\  coerces \ ``f``\  to a Julia Python object.
+  \ :code:`coerce(f)`\  coerces \ :code:`f`\  to a Julia Python object.
 
 
 .. index::
    pair: JLObjPy; coerce
 
 :spadfun:`coerce`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``coerce(i)``\  coerces the integer \ ``i``\  to a Julia Python object.
+  \ :code:`coerce(i)`\  coerces the integer \ :code:`i`\  to a Julia Python object.
 
 
 .. index::
    pair: JLObjPy; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``coerce(str)``\  coerces the string \ ``str``\  to a Julia Python string object.
+  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a Julia Python string object.
 
 .. _l4a4c4f626a5079-636f6e76657274:
 
@@ -138,35 +138,35 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jlPyApply
 
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``jlPyApply(mod, func, pyobj)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. \example{jlPyApply("numpy", "array", jpyobj("[1,2,3]"))} creates a numpy array from the Python list [1,2,3]. jlPyApply("math", "sqrt", 2) computes the square root of 2.
+  \ :code:`jlPyApply(mod, func, pyobj)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. \example{jlPyApply("numpy", "array", jpyobj("[1,2,3]"))} creates a numpy array from the Python list [1,2,3]. jlPyApply("math", "sqrt", 2) computes the square root of 2.
 
 
 .. index::
    pair: JLObjPy; jlPyApply
 
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ ``jlPyApply(mod, func, pyobj1, pyobj2)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\  and \ ``pyobj2``\ 
+  \ :code:`jlPyApply(mod, func, pyobj1, pyobj2)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python objects \ :code:`pyobj1`\  and \ :code:`pyobj2`\ 
 
 
 .. index::
    pair: JLObjPy; jlPyApply
 
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ ``jlPyApply(mod, func, pyobj1, pyobj2, pyobj3)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\  and \ ``pyobj3``\ .
+  \ :code:`jlPyApply(mod, func, pyobj1, pyobj2, pyobj3)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python objects \ :code:`pyobj1`\ , \ :code:`pyobj2`\  and \ :code:`pyobj3`\ .
 
 
 .. index::
    pair: JLObjPy; jlPyApply
 
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
-  \ ``jlPyApply(mod, func, pyobj1, pyobj2, pyobj3, pyobj4)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\ , \ ``pyobj3``\  and \ ``pyobj4``\ .
+  \ :code:`jlPyApply(mod, func, pyobj1, pyobj2, pyobj3, pyobj4)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python objects \ :code:`pyobj1`\ , \ :code:`pyobj2`\ , \ :code:`pyobj3`\  and \ :code:`pyobj4`\ .
 
 
 .. index::
    pair: JLObjPy; jlPyApply
 
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
-  \ ``jlPyApply(mod, func, pyobj1, pyobj2, pyobj3, pyobj4, pyobj5)``\  applies the Python function \ ``func``\  from the module \ ``mod``\  to the Python objects \ ``pyobj1``\ , \ ``pyobj2``\ , \ ``pyobj3``\ , \ ``pyobj4``\  and \ ``pyobj5``\ .
+  \ :code:`jlPyApply(mod, func, pyobj1, pyobj2, pyobj3, pyobj4, pyobj5)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python objects \ :code:`pyobj1`\ , \ :code:`pyobj2`\ , \ :code:`pyobj3`\ , \ :code:`pyobj4`\  and \ :code:`pyobj5`\ .
 
 .. _l4a4c4f626a5079-6a6c5079436f6e76657274:
 
@@ -174,7 +174,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jlPyConvert
 
 :spadfun:`jlPyConvert`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ ``jlPyConvert(type, pyobj)``\  converts the Python object pyobj to the Julia \ ``type``\  'type'.
+  \ :code:`jlPyConvert(type, pyobj)`\  converts the Python object pyobj to the Julia \ :code:`type`\  'type'.
 
 .. _l4a4c4f626a5079-6a6c5079446f63756d656e746174696f6e:
 
@@ -182,7 +182,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jlPyDocumentation
 
 :spadfun:`jlPyDocumentation`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ ``jlPyDocumentation(obj)``\  displays the Python documentation for the Python object \ ``obj``\ . Use \ ``'q'``\  followed by ENTER to quit.
+  \ :code:`jlPyDocumentation(obj)`\  displays the Python documentation for the Python object \ :code:`obj`\ . Use \ :code:`'q'`\  followed by ENTER to quit.
 
 .. _l4a4c4f626a5079-6a6c5079496d706f7274:
 
@@ -190,7 +190,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jlPyImport
 
 :spadfun:`jlPyImport`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jlPyImport(mod)``\  imports the Python module \ ``mod``\  in the Julia Python environment.
+  \ :code:`jlPyImport(mod)`\  imports the Python module \ :code:`mod`\  in the Julia Python environment.
 
 .. _l4a4c4f626a5079-6a6c526566:
 
@@ -218,7 +218,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jpyobj
 
 :spadfun:`jpyobj`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jpyobj(str)``\  coerces the string \ ``str``\  to a Julia Python object. Use jlDisplay(pyobj) to display the Python object pyobj.
+  \ :code:`jpyobj(str)`\  coerces the string \ :code:`str`\  to a Julia Python object. Use jlDisplay(pyobj) to display the Python object pyobj.
 
 .. _l4a4c4f626a5079-6c61746578:
 

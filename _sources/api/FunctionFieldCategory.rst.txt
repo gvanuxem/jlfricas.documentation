@@ -112,7 +112,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; absolutelyIrreducible?
 
 :spadfun:`absolutelyIrreducible?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``absolutelyIrreducible?()``\  tests if the curve is absolutely irreducible.
+  \ :code:`absolutelyIrreducible?()`\  tests if the curve is absolutely irreducible.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-616c6753706c697453696d706c65:
 
@@ -120,7 +120,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; algSplitSimple
 
 :spadfun:`algSplitSimple`\: (%, UP -> UP) -> Record(num: %, den: UP, derivden: UP, gd: UP) 
-  \ ``algSplitSimple(f, D)``\  returns \ ``[h, d, d', g]``\  such that \ ``f=h/d``\ , \ ``h``\  is integral at all the normal places with respect to \ ``D``\ , \ ``d' = Dd``\ , \ ``g = gcd(d, discriminant())``\  and \ ``D``\  is the derivation to use. \ ``f``\  must have at most simple finite poles.
+  \ :code:`algSplitSimple(f, D)`\  returns \ :code:`[h, d, d', g]`\  such that \ :code:`f=h/d`\ , \ :code:`h`\  is integral at all the normal places with respect to \ :code:`D`\ , \ :code:`d' = Dd`\ , \ :code:`g = gcd(d, discriminant())`\  and \ :code:`D`\  is the derivation to use. \ :code:`f`\  must have at most simple finite poles.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-616e6e6968696c6174653f:
 
@@ -153,14 +153,14 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; branchPoint?
 
 :spadfun:`branchPoint?`\: F -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``branchPoint?(a)``\  tests whether \ ``x = a``\  is a branch point.
+  \ :code:`branchPoint?(a)`\  tests whether \ :code:`x = a`\  is a branch point.
 
 
 .. index::
    pair: FunctionFieldCategory; branchPoint?
 
 :spadfun:`branchPoint?`\: UP -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``branchPoint?(p)``\  tests whether \ ``p(x) = 0``\  is a branch point.
+  \ :code:`branchPoint?(p)`\  tests whether \ :code:`p(x) = 0`\  is a branch point.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-6272616e6368506f696e744174496e66696e6974793f:
 
@@ -168,7 +168,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; branchPointAtInfinity?
 
 :spadfun:`branchPointAtInfinity?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``branchPointAtInfinity?()``\  tests if there is a branch point at infinity.
+  \ :code:`branchPointAtInfinity?()`\  tests if there is a branch point at infinity.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-6368617261637465726973746963:
 
@@ -221,7 +221,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; complementaryBasis
 
 :spadfun:`complementaryBasis`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``complementaryBasis(b1, ..., bn)``\  returns the complementary basis \ ``(b1', ..., bn')``\  of \ ``(b1, ..., bn)``\ .
+  \ :code:`complementaryBasis(b1, ..., bn)`\  returns the complementary basis \ :code:`(b1', ..., bn')`\  of \ :code:`(b1, ..., bn)`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-636f6e646974696f6e50:
 
@@ -352,7 +352,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; differentiate
 
 :spadfun:`differentiate`\: (%, UP -> UP) -> % 
-  \ ``differentiate(x, d)``\  extends the derivation \ ``d``\  from UP to \$ and applies it to \ ``x``\ .
+  \ :code:`differentiate(x, d)`\  extends the derivation \ :code:`d`\  from UP to \$ and applies it to \ :code:`x`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-64697363726574654c6f67:
 
@@ -383,7 +383,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; elliptic
 
 :spadfun:`elliptic`\: () -> Union(UP, failed) 
-  \ ``elliptic()``\  returns \ ``p(x)``\  if the curve is the elliptic defined by \ ``y^2 = p(x)``\ , "failed" otherwise.
+  \ :code:`elliptic()`\  returns \ :code:`p(x)`\  if the curve is the elliptic defined by \ :code:`y^2 = p(x)`\ , "failed" otherwise.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-656c74:
 
@@ -391,7 +391,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; elt
 
 :spadfun:`elt`\: (%, F, F) -> F 
-  \ ``elt(f, a, b)``\  or \ ``f``\ (a, \ ``b``\ ) returns the value of \ ``f``\  at the point \ ``(x = a, y = b)``\  if it is not singular.
+  \ :code:`elt(f, a, b)`\  or \ :code:`f`\ (a, \ :code:`b`\ ) returns the value of \ :code:`f`\  at the point \ :code:`(x = a, y = b)`\  if it is not singular.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-656e756d6572617465:
 
@@ -467,7 +467,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; genus
 
 :spadfun:`genus`\: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``genus()``\  returns the genus of one absolutely irreducible component
+  \ :code:`genus()`\  returns the genus of one absolutely irreducible component
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-68617368:
 
@@ -485,7 +485,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; hyperelliptic
 
 :spadfun:`hyperelliptic`\: () -> Union(UP, failed) 
-  \ ``hyperelliptic()``\  returns \ ``p(x)``\  if the curve is the hyperelliptic defined by \ ``y^2 = p(x)``\ , "failed" otherwise.
+  \ :code:`hyperelliptic()`\  returns \ :code:`p(x)`\  if the curve is the hyperelliptic defined by \ :code:`y^2 = p(x)`\ , "failed" otherwise.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e646578:
 
@@ -503,21 +503,21 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integral?
 
 :spadfun:`integral?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integral?(f)``\  tests if \ ``f``\  is integral over \ ``k[x]``\ .
+  \ :code:`integral?(f)`\  tests if \ :code:`f`\  is integral over \ :code:`k[x]`\ .
 
 
 .. index::
    pair: FunctionFieldCategory; integral?
 
 :spadfun:`integral?`\: (%, F) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integral?(f, a)``\  tests whether \ ``f``\  is locally integral at \ ``x = a``\ .
+  \ :code:`integral?(f, a)`\  tests whether \ :code:`f`\  is locally integral at \ :code:`x = a`\ .
 
 
 .. index::
    pair: FunctionFieldCategory; integral?
 
 :spadfun:`integral?`\: (%, UP) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integral?(f, p)``\  tests whether \ ``f``\  is locally integral at \ ``p(x) = 0``\ .
+  \ :code:`integral?(f, p)`\  tests whether \ :code:`f`\  is locally integral at \ :code:`p(x) = 0`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4174496e66696e6974793f:
 
@@ -525,7 +525,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralAtInfinity?
 
 :spadfun:`integralAtInfinity?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integralAtInfinity?(f)``\  tests if \ ``f``\  is locally integral at infinity.
+  \ :code:`integralAtInfinity?(f)`\  tests if \ :code:`f`\  is locally integral at infinity.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4261736973:
 
@@ -533,7 +533,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralBasis
 
 :spadfun:`integralBasis`\: () -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``integralBasis()``\  returns the integral basis for the curve.
+  \ :code:`integralBasis()`\  returns the integral basis for the curve.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c42617369734174496e66696e697479:
 
@@ -541,7 +541,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralBasisAtInfinity
 
 :spadfun:`integralBasisAtInfinity`\: () -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``integralBasisAtInfinity()``\  returns the local integral basis at infinity.
+  \ :code:`integralBasisAtInfinity()`\  returns the local integral basis at infinity.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c436f6f7264696e61746573:
 
@@ -549,7 +549,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralCoordinates
 
 :spadfun:`integralCoordinates`\: % -> Record(num: \ :ref:`Vector <l566563746f72>`\  UP, den: UP) 
-  \ ``integralCoordinates(f)``\  returns \ ``[[A1, ..., An], D]``\  such that \ ``f = (A1 w1 +...+ An wn) / D``\  where \ ``(w1, ..., wn)``\  is the integral basis returned by \ ``integralBasis()``\ .
+  \ :code:`integralCoordinates(f)`\  returns \ :code:`[[A1, ..., An], D]`\  such that \ :code:`f = (A1 w1 +...+ An wn) / D`\  where \ :code:`(w1, ..., wn)`\  is the integral basis returned by \ :code:`integralBasis()`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c44657269766174696f6e4d6174726978:
 
@@ -557,7 +557,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralDerivationMatrix
 
 :spadfun:`integralDerivationMatrix`\: (UP -> UP) -> Record(num: \ :ref:`Matrix <l4d6174726978>`\  UP, den: UP) 
-  \ ``integralDerivationMatrix(d)``\  extends the derivation \ ``d``\  from UP to \$ and returns (\ ``M``\ , \ ``Q``\ ) such that the i^th row of \ ``M``\  divided by \ ``Q``\  form the coordinates of \ ``d(wi)``\  with respect to \ ``(w1, ..., wn)``\  where \ ``(w1, ..., wn)``\  is the integral basis returned by integralBasis().
+  \ :code:`integralDerivationMatrix(d)`\  extends the derivation \ :code:`d`\  from UP to \$ and returns (\ :code:`M`\ , \ :code:`Q`\ ) such that the i^th row of \ :code:`M`\  divided by \ :code:`Q`\  form the coordinates of \ :code:`d(wi)`\  with respect to \ :code:`(w1, ..., wn)`\  where \ :code:`(w1, ..., wn)`\  is the integral basis returned by integralBasis().
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4d6174726978:
 
@@ -565,7 +565,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralMatrix
 
 :spadfun:`integralMatrix`\: () -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP 
-  \ ``integralMatrix()``\  returns \ ``M``\  such that \ ``(w1, ..., wn) = M (1, y, ..., y^(n-1))``\ , where \ ``(w1, ..., wn)``\  is the integral basis of \ :ref:`integralBasis <l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4261736973>`\ .
+  \ :code:`integralMatrix()`\  returns \ :code:`M`\  such that \ :code:`(w1, ..., wn) = M (1, y, ..., y^(n-1))`\ , where \ :code:`(w1, ..., wn)`\  is the integral basis of \ :ref:`integralBasis <l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4261736973>`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4d61747269784174496e66696e697479:
 
@@ -573,7 +573,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralMatrixAtInfinity
 
 :spadfun:`integralMatrixAtInfinity`\: () -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP 
-  \ ``integralMatrixAtInfinity()``\  returns \ ``M``\  such that \ ``(v1, ..., vn) = M (1, y, ..., y^(n-1))``\  where \ ``(v1, ..., vn)``\  is the local integral basis at infinity returned by \ ``infIntBasis()``\ .
+  \ :code:`integralMatrixAtInfinity()`\  returns \ :code:`M`\  such that \ :code:`(v1, ..., vn) = M (1, y, ..., y^(n-1))`\  where \ :code:`(v1, ..., vn)`\  is the local integral basis at infinity returned by \ :code:`infIntBasis()`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c526570726573656e7473:
 
@@ -581,7 +581,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; integralRepresents
 
 :spadfun:`integralRepresents`\: (\ :ref:`Vector <l566563746f72>`\  UP, UP) -> % 
-  \ ``integralRepresents([A1, ..., An], D)``\  returns \ ``(A1 w1+...+An wn)/D``\  where \ ``(w1, ..., wn)``\  is the integral basis of \ ``integralBasis()``\ .
+  \ :code:`integralRepresents([A1, ..., An], D)`\  returns \ :code:`(A1 w1+...+An wn)/D`\  where \ :code:`(w1, ..., wn)`\  is the integral basis of \ :code:`integralBasis()`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e76:
 
@@ -594,7 +594,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; inverseIntegralMatrix
 
 :spadfun:`inverseIntegralMatrix`\: () -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP 
-  \ ``inverseIntegralMatrix()``\  returns \ ``M``\  such that \ ``M (w1, ..., wn) = (1, y, ..., y^(n-1))``\  where \ ``(w1, ..., wn)``\  is the integral basis of \ :ref:`integralBasis <l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4261736973>`\ .
+  \ :code:`inverseIntegralMatrix()`\  returns \ :code:`M`\  such that \ :code:`M (w1, ..., wn) = (1, y, ..., y^(n-1))`\  where \ :code:`(w1, ..., wn)`\  is the integral basis of \ :ref:`integralBasis <l46756e6374696f6e4669656c6443617465676f7279-696e74656772616c4261736973>`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-696e7665727365496e74656772616c4d61747269784174496e66696e697479:
 
@@ -602,7 +602,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; inverseIntegralMatrixAtInfinity
 
 :spadfun:`inverseIntegralMatrixAtInfinity`\: () -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP 
-  \ ``inverseIntegralMatrixAtInfinity()``\  returns \ ``M``\  such that \ ``M (v1, ..., vn) = (1, y, ..., y^(n-1))``\  where \ ``(v1, ..., vn)``\  is the local integral basis at infinity returned by \ ``infIntBasis()``\ .
+  \ :code:`inverseIntegralMatrixAtInfinity()`\  returns \ :code:`M`\  such that \ :code:`M (v1, ..., vn) = (1, y, ..., y^(n-1))`\  where \ :code:`(v1, ..., vn)`\  is the local integral basis at infinity returned by \ :code:`infIntBasis()`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-6c61746578:
 
@@ -668,7 +668,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; nonSingularModel
 
 :spadfun:`nonSingularModel`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  F if F has \ :ref:`Field <l4669656c64>`\ 
-  \ ``nonSingularModel(u)``\  returns the equations in \ ``u1``\ , ..., un of an affine non-singular model for the curve.
+  \ :code:`nonSingularModel(u)`\  returns the equations in \ :code:`u1`\ , ..., un of an affine non-singular model for the curve.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-6e6f726d:
 
@@ -681,7 +681,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; normalizeAtInfinity
 
 :spadfun:`normalizeAtInfinity`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``normalizeAtInfinity(v)``\  makes \ ``v``\  normal at infinity.
+  \ :code:`normalizeAtInfinity(v)`\  makes \ :code:`v`\  normal at infinity.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-6e756d6265724f66436f6d706f6e656e7473:
 
@@ -689,7 +689,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; numberOfComponents
 
 :spadfun:`numberOfComponents`\: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``numberOfComponents()``\  returns the number of absolutely irreducible components.
+  \ :code:`numberOfComponents()`\  returns the number of absolutely irreducible components.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-6f6e653f:
 
@@ -745,7 +745,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; primitivePart
 
 :spadfun:`primitivePart`\: % -> % 
-  \ ``primitivePart(f)``\  removes the content of the denominator and the common content of the numerator of \ ``f``\ .
+  \ :code:`primitivePart(f)`\  removes the content of the denominator and the common content of the numerator of \ :code:`f`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-7072696e636970616c496465616c:
 
@@ -763,14 +763,14 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; ramified?
 
 :spadfun:`ramified?`\: F -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``ramified?(a)``\  tests whether \ ``x = a``\  is ramified.
+  \ :code:`ramified?(a)`\  tests whether \ :code:`x = a`\  is ramified.
 
 
 .. index::
    pair: FunctionFieldCategory; ramified?
 
 :spadfun:`ramified?`\: UP -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``ramified?(p)``\  tests whether \ ``p(x) = 0``\  is ramified.
+  \ :code:`ramified?(p)`\  tests whether \ :code:`p(x) = 0`\  is ramified.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-72616d69666965644174496e66696e6974793f:
 
@@ -778,7 +778,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; ramifiedAtInfinity?
 
 :spadfun:`ramifiedAtInfinity?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``ramifiedAtInfinity?()``\  tests if infinity is ramified.
+  \ :code:`ramifiedAtInfinity?()`\  tests if infinity is ramified.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-72616e646f6d:
 
@@ -796,7 +796,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; rationalPoint?
 
 :spadfun:`rationalPoint?`\: (F, F) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``rationalPoint?(a, b)``\  tests if \ ``(x=a, y=b)``\  is on the curve.
+  \ :code:`rationalPoint?(a, b)`\  tests if \ :code:`(x=a, y=b)`\  is on the curve.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-726174696f6e616c506f696e7473:
 
@@ -804,7 +804,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; rationalPoints
 
 :spadfun:`rationalPoints`\: () -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  F if F has \ :ref:`Finite <l46696e697465>`\ 
-  \ ``rationalPoints()``\  returns the list of all the affine rational points.
+  \ :code:`rationalPoints()`\  returns the list of all the affine rational points.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-7265636970:
 
@@ -826,7 +826,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; reduceBasisAtInfinity
 
 :spadfun:`reduceBasisAtInfinity`\: \ :ref:`Vector <l566563746f72>`\  % -> \ :ref:`Vector <l566563746f72>`\  % 
-  \ ``reduceBasisAtInfinity(b1, ..., bn)``\  returns \ ``(x^i * bj)``\  for all \ ``i``\ , \ ``j``\  such that \ ``x^i*bj``\  is locally integral at infinity.
+  \ :code:`reduceBasisAtInfinity(b1, ..., bn)`\  returns \ :code:`(x^i * bj)`\  for all \ :code:`i`\ , \ :code:`j`\  such that \ :code:`x^i*bj`\  is locally integral at infinity.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-7265647563656453797374656d:
 
@@ -874,7 +874,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; represents
 
 :spadfun:`represents`\: (\ :ref:`Vector <l566563746f72>`\  UP, UP) -> % 
-  \ ``represents([A0, ..., A(n-1)], D)``\  returns \ ``(A0 + A1 y +...+ A(n-1)*y^(n-1))/D``\ .
+  \ :code:`represents([A0, ..., A(n-1)], D)`\  returns \ :code:`(A0 + A1 y +...+ A(n-1)*y^(n-1))/D`\ .
 
 
 \ :ref:`represents <l4672616d65644d6f64756c65-726570726573656e7473>`\ \: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  UP -> % 
@@ -931,14 +931,14 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; singular?
 
 :spadfun:`singular?`\: F -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``singular?(a)``\  tests whether \ ``x = a``\  is singular.
+  \ :code:`singular?(a)`\  tests whether \ :code:`x = a`\  is singular.
 
 
 .. index::
    pair: FunctionFieldCategory; singular?
 
 :spadfun:`singular?`\: UP -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``singular?(p)``\  tests whether \ ``p(x) = 0``\  is singular.
+  \ :code:`singular?(p)`\  tests whether \ :code:`p(x) = 0`\  is singular.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-73696e67756c61724174496e66696e6974793f:
 
@@ -946,7 +946,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; singularAtInfinity?
 
 :spadfun:`singularAtInfinity?`\: () -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``singularAtInfinity?()``\  tests if there is a singularity at infinity.
+  \ :code:`singularAtInfinity?()`\  tests if there is a singularity at infinity.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-73697a65:
 
@@ -974,7 +974,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; special_order
 
 :spadfun:`special_order`\: (%, \ :ref:`List <l4c697374>`\  UP) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``special_order(f, lp)``\  computes sum of orders at special places, that is at infinite places and at places over zeros in polynomials in \ ``lp``\ . Elements of \ ``lp``\  must be relatively prime.
+  \ :code:`special_order(f, lp)`\  computes sum of orders at special places, that is at infinite places and at places over zeros in polynomials in \ :code:`lp`\ . Elements of \ :code:`lp`\  must be relatively prime.
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-73717561726546726565:
 
@@ -1036,7 +1036,7 @@ This category is a model for the function field of a plane algebraic curve.
    pair: FunctionFieldCategory; yCoordinates
 
 :spadfun:`yCoordinates`\: % -> Record(num: \ :ref:`Vector <l566563746f72>`\  UP, den: UP) 
-  \ ``yCoordinates(f)``\  returns \ ``[[A1, ..., An], D]``\  such that \ ``f = (A1 + A2 y +...+ An y^(n-1)) / D``\ .
+  \ :code:`yCoordinates(f)`\  returns \ :code:`[[A1, ..., An], D]`\  such that \ :code:`f = (A1 + A2 y +...+ An y^(n-1)) / D`\ .
 
 .. _l46756e6374696f6e4669656c6443617465676f7279-7a65726f3f:
 

@@ -10,7 +10,7 @@ ComplexCategory R
 * R: \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
 
 
-This category represents the extension of a ring by a square root of \ ``-1``\ .
+This category represents the extension of a ring by a square root of \ :code:`-1`\ .
 
 
 .. _l436f6d706c657843617465676f7279-30:
@@ -116,7 +116,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; abs
 
 :spadfun:`abs`\: % -> % if R has \ :ref:`RealNumberSystem <l5265616c4e756d62657253797374656d>`\ 
-  \ ``abs(x)``\  returns the absolute value of \ ``x``\  = sqrt(norm(\ ``x``\ )).
+  \ :code:`abs(x)`\  returns the absolute value of \ :code:`x`\  = sqrt(norm(\ :code:`x`\ )).
 
 .. _l436f6d706c657843617465676f7279-61636f73:
 
@@ -164,7 +164,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; argument
 
 :spadfun:`argument`\: % -> R if R has \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\ 
-  \ ``argument(x)``\  returns the angle made by (1, 0) and \ ``x``\ .
+  \ :code:`argument(x)`\  returns the angle made by (1, 0) and \ :code:`x`\ .
 
 .. _l436f6d706c657843617465676f7279-61736563:
 
@@ -262,7 +262,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; complex
 
 :spadfun:`complex`\: (R, R) -> % 
-  \ ``complex(x, y)``\  constructs \ ``x``\  + \%i*y.
+  \ :code:`complex(x, y)`\  constructs \ :code:`x`\  + \%i*y.
 
 .. _l436f6d706c657843617465676f7279-636f6e646974696f6e50:
 
@@ -275,7 +275,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; conjugate
 
 :spadfun:`conjugate`\: % -> % 
-  \ ``conjugate(x + \%i y)``\  returns \ ``x``\  - \%\ ``i``\  \ ``y``\ .
+  \ :code:`conjugate(x + \%i y)`\  returns \ :code:`x`\  - \%\ :code:`i`\  \ :code:`y`\ .
 
 .. _l436f6d706c657843617465676f7279-636f6e76657274:
 
@@ -525,7 +525,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; exquo
 
 :spadfun:`exquo`\: (%, R) -> Union(%, failed) if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``exquo(x, r)``\  returns the exact quotient of \ ``x``\  by \ ``r``\ , or "failed" if \ ``r``\  does not divide \ ``x``\  exactly.
+  \ :code:`exquo(x, r)`\  returns the exact quotient of \ :code:`x`\  by \ :code:`r`\ , or "failed" if \ :code:`r`\  does not divide \ :code:`x`\  exactly.
 
 .. _l436f6d706c657843617465676f7279-657874656e6465644575636c696465616e:
 
@@ -591,7 +591,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; imag
 
 :spadfun:`imag`\: % -> R 
-  \ ``imag(x)``\  returns imaginary part of \ ``x``\ .
+  \ :code:`imag(x)`\  returns imaginary part of \ :code:`x`\ .
 
 .. _l436f6d706c657843617465676f7279-696d6167696e617279:
 
@@ -599,7 +599,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; imaginary
 
 :spadfun:`imaginary`\: () -> % 
-  \ ``imaginary()``\  = sqrt(\ ``-1``\ ) = \%\ ``i``\ .
+  \ :code:`imaginary()`\  = sqrt(\ :code:`-1`\ ) = \%\ :code:`i`\ .
 
 .. _l436f6d706c657843617465676f7279-696e646578:
 
@@ -690,7 +690,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; norm
 
 :spadfun:`norm`\: % -> R 
-  \ ``norm(x)``\  returns \ ``x``\  * conjugate(\ ``x``\ )
+  \ :code:`norm(x)`\  returns \ :code:`x`\  * conjugate(\ :code:`x`\ )
 
 .. _l436f6d706c657843617465676f7279-6e7468526f6f74:
 
@@ -741,7 +741,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; polarCoordinates
 
 :spadfun:`polarCoordinates`\: % -> Record(r: R, phi: R) if R has \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\  and R has \ :ref:`RealNumberSystem <l5265616c4e756d62657253797374656d>`\ 
-  \ ``polarCoordinates(x)``\  returns (\ ``r``\ , phi) such that \ ``x``\  = \ ``r``\  * exp(\%\ ``i``\  * phi).
+  \ :code:`polarCoordinates(x)`\  returns (\ :code:`r`\ , phi) such that \ :code:`x`\  = \ :code:`r`\  * exp(\%\ :code:`i`\  * phi).
 
 .. _l436f6d706c657843617465676f7279-7072696d653f:
 
@@ -793,7 +793,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; rational?
 
 :spadfun:`rational?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``rational?(x)``\  tests if \ ``x``\  is a rational number.
+  \ :code:`rational?(x)`\  tests if \ :code:`x`\  is a rational number.
 
 .. _l436f6d706c657843617465676f7279-726174696f6e616c:
 
@@ -801,7 +801,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; rational
 
 :spadfun:`rational`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``rational(x)``\  returns \ ``x``\  as a rational number. Error: if \ ``x``\  is not a rational number.
+  \ :code:`rational(x)`\  returns \ :code:`x`\  as a rational number. Error: if \ :code:`x`\  is not a rational number.
 
 .. _l436f6d706c657843617465676f7279-726174696f6e616c496643616e:
 
@@ -809,7 +809,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; rationalIfCan
 
 :spadfun:`rationalIfCan`\: % -> Union(\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``rationalIfCan(x)``\  returns \ ``x``\  as a rational number, or "failed" if \ ``x``\  is not a rational number.
+  \ :code:`rationalIfCan(x)`\  returns \ :code:`x`\  as a rational number, or "failed" if \ :code:`x`\  is not a rational number.
 
 .. _l436f6d706c657843617465676f7279-7265616c:
 
@@ -817,7 +817,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; real
 
 :spadfun:`real`\: % -> R 
-  \ ``real(x)``\  returns real part of \ ``x``\ .
+  \ :code:`real(x)`\  returns real part of \ :code:`x`\ .
 
 .. _l436f6d706c657843617465676f7279-7265636970:
 
@@ -969,7 +969,7 @@ This category represents the extension of a ring by a square root of \ ``-1``\ .
    pair: ComplexCategory; sqrt
 
 :spadfun:`sqrt`\: % -> % if R has \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\  and R has \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\  or R has \ :ref:`Field <l4669656c64>`\  and R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\  and R has \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
-  \ ``sqrt(x)``\  returns the square root of \ ``x``\ . The branch cut lies along the negative real axis, continuous with quadrant II.
+  \ :code:`sqrt(x)`\  returns the square root of \ :code:`x`\ . The branch cut lies along the negative real axis, continuous with quadrant II.
 
 .. _l436f6d706c657843617465676f7279-73717561726546726565:
 

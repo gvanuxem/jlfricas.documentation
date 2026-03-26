@@ -27,28 +27,28 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; ratDenom
 
 :spadfun:`ratDenom`\: (F, F) -> F 
-  \ ``ratDenom(f, a)``\  removes \ ``a``\  from the denominators in \ ``f``\  if \ ``a``\  is an algebraic kernel.
+  \ :code:`ratDenom(f, a)`\  removes \ :code:`a`\  from the denominators in \ :code:`f`\  if \ :code:`a`\  is an algebraic kernel.
 
 
 .. index::
    pair: AlgebraicManipulations; ratDenom
 
 :spadfun:`ratDenom`\: (F, \ :ref:`List <l4c697374>`\  F) -> F 
-  \ ``ratDenom(f, [a1, ..., an])``\  removes the \ ``ai``\ \ ``'s``\  which are algebraic kernels from the denominators in \ ``f``\ .
+  \ :code:`ratDenom(f, [a1, ..., an])`\  removes the \ :code:`ai`\ \ :code:`'s`\  which are algebraic kernels from the denominators in \ :code:`f`\ .
 
 
 .. index::
    pair: AlgebraicManipulations; ratDenom
 
 :spadfun:`ratDenom`\: (F, \ :ref:`List <l4c697374>`\  \ :ref:`Kernel <l4b65726e656c>`\  F) -> F 
-  \ ``ratDenom(f, [a1, ..., an])``\  removes the \ ``ai``\ \ ``'s``\  which are algebraic from the denominators in \ ``f``\ .
+  \ :code:`ratDenom(f, [a1, ..., an])`\  removes the \ :code:`ai`\ \ :code:`'s`\  which are algebraic from the denominators in \ :code:`f`\ .
 
 
 .. index::
    pair: AlgebraicManipulations; ratDenom
 
 :spadfun:`ratDenom`\: F -> F 
-  \ ``ratDenom(f)``\  rationalizes the denominators appearing in \ ``f``\  by moving all the algebraic quantities into the numerators.
+  \ :code:`ratDenom(f)`\  rationalizes the denominators appearing in \ :code:`f`\  by moving all the algebraic quantities into the numerators.
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726174506f6c79:
 
@@ -56,7 +56,7 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; ratPoly
 
 :spadfun:`ratPoly`\: F -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  F 
-  \ ``ratPoly(f)``\  returns a polynomial \ ``p``\  such that \ ``p``\  has no algebraic coefficients, and \ ``p(f) = 0``\ .
+  \ :code:`ratPoly(f)`\  returns a polynomial \ :code:`p`\  such that \ :code:`p`\  has no algebraic coefficients, and \ :code:`p(f) = 0`\ .
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726f6f74466163746f72:
 
@@ -64,7 +64,7 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; rootFactor
 
 :spadfun:`rootFactor`\: F -> F if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and F has \ :ref:`FunctionSpace <l46756e6374696f6e5370616365>`\  R and R has \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\  and R has \ :ref:`GcdDomain <l476364446f6d61696e>`\  and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``rootFactor(f)``\  transforms every radical of the form \ ``(a1*...*am)^(1/n)``\  appearing in \ ``f``\  into \ ``a1^(1/n)*...*am^(1/n)``\ . This transformation is not in general valid for all complex numbers \ ``a``\  and \ ``b``\ .
+  \ :code:`rootFactor(f)`\  transforms every radical of the form \ :code:`(a1*...*am)^(1/n)`\  appearing in \ :code:`f`\  into \ :code:`a1^(1/n)*...*am^(1/n)`\ . This transformation is not in general valid for all complex numbers \ :code:`a`\  and \ :code:`b`\ .
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726f6f744b657253696d70:
 
@@ -72,7 +72,7 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; rootKerSimp
 
 :spadfun:`rootKerSimp`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , F, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> F if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`GcdDomain <l476364446f6d61696e>`\  and F has \ :ref:`FunctionSpace <l46756e6374696f6e5370616365>`\  R and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``rootKerSimp(op, f, n)``\  should be local but conditional.
+  \ :code:`rootKerSimp(op, f, n)`\  should be local but conditional.
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726f6f74506f776572:
 
@@ -80,7 +80,7 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; rootPower
 
 :spadfun:`rootPower`\: F -> F if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`GcdDomain <l476364446f6d61696e>`\  and F has \ :ref:`FunctionSpace <l46756e6374696f6e5370616365>`\  R and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``rootPower(f)``\  transforms every radical power of the form \ ``(a^(1/n))^m``\  into a simpler form if \ ``m``\  and \ ``n``\  have a common factor.
+  \ :code:`rootPower(f)`\  transforms every radical power of the form \ :code:`(a^(1/n))^m`\  into a simpler form if \ :code:`m`\  and \ :code:`n`\  have a common factor.
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726f6f7450726f64756374:
 
@@ -88,7 +88,7 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; rootProduct
 
 :spadfun:`rootProduct`\: F -> F if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`GcdDomain <l476364446f6d61696e>`\  and F has \ :ref:`FunctionSpace <l46756e6374696f6e5370616365>`\  R and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``rootProduct(f)``\  combines every product of the form \ ``(a^(1/n))^m * (a^(1/s))^t``\  into a single power of a root of \ ``a``\ , and transforms every radical power of the form \ ``(a^(1/n))^m``\  into a simpler form.
+  \ :code:`rootProduct(f)`\  combines every product of the form \ :code:`(a^(1/n))^m * (a^(1/s))^t`\  into a single power of a root of \ :code:`a`\ , and transforms every radical power of the form \ :code:`(a^(1/n))^m`\  into a simpler form.
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726f6f7453696d70:
 
@@ -96,7 +96,7 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; rootSimp
 
 :spadfun:`rootSimp`\: F -> F if R has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  and R has \ :ref:`GcdDomain <l476364446f6d61696e>`\  and F has \ :ref:`FunctionSpace <l46756e6374696f6e5370616365>`\  R and R has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  \ ``rootSimp(f)``\  transforms every radical of the form \ ``(a * b^(q*n+r))^(1/n)``\  appearing in \ ``f``\  into \ ``b^q * (a * b^r)^(1/n)``\ . This transformation is not in general valid for all complex numbers \ ``b``\ .
+  \ :code:`rootSimp(f)`\  transforms every radical of the form \ :code:`(a * b^(q*n+r))^(1/n)`\  appearing in \ :code:`f`\  into \ :code:`b^q * (a * b^r)^(1/n)`\ . This transformation is not in general valid for all complex numbers \ :code:`b`\ .
 
 .. _l416c676562726169634d616e6970756c6174696f6e73-726f6f7453706c6974:
 
@@ -104,6 +104,6 @@ AlgebraicManipulations provides functions to simplify and expand expressions inv
    pair: AlgebraicManipulations; rootSplit
 
 :spadfun:`rootSplit`\: F -> F 
-  \ ``rootSplit(f)``\  transforms every radical of the form \ ``(a/b)^(1/n)``\  appearing in \ ``f``\  into \ ``a^(1/n) / b^(1/n)``\ . This transformation is not in general valid for all complex numbers \ ``a``\  and \ ``b``\ .
+  \ :code:`rootSplit(f)`\  transforms every radical of the form \ :code:`(a/b)^(1/n)`\  appearing in \ :code:`f`\  into \ :code:`a^(1/n) / b^(1/n)`\ . This transformation is not in general valid for all complex numbers \ :code:`a`\  and \ :code:`b`\ .
 
 

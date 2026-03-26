@@ -14,7 +14,7 @@ CliffordAlgebra(n, K, bLin)
 * bLin: \ :ref:`SquareMatrix <l5371756172654d6174726978>`\ (n, K)
 
 
-CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^n``\  over \ ``K``\ , given a bilinear form bLin on \ ``K^n``\ .   Examples of Clifford Algebras are: gaussians, quaternions, exterior algebras and spin algebras.
+CliffordAlgebra(\ :code:`n`\ , \ :code:`K`\ , bLin) defines a module of dimension \ :code:`2^n`\  over \ :code:`K`\ , given a bilinear form bLin on \ :code:`K^n`\ .   Examples of Clifford Algebras are: gaussians, quaternions, exterior algebras and spin algebras.
 
 
 .. _l436c6966666f7264416c6765627261-30:
@@ -135,7 +135,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; coefficient
 
 :spadfun:`coefficient`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> K 
-  \ ``coefficient(x, [i1, i2, ..., iN])``\  extracts the coefficient of \ ``e(i1)*e(i2)*...*e(iN)``\  in \ ``x``\ .
+  \ :code:`coefficient(x, [i1, i2, ..., iN])`\  extracts the coefficient of \ :code:`e(i1)*e(i2)*...*e(iN)`\  in \ :code:`x`\ .
 
 .. _l436c6966666f7264416c6765627261-636f65726365:
 
@@ -161,7 +161,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; conj
 
 :spadfun:`conj`\: % -> % 
-  implements Clifford conjugate for a multivector by involution and reverse of each term separately using: grade: 0 1 2 3... multi: 1 \ ``-1``\  \ ``-1``\  1...
+  implements Clifford conjugate for a multivector by involution and reverse of each term separately using: grade: 0 1 2 3... multi: 1 \ :code:`-1`\  \ :code:`-1`\  1...
 
 .. _l436c6966666f7264416c6765627261-65:
 
@@ -169,7 +169,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; e
 
 :spadfun:`e`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ ``e(n)``\  produces phi(e_i) where e_i is \ ``i``\ -th basis vector in \ ``K^n``\  and phi is canonical embedding of \ ``K^n``\  into Clifford algebra.
+  \ :code:`e(n)`\  produces phi(e_i) where e_i is \ :code:`i`\ -th basis vector in \ :code:`K^n`\  and phi is canonical embedding of \ :code:`K^n`\  into Clifford algebra.
 
 .. _l436c6966666f7264416c6765627261-6565:
 
@@ -185,7 +185,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; eFromBinaryMap
 
 :spadfun:`eFromBinaryMap`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ ``eFromBinaryMap(n)``\  sets the appropriate Grassmann basis, for example: eFromBinaryMap(0) = 1 (scalar) eFromBinaryMap(1) = \ ``e1``\  eFromBinaryMap(2) = \ ``e2``\  eFromBinaryMap(3) = e1/\e2
+  \ :code:`eFromBinaryMap(n)`\  sets the appropriate Grassmann basis, for example: eFromBinaryMap(0) = 1 (scalar) eFromBinaryMap(1) = \ :code:`e1`\  eFromBinaryMap(2) = \ :code:`e2`\  eFromBinaryMap(3) = e1/\e2
 
 .. _l436c6966666f7264416c6765627261-6550736575646f7363616c6172:
 
@@ -201,7 +201,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; grade
 
 :spadfun:`grade`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  return the max grade of multivector, for example 1 is grade 0 \ ``e1``\  is grade 1 e1/\e2 is grade 2 and so on
+  return the max grade of multivector, for example 1 is grade 0 \ :code:`e1`\  is grade 1 e1/\e2 is grade 2 and so on
 
 .. _l436c6966666f7264416c6765627261-6772616465496e766f6c7574696f6e:
 
@@ -209,7 +209,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; gradeInvolution
 
 :spadfun:`gradeInvolution`\: % -> % 
-  \ ``x``\  = ((\ ``-1``\ )^grade(\ ``x``\ ))\ ``*x``\ 
+  \ :code:`x`\  = ((\ :code:`-1`\ )^grade(\ :code:`x`\ ))\ :code:`*x`\ 
 
 .. _l436c6966666f7264416c6765627261-6c61746578:
 
@@ -244,7 +244,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; monomial
 
 :spadfun:`monomial`\: (K, \ :ref:`List <l4c697374>`\  \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``monomial(c, [i1, i2, ..., iN])``\  produces the value given by \ ``c*e(i1)*e(i2)*...*e(iN)``\ .
+  \ :code:`monomial(c, [i1, i2, ..., iN])`\  produces the value given by \ :code:`c*e(i1)*e(i2)*...*e(iN)`\ .
 
 .. _l436c6966666f7264416c6765627261-6d756c7469766563746f72:
 
@@ -283,7 +283,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; recip
 
 :spadfun:`recip`\: % -> Union(%, failed) 
-  \ ``recip(x)``\  computes the multiplicative inverse of \ ``x``\  or "failed" if \ ``x``\  is not invertible.
+  \ :code:`recip(x)`\  computes the multiplicative inverse of \ :code:`x`\  or "failed" if \ :code:`x`\  is not invertible.
 
 .. _l436c6966666f7264416c6765627261-72657665727365:
 
@@ -291,7 +291,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; reverse
 
 :spadfun:`reverse`\: % -> % 
-  implements reverse for a single term by using: grade: 0 1 2 3... multi: 1 1 \ ``-1``\  \ ``-1``\ ...
+  implements reverse for a single term by using: grade: 0 1 2 3... multi: 1 1 \ :code:`-1`\  \ :code:`-1`\ ...
 
 .. _l436c6966666f7264416c6765627261-7269676874506f776572:
 
@@ -318,7 +318,7 @@ CliffordAlgebra(\ ``n``\ , \ ``K``\ , bLin) defines a module of dimension \ ``2^
    pair: CliffordAlgebra; setMode
 
 :spadfun:`setMode`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``setMode(s, b)``\  allows override of parameters such as orthogonal used for debugging
+  \ :code:`setMode(s, b)`\  allows override of parameters such as orthogonal used for debugging
 
 .. _l436c6966666f7264416c6765627261-7375627472616374496643616e:
 

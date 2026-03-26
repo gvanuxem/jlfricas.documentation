@@ -10,7 +10,7 @@ Factored R
 * R: \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
 
 
-\ :ref:`Factored <l466163746f726564>`\  creates a domain whose objects are kept in factored form as long as possible. Thus certain operations like multiplication and \ ``gcd``\  are relatively easy to do. Others, like addition require somewhat more work, and unless the argument domain provides a factor function, the result may not be completely factored. Each object consists of a unit and a list of factors, where a factor has a member of \ ``R``\  (the "base"), and exponent and a flag indicating what is known about the base. A flag may be one of "nil", "sqfr", "irred" or "prime", which respectively mean that nothing is known about the base, it is square-free, it is irreducible, or it is prime. The current restriction to integral domains allows simplification to be performed without worrying about multiplication order.
+\ :ref:`Factored <l466163746f726564>`\  creates a domain whose objects are kept in factored form as long as possible. Thus certain operations like multiplication and \ :code:`gcd`\  are relatively easy to do. Others, like addition require somewhat more work, and unless the argument domain provides a factor function, the result may not be completely factored. Each object consists of a unit and a list of factors, where a factor has a member of \ :code:`R`\  (the "base"), and exponent and a flag indicating what is known about the base. A flag may be one of "nil", "sqfr", "irred" or "prime", which respectively mean that nothing is known about the base, it is square-free, it is irreducible, or it is prime. The current restriction to integral domains allows simplification to be performed without worrying about multiplication order.
 
 
 .. _l466163746f726564-30:
@@ -275,7 +275,7 @@ Factored R
    pair: Factored; expand
 
 :spadfun:`expand`\: % -> R 
-  \ ``expand(f)``\  multiplies the unit and factors together, yielding an "unfactored" object. Note: this is purposely not called \ :spadfun:`coerce`\  which would cause the interpreter to do this automatically.
+  \ :code:`expand(f)`\  multiplies the unit and factors together, yielding an "unfactored" object. Note: this is purposely not called \ :spadfun:`coerce`\  which would cause the interpreter to do this automatically.
 
 .. _l466163746f726564-657871756f:
 
@@ -293,7 +293,7 @@ Factored R
    pair: Factored; factorList
 
 :spadfun:`factorList`\: % -> \ :ref:`List <l4c697374>`\  Record(flag: Union(nil, sqfr, irred, prime), factor: R, exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``factorList(u)``\  returns the list of factors with flags (for use by factoring code).
+  \ :code:`factorList(u)`\  returns the list of factors with flags (for use by factoring code).
 
 .. _l466163746f726564-666163746f7273:
 
@@ -301,7 +301,7 @@ Factored R
    pair: Factored; factors
 
 :spadfun:`factors`\: % -> \ :ref:`List <l4c697374>`\  Record(factor: R, exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) 
-  \ ``factors(u)``\  returns a list of the factors in a form suitable for iteration. That is, it returns a list where each element is a record containing a base and exponent. The original object is the product of all the factors and the unit (which can be extracted by \ ``unit(u)``\ ).
+  \ :code:`factors(u)`\  returns a list of the factors in a form suitable for iteration. That is, it returns a list where each element is a record containing a base and exponent. The original object is the product of all the factors and the unit (which can be extracted by \ :code:`unit(u)`\ ).
 
 .. _l466163746f726564-666c6167466163746f72:
 
@@ -309,7 +309,7 @@ Factored R
    pair: Factored; flagFactor
 
 :spadfun:`flagFactor`\: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , Union(nil, sqfr, irred, prime)) -> % 
-  \ ``flagFactor(base, exponent, flag)``\  creates a factored object with a single factor whose \ ``base``\  is asserted to be properly described by the information flag.
+  \ :code:`flagFactor(base, exponent, flag)`\  creates a factored object with a single factor whose \ :code:`base`\  is asserted to be properly described by the information flag.
 
 .. _l466163746f726564-676364:
 
@@ -331,7 +331,7 @@ Factored R
    pair: Factored; irreducibleFactor
 
 :spadfun:`irreducibleFactor`\: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``irreducibleFactor(base, exponent)``\  creates a factored object with a single factor whose \ ``base``\  is asserted to be irreducible (flag = "irred").
+  \ :code:`irreducibleFactor(base, exponent)`\  creates a factored object with a single factor whose \ :code:`base`\  is asserted to be irreducible (flag = "irred").
 
 .. _l466163746f726564-6c61746578:
 
@@ -372,7 +372,7 @@ Factored R
    pair: Factored; makeFR
 
 :spadfun:`makeFR`\: (R, \ :ref:`List <l4c697374>`\  Record(flag: Union(nil, sqfr, irred, prime), factor: R, exponent: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )) -> % 
-  \ ``makeFR(unit, listOfFactors)``\  creates a factored object (for use by factoring code).
+  \ :code:`makeFR(unit, listOfFactors)`\  creates a factored object (for use by factoring code).
 
 .. _l466163746f726564-6d6170:
 
@@ -380,7 +380,7 @@ Factored R
    pair: Factored; map
 
 :spadfun:`map`\: (R -> R, %) -> % 
-  \ ``map(fn, u)``\  maps the function \userfun{\ ``fn``\ } across the factors of \ ``u``\  and creates a new factored object. Note: this clears the information flags (sets them to "nil") because the effect of \userfun{\ ``fn``\ } is clearly not known in general.
+  \ :code:`map(fn, u)`\  maps the function \userfun{\ :code:`fn`\ } across the factors of \ :code:`u`\  and creates a new factored object. Note: this clears the information flags (sets them to "nil") because the effect of \userfun{\ :code:`fn`\ } is clearly not known in general.
 
 .. _l466163746f726564-6d65726765466163746f7273:
 
@@ -388,7 +388,7 @@ Factored R
    pair: Factored; mergeFactors
 
 :spadfun:`mergeFactors`\: (%, %) -> % 
-  \ ``mergeFactors(u, v)``\  is used when the factorizations of \ ``u``\  and \ ``v``\  are known to be disjoint, e.g. resulting from a content/primitive part split. Essentially, it creates a new factored object by multiplying the units together and appending the lists of factors.
+  \ :code:`mergeFactors(u, v)`\  is used when the factorizations of \ :code:`u`\  and \ :code:`v`\  are known to be disjoint, e.g. resulting from a content/primitive part split. Essentially, it creates a new factored object by multiplying the units together and appending the lists of factors.
 
 .. _l466163746f726564-6e696c466163746f72:
 
@@ -396,7 +396,7 @@ Factored R
    pair: Factored; nilFactor
 
 :spadfun:`nilFactor`\: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``nilFactor(base, exponent)``\  creates a factored object with a single factor with no information about the kind of \ ``base``\  (flag = "nil").
+  \ :code:`nilFactor(base, exponent)`\  creates a factored object with a single factor with no information about the kind of \ :code:`base`\  (flag = "nil").
 
 .. _l466163746f726564-6e756d6265724f66466163746f7273:
 
@@ -404,7 +404,7 @@ Factored R
    pair: Factored; numberOfFactors
 
 :spadfun:`numberOfFactors`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``numberOfFactors(u)``\  returns the number of factors in \ ``u``\ .
+  \ :code:`numberOfFactors(u)`\  returns the number of factors in \ :code:`u`\ .
 
 .. _l466163746f726564-6f6e653f:
 
@@ -432,7 +432,7 @@ Factored R
    pair: Factored; primeFactor
 
 :spadfun:`primeFactor`\: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``primeFactor(base, exponent)``\  creates a factored object with a single factor whose \ ``base``\  is asserted to be prime (flag = "prime").
+  \ :code:`primeFactor(base, exponent)`\  creates a factored object with a single factor whose \ :code:`base`\  is asserted to be prime (flag = "prime").
 
 .. _l466163746f726564-726174696f6e616c3f:
 
@@ -440,7 +440,7 @@ Factored R
    pair: Factored; rational?
 
 :spadfun:`rational?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``rational?(u)``\  tests if \ ``u``\  is actually a rational number (see Fraction Integer).
+  \ :code:`rational?(u)`\  tests if \ :code:`u`\  is actually a rational number (see Fraction Integer).
 
 .. _l466163746f726564-726174696f6e616c:
 
@@ -448,7 +448,7 @@ Factored R
    pair: Factored; rational
 
 :spadfun:`rational`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``rational(u)``\  assumes \ ``u``\  is actually a rational number and does the conversion to rational number (see Fraction Integer).
+  \ :code:`rational(u)`\  assumes \ :code:`u`\  is actually a rational number and does the conversion to rational number (see Fraction Integer).
 
 .. _l466163746f726564-726174696f6e616c496643616e:
 
@@ -456,7 +456,7 @@ Factored R
    pair: Factored; rationalIfCan
 
 :spadfun:`rationalIfCan`\: % -> Union(\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , failed) if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ ``rationalIfCan(u)``\  returns a rational number if \ ``u``\  really is one, and "failed" otherwise.
+  \ :code:`rationalIfCan(u)`\  returns a rational number if \ :code:`u`\  really is one, and "failed" otherwise.
 
 .. _l466163746f726564-7265636970:
 
@@ -514,7 +514,7 @@ Factored R
    pair: Factored; sqfrFactor
 
 :spadfun:`sqfrFactor`\: (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``sqfrFactor(base, exponent)``\  creates a factored object with a single factor whose \ ``base``\  is asserted to be square-free (flag = "sqfr").
+  \ :code:`sqfrFactor(base, exponent)`\  creates a factored object with a single factor whose \ :code:`base`\  is asserted to be square-free (flag = "sqfr").
 
 .. _l466163746f726564-73717561726546726565:
 
@@ -542,7 +542,7 @@ Factored R
    pair: Factored; unit
 
 :spadfun:`unit`\: % -> R 
-  \ ``unit(u)``\  extracts the unit part of the factorization.
+  \ :code:`unit(u)`\  extracts the unit part of the factorization.
 
 .. _l466163746f726564-756e697443616e6f6e6963616c:
 
@@ -560,7 +560,7 @@ Factored R
    pair: Factored; unitNormalize
 
 :spadfun:`unitNormalize`\: % -> % 
-  \ ``unitNormalize(u)``\  normalizes the unit part of the factorization. For example, when working with factored integers, this operation will ensure that the bases are all positive integers.
+  \ :code:`unitNormalize(u)`\  normalizes the unit part of the factorization. For example, when working with factored integers, this operation will ensure that the bases are all positive integers.
 
 .. _l466163746f726564-7a65726f3f:
 

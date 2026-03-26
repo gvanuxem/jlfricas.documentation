@@ -28,21 +28,21 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; *
 
 :spadfun:`\*`\: (%, %) -> % 
-  \ ``a * b``\  is the matrix multiplication, not the element-wise multiplication. \ ``WS``\  error if dimensions are incompatible.
+  \ :code:`a * b`\  is the matrix multiplication, not the element-wise multiplication. \ :code:`WS`\  error if dimensions are incompatible.
 
 
 .. index::
    pair: WSMatrix; *
 
 :spadfun:`\*`\: (%, E) -> % 
-  \ ``x * r``\  is the right scalar multiple of the scalar \ ``r``\  and the matrix \ ``x``\ .
+  \ :code:`x * r`\  is the right scalar multiple of the scalar \ :code:`r`\  and the matrix \ :code:`x`\ .
 
 
 .. index::
    pair: WSMatrix; *
 
 :spadfun:`\*`\: (%, \ :ref:`WSVector <l5753566563746f72>`\  E) -> % 
-  \ ``x * c``\  is the product of the matrix \ ``x``\  and the column vector \ ``c``\ . Error: if the dimensions are incompatible.
+  \ :code:`x * c`\  is the product of the matrix \ :code:`x`\  and the column vector \ :code:`c`\ . Error: if the dimensions are incompatible.
 
 
 \ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (%, \ :ref:`WSVector <l5753566563746f72>`\  E) -> \ :ref:`WSVector <l5753566563746f72>`\  E 
@@ -53,21 +53,21 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; *
 
 :spadfun:`\*`\: (E, %) -> % 
-  \ ``r*x``\  is the left scalar multiple of the scalar \ ``r``\  and the matrix \ ``x``\ .
+  \ :code:`r*x`\  is the left scalar multiple of the scalar \ :code:`r`\  and the matrix \ :code:`x`\ .
 
 
 .. index::
    pair: WSMatrix; *
 
 :spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``n*a``\  scales the matrix a by \ ``n``\ .
+  \ :code:`n*a`\  scales the matrix a by \ :code:`n`\ .
 
 
 .. index::
    pair: WSMatrix; *
 
 :spadfun:`\*`\: (\ :ref:`WSVector <l5753566563746f72>`\  E, %) -> % 
-  \ ``r * x``\  is the product of the row vector \ ``r``\  and the matrix \ ``x``\ . Error: if the dimensions are incompatible.
+  \ :code:`r * x`\  is the product of the row vector \ :code:`r`\  and the matrix \ :code:`x`\ . Error: if the dimensions are incompatible.
 
 
 \ :ref:`\* <l4d617472697843617465676f7279-2a>`\ \: (\ :ref:`WSVector <l5753566563746f72>`\  E, %) -> \ :ref:`WSVector <l5753566563746f72>`\  E 
@@ -79,7 +79,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; +
 
 :spadfun:`+`\: (%, %) -> % 
-  \ ``a + b``\  is the matrix addition. \ ``WS``\  error if dimensions are incompatible.
+  \ :code:`a + b`\  is the matrix addition. \ :code:`WS`\  error if dimensions are incompatible.
 
 .. _l57534d6174726978-2d:
 
@@ -87,14 +87,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; -
 
 :spadfun:`-`\: % -> % 
-  \ ``-a``\  negates each element of the matrix a.
+  \ :code:`-a`\  negates each element of the matrix a.
 
 
 .. index::
    pair: WSMatrix; -
 
 :spadfun:`-`\: (%, %) -> % 
-  \ ``a - b``\  is the matrix subtraction. \ ``WS``\  error if dimensions are incompatible.
+  \ :code:`a - b`\  is the matrix subtraction. \ :code:`WS`\  error if dimensions are incompatible.
 
 .. _l57534d6174726978-2f:
 
@@ -116,14 +116,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; ^
 
 :spadfun:`^`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``a^n``\  is the matrix power by the non-negative integer \ ``n``\ .
+  \ :code:`a^n`\  is the matrix power by the non-negative integer \ :code:`n`\ .
 
 
 .. index::
    pair: WSMatrix; ^
 
 :spadfun:`^`\: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  \ ``a^n``\  is the matrix power by the positive integer \ ``n``\ .
+  \ :code:`a^n`\  is the matrix power by the positive integer \ :code:`n`\ .
 
 .. _l57534d6174726978-7e3d:
 
@@ -141,7 +141,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; adjoint
 
 :spadfun:`adjoint`\: % -> % 
-  \ ``adjoint(m)``\  returns the adjoint of \ ``m``\ , i.e. the conjugate transposition of \ ``m``\ .
+  \ :code:`adjoint(m)`\  returns the adjoint of \ :code:`m`\ , i.e. the conjugate transposition of \ :code:`m`\ .
 
 .. _l57534d6174726978-61646a7567617465:
 
@@ -149,7 +149,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; adjugate
 
 :spadfun:`adjugate`\: % -> % 
-  \ ``adjugate(m)``\  returns the adjugate of square \ ``m``\ .
+  \ :code:`adjugate(m)`\  returns the adjugate of square \ :code:`m`\ .
 
 .. _l57534d6174726978-616e746973796d6d65747269633f:
 
@@ -157,7 +157,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; antisymmetric?
 
 :spadfun:`antisymmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``antisymmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and antisymmetric (i.e. \ ``m[i, j] = -m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+  \ :code:`antisymmetric?(m)`\  returns \ :code:`true`\  if the matrix \ :code:`m`\  is square and antisymmetric (i.e. \ :code:`m[i, j] = -m[j, i]`\  for all \ :code:`i`\  and \ :code:`j`\ ) and \ :code:`false`\  otherwise.
 
 .. _l57534d6174726978-616e793f:
 
@@ -194,7 +194,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; cholesky
 
 :spadfun:`cholesky`\: % -> Record(l: %, u: %) 
-  \ ``cholesky(m)``\  computes the Cholesky decomposition of the square matrix \ ``m``\ .
+  \ :code:`cholesky(m)`\  computes the Cholesky decomposition of the square matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-636f65726365:
 
@@ -228,7 +228,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; column
 
 :spadfun:`column`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``column(mat,i)``\  returns the \ ``i``\ -th column.
+  \ :code:`column(mat,i)`\  returns the \ :code:`i`\ -th column.
 
 
 \ :ref:`column <l54776f44696d656e73696f6e616c417272617943617465676f7279-636f6c756d6e>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`WSVector <l5753566563746f72>`\  E 
@@ -274,7 +274,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; diagonal?
 
 :spadfun:`diagonal?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``diagonal?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and diagonal (i.e. all entries of \ ``m``\  not on the diagonal are zero) and \ ``false``\  otherwise.
+  \ :code:`diagonal?(m)`\  returns \ :code:`true`\  if the matrix \ :code:`m`\  is square and diagonal (i.e. all entries of \ :code:`m`\  not on the diagonal are zero) and \ :code:`false`\  otherwise.
 
 .. _l57534d6174726978-646961676f6e616c:
 
@@ -282,7 +282,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; diagonal
 
 :spadfun:`diagonal`\: % -> \ :ref:`WSVector <l5753566563746f72>`\  E 
-  \ ``diagonal(m)``\  returns the diagonal elements of \ ``m``\  as a vector.
+  \ :code:`diagonal(m)`\  returns the diagonal elements of \ :code:`m`\  as a vector.
 
 .. _l57534d6174726978-646961676f6e616c4d6174726978:
 
@@ -298,7 +298,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; diagonalMatrix
 
 :spadfun:`diagonalMatrix`\: \ :ref:`WSList <l57534c697374>`\  E -> % 
-  \ ``diagonalMatrix(l)``\  returns a diagonal matrix with elements of \ ``l``\  as diagonal elements.
+  \ :code:`diagonalMatrix(l)`\  returns a diagonal matrix with elements of \ :code:`l`\  as diagonal elements.
 
 .. _l57534d6174726978-646966666572656e636573:
 
@@ -316,7 +316,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; eigenSystem
 
 :spadfun:`eigenSystem`\: % -> Record(values: \ :ref:`WSVector <l5753566563746f72>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\ , vectors: \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) 
-  \ ``eigenSystem(m)``\  computes the spectral decomposition of the square matrix \ ``m``\ . It returns in a Record, the eigenvalues, selector 'values', and the eigenvectors selector 'vectors'.
+  \ :code:`eigenSystem(m)`\  computes the spectral decomposition of the square matrix \ :code:`m`\ . It returns in a Record, the eigenvalues, selector 'values', and the eigenvectors selector 'vectors'.
 
 .. _l57534d6174726978-656967656e76616c756573:
 
@@ -324,7 +324,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; eigenvalues
 
 :spadfun:`eigenvalues`\: % -> \ :ref:`WSVector <l5753566563746f72>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``eigenvalues(m)``\  returns the eigenvalues of the square matrix \ ``m``\ .
+  \ :code:`eigenvalues(m)`\  returns the eigenvalues of the square matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-656967656e766563746f7273:
 
@@ -332,7 +332,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; eigenvectors
 
 :spadfun:`eigenvectors`\: % -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``eigenvectors(m)``\  returns the eigenvectors of the square matrix \ ``m``\ .
+  \ :code:`eigenvectors(m)`\  returns the eigenvectors of the square matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-656c74:
 
@@ -344,7 +344,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> E 
-  \ ``elt(mat, m, n)``\  returns the element (\ ``m``\ ,\ ``n``\ ) of the matrix \ ``mat``\ .
+  \ :code:`elt(mat, m, n)`\  returns the element (\ :code:`m`\ ,\ :code:`n`\ ) of the matrix \ :code:`mat`\ .
 
 
 \ :ref:`elt <l54776f44696d656e73696f6e616c417272617943617465676f7279-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
@@ -457,7 +457,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; generalizedInverse
 
 :spadfun:`generalizedInverse`\: % -> % 
-  \ ``generalizedInverse(m)``\  computes the pseudo inverse of \ ``m``\  also known as Moore-Penrose inverse.
+  \ :code:`generalizedInverse(m)`\  computes the pseudo inverse of \ :code:`m`\  also known as Moore-Penrose inverse.
 
 .. _l57534d6174726978-68617368:
 
@@ -475,7 +475,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; hermitian?
 
 :spadfun:`hermitian?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``hermitian?(m)``\  checks whether or not \ ``m``\  is hermitian.
+  \ :code:`hermitian?(m)`\  checks whether or not \ :code:`m`\  is hermitian.
 
 .. _l57534d6174726978-68657373656e62657267:
 
@@ -483,7 +483,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; hessenberg
 
 :spadfun:`hessenberg`\: % -> Record(p: %, h: %) 
-  \ ``hessenberg(m)``\  computes the Hessenberg decomposition of the square matrix \ ``m``\ .
+  \ :code:`hessenberg(m)`\  computes the Hessenberg decomposition of the square matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-686f72697a436f6e636174:
 
@@ -519,7 +519,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; inverse
 
 :spadfun:`inverse`\: % -> % 
-  \ ``inverse(m)``\  computes the inverse of \ ``m``\ . For example: \example{m:=jWSMatrix("\{\{a, b\}, \{b, a\}\}")@WSMAT(WSEXPR)} \example{inverse m}
+  \ :code:`inverse(m)`\  computes the inverse of \ :code:`m`\ . For example: \example{m:=jWSMatrix("\{\{a, b\}, \{b, a\}\}")@WSMAT(WSEXPR)} \example{inverse m}
 
 
 \ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) if E has \ :ref:`Field <l4669656c64>`\ 
@@ -531,7 +531,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; invertIfCan
 
 :spadfun:`invertIfCan`\: % -> Union(%, failed) if E has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``invertIfCan(m)``\  returns the inverse of the matrix \ ``m``\ . If the matrix is not invertible, "failed" is returned. Error: if the matrix is not square.
+  \ :code:`invertIfCan(m)`\  returns the inverse of the matrix \ :code:`m`\ . If the matrix is not invertible, "failed" is returned. Error: if the matrix is not square.
 
 .. _l57534d6174726978-6a6c41626f7574:
 
@@ -655,7 +655,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; jordan
 
 :spadfun:`jordan`\: % -> Record(s: %, j: %) 
-  \ ``jordan(m)``\  computes the Jordan decomposition of the square matrix \ ``m``\ .
+  \ :code:`jordan(m)`\  computes the Jordan decomposition of the square matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-6a5753416767726567617465:
 
@@ -681,7 +681,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; jWSMatrix
 
 :spadfun:`jWSMatrix`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jWSMatrix(str)``\  constructs \ ``str``\  as a WSMatrix. \ ``str``\  must be in the \ ``WS``\  language (\ ``WS``\  list of \ ``WS``\  list(\ ``s``\ )).
+  \ :code:`jWSMatrix(str)`\  constructs \ :code:`str`\  as a WSMatrix. \ :code:`str`\  must be in the \ :code:`WS`\  language (\ :code:`WS`\  list of \ :code:`WS`\  list(\ :code:`s`\ )).
 
 .. _l57534d6174726978-6b726f6e65636b65725f70726f6431:
 
@@ -732,7 +732,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; linearSolve
 
 :spadfun:`linearSolve`\: (%, %) -> % 
-  \ ``linearSolve(mat, b)``\  finds \ ``x``\ , solution of the equation \ ``mat``\  * \ ``x``\  = \ ``b``\ .
+  \ :code:`linearSolve(mat, b)`\  finds \ :code:`x`\ , solution of the equation \ :code:`mat`\  * \ :code:`x`\  = \ :code:`b`\ .
 
 .. _l57534d6174726978-6c6973744f664c69737473:
 
@@ -745,7 +745,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; lu
 
 :spadfun:`lu`\: % -> Record(lu: %, p: %, c: %) 
-  \ ``lu(m)``\  computes the LU decomposition of the matrix \ ``m``\ .
+  \ :code:`lu(m)`\  computes the LU decomposition of the matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-6d617021:
 
@@ -779,7 +779,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; matrix
 
 :spadfun:`matrix`\: \ :ref:`WSVector <l5753566563746f72>`\  E -> % 
-  \ ``matrix(vec)``\  returns \ ``vec``\  as a matrix (inplace coercion).
+  \ :code:`matrix(vec)`\  returns \ :code:`vec`\  as a matrix (inplace coercion).
 
 .. _l57534d6174726978-6d617472697846756e6374696f6e:
 
@@ -787,7 +787,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; matrixFunction
 
 :spadfun:`matrixFunction`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , %) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ ``matrixFunction(func, m)``\  applies the matrix function \ ``func``\ , if available, to the matrix \ ``m``\ . The Wolfram Language operator needs to be used. Note that it is not an element-wise operation. For example: \example{m := jWSMatrix("\{\{1.2, 1.7\},\{1.12, -2.1\}\}")@WSMAT(WSREAL)} \example{matrixFunction("Sqrt", m)}
+  \ :code:`matrixFunction(func, m)`\  applies the matrix function \ :code:`func`\ , if available, to the matrix \ :code:`m`\ . The Wolfram Language operator needs to be used. Note that it is not an element-wise operation. For example: \example{m := jWSMatrix("\{\{1.2, 1.7\},\{1.12, -2.1\}\}")@WSMAT(WSREAL)} \example{matrixFunction("Sqrt", m)}
 
 .. _l57534d6174726978-6d6178:
 
@@ -839,14 +839,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; minors
 
 :spadfun:`minors`\: % -> % 
-  \ ``minors(m)``\  returns the minors of \ ``m``\ .
+  \ :code:`minors(m)`\  returns the minors of \ :code:`m`\ .
 
 
 .. index::
    pair: WSMatrix; minors
 
 :spadfun:`minors`\: (%, \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> % 
-  \ ``minors(m,i)``\  returns the \ ``i``\ -th minors of \ ``m``\ .
+  \ :code:`minors(m,i)`\  returns the \ :code:`i`\ -th minors of \ :code:`m`\ .
 
 .. _l57534d6174726978-6d696e526f77496e646578:
 
@@ -879,14 +879,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; norm
 
 :spadfun:`norm`\: % -> E 
-  \ ``norm(m)``\  returns the norm of \ ``m``\ , i.e. the value of the maximum singular values of \ ``m``\ .
+  \ :code:`norm(m)`\  returns the norm of \ :code:`m`\ , i.e. the value of the maximum singular values of \ :code:`m`\ .
 
 
 .. index::
    pair: WSMatrix; norm
 
 :spadfun:`norm`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> E 
-  \ ``norm(m, type)``\  returns the type norm of \ ``m``\ . For example, norm(\ ``m``\ ,2) returns the usual norm, norm(\ ``m``\ , "Infinity") or norm(\ ``m``\ , "Frobenius") returns their respective norms. See documentation for information.
+  \ :code:`norm(m, type)`\  returns the type norm of \ :code:`m`\ . For example, norm(\ :code:`m`\ ,2) returns the usual norm, norm(\ :code:`m`\ , "Infinity") or norm(\ :code:`m`\ , "Frobenius") returns their respective norms. See documentation for information.
 
 .. _l57534d6174726978-6e6f7468696e673f:
 
@@ -913,7 +913,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; nullSpace
 
 :spadfun:`nullSpace`\: % -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSVector <l5753566563746f72>`\  E 
-  \ ``nullSpace(m)``\  returns the null space of \ ``m``\  as a list of vectors.
+  \ :code:`nullSpace(m)`\  returns the null space of \ :code:`m`\  as a list of vectors.
 
 .. _l57534d6174726978-6e756d65726963:
 
@@ -940,7 +940,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; permanent
 
 :spadfun:`permanent`\: % -> E 
-  \ ``permanent(m)``\  returns the permanent of \ ``m``\ .
+  \ :code:`permanent(m)`\  returns the permanent of \ :code:`m`\ .
 
 .. _l57534d6174726978-506661666669616e:
 
@@ -953,7 +953,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; positiveDefinite?
 
 :spadfun:`positiveDefinite?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``positiveDefinite?(m)``\  checks whether or not \ ``m``\  is positive definite.
+  \ :code:`positiveDefinite?(m)`\  checks whether or not \ :code:`m`\  is positive definite.
 
 .. _l57534d6174726978-706f736974697665506f776572:
 
@@ -975,7 +975,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> E 
-  \ ``qelt(mat, m, n)``\  returns the element (\ ``m``\ ,\ ``n``\ ) of the matrix \ ``mat``\ . No checks are done at the FriCAS level.
+  \ :code:`qelt(mat, m, n)`\  returns the element (\ :code:`m`\ ,\ :code:`n`\ ) of the matrix \ :code:`mat`\ . No checks are done at the FriCAS level.
 
 .. _l57534d6174726978-716e6577:
 
@@ -988,7 +988,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; qr
 
 :spadfun:`qr`\: % -> Record(q: %, r: %) 
-  \ ``qr(m)``\  computes the \ ``QR``\  decomposition of the matrix \ ``m``\ .
+  \ :code:`qr(m)`\  computes the \ :code:`QR`\  decomposition of the matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-71736574656c7421:
 
@@ -996,7 +996,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; qsetelt!
 
 :spadfun:`qsetelt!`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> E 
-  \ ``qsetelt!(mat,n,m,elt)``\  returns the element \ ``elt``\ . The matrix \ ``mat``\  is modified in place.
+  \ :code:`qsetelt!(mat,n,m,elt)`\  returns the element \ :code:`elt`\ . The matrix \ :code:`mat`\  is modified in place.
 
 
 \ :ref:`qsetelt! <l5753416767726567617465-71736574656c7421>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`WSVector <l5753566563746f72>`\  E) -> % 
@@ -1008,7 +1008,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; qsetelt
 
 :spadfun:`qsetelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
-  \ ``qsetelt(mat,n,m,elt)``\  returns a new matrix with element (\ ``n``\ ,\ ``m``\ ) replaced by the element \ ``elt``\ .
+  \ :code:`qsetelt(mat,n,m,elt)`\  returns a new matrix with element (\ :code:`n`\ ,\ :code:`m`\ ) replaced by the element \ :code:`elt`\ .
 
 
 \ :ref:`qsetelt <l5753416767726567617465-71736574656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`WSVector <l5753566563746f72>`\  E) -> % 
@@ -1020,7 +1020,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; randomComplexMatrix
 
 :spadfun:`randomComplexMatrix`\: (\ :ref:`WSList <l57534c697374>`\  \ :ref:`WSComplex <l5753436f6d706c6578>`\ , \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSComplex <l5753436f6d706c6578>`\  
-  \ ``randomComplexMatrix(range, dims)``\  returns a random matrix with random complex numbers in the \ ``range``\  \ ``range``\  and dims dimensions. \example{range:=jWSList("\{1+I\}")@WSLIST(WSCPLX)} \example{randomComplexMatrix(range,jWSList("\{3,3\}")\$WSLIST(WSINT))@WSMAT(WSCPLX)}
+  \ :code:`randomComplexMatrix(range, dims)`\  returns a random matrix with random complex numbers in the \ :code:`range`\  \ :code:`range`\  and dims dimensions. \example{range:=jWSList("\{1+I\}")@WSLIST(WSCPLX)} \example{randomComplexMatrix(range,jWSList("\{3,3\}")\$WSLIST(WSINT))@WSMAT(WSCPLX)}
 
 .. _l57534d6174726978-72616e646f6d5265616c4d6174726978:
 
@@ -1028,7 +1028,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; randomRealMatrix
 
 :spadfun:`randomRealMatrix`\: (\ :ref:`WSList <l57534c697374>`\  \ :ref:`WSReal <l57535265616c>`\ , \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSReal <l57535265616c>`\  
-  \ ``randomRealMatrix(range, dims)``\  returns a random matrix with random numbers in the \ ``range``\  \ ``range``\  and dims dimensions. \example{range := jWSList("\{-5,5\}")\$WSLIST(WSREAL)} \example{randomRealMatrix(range,jWSList("\{3,3\}")\$WSLIST(WSINT))@WSMAT(WSREAL)}
+  \ :code:`randomRealMatrix(range, dims)`\  returns a random matrix with random numbers in the \ :code:`range`\  \ :code:`range`\  and dims dimensions. \example{range := jWSList("\{-5,5\}")\$WSLIST(WSREAL)} \example{randomRealMatrix(range,jWSList("\{3,3\}")\$WSLIST(WSINT))@WSMAT(WSREAL)}
 
 .. _l57534d6174726978-72616e6b:
 
@@ -1078,7 +1078,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; row
 
 :spadfun:`row`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``row(mat,i)``\  returns the \ ``i``\ -th row.
+  \ :code:`row(mat,i)`\  returns the \ :code:`i`\ -th row.
 
 
 \ :ref:`row <l54776f44696d656e73696f6e616c417272617943617465676f7279-726f77>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`WSVector <l5753566563746f72>`\  E 
@@ -1110,7 +1110,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; schur
 
 :spadfun:`schur`\: % -> Record(q: %, t: %) 
-  \ ``schur(m)``\  computes the Schur decomposition of the square matrix \ ``m``\ .
+  \ :code:`schur(m)`\  computes the Schur decomposition of the square matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-736574436f6c756d6e21:
 
@@ -1176,7 +1176,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; setelt
 
 :spadfun:`setelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ , E) -> % 
-  \ ``setelt(mat,n,m,elt)``\  returns a new matrix with element (\ ``n``\ ,\ ``m``\ ) replaced by the element \ ``elt``\ .
+  \ :code:`setelt(mat,n,m,elt)`\  returns a new matrix with element (\ :code:`n`\ ,\ :code:`m`\ ) replaced by the element \ :code:`elt`\ .
 
 
 \ :ref:`setelt <l5753416767726567617465-736574656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`WSVector <l5753566563746f72>`\  E) -> % 
@@ -1223,7 +1223,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; square?
 
 :spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``square?(m)``\  returns \ ``true``\  if \ ``m``\  is a square matrix (i.e. if \ ``m``\  has the same number of rows as columns) and \ ``false``\  otherwise.
+  \ :code:`square?(m)`\  returns \ :code:`true`\  if \ :code:`m`\  is a square matrix (i.e. if \ :code:`m`\  has the same number of rows as columns) and \ :code:`false`\  otherwise.
 
 .. _l57534d6174726978-737175617265546f70:
 
@@ -1246,7 +1246,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; svd
 
 :spadfun:`svd`\: % -> Record(S: %, sv: %, V: %) 
-  \ ``svd(m)``\  computes the singular value decomposition of the matrix \ ``m``\ .
+  \ :code:`svd(m)`\  computes the singular value decomposition of the matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-73766476616c73:
 
@@ -1254,7 +1254,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; svdvals
 
 :spadfun:`svdvals`\: % -> \ :ref:`WSList <l57534c697374>`\  E 
-  \ ``svdvals(m)``\  returns the singular values of the matrix \ ``m``\ .
+  \ :code:`svdvals(m)`\  returns the singular values of the matrix \ :code:`m`\ .
 
 .. _l57534d6174726978-73776170436f6c756d6e7321:
 
@@ -1272,7 +1272,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; symmetric?
 
 :spadfun:`symmetric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``symmetric?(m)``\  returns \ ``true``\  if the matrix \ ``m``\  is square and symmetric (i.e. \ ``m[i, j] = m[j, i]``\  for all \ ``i``\  and \ ``j``\ ) and \ ``false``\  otherwise.
+  \ :code:`symmetric?(m)`\  returns \ :code:`true`\  if the matrix \ :code:`m`\  is square and symmetric (i.e. \ :code:`m[i, j] = m[j, i]`\  for all \ :code:`i`\  and \ :code:`j`\ ) and \ :code:`false`\  otherwise.
 
 .. _l57534d6174726978-74616b65:
 
@@ -1293,7 +1293,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; toString
 
 :spadfun:`toString`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`String <l537472696e67>`\  
-  \ ``toString(mat, form)``\  returns the string representation of \ ``mat``\  with \ ``WS``\  language format form.
+  \ :code:`toString(mat, form)`\  returns the string representation of \ :code:`mat`\  with \ :code:`WS`\  language format form.
 
 .. _l57534d6174726978-746f74616c:
 
@@ -1306,7 +1306,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; trace
 
 :spadfun:`trace`\: % -> E 
-  \ ``trace(m)``\  returns the trace of \ ``m``\ .
+  \ :code:`trace(m)`\  returns the trace of \ :code:`m`\ .
 
 .. _l57534d6174726978-7472616e73706f7365:
 
@@ -1314,7 +1314,7 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; transpose
 
 :spadfun:`transpose`\: % -> % 
-  \ ``transpose(m)``\  returns the transposition of \ ``m``\ .
+  \ :code:`transpose(m)`\  returns the transposition of \ :code:`m`\ .
 
 
 \ :ref:`transpose <l4d617472697843617465676f7279-7472616e73706f7365>`\ \: \ :ref:`WSVector <l5753566563746f72>`\  E -> % 

@@ -24,7 +24,7 @@ This package implements 'infinite tuples' for the interpreter. The representatio
    pair: InfiniteTuple; construct
 
 :spadfun:`construct`\: % -> \ :ref:`Stream <l53747265616d>`\  S 
-  \ ``construct(t)``\  converts an infinite tuple to a stream.
+  \ :code:`construct(t)`\  converts an infinite tuple to a stream.
 
 .. _l496e66696e6974655475706c65-66696c746572556e74696c:
 
@@ -32,7 +32,7 @@ This package implements 'infinite tuples' for the interpreter. The representatio
    pair: InfiniteTuple; filterUntil
 
 :spadfun:`filterUntil`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``filterUntil(p, t)``\  returns \ ``[x for x in t while not p(x)]``\ .
+  \ :code:`filterUntil(p, t)`\  returns \ :code:`[x for x in t while not p(x)]`\ .
 
 .. _l496e66696e6974655475706c65-66696c7465725768696c65:
 
@@ -40,7 +40,7 @@ This package implements 'infinite tuples' for the interpreter. The representatio
    pair: InfiniteTuple; filterWhile
 
 :spadfun:`filterWhile`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``filterWhile(p, t)``\  returns \ ``[x for x in t while p(x)]``\ .
+  \ :code:`filterWhile(p, t)`\  returns \ :code:`[x for x in t while p(x)]`\ .
 
 .. _l496e66696e6974655475706c65-6d6170:
 
@@ -48,7 +48,7 @@ This package implements 'infinite tuples' for the interpreter. The representatio
    pair: InfiniteTuple; map
 
 :spadfun:`map`\: (S -> S, %) -> % 
-  \ ``map(f, t)``\  replaces the tuple \ ``t``\  by \ ``[f(x) for x in t]``\ .
+  \ :code:`map(f, t)`\  replaces the tuple \ :code:`t`\  by \ :code:`[f(x) for x in t]`\ .
 
 .. _l496e66696e6974655475706c65-73656c656374:
 
@@ -56,7 +56,7 @@ This package implements 'infinite tuples' for the interpreter. The representatio
    pair: InfiniteTuple; select
 
 :spadfun:`select`\: (S -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> % 
-  \ ``select(p, t)``\  returns \ ``[x for x in t | p(x)]``\ .
+  \ :code:`select(p, t)`\  returns \ :code:`[x for x in t | p(x)]`\ .
 
 .. _l496e66696e6974655475706c65-73747265616d:
 
@@ -64,7 +64,7 @@ This package implements 'infinite tuples' for the interpreter. The representatio
    pair: InfiniteTuple; stream
 
 :spadfun:`stream`\: (S -> S, S) -> % 
-  \ ``stream(f, s)``\  returns \ ``[s, f(s), f(f(s)), ...]``\ .
+  \ :code:`stream(f, s)`\  returns \ :code:`[s, f(s), f(f(s)), ...]`\ .
 
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  

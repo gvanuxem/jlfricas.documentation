@@ -433,7 +433,7 @@ UnivariateLaurentSeriesCategory Coef
    pair: UnivariateLaurentSeriesCategory; laurent
 
 :spadfun:`laurent`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Stream <l53747265616d>`\  Coef) -> % 
-  \ ``laurent(n, st)``\  returns \ ``xn * series st``\  where \ ``xn = monomial(1, n)``\  and \ ``series st``\  stands for the power series with coefficients given by the stream st.
+  \ :code:`laurent(n, st)`\  returns \ :code:`xn * series st`\  where \ :code:`xn = monomial(1, n)`\  and \ :code:`series st`\  stands for the power series with coefficients given by the stream st.
 
 .. _l556e69766172696174654c617572656e7453657269657343617465676f7279-6c636d:
 
@@ -514,7 +514,7 @@ UnivariateLaurentSeriesCategory Coef
    pair: UnivariateLaurentSeriesCategory; multiplyCoefficients
 
 :spadfun:`multiplyCoefficients`\: (\ :ref:`Integer <l496e7465676572>`\  -> Coef, %) -> % 
-  \ ``multiplyCoefficients(f, sum(n = n0..infinity, a[n] * x^n)) = sum(n = 0..infinity, f(n) * a[n] * x^n)``\ . This function is used when Puiseux series are represented by a Laurent series and an exponent.
+  \ :code:`multiplyCoefficients(f, sum(n = n0..infinity, a[n] * x^n)) = sum(n = 0..infinity, f(n) * a[n] * x^n)`\ . This function is used when Puiseux series are represented by a Laurent series and an exponent.
 
 .. _l556e69766172696174654c617572656e7453657269657343617465676f7279-6d756c7469706c794578706f6e656e7473:
 
@@ -581,14 +581,14 @@ UnivariateLaurentSeriesCategory Coef
    pair: UnivariateLaurentSeriesCategory; rationalFunction
 
 :spadfun:`rationalFunction`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  Coef if Coef has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rationalFunction(f, k)``\  returns a rational function consisting of the sum of all terms of \ ``f``\  of degree \ ``<=``\  \ ``k``\ .
+  \ :code:`rationalFunction(f, k)`\  returns a rational function consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`<=`\  \ :code:`k`\ .
 
 
 .. index::
    pair: UnivariateLaurentSeriesCategory; rationalFunction
 
 :spadfun:`rationalFunction`\: (%, \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  Coef if Coef has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``rationalFunction(f, k1, k2)``\  returns a rational function consisting of the sum of all terms of \ ``f``\  of degree \ ``d``\  with \ ``k1 <= d <= k2``\ .
+  \ :code:`rationalFunction(f, k1, k2)`\  returns a rational function consisting of the sum of all terms of \ :code:`f`\  of degree \ :code:`d`\  with \ :code:`k1 <= d <= k2`\ .
 
 .. _l556e69766172696174654c617572656e7453657269657343617465676f7279-7265636970:
 
@@ -640,7 +640,7 @@ UnivariateLaurentSeriesCategory Coef
    pair: UnivariateLaurentSeriesCategory; series
 
 :spadfun:`series`\: \ :ref:`Stream <l53747265616d>`\  Record(k: \ :ref:`Integer <l496e7465676572>`\ , c: Coef) -> % 
-  \ ``series(st)``\  creates a series from a stream of non-zero terms, where a term is an exponent-coefficient pair. The terms in the stream should be ordered by increasing order of exponents.
+  \ :code:`series(st)`\  creates a series from a stream of non-zero terms, where a term is an exponent-coefficient pair. The terms in the stream should be ordered by increasing order of exponents.
 
 .. _l556e69766172696174654c617572656e7453657269657343617465676f7279-73696e:
 

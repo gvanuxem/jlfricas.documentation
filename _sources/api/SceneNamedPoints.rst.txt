@@ -29,7 +29,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; addNode!
 
 :spadfun:`addNode!`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`Scene <l5363656e65>`\  PT) -> % 
-  \ ``addNode!(n, ptName, sc)``\  adds a scene node.
+  \ :code:`addNode!(n, ptName, sc)`\  adds a scene node.
 
 .. _l5363656e654e616d6564506f696e7473-616464506f696e747321:
 
@@ -37,7 +37,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; addPoints!
 
 :spadfun:`addPoints!`\: (%, \ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ ``addPoints!(n, ptName, pts)``\  adds a points node.
+  \ :code:`addPoints!(n, ptName, pts)`\  adds a points node.
 
 .. _l5363656e654e616d6564506f696e7473-636f65726365:
 
@@ -50,7 +50,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; findNode
 
 :spadfun:`findNode`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Scene <l5363656e65>`\  PT 
-  \ ``findNode(n, ptName)``\  finds a scene node
+  \ :code:`findNode(n, ptName)`\  finds a scene node
 
 .. _l5363656e654e616d6564506f696e7473-66696e64506f696e74:
 
@@ -58,7 +58,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; findPoint
 
 :spadfun:`findPoint`\: (%, \ :ref:`String <l537472696e67>`\ ) -> PT 
-  \ ``findPoint(n, ptName)``\  find the point associated with a given string.
+  \ :code:`findPoint(n, ptName)`\  find the point associated with a given string.
 
 .. _l5363656e654e616d6564506f696e7473-6765744e616d6573:
 
@@ -66,7 +66,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; getNames
 
 :spadfun:`getNames`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ ``getNames(n)``\  returns a list of names for this node
+  \ :code:`getNames(n)`\  returns a list of names for this node
 
 .. _l5363656e654e616d6564506f696e7473-69734e6f64654272616e63683f:
 
@@ -74,7 +74,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; isNodeBranch?
 
 :spadfun:`isNodeBranch?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isNodeBranch?(n)``\  returns \ ``true``\  if this is a branch.
+  \ :code:`isNodeBranch?(n)`\  returns \ :code:`true`\  if this is a branch.
 
 .. _l5363656e654e616d6564506f696e7473-69734e6f64654c6561663f:
 
@@ -82,7 +82,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; isNodeLeaf?
 
 :spadfun:`isNodeLeaf?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isNodeLeaf?(n)``\  returns \ ``true``\  if this is a leaf which holds Scene nodes.
+  \ :code:`isNodeLeaf?(n)`\  returns \ :code:`true`\  if this is a leaf which holds Scene nodes.
 
 .. _l5363656e654e616d6564506f696e7473-6973506f696e744c6561663f:
 
@@ -90,7 +90,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; isPointLeaf?
 
 :spadfun:`isPointLeaf?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``isPointLeaf?(n)``\  returns \ ``true``\  if this is a \ ``pt``\  node, that is, if this node contains points
+  \ :code:`isPointLeaf?(n)`\  returns \ :code:`true`\  if this is a \ :code:`pt`\  node, that is, if this node contains points
 
 .. _l5363656e654e616d6564506f696e7473-6c61746578:
 
@@ -103,7 +103,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; namedBranch
 
 :spadfun:`namedBranch`\: (\ :ref:`List <l4c697374>`\  %, \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``namedBranch(chin, nmin)``\  constructs a branch in the tree structure
+  \ :code:`namedBranch(chin, nmin)`\  constructs a branch in the tree structure
 
 .. _l5363656e654e616d6564506f696e7473-6e616d6564506f696e7473:
 
@@ -111,14 +111,14 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; namedPoints
 
 :spadfun:`namedPoints`\: (\ :ref:`List <l4c697374>`\  PT, \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``namedPoints(ptin, nmin)``\  constructs a list of named points.
+  \ :code:`namedPoints(ptin, nmin)`\  constructs a list of named points.
 
 
 .. index::
    pair: SceneNamedPoints; namedPoints
 
 :spadfun:`namedPoints`\: (\ :ref:`List <l4c697374>`\  \ :ref:`Scene <l5363656e65>`\  PT, \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ ``namedPoints(scin, nmin)``\  constructs a list of named nodes.
+  \ :code:`namedPoints(scin, nmin)`\  constructs a list of named nodes.
 
 .. _l5363656e654e616d6564506f696e7473-746f537472696e67:
 
@@ -126,7 +126,7 @@ Associates points or nodes in Scene structure with names (or a hierarchy of name
    pair: SceneNamedPoints; toString
 
 :spadfun:`toString`\: % -> \ :ref:`String <l537472696e67>`\  
-  \ ``toString(n)``\  returns string representation for debug purposes.
+  \ :code:`toString(n)`\  returns string representation for debug purposes.
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

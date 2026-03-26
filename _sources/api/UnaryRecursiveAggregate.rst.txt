@@ -54,21 +54,21 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; concat!
 
 :spadfun:`concat!`\: (%, %) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``concat!(u, v)``\  destructively concatenates \ ``v``\  to the end of \ ``u``\ .
+  \ :code:`concat!(u, v)`\  destructively concatenates \ :code:`v`\  to the end of \ :code:`u`\ .
 
 
 .. index::
    pair: UnaryRecursiveAggregate; concat!
 
 :spadfun:`concat!`\: (%, S) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``concat!(u, x)``\  destructively adds element \ ``x``\  to the end of \ ``u``\ . Note: \ ``concat!(a, x) = concat!(a, [x])``\ .
+  \ :code:`concat!(u, x)`\  destructively adds element \ :code:`x`\  to the end of \ :code:`u`\ . Note: \ :code:`concat!(a, x) = concat!(a, [x])`\ .
 
 
 .. index::
    pair: UnaryRecursiveAggregate; concat!
 
 :spadfun:`concat!`\: \ :ref:`List <l4c697374>`\  % -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``concat!(lu)``\ , where \ ``lu``\  is a list of aggregates \ ``[a, b, ..., c]``\ , returns a single aggregate consisting of the elements of \ ``a``\  followed by those of \ ``b``\  followed ... by the elements of \ ``c``\ . This function may destructively modify the aggregates in \ ``lu``\ .
+  \ :code:`concat!(lu)`\ , where \ :code:`lu`\  is a list of aggregates \ :code:`[a, b, ..., c]`\ , returns a single aggregate consisting of the elements of \ :code:`a`\  followed by those of \ :code:`b`\  followed ... by the elements of \ :code:`c`\ . This function may destructively modify the aggregates in \ :code:`lu`\ .
 
 .. _l556e617279526563757273697665416767726567617465-636f6e636174:
 
@@ -76,14 +76,14 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; concat
 
 :spadfun:`concat`\: (%, %) -> % 
-  \ ``concat(u, v)``\  returns an aggregate \ ``w``\  consisting of the elements of \ ``u``\  followed by the elements of \ ``v``\ . Note: \ ``v = rest(w, \#u)``\ .
+  \ :code:`concat(u, v)`\  returns an aggregate \ :code:`w`\  consisting of the elements of \ :code:`u`\  followed by the elements of \ :code:`v`\ . Note: \ :code:`v = rest(w, \#u)`\ .
 
 
 .. index::
    pair: UnaryRecursiveAggregate; concat
 
 :spadfun:`concat`\: (S, %) -> % 
-  \ ``concat(x, u)``\  returns aggregate consisting of \ ``x``\  followed by the elements of \ ``u``\ . Note: if \ ``v = concat(x, u)``\  then \ ``x = first v``\  and \ ``u = rest v``\ .
+  \ :code:`concat(x, u)`\  returns aggregate consisting of \ :code:`x`\  followed by the elements of \ :code:`u`\ . Note: if \ :code:`v = concat(x, u)`\  then \ :code:`x = first v`\  and \ :code:`u = rest v`\ .
 
 .. _l556e617279526563757273697665416767726567617465-636f7079:
 
@@ -105,7 +105,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; cycleEntry
 
 :spadfun:`cycleEntry`\: % -> % 
-  \ ``cycleEntry(u)``\  returns the head of a top-level cycle contained in aggregate \ ``u``\ , or \ ``empty()``\  if none exists.
+  \ :code:`cycleEntry(u)`\  returns the head of a top-level cycle contained in aggregate \ :code:`u`\ , or \ :code:`empty()`\  if none exists.
 
 .. _l556e617279526563757273697665416767726567617465-6379636c654c656e677468:
 
@@ -113,7 +113,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; cycleLength
 
 :spadfun:`cycleLength`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``cycleLength(u)``\  returns the length of a top-level cycle contained in aggregate \ ``u``\ , or 0 if \ ``u``\  has no such cycle.
+  \ :code:`cycleLength(u)`\  returns the length of a top-level cycle contained in aggregate \ :code:`u`\ , or 0 if \ :code:`u`\  has no such cycle.
 
 .. _l556e617279526563757273697665416767726567617465-6379636c6553706c697421:
 
@@ -121,7 +121,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; cycleSplit!
 
 :spadfun:`cycleSplit!`\: % -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``cycleSplit!(u)``\  splits the aggregate by dropping off the cycle. The value returned is the cycle entry, or empty() if none exists. For example, if \ ``w = concat(u, v)``\  is the cyclic list where \ ``v``\  is the head of the cycle, \ ``cycleSplit!(w)``\  will drop \ ``v``\  off \ ``w``\  thus destructively changing \ ``w``\  to \ ``u``\ , and returning \ ``v``\ .
+  \ :code:`cycleSplit!(u)`\  splits the aggregate by dropping off the cycle. The value returned is the cycle entry, or empty() if none exists. For example, if \ :code:`w = concat(u, v)`\  is the cyclic list where \ :code:`v`\  is the head of the cycle, \ :code:`cycleSplit!(w)`\  will drop \ :code:`v`\  off \ :code:`w`\  thus destructively changing \ :code:`w`\  to \ :code:`u`\ , and returning \ :code:`v`\ .
 
 .. _l556e617279526563757273697665416767726567617465-6379636c655461696c:
 
@@ -129,7 +129,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; cycleTail
 
 :spadfun:`cycleTail`\: % -> % 
-  \ ``cycleTail(u)``\  returns the last node in the cycle, or empty() if none exists.
+  \ :code:`cycleTail(u)`\  returns the last node in the cycle, or empty() if none exists.
 
 .. _l556e617279526563757273697665416767726567617465-6379636c69633f:
 
@@ -147,21 +147,21 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; elt
 
 :spadfun:`elt`\: (%, first) -> S 
-  \ ``elt(u, "first")``\  (also written: \ ``u.first``\ ) is equivalent to first(\ ``u``\ ).
+  \ :code:`elt(u, "first")`\  (also written: \ :code:`u.first`\ ) is equivalent to first(\ :code:`u`\ ).
 
 
 .. index::
    pair: UnaryRecursiveAggregate; elt
 
 :spadfun:`elt`\: (%, last) -> S 
-  \ ``elt(u, "last")``\  (also written: \ ``u.last``\ ) is equivalent to last(\ ``u``\ ).
+  \ :code:`elt(u, "last")`\  (also written: \ :code:`u.last`\ ) is equivalent to last(\ :code:`u`\ ).
 
 
 .. index::
    pair: UnaryRecursiveAggregate; elt
 
 :spadfun:`elt`\: (%, rest) -> % 
-  \ ``elt(\%, "rest")``\  (also written: \ ``u.rest``\ ) is equivalent to \ ``rest u``\ .
+  \ :code:`elt(\%, "rest")`\  (also written: \ :code:`u.rest`\ ) is equivalent to \ :code:`rest u`\ .
 
 
 \ :ref:`elt <l526563757273697665416767726567617465-656c74>`\ \: (%, value) -> S 
@@ -210,14 +210,14 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; first
 
 :spadfun:`first`\: % -> S 
-  \ ``first(u)``\  returns the first element of \ ``u``\  (equivalently, the value at the current node).
+  \ :code:`first(u)`\  returns the first element of \ :code:`u`\  (equivalently, the value at the current node).
 
 
 .. index::
    pair: UnaryRecursiveAggregate; first
 
 :spadfun:`first`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``first(u, n)``\  returns a copy of the first \ ``n``\  elements of \ ``u``\ .
+  \ :code:`first(u, n)`\  returns a copy of the first \ :code:`n`\  elements of \ :code:`u`\ .
 
 .. _l556e617279526563757273697665416767726567617465-6c617374:
 
@@ -225,14 +225,14 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; last
 
 :spadfun:`last`\: % -> S 
-  \ ``last(u)``\  returns the last element of \ ``u``\ . Note: for lists, \ ``last(u) = u.(maxIndex u)``\ .
+  \ :code:`last(u)`\  returns the last element of \ :code:`u`\ . Note: for lists, \ :code:`last(u) = u.(maxIndex u)`\ .
 
 
 .. index::
    pair: UnaryRecursiveAggregate; last
 
 :spadfun:`last`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``last(u, n)``\  returns a copy of the last \ ``n``\  nodes of \ ``u``\ . Note: \ ``last(u, n)``\  is a list of \ ``n``\  elements.
+  \ :code:`last(u, n)`\  returns a copy of the last \ :code:`n`\  nodes of \ :code:`u`\ . Note: \ :code:`last(u, n)`\  is a list of \ :code:`n`\  elements.
 
 .. _l556e617279526563757273697665416767726567617465-6c61746578:
 
@@ -314,7 +314,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; qsetfirst!
 
 :spadfun:`qsetfirst!`\: (%, S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``qsetfirst!(u, x)``\  destructively changes the first element of \ ``u``\  to \ ``x``\  without checking for errors.
+  \ :code:`qsetfirst!(u, x)`\  destructively changes the first element of \ :code:`u`\  to \ :code:`x`\  without checking for errors.
 
 .. _l556e617279526563757273697665416767726567617465-717365747265737421:
 
@@ -322,7 +322,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; qsetrest!
 
 :spadfun:`qsetrest!`\: (%, %) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``qsetrest!(u, v)``\  destructively changes the rest of \ ``u``\  to \ ``v``\  without checking for errors.
+  \ :code:`qsetrest!(u, v)`\  destructively changes the rest of \ :code:`u`\  to \ :code:`v`\  without checking for errors.
 
 .. _l556e617279526563757273697665416767726567617465-72657374:
 
@@ -330,14 +330,14 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; rest
 
 :spadfun:`rest`\: % -> % 
-  \ ``rest(u)``\  returns an aggregate consisting of all but the first element of \ ``u``\  (equivalently, the next node of \ ``u``\ ).
+  \ :code:`rest(u)`\  returns an aggregate consisting of all but the first element of \ :code:`u`\  (equivalently, the next node of \ :code:`u`\ ).
 
 
 .. index::
    pair: UnaryRecursiveAggregate; rest
 
 :spadfun:`rest`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``rest(u, n)``\  returns the \ ``n``\ th node of \ ``u``\ . Note: \ ``rest(u, 0) = u``\ .
+  \ :code:`rest(u, n)`\  returns the \ :code:`n`\ th node of \ :code:`u`\ . Note: \ :code:`rest(u, 0) = u`\ .
 
 .. _l556e617279526563757273697665416767726567617465-73616d706c65:
 
@@ -350,7 +350,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; second
 
 :spadfun:`second`\: % -> S 
-  \ ``second(u)``\  returns the second element of \ ``u``\ . Note: \ ``second(u) = first(rest(u))``\ .
+  \ :code:`second(u)`\  returns the second element of \ :code:`u`\ . Note: \ :code:`second(u) = first(rest(u))`\ .
 
 .. _l556e617279526563757273697665416767726567617465-7365746368696c6472656e21:
 
@@ -363,21 +363,21 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; setelt!
 
 :spadfun:`setelt!`\: (%, first, S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setelt!(u, "first", x)``\  (also written: \ ``u.first := x``\ ) is equivalent to \ ``setfirst!(u, x)``\ .
+  \ :code:`setelt!(u, "first", x)`\  (also written: \ :code:`u.first := x`\ ) is equivalent to \ :code:`setfirst!(u, x)`\ .
 
 
 .. index::
    pair: UnaryRecursiveAggregate; setelt!
 
 :spadfun:`setelt!`\: (%, last, S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setelt!(u, "last", x)``\  (also written: \ ``u.last := x``\ ) is equivalent to \ ``setlast!(u, x)``\ .
+  \ :code:`setelt!(u, "last", x)`\  (also written: \ :code:`u.last := x`\ ) is equivalent to \ :code:`setlast!(u, x)`\ .
 
 
 .. index::
    pair: UnaryRecursiveAggregate; setelt!
 
 :spadfun:`setelt!`\: (%, rest, %) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setelt!(u, "rest", v)``\  (also written: \ ``u.rest := v``\ ) is equivalent to \ ``setrest!(u, v)``\ .
+  \ :code:`setelt!(u, "rest", v)`\  (also written: \ :code:`u.rest := v`\ ) is equivalent to \ :code:`setrest!(u, v)`\ .
 
 
 \ :ref:`setelt! <l526563757273697665416767726567617465-736574656c7421>`\ \: (%, value, S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
@@ -389,7 +389,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; setfirst!
 
 :spadfun:`setfirst!`\: (%, S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setfirst!(u, x)``\  destructively changes the first element of \ ``u``\  to \ ``x``\ . Error if \ ``u``\  is empty.
+  \ :code:`setfirst!(u, x)`\  destructively changes the first element of \ :code:`u`\  to \ :code:`x`\ . Error if \ :code:`u`\  is empty.
 
 .. _l556e617279526563757273697665416767726567617465-7365746c61737421:
 
@@ -397,7 +397,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; setlast!
 
 :spadfun:`setlast!`\: (%, S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setlast!(u, x)``\  destructively changes the last element of \ ``u``\  to \ ``x``\ . Error if \ ``u``\  is empty.
+  \ :code:`setlast!(u, x)`\  destructively changes the last element of \ :code:`u`\  to \ :code:`x`\ . Error if \ :code:`u`\  is empty.
 
 .. _l556e617279526563757273697665416767726567617465-7365747265737421:
 
@@ -405,7 +405,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; setrest!
 
 :spadfun:`setrest!`\: (%, %) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``setrest!(u, v)``\  destructively changes the rest of \ ``u``\  to \ ``v``\ . Error if \ ``u``\  is empty.
+  \ :code:`setrest!(u, v)`\  destructively changes the rest of \ :code:`u`\  to \ :code:`v`\ . Error if \ :code:`u`\  is empty.
 
 .. _l556e617279526563757273697665416767726567617465-73657476616c756521:
 
@@ -423,7 +423,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; split!
 
 :spadfun:`split!`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
-  \ ``split!(u, n)``\  splits \ ``u``\  into two aggregates: \ ``v = rest(u, n)``\  and \ ``w = first(u, n)``\ , returning \ ``v``\  and setting \ ``u``\  to \ ``w``\ . If \ ``n``\  is 0, split! currently only works for Stream and gives error for List. Note: afterwards \ ``rest(u, n)``\  returns \ ``empty()``\ .
+  \ :code:`split!(u, n)`\  splits \ :code:`u`\  into two aggregates: \ :code:`v = rest(u, n)`\  and \ :code:`w = first(u, n)`\ , returning \ :code:`v`\  and setting \ :code:`u`\  to \ :code:`w`\ . If \ :code:`n`\  is 0, split! currently only works for Stream and gives error for List. Note: afterwards \ :code:`rest(u, n)`\  returns \ :code:`empty()`\ .
 
 .. _l556e617279526563757273697665416767726567617465-7461696c:
 
@@ -431,7 +431,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; tail
 
 :spadfun:`tail`\: % -> % 
-  \ ``tail(u)``\  returns the last node of \ ``u``\ . Error if \ ``u``\  is empty.
+  \ :code:`tail(u)`\  returns the last node of \ :code:`u`\ . Error if \ :code:`u`\  is empty.
 
 .. _l556e617279526563757273697665416767726567617465-7468697264:
 
@@ -439,7 +439,7 @@ A unary-recursive aggregate is an aggregate where nodes may have either 0 or 1 c
    pair: UnaryRecursiveAggregate; third
 
 :spadfun:`third`\: % -> S 
-  \ ``third(u)``\  returns the third element of \ ``u``\ . Note: \ ``third(u) = first(rest(rest(u)))``\ .
+  \ :code:`third(u)`\  returns the third element of \ :code:`u`\ . Note: \ :code:`third(u) = first(rest(rest(u)))`\ .
 
 .. _l556e617279526563757273697665416767726567617465-76616c7565:
 

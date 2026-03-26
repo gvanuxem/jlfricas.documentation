@@ -8,7 +8,7 @@ PrimGCD
 :viewcode:`amodgcd.spad line 67 <amodgcd.spad#L67>` :editcode:`[edit on github] <amodgcd.spad#L67>`
 
 
-This is unfinished package for computing primitive \ ``gcd``\  over algebraic extensions. Algebraic extension is defined by list of polynomial forming triangular system. Currently implemented is only trial division.
+This is unfinished package for computing primitive \ :code:`gcd`\  over algebraic extensions. Algebraic extension is defined by list of polynomial forming triangular system. Currently implemented is only trial division.
 
 
 .. _l5072696d474344-616c675f657871756f:
@@ -17,7 +17,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; alg_exquo
 
 :spadfun:`alg_exquo`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> Union(\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), failed) 
-  \ ``alg_exquo(x, y, lm, lv, lz)``\  computes quotient of \ ``x``\  by \ ``y``\  in algebraic extension defined by \ ``lm``\ . \ ``lz``\  is list of algebraic variables, \ ``lv``\  is list of independent (polynomial) variables. Other variables serve as parameters. Returns a multiple of quotient in algebraic variables and parameters or "failed" if \ ``x``\  is not divisible by \ ``y``\ .
+  \ :code:`alg_exquo(x, y, lm, lv, lz)`\  computes quotient of \ :code:`x`\  by \ :code:`y`\  in algebraic extension defined by \ :code:`lm`\ . \ :code:`lz`\  is list of algebraic variables, \ :code:`lv`\  is list of independent (polynomial) variables. Other variables serve as parameters. Returns a multiple of quotient in algebraic variables and parameters or "failed" if \ :code:`x`\  is not divisible by \ :code:`y`\ .
 
 .. _l5072696d474344-616c675f72656475636530:
 
@@ -25,7 +25,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; alg_reduce0
 
 :spadfun:`alg_reduce0`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) 
-  \ ``alg_reduce0(x, m, lv, z)``\  performs single reduction step.
+  \ :code:`alg_reduce0(x, m, lv, z)`\  performs single reduction step.
 
 .. _l5072696d474344-616c675f726564756365:
 
@@ -33,7 +33,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; alg_reduce
 
 :spadfun:`alg_reduce`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) 
-  \ ``alg_reduce(x, lm, lv, lz)``\  reduces \ ``x``\  modulo elements of \ ``lm``\ .
+  \ :code:`alg_reduce(x, lm, lv, lz)`\  reduces \ :code:`x`\  modulo elements of \ :code:`lm`\ .
 
 .. _l5072696d474344-616c675f747269616c5f6469766973696f6e:
 
@@ -41,7 +41,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; alg_trial_division
 
 :spadfun:`alg_trial_division`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``alg_trial_division(x, y, lm, lv, lz)``\  checks if \ ``x``\  is divisible by \ ``y``\  in algebraic extension defined by \ ``lm``\ . \ ``lz``\  is list of algebraic variables, \ ``lv``\  is list of independent (polynomial) variables. Other variables serve as parameters.
+  \ :code:`alg_trial_division(x, y, lm, lv, lz)`\  checks if \ :code:`x`\  is divisible by \ :code:`y`\  in algebraic extension defined by \ :code:`lm`\ . \ :code:`lz`\  is list of algebraic variables, \ :code:`lv`\  is list of independent (polynomial) variables. Other variables serve as parameters.
 
 .. _l5072696d474344-636f6566667330:
 
@@ -49,7 +49,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; coeffs0
 
 :spadfun:`coeffs0`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ )) -> \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) 
-  \ ``coeffs0(x, lv, lp)``\  is used by \ ``coeffs1``\ 
+  \ :code:`coeffs0(x, lv, lp)`\  is used by \ :code:`coeffs1`\ 
 
 .. _l5072696d474344-636f6566667331:
 
@@ -57,7 +57,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; coeffs1
 
 :spadfun:`coeffs1`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ) 
-  \ ``coeffs1(x, lv)``\  computes list of coefficients of \ ``x``\  with respect to variables in \ ``lv``\ . Variables in \ ``lv``\  must be decreasing and bigger than all other variables of \ ``x``\ .
+  \ :code:`coeffs1(x, lv)`\  computes list of coefficients of \ :code:`x`\  with respect to variables in \ :code:`lv`\ . Variables in \ :code:`lv`\  must be decreasing and bigger than all other variables of \ :code:`x`\ .
 
 .. _l5072696d474344-6c637830:
 
@@ -65,7 +65,7 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; lcx0
 
 :spadfun:`lcx0`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> Record(lcx0lc: \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), lcx0m: \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ )) 
-  \ ``lcx0(x, lv)``\  computes leading coefficient of \ ``x``\  and corresponding product of variables (monomial with coefficient 1) with respect to variables in \ ``lv``\  Variables in \ ``lv``\  must be decreasing and bigger than all other variables of \ ``x``\ .
+  \ :code:`lcx0(x, lv)`\  computes leading coefficient of \ :code:`x`\  and corresponding product of variables (monomial with coefficient 1) with respect to variables in \ :code:`lv`\  Variables in \ :code:`lv`\  must be decreasing and bigger than all other variables of \ :code:`x`\ .
 
 .. _l5072696d474344-6c637a:
 
@@ -73,6 +73,6 @@ This is unfinished package for computing primitive \ ``gcd``\  over algebraic ex
    pair: PrimGCD; lcz
 
 :spadfun:`lcz`\: (\ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), \ :ref:`Symbol <l53796d626f6c>`\ ) -> Record(lczlc: \ :ref:`SparseMultivariatePolynomial <l5370617273654d756c746976617269617465506f6c796e6f6d69616c>`\ (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Symbol <l53796d626f6c>`\ ), k: \ :ref:`Integer <l496e7465676572>`\ ) 
-  \ ``lcz(x, z)``\  computes leading coefficient and degree of \ ``x``\  with respect to variable \ ``z``\ .
+  \ :code:`lcz(x, z)`\  computes leading coefficient and degree of \ :code:`x`\  with respect to variable \ :code:`z`\ .
 
 

@@ -14,7 +14,7 @@ MaybeSkewPolynomialCategory(R, E, VarSet)
 * VarSet: \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 
-The category for general multi-variate possibly skew polynomials over a ring \ ``R``\ , in variables from VarSet, with exponents from the \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\ .
+The category for general multi-variate possibly skew polynomials over a ring \ :code:`R`\ , in variables from VarSet, with exponents from the \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\ .
 
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-30:
@@ -142,14 +142,14 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; coefficient
 
 :spadfun:`coefficient`\: (%, \ :ref:`List <l4c697374>`\  VarSet, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``coefficient(p, lv, ln)``\  views the polynomial \ ``p``\  as a polynomial in the variables of \ ``lv``\  and returns the coefficient of the term \ ``lv^ln``\ , i.e. \ ``prod(lv_i ^ ln_i)``\ .
+  \ :code:`coefficient(p, lv, ln)`\  views the polynomial \ :code:`p`\  as a polynomial in the variables of \ :code:`lv`\  and returns the coefficient of the term \ :code:`lv^ln`\ , i.e. \ :code:`prod(lv_i ^ ln_i)`\ .
 
 
 .. index::
    pair: MaybeSkewPolynomialCategory; coefficient
 
 :spadfun:`coefficient`\: (%, VarSet, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``coefficient(p, v, n)``\  views the polynomial \ ``p``\  as a univariate polynomial in \ ``v``\  and returns the coefficient of the \ ``v^n``\  term.
+  \ :code:`coefficient(p, v, n)`\  views the polynomial \ :code:`p`\  as a univariate polynomial in \ :code:`v`\  and returns the coefficient of the \ :code:`v^n`\  term.
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-636f656666696369656e7473:
 
@@ -207,14 +207,14 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; degree
 
 :spadfun:`degree`\: (%, \ :ref:`List <l4c697374>`\  VarSet) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``degree(p, lv)``\  gives the list of degrees of polynomial \ ``p``\  with respect to each of the variables in the list \ ``lv``\ .
+  \ :code:`degree(p, lv)`\  gives the list of degrees of polynomial \ :code:`p`\  with respect to each of the variables in the list \ :code:`lv`\ .
 
 
 .. index::
    pair: MaybeSkewPolynomialCategory; degree
 
 :spadfun:`degree`\: (%, VarSet) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``degree(p, v)``\  gives the degree of polynomial \ ``p``\  with respect to the variable \ ``v``\ .
+  \ :code:`degree(p, v)`\  gives the degree of polynomial \ :code:`p`\  with respect to the variable \ :code:`v`\ .
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-657871756f:
 
@@ -295,7 +295,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; mainVariable
 
 :spadfun:`mainVariable`\: % -> Union(VarSet, failed) 
-  \ ``mainVariable(p)``\  returns the biggest variable which actually occurs in the polynomial \ ``p``\ , or "failed" if no variables are present. fails precisely if polynomial satisfies ground?
+  \ :code:`mainVariable(p)`\  returns the biggest variable which actually occurs in the polynomial \ :code:`p`\ , or "failed" if no variables are present. fails precisely if polynomial satisfies ground?
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6170:
 
@@ -323,14 +323,14 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; monomial
 
 :spadfun:`monomial`\: (%, \ :ref:`List <l4c697374>`\  VarSet, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``monomial(a, [v1..vn], [e1..en])``\  returns \ ``a*prod(vi^ei)``\ .
+  \ :code:`monomial(a, [v1..vn], [e1..en])`\  returns \ :code:`a*prod(vi^ei)`\ .
 
 
 .. index::
    pair: MaybeSkewPolynomialCategory; monomial
 
 :spadfun:`monomial`\: (%, VarSet, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ ``monomial(a, x, n)``\  creates the monomial \ ``a*x^n``\  where \ ``a``\  is a polynomial, \ ``x``\  is a variable and \ ``n``\  is a nonnegative integer.
+  \ :code:`monomial(a, x, n)`\  creates the monomial \ :code:`a*x^n`\  where \ :code:`a`\  is a polynomial, \ :code:`x`\  is a variable and \ :code:`n`\  is a nonnegative integer.
 
 
 \ :ref:`monomial <l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c>`\ \: (R, E) -> % 
@@ -342,7 +342,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; monomials
 
 :spadfun:`monomials`\: % -> \ :ref:`List <l4c697374>`\  % 
-  \ ``monomials(p)``\  returns the list of non-zero monomials of polynomial \ ``p``\ , i.e. \ ``monomials(sum(a_(i) X^(i))) = [a_(1) X^(1), ..., a_(n) X^(n)]``\ .
+  \ :code:`monomials(p)`\  returns the list of non-zero monomials of polynomial \ :code:`p`\ , i.e. \ :code:`monomials(sum(a_(i) X^(i))) = [a_(1) X^(1), ..., a_(n) X^(n)]`\ .
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6e756d6265724f664d6f6e6f6d69616c73:
 
@@ -375,7 +375,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; primitiveMonomials
 
 :spadfun:`primitiveMonomials`\: % -> \ :ref:`List <l4c697374>`\  % if R has \ :ref:`SemiRing <l53656d6952696e67>`\ 
-  \ ``primitiveMonomials(p)``\  gives the list of monomials of the polynomial \ ``p``\  with their coefficients removed. Note: \ ``primitiveMonomials(sum(a_(i) X^(i))) = [X^(1), ..., X^(n)]``\ .
+  \ :code:`primitiveMonomials(p)`\  gives the list of monomials of the polynomial \ :code:`p`\  with their coefficients removed. Note: \ :code:`primitiveMonomials(sum(a_(i) X^(i))) = [X^(1), ..., X^(n)]`\ .
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7072696d697469766550617274:
 
@@ -475,14 +475,14 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; totalDegree
 
 :spadfun:`totalDegree`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``totalDegree(p)``\  returns the largest sum over all monomials of all exponents of a monomial.
+  \ :code:`totalDegree(p)`\  returns the largest sum over all monomials of all exponents of a monomial.
 
 
 .. index::
    pair: MaybeSkewPolynomialCategory; totalDegree
 
 :spadfun:`totalDegree`\: (%, \ :ref:`List <l4c697374>`\  VarSet) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``totalDegree(p, lv)``\  returns the maximum sum (over all monomials of polynomial \ ``p``\ ) of the variables in the list \ ``lv``\ .
+  \ :code:`totalDegree(p, lv)`\  returns the maximum sum (over all monomials of polynomial \ :code:`p`\ ) of the variables in the list \ :code:`lv`\ .
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565536f72746564:
 
@@ -490,7 +490,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; totalDegreeSorted
 
 :spadfun:`totalDegreeSorted`\: (%, \ :ref:`List <l4c697374>`\  VarSet) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``totalDegreeSorted(p, lv)``\  returns the maximum sum (over all monomials of polynomial \ ``p``\ ) of the degree in variables in the list \ ``lv``\ . \ ``lv``\  is assumed to be sorted in decreasing order.
+  \ :code:`totalDegreeSorted(p, lv)`\  returns the maximum sum (over all monomials of polynomial \ :code:`p`\ ) of the degree in variables in the list \ :code:`lv`\ . \ :code:`lv`\  is assumed to be sorted in decreasing order.
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-756e69743f:
 
@@ -513,7 +513,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ `
    pair: MaybeSkewPolynomialCategory; variables
 
 :spadfun:`variables`\: % -> \ :ref:`List <l4c697374>`\  VarSet 
-  \ ``variables(p)``\  returns the list of those variables actually appearing in the polynomial \ ``p``\ .
+  \ :code:`variables(p)`\  returns the list of those variables actually appearing in the polynomial \ :code:`p`\ .
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7a65726f3f:
 

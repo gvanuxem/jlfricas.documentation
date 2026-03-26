@@ -37,7 +37,7 @@ NMArbField p
    pair: NMArbField; *
 
 :spadfun:`\*`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``x*i``\  is the multiplication by an integer.
+  \ :code:`x*i`\  is the multiplication by an integer.
 
 
 \ :ref:`\* <l4c6566744d6f64756c65-2a>`\ \: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -87,7 +87,7 @@ NMArbField p
    pair: NMArbField; /
 
 :spadfun:`/`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``i/x``\  is the division of an integer by \ ``x``\ .
+  \ :code:`i/x`\  is the division of an integer by \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-3c3d:
 
@@ -146,7 +146,7 @@ NMArbField p
    pair: NMArbField; abs2
 
 :spadfun:`abs2`\: % -> % 
-  \ ``abs2(x)``\  returns the square of the absolute value of \ ``x``\ .
+  \ :code:`abs2(x)`\  returns the square of the absolute value of \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-616273:
 
@@ -159,7 +159,7 @@ NMArbField p
    pair: NMArbField; accuracyBits
 
 :spadfun:`accuracyBits`\: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
-  \ ``accuracyBits(x)``\  returns the relative accuracy of \ ``x``\  in bits.
+  \ :code:`accuracyBits(x)`\  returns the relative accuracy of \ :code:`x`\  in bits.
 
 .. _l4e4d4172624669656c64-61636f73:
 
@@ -197,7 +197,7 @@ NMArbField p
    pair: NMArbField; addError!
 
 :spadfun:`addError!`\: (%, %) -> % 
-  \ ``addError!(x, y)``\  adds the values (absolute) of the midpoint and radius of \ ``y``\  to the radius of \ ``x``\ .
+  \ :code:`addError!(x, y)`\  adds the values (absolute) of the midpoint and radius of \ :code:`y`\  to the radius of \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-616e6e6968696c6174653f:
 
@@ -249,7 +249,7 @@ NMArbField p
    pair: NMArbField; atan
 
 :spadfun:`atan`\: (%, %) -> % 
-  \ ``atan(x, y)``\  computes the inverse tangent of x/y.
+  \ :code:`atan(x, y)`\  computes the inverse tangent of x/y.
 
 .. _l4e4d4172624669656c64-6174616e68:
 
@@ -267,7 +267,7 @@ NMArbField p
    pair: NMArbField; bits
 
 :spadfun:`bits`\: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
-  \ ``bits(x)``\  returns the bit length of the mantissa of \ ``x``\ . For a result computed at prec bits of precision this can be anywhere in the range 0 \ ``<=``\  \ ``b``\  \ ``<=``\  prec. For example 0 has 0 bits, 0.75 has 2 bits, and 3.7 has 126 bits after rounding to prec = 128 (with the default rounding mode) because the two least significant bits are zero and thus get discarded. Source: flint-devel@googlegroups.com
+  \ :code:`bits(x)`\  returns the bit length of the mantissa of \ :code:`x`\ . For a result computed at prec bits of precision this can be anywhere in the range 0 \ :code:`<=`\  \ :code:`b`\  \ :code:`<=`\  prec. For example 0 has 0 bits, 0.75 has 2 bits, and 3.7 has 126 bits after rounding to prec = 128 (with the default rounding mode) because the two least significant bits are zero and thus get discarded. Source: flint-devel@googlegroups.com
 
 
 \ :ref:`bits <l466c6f6174696e67506f696e7453797374656d-62697473>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
@@ -283,7 +283,7 @@ NMArbField p
    pair: NMArbField; catalan
 
 :spadfun:`catalan`\: () -> % 
-  \ ``catalan()``\  returns the Catalan\ ``'s``\  constant.
+  \ :code:`catalan()`\  returns the Catalan\ :code:`'s`\  constant.
 
 .. _l4e4d4172624669656c64-6365696c696e67:
 
@@ -313,7 +313,7 @@ NMArbField p
    pair: NMArbField; coerce
 
 :spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``coerce(x)``\  coerces \ ``x``\ .
+  \ :code:`coerce(x)`\  coerces \ :code:`x`\ .
 
 
 \ :ref:`coerce <l416c6765627261-636f65726365>`\ \: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -328,7 +328,7 @@ NMArbField p
    pair: NMArbField; coerce
 
 :spadfun:`coerce`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ ``coerce(x)``\  coerces \ ``x``\ .
+  \ :code:`coerce(x)`\  coerces \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-636f6d6d757461746f72:
 
@@ -341,28 +341,28 @@ NMArbField p
    pair: NMArbField; contains?
 
 :spadfun:`contains?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(x,y)``\  checks whether or not \ ``y``\  is contained in \ ``x``\ .
+  \ :code:`contains?(x,y)`\  checks whether or not \ :code:`y`\  is contained in \ :code:`x`\ .
 
 
 .. index::
    pair: NMArbField; contains?
 
 :spadfun:`contains?`\: (%, \ :ref:`JLFloat <l4a4c466c6f6174>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(x,y)``\  checks whether or not \ ``y``\  is contained in \ ``x``\ .
+  \ :code:`contains?(x,y)`\  checks whether or not \ :code:`y`\  is contained in \ :code:`x`\ .
 
 
 .. index::
    pair: NMArbField; contains?
 
 :spadfun:`contains?`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(x,y)``\  checks whether or not \ ``y``\  is contained in \ ``x``\ .
+  \ :code:`contains?(x,y)`\  checks whether or not \ :code:`y`\  is contained in \ :code:`x`\ .
 
 
 .. index::
    pair: NMArbField; contains?
 
 :spadfun:`contains?`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``contains?(x,y)``\  checks whether or not \ ``y``\  is contained in \ ``x``\ .
+  \ :code:`contains?(x,y)`\  checks whether or not \ :code:`y`\  is contained in \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-636f6e7461696e734e656761746976653f:
 
@@ -370,7 +370,7 @@ NMArbField p
    pair: NMArbField; containsNegative?
 
 :spadfun:`containsNegative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``containsNegative?(x)``\  cheks whether or not \ ``x``\  contains any negative value.
+  \ :code:`containsNegative?(x)`\  cheks whether or not \ :code:`x`\  contains any negative value.
 
 .. _l4e4d4172624669656c64-636f6e7461696e734e6f6e4e656761746976653f:
 
@@ -378,7 +378,7 @@ NMArbField p
    pair: NMArbField; containsNonNegative?
 
 :spadfun:`containsNonNegative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``containsNonNegative?(x)``\  cheks whether or not \ ``x``\  contains any non negative value.
+  \ :code:`containsNonNegative?(x)`\  cheks whether or not \ :code:`x`\  contains any non negative value.
 
 .. _l4e4d4172624669656c64-636f6e7461696e734e6f6e506f7369746976653f:
 
@@ -386,7 +386,7 @@ NMArbField p
    pair: NMArbField; containsNonPositive?
 
 :spadfun:`containsNonPositive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``containsNonPositive?(x)``\  checks whether or not \ ``x``\  contains any non positive value.
+  \ :code:`containsNonPositive?(x)`\  checks whether or not \ :code:`x`\  contains any non positive value.
 
 .. _l4e4d4172624669656c64-636f6e7461696e73506f7369746976653f:
 
@@ -394,7 +394,7 @@ NMArbField p
    pair: NMArbField; containsPositive?
 
 :spadfun:`containsPositive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``containsPositive?(x)``\  cheks whether or not \ ``x``\  contains any positive value.
+  \ :code:`containsPositive?(x)`\  cheks whether or not \ :code:`x`\  contains any positive value.
 
 .. _l4e4d4172624669656c64-636f6e7461696e735a65726f3f:
 
@@ -402,7 +402,7 @@ NMArbField p
    pair: NMArbField; containsZero?
 
 :spadfun:`containsZero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``containsZero?(x)``\  checks whether or not 0 is contained in \ ``x``\ .
+  \ :code:`containsZero?(x)`\  checks whether or not 0 is contained in \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-636f6e76657274:
 
@@ -418,14 +418,14 @@ NMArbField p
    pair: NMArbField; convert
 
 :spadfun:`convert`\: % -> \ :ref:`JLFloat <l4a4c466c6f6174>`\  
-  \ ``convert(x)``\  converts \ ``x``\ .
+  \ :code:`convert(x)`\  converts \ :code:`x`\ .
 
 
 .. index::
    pair: NMArbField; convert
 
 :spadfun:`convert`\: % -> \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  \ ``convert(x)``\  converts \ ``x``\ .
+  \ :code:`convert(x)`\  converts \ :code:`x`\ .
 
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`Pattern <l5061747465726e>`\  \ :ref:`Float <l466c6f6174>`\  
@@ -518,7 +518,7 @@ NMArbField p
    pair: NMArbField; eulerGamma
 
 :spadfun:`eulerGamma`\: () -> % 
-  \ ``eulerGamma()``\  returns the Euler\ ``'s``\  constant gamma (\ ``γ``\ ).
+  \ :code:`eulerGamma()`\  returns the Euler\ :code:`'s`\  constant gamma (\ :code:`γ`\ ).
 
 .. _l4e4d4172624669656c64-65786163743f:
 
@@ -526,7 +526,7 @@ NMArbField p
    pair: NMArbField; exact?
 
 :spadfun:`exact?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``exact?(x)``\  checks whether \ ``x``\  is exact i.e. with 0 radius.
+  \ :code:`exact?(x)`\  checks whether \ :code:`x`\  is exact i.e. with 0 radius.
 
 .. _l4e4d4172624669656c64-6578616374446976696465:
 
@@ -539,7 +539,7 @@ NMArbField p
    pair: NMArbField; exp1
 
 :spadfun:`exp1`\: () -> % 
-  \ ``exp1()``\  returns the NMArbField \ ``ℯ``\  (exp(1)).
+  \ :code:`exp1()`\  returns the NMArbField \ :code:`ℯ`\  (exp(1)).
 
 .. _l4e4d4172624669656c64-657870:
 
@@ -551,7 +551,7 @@ NMArbField p
    pair: NMArbField; exp
 
 :spadfun:`exp`\: () -> % 
-  \ ``exp()``\  returns the NMArbField \ ``ℯ``\  (exp(1)).
+  \ :code:`exp()`\  returns the NMArbField \ :code:`ℯ`\  (exp(1)).
 
 .. _l4e4d4172624669656c64-6578706d31:
 
@@ -559,7 +559,7 @@ NMArbField p
    pair: NMArbField; expm1
 
 :spadfun:`expm1`\: % -> % 
-  \ ``expm1(x)``\  computes accurately e^x-1. It avoids the loss of precision involved in the direct evaluation of exp(\ ``x``\ )\ ``-1``\  for small values of \ ``x``\ .
+  \ :code:`expm1(x)`\  computes accurately e^x-1. It avoids the loss of precision involved in the direct evaluation of exp(\ :code:`x`\ )\ :code:`-1`\  for small values of \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-6578706f6e656e74:
 
@@ -596,7 +596,7 @@ NMArbField p
    pair: NMArbField; finite?
 
 :spadfun:`finite?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``finite?(x)``\  checks whether or not \ ``x``\  is finite, not an infinity for example.
+  \ :code:`finite?(x)`\  checks whether or not \ :code:`x`\  is finite, not an infinity for example.
 
 .. _l4e4d4172624669656c64-666c6f6174:
 
@@ -623,14 +623,14 @@ NMArbField p
    pair: NMArbField; Gamma
 
 :spadfun:`Gamma`\: % -> % 
-  \ ``Gamma(x)``\  is the Euler Gamma function evaluated at \ ``x``\ .
+  \ :code:`Gamma(x)`\  is the Euler Gamma function evaluated at \ :code:`x`\ .
 
 
 .. index::
    pair: NMArbField; Gamma
 
 :spadfun:`Gamma`\: (%, %) -> % 
-  \ ``Gamma(x,y)``\  is the incomplete Gamma function.
+  \ :code:`Gamma(x,y)`\  is the incomplete Gamma function.
 
 .. _l4e4d4172624669656c64-676364:
 
@@ -652,7 +652,7 @@ NMArbField p
    pair: NMArbField; glaisher
 
 :spadfun:`glaisher`\: () -> % 
-  \ ``glaisher()``\  returns the Glaisher\ ``'s``\  constant.
+  \ :code:`glaisher()`\  returns the Glaisher\ :code:`'s`\  constant.
 
 .. _l4e4d4172624669656c64-6775657373:
 
@@ -660,7 +660,7 @@ NMArbField p
    pair: NMArbField; guess
 
 :spadfun:`guess`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  
-  \ ``guess(a, deg)``\  returns the reconstructed algebraic number found if it succeeds. Up to degree deg.
+  \ :code:`guess(a, deg)`\  returns the reconstructed algebraic number found if it succeeds. Up to degree deg.
 
 .. _l4e4d4172624669656c64-6875727769747a5a657461:
 
@@ -668,7 +668,7 @@ NMArbField p
    pair: NMArbField; hurwitzZeta
 
 :spadfun:`hurwitzZeta`\: (%, %) -> % 
-  \ ``hurwitzZeta(s,a)``\  returns the Hurwitz zeta function of \ ``s``\  and a.
+  \ :code:`hurwitzZeta(s,a)`\  returns the Hurwitz zeta function of \ :code:`s`\  and a.
 
 .. _l4e4d4172624669656c64-696e637265617365507265636973696f6e:
 
@@ -681,7 +681,7 @@ NMArbField p
    pair: NMArbField; integer?
 
 :spadfun:`integer?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``integer?(x)``\  checks whether or not \ ``x``\  is an integer.
+  \ :code:`integer?(x)`\  checks whether or not \ :code:`x`\  is an integer.
 
 .. _l4e4d4172624669656c64-696e76:
 
@@ -795,7 +795,7 @@ NMArbField p
    pair: NMArbField; jnball
 
 :spadfun:`jnball`\: (%, %) -> % 
-  \ ``jnball(x,r)``\  returns a ball with midpoint \ ``x``\  and radius \ ``r``\ .
+  \ :code:`jnball(x,r)`\  returns a ball with midpoint \ :code:`x`\  and radius \ :code:`r`\ .
 
 .. _l4e4d4172624669656c64-6a6e7262:
 
@@ -803,42 +803,42 @@ NMArbField p
    pair: NMArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ ``jnrb(fl)``\  returns \ ``fl``\  as a real Arb ball.
+  \ :code:`jnrb(fl)`\  returns \ :code:`fl`\  as a real Arb ball.
 
 
 .. index::
    pair: NMArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnrb(fi)``\  returns \ ``fi``\  as a real Arb ball.
+  \ :code:`jnrb(fi)`\  returns \ :code:`fi`\  as a real Arb ball.
 
 
 .. index::
    pair: NMArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ ``jnrb(i)``\  returns \ ``i``\  as a real Arb ball.
+  \ :code:`jnrb(i)`\  returns \ :code:`i`\  as a real Arb ball.
 
 
 .. index::
    pair: NMArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`NMAlgebraicNumber <l4e4d416c676562726169634e756d626572>`\  -> % 
-  \ ``jnrb(jan)``\  evaluates numerically \ ``jan``\  by converting it to a real Arb field.
+  \ :code:`jnrb(jan)`\  evaluates numerically \ :code:`jan`\  by converting it to a real Arb field.
 
 
 .. index::
    pair: NMArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`NMExactCalciumField <l4e4d457861637443616c6369756d4669656c64>`\  -> % 
-  \ ``jnrb(necf)``\  evaluates numerically \ ``necf``\  by converting it to a real Arb field.
+  \ :code:`jnrb(necf)`\  evaluates numerically \ :code:`necf`\  by converting it to a real Arb field.
 
 
 .. index::
    pair: NMArbField; jnrb
 
 :spadfun:`jnrb`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ ``jnrb(str)``\  evaluates \ ``str``\  by converting it to a real Arb field.
+  \ :code:`jnrb(str)`\  evaluates \ :code:`str`\  by converting it to a real Arb field.
 
 .. _l4e4d4172624669656c64-6b68696e6368696e:
 
@@ -846,7 +846,7 @@ NMArbField p
    pair: NMArbField; khinchin
 
 :spadfun:`khinchin`\: () -> % 
-  \ ``khinchin()``\  returns the Khinchin\ ``'s``\  constant.
+  \ :code:`khinchin()`\  returns the Khinchin\ :code:`'s`\  constant.
 
 .. _l4e4d4172624669656c64-6c61746578:
 
@@ -873,7 +873,7 @@ NMArbField p
    pair: NMArbField; ldexp
 
 :spadfun:`ldexp`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ ``ldexp(x, n)``\  returns \ ``x``\  * 2^n.
+  \ :code:`ldexp(x, n)`\  returns \ :code:`x`\  * 2^n.
 
 .. _l4e4d4172624669656c64-6c656674506f776572:
 
@@ -895,7 +895,7 @@ NMArbField p
    pair: NMArbField; log1p
 
 :spadfun:`log1p`\: % -> % 
-  \ ``log1p(x)``\  logarithm of 1+x computed accurately.
+  \ :code:`log1p(x)`\  logarithm of 1+x computed accurately.
 
 .. _l4e4d4172624669656c64-6c6f67:
 
@@ -922,7 +922,7 @@ NMArbField p
    pair: NMArbField; midpoint
 
 :spadfun:`midpoint`\: % -> % 
-  \ ``midpoint(x)``\  returns the midpoint of \ ``x``\ .
+  \ :code:`midpoint(x)`\  returns the midpoint of \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-6d696e:
 
@@ -954,7 +954,7 @@ NMArbField p
    pair: NMArbField; nonNegative?
 
 :spadfun:`nonNegative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nonNegative?(v)``\  checks whether or not \ ``x``\  is greater or equal to zero.
+  \ :code:`nonNegative?(v)`\  checks whether or not \ :code:`x`\  is greater or equal to zero.
 
 .. _l4e4d4172624669656c64-6e6f6e506f7369746976653f:
 
@@ -962,7 +962,7 @@ NMArbField p
    pair: NMArbField; nonPositive?
 
 :spadfun:`nonPositive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nonPositive?(v)``\  checks whether or not \ ``x``\  is lower or equal to zero.
+  \ :code:`nonPositive?(v)`\  checks whether or not \ :code:`x`\  is lower or equal to zero.
 
 .. _l4e4d4172624669656c64-6e6f6e5a65726f3f:
 
@@ -970,7 +970,7 @@ NMArbField p
    pair: NMArbField; nonZero?
 
 :spadfun:`nonZero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``nonZero?(x)``\  returns \ ``true``\  if \ ``x``\  is not equal to 0.
+  \ :code:`nonZero?(x)`\  returns \ :code:`true`\  if \ :code:`x`\  is not equal to 0.
 
 .. _l4e4d4172624669656c64-6e6f726d:
 
@@ -1008,7 +1008,7 @@ NMArbField p
    pair: NMArbField; overlaps?
 
 :spadfun:`overlaps?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``overlaps?(x,y)``\  checks whether or not any part of \ ``x``\  and \ ``y``\  balls overlaps.
+  \ :code:`overlaps?(x,y)`\  checks whether or not any part of \ :code:`x`\  and \ :code:`y`\  balls overlaps.
 
 .. _l4e4d4172624669656c64-7061747465726e4d61746368:
 
@@ -1031,7 +1031,7 @@ NMArbField p
    pair: NMArbField; polyLog
 
 :spadfun:`polyLog`\: (%, %) -> % 
-  \ ``polyLog(x,y)``\  returns the polyLog function applied to \ ``x``\  and \ ``y``\ .
+  \ :code:`polyLog(x,y)`\  returns the polyLog function applied to \ :code:`x`\  and \ :code:`y`\ .
 
 .. _l4e4d4172624669656c64-706f7369746976653f:
 
@@ -1068,7 +1068,7 @@ NMArbField p
    pair: NMArbField; radius
 
 :spadfun:`radius`\: % -> % 
-  \ ``radius(x)``\  returns the radius of \ ``x``\ .
+  \ :code:`radius(x)`\  returns the radius of \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-72616e6474657374:
 
@@ -1076,7 +1076,7 @@ NMArbField p
    pair: NMArbField; randtest
 
 :spadfun:`randtest`\: \ :ref:`JLSymbol <l4a4c53796d626f6c>`\  -> % 
-  \ ``randtest(randtype)``\  returns a random number depending on the Julia symbol \ ``randtype``\ . :urandom a uniformly distributed random number contained in [0,1]. To test corner cases: :randtest returns a finite random number, :randtest_exact returns a zero radius random number, :randtest_precise returns a precise random number i.e. with a radius of around 2^-precision() the magnitude of the midpoint, :randtest_special returns a special random number where midpoint and/or radius might be NaNs or infinities, :randtest_wide returns a random number with a large radius that might be big relative to its midpoint.
+  \ :code:`randtest(randtype)`\  returns a random number depending on the Julia symbol \ :code:`randtype`\ . :urandom a uniformly distributed random number contained in [0,1]. To test corner cases: :randtest returns a finite random number, :randtest_exact returns a zero radius random number, :randtest_precise returns a precise random number i.e. with a radius of around 2^-precision() the magnitude of the midpoint, :randtest_special returns a special random number where midpoint and/or radius might be NaNs or infinities, :randtest_wide returns a random number with a large radius that might be big relative to its midpoint.
 
 .. _l4e4d4172624669656c64-7265636970:
 
@@ -1146,7 +1146,7 @@ NMArbField p
    pair: NMArbField; setUnion
 
 :spadfun:`setUnion`\: (%, %) -> % 
-  \ ``setUnion(x,y)``\  returns the unions of the intervals \ ``x``\  and \ ``y``\ .
+  \ :code:`setUnion(x,y)`\  returns the unions of the intervals \ :code:`x`\  and \ :code:`y`\ .
 
 .. _l4e4d4172624669656c64-7369676e:
 
@@ -1223,7 +1223,7 @@ NMArbField p
    pair: NMArbField; trim
 
 :spadfun:`trim`\: % -> % 
-  \ ``trim(x)``\  rounds off insignificant bits from the midpoint.
+  \ :code:`trim(x)`\  rounds off insignificant bits from the midpoint.
 
 .. _l4e4d4172624669656c64-7472756e63617465:
 
@@ -1236,7 +1236,7 @@ NMArbField p
    pair: NMArbField; uniqueInteger
 
 :spadfun:`uniqueInteger`\: % -> Union(\ :ref:`NMInteger <l4e4d496e7465676572>`\ , failed) 
-  \ ``uniqueInteger(x)``\  returns a NMInteger if there is a unique integer in the interval \ ``x``\ , "failed" otherwise.
+  \ :code:`uniqueInteger(x)`\  returns a NMInteger if there is a unique integer in the interval \ :code:`x`\ , "failed" otherwise.
 
 .. _l4e4d4172624669656c64-756e69743f:
 
@@ -1259,7 +1259,7 @@ NMArbField p
    pair: NMArbField; urand01
 
 :spadfun:`urand01`\: () -> % 
-  \ ``urand01()``\  returns a uniformly distributed random number contained in [0,1].
+  \ :code:`urand01()`\  returns a uniformly distributed random number contained in [0,1].
 
 .. _l4e4d4172624669656c64-77686f6c6550617274:
 

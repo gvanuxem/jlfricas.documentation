@@ -10,7 +10,7 @@ FreeGroup S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-The free group on a set \ ``S``\  is the group of finite products of the form \ ``reduce(*, [si ^ ni])``\  where the \ ``si``\ \ ``'s``\  are in \ ``S``\ , and the \ ``ni``\ \ ``'s``\  are integers. The multiplication is not commutative.
+The free group on a set \ :code:`S`\  is the group of finite products of the form \ :code:`reduce(*, [si ^ ni])`\  where the \ :code:`si`\ \ :code:`'s`\  are in \ :code:`S`\ , and the \ :code:`ni`\ \ :code:`'s`\  are integers. The multiplication is not commutative.
 
 
 .. _l4672656547726f7570-31:
@@ -28,14 +28,14 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; *
 
 :spadfun:`\*`\: (%, S) -> % 
-  \ ``x * s``\  returns the product of \ ``x``\  by \ ``s``\  on the right.
+  \ :code:`x * s`\  returns the product of \ :code:`x`\  by \ :code:`s`\  on the right.
 
 
 .. index::
    pair: FreeGroup; *
 
 :spadfun:`\*`\: (S, %) -> % 
-  \ ``s * x``\  returns the product of \ ``x``\  by \ ``s``\  on the left.
+  \ :code:`s * x`\  returns the product of \ :code:`x`\  by \ :code:`s`\  on the left.
 
 .. _l4672656547726f7570-2f:
 
@@ -65,7 +65,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; ^
 
 :spadfun:`^`\: (S, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ ``s ^ n``\  returns the product of \ ``s``\  by itself \ ``n``\  times.
+  \ :code:`s ^ n`\  returns the product of \ :code:`s`\  by itself \ :code:`n`\  times.
 
 .. _l4672656547726f7570-7e3d:
 
@@ -97,7 +97,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; factors
 
 :spadfun:`factors`\: % -> \ :ref:`List <l4c697374>`\  Record(gen: S, exp: \ :ref:`Integer <l496e7465676572>`\ ) 
-  \ ``factors(a1\^e1, ..., an\^en)``\  returns \ ``[[a1, e1], ..., [an, en]]``\ .
+  \ :code:`factors(a1\^e1, ..., an\^en)`\  returns \ :code:`[[a1, e1], ..., [an, en]]`\ .
 
 .. _l4672656547726f7570-696e76:
 
@@ -129,7 +129,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; mapExpon
 
 :spadfun:`mapExpon`\: (\ :ref:`Integer <l496e7465676572>`\  -> \ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  \ ``mapExpon(f, a1\^e1 ... an\^en)``\  returns \ ``a1\^f(e1) ... an\^f(en)``\ .
+  \ :code:`mapExpon(f, a1\^e1 ... an\^en)`\  returns \ :code:`a1\^f(e1) ... an\^f(en)`\ .
 
 .. _l4672656547726f7570-6d617047656e:
 
@@ -137,7 +137,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; mapGen
 
 :spadfun:`mapGen`\: (S -> S, %) -> % 
-  \ ``mapGen(f, a1\^e1 ... an\^en)``\  returns \ ``f(a1)\^e1 ... f(an)\^en``\ .
+  \ :code:`mapGen(f, a1\^e1 ... an\^en)`\  returns \ :code:`f(a1)\^e1 ... f(an)\^en`\ .
 
 .. _l4672656547726f7570-6e74684578706f6e:
 
@@ -145,7 +145,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; nthExpon
 
 :spadfun:`nthExpon`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``nthExpon(x, n)``\  returns the exponent of the n^th monomial of \ ``x``\ .
+  \ :code:`nthExpon(x, n)`\  returns the exponent of the n^th monomial of \ :code:`x`\ .
 
 .. _l4672656547726f7570-6e7468466163746f72:
 
@@ -153,7 +153,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; nthFactor
 
 :spadfun:`nthFactor`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> S 
-  \ ``nthFactor(x, n)``\  returns the factor of the n^th monomial of \ ``x``\ .
+  \ :code:`nthFactor(x, n)`\  returns the factor of the n^th monomial of \ :code:`x`\ .
 
 .. _l4672656547726f7570-6f6e653f:
 
@@ -200,7 +200,7 @@ The free group on a set \ ``S``\  is the group of finite products of the form \ 
    pair: FreeGroup; size
 
 :spadfun:`size`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``size(x)``\  returns the number of monomials in \ ``x``\ .
+  \ :code:`size(x)`\  returns the number of monomials in \ :code:`x`\ .
 
 .. _l4672656547726f7570-736d616c6c65723f:
 

@@ -14,7 +14,7 @@ ExponentialOfUnivariatePuiseuxSeries(FE, var, cen)
 * cen: FE
 
 
-ExponentialOfUnivariatePuiseuxSeries is a domain used to represent essential singularities of functions. An object in this domain is a function of the form \ ``exp(f(x))``\ , where \ ``f(x)``\  is a Puiseux series with no terms of non-negative degree. Objects are ordered according to order of singularity, with functions which tend more rapidly to zero or infinity considered to be larger. Thus, if \ ``order(f(x)) < order(g(x))``\ , i.e. the first non-zero term of \ ``f(x)``\  has lower degree than the first non-zero term of \ ``g(x)``\ , then \ ``exp(f(x)) > exp(g(x))``\ . If \ ``order(f(x)) = order(g(x))``\ , then the ordering is essentially random. This domain is used in computing limits involving functions with essential singularities.
+ExponentialOfUnivariatePuiseuxSeries is a domain used to represent essential singularities of functions. An object in this domain is a function of the form \ :code:`exp(f(x))`\ , where \ :code:`f(x)`\  is a Puiseux series with no terms of non-negative degree. Objects are ordered according to order of singularity, with functions which tend more rapidly to zero or infinity considered to be larger. Thus, if \ :code:`order(f(x)) < order(g(x))`\ , i.e. the first non-zero term of \ :code:`f(x)`\  has lower degree than the first non-zero term of \ :code:`g(x)`\ , then \ :code:`exp(f(x)) > exp(g(x))`\ . If \ :code:`order(f(x)) = order(g(x))`\ , then the ordering is essentially random. This domain is used in computing limits involving functions with essential singularities.
 
 
 .. _l4578706f6e656e7469616c4f66556e697661726961746550756973657578536572696573-30:
@@ -395,7 +395,7 @@ ExponentialOfUnivariatePuiseuxSeries is a domain used to represent essential sin
    pair: ExponentialOfUnivariatePuiseuxSeries; exponent
 
 :spadfun:`exponent`\: % -> \ :ref:`UnivariatePuiseuxSeries <l556e697661726961746550756973657578536572696573>`\ (FE, var, cen) 
-  \ ``exponent(exp(f(x)))``\  returns \ ``f(x)``\ 
+  \ :code:`exponent(exp(f(x)))`\  returns \ :code:`f(x)`\ 
 
 .. _l4578706f6e656e7469616c4f66556e697661726961746550756973657578536572696573-6578706f6e656e7469616c:
 
@@ -403,7 +403,7 @@ ExponentialOfUnivariatePuiseuxSeries is a domain used to represent essential sin
    pair: ExponentialOfUnivariatePuiseuxSeries; exponential
 
 :spadfun:`exponential`\: \ :ref:`UnivariatePuiseuxSeries <l556e697661726961746550756973657578536572696573>`\ (FE, var, cen) -> % 
-  \ ``exponential(f(x))``\  returns \ ``exp(f(x))``\ . Note: the function does NOT check that \ ``f(x)``\  has no non-negative terms.
+  \ :code:`exponential(f(x))`\  returns \ :code:`exp(f(x))`\ . Note: the function does NOT check that \ :code:`f(x)`\  has no non-negative terms.
 
 .. _l4578706f6e656e7469616c4f66556e697661726961746550756973657578536572696573-6578706f6e656e7469616c4f72646572:
 
@@ -411,7 +411,7 @@ ExponentialOfUnivariatePuiseuxSeries is a domain used to represent essential sin
    pair: ExponentialOfUnivariatePuiseuxSeries; exponentialOrder
 
 :spadfun:`exponentialOrder`\: % -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``exponentialOrder(exp(c * x ^(-n) + ...))``\  returns \ ``-n``\ . exponentialOrder(0) returns \ ``0``\ .
+  \ :code:`exponentialOrder(exp(c * x ^(-n) + ...))`\  returns \ :code:`-n`\ . exponentialOrder(0) returns \ :code:`0`\ .
 
 .. _l4578706f6e656e7469616c4f66556e697661726961746550756973657578536572696573-65787072657373496465616c4d656d626572:
 

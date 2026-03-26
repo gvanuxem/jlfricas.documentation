@@ -35,7 +35,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; *
 
 :spadfun:`\*`\: (%, R) -> % 
-  \ ``x * r``\  returns the product of \ ``x``\  by \ ``r``\ . Useful if \ ``R``\  is a non-commutative Ring.
+  \ :code:`x * r`\  returns the product of \ :code:`x`\  by \ :code:`r`\ . Useful if \ :code:`R`\  is a non-commutative Ring.
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -58,7 +58,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; *
 
 :spadfun:`\*`\: (vl, %) -> % 
-  \ ``v * x``\  returns the product of a variable \ ``x``\  by \ ``x``\ .
+  \ :code:`v * x`\  returns the product of a variable \ :code:`x`\  by \ :code:`x`\ .
 
 .. _l5846726565416c6765627261-2b:
 
@@ -119,14 +119,14 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; coef
 
 :spadfun:`coef`\: (%, %) -> R 
-  \ ``coef(x, y)``\  returns scalar product of \ ``x``\  by \ ``y``\ , the set of words being regarded as an orthogonal basis.
+  \ :code:`coef(x, y)`\  returns scalar product of \ :code:`x`\  by \ :code:`y`\ , the set of words being regarded as an orthogonal basis.
 
 
 .. index::
    pair: XFreeAlgebra; coef
 
 :spadfun:`coef`\: (%, \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  vl) -> R 
-  \ ``coef(x, w)``\  returns the coefficient of the word \ ``w``\  in \ ``x``\ .
+  \ :code:`coef(x, w)`\  returns the coefficient of the word \ :code:`w`\  in \ :code:`x`\ .
 
 .. _l5846726565416c6765627261-636f65726365:
 
@@ -150,7 +150,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; coerce
 
 :spadfun:`coerce`\: vl -> % 
-  \ ``coerce(v)``\  returns \ ``v``\ .
+  \ :code:`coerce(v)`\  returns \ :code:`v`\ .
 
 .. _l5846726565416c6765627261-636f6d6d757461746f72:
 
@@ -163,7 +163,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; constant?
 
 :spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``constant?(x)``\  returns \ ``true``\  if \ ``x``\  is constant.
+  \ :code:`constant?(x)`\  returns \ :code:`true`\  if \ :code:`x`\  is constant.
 
 .. _l5846726565416c6765627261-636f6e7374616e74:
 
@@ -171,7 +171,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; constant
 
 :spadfun:`constant`\: % -> R 
-  \ ``constant(x)``\  returns the constant term of \ ``x``\ .
+  \ :code:`constant(x)`\  returns the constant term of \ :code:`x`\ .
 
 .. _l5846726565416c6765627261-6c61746578:
 
@@ -198,21 +198,21 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; lquo
 
 :spadfun:`lquo`\: (%, %) -> % 
-  \ ``lquo(x, y)``\  is a bilinear extension of \ ``lquo``\  from words to \ ``\%``\ .
+  \ :code:`lquo(x, y)`\  is a bilinear extension of \ :code:`lquo`\  from words to \ :code:`\%`\ .
 
 
 .. index::
    pair: XFreeAlgebra; lquo
 
 :spadfun:`lquo`\: (%, \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  vl) -> % 
-  \ ``lquo(x, w)``\  returns the left simplification of \ ``x``\  by the word \ ``w``\ .
+  \ :code:`lquo(x, w)`\  returns the left simplification of \ :code:`x`\  by the word \ :code:`w`\ .
 
 
 .. index::
    pair: XFreeAlgebra; lquo
 
 :spadfun:`lquo`\: (%, vl) -> % 
-  \ ``lquo(x, v)``\  returns the left simplification of \ ``x``\  by the variable \ ``v``\ .
+  \ :code:`lquo(x, v)`\  returns the left simplification of \ :code:`x`\  by the variable \ :code:`v`\ .
 
 .. _l5846726565416c6765627261-6d6170:
 
@@ -220,7 +220,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; map
 
 :spadfun:`map`\: (R -> R, %) -> % 
-  \ ``map(fn, x)``\  returns \ ``Sum(fn(r_i) w_i)``\  if \ ``x``\  writes \ ``Sum(r_i w_i)``\ .
+  \ :code:`map(fn, x)`\  returns \ :code:`Sum(fn(r_i) w_i)`\  if \ :code:`x`\  writes \ :code:`Sum(r_i w_i)`\ .
 
 .. _l5846726565416c6765627261-6d696e646567:
 
@@ -228,7 +228,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; mindeg
 
 :spadfun:`mindeg`\: % -> \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  vl 
-  \ ``mindeg(x)``\  returns the little word which appears in \ ``x``\ . Error if \ ``x=0``\ .
+  \ :code:`mindeg(x)`\  returns the little word which appears in \ :code:`x`\ . Error if \ :code:`x=0`\ .
 
 .. _l5846726565416c6765627261-6d696e6465675465726d:
 
@@ -236,7 +236,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; mindegTerm
 
 :spadfun:`mindegTerm`\: % -> Record(k: \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  vl, c: R) 
-  \ ``mindegTerm(x)``\  returns the term whose word is \ ``mindeg(x)``\ .
+  \ :code:`mindegTerm(x)`\  returns the term whose word is \ :code:`mindeg(x)`\ .
 
 .. _l5846726565416c6765627261-6d6972726f72:
 
@@ -244,7 +244,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; mirror
 
 :spadfun:`mirror`\: % -> % 
-  \ ``mirror(x)``\  returns \ ``Sum(r_i mirror(w_i))``\  if \ ``x``\  writes \ ``Sum(r_i w_i)``\ .
+  \ :code:`mirror(x)`\  returns \ :code:`Sum(r_i mirror(w_i))`\  if \ :code:`x`\  writes \ :code:`Sum(r_i w_i)`\ .
 
 .. _l5846726565416c6765627261-6d6f6e6f6d69616c3f:
 
@@ -252,7 +252,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; monomial?
 
 :spadfun:`monomial?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``monomial?(x)``\  returns \ ``true``\  if \ ``x``\  is a monomial
+  \ :code:`monomial?(x)`\  returns \ :code:`true`\  if \ :code:`x`\  is a monomial
 
 .. _l5846726565416c6765627261-6d6f6e6f6d69616c:
 
@@ -260,7 +260,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; monomial
 
 :spadfun:`monomial`\: (R, \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  vl) -> % 
-  \ ``monomial(r, w)``\  returns the product of the word \ ``w``\  by the coefficient \ ``r``\ .
+  \ :code:`monomial(r, w)`\  returns the product of the word \ :code:`w`\  by the coefficient \ :code:`r`\ .
 
 .. _l5846726565416c6765627261-6f6e653f:
 
@@ -283,7 +283,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; quasiRegular?
 
 :spadfun:`quasiRegular?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``quasiRegular?(x)``\  return \ ``true``\  if \ ``constant(x)``\  is zero.
+  \ :code:`quasiRegular?(x)`\  return \ :code:`true`\  if \ :code:`constant(x)`\  is zero.
 
 .. _l5846726565416c6765627261-7175617369526567756c6172:
 
@@ -291,7 +291,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; quasiRegular
 
 :spadfun:`quasiRegular`\: % -> % 
-  \ ``quasiRegular(x)``\  return \ ``x``\  minus its constant term.
+  \ :code:`quasiRegular(x)`\  return \ :code:`x`\  minus its constant term.
 
 .. _l5846726565416c6765627261-7265636970:
 
@@ -336,21 +336,21 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; rquo
 
 :spadfun:`rquo`\: (%, %) -> % 
-  \ ``rquo(x, y)``\  is a bilinear extension of \ ``rquo``\  from words to \ ``\%``\ .
+  \ :code:`rquo(x, y)`\  is a bilinear extension of \ :code:`rquo`\  from words to \ :code:`\%`\ .
 
 
 .. index::
    pair: XFreeAlgebra; rquo
 
 :spadfun:`rquo`\: (%, \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  vl) -> % 
-  \ ``rquo(x, w)``\  returns the right simplification of \ ``x``\  by \ ``w``\ .
+  \ :code:`rquo(x, w)`\  returns the right simplification of \ :code:`x`\  by \ :code:`w`\ .
 
 
 .. index::
    pair: XFreeAlgebra; rquo
 
 :spadfun:`rquo`\: (%, vl) -> % 
-  \ ``rquo(x, v)``\  returns the right simplification of \ ``x``\  by the variable \ ``v``\ .
+  \ :code:`rquo(x, v)`\  returns the right simplification of \ :code:`x`\  by the variable \ :code:`v`\ .
 
 .. _l5846726565416c6765627261-73616d706c65:
 
@@ -363,14 +363,14 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; sh
 
 :spadfun:`sh`\: (%, %) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``sh(x, y)``\  returns the shuffle-product of \ ``x``\  by \ ``y``\ . This multiplication is associative and commutative.
+  \ :code:`sh(x, y)`\  returns the shuffle-product of \ :code:`x`\  by \ :code:`y`\ . This multiplication is associative and commutative.
 
 
 .. index::
    pair: XFreeAlgebra; sh
 
 :spadfun:`sh`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  \ ``sh(x, n)``\  returns the shuffle power of \ ``x``\  to the \ ``n``\ .
+  \ :code:`sh(x, n)`\  returns the shuffle power of \ :code:`x`\  to the \ :code:`n`\ .
 
 .. _l5846726565416c6765627261-7375627472616374496643616e:
 
@@ -383,7 +383,7 @@ This category specifies operations for polynomials and formal series with non-co
    pair: XFreeAlgebra; varList
 
 :spadfun:`varList`\: % -> \ :ref:`List <l4c697374>`\  vl 
-  \ ``varList(x)``\  returns the list of variables which appear in \ ``x``\ .
+  \ :code:`varList(x)`\  returns the list of variables which appear in \ :code:`x`\ .
 
 .. _l5846726565416c6765627261-7a65726f3f:
 

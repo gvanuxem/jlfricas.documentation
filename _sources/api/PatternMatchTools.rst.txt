@@ -23,7 +23,7 @@ This package provides tools for the pattern matcher.
    pair: PatternMatchTools; patternMatch
 
 :spadfun:`patternMatch`\: (\ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  \ :ref:`Pattern <l5061747465726e>`\  S, \ :ref:`List <l4c697374>`\  P -> P, \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P), (P, \ :ref:`Pattern <l5061747465726e>`\  S, \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P) 
-  \ ``patternMatch(lsubj, lpat, op, res, match)``\  matches the list of patterns \ ``lpat``\  to the list of subjects \ ``lsubj``\ , allowing for commutativity; \ ``op``\  is the operator such that \ ``op``\ (\ ``lpat``\ ) should match \ ``op``\ (\ ``lsubj``\ ) at the end, \ ``r``\  contains the previous matches, and match is a pattern-matching function on \ ``P``\ .
+  \ :code:`patternMatch(lsubj, lpat, op, res, match)`\  matches the list of patterns \ :code:`lpat`\  to the list of subjects \ :code:`lsubj`\ , allowing for commutativity; \ :code:`op`\  is the operator such that \ :code:`op`\ (\ :code:`lpat`\ ) should match \ :code:`op`\ (\ :code:`lsubj`\ ) at the end, \ :code:`r`\  contains the previous matches, and match is a pattern-matching function on \ :code:`P`\ .
 
 .. _l5061747465726e4d61746368546f6f6c73-7061747465726e4d6174636854696d6573:
 
@@ -31,6 +31,6 @@ This package provides tools for the pattern matcher.
    pair: PatternMatchTools; patternMatchTimes
 
 :spadfun:`patternMatchTimes`\: (\ :ref:`List <l4c697374>`\  P, \ :ref:`List <l4c697374>`\  \ :ref:`Pattern <l5061747465726e>`\  S, \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P), (P, \ :ref:`Pattern <l5061747465726e>`\  S, \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P)) -> \ :ref:`PatternMatchResult <l5061747465726e4d61746368526573756c74>`\ (S, P) 
-  \ ``patternMatchTimes(lsubj, lpat, res, match)``\  matches the product of patterns \ ``reduce(*, lpat)``\  to the product of subjects \ ``reduce(*, lsubj)``\ ; \ ``r``\  contains the previous matches and match is a pattern-matching function on \ ``P``\ .
+  \ :code:`patternMatchTimes(lsubj, lpat, res, match)`\  matches the product of patterns \ :code:`reduce(*, lpat)`\  to the product of subjects \ :code:`reduce(*, lsubj)`\ ; \ :code:`r`\  contains the previous matches and match is a pattern-matching function on \ :code:`P`\ .
 
 

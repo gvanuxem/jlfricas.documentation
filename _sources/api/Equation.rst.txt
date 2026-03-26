@@ -33,7 +33,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; *
 
 :spadfun:`\*`\: (%, S) -> % if S has \ :ref:`SemiGroup <l53656d6947726f7570>`\ 
-  \ ``eqn*x``\  produces a new equation by multiplying both sides of equation eqn by \ ``x``\ .
+  \ :code:`eqn*x`\  produces a new equation by multiplying both sides of equation eqn by \ :code:`x`\ .
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if S has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
@@ -52,7 +52,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; *
 
 :spadfun:`\*`\: (S, %) -> % if S has \ :ref:`SemiGroup <l53656d6947726f7570>`\ 
-  \ ``x*eqn``\  produces a new equation by multiplying both sides of equation eqn by \ ``x``\ .
+  \ :code:`x*eqn`\  produces a new equation by multiplying both sides of equation eqn by \ :code:`x`\ .
 
 .. _l4571756174696f6e-2b:
 
@@ -64,14 +64,14 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; +
 
 :spadfun:`+`\: (%, S) -> % if S has \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
-  \ ``eqn+x``\  produces a new equation by adding \ ``x``\  to both sides of equation eqn.
+  \ :code:`eqn+x`\  produces a new equation by adding \ :code:`x`\  to both sides of equation eqn.
 
 
 .. index::
    pair: Equation; +
 
 :spadfun:`+`\: (S, %) -> % if S has \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
-  \ ``x+eqn``\  produces a new equation by adding \ ``x``\  to both sides of equation eqn.
+  \ :code:`x+eqn`\  produces a new equation by adding \ :code:`x`\  to both sides of equation eqn.
 
 .. _l4571756174696f6e-2d:
 
@@ -87,14 +87,14 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; -
 
 :spadfun:`-`\: (%, S) -> % if S has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``eqn-x``\  produces a new equation by subtracting \ ``x``\  from both sides of equation eqn.
+  \ :code:`eqn-x`\  produces a new equation by subtracting \ :code:`x`\  from both sides of equation eqn.
 
 
 .. index::
    pair: Equation; -
 
 :spadfun:`-`\: (S, %) -> % if S has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``x-eqn``\  produces a new equation by subtracting both sides of equation eqn from \ ``x``\ .
+  \ :code:`x-eqn`\  produces a new equation by subtracting both sides of equation eqn from \ :code:`x`\ .
 
 .. _l4571756174696f6e-2f:
 
@@ -102,7 +102,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; /
 
 :spadfun:`/`\: (%, %) -> % if S has \ :ref:`Group <l47726f7570>`\  or S has \ :ref:`Field <l4669656c64>`\ 
-  \ ``e1/e2``\  produces a new equation by dividing the left and right hand sides of equations \ ``e1``\  and \ ``e2``\ .
+  \ :code:`e1/e2`\  produces a new equation by dividing the left and right hand sides of equations \ :code:`e1`\  and \ :code:`e2`\ .
 
 .. _l4571756174696f6e-3d:
 
@@ -114,7 +114,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; =
 
 :spadfun:`=`\: (S, S) -> % 
-  \ ``a=b``\  creates an equation.
+  \ :code:`a=b`\  creates an equation.
 
 .. _l4571756174696f6e-5e:
 
@@ -222,7 +222,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; equation
 
 :spadfun:`equation`\: (S, S) -> % 
-  \ ``equation(a, b)``\  creates an equation.
+  \ :code:`equation(a, b)`\  creates an equation.
 
 .. _l4571756174696f6e-6576616c:
 
@@ -230,14 +230,14 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; eval
 
 :spadfun:`eval`\: (%, %) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
-  \ ``eval(eqn, x=f)``\  replaces \ ``x``\  by \ ``f``\  in equation \ ``eqn``\ .
+  \ :code:`eval(eqn, x=f)`\  replaces \ :code:`x`\  by \ :code:`f`\  in equation \ :code:`eqn`\ .
 
 
 .. index::
    pair: Equation; eval
 
 :spadfun:`eval`\: (%, \ :ref:`List <l4c697374>`\  %) -> % if S has \ :ref:`Evalable <l4576616c61626c65>`\  S and S has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
-  \ ``eval(eqn, [x1=v1, ... xn=vn])``\  replaces \ ``xi``\  by \ ``vi``\  in equation \ ``eqn``\ .
+  \ :code:`eval(eqn, [x1=v1, ... xn=vn])`\  replaces \ :code:`xi`\  by \ :code:`vi`\  in equation \ :code:`eqn`\ .
 
 
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  S) -> % if S has \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`Symbol <l53796d626f6c>`\ , S)
@@ -253,7 +253,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; factorAndSplit
 
 :spadfun:`factorAndSplit`\: % -> \ :ref:`List <l4c697374>`\  % if S has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ 
-  \ ``factorAndSplit(eq)``\  make the right hand side 0 and factors the new left hand side. Each factor is equated to 0 and put into the resulting list without repetitions.
+  \ :code:`factorAndSplit(eq)`\  make the right hand side 0 and factors the new left hand side. Each factor is equated to 0 and put into the resulting list without repetitions.
 
 .. _l4571756174696f6e-696e76:
 
@@ -261,7 +261,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; inv
 
 :spadfun:`inv`\: % -> % if S has \ :ref:`Group <l47726f7570>`\  or S has \ :ref:`Field <l4669656c64>`\ 
-  \ ``inv(x)``\  returns the multiplicative inverse of \ ``x``\ .
+  \ :code:`inv(x)`\  returns the multiplicative inverse of \ :code:`x`\ .
 
 .. _l4571756174696f6e-6c61746578:
 
@@ -274,7 +274,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; leftOne
 
 :spadfun:`leftOne`\: % -> Union(%, failed) if S has \ :ref:`Monoid <l4d6f6e6f6964>`\ 
-  \ ``leftOne(eq)``\  divides by the left hand side, if possible.
+  \ :code:`leftOne(eq)`\  divides by the left hand side, if possible.
 
 .. _l4571756174696f6e-6c656674506f776572:
 
@@ -296,7 +296,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; leftZero
 
 :spadfun:`leftZero`\: % -> % if S has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``leftZero(eq)``\  subtracts the left hand side.
+  \ :code:`leftZero(eq)`\  subtracts the left hand side.
 
 .. _l4571756174696f6e-6c6873:
 
@@ -304,7 +304,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; lhs
 
 :spadfun:`lhs`\: % -> S 
-  \ ``lhs(eqn)``\  returns the left hand side of equation \ ``eqn``\ .
+  \ :code:`lhs(eqn)`\  returns the left hand side of equation \ :code:`eqn`\ .
 
 .. _l4571756174696f6e-6d6170:
 
@@ -312,7 +312,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; map
 
 :spadfun:`map`\: (S -> S, %) -> % 
-  \ ``map(f, eqn)``\  constructs a new equation by applying \ ``f``\  to both sides of eqn.
+  \ :code:`map(f, eqn)`\  constructs a new equation by applying \ :code:`f`\  to both sides of eqn.
 
 .. _l4571756174696f6e-6f6e653f:
 
@@ -335,7 +335,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; rhs
 
 :spadfun:`rhs`\: % -> S 
-  \ ``rhs(eqn)``\  returns the right hand side of equation \ ``eqn``\ .
+  \ :code:`rhs(eqn)`\  returns the right hand side of equation \ :code:`eqn`\ .
 
 .. _l4571756174696f6e-72696768744f6e65:
 
@@ -343,7 +343,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; rightOne
 
 :spadfun:`rightOne`\: % -> Union(%, failed) if S has \ :ref:`Monoid <l4d6f6e6f6964>`\ 
-  \ ``rightOne(eq)``\  divides by the right hand side, if possible.
+  \ :code:`rightOne(eq)`\  divides by the right hand side, if possible.
 
 .. _l4571756174696f6e-7269676874506f776572:
 
@@ -365,7 +365,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; rightZero
 
 :spadfun:`rightZero`\: % -> % if S has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``rightZero(eq)``\  subtracts the right hand side.
+  \ :code:`rightZero(eq)`\  subtracts the right hand side.
 
 .. _l4571756174696f6e-73616d706c65:
 
@@ -378,7 +378,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; subst
 
 :spadfun:`subst`\: (%, %) -> % if S has \ :ref:`ExpressionSpace <l45787072657373696f6e5370616365>`\ 
-  \ ``subst(eq1, eq2)``\  substitutes \ ``eq2``\  into both sides of \ ``eq1``\  the \ ``lhs``\  of \ ``eq2``\  should be a kernel
+  \ :code:`subst(eq1, eq2)`\  substitutes \ :code:`eq2`\  into both sides of \ :code:`eq1`\  the \ :code:`lhs`\  of \ :code:`eq2`\  should be a kernel
 
 .. _l4571756174696f6e-7375627472616374496643616e:
 
@@ -391,7 +391,7 @@ Equations as mathematical objects. All properties of the basis domain, e.g. bein
    pair: Equation; swap
 
 :spadfun:`swap`\: % -> % 
-  \ ``swap(eq)``\  interchanges left and right hand side of equation \ ``eq``\ .
+  \ :code:`swap(eq)`\  interchanges left and right hand side of equation \ :code:`eq`\ .
 
 .. _l4571756174696f6e-7a65726f3f:
 

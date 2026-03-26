@@ -24,21 +24,21 @@ VectorCategory R
    pair: VectorCategory; *
 
 :spadfun:`\*`\: (%, R) -> % if R has \ :ref:`SemiGroup <l53656d6947726f7570>`\ 
-  \ ``y * r``\  multiplies each component of the vector \ ``y``\  by the element \ ``r``\ .
+  \ :code:`y * r`\  multiplies each component of the vector \ :code:`y`\  by the element \ :code:`r`\ .
 
 
 .. index::
    pair: VectorCategory; *
 
 :spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``n * y``\  multiplies each component of the vector \ ``y``\  by the integer \ ``n``\ .
+  \ :code:`n * y`\  multiplies each component of the vector \ :code:`y`\  by the integer \ :code:`n`\ .
 
 
 .. index::
    pair: VectorCategory; *
 
 :spadfun:`\*`\: (R, %) -> % if R has \ :ref:`SemiGroup <l53656d6947726f7570>`\ 
-  \ ``r * y``\  multiplies the element \ ``r``\  times each component of the vector \ ``y``\ .
+  \ :code:`r * y`\  multiplies the element \ :code:`r`\  times each component of the vector \ :code:`y`\ .
 
 .. _l566563746f7243617465676f7279-2b:
 
@@ -46,7 +46,7 @@ VectorCategory R
    pair: VectorCategory; +
 
 :spadfun:`+`\: (%, %) -> % if R has \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
-  \ ``x + y``\  returns the component-wise sum of the vectors \ ``x``\  and \ ``y``\ . Error: if \ ``x``\  and \ ``y``\  are not of the same length.
+  \ :code:`x + y`\  returns the component-wise sum of the vectors \ :code:`x`\  and \ :code:`y`\ . Error: if \ :code:`x`\  and \ :code:`y`\  are not of the same length.
 
 .. _l566563746f7243617465676f7279-2d:
 
@@ -54,14 +54,14 @@ VectorCategory R
    pair: VectorCategory; -
 
 :spadfun:`-`\: % -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``-x``\  negates all components of the vector \ ``x``\ .
+  \ :code:`-x`\  negates all components of the vector \ :code:`x`\ .
 
 
 .. index::
    pair: VectorCategory; -
 
 :spadfun:`-`\: (%, %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
-  \ ``x - y``\  returns the component-wise difference of the vectors \ ``x``\  and \ ``y``\ . Error: if \ ``x``\  and \ ``y``\  are not of the same length.
+  \ :code:`x - y`\  returns the component-wise difference of the vectors \ :code:`x`\  and \ :code:`y`\ . Error: if \ :code:`x`\  and \ :code:`y`\  are not of the same length.
 
 .. _l566563746f7243617465676f7279-3c3d:
 
@@ -155,7 +155,7 @@ VectorCategory R
    pair: VectorCategory; cross
 
 :spadfun:`cross`\: (%, %) -> % if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``cross(u, v)``\  constructs the cross product of \ ``u``\  and \ ``v``\ . Error: if \ ``u``\  and \ ``v``\  are not of length 3.
+  \ :code:`cross(u, v)`\  constructs the cross product of \ :code:`u`\  and \ :code:`v`\ . Error: if \ :code:`u`\  and \ :code:`v`\  are not of length 3.
 
 .. _l566563746f7243617465676f7279-64656c657465:
 
@@ -172,7 +172,7 @@ VectorCategory R
    pair: VectorCategory; dot
 
 :spadfun:`dot`\: (%, %) -> R if R has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and R has \ :ref:`SemiRng <l53656d69526e67>`\ 
-  \ ``dot(x, y)``\  computes the inner product of the two vectors \ ``x``\  and \ ``y``\ . Error: if \ ``x``\  and \ ``y``\  are not of the same length.
+  \ :code:`dot(x, y)`\  computes the inner product of the two vectors \ :code:`x`\  and \ :code:`y`\ . Error: if \ :code:`x`\  and \ :code:`y`\  are not of the same length.
 
 .. _l566563746f7243617465676f7279-656c74:
 
@@ -298,7 +298,7 @@ VectorCategory R
    pair: VectorCategory; length
 
 :spadfun:`length`\: % -> R if R has \ :ref:`Ring <l52696e67>`\  and R has \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
-  \ ``length(v)``\  computes the sqrt(dot(\ ``v``\ , \ ``v``\ )), i.e. the euclidean length
+  \ :code:`length(v)`\  computes the sqrt(dot(\ :code:`v`\ , \ :code:`v`\ )), i.e. the euclidean length
 
 .. _l566563746f7243617465676f7279-6c6573733f:
 
@@ -386,7 +386,7 @@ VectorCategory R
    pair: VectorCategory; outerProduct
 
 :spadfun:`outerProduct`\: (%, %) -> \ :ref:`Matrix <l4d6174726978>`\  R if R has \ :ref:`Ring <l52696e67>`\ 
-  \ ``outerProduct(u, v)``\  constructs the matrix whose (\ ``i``\ , \ ``j``\ )\ ``'``\ th element is \ ``u``\ (\ ``i``\ )\ ``*v``\ (\ ``j``\ ).
+  \ :code:`outerProduct(u, v)`\  constructs the matrix whose (\ :code:`i`\ , \ :code:`j`\ )\ :code:`'`\ th element is \ :code:`u`\ (\ :code:`i`\ )\ :code:`*v`\ (\ :code:`j`\ ).
 
 .. _l566563746f7243617465676f7279-7061727473:
 
@@ -530,7 +530,7 @@ VectorCategory R
    pair: VectorCategory; zero?
 
 :spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
-  \ ``zero?(x)``\  returns \ ``true``\  if \ ``x``\  is a zero vector, \ ``false``\  otherwise.
+  \ :code:`zero?(x)`\  returns \ :code:`true`\  if \ :code:`x`\  is a zero vector, \ :code:`false`\  otherwise.
 
 .. _l566563746f7243617465676f7279-7a65726f:
 
@@ -538,7 +538,7 @@ VectorCategory R
    pair: VectorCategory; zero
 
 :spadfun:`zero`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % if R has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
-  \ ``zero(n)``\  creates a zero vector of length \ ``n``\ .
+  \ :code:`zero(n)`\  creates a zero vector of length \ :code:`n`\ .
 
 
 \ :ref:`Aggregate <l416767726567617465>`\  

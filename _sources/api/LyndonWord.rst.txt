@@ -10,7 +10,7 @@ LyndonWord VarSet
 * VarSet: \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 
-Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\ . Reutenauer (Oxford science publications). A Lyndon word is a word which is smaller than any of its right factors with respect to the pure lexicographical ordering. If \ ``a``\  and \ ``b``\  are two Lyndon words such that \ ``a < b``\  holds with respect to lexicographical ordering then \ ``a*b``\  is a Lyndon word. Parenthesized Lyndon words can be generated from symbols by using the following rule: \ ``[[a, b], c]``\  is a Lyndon word iff \ ``a*b < c <= b``\  holds. Lyndon words are internally represented by binary trees using the \ :ref:`FreeMagma <l467265654d61676d61>`\  domain constructor. Two ordering are provided: lexicographic and length-lexicographic.
+Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ :code:`C`\ . Reutenauer (Oxford science publications). A Lyndon word is a word which is smaller than any of its right factors with respect to the pure lexicographical ordering. If \ :code:`a`\  and \ :code:`b`\  are two Lyndon words such that \ :code:`a < b`\  holds with respect to lexicographical ordering then \ :code:`a*b`\  is a Lyndon word. Parenthesized Lyndon words can be generated from symbols by using the following rule: \ :code:`[[a, b], c]`\  is a Lyndon word iff \ :code:`a*b < c <= b`\  holds. Lyndon words are internally represented by binary trees using the \ :ref:`FreeMagma <l467265654d61676d61>`\  domain constructor. Two ordering are provided: lexicographic and length-lexicographic.
 
 
 .. _l4c796e646f6e576f7264-3c3d:
@@ -49,14 +49,14 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`FreeMagma <l467265654d61676d61>`\  VarSet 
-  \ ``coerce(x)``\  returns the element of \ :ref:`FreeMagma <l467265654d61676d61>`\ (VarSet) corresponding to \ ``x``\ .
+  \ :code:`coerce(x)`\  returns the element of \ :ref:`FreeMagma <l467265654d61676d61>`\ (VarSet) corresponding to \ :code:`x`\ .
 
 
 .. index::
    pair: LyndonWord; coerce
 
 :spadfun:`coerce`\: % -> \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  VarSet 
-  \ ``coerce(x)``\  returns the element of \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\ (VarSet) corresponding to \ ``x``\ .
+  \ :code:`coerce(x)`\  returns the element of \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\ (VarSet) corresponding to \ :code:`x`\ .
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -72,7 +72,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; factor
 
 :spadfun:`factor`\: \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  VarSet -> \ :ref:`List <l4c697374>`\  % 
-  \ ``factor(x)``\  returns the decreasing factorization into Lyndon words.
+  \ :code:`factor(x)`\  returns the decreasing factorization into Lyndon words.
 
 .. _l4c796e646f6e576f7264-6c61746578:
 
@@ -85,7 +85,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; left
 
 :spadfun:`left`\: % -> % 
-  \ ``left(x)``\  returns left subtree of \ ``x``\  or error if \ :ref:`retractable? <l4c796e646f6e576f7264-7265747261637461626c653f>`\ (\ ``x``\ ) is \ ``true``\ .
+  \ :code:`left(x)`\  returns left subtree of \ :code:`x`\  or error if \ :ref:`retractable? <l4c796e646f6e576f7264-7265747261637461626c653f>`\ (\ :code:`x`\ ) is \ :code:`true`\ .
 
 .. _l4c796e646f6e576f7264-6c656e677468:
 
@@ -93,7 +93,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; length
 
 :spadfun:`length`\: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ ``length(x)``\  returns the number of entries in \ ``x``\ .
+  \ :code:`length(x)`\  returns the number of entries in \ :code:`x`\ .
 
 .. _l4c796e646f6e576f7264-6c657869636f:
 
@@ -101,7 +101,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; lexico
 
 :spadfun:`lexico`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``lexico(x, y)``\  returns \ ``true``\  iff \ ``x``\  is smaller than \ ``y``\  with respect to the lexicographical ordering induced by \ ``VarSet``\ .
+  \ :code:`lexico(x, y)`\  returns \ :code:`true`\  iff \ :code:`x`\  is smaller than \ :code:`y`\  with respect to the lexicographical ordering induced by \ :code:`VarSet`\ .
 
 .. _l4c796e646f6e576f7264-6c796e646f6e3f:
 
@@ -109,7 +109,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; lyndon?
 
 :spadfun:`lyndon?`\: \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  VarSet -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``lyndon?(w)``\  test if \ ``w``\  is a Lyndon word.
+  \ :code:`lyndon?(w)`\  test if \ :code:`w`\  is a Lyndon word.
 
 .. _l4c796e646f6e576f7264-6c796e646f6e:
 
@@ -117,7 +117,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; lyndon
 
 :spadfun:`lyndon`\: \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  VarSet -> % 
-  \ ``lyndon(w)``\  convert \ ``w``\  into a Lyndon word, error if \ ``w``\  is not a Lyndon word.
+  \ :code:`lyndon(w)`\  convert \ :code:`w`\  into a Lyndon word, error if \ :code:`w`\  is not a Lyndon word.
 
 .. _l4c796e646f6e576f7264-6c796e646f6e496643616e:
 
@@ -125,7 +125,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; lyndonIfCan
 
 :spadfun:`lyndonIfCan`\: \ :ref:`FreeMonoid <l467265654d6f6e6f6964>`\  VarSet -> Union(%, failed) 
-  \ ``lyndonIfCan(w)``\  convert \ ``w``\  into a Lyndon word.
+  \ :code:`lyndonIfCan(w)`\  convert \ :code:`w`\  into a Lyndon word.
 
 .. _l4c796e646f6e576f7264-4c796e646f6e576f7264734c69737431:
 
@@ -133,7 +133,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; LyndonWordsList1
 
 :spadfun:`LyndonWordsList1`\: (\ :ref:`List <l4c697374>`\  VarSet, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`OneDimensionalArray <l4f6e6544696d656e73696f6e616c4172726179>`\  \ :ref:`List <l4c697374>`\  % 
-  \ ``LyndonWordsList1(vl, n)``\  returns an array of lists of Lyndon words over the alphabet \ ``vl``\ , up to order \ ``n``\ .
+  \ :code:`LyndonWordsList1(vl, n)`\  returns an array of lists of Lyndon words over the alphabet \ :code:`vl`\ , up to order \ :code:`n`\ .
 
 .. _l4c796e646f6e576f7264-4c796e646f6e576f7264734c697374:
 
@@ -141,7 +141,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; LyndonWordsList
 
 :spadfun:`LyndonWordsList`\: (\ :ref:`List <l4c697374>`\  VarSet, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  % 
-  \ ``LyndonWordsList(vl, n)``\  returns the list of Lyndon words over the alphabet \ ``vl``\ , up to order \ ``n``\ .
+  \ :code:`LyndonWordsList(vl, n)`\  returns the list of Lyndon words over the alphabet \ :code:`vl`\ , up to order \ :code:`n`\ .
 
 .. _l4c796e646f6e576f7264-6d6178:
 
@@ -164,7 +164,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; retractable?
 
 :spadfun:`retractable?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``retractable?(x)``\  tests if \ ``x``\  is a tree with only one entry.
+  \ :code:`retractable?(x)`\  tests if \ :code:`x`\  is a tree with only one entry.
 
 .. _l4c796e646f6e576f7264-72657472616374496643616e:
 
@@ -177,7 +177,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; right
 
 :spadfun:`right`\: % -> % 
-  \ ``right(x)``\  returns right subtree of \ ``x``\  or error if \ :ref:`retractable? <l4c796e646f6e576f7264-7265747261637461626c653f>`\ (\ ``x``\ ) is \ ``true``\ .
+  \ :code:`right(x)`\  returns right subtree of \ :code:`x`\  or error if \ :ref:`retractable? <l4c796e646f6e576f7264-7265747261637461626c653f>`\ (\ :code:`x`\ ) is \ :code:`true`\ .
 
 .. _l4c796e646f6e576f7264-736d616c6c65723f:
 
@@ -190,7 +190,7 @@ Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by \ ``C``\
    pair: LyndonWord; varList
 
 :spadfun:`varList`\: % -> \ :ref:`List <l4c697374>`\  VarSet 
-  \ ``varList(x)``\  returns the list of distinct entries of \ ``x``\ .
+  \ :code:`varList(x)`\  returns the list of distinct entries of \ :code:`x`\ .
 
 
 \ :ref:`BasicType <l426173696354797065>`\  

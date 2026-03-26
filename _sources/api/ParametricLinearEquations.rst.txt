@@ -25,7 +25,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; B1solve
 
 :spadfun:`B1solve`\: Record(mat: \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, vec: \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, rank: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , rows: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , cols: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) -> Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R) 
-  \ ``B1solve(s)``\  solves the system (\ ``s``\ .mat) \ ``z``\  = \ ``s``\ .vec for the variables given by the column indices of \ ``s``\ .cols in terms of the other variables and the right hand side \ ``s``\ .vec by assuming that the rank is \ ``s``\ .rank, that the system is consistent, with the linearly independent equations indexed by the given row indices \ ``s``\ .rows; the coefficients in \ ``s``\ .mat involving parameters are treated as polynomials. B1solve(\ ``s``\ ) returns a particular solution to the system and a basis of the homogeneous system (\ ``s``\ .mat) \ ``z``\  = 0.
+  \ :code:`B1solve(s)`\  solves the system (\ :code:`s`\ .mat) \ :code:`z`\  = \ :code:`s`\ .vec for the variables given by the column indices of \ :code:`s`\ .cols in terms of the other variables and the right hand side \ :code:`s`\ .vec by assuming that the rank is \ :code:`s`\ .rank, that the system is consistent, with the linearly independent equations indexed by the given row indices \ :code:`s`\ .rows; the coefficients in \ :code:`s`\ .mat involving parameters are treated as polynomials. B1solve(\ :code:`s`\ ) returns a particular solution to the system and a basis of the homogeneous system (\ :code:`s`\ .mat) \ :code:`z`\  = 0.
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-62736f6c7665:
 
@@ -33,7 +33,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; bsolve
 
 :spadfun:`bsolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> Record(rgl: \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)), rgsz: \ :ref:`Integer <l496e7465676572>`\ ) 
-  \ ``bsolve(c, w, r, s, m)``\  returns a list of regimes and solutions of the system \ ``c``\  \ ``z``\  = \ ``w``\  for ranks at least \ ``r``\ ; depending on the mode \ ``m``\  chosen, it writes the output to a file given by the string \ ``s``\ .
+  \ :code:`bsolve(c, w, r, s, m)`\  returns a list of regimes and solutions of the system \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for ranks at least \ :code:`r`\ ; depending on the mode \ :code:`m`\  chosen, it writes the output to a file given by the string \ :code:`s`\ .
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-646d7032726669:
 
@@ -41,21 +41,21 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; dmp2rfi
 
 :spadfun:`dmp2rfi`\: GR -> \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
-  \ ``dmp2rfi(p)``\  converts \ ``p``\  to target domain
+  \ :code:`dmp2rfi(p)`\  converts \ :code:`p`\  to target domain
 
 
 .. index::
    pair: ParametricLinearEquations; dmp2rfi
 
 :spadfun:`dmp2rfi`\: \ :ref:`List <l4c697374>`\  GR -> \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
-  \ ``dmp2rfi(l)``\  converts \ ``l``\  to target domain
+  \ :code:`dmp2rfi(l)`\  converts \ :code:`l`\  to target domain
 
 
 .. index::
    pair: ParametricLinearEquations; dmp2rfi
 
 :spadfun:`dmp2rfi`\: \ :ref:`Matrix <l4d6174726978>`\  GR -> \ :ref:`Matrix <l4d6174726978>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
-  \ ``dmp2rfi(m)``\  converts \ ``m``\  to target domain
+  \ :code:`dmp2rfi(m)`\  converts \ :code:`m`\  to target domain
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-666163746f72736574:
 
@@ -63,7 +63,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; factorset
 
 :spadfun:`factorset`\: GR -> \ :ref:`List <l4c697374>`\  GR 
-  \ ``factorset(p)``\  returns the set of irreducible factors of \ ``p``\ .
+  \ :code:`factorset(p)`\  returns the set of irreducible factors of \ :code:`p`\ .
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-6861736f6c6e:
 
@@ -71,7 +71,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; hasoln
 
 :spadfun:`hasoln`\: (\ :ref:`List <l4c697374>`\  GR, \ :ref:`List <l4c697374>`\  GR) -> Record(sysok: \ :ref:`Boolean <l426f6f6c65616e>`\ , z0: \ :ref:`List <l4c697374>`\  GR, n0: \ :ref:`List <l4c697374>`\  GR) 
-  \ ``hasoln(g, l)``\  tests whether the quasi-algebraic set defined by \ ``p``\  = 0 for \ ``p``\  in \ ``g``\  and \ ``q``\  \ ``~=``\  0 for \ ``q``\  in \ ``l``\  is empty or not and returns a simplified definition of the quasi-algebraic set
+  \ :code:`hasoln(g, l)`\  tests whether the quasi-algebraic set defined by \ :code:`p`\  = 0 for \ :code:`p`\  in \ :code:`g`\  and \ :code:`q`\  \ :code:`~=`\  0 for \ :code:`q`\  in \ :code:`l`\  is empty or not and returns a simplified definition of the quasi-algebraic set
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-696e636f6e73697374656e743f:
 
@@ -79,14 +79,14 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; inconsistent?
 
 :spadfun:`inconsistent?`\: \ :ref:`List <l4c697374>`\  GR -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``inconsistent?(pl)``\  returns \ ``true``\  if the system of equations \ ``p``\  = 0 for \ ``p``\  in \ ``pl``\  is inconsistent. It is assumed that \ ``pl``\  is a groebner basis.
+  \ :code:`inconsistent?(pl)`\  returns \ :code:`true`\  if the system of equations \ :code:`p`\  = 0 for \ :code:`p`\  in \ :code:`pl`\  is inconsistent. It is assumed that \ :code:`pl`\  is a groebner basis.
 
 
 .. index::
    pair: ParametricLinearEquations; inconsistent?
 
 :spadfun:`inconsistent?`\: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``inconsistent?(pl)``\  returns \ ``true``\  if the system of equations \ ``p``\  = 0 for \ ``p``\  in \ ``pl``\  is inconsistent. It is assumed that \ ``pl``\  is a groebner basis.
+  \ :code:`inconsistent?(pl)`\  returns \ :code:`true`\  if the system of equations \ :code:`p`\  = 0 for \ :code:`p`\  in \ :code:`pl`\  is inconsistent. It is assumed that \ :code:`pl`\  is a groebner basis.
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-6d617872616e6b:
 
@@ -94,7 +94,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; maxrank
 
 :spadfun:`maxrank`\: \ :ref:`List <l4c697374>`\  Record(rank: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , eqns: \ :ref:`List <l4c697374>`\  Record(det: GR, rows: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , cols: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ), fgb: \ :ref:`List <l4c697374>`\  GR) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``maxrank(r)``\  returns the maximum rank in the list \ ``r``\  of regimes
+  \ :code:`maxrank(r)`\  returns the maximum rank in the list \ :code:`r`\  of regimes
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-6d696e72616e6b:
 
@@ -102,7 +102,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; minrank
 
 :spadfun:`minrank`\: \ :ref:`List <l4c697374>`\  Record(rank: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , eqns: \ :ref:`List <l4c697374>`\  Record(det: GR, rows: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , cols: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ), fgb: \ :ref:`List <l4c697374>`\  GR) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  \ ``minrank(r)``\  returns the minimum rank in the list \ ``r``\  of regimes
+  \ :code:`minrank(r)`\  returns the minimum rank in the list \ :code:`r`\  of regimes
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-6d696e736574:
 
@@ -110,7 +110,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; minset
 
 :spadfun:`minset`\: \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  GR -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  GR 
-  \ ``minset(sl)``\  returns the sublist of \ ``sl``\  consisting of the minimal lists (with respect to inclusion) in the list \ ``sl``\  of lists
+  \ :code:`minset(sl)`\  returns the sublist of \ :code:`sl`\  consisting of the minimal lists (with respect to inclusion) in the list \ :code:`sl`\  of lists
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-6e6578745375626c697374:
 
@@ -118,7 +118,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; nextSublist
 
 :spadfun:`nextSublist`\: (\ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\  
-  \ ``nextSublist(n, k)``\  returns a list of \ ``k``\ -subsets of {1, ..., \ ``n``\ }.
+  \ :code:`nextSublist(n, k)`\  returns a list of \ :code:`k`\ -subsets of {1, ..., \ :code:`n`\ }.
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-6f7665727365743f:
 
@@ -126,7 +126,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; overset?
 
 :spadfun:`overset?`\: (\ :ref:`List <l4c697374>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  GR) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ ``overset?(s, sl)``\  returns \ ``true``\  if \ ``s``\  properly a sublist of a member of \ ``sl``\ ; otherwise it returns \ ``false``\ 
+  \ :code:`overset?(s, sl)`\  returns \ :code:`true`\  if \ :code:`s`\  properly a sublist of a member of \ :code:`sl`\ ; otherwise it returns \ :code:`false`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-506172436f6e64:
 
@@ -134,7 +134,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; ParCond
 
 :spadfun:`ParCond`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  Record(det: GR, rows: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , cols: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ) 
-  \ ``ParCond(m, k)``\  returns the list of all \ ``k``\  by \ ``k``\  subdeterminants in the matrix \ ``m``\ 
+  \ :code:`ParCond(m, k)`\  returns the list of all \ :code:`k`\  by \ :code:`k`\  subdeterminants in the matrix \ :code:`m`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-506172436f6e644c697374:
 
@@ -142,7 +142,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; ParCondList
 
 :spadfun:`ParCondList`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  Record(rank: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , eqns: \ :ref:`List <l4c697374>`\  Record(det: GR, rows: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , cols: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ), fgb: \ :ref:`List <l4c697374>`\  GR) 
-  \ ``ParCondList(c, r)``\  computes a list of subdeterminants of each rank \ ``>=``\  \ ``r``\  of the matrix \ ``c``\  and returns a groebner basis for the ideal they generate
+  \ :code:`ParCondList(c, r)`\  computes a list of subdeterminants of each rank \ :code:`>=`\  \ :code:`r`\  of the matrix \ :code:`c`\  and returns a groebner basis for the ideal they generate
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-707232646d70:
 
@@ -150,7 +150,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; pr2dmp
 
 :spadfun:`pr2dmp`\: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R -> GR 
-  \ ``pr2dmp(p)``\  converts \ ``p``\  to target domain
+  \ :code:`pr2dmp(p)`\  converts \ :code:`p`\  to target domain
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-70736f6c7665:
 
@@ -158,84 +158,84 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  GR) -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``psolve(c, w)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks of the matrix \ ``c``\  and given right hand side vector \ ``w``\ 
+  \ :code:`psolve(c, w)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks of the matrix \ :code:`c`\  and given right hand side vector \ :code:`w`\ 
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  GR, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``psolve(c, w, k)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks \ ``>=``\  \ ``k``\  of the matrix \ ``c``\  and given right hand side vector \ ``w``\ 
+  \ :code:`psolve(c, w, k)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks \ :code:`>=`\  \ :code:`k`\  of the matrix \ :code:`c`\  and given right hand side vector \ :code:`w`\ 
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  GR, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``psolve(c, w, k, s)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks \ ``>=``\  \ ``k``\  of the matrix \ ``c``\  and given right hand side \ ``w``\ , writes the results to a file named \ ``s``\ , and returns the number of regimes
+  \ :code:`psolve(c, w, k, s)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks \ :code:`>=`\  \ :code:`k`\  of the matrix \ :code:`c`\  and given right hand side \ :code:`w`\ , writes the results to a file named \ :code:`s`\ , and returns the number of regimes
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  GR, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``psolve(c, w, s)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks of the matrix \ ``c``\  and given right hand side vector \ ``w``\ , writes the results to a file named \ ``s``\ , and returns the number of regimes
+  \ :code:`psolve(c, w, s)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks of the matrix \ :code:`c`\  and given right hand side vector \ :code:`w`\ , writes the results to a file named \ :code:`s`\ , and returns the number of regimes
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ) -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``psolve(c, w)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks of the matrix \ ``c``\  and indeterminate right hand side \ ``w``\ 
+  \ :code:`psolve(c, w)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks of the matrix \ :code:`c`\  and indeterminate right hand side \ :code:`w`\ 
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``psolve(c, w, k)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks \ ``>=``\  \ ``k``\  of the matrix \ ``c``\  and indeterminate right hand side \ ``w``\ 
+  \ :code:`psolve(c, w, k)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks \ :code:`>=`\  \ :code:`k`\  of the matrix \ :code:`c`\  and indeterminate right hand side \ :code:`w`\ 
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``psolve(c, w, k, s)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks \ ``>=``\  \ ``k``\  of the matrix \ ``c``\  and indeterminate right hand side \ ``w``\ , writes the results to a file named \ ``s``\ , and returns the number of regimes
+  \ :code:`psolve(c, w, k, s)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks \ :code:`>=`\  \ :code:`k`\  of the matrix \ :code:`c`\  and indeterminate right hand side \ :code:`w`\ , writes the results to a file named \ :code:`s`\ , and returns the number of regimes
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``psolve(c, w, s)``\  solves \ ``c``\  \ ``z``\  = \ ``w``\  for all possible ranks of the matrix \ ``c``\  and indeterminate right hand side \ ``w``\ , writes the results to a file named \ ``s``\ , and returns the number of regimes
+  \ :code:`psolve(c, w, s)`\  solves \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  for all possible ranks of the matrix \ :code:`c`\  and indeterminate right hand side \ :code:`w`\ , writes the results to a file named \ :code:`s`\ , and returns the number of regimes
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``psolve(c)``\  solves the homogeneous linear system \ ``c``\  \ ``z``\  = 0 for all possible ranks \ ``>=``\  \ ``k``\  of the matrix \ ``c``\ 
+  \ :code:`psolve(c)`\  solves the homogeneous linear system \ :code:`c`\  \ :code:`z`\  = 0 for all possible ranks \ :code:`>=`\  \ :code:`k`\  of the matrix \ :code:`c`\ 
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``psolve(c, k, s)``\  solves \ ``c``\  \ ``z``\  = 0 for all possible ranks \ ``>=``\  \ ``k``\  of the matrix \ ``c``\ , writes the results to a file named \ ``s``\ , and returns the number of regimes
+  \ :code:`psolve(c, k, s)`\  solves \ :code:`c`\  \ :code:`z`\  = 0 for all possible ranks \ :code:`>=`\  \ :code:`k`\  of the matrix \ :code:`c`\ , writes the results to a file named \ :code:`s`\ , and returns the number of regimes
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``psolve(c, s)``\  solves \ ``c``\  \ ``z``\  = 0 for all possible ranks of the matrix \ ``c``\  and given right hand side vector \ ``w``\ , writes the results to a file named \ ``s``\ , and returns the number of regimes
+  \ :code:`psolve(c, s)`\  solves \ :code:`c`\  \ :code:`z`\  = 0 for all possible ranks of the matrix \ :code:`c`\  and given right hand side vector \ :code:`w`\ , writes the results to a file named \ :code:`s`\ , and returns the number of regimes
 
 
 .. index::
    pair: ParametricLinearEquations; psolve
 
 :spadfun:`psolve`\: \ :ref:`Matrix <l4d6174726978>`\  GR -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``psolve(c)``\  solves the homogeneous linear system \ ``c``\  \ ``z``\  = 0 for all possible ranks of the matrix \ ``c``\ 
+  \ :code:`psolve(c)`\  solves the homogeneous linear system \ :code:`c`\  \ :code:`z`\  = 0 for all possible ranks of the matrix \ :code:`c`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-7264726567696d65:
 
@@ -243,7 +243,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; rdregime
 
 :spadfun:`rdregime`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``rdregime(s)``\  reads in a list from a file with name \ ``s``\ 
+  \ :code:`rdregime(s)`\  reads in a list from a file with name \ :code:`s`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-7265646d6174:
 
@@ -251,7 +251,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; redmat
 
 :spadfun:`redmat`\: (\ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  GR) -> \ :ref:`Matrix <l4d6174726978>`\  GR 
-  \ ``redmat(m, g)``\  returns a matrix whose entries are those of \ ``m``\  modulo the ideal generated by the groebner basis \ ``g``\ 
+  \ :code:`redmat(m, g)`\  returns a matrix whose entries are those of \ :code:`m`\  modulo the ideal generated by the groebner basis \ :code:`g`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-726564707073:
 
@@ -259,7 +259,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; redpps
 
 :spadfun:`redpps`\: (Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R), \ :ref:`List <l4c697374>`\  GR) -> Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R) 
-  \ ``redpps(s, g)``\  returns the simplified form of \ ``s``\  after reducing modulo a groebner basis \ ``g``\ 
+  \ :code:`redpps(s, g)`\  returns the simplified form of \ :code:`s`\  after reducing modulo a groebner basis \ :code:`g`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-726567696d65:
 
@@ -267,7 +267,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; regime
 
 :spadfun:`regime`\: (Record(det: GR, rows: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ , cols: \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\ ), \ :ref:`Matrix <l4d6174726978>`\  GR, \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  GR, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)) 
-  \ ``regime(y, c, w, p, r, rm, m)``\  returns a regime, a list of polynomials specifying the consistency conditions, a particular solution and basis representing the general solution of the parametric linear system \ ``c``\  \ ``z``\  = \ ``w``\  on that regime. The regime returned depends on the subdeterminant \ ``y``\ .det and the row and column indices. The solutions are simplified using the assumption that the system has rank \ ``r``\  and maximum rank \ ``rm``\ . The list \ ``p``\  represents a list of list of factors of polynomials in a groebner basis of the ideal generated by higher order subdeterminants, and is used for the simplification. The mode \ ``m``\  distinguishes the cases when the system is homogeneous, or the right hand side is arbitrary, or when there is no new right hand side variables.
+  \ :code:`regime(y, c, w, p, r, rm, m)`\  returns a regime, a list of polynomials specifying the consistency conditions, a particular solution and basis representing the general solution of the parametric linear system \ :code:`c`\  \ :code:`z`\  = \ :code:`w`\  on that regime. The regime returned depends on the subdeterminant \ :code:`y`\ .det and the row and column indices. The solutions are simplified using the assumption that the system has rank \ :code:`r`\  and maximum rank \ :code:`rm`\ . The list \ :code:`p`\  represents a list of list of factors of polynomials in a groebner basis of the ideal generated by higher order subdeterminants, and is used for the simplification. The mode \ :code:`m`\  distinguishes the cases when the system is homogeneous, or the right hand side is arbitrary, or when there is no new right hand side variables.
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-736532726669:
 
@@ -275,7 +275,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; se2rfi
 
 :spadfun:`se2rfi`\: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R 
-  \ ``se2rfi(l)``\  converts \ ``l``\  to target domain
+  \ :code:`se2rfi(l)`\  converts \ :code:`l`\  to target domain
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-737166726565:
 
@@ -283,7 +283,7 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; sqfree
 
 :spadfun:`sqfree`\: GR -> GR 
-  \ ``sqfree(p)``\  returns the product of square free factors of \ ``p``\ 
+  \ :code:`sqfree(p)`\  returns the product of square free factors of \ :code:`p`\ 
 
 .. _l506172616d65747269634c696e6561724571756174696f6e73-7772726567696d65:
 
@@ -291,6 +291,6 @@ This package completely solves a parametric linear system of equations by decomp
    pair: ParametricLinearEquations; wrregime
 
 :spadfun:`wrregime`\: (\ :ref:`List <l4c697374>`\  Record(eqzro: \ :ref:`List <l4c697374>`\  GR, neqzro: \ :ref:`List <l4c697374>`\  GR, wcond: \ :ref:`List <l4c697374>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, bsoln: Record(partsol: \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R, basis: \ :ref:`List <l4c697374>`\  \ :ref:`Vector <l566563746f72>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  R)), \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  \ ``wrregime(l, s)``\  writes a list of regimes to a file named \ ``s``\  and returns the number of regimes written
+  \ :code:`wrregime(l, s)`\  writes a list of regimes to a file named \ :code:`s`\  and returns the number of regimes written
 
 

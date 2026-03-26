@@ -19,7 +19,7 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; ^
 
 :spadfun:`^`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``x ^ n``\  computes the \ ``n``\ -th power of a square matrix. The power \ ``n``\  is assumed greater than 1.
+  \ :code:`x ^ n`\  computes the \ :code:`n`\ -th power of a square matrix. The power \ :code:`n`\  is assumed greater than 1.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-636f707921:
 
@@ -27,7 +27,7 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; copy!
 
 :spadfun:`copy!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``copy!(c, a)``\  copies the matrix \ ``a``\  into the matrix \ ``c``\ . Error: if \ ``a``\  and \ ``c``\  do not have the same dimensions.
+  \ :code:`copy!(c, a)`\  copies the matrix \ :code:`a`\  into the matrix \ :code:`c`\ . Error: if \ :code:`a`\  and \ :code:`c`\  do not have the same dimensions.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-6c6566745363616c617254696d657321:
 
@@ -35,7 +35,7 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; leftScalarTimes!
 
 :spadfun:`leftScalarTimes!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, R, \ :ref:`Matrix <l4d6174726978>`\  R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``leftScalarTimes!(c, r, a)``\  computes the scalar product \ ``r * a``\  and stores the result in the matrix \ ``c``\ . Error: if \ ``a``\  and \ ``c``\  do not have the same dimensions.
+  \ :code:`leftScalarTimes!(c, r, a)`\  computes the scalar product \ :code:`r * a`\  and stores the result in the matrix \ :code:`c`\ . Error: if \ :code:`a`\  and \ :code:`c`\  do not have the same dimensions.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-6d696e757321:
 
@@ -43,14 +43,14 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; minus!
 
 :spadfun:`minus!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``minus!(c, a)``\  computes \ ``-a``\  and stores the result in the matrix \ ``c``\ . Error: if a and \ ``c``\  do not have the same dimensions.
+  \ :code:`minus!(c, a)`\  computes \ :code:`-a`\  and stores the result in the matrix \ :code:`c`\ . Error: if a and \ :code:`c`\  do not have the same dimensions.
 
 
 .. index::
    pair: StorageEfficientMatrixOperations; minus!
 
 :spadfun:`minus!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``!minus!(c, a, b)``\  computes the matrix difference \ ``a - b``\  and stores the result in the matrix \ ``c``\ . Error: if \ ``a``\ , \ ``b``\ , and \ ``c``\  do not have the same dimensions.
+  \ :code:`!minus!(c, a, b)`\  computes the matrix difference \ :code:`a - b`\  and stores the result in the matrix \ :code:`c`\ . Error: if \ :code:`a`\ , \ :code:`b`\ , and \ :code:`c`\  do not have the same dimensions.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-706c757321:
 
@@ -58,7 +58,7 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; plus!
 
 :spadfun:`plus!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``plus!(c, a, b)``\  computes the matrix sum \ ``a + b``\  and stores the result in the matrix \ ``c``\ . Error: if \ ``a``\ , \ ``b``\ , and \ ``c``\  do not have the same dimensions.
+  \ :code:`plus!(c, a, b)`\  computes the matrix sum \ :code:`a + b`\  and stores the result in the matrix \ :code:`c`\ . Error: if \ :code:`a`\ , \ :code:`b`\ , and \ :code:`c`\  do not have the same dimensions.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-706f77657221:
 
@@ -66,7 +66,7 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; power!
 
 :spadfun:`power!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``power!(a, b, c, m, n)``\  computes \ ``m``\  ^ \ ``n``\  and stores the result in \ ``a``\ . The matrices \ ``b``\  and \ ``c``\  are used to store intermediate results. Error: if \ ``a``\ , \ ``b``\ , \ ``c``\ , and \ ``m``\  are not square and of the same dimensions.
+  \ :code:`power!(a, b, c, m, n)`\  computes \ :code:`m`\  ^ \ :code:`n`\  and stores the result in \ :code:`a`\ . The matrices \ :code:`b`\  and \ :code:`c`\  are used to store intermediate results. Error: if \ :code:`a`\ , \ :code:`b`\ , \ :code:`c`\ , and \ :code:`m`\  are not square and of the same dimensions.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-72696768745363616c617254696d657321:
 
@@ -74,7 +74,7 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; rightScalarTimes!
 
 :spadfun:`rightScalarTimes!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``rightScalarTimes!(c, a, r)``\  computes the scalar product \ ``a * r``\  and stores the result in the matrix \ ``c``\ . Error: if \ ``a``\  and \ ``c``\  do not have the same dimensions.
+  \ :code:`rightScalarTimes!(c, a, r)`\  computes the scalar product \ :code:`a * r`\  and stores the result in the matrix \ :code:`c`\ . Error: if \ :code:`a`\  and \ :code:`c`\  do not have the same dimensions.
 
 .. _l53746f72616765456666696369656e744d61747269784f7065726174696f6e73-74696d657321:
 
@@ -82,6 +82,6 @@ This package provides standard arithmetic operations on matrices. The functions 
    pair: StorageEfficientMatrixOperations; times!
 
 :spadfun:`times!`\: (\ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R, \ :ref:`Matrix <l4d6174726978>`\  R) -> \ :ref:`Matrix <l4d6174726978>`\  R 
-  \ ``times!(c, a, b)``\  computes the matrix product \ ``a * b``\  and stores the result in the matrix \ ``c``\ . Error: if \ ``a``\ , \ ``b``\ , and \ ``c``\  do not have compatible dimensions.
+  \ :code:`times!(c, a, b)`\  computes the matrix product \ :code:`a * b`\  and stores the result in the matrix \ :code:`c`\ . Error: if \ :code:`a`\ , \ :code:`b`\ , and \ :code:`c`\  do not have compatible dimensions.
 
 

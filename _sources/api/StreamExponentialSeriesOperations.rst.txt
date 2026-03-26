@@ -19,7 +19,7 @@ StreamExponentialSeriesOperations implements arithmetic of exponential power ser
    pair: StreamExponentialSeriesOperations; *
 
 :spadfun:`\*`\: (\ :ref:`Stream <l53747265616d>`\  Coef, \ :ref:`Stream <l53747265616d>`\  Coef) -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``a * b``\  returns the power series (Cauchy) product of \ ``a``\  and \ ``b:``\  \ ``[a0, a1, ...] * [b0, b1, ...] = [c0, c1, ...]``\  where \ ``ck = sum(i + j = k, binomial(k, i) * ai * bj)``\ .
+  \ :code:`a * b`\  returns the power series (Cauchy) product of \ :code:`a`\  and \ :code:`b:`\  \ :code:`[a0, a1, ...] * [b0, b1, ...] = [c0, c1, ...]`\  where \ :code:`ck = sum(i + j = k, binomial(k, i) * ai * bj)`\ .
 
 .. _l53747265616d4578706f6e656e7469616c5365726965734f7065726174696f6e73-6465726976:
 
@@ -27,7 +27,7 @@ StreamExponentialSeriesOperations implements arithmetic of exponential power ser
    pair: StreamExponentialSeriesOperations; deriv
 
 :spadfun:`deriv`\: \ :ref:`Stream <l53747265616d>`\  Coef -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``deriv(f)``\  is the derivative, which simply coincides with left shift
+  \ :code:`deriv(f)`\  is the derivative, which simply coincides with left shift
 
 .. _l53747265616d4578706f6e656e7469616c5365726965734f7065726174696f6e73-65787030:
 
@@ -35,7 +35,7 @@ StreamExponentialSeriesOperations implements arithmetic of exponential power ser
    pair: StreamExponentialSeriesOperations; exp0
 
 :spadfun:`exp0`\: \ :ref:`Stream <l53747265616d>`\  Coef -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``exp0(f)``\  returns the exponential of the power series represented by cons(0, \ ``f``\ ), i.e. assuming zero constant term and therefore transcendentality is not involved.
+  \ :code:`exp0(f)`\  returns the exponential of the power series represented by cons(0, \ :code:`f`\ ), i.e. assuming zero constant term and therefore transcendentality is not involved.
 
 .. _l53747265616d4578706f6e656e7469616c5365726965734f7065726174696f6e73-696e74656772617465:
 
@@ -43,7 +43,7 @@ StreamExponentialSeriesOperations implements arithmetic of exponential power ser
    pair: StreamExponentialSeriesOperations; integrate
 
 :spadfun:`integrate`\: (Coef, \ :ref:`Stream <l53747265616d>`\  Coef) -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``integrate(c, f)``\  integrates with constant term \ ``c``\ , this is simply the right shift
+  \ :code:`integrate(c, f)`\  integrates with constant term \ :code:`c`\ , this is simply the right shift
 
 .. _l53747265616d4578706f6e656e7469616c5365726965734f7065726174696f6e73-6c617a79496e74656772617465:
 
@@ -51,7 +51,7 @@ StreamExponentialSeriesOperations implements arithmetic of exponential power ser
    pair: StreamExponentialSeriesOperations; lazyIntegrate
 
 :spadfun:`lazyIntegrate`\: (Coef, () -> \ :ref:`Stream <l53747265616d>`\  Coef) -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``lazyIntegrate(c, f)``\  integrates with constant term \ ``c``\ , this is simply the right shift
+  \ :code:`lazyIntegrate(c, f)`\  integrates with constant term \ :code:`c`\ , this is simply the right shift
 
 .. _l53747265616d4578706f6e656e7469616c5365726965734f7065726174696f6e73-6c6f6731:
 
@@ -59,6 +59,6 @@ StreamExponentialSeriesOperations implements arithmetic of exponential power ser
    pair: StreamExponentialSeriesOperations; log1
 
 :spadfun:`log1`\: \ :ref:`Stream <l53747265616d>`\  Coef -> \ :ref:`Stream <l53747265616d>`\  Coef 
-  \ ``log1(f)``\  returns the logarithm of the power series represented by cons(1, \ ``f``\ ), i.e. assuming that the constant term is 1 and therefore transcendentality is not involved.
+  \ :code:`log1(f)`\  returns the logarithm of the power series represented by cons(1, \ :code:`f`\ ), i.e. assuming that the constant term is 1 and therefore transcendentality is not involved.
 
 
