@@ -137,6 +137,41 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 .. index::
    pair: JLObjPy; jlPyApply
 
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ :code:`jlPyApply(func, pyobj)`\  applies the Python function \ :code:`func`\  form the module __main__ to the Python object pyobj.
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ :code:`jlPyApply(func, pyobj1, pyobj2)`\  applies the Python function \ :code:`func`\  form the module __main__ to the Python objects \ :code:`pyobj1`\  and \ :code:`pyobj2`\ .
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ :code:`jlPyApply(func, pyobj1, pyobj2, pyobj3)`\  applies the Python function \ :code:`func`\  form the module __main__ to the Python objects \ :code:`pyobj1`\ , \ :code:`pyobj2`\  and \ :code:`pyobj3`\ .
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  \ :code:`jlPyApply(func, pyobj1, pyobj2, pyobj3, pyobj4)`\  applies the Python function \ :code:`func`\  form the module __main__ to the Python objects \ :code:`pyobj1`\ , \ :code:`pyobj2`\ , \ :code:`pyobj3`\  and \ :code:`pyobj4`\ .
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
+:spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  \ :code:`jlPyApply(func, pyobj1, pyobj2, pyobj3, pyobj4, pyobj5)`\  applies the Python function \ :code:`func`\  form the module __main__ to the Python objects \ :code:`pyobj1`\ , \ :code:`pyobj2`\ , \ :code:`pyobj3`\ , \ :code:`pyobj4`\  and \ :code:`pyobj5`\ .
+
+
+.. index::
+   pair: JLObjPy; jlPyApply
+
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %) -> % 
   \ :code:`jlPyApply(mod, func, pyobj)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. \example{jlPyApply("numpy", "array", jpyobj("[1,2,3]"))} creates a numpy array from the Python list [1,2,3]. jlPyApply("math", "sqrt", 2) computes the square root of 2.
 
