@@ -24,8 +24,16 @@ This package makes available information about Spad constructors and operations.
 .. index::
    pair: BrowserInformation; ancestors
 
-:spadfun:`ancestors`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
-  \ :code:`ancestors(c, use_args?)`\  computes ancestors of a constructor.
+:spadfun:`ancestors`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ :code:`ancestors(cf, df)`\  computes ancestors of a constructor. \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments.
+
+.. _l42726f77736572496e666f726d6174696f6e-6368696c6472656e:
+
+.. index::
+   pair: BrowserInformation; children
+
+:spadfun:`children`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ :code:`children(cf, df)`\  computes childen (that is direct descendants) of a category. \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments.
 
 .. _l42726f77736572496e666f726d6174696f6e-636f6e7374727563746f725f646f63756d656e746174696f6e:
 
@@ -65,6 +73,13 @@ This package makes available information about Spad constructors and operations.
    pair: BrowserInformation; constructor_signature
 
 :spadfun:`constructor_signature`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  \ :code:`constructor_signature(s, al)`\  gives constructor signature, with formal argument symbols replaced by elements of al.
+
+
+.. index::
+   pair: BrowserInformation; constructor_signature
+
+:spadfun:`constructor_signature`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
   \ :code:`constructor_signature(s)`\  gives constructor signature, that is \ :code:`S`\ -expression (list) giving type of constructor and types of arguments.
 
 .. _l42726f77736572496e666f726d6174696f6e-636f6e766572745f7061747465726e:
@@ -91,6 +106,14 @@ This package makes available information about Spad constructors and operations.
 :spadfun:`dependents`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
   \ :code:`dependents(c)`\  gives dependents (that is constructor that use \ :code:`c`\  either in exports or in type of an argument) of a constructor \ :code:`c`\ .
 
+.. _l42726f77736572496e666f726d6174696f6e-64657363656e64616e7473:
+
+.. index::
+   pair: BrowserInformation; descendants
+
+:spadfun:`descendants`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ :code:`descendants(cf, df)`\  computes descendants of a category. \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments.
+
 .. _l42726f77736572496e666f726d6174696f6e-646f5f6d61746368:
 
 .. index::
@@ -98,6 +121,14 @@ This package makes available information about Spad constructors and operations.
 
 :spadfun:`do_match`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ :code:`do_match(p, s)`\  returns \ :code:`true`\  if and only if \ :code:`s`\  matches to pattern \ :code:`p`\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-646f6d61696e73:
+
+.. index::
+   pair: BrowserInformation; domains
+
+:spadfun:`domains`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ :code:`domains(cf, df)`\  computes domains of a category. \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments.
 
 .. _l42726f77736572496e666f726d6174696f6e-646f776e63617365:
 
@@ -175,8 +206,8 @@ This package makes available information about Spad constructors and operations.
 .. index::
    pair: BrowserInformation; operations
 
-:spadfun:`operations`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
-  \ :code:`operations(c, use_args?)`\  computes operation list of a constructor.
+:spadfun:`operations`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )) 
+  \ :code:`operations(cf, df)`\  computes operation list of a constructor. \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments.
 
 .. _l42726f77736572496e666f726d6174696f6e-6f70735f66726f6d5f6578706f727473:
 
@@ -250,6 +281,14 @@ This package makes available information about Spad constructors and operations.
 :spadfun:`search_opl`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ ))) -> Union(\ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , sdl: \ :ref:`List <l4c697374>`\  Record(signature: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ , origin: \ :ref:`SExpression <l5345787072657373696f6e>`\ , documentation: \ :ref:`String <l537472696e67>`\ )), \ :ref:`ErrorIndicator <l4572726f72496e64696361746f72>`\ ) 
   \ :code:`search_opl(n, ol)`\  gives list of operations from ol with names matching \ :code:`n`\ .
 
+.. _l42726f77736572496e666f726d6174696f6e-7365617263685f70617468:
+
+.. index::
+   pair: BrowserInformation; search_path
+
+:spadfun:`search_path`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`None <l4e6f6e65>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ :code:`search_path(cf, df, dv)`\  computes search path of a constructor. \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments, \ :code:`dv`\  is domain vector or nil.
+
 .. _l42726f77736572496e666f726d6174696f6e-73696d705f6f70735f636f6e646974696f6e73:
 
 .. index::
@@ -273,5 +312,13 @@ This package makes available information about Spad constructors and operations.
 
 :spadfun:`users`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\  
   \ :code:`users(c)`\  gives users (that is constructors that use \ :code:`c`\  in its implementation) of a constructor \ :code:`c`\ .
+
+.. _l42726f77736572496e666f726d6174696f6e-75736573:
+
+.. index::
+   pair: BrowserInformation; uses
+
+:spadfun:`uses`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  Record(form: \ :ref:`SExpression <l5345787072657373696f6e>`\ , condition: \ :ref:`SExpression <l5345787072657373696f6e>`\ ) 
+  \ :code:`uses(cn, cf, df)`\  computes constuctors used by constructor with name \ :code:`cn`\ . \ :code:`cf`\  is constructor form with formal arguments, \ :code:`df`\  when not null provides actual arguments. Note: for default packages \ :code:`cf`\  is corresponding category form.
 
 

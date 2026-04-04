@@ -5,7 +5,7 @@
 JetBundleLinearFunction(JB, D)
 ==============================
 
-:viewcode:`jet.spad line 2885 <jet.spad#L2885>` :editcode:`[edit on github] <jet.spad#L2885>`
+:viewcode:`jet.spad line 2839 <jet.spad#L2839>` :editcode:`[edit on github] <jet.spad#L2839>`
 
 * JB: \ :ref:`JetBundleCategory <l4a657442756e646c6543617465676f7279>`\ 
 
@@ -124,15 +124,16 @@ JetBundleLinearFunction(JB, D)
   from \ :ref:`Algebra <l416c6765627261>`\  %
 
 
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB if D has \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
+
+
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 
-.. index::
-   pair: JetBundleLinearFunction; coerce
-
-:spadfun:`coerce`\: D -> % 
-  
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: D -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  D
 
 
 \ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % 
@@ -272,8 +273,8 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-6765744e6f746174696f6e:
 
-\ :ref:`getNotation <l4a657442756e646c6546756e6374696f6e43617465676f7279-6765744e6f746174696f6e>`\ \: () -> \ :ref:`Symbol <l53796d626f6c>`\  
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`getNotation <l4a657442756e646c654f7065726174696f6e7343617465676f7279-6765744e6f746174696f6e>`\ \: () -> \ :ref:`Symbol <l53796d626f6c>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-67726f756e643f:
 
@@ -345,8 +346,8 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-6e756d446570566172:
 
-\ :ref:`numDepVar <l4a657442756e646c6546756e6374696f6e43617465676f7279-6e756d446570566172>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`numDepVar <l4a657442756e646c654f7065726174696f6e7343617465676f7279-6e756d446570566172>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-6e756d657261746f72:
 
@@ -355,8 +356,8 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-6e756d496e64566172:
 
-\ :ref:`numIndVar <l4a657442756e646c6546756e6374696f6e43617465676f7279-6e756d496e64566172>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`numIndVar <l4a657442756e646c654f7065726174696f6e7343617465676f7279-6e756d496e64566172>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-6f6e653f:
 
@@ -380,20 +381,20 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-50:
 
-\ :ref:`P <l4a657442756e646c6546756e6374696f6e43617465676f7279-50>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-\ :ref:`P <l4a657442756e646c6546756e6374696f6e43617465676f7279-50>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-\ :ref:`P <l4a657442756e646c6546756e6374696f6e43617465676f7279-50>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-\ :ref:`P <l4a657442756e646c6546756e6374696f6e43617465676f7279-50>`\ \: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-706c656e617279506f776572:
 
@@ -420,11 +421,8 @@ JetBundleLinearFunction(JB, D)
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  JB
 
 
-.. index::
-   pair: JetBundleLinearFunction; retract
-
-:spadfun:`retract`\: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB -> % if D has retractIfCan\: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB -> Union(D, failed)
-  \ :code:`retract(p)`\  is like \ :code:`retractIfCan(p)`\  put yields a hard error, if \ :code:`p`\  contains further jet variables.
+\ :ref:`retract <l5265747261637461626c6546726f6d-72657472616374>`\ \: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB -> % if D has \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
+  from \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-72657472616374496643616e:
 
@@ -436,11 +434,8 @@ JetBundleLinearFunction(JB, D)
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  JB
 
 
-.. index::
-   pair: JetBundleLinearFunction; retractIfCan
-
-:spadfun:`retractIfCan`\: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB -> Union(%, failed) if D has retractIfCan\: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB -> Union(D, failed)
-  \ :code:`retractIfCan(p)`\  tries to write a general expression as a linear function.
+\ :ref:`retractIfCan <l5265747261637461626c6546726f6d-72657472616374496643616e>`\ \: \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB -> Union(%, failed) if D has \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
+  from \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-7269676874506f776572:
 
@@ -463,8 +458,8 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-7365744e6f746174696f6e:
 
-\ :ref:`setNotation <l4a657442756e646c6546756e6374696f6e43617465676f7279-7365744e6f746174696f6e>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`setNotation <l4a657442756e646c654f7065726174696f6e7343617465676f7279-7365744e6f746174696f6e>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-73696d706c696679:
 
@@ -512,12 +507,12 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-55:
 
-\ :ref:`U <l4a657442756e646c6546756e6374696f6e43617465676f7279-55>`\ \: () -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`U <l4a657442756e646c654f7065726174696f6e7343617465676f7279-55>`\ \: () -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-\ :ref:`U <l4a657442756e646c6546756e6374696f6e43617465676f7279-55>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`U <l4a657442756e646c654f7065726174696f6e7343617465676f7279-55>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-756e69743f:
 
@@ -536,12 +531,12 @@ JetBundleLinearFunction(JB, D)
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-58:
 
-\ :ref:`X <l4a657442756e646c6546756e6374696f6e43617465676f7279-58>`\ \: () -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`X <l4a657442756e646c654f7065726174696f6e7343617465676f7279-58>`\ \: () -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-\ :ref:`X <l4a657442756e646c6546756e6374696f6e43617465676f7279-58>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  from \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB
+\ :ref:`X <l4a657442756e646c654f7065726174696f6e7343617465676f7279-58>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c654c696e65617246756e6374696f6e-7a65726f3f:
 
@@ -569,6 +564,8 @@ JetBundleLinearFunction(JB, D)
 
 \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  JB 
 
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB if D has \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
+
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
 \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\  
@@ -582,6 +579,8 @@ JetBundleLinearFunction(JB, D)
 \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  
 
 \ :ref:`JetBundleFunctionCategory <l4a657442756e646c6546756e6374696f6e43617465676f7279>`\  JB 
+
+\ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\  
 
 \ :ref:`lazyRepresentation <l6c617a79526570726573656e746174696f6e>`\  if D has \ :ref:`lazyRepresentation <l6c617a79526570726573656e746174696f6e>`\ 
 
@@ -614,6 +613,8 @@ JetBundleLinearFunction(JB, D)
 \ :ref:`noZeroDivisors <l6e6f5a65726f44697669736f7273>`\  
 
 \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  
+
+\ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB if D has \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`JetBundleExpression <l4a657442756e646c6545787072657373696f6e>`\  JB
 
 \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  D 
 

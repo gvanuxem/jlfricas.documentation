@@ -5,7 +5,7 @@
 JetBundleCategory
 =================
 
-:viewcode:`jet.spad line 37 <jet.spad#L37>` :editcode:`[edit on github] <jet.spad#L37>`
+:viewcode:`jet.spad line 84 <jet.spad#L84>` :editcode:`[edit on github] <jet.spad#L84>`
 
 
 \ :ref:`JetBundleCategory <l4a657442756e646c6543617465676f7279>`\  provides basic data structures and procedures for jet bundles. Nearly all necessary functions are implemented already here. Only the representation and functions which directly access it must be implemented in a domain. Two notations of derivatives are supported. Default is multi-index notation, where the \ :code:`i`\ -th entry of the index denotes the number of differentiations taken with respect to \ :code:`x^i`\ . In repeated index notation each entry \ :code:`i`\  in the index denotes a differentiation with respect to \ :code:`x^i`\ . The choice affects, however, only in- and output. Internally, multi-index notation is used throughout.
@@ -17,7 +17,7 @@ JetBundleCategory
    pair: JetBundleCategory; 1
 
 :spadfun:`1`\: % 
-  \ :code:`1`\  generates the special "jet variable" 1, which is needed for the representation of linear functions.
+  
 
 .. _l4a657442756e646c6543617465676f7279-3c3d:
 
@@ -118,11 +118,8 @@ JetBundleCategory
 
 .. _l4a657442756e646c6543617465676f7279-6765744e6f746174696f6e:
 
-.. index::
-   pair: JetBundleCategory; getNotation
-
-:spadfun:`getNotation`\: () -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ :code:`getNotation()`\  shows the currently used notation.
+\ :ref:`getNotation <l4a657442756e646c654f7065726174696f6e7343617465676f7279-6765744e6f746174696f6e>`\ \: () -> \ :ref:`Symbol <l53796d626f6c>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c6543617465676f7279-696e646578:
 
@@ -189,19 +186,13 @@ JetBundleCategory
 
 .. _l4a657442756e646c6543617465676f7279-6e756d446570566172:
 
-.. index::
-   pair: JetBundleCategory; numDepVar
-
-:spadfun:`numDepVar`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ :code:`numDepVar`\  returns the number of dependent variables.
+\ :ref:`numDepVar <l4a657442756e646c654f7065726174696f6e7343617465676f7279-6e756d446570566172>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c6543617465676f7279-6e756d496e64566172:
 
-.. index::
-   pair: JetBundleCategory; numIndVar
-
-:spadfun:`numIndVar`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ :code:`numIndVar`\  returns the number of independent variables.
+\ :ref:`numIndVar <l4a657442756e646c654f7065726174696f6e7343617465676f7279-6e756d496e64566172>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c6543617465676f7279-6f6e653f:
 
@@ -221,32 +212,20 @@ JetBundleCategory
 
 .. _l4a657442756e646c6543617465676f7279-50:
 
-.. index::
-   pair: JetBundleCategory; P
-
-:spadfun:`P`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ :code:`P(i, ind)`\  generates the derivative of the \ :code:`i`\ \ :code:`-`\ th dependent variable \ :code:`wrt`\  the index \ :code:`ind`\ . Whether \ :code:`ind`\  is interpreted as multi-index or as repeated index depends on the chosen notation.
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-.. index::
-   pair: JetBundleCategory; P
-
-:spadfun:`P`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ :code:`P(i, j)`\  generates the \ :code:`j`\ \ :code:`-`\ th derivative of the \ :code:`i`\ \ :code:`-`\ th independent variable \ :code:`wrt`\  the only independent variable.
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-.. index::
-   pair: JetBundleCategory; P
-
-:spadfun:`P`\: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ :code:`P(ind)`\  generates the derivative of the only dependent variable \ :code:`wrt`\  the index \ :code:`ind`\ .
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-.. index::
-   pair: JetBundleCategory; P
-
-:spadfun:`P`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
-  \ :code:`P(i)`\  generates the \ :code:`i`\ \ :code:`-`\ th derivative of the only dependent variable \ :code:`wrt`\  the only independent variable.
+\ :ref:`P <l4a657442756e646c654f7065726174696f6e7343617465676f7279-50>`\ \: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c6543617465676f7279-506d:
 
@@ -282,11 +261,8 @@ JetBundleCategory
 
 .. _l4a657442756e646c6543617465676f7279-7365744e6f746174696f6e:
 
-.. index::
-   pair: JetBundleCategory; setNotation
-
-:spadfun:`setNotation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  
-  \ :code:`setNotation(s)`\  chooses the notation used for derivatives. Returns the old value.
+\ :ref:`setNotation <l4a657442756e646c654f7065726174696f6e7343617465676f7279-7365744e6f746174696f6e>`\ \: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Symbol <l53796d626f6c>`\  
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c6543617465676f7279-736d616c6c65723f:
 
@@ -303,18 +279,12 @@ JetBundleCategory
 
 .. _l4a657442756e646c6543617465676f7279-55:
 
-.. index::
-   pair: JetBundleCategory; U
-
-:spadfun:`U`\: () -> % 
-  \ :code:`U()`\  generates the only dependent variable.
+\ :ref:`U <l4a657442756e646c654f7065726174696f6e7343617465676f7279-55>`\ \: () -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-.. index::
-   pair: JetBundleCategory; U
-
-:spadfun:`U`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ :code:`U(i)`\  generates the \ :code:`i`\ \ :code:`-`\ th dependent variable.
+\ :ref:`U <l4a657442756e646c654f7065726174696f6e7343617465676f7279-55>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 .. _l4a657442756e646c6543617465676f7279-7661726961626c6573:
 
@@ -341,18 +311,12 @@ JetBundleCategory
 
 .. _l4a657442756e646c6543617465676f7279-58:
 
-.. index::
-   pair: JetBundleCategory; X
-
-:spadfun:`X`\: () -> % 
-  \ :code:`X()`\  generates the only independent variable.
+\ :ref:`X <l4a657442756e646c654f7065726174696f6e7343617465676f7279-58>`\ \: () -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
-.. index::
-   pair: JetBundleCategory; X
-
-:spadfun:`X`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
-  \ :code:`X(i)`\  generates the \ :code:`i`\ \ :code:`-`\ th independent variable.
+\ :ref:`X <l4a657442756e646c654f7065726174696f6e7343617465676f7279-58>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % 
+  from \ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\ 
 
 
 \ :ref:`BasicType <l426173696354797065>`\  
@@ -362,6 +326,8 @@ JetBundleCategory
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  
+
+\ :ref:`JetBundleOperationsCategory <l4a657442756e646c654f7065726174696f6e7343617465676f7279>`\  
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  
 

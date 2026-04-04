@@ -5,7 +5,7 @@
 FortranExpression(basicSymbols, subscriptedSymbols, R)
 ======================================================
 
-:viewcode:`fortran.spad line 1417 <fortran.spad#L1417>` :editcode:`[edit on github] <fortran.spad#L1417>`
+:viewcode:`fortran.spad line 1393 <fortran.spad#L1393>` :editcode:`[edit on github] <fortran.spad#L1393>`
 
 * basicSymbols: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
@@ -149,11 +149,8 @@ A domain of expressions involving functions which can be translated into standar
 
 .. _l466f727472616e45787072657373696f6e-636f65726365:
 
-.. index::
-   pair: FortranExpression; coerce
-
-:spadfun:`coerce`\: % -> \ :ref:`Expression <l45787072657373696f6e>`\  R 
-  \ :code:`coerce(x)`\  is undocumented.
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`Expression <l45787072657373696f6e>`\  R 
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`Expression <l45787072657373696f6e>`\  R
 
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -504,11 +501,8 @@ A domain of expressions involving functions which can be translated into standar
   \ :code:`retract(e)`\  takes \ :code:`e`\  and transforms it into a FortranExpression checking that it contains no non-Fortran functions, and that it only contains the given basic symbols and subscripted symbols which correspond to scalar and array parameters respectively.
 
 
-.. index::
-   pair: FortranExpression; retract
-
-:spadfun:`retract`\: \ :ref:`Expression <l45787072657373696f6e>`\  R -> % 
-  \ :code:`retract(e)`\  takes \ :code:`e`\  and transforms it into a FortranExpression checking that it contains no non-Fortran functions, and that it only contains the given basic symbols and subscripted symbols which correspond to scalar and array parameters respectively.
+\ :ref:`retract <l5265747261637461626c6546726f6d-72657472616374>`\ \: \ :ref:`Expression <l45787072657373696f6e>`\  R -> % 
+  from \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`Expression <l45787072657373696f6e>`\  R
 
 
 .. index::
@@ -569,11 +563,8 @@ A domain of expressions involving functions which can be translated into standar
   \ :code:`retractIfCan(e)`\  takes \ :code:`e`\  and tries to transform it into a FortranExpression checking that it contains no non-Fortran functions, and that it only contains the given basic symbols and subscripted symbols which correspond to scalar and array parameters respectively.
 
 
-.. index::
-   pair: FortranExpression; retractIfCan
-
-:spadfun:`retractIfCan`\: \ :ref:`Expression <l45787072657373696f6e>`\  R -> Union(%, failed) 
-  \ :code:`retractIfCan(e)`\  takes \ :code:`e`\  and tries to transform it into a FortranExpression checking that it contains no non-Fortran functions, and that it only contains the given basic symbols and subscripted symbols which correspond to scalar and array parameters respectively.
+\ :ref:`retractIfCan <l5265747261637461626c6546726f6d-72657472616374496643616e>`\ \: \ :ref:`Expression <l45787072657373696f6e>`\  R -> Union(%, failed) 
+  from \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`Expression <l45787072657373696f6e>`\  R
 
 
 .. index::
@@ -735,6 +726,8 @@ A domain of expressions involving functions which can be translated into standar
 
 \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  R 
 
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`Expression <l45787072657373696f6e>`\  R 
+
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  
@@ -772,6 +765,8 @@ A domain of expressions involving functions which can be translated into standar
 \ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\  
 
 \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  
+
+\ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`Expression <l45787072657373696f6e>`\  R 
 
 \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Kernel <l4b65726e656c>`\  % 
 
