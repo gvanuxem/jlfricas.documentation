@@ -19,17 +19,17 @@ A sparse table has a default entry, which is returned if no other value has been
 
 .. _l5370617273655461626c65-3d:
 
-\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l5370617273655461626c65-7e3d:
 
-\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
 .. _l5370617273655461626c65-636f65726365:
 
-\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Record(key: Key, entry: Ent) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Ent has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Ent has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Record(key: Key, entry: Ent) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
   from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 .. _l5370617273655461626c65-636f6e737472756374:
@@ -92,11 +92,11 @@ A sparse table has a default entry, which is returned if no other value has been
 
 .. _l5370617273655461626c65-6576616c:
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Ent, Ent) -> % if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, Ent, Ent) -> % if Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent and Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Ent, Ent)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Ent) -> % if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  Ent) -> % if Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent and Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Ent
 
 
@@ -104,11 +104,11 @@ A sparse table has a default entry, which is returned if no other value has been
   from \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Ent)
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Ent, \ :ref:`List <l4c697374>`\  Ent) -> % if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  Ent, \ :ref:`List <l4c697374>`\  Ent) -> % if Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent and Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Ent, Ent)
 
 
-\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Ent) -> % if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  Ent) -> % if Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent and Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`Evalable <l4576616c61626c65>`\  Ent
 
 
@@ -175,7 +175,7 @@ A sparse table has a default entry, which is returned if no other value has been
 
 .. _l5370617273655461626c65-6c61746578:
 
-\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  if Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
   from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 .. _l5370617273655461626c65-6c6573733f:
@@ -207,11 +207,11 @@ A sparse table has a default entry, which is returned if no other value has been
 
 .. _l5370617273655461626c65-6d6178:
 
-\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> Ent if Ent has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> Ent if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Ent has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Ent
 
 
-\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> Record(key: Key, entry: Ent) if Record(key: Key, entry: Ent) has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> Record(key: Key, entry: Ent) if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Record(key: Key, entry: Ent) has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Record(key: Key, entry: Ent)
 
 .. _l5370617273655461626c65-6d6178496e646578:
@@ -226,11 +226,11 @@ A sparse table has a default entry, which is returned if no other value has been
 
 .. _l5370617273655461626c65-6d696e:
 
-\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> Ent if Ent has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> Ent if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Ent has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Ent
 
 
-\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> Record(key: Key, entry: Ent) if Record(key: Key, entry: Ent) has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> Record(key: Key, entry: Ent) if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  and Record(key: Key, entry: Ent) has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
   from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  Record(key: Key, entry: Ent)
 
 .. _l5370617273655461626c65-6d696e496e646578:
@@ -316,9 +316,9 @@ A sparse table has a default entry, which is returned if no other value has been
 
 \ :ref:`BagAggregate <l426167416767726567617465>`\  Record(key: Key, entry: Ent) 
 
-\ :ref:`BasicType <l426173696354797065>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`BasicType <l426173696354797065>`\  if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  or Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
-\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Record(key: Key, entry: Ent) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Ent has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  if Ent has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  or Record(key: Key, entry: Ent) has \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
 
 \ :ref:`Collection <l436f6c6c656374696f6e>`\  Record(key: Key, entry: Ent) 
 
@@ -332,7 +332,7 @@ A sparse table has a default entry, which is returned if no other value has been
 
 \ :ref:`EltableAggregate <l456c7461626c65416767726567617465>`\ (Key, Ent) 
 
-\ :ref:`Evalable <l4576616c61626c65>`\  Ent if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent
+\ :ref:`Evalable <l4576616c61626c65>`\  Ent if Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent and Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Ent) if Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: Key, entry: Ent) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Ent)
 
@@ -342,13 +342,13 @@ A sparse table has a default entry, which is returned if no other value has been
 
 \ :ref:`IndexedAggregate <l496e6465786564416767726567617465>`\ (Key, Ent) 
 
-\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Ent, Ent) if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Ent, Ent) if Ent has \ :ref:`Evalable <l4576616c61626c65>`\  Ent and Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (Record(key: Key, entry: Ent), Record(key: Key, entry: Ent)) if Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  and Record(key: Key, entry: Ent) has \ :ref:`Evalable <l4576616c61626c65>`\  Record(key: Key, entry: Ent)
 
 \ :ref:`KeyedDictionary <l4b6579656444696374696f6e617279>`\ (Key, Ent) 
 
-\ :ref:`SetCategory <l53657443617465676f7279>`\  if Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+\ :ref:`SetCategory <l53657443617465676f7279>`\  if Ent has \ :ref:`SetCategory <l53657443617465676f7279>`\  or Record(key: Key, entry: Ent) has \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
 
