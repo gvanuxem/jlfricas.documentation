@@ -43,7 +43,7 @@
             
   <section id="wssymbol">
 <span id="l575353796d626f6c"></span><span id="index-0"></span><h1>WSSymbol<a class="headerlink" href="#wssymbol" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jws.spad#L109">jws.spad line 109</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jws.spad#L109">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jws.spad#L115">jws.spad line 115</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jws.spad#L115">[edit on github]</a></p>
 <p>Julia Wolfram Symbolic symbols using the MathLink Julia package.</p>
 <dl class="simple" id="l575353796d626f6c-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -64,20 +64,18 @@
 <dl class="simple" id="index-2">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(sym)</span></code> is a convenience function to coerce <code class="code docutils literal notranslate"><span class="pre">sym</span></code> to a FriCAS Symbol.</p>
 </dd>
-</dl>
-<dl class="simple" id="index-3">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(sym)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">sym</span></code> to a WSExpression.</p>
+<dt><a class="reference internal" href="WSObject.html#l57534f626a656374-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p>from <a class="reference internal" href="WSObject.html#l57534f626a656374"><span class="std std-ref">WSObject</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-4">
+<dl class="simple" id="index-3">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(bool)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">bool</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">WS</span></code> boolean.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-5">
+<dl class="simple" id="index-4">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(str)</span></code> is a convenience function to coerce a String.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-6">
+<dl class="simple" id="index-5">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(sym)</span></code> is a convenience function to coerce a Symbol.</p>
 </dd>
 </dl>
@@ -177,11 +175,11 @@
 <dt><a class="reference internal" href="WSObject.html#l57534f626a656374-6a5753496e74657270726574"><span class="std std-ref">jWSInterpret</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="WSObject.html#l57534f626a656374"><span class="std std-ref">WSObject</span></a></p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-6a575353796d"></span><dl class="simple" id="index-7">
+<span id="l575353796d626f6c-6a575353796d"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">jWSSym</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jWSSym(str)</span></code> constructs <code class="code docutils literal notranslate"><span class="pre">str</span></code> as a WSSymbol.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-8">
+<dl class="simple" id="index-7">
 <dt><span class="spadfun">jWSSym</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jWSSym(sym)</span></code> constructs <code class="code docutils literal notranslate"><span class="pre">sym</span></code> as a WSSymbol.</p>
 </dd>
 </dl>
@@ -195,6 +193,10 @@
 </dl>
 <dl class="simple" id="l575353796d626f6c-6e6f7468696e673f">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l575353796d626f6c-6e756d657269633f">
+<dt><a class="reference internal" href="WSObject.html#l57534f626a656374-6e756d657269633f"><span class="std std-ref">numeric?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="WSObject.html#l57534f626a656374"><span class="std std-ref">WSObject</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l575353796d626f6c-6e756d65726963">
@@ -211,59 +213,59 @@
 <dt><a class="reference internal" href="WSObject.html#l57534f626a656374-746f537472696e67"><span class="std std-ref">toString</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="WSObject.html#l57534f626a656374"><span class="std std-ref">WSObject</span></a></p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-57436f6d706c6578"></span><dl class="simple" id="index-9">
+<span id="l575353796d626f6c-57436f6d706c6578"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">WComplex</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WComplex()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Complex symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-574661696c757265"></span><dl class="simple" id="index-10">
+<span id="l575353796d626f6c-574661696c757265"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">WFailure</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WFailure()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Failure symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-5746616c7365"></span><dl class="simple" id="index-11">
+<span id="l575353796d626f6c-5746616c7365"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">WFalse</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WFalse()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> False symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-57466f726d6174"></span><dl class="simple" id="index-12">
+<span id="l575353796d626f6c-57466f726d6174"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">WFormat</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WFormat()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Format symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-57496e7465676572"></span><dl class="simple" id="index-13">
+<span id="l575353796d626f6c-57496e7465676572"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">WInteger</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WInteger()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Integer symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-574c697374"></span><dl class="simple" id="index-14">
+<span id="l575353796d626f6c-574c697374"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">WList</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WList()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> List symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-574d697373696e67"></span><dl class="simple" id="index-15">
+<span id="l575353796d626f6c-574d697373696e67"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">WMissing</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WMissing()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Missing symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-574e6f6e65"></span><dl class="simple" id="index-16">
+<span id="l575353796d626f6c-574e6f6e65"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">WNone</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WNone()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> None symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-57526174696f6e616c"></span><dl class="simple" id="index-17">
+<span id="l575353796d626f6c-57526174696f6e616c"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">WRational</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WRational()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Rational symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-575265616c"></span><dl class="simple" id="index-18">
+<span id="l575353796d626f6c-575265616c"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">WReal</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WReal()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Real symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-5752756c65"></span><dl class="simple" id="index-19">
+<span id="l575353796d626f6c-5752756c65"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">WRule</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WRule()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Rule symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-57537472696e67"></span><dl class="simple" id="index-20">
+<span id="l575353796d626f6c-57537472696e67"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">WString</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WString()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> String symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-5753796d626f6c"></span><dl class="simple" id="index-21">
+<span id="l575353796d626f6c-5753796d626f6c"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">WSymbol</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WSymbol()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> Symbol symbol.</p>
 </dd>
 </dl>
-<span id="l575353796d626f6c-5754727565"></span><dl class="simple" id="index-22">
+<span id="l575353796d626f6c-5754727565"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">WTrue</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">WTrue()</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> True symbol.</p>
 </dd>
 </dl>

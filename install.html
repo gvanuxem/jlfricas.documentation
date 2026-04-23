@@ -56,7 +56,7 @@
 <ul>
 <li><p><a class="reference internal" href="#standard-build-tools" id="id7">Standard build tools</a></p></li>
 <li><p><a class="reference internal" href="#lisp" id="id8">Lisp</a></p></li>
-<li><p><a class="reference internal" href="#julia" id="id9">Julia</a></p></li>
+<li><p><a class="reference internal" href="#julia-for-fricas-jlfricas" id="id9">Julia for FriCAS (jlFriCAS)</a></p></li>
 <li><p><a class="reference internal" href="#jfricas-optional" id="id10">jFriCAS (optional)</a></p></li>
 <li><p><a class="reference internal" href="#hunchentoot-optional" id="id11">Hunchentoot (optional)</a></p></li>
 <li><p><a class="reference internal" href="#x-libraries-optional-but-needed-for-graphics-and-hyperdoc" id="id12">X libraries (optional, but needed for graphics and HyperDoc)</a></p></li>
@@ -130,7 +130,7 @@ sed -i &quot;s|^exec_prefix=|FRICAS_PREFIX=\&quot;$L\&quot;\nexport FRICAS_PREFI
 <section id="issues">
 <h4>Issues<a class="headerlink" href="#issues" title="Link to this heading">¶</a></h4>
 <p>If after start of the <code class="docutils literal notranslate"><span class="pre">fricas</span></code> script you see</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using defaul.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(HyperDoc) Cannot load font -adobe-courier-medium-r-normal--18-*-*-*-m-*-iso8859-1 ; using default.
 </pre></div>
 </div>
 <p>on the console, do the following:</p>
@@ -207,11 +207,14 @@ newest ECL versions are progressively slower.</p>
 <p>Some computation work much faster on 64-bit machines, especially
 when using SBCL.</p>
 </section>
-<section id="julia">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Julia</a><a class="headerlink" href="#julia" title="Link to this heading">¶</a></h3>
+<section id="julia-for-fricas-jlfricas">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Julia for FriCAS (jlFriCAS)</a><a class="headerlink" href="#julia-for-fricas-jlfricas" title="Link to this heading">¶</a></h3>
 <p>Julia is a high-level, high-performance, dynamic language for technical computing.
 The main homepage for Julia can be found at <a class="reference external" href="https://julialang.org">https://julialang.org</a>. You can download Julia
-for your system at <a class="reference external" href="https://julialang.org/install/">https://julialang.org/install/</a>.</p>
+for your system at <a class="reference external" href="https://julialang.org/install/">https://julialang.org/install/</a>. Do at configure time.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./configure --enable-julia
+</pre></div>
+</div>
 </section>
 <section id="jfricas-optional">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">jFriCAS (optional)</a><a class="headerlink" href="#jfricas-optional" title="Link to this heading">¶</a></h3>

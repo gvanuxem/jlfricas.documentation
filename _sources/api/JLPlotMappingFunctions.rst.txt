@@ -1,0 +1,108 @@
+.. index:: JLPlotMappingFunctions
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73:
+
+JLPlotMappingFunctions
+======================
+
+:viewcode:`jplot.spad line 254 <jplot.spad#L254>` :editcode:`[edit on github] <jplot.spad#L254>`
+
+
+high level plotting functions using mappings and the Plots module from Julia.
+
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c436f6e746f757221:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlContour!
+
+:spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour!(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c436f6e746f7572:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlContour
+
+:spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c436f6e746f75726621:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlContourf!
+
+:spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf!(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Fill area between contours.
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c436f6e746f757266:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlContourf
+
+:spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Fill area between contours.
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c506c6f7421:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, c..d)`\  adds the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+
+.. index::
+   pair: JLPlotMappingFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b)`\  adds the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  to the existing graph object.
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c506c6f74:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlPlot
+
+:spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ 
+
+
+.. index::
+   pair: JLPlotMappingFunctions; jlPlot
+
+:spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . For example: \example{jlPlot(x+->sinc(x),-15..15)}
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c5375726661636521:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlSurface!
+
+:spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface!(f, a..b, c..d)`\  draws the surface of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c53757266616365:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlSurface
+
+:spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface(f, a..b, c..d)`\  draws the surface of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c576972656672616d6521:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlWireframe!
+
+:spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe!(f, a..b, c..d)`\  draws add the wireframe of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+.. _l4a4c506c6f744d617070696e6746756e6374696f6e73-6a6c576972656672616d65:
+
+.. index::
+   pair: JLPlotMappingFunctions; jlWireframe
+
+:spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe(f, a..b, c..d)`\  draws the wireframe of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+
