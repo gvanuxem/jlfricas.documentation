@@ -595,7 +595,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`Equation <l4571756174696f6e>`\  % -> % 
-  \ :code:`coerce(eq)`\  coerces the equation \ :code:`eq`\  to a WSExpression rule.
+  \ :code:`coerce(eq)`\  coerces the equation \ :code:`eq`\  to a WSExpression equation.
 
 
 .. index::
@@ -3998,6 +3998,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`realNumeric?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   \ :code:`realNumeric?(x)`\  checks whether or not \ :code:`x`\  represents a real value (numeric).
 
+.. _l575345787072657373696f6e-7265616c4e756d65726963536f6c7665:
+
+.. index::
+   pair: WSExpression; realNumericSolve
+
+:spadfun:`realNumericSolve`\: (%, %) -> % 
+  \ :code:`realNumericSolve(expr, vars)`\  returns the real solution(\ :code:`s`\ ) to the expression \ :code:`expr`\ .
+
+
+.. index::
+   pair: WSExpression; realNumericSolve
+
+:spadfun:`realNumericSolve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %) -> % 
+  \ :code:`realNumericSolve(eq, vars)`\  returns the real solution(\ :code:`s`\ ) to the equation \ :code:`eq`\ .
+
 .. _l575345787072657373696f6e-7265636970:
 
 \ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
@@ -4017,20 +4032,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 :spadfun:`reduce`\: (%, %, %) -> % 
   \ :code:`reduce(expr,lvars,dom)`\  tries to reduce the (in)equation in \ :code:`expr`\ .
-
-
-.. index::
-   pair: WSExpression; reduce
-
-:spadfun:`reduce`\: (%, \ :ref:`String <l537472696e67>`\ , %, %) -> % 
-  \ :code:`reduce(lhs, rel, rhs,lvars)`\  tries to reduce the (in)equation in expr where \ :code:`rel`\  is the relation operator ("==" or "<=" for example).
-
-
-.. index::
-   pair: WSExpression; reduce
-
-:spadfun:`reduce`\: (%, \ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
-  \ :code:`reduce(lhs, rel,rhs,lvars,dom)`\  tries to reduce the (in)equation in expr where \ :code:`rel`\  is the relation operator (\ :code:`"="`\  or "<=" for example).
 
 
 .. index::
@@ -4539,20 +4540,6 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 :spadfun:`solve`\: (%, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
   \ :code:`solve(expr, vars, dom)`\  tries to solve the expression \ :code:`expr`\ .
-
-
-.. index::
-   pair: WSExpression; solve
-
-:spadfun:`solve`\: (%, \ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ :code:`solve(lhs, rel, rhs,lvars)`\  tries to solve the (in)equation in expr where \ :code:`rel`\  is the relation operator ("==" for example).
-
-
-.. index::
-   pair: WSExpression; solve
-
-:spadfun:`solve`\: (%, \ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSList <l57534c697374>`\  % 
-  \ :code:`solve(lhs, rel,rhs,lvars,dom)`\  tries to solve the (in)equation in expr where \ :code:`rel`\  is the relation operator ("==" for example).
 
 
 .. index::

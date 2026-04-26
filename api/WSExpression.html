@@ -424,7 +424,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-31">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(eq)</span></code> coerces the equation <code class="code docutils literal notranslate"><span class="pre">eq</span></code> to a WSExpression rule.</p>
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(eq)</span></code> coerces the equation <code class="code docutils literal notranslate"><span class="pre">eq</span></code> to a WSExpression equation.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-32">
@@ -2409,24 +2409,24 @@
 <dt><span class="spadfun">realNumeric?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">realNumeric?(x)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">x</span></code> represents a real value (numeric).</p>
 </dd>
 </dl>
+<span id="l575345787072657373696f6e-7265616c4e756d65726963536f6c7665"></span><dl class="simple" id="index-333">
+<dt><span class="spadfun">realNumericSolve</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">realNumericSolve(expr,</span> <span class="pre">vars)</span></code> returns the real solution(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) to the expression <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-334">
+<dt><span class="spadfun">realNumericSolve</span>: (<a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">realNumericSolve(eq,</span> <span class="pre">vars)</span></code> returns the real solution(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) to the equation <code class="code docutils literal notranslate"><span class="pre">eq</span></code>.</p>
+</dd>
+</dl>
 <dl class="simple" id="l575345787072657373696f6e-7265636970">
 <dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-726564756365"></span><dl class="simple" id="index-333">
+<span id="l575345787072657373696f6e-726564756365"></span><dl class="simple" id="index-335">
 <dt><span class="spadfun">reduce</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">reduce(expr,lvars)</span></code> tries to reduce the (in)equation in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-334">
-<dt><span class="spadfun">reduce</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">reduce(expr,lvars,dom)</span></code> tries to reduce the (in)equation in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
-</dd>
-</dl>
-<dl class="simple" id="index-335">
-<dt><span class="spadfun">reduce</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">reduce(lhs,</span> <span class="pre">rel,</span> <span class="pre">rhs,lvars)</span></code> tries to reduce the (in)equation in expr where <code class="code docutils literal notranslate"><span class="pre">rel</span></code> is the relation operator (“==” or “&lt;=” for example).</p>
-</dd>
-</dl>
 <dl class="simple" id="index-336">
-<dt><span class="spadfun">reduce</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">reduce(lhs,</span> <span class="pre">rel,rhs,lvars,dom)</span></code> tries to reduce the (in)equation in expr where <code class="code docutils literal notranslate"><span class="pre">rel</span></code> is the relation operator (<code class="code docutils literal notranslate"><span class="pre">&quot;=&quot;</span></code> or “&lt;=” for example).</p>
+<dt><span class="spadfun">reduce</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">reduce(expr,lvars,dom)</span></code> tries to reduce the (in)equation in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-337">
@@ -2736,18 +2736,10 @@
 </dd>
 </dl>
 <dl class="simple" id="index-370">
-<dt><span class="spadfun">solve</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">solve(lhs,</span> <span class="pre">rel,</span> <span class="pre">rhs,lvars)</span></code> tries to solve the (in)equation in expr where <code class="code docutils literal notranslate"><span class="pre">rel</span></code> is the relation operator (“==” for example).</p>
-</dd>
-</dl>
-<dl class="simple" id="index-371">
-<dt><span class="spadfun">solve</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">solve(lhs,</span> <span class="pre">rel,rhs,lvars,dom)</span></code> tries to solve the (in)equation in expr where <code class="code docutils literal notranslate"><span class="pre">rel</span></code> is the relation operator (“==” for example).</p>
-</dd>
-</dl>
-<dl class="simple" id="index-372">
 <dt><span class="spadfun">solve</span>: (<a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> %, %) -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">solve(eq,</span> <span class="pre">vars)</span></code> tries to solve the equation <code class="code docutils literal notranslate"><span class="pre">eq</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-373">
+<dl class="simple" id="index-371">
 <dt><span class="spadfun">solve</span>: (<a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> %, %, %) -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">solve(expr,</span> <span class="pre">vars,</span> <span class="pre">dom)</span></code> tries to solve the expression <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
@@ -2763,23 +2755,23 @@
 <dt><a class="reference internal" href="WSAggregate.html#l5753416767726567617465-736f727465643f"><span class="std std-ref">sorted?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="WSAggregate.html#l5753416767726567617465"><span class="std std-ref">WSAggregate</span></a> %</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73706865726963616c42657373656c4a"></span><dl class="simple" id="index-374">
+<span id="l575345787072657373696f6e-73706865726963616c42657373656c4a"></span><dl class="simple" id="index-372">
 <dt><span class="spadfun">sphericalBesselJ</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sphericalBesselJ(n,z)</span></code> returns the spherical Bessel of the first kind of <code class="code docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73706865726963616c42657373656c59"></span><dl class="simple" id="index-375">
+<span id="l575345787072657373696f6e-73706865726963616c42657373656c59"></span><dl class="simple" id="index-373">
 <dt><span class="spadfun">sphericalBesselY</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sphericalBesselY(n,z)</span></code> returns the spherical Bessel of the second kind of <code class="code docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73706865726963616c48616e6b656c4831"></span><dl class="simple" id="index-376">
+<span id="l575345787072657373696f6e-73706865726963616c48616e6b656c4831"></span><dl class="simple" id="index-374">
 <dt><span class="spadfun">sphericalHankelH1</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sphericalHankelH1(n,z)</span></code> returns the spherical Hankel function of the first kind of <code class="code docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73706865726963616c48616e6b656c4832"></span><dl class="simple" id="index-377">
+<span id="l575345787072657373696f6e-73706865726963616c48616e6b656c4832"></span><dl class="simple" id="index-375">
 <dt><span class="spadfun">sphericalHankelH2</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sphericalHankelH2(n,z)</span></code> returns the spherical Hankel function of the second kind of <code class="code docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73706865726963616c4861726d6f6e696359"></span><dl class="simple" id="index-378">
+<span id="l575345787072657373696f6e-73706865726963616c4861726d6f6e696359"></span><dl class="simple" id="index-376">
 <dt><span class="spadfun">sphericalHarmonicY</span>: (%, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sphericalHarmonicY(l,</span> <span class="pre">m,</span> <span class="pre">theta,</span> <span class="pre">phi)</span></code> returns the spherical harmonic <code class="code docutils literal notranslate"><span class="pre">Y</span></code> function or evaluates it.</p>
 </dd>
 </dl>
@@ -2799,11 +2791,11 @@
 <dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-73717561726546726565506f6c796e6f6d69616c"><span class="std std-ref">squareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-737469656c746a657347616d6d61"></span><dl class="simple" id="index-379">
+<span id="l575345787072657373696f6e-737469656c746a657347616d6d61"></span><dl class="simple" id="index-377">
 <dt><span class="spadfun">stieltjesGamma</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">stieltjesGamma(n)</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">n</span></code>-th Stieltjes constant.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-380">
+<dl class="simple" id="index-378">
 <dt><span class="spadfun">stieltjesGamma</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">stieltjesGamma(n,a)</span></code> returns the generalized <code class="code docutils literal notranslate"><span class="pre">n</span></code>-th Stieltjes constant.</p>
 </dd>
 </dl>
@@ -2819,7 +2811,7 @@
 <dt><a class="reference internal" href="SpecialFunctionCategory.html#l5370656369616c46756e6374696f6e43617465676f7279-7374727576654c"><span class="std std-ref">struveL</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="SpecialFunctionCategory.html#l5370656369616c46756e6374696f6e43617465676f7279"><span class="std std-ref">SpecialFunctionCategory</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-737562526573756c74616e7473"></span><dl class="simple" id="index-381">
+<span id="l575345787072657373696f6e-737562526573756c74616e7473"></span><dl class="simple" id="index-379">
 <dt><span class="spadfun">subResultants</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">subResultants(p1,p2,x)</span></code> returns the subresultant of <code class="code docutils literal notranslate"><span class="pre">p1</span></code> and <code class="code docutils literal notranslate"><span class="pre">p2</span></code> with respect to <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
@@ -2835,15 +2827,15 @@
 <dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73756d"></span><dl class="simple" id="index-382">
+<span id="l575345787072657373696f6e-73756d"></span><dl class="simple" id="index-380">
 <dt><span class="spadfun">sum</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sum(f(n),range)</span></code> returns the sum <code class="code docutils literal notranslate"><span class="pre">f</span></code>(imin) + … + <code class="code docutils literal notranslate"><span class="pre">f</span></code>(imax) defined by the list <code class="code docutils literal notranslate"><span class="pre">range</span></code>, for example example{jWSExpr(”{i, imin, imax}”)}. See Wolfram Language specifications.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-383">
+<dl class="simple" id="index-381">
 <dt><span class="spadfun">sum</span>: (%, %, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sum(f(n),n,</span> <span class="pre">a..b)</span></code> returns the sum <code class="code docutils literal notranslate"><span class="pre">f</span></code>(a) + … + <code class="code docutils literal notranslate"><span class="pre">f</span></code>(<code class="code docutils literal notranslate"><span class="pre">b</span></code>).</p>
 </dd>
 </dl>
-<dl class="simple" id="index-384">
+<dl class="simple" id="index-382">
 <dt><span class="spadfun">sum</span>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sum(f(n),n)</span></code> returns the indefinite sum of <code class="code docutils literal notranslate"><span class="pre">f</span></code>(<code class="code docutils literal notranslate"><span class="pre">n</span></code>).</p>
 </dd>
 </dl>
@@ -2853,15 +2845,15 @@
 <dt><a class="reference internal" href="CombinatorialOpsCategory.html#l436f6d62696e61746f7269616c4f707343617465676f7279-73756d6d6174696f6e"><span class="std std-ref">summation</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="CombinatorialOpsCategory.html#l436f6d62696e61746f7269616c4f707343617465676f7279"><span class="std std-ref">CombinatorialOpsCategory</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73796d6d6574726963506f6c796e6f6d69616c"></span><dl class="simple" id="index-385">
+<span id="l575345787072657373696f6e-73796d6d6574726963506f6c796e6f6d69616c"></span><dl class="simple" id="index-383">
 <dt><span class="spadfun">symmetricPolynomial</span>: (%, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">symmetricPolynomial(n,lvars)</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">n</span></code>-th elementary symmetric polynomial with respect to variables in <code class="code docutils literal notranslate"><span class="pre">lvars</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-73796d6d6574726963526564756374696f6e"></span><dl class="simple" id="index-386">
+<span id="l575345787072657373696f6e-73796d6d6574726963526564756374696f6e"></span><dl class="simple" id="index-384">
 <dt><span class="spadfun">symmetricReduction</span>: (%, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %) -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">symmetricReduction(f,lvars)</span></code> returns a pair of polynomials representing <code class="code docutils literal notranslate"><span class="pre">f</span></code> = <code class="code docutils literal notranslate"><span class="pre">p+q</span></code> where <code class="code docutils literal notranslate"><span class="pre">p</span></code> is a symmetric polynomial, <code class="code docutils literal notranslate"><span class="pre">q</span></code> the remainder.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-387">
+<dl class="simple" id="index-385">
 <dt><span class="spadfun">symmetricReduction</span>: (%, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %) -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">symmetricReduction(f,</span> <span class="pre">lvars,</span> <span class="pre">replnt)</span></code> returns a pair of polynomials representing <code class="code docutils literal notranslate"><span class="pre">f</span></code> = <code class="code docutils literal notranslate"><span class="pre">p+q</span></code> where <code class="code docutils literal notranslate"><span class="pre">p</span></code> is a symmetric polynomial, <code class="code docutils literal notranslate"><span class="pre">q</span></code> the remainder where variables in <code class="code docutils literal notranslate"><span class="pre">p</span></code> replaced by the ones in replnt.</p>
 </dd>
 </dl>
@@ -2879,19 +2871,19 @@
 <dt><a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279-74616e68"><span class="std std-ref">tanh</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="HyperbolicFunctionCategory.html#l4879706572626f6c696346756e6374696f6e43617465676f7279"><span class="std std-ref">HyperbolicFunctionCategory</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-746f45787072657373696f6e"></span><dl class="simple" id="index-388">
+<span id="l575345787072657373696f6e-746f45787072657373696f6e"></span><dl class="simple" id="index-386">
 <dt><span class="spadfun">toExpression</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">toExpression(expr,</span> <span class="pre">form)</span></code> converts <code class="code docutils literal notranslate"><span class="pre">expr</span></code> to a <code class="code docutils literal notranslate"><span class="pre">WS</span></code> expression and evaluates it with output in the format form.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-389">
+<dl class="simple" id="index-387">
 <dt><span class="spadfun">toExpression</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">toExpression(expr,</span> <span class="pre">form,</span> <span class="pre">h)</span></code> converts <code class="code docutils literal notranslate"><span class="pre">expr</span></code> to a <code class="code docutils literal notranslate"><span class="pre">WS</span></code> expression and evaluates it with output in the format <code class="code docutils literal notranslate"><span class="pre">form</span></code> but wrapping the head with <code class="code docutils literal notranslate"><span class="pre">h</span></code>. <cite>Hold</cite> for example.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-390">
+<dl class="simple" id="index-388">
 <dt><span class="spadfun">toExpression</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">toExpression(expr)</span></code> converts <code class="code docutils literal notranslate"><span class="pre">expr</span></code> to a <code class="code docutils literal notranslate"><span class="pre">WS</span></code> expression and evaluates it.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-746f676574686572"></span><dl class="simple" id="index-391">
+<span id="l575345787072657373696f6e-746f676574686572"></span><dl class="simple" id="index-389">
 <dt><span class="spadfun">together</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">together(expr)</span></code> puts together terms over a common denominator cancelling common factors.</p>
 </dd>
 </dl>
@@ -2899,7 +2891,7 @@
 <dt><a class="reference internal" href="WSObject.html#l57534f626a656374-746f537472696e67"><span class="std std-ref">toString</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="WSObject.html#l57534f626a656374"><span class="std std-ref">WSObject</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-392">
+<dl class="simple" id="index-390">
 <dt><span class="spadfun">toString</span>: (%, %) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">toString(expr,</span> <span class="pre">form)</span></code> returns the string representation of <code class="code docutils literal notranslate"><span class="pre">expr</span></code> with <code class="code docutils literal notranslate"><span class="pre">WS</span></code> language format form.</p>
 </dd>
 </dl>
@@ -2919,27 +2911,27 @@
 <dt><a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261-74726163654d6174726978"><span class="std std-ref">traceMatrix</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l46696e69746552616e6b416c6765627261"><span class="std std-ref">FiniteRankAlgebra</span></a>(%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %)</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-747261646974696f6e616c466f726d"></span><dl class="simple" id="index-393">
+<span id="l575345787072657373696f6e-747261646974696f6e616c466f726d"></span><dl class="simple" id="index-391">
 <dt><span class="spadfun">traditionalForm</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">traditionalForm(expr)</span></code> returns a traditional form of <code class="code docutils literal notranslate"><span class="pre">expr</span></code> i.e. its <code class="code docutils literal notranslate"><span class="pre">WS</span></code> ‘TraditionalForm’.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-74726967457870616e64"></span><dl class="simple" id="index-394">
+<span id="l575345787072657373696f6e-74726967457870616e64"></span><dl class="simple" id="index-392">
 <dt><span class="spadfun">trigExpand</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">trigExpand(expr)</span></code> tries to expand (hyperbolic) trigonometric functions in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-74726967466163746f72"></span><dl class="simple" id="index-395">
+<span id="l575345787072657373696f6e-74726967466163746f72"></span><dl class="simple" id="index-393">
 <dt><span class="spadfun">trigFactor</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">trigFactor(expr)</span></code> factors (hyperbolic) trigonometric functions in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-74726967466163746f724c697374"></span><dl class="simple" id="index-396">
+<span id="l575345787072657373696f6e-74726967466163746f724c697374"></span><dl class="simple" id="index-394">
 <dt><span class="spadfun">trigFactorList</span>: % -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">trigFactorList(expr)</span></code> returns a list of factors of (hyperbolic) trigonometric functions in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-74726967526564756365"></span><dl class="simple" id="index-397">
+<span id="l575345787072657373696f6e-74726967526564756365"></span><dl class="simple" id="index-395">
 <dt><span class="spadfun">trigReduce</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">trigReduce(expr)</span></code> reduces power and products of trigonometric functions.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-74726967546f457870"></span><dl class="simple" id="index-398">
+<span id="l575345787072657373696f6e-74726967546f457870"></span><dl class="simple" id="index-396">
 <dt><span class="spadfun">trigToExp</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">trigToExp(expr)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">expr</span></code> with (hyperbolic) trigonometric functions converted to, eventually complex, exponentials.</p>
 </dd>
 </dl>
@@ -2967,7 +2959,7 @@
 <dt><a class="reference internal" href="FunctionSpace2.html#l46756e6374696f6e537061636532-756e6976617269617465"><span class="std std-ref">univariate</span></a>: (%, <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> %) -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="FunctionSpace2.html#l46756e6374696f6e537061636532"><span class="std std-ref">FunctionSpace2</span></a>(%, <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> %)</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-76616c756573"></span><dl class="simple" id="index-399">
+<span id="l575345787072657373696f6e-76616c756573"></span><dl class="simple" id="index-397">
 <dt><span class="spadfun">values</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">values(expr)</span></code> returns the values elements in <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 </dd>
 </dl>
@@ -2975,7 +2967,7 @@
 <dt><a class="reference internal" href="FunctionSpace2.html#l46756e6374696f6e537061636532-7661726961626c6573"><span class="std std-ref">variables</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="FunctionSpace2.html#l46756e6374696f6e537061636532"><span class="std std-ref">FunctionSpace2</span></a>(%, <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> %)</p>
 </dd>
 </dl>
-<dl class="simple" id="index-400">
+<dl class="simple" id="index-398">
 <dt><span class="spadfun">variables</span>: % -&gt; <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">variables(p)</span></code> returns the list of variables in <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="FunctionSpace2.html#l46756e6374696f6e537061636532-7661726961626c6573"><span class="std std-ref">variables</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="FunctionSpace2.html#l46756e6374696f6e537061636532"><span class="std std-ref">FunctionSpace2</span></a>(%, <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> %)</p>
@@ -2985,35 +2977,35 @@
 <dt><a class="reference internal" href="SpecialFunctionCategory.html#l5370656369616c46756e6374696f6e43617465676f7279-776562657245"><span class="std std-ref">weberE</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="SpecialFunctionCategory.html#l5370656369616c46756e6374696f6e43617465676f7279"><span class="std std-ref">SpecialFunctionCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-401">
+<dl class="simple" id="index-399">
 <dt><span class="spadfun">weberE</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">weberE(v,n,z)</span></code> is the associated Weber <code class="code docutils literal notranslate"><span class="pre">E</span></code> function.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-776569657273747261737350"></span><dl class="simple" id="index-402">
+<span id="l575345787072657373696f6e-776569657273747261737350"></span><dl class="simple" id="index-400">
 <dt><span class="spadfun">weierstrassP</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">weierstrassP(g2,</span> <span class="pre">g3,</span> <span class="pre">z)</span></code> is the Weierstrass <code class="code docutils literal notranslate"><span class="pre">P</span></code> function.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-776569657273747261737350496e7665727365"></span><dl class="simple" id="index-403">
+<span id="l575345787072657373696f6e-776569657273747261737350496e7665727365"></span><dl class="simple" id="index-401">
 <dt><span class="spadfun">weierstrassPInverse</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">weierstrassPInverse(g2,</span> <span class="pre">g3,</span> <span class="pre">z)</span></code> is the inverse of Weierstrass <code class="code docutils literal notranslate"><span class="pre">P</span></code> function, defined by the formula <code class="code docutils literal notranslate"><span class="pre">WeierstrassP(g2,</span> <span class="pre">g3,</span> <span class="pre">WeierstrassPInverse(g2,</span> <span class="pre">g3,</span> <span class="pre">z))</span> <span class="pre">=</span> <span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-7765696572737472617373505072696d65"></span><dl class="simple" id="index-404">
+<span id="l575345787072657373696f6e-7765696572737472617373505072696d65"></span><dl class="simple" id="index-402">
 <dt><span class="spadfun">weierstrassPPrime</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">weierstrassPPrime(g2,</span> <span class="pre">g3,</span> <span class="pre">z)</span></code> is the derivative of the Weierstrass <code class="code docutils literal notranslate"><span class="pre">P</span></code> function.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-77656965727374726173735369676d61"></span><dl class="simple" id="index-405">
+<span id="l575345787072657373696f6e-77656965727374726173735369676d61"></span><dl class="simple" id="index-403">
 <dt><span class="spadfun">weierstrassSigma</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">weierstrassSigma(g2,</span> <span class="pre">g3,</span> <span class="pre">z)</span></code> is the Weierstrass sigma function.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-77656965727374726173735a657461"></span><dl class="simple" id="index-406">
+<span id="l575345787072657373696f6e-77656965727374726173735a657461"></span><dl class="simple" id="index-404">
 <dt><span class="spadfun">weierstrassZeta</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">weierstrassZeta(g2,</span> <span class="pre">g3,</span> <span class="pre">z)</span></code> is the Weierstrass Zeta function.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-7768697474616b65724d"></span><dl class="simple" id="index-407">
+<span id="l575345787072657373696f6e-7768697474616b65724d"></span><dl class="simple" id="index-405">
 <dt><span class="spadfun">whittakerM</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">whittakerM(k,m,x)</span></code> computes the Whittaker function <code class="code docutils literal notranslate"><span class="pre">M</span></code> of <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-7768697474616b657257"></span><dl class="simple" id="index-408">
+<span id="l575345787072657373696f6e-7768697474616b657257"></span><dl class="simple" id="index-406">
 <dt><span class="spadfun">whittakerW</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">whittakerW(k,m,z)</span></code> computes the Whittaker function <code class="code docutils literal notranslate"><span class="pre">W</span></code> of <code class="code docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
@@ -3021,11 +3013,11 @@
 <dt><a class="reference internal" href="SpecialFunctionCategory.html#l5370656369616c46756e6374696f6e43617465676f7279-77696c736f6e57"><span class="std std-ref">wilsonW</span></a>: (%, %, %, %, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="SpecialFunctionCategory.html#l5370656369616c46756e6374696f6e43617465676f7279"><span class="std std-ref">SpecialFunctionCategory</span></a></p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-7a65726e696b6552"></span><dl class="simple" id="index-409">
+<span id="l575345787072657373696f6e-7a65726e696b6552"></span><dl class="simple" id="index-407">
 <dt><span class="spadfun">zernikeR</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">zernikeR(n,</span> <span class="pre">m,</span> <span class="pre">x)</span></code> returns the Zernike radial polynomial or evaluates it at <code class="code docutils literal notranslate"><span class="pre">x</span></code> if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a number.</p>
 </dd>
 </dl>
-<span id="l575345787072657373696f6e-7a65726f3f"></span><dl class="simple" id="index-410">
+<span id="l575345787072657373696f6e-7a65726f3f"></span><dl class="simple" id="index-408">
 <dt><span class="spadfun">zero?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">zero?</span> <span class="pre">x</span></code> tries to determine if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is 0. For example: example{expr:=0$WSEXPR/1*sqrt(17::WSEXPR); zero? expr}</p>
 </dd>
 </dl>
