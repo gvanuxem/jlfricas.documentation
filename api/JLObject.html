@@ -47,7 +47,7 @@
             
   <section id="jlobject">
 <span id="l4a4c4f626a656374"></span><span id="index-0"></span><h1>JLObject<a class="headerlink" href="#jlobject" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L258">jobject.spad line 258</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L258">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L259">jobject.spad line 259</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L259">[edit on github]</a></p>
 <p>Generic Julia objects i.e. objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It also supports the JLObjectAggregate category.</p>
 <dl class="simple" id="l4a4c4f626a656374-23">
 <dt><a class="reference internal" href="Aggregate.html#l416767726567617465-23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
@@ -105,6 +105,14 @@
 <dt><a class="reference internal" href="Aggregate.html#l416767726567617465-65713f"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
 </dl>
+<span id="l4a4c4f626a656374-6973613f"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">isa?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">isa?(x,</span> <span class="pre">y)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">true</span></code> if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a subtype of <code class="code docutils literal notranslate"><span class="pre">y</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a656374-6a616e79"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">jany</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jany()</span></code> returns the JLObject representing Any in Julia.</p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c4f626a656374-6a6c41626f7574">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -121,7 +129,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a656374-6a6c436f6c6c656374"></span><dl class="simple" id="index-4">
+<span id="l4a4c4f626a656374-6a6c436f6c6c656374"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">jlCollect</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlCollect(obj)</span></code> collects element of a Julia iterator in a JLVector.</p>
 </dd>
 </dl>
@@ -181,16 +189,28 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a656374-6a6f626a656374"></span><dl class="simple" id="index-5">
+<span id="l4a4c4f626a656374-6a6d697373696e67"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">jmissing</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jmissing()</span></code> returns the JLObject representing Missing in Julia.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a656374-6a6e6f7468696e67"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">jnothing</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnothing()</span></code> returns the JLObject representing Nothing in Julia.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a656374-6a6f626a656374"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">jobject</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jobject(n)</span></code> returns the JLObject representing the integer <code class="code docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-6">
+<dl class="simple" id="index-10">
 <dt><span class="spadfun">jobject</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jobject(str)</span></code> constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: example{jobject(“rand(Float64,(2,3,4))”)} returns a 2x3x4 array of <code class="code docutils literal notranslate"><span class="pre">Float64</span></code> elements. A Julia exception is raised if error(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) occur(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) during parsing/evaluation.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a656374-6a737472696e67"></span><dl class="simple" id="index-7">
+<span id="l4a4c4f626a656374-6a737472696e67"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">jstring</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jstring(str)</span></code> returns the JLObject representing the String <code class="code docutils literal notranslate"><span class="pre">str</span></code>. Convenience function.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a656374-6a756e696f6e"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">junion</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">junion(l)</span></code> returns the JLObject representing the union of the types in <code class="code docutils literal notranslate"><span class="pre">l</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a656374-6c61746578">
@@ -199,6 +219,10 @@
 </dl>
 <dl class="simple" id="l4a4c4f626a656374-6c6573733f">
 <dt><a class="reference internal" href="Aggregate.html#l416767726567617465-6c6573733f"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a656374-6d697373696e673f">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d697373696e673f"><span class="std std-ref">missing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a656374-6d6f72653f">

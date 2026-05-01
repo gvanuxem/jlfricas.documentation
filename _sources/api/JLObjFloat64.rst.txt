@@ -5,7 +5,7 @@
 JLObjFloat64
 ============
 
-:viewcode:`jimobject.spad line 157 <jimobject.spad#L157>` :editcode:`[edit on github] <jimobject.spad#L157>`
+:viewcode:`jimobject.spad line 163 <jimobject.spad#L163>` :editcode:`[edit on github] <jimobject.spad#L163>`
 
 
 Convenience domain for Julia \ :code:`Float64`\ , objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It is not meant to be used directly, but rather, for returned value or function argument for example. Only basic arithmetic operations are supported.
@@ -296,6 +296,14 @@ Convenience domain for Julia \ :code:`Float64`\ , objects that are used within J
 :spadfun:`jfloat64`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ :code:`jfloat64`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float64`\  object. For example: \example{jfloat64("sin(\ :code:`pi`\ )")} \example{jfloat64("0.7")}
 
+.. _l4a4c4f626a466c6f61743634-6a696e663634:
+
+.. index::
+   pair: JLObjFloat64; jinf64
+
+:spadfun:`jinf64`\: () -> % 
+  \ :code:`jinf64()`\  returns the Julia Infinity object.
+
 .. _l4a4c4f626a466c6f61743634-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -429,6 +437,14 @@ Convenience domain for Julia \ :code:`Float64`\ , objects that are used within J
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a466c6f61743634-6a6e616e3634:
+
+.. index::
+   pair: JLObjFloat64; jnan64
+
+:spadfun:`jnan64`\: () -> % 
+  \ :code:`jnan64()`\  returns the Julia NaN (Not a Number) object.
+
 .. _l4a4c4f626a466c6f61743634-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -471,6 +487,11 @@ Convenience domain for Julia \ :code:`Float64`\ , objects that are used within J
 
 \ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % 
   from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+.. _l4a4c4f626a466c6f61743634-6d697373696e673f:
+
+\ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a466c6f61743634-6d756c74694575636c696465616e:
 

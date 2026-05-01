@@ -5,7 +5,7 @@
 JLFloat
 =======
 
-:viewcode:`jobject.spad line 632 <jobject.spad#L632>` :editcode:`[edit on github] <jobject.spad#L632>`
+:viewcode:`jobject.spad line 766 <jobject.spad#L766>` :editcode:`[edit on github] <jobject.spad#L766>`
 
 
 \ :ref:`JLFloat <l4a4c466c6f6174>`\  implements arbitrary precision floating point arithmetic using Julia BigFloats. Use the MPFR library: https://www.mpfr.org/
@@ -571,6 +571,14 @@ JLFloat
 :spadfun:`jfloat`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ :code:`jfloat(z)`\  returns \ :code:`z`\  as a JFLoat. For example where automatic coercions is also used: \example{sqrt(jfloat(2.0)^2+7.0^2+9.^2)}
 
+.. _l4a4c466c6f6174-6a696e66:
+
+.. index::
+   pair: JLFloat; jinf
+
+:spadfun:`jinf`\: () -> % 
+  \ :code:`jinf()`\  returns the Julia Infinity object.
+
 .. _l4a4c466c6f6174-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -725,6 +733,14 @@ JLFloat
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c466c6f6174-6a6e616e:
+
+.. index::
+   pair: JLFloat; jnan
+
+:spadfun:`jnan`\: () -> % 
+  \ :code:`jnan()`\  returns the Julia NaN (Not a Number) object.
+
 .. _l4a4c466c6f6174-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -809,6 +825,11 @@ JLFloat
 
 \ :ref:`min <l466c6f6174696e67506f696e7453797374656d-6d696e>`\ \: () -> % if 
   from \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
+
+.. _l4a4c466c6f6174-6d697373696e673f:
+
+\ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c466c6f6174-6d756c74694575636c696465616e:
 

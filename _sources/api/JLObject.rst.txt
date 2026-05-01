@@ -5,7 +5,7 @@
 JLObject
 ========
 
-:viewcode:`jobject.spad line 258 <jobject.spad#L258>` :editcode:`[edit on github] <jobject.spad#L258>`
+:viewcode:`jobject.spad line 259 <jobject.spad#L259>` :editcode:`[edit on github] <jobject.spad#L259>`
 
 
 Generic Julia objects i.e. objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. It also supports the JLObjectAggregate category.
@@ -89,6 +89,22 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 
 \ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a656374-6973613f:
+
+.. index::
+   pair: JLObject; isa?
+
+:spadfun:`isa?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`isa?(x, y)`\  returns \ :code:`true`\  if \ :code:`x`\  is a subtype of \ :code:`y`\ .
+
+.. _l4a4c4f626a656374-6a616e79:
+
+.. index::
+   pair: JLObject; jany
+
+:spadfun:`jany`\: () -> % 
+  \ :code:`jany()`\  returns the JLObject representing Any in Julia.
 
 .. _l4a4c4f626a656374-6a6c41626f7574:
 
@@ -194,6 +210,22 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a656374-6a6d697373696e67:
+
+.. index::
+   pair: JLObject; jmissing
+
+:spadfun:`jmissing`\: () -> % 
+  \ :code:`jmissing()`\  returns the JLObject representing Missing in Julia.
+
+.. _l4a4c4f626a656374-6a6e6f7468696e67:
+
+.. index::
+   pair: JLObject; jnothing
+
+:spadfun:`jnothing`\: () -> % 
+  \ :code:`jnothing()`\  returns the JLObject representing Nothing in Julia.
+
 .. _l4a4c4f626a656374-6a6f626a656374:
 
 .. index::
@@ -217,6 +249,14 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 :spadfun:`jstring`\: \ :ref:`String <l537472696e67>`\  -> % 
   \ :code:`jstring(str)`\  returns the JLObject representing the String \ :code:`str`\ . Convenience function.
 
+.. _l4a4c4f626a656374-6a756e696f6e:
+
+.. index::
+   pair: JLObject; junion
+
+:spadfun:`junion`\: \ :ref:`List <l4c697374>`\  % -> % 
+  \ :code:`junion(l)`\  returns the JLObject representing the union of the types in \ :code:`l`\ .
+
 .. _l4a4c4f626a656374-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -226,6 +266,11 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
 
 \ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a656374-6d697373696e673f:
+
+\ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a656374-6d6f72653f:
 
