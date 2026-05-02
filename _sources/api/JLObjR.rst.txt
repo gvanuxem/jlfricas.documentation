@@ -241,7 +241,7 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jr
 
 :spadfun:`jr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object. Use jlDisplay(robj) to display the \ :code:`R`\  object robj. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='BFGS')"}
+  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object. Use jlDisplay(robj) to display the \ :code:`R`\  object robj. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"} \example{a:= nrand(10,4)} \example{b := jr(a::JLMatrix(JLObjFloat64))} \example{jlRApply("prcomp", b)}
 
 .. _l4a4c4f626a52-6c61746578:
 

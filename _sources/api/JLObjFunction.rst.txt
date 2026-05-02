@@ -54,43 +54,43 @@ Convenience domain for Julia Functions, objects that are used within Julia, and 
    pair: JLObjFunction; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`elt(jfunc, arg)`\  returns result of applying the Julia Function \ :code:`jfunc`\  to the argument arg. Use it as: `jfunc(arg)`.
+  \ :code:`elt(jfunction, arg)`\  returns result of applying the Julia Function \ :code:`jfunction`\  to the argument arg. Use it as: `jfunction(arg)`.
 
 
 .. index::
    pair: JLObjFunction; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`elt(jfunc, arg1, arg2)`\  returns result of applying the Julia Function \ :code:`jfunc`\  to the arguments \ :code:`arg1`\  and \ :code:`arg2`\ . Use it as: `jfunc(\ :code:`arg1`\ , \ :code:`arg2`\ )`.
+  \ :code:`elt(jfunction, arg1, arg2)`\  returns result of applying the Julia Function \ :code:`jfunction`\  to the arguments \ :code:`arg1`\  and \ :code:`arg2`\ . Use it as: `jfunction(\ :code:`arg1`\ , \ :code:`arg2`\ )`.
 
 
 .. index::
    pair: JLObjFunction; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`elt(jfunc, arg1, arg2, arg3)`\  returns result of applying the Julia Function \ :code:`jfunc`\  to the arguments \ :code:`arg1`\ , \ :code:`arg2`\  and \ :code:`arg3`\ . Use it as: `jfunc(\ :code:`arg1`\ , \ :code:`arg2`\ , \ :code:`arg3`\ )`.
+  \ :code:`elt(jfunction, arg1, arg2, arg3)`\  returns result of applying the Julia Function \ :code:`jfunction`\  to the arguments \ :code:`arg1`\ , \ :code:`arg2`\  and \ :code:`arg3`\ . Use it as: `jfunction(\ :code:`arg1`\ , \ :code:`arg2`\ , \ :code:`arg3`\ )`.
 
 
 .. index::
    pair: JLObjFunction; elt
 
 :spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`elt(jfunc, args)`\  returns result of applying the Julia Function \ :code:`jfunc`\  to the arguments in the list args.
+  \ :code:`elt(jfunction, args)`\  returns result of applying the Julia Function \ :code:`jfunction`\  to the arguments in the list args.
 
-.. _l4a4c4f626a46756e6374696f6e-6a66756e63:
-
-.. index::
-   pair: JLObjFunction; jfunc
-
-:spadfun:`jfunc`\: \ :ref:`FunctionCalled <l46756e6374696f6e43616c6c6564>`\  f -> % 
-  \ :code:`jfunc(func)`\  returns a Julia Function from the FriCAS function \ :code:`func`\ . \ :code:`func`\  must be compatible with 1D format. \example{f(x)==sin(x)} In FriCAS: \ :code:`f`\ (0.7) In Julia: \example{ff:=jfunc(f)} \example{ff(jfloat 0.7)}
-
+.. _l4a4c4f626a46756e6374696f6e-6a66756e6374696f6e:
 
 .. index::
-   pair: JLObjFunction; jfunc
+   pair: JLObjFunction; jfunction
 
-:spadfun:`jfunc`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jfunc(str)`\  returns a Julia Function from the String \ :code:`str`\ . \ :code:`str`\  must be a valid Julia Function definition.
+:spadfun:`jfunction`\: \ :ref:`FunctionCalled <l46756e6374696f6e43616c6c6564>`\  f -> % 
+  \ :code:`jfunction(func)`\  returns a Julia Function from the FriCAS function \ :code:`func`\ . \ :code:`func`\  must be compatible with 1D format. \example{f(x)==sin(x)} In FriCAS: \ :code:`f`\ (0.7) In Julia: \example{ff:=jfunction(f)} \example{ff(jfloat 0.7)}
+
+
+.. index::
+   pair: JLObjFunction; jfunction
+
+:spadfun:`jfunction`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ :code:`jfunction(str)`\  returns a Julia Function from the String \ :code:`str`\ . \ :code:`str`\  must be a valid Julia Function definition.
 
 .. _l4a4c4f626a46756e6374696f6e-6a6c41626f7574:
 

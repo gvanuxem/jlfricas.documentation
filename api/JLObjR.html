@@ -196,7 +196,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-15">
-<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: example{jr “optim(0, $(x -&gt; x-cos(x)), method=’BFGS’)”}</p>
+<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: example{jr “optim(0, $(x -&gt; x-cos(x)), method=’L-BFGS-B’)”} example{a:= nrand(10,4)} example{b := jr(a::JLMatrix(JLObjFloat64))} example{jlRApply(“prcomp”, b)}</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a52-6c61746578">
