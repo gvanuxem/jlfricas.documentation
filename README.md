@@ -1,35 +1,59 @@
 # jlFriCAS
 
-[![FriCAS CI on x64 Linux (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/linuxJulia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/linuxJulia_sbcl.yml)\
-[![FriCAS CI on x64 Linux (with Julia support - Clozure CL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/linuxJulia_ccl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/linuxJulia_ccl.yml)\
-[![FriCAS CI on Windows (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/windowsJulia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/windowsJulia_sbcl.yml)\
-[![FriCAS CI on macOS (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/macOS_Julia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/macOS_Julia_sbcl.yml)
+[![FriCAS CI on x64|arm64 Linux (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/linuxJulia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/linuxJulia_sbcl.yml)\
+[![FriCAS CI on x64 Windows (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/windowsJulia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/windowsJulia_sbcl.yml)\
+[![FriCAS CI on arm64|intel macOS (with Julia support - SBCL based)](https://github.com/gvanuxem/jlfricas/actions/workflows/macOSJulia_sbcl.yml/badge.svg)](https://github.com/gvanuxem/jlfricas/actions/workflows/macOS_Julia_sbcl.yml)
 
+⚠️ WARNING: This extension to FriCAS is under active development! ⚠️
 
 [FriCAS](https://fricas.github.io) is a general purpose computer algebra
 system (CAS).
 
-In this experimantal work-in-progress repository, a C wrapper using libjulia is embedded in [FriCAS](https://fricas.github.io/) to support some [Julia](https://julialang.org) specialized operations (for example, hardware architecture optimized BLAS and LAPACK libraries). The build process supports Clozure CL and SBCL, but only Julia 1.10.0 and Julia 1.11.* are supported with SBCL, see [Caveats](#caveat-sbcl). It must not be considered production-ready. Support of general Julia object is now also supported. An overview of what is added to FriCAS is available
-[here](https://gvanuxem.github.io/jlfricas.documentation/search.html?q=Julia).
+In this work-in-progress repository, a C wrapper using libjulia is embedded in [FriCAS](https://fricas.github.io/) to call [Julia](https://julialang.org) optimized numerical routines such as **BLAS** and **LAPACK**, and more generally to manipulate Julia objects from within FriCAS.
 
-A general source of information can also be found in HTML format [here](https://gvanuxem.github.io/jlfricas.documentation/).
+The build process supports Clozure CL (x86-64) and SBCL (x86-64 and arm64). For SBCL, only Julia 1.10.0, Julia 1.11.* and higher are supported, see [Caveats](#caveat-sbcl). It must not be considered production-ready. An overview of what is added to FriCAS is available [here](https://gvanuxem.github.io/jlfricas.documentation/search.html?q=Julia). [Binary snapshots](https://github.com/gvanuxem/jlfricas/releases) are available.
+
+A [MCP server](https://github.com/gvanuxem/jlfricas/blob/master/doc/MCP_SERVER_DESIGN.md) is also available in jlFriCAS on Linux, supporting both SBCL and Clozure CL. [Here](https://github.com/gvanuxem/jlfricas/blob/master/examples/Solving_Polynomial.md) is an example of a session. At configure time use the option <code>--enable-mcp</code>
+
+The MCP server is also used by [fricas-vscode](https://github.com/gvanuxem/fricas-vscode) (the Julia interface is not necessary nor the use of a LLM). The Yason Common Lisp library is necessary. For Clozure CL, install it with quicklisp for example. With SBCL on Debian based systems, `sudo apt install cl-yason` should do the trick, it will be used automatically through ASDF.
+
+[A general source of information](https://gvanuxem.github.io/jlfricas.documentation/) can also be found in HTML format.
 Take into account that this is absolutely not the official documentation even though it is highly based on the official FriCAS web site which can be built from the FriCAS source code (thanks to Ralf Hemmecke and Kurt Pagani for their amazing work).
 
-![Capture1](https://github.com/user-attachments/assets/86832053-744d-452a-a032-60c12ce8b3b4)
 
-Graphics:
-![Capture2](https://github.com/user-attachments/assets/b6bd0c9a-feab-438b-9e15-08ba25d7bde3)
+![Capture1](https://github.com/user-attachments/assets/f5a6d7ec-0dea-482d-805a-0074cea8be72)
+
+
+Julia Plots and HyperDoc:
+
+Beware, actually, on WSL you may need to export:
+``
+export QT_WAYLAND_SHELL_INTEGRATION=xdg-shell
+``
+in your shell first.
+
+![Capture2](https://github.com/user-attachments/assets/97f35ad1-a6bc-41f9-986f-47e8d3281ad6)
+
+Julia Plots on Windows/cmd.exe:
+
+![Capture3](https://github.com/user-attachments/assets/4c6bec2c-6344-470c-b467-d3571794de51)
+
+
+Linear Algebra:
+![Capture4](https://github.com/user-attachments/assets/21ca03f1-0cff-407f-b8f6-339e38abe4ed)
+
+
 
 ## Building and Installing
 
 For general installation instructions see INSTALL. For general documentation
 consult <https://fricas.github.io>.
 
-To build FriCAS with Julia support, the <code>julia</code> executable needs to be available in your PATH, and a simple <code>./configure --enable-julia && make && sudo make install</code> should do the trick. We require Julia 1.7 or higher. Please see https://julialang.org/downloads/ for instructions on how to obtain Julia for your system. The required Julia packages are (see the Julia package manager):
- - [Nemo](https://nemocas.github.io/Nemo.jl/stable/)
- - [Suppressor](https://github.com/JuliaIO/Suppressor.jl)
- - [SpecialFunctions](https://specialfunctions.juliamath.org/stable/)
- - [StyledStrings](https://julialang.github.io/StyledStrings.jl/dev/)
+To build FriCAS with Julia support, the <code>julia</code> executable needs to be available in your PATH, and a simple <code>./configure --enable-julia && make && sudo make install</code> should do the trick. We require Julia 1.10 or higher. Please see https://julialang.org/downloads/ for instructions on how to obtain Julia for your system. The required Julia packages are (see the Julia package manager or if you install them later using `jlAddPackage` restart jlFriCAS):
+ - [Nemo](https://nemocas.github.io/Nemo.jl/stable/) (must be installed)
+ - [Suppressor](https://github.com/JuliaIO/Suppressor.jl) (must be installed)
+ - [SpecialFunctions](https://specialfunctions.juliamath.org/stable/) 
+ - [StyledStrings](https://julialang.github.io/StyledStrings.jl/dev/) (if it is not already installed in Julia by default)
 
  And optionnally:
   - [MathLink](https://github.com/JuliaInterop/MathLink.jl) (use the option `--enable-mathlink` at configure time)
@@ -38,9 +62,10 @@ To build FriCAS with Julia support, the <code>julia</code> executable needs to b
   - [UnicodePlots](https://juliaplots.org/UnicodePlots.jl/stable/) (will be used by default if installed)
   - [Latexify](https://github.com/korsbo/Latexify.jl)
   - [LaTeXStrings](https://github.com/JuliaStrings/LaTeXStrings.jl)
-  - [DataFrames](https://dataframes.juliadata.org/stable/) and [Statistics](https://juliastats.org/Statistics.jl/dev/)
+  - [DataFrames](https://dataframes.juliadata.org/stable/) and [Statistics](https://juliastats.org/Statistics.jl/dev/) (needed for tests)
+  - [RCall](https://juliainterop.github.io/RCall.jl/stable/) (install packages in Julia, example R"install.packages('boot')")
 
-As of now with Clozure CL [queues](https://github.com/oconnore/queues) and [bordeaux-threads](https://sionescu.github.io/bordeaux-threads/) are also required. Use installed [quicklisp](https://www.quicklisp.org/beta/) with `queues` and `bordeaux-threads`, and at configure time use the `--with-quicklisp` option, see the `quicklisp` documentation for how to load it and install them. Another possibility, easier, is to use [roswell](https://roswell.github.io/) with added `ccl-bin` and `queues`. [GitHub actions for Clozure CL](https://github.com/gvanuxem/jlfricas/blob/master/.github/workflows/linuxJulia_ccl.yml) use them to build jlFriCAS.
+As of now with Clozure CL [queues](https://github.com/oconnore/queues) is required. Use installed [quicklisp](https://www.quicklisp.org/beta/) with `queues` installed and at configure time use the `--with-quicklisp` option, see the `quicklisp` documentation for how to install it. Another possibility, easier, is to use [roswell](https://roswell.github.io/) with added `ccl-bin` and `queues`.
 
 If you want to visualize your data using Julia, small support is provided using `Plots` and eventually `LaTeXStrings` Julia packages.
 
@@ -49,8 +74,7 @@ If you want to use [jFriCAS](https://jfricas.readthedocs.io/en/latest/) i.e. Jup
 If you want to build and install the HTML documentation,
 you need to install [Sphinx](https://www.sphinx-doc.org/en/master/). On a Debian like system, to add it, issue in a
 terminal <code>sudo apt install python3-sphinx</code>.
-After building jlFriCAS, and before the installation, issue in your terminal
-<code>make htmldoc</code>.
+After building jlFriCAS, and before the installation, issue in your terminal <code>make htmldoc</code>.
 
 ## Description
 
@@ -85,6 +109,6 @@ Current development goals:
 
 ## Caveat: SBCL
 
-Julia support for FriCAS built with SBCL is/was erratic, depending on the Julia version used and the loaded libraries used by Julia. The 1.10.0 version seems to have solved some issues related to memory management interactions with SBCL, but with Julia 1.10.1 and 1.10.2 some problems occur again. Note that with Julia 1.11.* and later, FriCAS seems to work fine again. More work needs to be done in this regard. So, if you use SBCL to build FriCAS, imperatively use a version of Julia that is known to be compatible. Additionnaly, if you use WS domains/packages through MathLink,
+Julia support for jlFriCAS built with SBCL is/was erratic, depending on the Julia version used and the loaded libraries used by Julia. The 1.10.0 version seems to have solved some issues related to memory management interactions with SBCL, but with Julia 1.10.1 and 1.10.2 some problems occur again. Note that with Julia 1.11.* and later, FriCAS seems to work fine again. More work needs to be done in this regard. So, if you use SBCL to build FriCAS, imperatively use a version of Julia that is known to be compatible. Additionnaly, if you use WS domains/packages through MathLink,
 SBCL is known to crash if you start HyperDoc after loading WS domains/packages. If you need to use
 HyperDoc, start it first with the system command `)hd`.
