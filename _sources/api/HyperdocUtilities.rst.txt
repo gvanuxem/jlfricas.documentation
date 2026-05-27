@@ -1,0 +1,83 @@
+.. index:: HyperdocUtilities
+
+.. _l4879706572646f635574696c6974696573:
+
+HyperdocUtilities
+=================
+
+:viewcode:`hypertex.spad line 1637 <hypertex.spad#L1637>` :editcode:`[edit on github] <hypertex.spad#L1637>`
+
+
+This package provides functions converting constructors and predicates to strings for Hyperdoc use. Constructors and and arguments to constructors may be passed in two forms, either as actual value or formal value which may be not evaluable.
+
+
+.. _l4879706572646f635574696c6974696573-636f6e5f6172675f746f5f737472696e6773:
+
+.. index::
+   pair: HyperdocUtilities; con_arg_to_strings
+
+:spadfun:`con_arg_to_strings`\: (\ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Integer <l496e7465676572>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`con_arg_to_strings(k?, op, lef, f, ef, k, do_link, acc)`\  produces string representation in Hyperdoc format of argument number \ :code:`k`\  to constructor with name \ :code:`op`\ , appending result in reverse order to acc. If \ :code:`do_link`\  is \ :code:`true`\  then constructor names produce Hyperdoc links. When \ :code:`k?`\  is \ :code:`true`\  then the argument is a type and \ :code:`f`\  should be its constructor form, otherwise the argument is not a type. For non-type arguments either \ :code:`f`\  or \ :code:`ef`\  should give argument value. \ :code:`ef`\  when not a Lisp NIL should be possibly quoted evaluated argument value and in such case \ :code:`lef`\  should be list of all possibly quoted evaluated arguments to the constructor.
+
+.. _l4879706572646f635574696c6974696573-636f6e5f617267735f746f5f737472696e6773:
+
+.. index::
+   pair: HyperdocUtilities; con_args_to_strings
+
+:spadfun:`con_args_to_strings`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`con_args_to_strings(op, lf, lef, do_link, acc)`\  produces string representation in Hyperdoc format of arguments to constructor with name \ :code:`op`\ , appending result in reverse order to acc. If \ :code:`do_link`\  is \ :code:`true`\  then constructor names produce Hyperdoc links. \ :code:`lf`\  and \ :code:`lef`\  are argument lists, elements of \ :code:`lf`\  (\ :code:`lef`\  respectively) will be passed as \ :code:`f`\  (ef respectively) to \ :code:`con_arg_to_strings`\ .
+
+.. _l4879706572646f635574696c6974696573-636f6e5f746f5f737472696e6773:
+
+.. index::
+   pair: HyperdocUtilities; con_to_strings
+
+:spadfun:`con_to_strings`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`con_to_strings(c, do_link, acc)`\  is equivalent to con_to_strings(\ :code:`c`\ , ef, \ :code:`true`\ , \ :code:`do_link`\ , acc) with empty ef.
+
+
+.. index::
+   pair: HyperdocUtilities; con_to_strings
+
+:spadfun:`con_to_strings`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`con_to_strings(c, ef, do_args, do_link, acc)`\  produces string representation in Hyperdoc format for constructor of form \ :code:`c`\ , with evaluated form \ :code:`ef`\ . Result is prepended in reverse order to acc. If \ :code:`do_args`\  is \ :code:`false`\  then constructor arguments are omited. If \ :code:`do_link`\  is \ :code:`true`\  then constructor names produce Hyperdoc links.
+
+
+.. index::
+   pair: HyperdocUtilities; con_to_strings
+
+:spadfun:`con_to_strings`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`con_to_strings(n, c, ef, do_args, do_link, acc)`\  is like con_to_strings(\ :code:`c`\ , \ :code:`ef`\ , \ :code:`do_args`\ , \ :code:`do_link`\ , acc), but uses \ :code:`n`\  as name of the toplevel constructor.
+
+
+.. index::
+   pair: HyperdocUtilities; con_to_strings
+
+:spadfun:`con_to_strings`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`SExpression <l5345787072657373696f6e>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`con_to_strings(n, c)`\  produces string representation in Hyperdoc format of constructor of form \ :code:`c`\  with name \ :code:`n`\ , producing links to arguments. Output is in normal order.
+
+.. _l4879706572646f635574696c6974696573-636f6e646974696f6e5f746f5f737472696e67:
+
+.. index::
+   pair: HyperdocUtilities; condition_to_string
+
+:spadfun:`condition_to_string`\: \ :ref:`SExpression <l5345787072657373696f6e>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ :code:`condition_to_string(p)`\  produces printable string representation of predicate \ :code:`p`\ .
+
+.. _l4879706572646f635574696c6974696573-636f6e7374727563746f725f746f5f737472696e67:
+
+.. index::
+   pair: HyperdocUtilities; constructor_to_string
+
+:spadfun:`constructor_to_string`\: \ :ref:`SExpression <l5345787072657373696f6e>`\  -> \ :ref:`String <l537472696e67>`\  
+  \ :code:`constructor_to_string(c)`\  produces printable string representation of constructor with form \ :code:`c`\ .
+
+.. _l4879706572646f635574696c6974696573-7072656469636174655f746f5f737472696e6773:
+
+.. index::
+   pair: HyperdocUtilities; predicate_to_strings
+
+:spadfun:`predicate_to_strings`\: (\ :ref:`SExpression <l5345787072657373696f6e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  \ :code:`predicate_to_strings(p, do_link, acc)`\  produces string representation in Hyperdoc format of predicate \ :code:`p`\ , appending result in reverse order to acc. If \ :code:`do_link`\  is \ :code:`true`\  then constructor names produce Hyperdoc links.
+
+

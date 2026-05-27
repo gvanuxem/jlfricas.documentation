@@ -94,22 +94,22 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 .. index::
    pair: WSUtilityFunctions; jlWSExportString
 
-:spadfun:`jlWSExportString`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ :code:`jlWSExportString(expr, jWSString(format))`\  returns the string representation of \ :code:`expr`\  in the specified format. Use toString or string to obtain the FriCAS String. For example: \example{jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"} \example{jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"} \example{string jlWSExportString(\%,jWSString "TeX")}
+:spadfun:`jlWSExportString`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSString <l5753537472696e67>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`jlWSExportString(expr, form)`\  returns the string representation of \ :code:`expr`\  in the specified format. Use toString or string to obtain the FriCAS String. For example: \example{jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"} \example{jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"} \example{string jlWSExportString(\%,jWSString "TeX")}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c575346696c65466f726d6174:
 
 .. index::
    pair: WSUtilityFunctions; jlWSFileFormat
 
-:spadfun:`jlWSFileFormat`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+:spadfun:`jlWSFileFormat`\: (\ :ref:`WSString <l5753537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   \ :code:`jlWSFileFormat(src, list(form))`\  tries to determine the format of the source \ :code:`src`\  from its content using the list of formats form. Returns \ :code:`WS`\  None if no format is found. Can be used with jWSImport. For example: \ :code:`jlWSFileFormat("examples/customers-100.csv",jWSExpr "{_"CSV_",_"TSV_"}")`\ 
 
 
 .. index::
    pair: WSUtilityFunctions; jlWSFileFormat
 
-:spadfun:`jlWSFileFormat`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+:spadfun:`jlWSFileFormat`\: \ :ref:`WSString <l5753537472696e67>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   \ :code:`jlWSFileFormat(src)`\  tries to determine the format of the source \ :code:`src`\  from its content. Can be used with jWSImport. For example: \example{jlWSFileFormat("examples/customers-100.csv")}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c5753496d706f7274:
@@ -117,14 +117,14 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 .. index::
    pair: WSUtilityFunctions; jlWSImport
 
-:spadfun:`jlWSImport`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+:spadfun:`jlWSImport`\: (\ :ref:`WSString <l5753537472696e67>`\ , \ :ref:`WSString <l5753537472696e67>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   \ :code:`jlWSImport(myfile, form)`\  imports the file \ :code:`myfile`\  with format form. For example: \example{file:=jlWSImport(jWSString("examples/customers-100.csv"), jWSString "CSV");}
 
 
 .. index::
    pair: WSUtilityFunctions; jlWSImport
 
-:spadfun:`jlWSImport`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+:spadfun:`jlWSImport`\: \ :ref:`WSString <l5753537472696e67>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
   \ :code:`jlWSImport(src)`\  imports the source \ :code:`src`\ . For example: \example{file:=jlWSImport jWSString "examples/customers-100.csv";} \example{jlWSDateString(file.2.11)}
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c5753506c6f74:
