@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NMExtendedQadicField(R, P, poly, prec) &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=b602aa31" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=d7368a70"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    
+    <script src="../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NMFactored R" href="NMFactored.html" />
+    <link rel="prev" title="NMExtendedQadic(p, deg, prec)" href="NMExtendedQadic.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="NMFactored.html" title="NMFactored R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NMExtendedQadic.html" title="NMExtendedQadic(p, deg, prec)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NMExtendedQadicField(R, P, poly, prec)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="nmextendedqadicfield-r-p-poly-prec">
+<span id="l4e4d457874656e64656451616469634669656c64"></span><span id="index-0"></span><h1>NMExtendedQadicField(R, P, poly, prec)<a class="headerlink" href="#nmextendedqadicfield-r-p-poly-prec" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpadic.spad#L418">jnpadic.spad line 418</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpadic.spad#L418">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="NMCommutativeRing.html#l4e4d436f6d6d7574617469766552696e67"><span class="std std-ref">NMCommutativeRing</span></a>, <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a>)</p></li>
+<li><p>P: <a class="reference internal" href="NMUnivariatePolynomialCategory.html#l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">NMUnivariatePolynomialCategory</span></a> R</p></li>
+<li><p>poly: P</p></li>
+<li><p>prec: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p></li>
+</ul>
+<p>This is a domain for <code class="code docutils literal notranslate"><span class="pre">Qp</span></code> using .</p>
+<span id="l4e4d457874656e64656451616469634669656c64-2a"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">q</span></code> is the multiplication of a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number and a Julia Nemo Fraction integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">i</span></code> is the multiplication of an Integer and a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">q</span> <span class="pre">*</span> <span class="pre">x</span></code> is the multiplication of a Julia Nemo Fraction integer and a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">i</span> <span class="pre">*</span> <span class="pre">x</span></code> is the multiplication of a NemoInteger and a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-2b"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">+</span>: (%, <a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">q</span></code> is the addition of a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number and a Julia Nemo Fraction integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">+</span>: (%, <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">i</span></code> is the addition of a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number and a Julia Nemo integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">+</span>: (<a class="reference internal" href="NMFraction.html#l4e4d4672616374696f6e"><span class="std std-ref">NMFraction</span></a> <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">q</span> <span class="pre">+</span> <span class="pre">x</span></code> is the addition of a Julia Nemo Fraction integer and a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">+</span>: (<a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">i</span> <span class="pre">+</span> <span class="pre">x</span></code> is the addition of a Julia Nemo Integer and a <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic number.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-636f65726365"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(x)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">x</span></code> as the <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic completion of the Nemo Integer.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-66726f62656e697573"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">frobenius</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">frobenius(x,i)</span></code> returns the image of the <code class="code docutils literal notranslate"><span class="pre">i</span></code>-th power of Frobenius of <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-6a6e7061646963"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">jnpadic</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnpadic(x)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">x</span></code> as the <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic completion of the Nemo Integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">jnpadic</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnpadic(x)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">x</span></code> as the <code class="code docutils literal notranslate"><span class="pre">q</span></code>-adic completion of the Nemo Integer.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-6c6966745a"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">liftZ</span>: % -&gt; <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">liftZ(x)</span></code> lifts <code class="code docutils literal notranslate"><span class="pre">x</span></code> to a Nemo Integer if possible.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-6d6f64756c7573"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">modulus</span>: () -&gt; <a class="reference internal" href="JLObjUInt64.html#l4a4c4f626a55496e743634"><span class="std std-ref">JLObjUInt64</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">modulus()</span></code> returns the modulus.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-4f"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">O</span>: () -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">O()</span></code> returns the default Big-oh from domain parameters.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-707265636973696f6e"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">precision</span>: % -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">precision(x)</span></code> returns the precision used for <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-7072696d65"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">prime</span>: % -&gt; <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">prime(x)</span></code> returns the modulus used for <code class="code docutils literal notranslate"><span class="pre">x</span></code>. Convenience function.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-74656963686d756c6c6572"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">teichmuller</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">teichmuller(x)</span></code> computes the Teichmuller lift of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. The valuation of <code class="code docutils literal notranslate"><span class="pre">x</span></code> must be non negative.</p>
+</dd>
+</dl>
+<span id="l4e4d457874656e64656451616469634669656c64-76616c756174696f6e"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">valuation</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">valuation(x)</span></code> is the valuation of <code class="code docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<p>Join(<a class="reference internal" href="NMPadicNumberCategory.html#l4e4d50616469634e756d62657243617465676f7279"><span class="std std-ref">NMPadicNumberCategory</span></a> P, <a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a>, <a class="reference internal" href="ElementaryFunctionCategory.html#l456c656d656e7461727946756e6374696f6e43617465676f7279"><span class="std std-ref">ElementaryFunctionCategory</span></a>)</p>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+<div id="sidebarbutton" title="Collapse sidebar">
+<span>«</span>
+</div>
+
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="NMFactored.html" title="NMFactored R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NMExtendedQadic.html" title="NMExtendedQadic(p, deg, prec)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NMExtendedQadicField(R, P, poly, prec)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2026, FriCAS Team.
+    </div>
+  </body>
+</html>

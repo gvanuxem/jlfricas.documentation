@@ -1,0 +1,30 @@
+.. index:: BasicMatchingAutomaton
+
+.. _l42617369634d61746368696e674175746f6d61746f6e:
+
+BasicMatchingAutomaton
+======================
+
+:viewcode:`fauto.spad line 92 <fauto.spad#L92>` :editcode:`[edit on github] <fauto.spad#L92>`
+
+
+This domain implements nondeterministic finite automaton using Thompson algorithm for matching. Currently only supports creation of very simple automaton, but representation and matching algorithm supports general nondeterministic finite automaton.
+
+
+.. _l42617369634d61746368696e674175746f6d61746f6e-646f5f6d61746368:
+
+.. index::
+   pair: BasicMatchingAutomaton; do_match
+
+:spadfun:`do_match`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`do_match(a, s)`\  returns \ :code:`true`\  if and only if a matches \ :code:`s`\ .
+
+.. _l42617369634d61746368696e674175746f6d61746f6e-6d616b655f6175746f6d61746f6e:
+
+.. index::
+   pair: BasicMatchingAutomaton; make_automaton
+
+:spadfun:`make_automaton`\: (\ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
+  \ :code:`make_automaton(ls, pre_wild, post_wild)`\  builds automaton matching pattern consisting of alternating strings and stars, where strings are taken from \ :code:`ls`\ , star match any sequence of character. If \ :code:`pre_wild`\  it \ :code:`true`\ , then there is star at the start of the pattern, otherwise pattern starts with the first string of \ :code:`ls`\ . If post_wild it \ :code:`true`\ , then there is star at the end of the pattern, otherwise pattern ends with the last string of \ :code:`ls`\ .
+
+

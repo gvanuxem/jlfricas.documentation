@@ -1,0 +1,101 @@
+.. index:: MatchingAutomatonNode
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465:
+
+MatchingAutomatonNode
+=====================
+
+:viewcode:`fauto.spad line 1 <fauto.spad#L1>` :editcode:`[edit on github] <fauto.spad#L1>`
+
+
+This domains provides node of nondetermistic finite automaton.
+
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-616363657074696e673f:
+
+.. index::
+   pair: MatchingAutomatonNode; accepting?
+
+:spadfun:`accepting?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`accepting?(n)`\  returns \ :code:`true`\  if and only if \ :code:`n`\  is an accepting node.
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-616c74:
+
+.. index::
+   pair: MatchingAutomatonNode; alt
+
+:spadfun:`alt`\: % -> Union(%, none) 
+  \ :code:`alt(n)`\  returns alternative node to \ :code:`n`\ .
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-63686172:
+
+.. index::
+   pair: MatchingAutomatonNode; char
+
+:spadfun:`char`\: % -> \ :ref:`Character <l436861726163746572>`\  
+  \ :code:`char(n)`\  returns character \ :code:`c`\  such that \ :code:`n`\  matches \ :code:`c`\ .
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-67656e:
+
+.. index::
+   pair: MatchingAutomatonNode; gen
+
+:spadfun:`gen`\: % -> \ :ref:`Integer <l496e7465676572>`\  
+  \ :code:`gen(n)`\  retrurns generation number of \ :code:`n`\ .
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-6e6577:
+
+.. index::
+   pair: MatchingAutomatonNode; new
+
+:spadfun:`new`\: (\ :ref:`Boolean <l426f6f6c65616e>`\ , \ :ref:`Character <l436861726163746572>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
+  \ :code:`new(wild?, char, accepting)`\  creates new node \ :code:`n`\ . If \ :code:`wild?`\  is \ :code:`true`\  the \ :code:`n`\  is a wildcared node, that is matches any character, otherewise \ :code:`n`\  maches only \ :code:`char`\ . \ :code:`n`\  is accepting node if and only accepting is \ :code:`true`\ . Next and alt fields of \ :code:`n`\  are "none".
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-6e657874:
+
+.. index::
+   pair: MatchingAutomatonNode; next
+
+:spadfun:`next`\: % -> Union(%, none) 
+  \ :code:`next(n)`\  returns the next node of \ :code:`n`\ .
+
+
+.. index::
+   pair: MatchingAutomatonNode; next
+
+:spadfun:`next`\: (%, \ :ref:`Character <l436861726163746572>`\ ) -> Union(%, none) 
+  \ :code:`next(n, c)`\  returns next node of \ :code:`n`\  if \ :code:`n`\  matches \ :code:`c`\ , otherwise returns "none".
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-7365745f616c7421:
+
+.. index::
+   pair: MatchingAutomatonNode; set_alt!
+
+:spadfun:`set_alt!`\: (%, %) -> \ :ref:`Void <l566f6964>`\  
+  set_alt(\ :code:`n`\ , \ :code:`n1`\ ) sets alt field of \ :code:`n`\  to \ :code:`n1`\ .
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-7365745f67656e21:
+
+.. index::
+   pair: MatchingAutomatonNode; set_gen!
+
+:spadfun:`set_gen!`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
+  \ :code:`set_gen!(n, k)`\  sets generation number of \ :code:`n`\  to \ :code:`k`\  and returns previous generation of \ :code:`n`\ . Generation number is needed by the matching algorithm.
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-7365745f6e65787421:
+
+.. index::
+   pair: MatchingAutomatonNode; set_next!
+
+:spadfun:`set_next!`\: (%, %) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`set_next!(n, n1)`\  sets next field of \ :code:`n`\  to \ :code:`n1`\ .
+
+.. _l4d61746368696e674175746f6d61746f6e4e6f6465-77696c643f:
+
+.. index::
+   pair: MatchingAutomatonNode; wild?
+
+:spadfun:`wild?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`wild?(n)`\  is \ :code:`true`\  if and olny if \ :code:`n`\  is a wildcard node, that is matches all characters.
+
+

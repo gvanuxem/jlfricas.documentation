@@ -8,7 +8,276 @@ JLObjR
 :viewcode:`jobject.spad line 651 <jobject.spad#L651>` :editcode:`[edit on github] <jobject.spad#L651>`
 
 
-undocumented
+Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The RCall package has to be installed in Julia. Note that the RCall Julia package uses a similar scheme for Julia \ :code:`R`\  objects to the one of jlFriCAS for JLObjectType references.
 
 
+.. _l4a4c4f626a52-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c4f626a52-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4a4c4f626a52-636f65726365:
+
+\ :ref:`coerce <l4a4c4f626a65637454797065-636f65726365>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+.. index::
+   pair: JLObjR; coerce
+
+:spadfun:`coerce`\: \ :ref:`Float <l466c6f6174>`\  -> % 
+  \ :code:`coerce(f)`\  coerces \ :code:`f`\  to a Julia \ :code:`R`\  object.
+
+
+.. index::
+   pair: JLObjR; coerce
+
+:spadfun:`coerce`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`coerce(i)`\  coerces the integer \ :code:`i`\  to a Julia \ :code:`R`\  object.
+
+
+.. index::
+   pair: JLObjR; coerce
+
+:spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  string object.
+
+.. _l4a4c4f626a52-636f6e76657274:
+
+\ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a4c4f626a52-6a6c41626f7574:
+
+\ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c4170706c79:
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+
+\ :ref:`jlApply <l4a4c4f626a65637454797065-6a6c4170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c446973706c6179:
+
+\ :ref:`jlDisplay <l4a4c4f626a65637454797065-6a6c446973706c6179>`\ \: % -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c44756d70:
+
+\ :ref:`jlDump <l4a4c4f626a65637454797065-6a6c44756d70>`\ \: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> \ :ref:`Void <l566f6964>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c4669656c644e616d6573:
+
+\ :ref:`jlFieldNames <l4a4c4f626a65637454797065-6a6c4669656c644e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c4765744669656c64:
+
+\ :ref:`jlGetField <l4a4c4f626a65637454797065-6a6c4765744669656c64>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c4765744a756c6961496e646578:
+
+\ :ref:`jlGetJuliaIndex <l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c47657450726f7065727479:
+
+\ :ref:`jlGetProperty <l4a4c4f626a65637454797065-6a6c47657450726f7065727479>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c4964:
+
+\ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c696d726566:
+
+\ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c4f626a656374:
+
+\ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c50726f70657274794e616d6573:
+
+\ :ref:`jlPropertyNames <l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c524170706c79:
+
+.. index::
+   pair: JLObjR; jlRApply
+
+:spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ :code:`jlRApply(func, robj)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  object robj.
+
+
+.. index::
+   pair: JLObjR; jlRApply
+
+:spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ :code:`jlRApply(func, robj1, robj2)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  objects \ :code:`robj1`\  and \ :code:`robj2`\ .
+
+
+.. index::
+   pair: JLObjR; jlRApply
+
+:spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ :code:`jlRApply(func, robj1, robj2, robj3)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  objects \ :code:`robj1`\ , \ :code:`robj2`\  and \ :code:`robj3`\ .
+
+
+.. index::
+   pair: JLObjR; jlRApply
+
+:spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  \ :code:`jlRApply(func, robj1, robj2, robj3, robj4)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  objects \ :code:`robj1`\ , \ :code:`robj2`\ , \ :code:`robj3`\  and \ :code:`robj4`\ .
+
+
+.. index::
+   pair: JLObjR; jlRApply
+
+:spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  \ :code:`jlRApply(func, robj1, robj2, robj3, robj4, robj5)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  objects \ :code:`robj1`\ , \ :code:`robj2`\ , \ :code:`robj3`\ , \ :code:`robj4`\  and \ :code:`robj5`\ .
+
+.. _l4a4c4f626a52-6a6c52436f6e76657274:
+
+.. index::
+   pair: JLObjR; jlRConvert
+
+:spadfun:`jlRConvert`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ :code:`jlRConvert(type, robj)`\  converts the \ :code:`R`\  object robj to the Julia \ :code:`type`\  'type'.
+
+.. _l4a4c4f626a52-6a6c52436f7079:
+
+.. index::
+   pair: JLObjR; jlRCopy
+
+:spadfun:`jlRCopy`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ :code:`jlRCopy(robj)`\  returns a Julia object copy of the \ :code:`R`\  object \ :code:`robj`\  if possible.
+
+.. _l4a4c4f626a52-6a6c52446f63756d656e746174696f6e:
+
+.. index::
+   pair: JLObjR; jlRDocumentation
+
+:spadfun:`jlRDocumentation`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  \ :code:`jlRDocumentation(str)`\  displays the \ :code:`R`\  documentation for the string \ :code:`str`\ . Use \ :code:`'q'`\  to quit the help viewer.
+
+.. _l4a4c4f626a52-6a6c526566:
+
+\ :ref:`jlRef <l4a4c4f626a65637454797065-6a6c526566>`\ \: % -> \ :ref:`SExpression <l5345787072657373696f6e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c726566:
+
+\ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c524c696272617279:
+
+.. index::
+   pair: JLObjR; jlRLibrary
+
+:spadfun:`jlRLibrary`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlRLibrary(pkg)`\  loads the \ :code:`R`\  package 'pkg' in the Julia \ :code:`R`\  environment.
+
+.. _l4a4c4f626a52-6a6c525072696e74:
+
+.. index::
+   pair: JLObjR; jlRPrint
+
+:spadfun:`jlRPrint`\: % -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlRPrint(robj)`\  prints the \ :code:`R`\  representation of \ :code:`robj`\ .
+
+.. _l4a4c4f626a52-6a6c54657874:
+
+\ :ref:`jlText <l4a4c4f626a65637454797065-6a6c54657874>`\ \: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a6c54797065:
+
+\ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6a72:
+
+.. index::
+   pair: JLObjR; jr
+
+:spadfun:`jr`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> % 
+  \ :code:`jr(obj)`\  returns \ :code:`obj`\  as a Julia \ :code:`R`\  object.
+
+
+.. index::
+   pair: JLObjR; jr
+
+:spadfun:`jr`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object. Use jlDisplay(robj) to display the \ :code:`R`\  object robj. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"} \example{a:= nrand(10,4)} \example{b := jr(a::JLMatrix(JLObjFloat64))} \example{jlRApply("prcomp", b)}
+
+.. _l4a4c4f626a52-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4a4c4f626a52-6d697373696e673f:
+
+\ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6d757461626c653f:
+
+\ :ref:`mutable? <l4a4c4f626a65637454797065-6d757461626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6e6f7468696e673f:
+
+\ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-737472696e67:
+
+\ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`JLType <l4a4c54797065>`\ 
+
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\  
+
+\ :ref:`JLType <l4a4c54797065>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
 

@@ -1,0 +1,169 @@
+.. index:: NMExtendedQadicField
+
+.. _l4e4d457874656e64656451616469634669656c64:
+
+NMExtendedQadicField(R, P, poly, prec)
+======================================
+
+:viewcode:`jnpadic.spad line 418 <jnpadic.spad#L418>` :editcode:`[edit on github] <jnpadic.spad#L418>`
+
+* R: Join(\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\ , \ :ref:`Finite <l46696e697465>`\ )
+
+* P: \ :ref:`NMUnivariatePolynomialCategory <l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
+
+* poly: P
+
+* prec: \ :ref:`Integer <l496e7465676572>`\ 
+
+
+This is a domain for \ :code:`Qp`\  using .
+
+
+.. _l4e4d457874656e64656451616469634669656c64-2a:
+
+.. index::
+   pair: NMExtendedQadicField; *
+
+:spadfun:`\*`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  \ :code:`x * q`\  is the multiplication of a \ :code:`q`\ -adic number and a Julia Nemo Fraction integer.
+
+
+.. index::
+   pair: NMExtendedQadicField; *
+
+:spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  \ :code:`x * i`\  is the multiplication of an Integer and a \ :code:`q`\ -adic number.
+
+
+.. index::
+   pair: NMExtendedQadicField; *
+
+:spadfun:`\*`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`q * x`\  is the multiplication of a Julia Nemo Fraction integer and a \ :code:`q`\ -adic number.
+
+
+.. index::
+   pair: NMExtendedQadicField; *
+
+:spadfun:`\*`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`i * x`\  is the multiplication of a NemoInteger and a \ :code:`q`\ -adic number.
+
+.. _l4e4d457874656e64656451616469634669656c64-2b:
+
+.. index::
+   pair: NMExtendedQadicField; +
+
+:spadfun:`+`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  \ :code:`x + q`\  is the addition of a \ :code:`q`\ -adic number and a Julia Nemo Fraction integer.
+
+
+.. index::
+   pair: NMExtendedQadicField; +
+
+:spadfun:`+`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  \ :code:`x + i`\  is the addition of a \ :code:`q`\ -adic number and a Julia Nemo integer.
+
+
+.. index::
+   pair: NMExtendedQadicField; +
+
+:spadfun:`+`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`q + x`\  is the addition of a Julia Nemo Fraction integer and a \ :code:`q`\ -adic number.
+
+
+.. index::
+   pair: NMExtendedQadicField; +
+
+:spadfun:`+`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`i + x`\  is the addition of a Julia Nemo Integer and a \ :code:`q`\ -adic number.
+
+.. _l4e4d457874656e64656451616469634669656c64-636f65726365:
+
+.. index::
+   pair: NMExtendedQadicField; coerce
+
+:spadfun:`coerce`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+  \ :code:`coerce(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
+
+.. _l4e4d457874656e64656451616469634669656c64-66726f62656e697573:
+
+.. index::
+   pair: NMExtendedQadicField; frobenius
+
+:spadfun:`frobenius`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`frobenius(x,i)`\  returns the image of the \ :code:`i`\ -th power of Frobenius of \ :code:`x`\ .
+
+.. _l4e4d457874656e64656451616469634669656c64-6a6e7061646963:
+
+.. index::
+   pair: NMExtendedQadicField; jnpadic
+
+:spadfun:`jnpadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
+
+
+.. index::
+   pair: NMExtendedQadicField; jnpadic
+
+:spadfun:`jnpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
+
+.. _l4e4d457874656e64656451616469634669656c64-6c6966745a:
+
+.. index::
+   pair: NMExtendedQadicField; liftZ
+
+:spadfun:`liftZ`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+  \ :code:`liftZ(x)`\  lifts \ :code:`x`\  to a Nemo Integer if possible.
+
+.. _l4e4d457874656e64656451616469634669656c64-6d6f64756c7573:
+
+.. index::
+   pair: NMExtendedQadicField; modulus
+
+:spadfun:`modulus`\: () -> \ :ref:`JLObjUInt64 <l4a4c4f626a55496e743634>`\  
+  \ :code:`modulus()`\  returns the modulus.
+
+.. _l4e4d457874656e64656451616469634669656c64-4f:
+
+.. index::
+   pair: NMExtendedQadicField; O
+
+:spadfun:`O`\: () -> % 
+  \ :code:`O()`\  returns the default Big-oh from domain parameters.
+
+.. _l4e4d457874656e64656451616469634669656c64-707265636973696f6e:
+
+.. index::
+   pair: NMExtendedQadicField; precision
+
+:spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
+  \ :code:`precision(x)`\  returns the precision used for \ :code:`x`\ .
+
+.. _l4e4d457874656e64656451616469634669656c64-7072696d65:
+
+.. index::
+   pair: NMExtendedQadicField; prime
+
+:spadfun:`prime`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+  \ :code:`prime(x)`\  returns the modulus used for \ :code:`x`\ . Convenience function.
+
+.. _l4e4d457874656e64656451616469634669656c64-74656963686d756c6c6572:
+
+.. index::
+   pair: NMExtendedQadicField; teichmuller
+
+:spadfun:`teichmuller`\: % -> % 
+  \ :code:`teichmuller(x)`\  computes the Teichmuller lift of \ :code:`x`\ . The valuation of \ :code:`x`\  must be non negative.
+
+.. _l4e4d457874656e64656451616469634669656c64-76616c756174696f6e:
+
+.. index::
+   pair: NMExtendedQadicField; valuation
+
+:spadfun:`valuation`\: % -> % 
+  \ :code:`valuation(x)`\  is the valuation of \ :code:`x`\ .
+
+
+Join(\ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  P, \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ , \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ ) 
+

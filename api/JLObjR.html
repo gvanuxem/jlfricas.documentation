@@ -48,7 +48,183 @@
   <section id="jlobjr">
 <span id="l4a4c4f626a52"></span><span id="index-0"></span><h1>JLObjR<a class="headerlink" href="#jlobjr" title="Link to this heading">¶</a></h1>
 <p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L651">jobject.spad line 651</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L651">[edit on github]</a></p>
-<p>undocumented</p>
+<p>Convenience domain for Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The RCall package has to be installed in Julia. Note that the RCall Julia package uses a similar scheme for Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects to the one of jlFriCAS for JLObjectType references.</p>
+<dl class="simple" id="l4a4c4f626a52-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-636f65726365">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(f)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">f</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(i)</span></code> coerces the integer <code class="code docutils literal notranslate"><span class="pre">i</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> string object.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c41626f7574">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c41626f7574"><span class="std std-ref">jlAbout</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c4170706c79">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4170706c79"><span class="std std-ref">jlApply</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c446973706c6179">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c446973706c6179"><span class="std std-ref">jlDisplay</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c44756d70">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c44756d70"><span class="std std-ref">jlDump</span></a>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c4669656c644e616d6573">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4669656c644e616d6573"><span class="std std-ref">jlFieldNames</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c4765744669656c64">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744669656c64"><span class="std std-ref">jlGetField</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c4765744a756c6961496e646578">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4765744a756c6961496e646578"><span class="std std-ref">jlGetJuliaIndex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c47657450726f7065727479">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c47657450726f7065727479"><span class="std std-ref">jlGetProperty</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c4964">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4964"><span class="std std-ref">jlId</span></a>: % -&gt; <a class="reference internal" href="JLInt64.html#l4a4c496e743634"><span class="std std-ref">JLInt64</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c696d726566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c696d726566"><span class="std std-ref">jlimref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c4f626a656374">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4f626a656374"><span class="std std-ref">jlObject</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c50726f70657274794e616d6573">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573"><span class="std std-ref">jlPropertyNames</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c524170706c79"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj1,</span> <span class="pre">robj2)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects <code class="code docutils literal notranslate"><span class="pre">robj1</span></code> and <code class="code docutils literal notranslate"><span class="pre">robj2</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj1,</span> <span class="pre">robj2,</span> <span class="pre">robj3)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects <code class="code docutils literal notranslate"><span class="pre">robj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">robj2</span></code> and <code class="code docutils literal notranslate"><span class="pre">robj3</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj1,</span> <span class="pre">robj2,</span> <span class="pre">robj3,</span> <span class="pre">robj4)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects <code class="code docutils literal notranslate"><span class="pre">robj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">robj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">robj3</span></code> and <code class="code docutils literal notranslate"><span class="pre">robj4</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj1,</span> <span class="pre">robj2,</span> <span class="pre">robj3,</span> <span class="pre">robj4,</span> <span class="pre">robj5)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects <code class="code docutils literal notranslate"><span class="pre">robj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">robj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">robj3</span></code>, <code class="code docutils literal notranslate"><span class="pre">robj4</span></code> and <code class="code docutils literal notranslate"><span class="pre">robj5</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c52436f6e76657274"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">jlRConvert</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRConvert(type,</span> <span class="pre">robj)</span></code> converts the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj to the Julia <code class="code docutils literal notranslate"><span class="pre">type</span></code> ‘type’.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c52436f7079"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">jlRCopy</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRCopy(robj)</span></code> returns a Julia object copy of the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object <code class="code docutils literal notranslate"><span class="pre">robj</span></code> if possible.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c52446f63756d656e746174696f6e"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">jlRDocumentation</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRDocumentation(str)</span></code> displays the <code class="code docutils literal notranslate"><span class="pre">R</span></code> documentation for the string <code class="code docutils literal notranslate"><span class="pre">str</span></code>. Use <code class="code docutils literal notranslate"><span class="pre">'q'</span></code> to quit the help viewer.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c526566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c526566"><span class="std std-ref">jlRef</span></a>: % -&gt; <a class="reference internal" href="SExpression.html#l5345787072657373696f6e"><span class="std std-ref">SExpression</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c726566">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c726566"><span class="std std-ref">jlref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c524c696272617279"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">jlRLibrary</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRLibrary(pkg)</span></code> loads the <code class="code docutils literal notranslate"><span class="pre">R</span></code> package ‘pkg’ in the Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> environment.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c525072696e74"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">jlRPrint</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRPrint(robj)</span></code> prints the <code class="code docutils literal notranslate"><span class="pre">R</span></code> representation of <code class="code docutils literal notranslate"><span class="pre">robj</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c54657874">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54657874"><span class="std std-ref">jlText</span></a>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6a6c54797065">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a72"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">jr</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(obj)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: example{jr “optim(0, $(x -&gt; x-cos(x)), method=’L-BFGS-B’)”} example{a:= nrand(10,4)} example{b := jr(a::JLMatrix(JLObjFloat64))} example{jlRApply(“prcomp”, b)}</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6d697373696e673f">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d697373696e673f"><span class="std std-ref">missing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6d757461626c653f">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d757461626c653f"><span class="std std-ref">mutable?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-6e6f7468696e673f">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a52-737472696e67">
+<dt><a class="reference internal" href="JLType.html#l4a4c54797065-737472696e67"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+<p><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+<p><a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 <span class="target" id="jlfricas-mailing-list"></span></section>
 
 

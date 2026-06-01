@@ -1,0 +1,54 @@
+.. index:: LogicalMatchingAutomaton
+
+.. _l4c6f676963616c4d61746368696e674175746f6d61746f6e:
+
+LogicalMatchingAutomaton
+========================
+
+:viewcode:`fauto.spad line 195 <fauto.spad#L195>` :editcode:`[edit on github] <fauto.spad#L195>`
+
+
+This domains provides boolean combination of nondeterministic finite automatons.
+
+
+.. _l4c6f676963616c4d61746368696e674175746f6d61746f6e-636f6e76657274:
+
+.. index::
+   pair: LogicalMatchingAutomaton; convert
+
+:spadfun:`convert`\: \ :ref:`BasicMatchingAutomaton <l42617369634d61746368696e674175746f6d61746f6e>`\  -> % 
+  \ :code:`convert(a)`\  creates automaton matching if and only if a matches.
+
+.. _l4c6f676963616c4d61746368696e674175746f6d61746f6e-646f5f6d61746368:
+
+.. index::
+   pair: LogicalMatchingAutomaton; do_match
+
+:spadfun:`do_match`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`do_match(a, s)`\  returns \ :code:`true`\  if and only if a matches \ :code:`s`\ .
+
+.. _l4c6f676963616c4d61746368696e674175746f6d61746f6e-6d616b655f616e64:
+
+.. index::
+   pair: LogicalMatchingAutomaton; make_and
+
+:spadfun:`make_and`\: \ :ref:`List <l4c697374>`\  % -> % 
+  \ :code:`make_and(la)`\  creates automaton matching if and only if all a in \ :code:`la`\  match.
+
+.. _l4c6f676963616c4d61746368696e674175746f6d61746f6e-6d616b655f6e6f74:
+
+.. index::
+   pair: LogicalMatchingAutomaton; make_not
+
+:spadfun:`make_not`\: % -> % 
+  \ :code:`make_not(a)`\  creates automaton matching if and only a does not match.
+
+.. _l4c6f676963616c4d61746368696e674175746f6d61746f6e-6d616b655f6f72:
+
+.. index::
+   pair: LogicalMatchingAutomaton; make_or
+
+:spadfun:`make_or`\: \ :ref:`List <l4c697374>`\  % -> % 
+  \ :code:`make_or(la)`\  creates automaton matching if and only if any a in \ :code:`la`\  matches.
+
+
