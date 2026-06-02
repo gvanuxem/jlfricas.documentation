@@ -5,14 +5,14 @@
 NMExtendedPadic(p, prec)
 ========================
 
-:viewcode:`jnpadic.spad line 35 <jnpadic.spad#L35>` :editcode:`[edit on github] <jnpadic.spad#L35>`
+:viewcode:`jnpadic.spad line 63 <jnpadic.spad#L63>` :editcode:`[edit on github] <jnpadic.spad#L63>`
 
-* p: \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+* p: \ :ref:`Integer <l496e7465676572>`\ 
 
 * prec: \ :ref:`Integer <l496e7465676572>`\ 
 
 
-This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the integers using the Nemo Julia package.
+This domain implements the field of \ :code:`p`\ -adic numbers \$\mathbb{\ :code:`Q`\ }\ :code:`_p`\ \$ using the Nemo Julia package.
 
 
 .. _l4e4d457874656e6465645061646963-30:
@@ -27,40 +27,28 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-2a:
 
-\ :ref:`\* <l4d61676d61-2a>`\ \: (%, %) -> % 
-  from \ :ref:`Magma <l4d61676d61>`\ 
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; *
-
-:spadfun:`\*`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x * q`\  is the multiplication of a \ :code:`p`\ -adic number and a Julia Nemo Fraction integer.
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; *
-
-:spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x * i`\  is the multiplication of an Integer and a \ :code:`p`\ -adic number. For example: \example{p := 1 + 2*7 + 4*7^2 + O()\$NPADICZ(7)}
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; *
-
-:spadfun:`\*`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`q * x`\  is the multiplication of a Julia Nemo Fraction integer and a \ :code:`p`\ -adic number.
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; *
-
-:spadfun:`\*`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`i * x`\  is the multiplication of a NemoInteger and a \ :code:`p`\ -adic number.
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
 \ :ref:`\* <l4a4c4f626a65637452696e67-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -76,36 +64,24 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-2b:
 
-\ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
-  from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; +
-
-:spadfun:`+`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x + q`\  is the addition of a \ :code:`p`\ -adic number and a Julia Nemo Fraction integer.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; +
-
-:spadfun:`+`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x + i`\  is the addition of a \ :code:`p`\ -adic number and a Julia Nemo integer.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; +
-
-:spadfun:`+`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`q + x`\  is the addition of Julia Nemo Fraction integer and a \ :code:`p`\ -adic number.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedPadic; +
-
-:spadfun:`+`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`i + x`\  is the addition of a Julia Nemo Integer and a \ :code:`p`\ -adic number.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-2d:
 
@@ -113,13 +89,13 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
-  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4e4d50616469634e756d62657243617465676f7279-2d>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-2f:
 
-\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
-  from \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`/ <l4e4d50616469634e756d62657243617465676f7279-2f>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-3d:
 
@@ -164,7 +140,7 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-617070726f78696d617465:
 
-\ :ref:`approximate <l4e4d50616469634e756d62657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`approximate <l4e4d50616469634e756d62657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
   from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-6173736f6369617465733f:
@@ -204,7 +180,7 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
    pair: NMExtendedPadic; coerce
 
 :spadfun:`coerce`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ :code:`coerce(x)`\  returns \ :code:`x`\  as the \ :code:`p`\ -adic completion of the Nemo Integer.
+  \ :code:`coerce(x)`\  coerces \ :code:`x`\  to a \ :code:`p`\ -adic number.
 
 .. _l4e4d457874656e6465645061646963-636f6d6d757461746f72:
 
@@ -396,14 +372,14 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
    pair: NMExtendedPadic; jnpadic
 
 :spadfun:`jnpadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`p`\ -adic completion of the Nemo Integer.
+  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as a \ :code:`p`\ -adic number.
 
 
 .. index::
    pair: NMExtendedPadic; jnpadic
 
 :spadfun:`jnpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`p`\ -adic completion of the Nemo Integer.
+  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as a \ :code:`p`\ -adic number.
 
 .. _l4e4d457874656e6465645061646963-6c61746578:
 
@@ -466,13 +442,19 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-6d6f64756c6f50:
 
-\ :ref:`moduloP <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c6f50>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+.. index::
+   pair: NMExtendedPadic; moduloP
+
+:spadfun:`moduloP`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+  \ :code:`moduloP(x)`\  returns a, where \ :code:`x = a + b p`\ .
 
 .. _l4e4d457874656e6465645061646963-6d6f64756c7573:
 
-\ :ref:`modulus <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c7573>`\ \: () -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+.. index::
+   pair: NMExtendedPadic; modulus
+
+:spadfun:`modulus`\: () -> \ :ref:`Integer <l496e7465676572>`\  
+  \ :code:`modulus()`\  returns the value of \ :code:`p`\ .
 
 .. _l4e4d457874656e6465645061646963-6d756c74694575636c696465616e:
 
@@ -514,7 +496,7 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-6f72646572:
 
-\ :ref:`order <l4e4d50616469634e756d62657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+\ :ref:`order <l4e4d50616469634e756d62657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
   from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-706c656e617279506f776572:
@@ -524,11 +506,8 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-707265636973696f6e:
 
-.. index::
-   pair: NMExtendedPadic; precision
-
-:spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ :code:`precision(x)`\  returns the precision used for \ :code:`x`\ .
+\ :ref:`precision <l4e4d50616469634e756d62657243617465676f7279-707265636973696f6e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-7072696d653f:
 
@@ -537,11 +516,8 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-7072696d65:
 
-.. index::
-   pair: NMExtendedPadic; prime
-
-:spadfun:`prime`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ :code:`prime(x)`\  returns the modulus used for \ :code:`x`\ . Convenience function.
+\ :ref:`prime <l4e4d50616469634e756d62657243617465676f7279-7072696d65>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-7072696e636970616c496465616c:
 
@@ -555,8 +531,11 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-71756f7469656e74427950:
 
-\ :ref:`quotientByP <l4e4d50616469634e756d62657243617465676f7279-71756f7469656e74427950>`\ \: % -> % 
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+.. index::
+   pair: NMExtendedPadic; quotientByP
+
+:spadfun:`quotientByP`\: % -> % 
+  \ :code:`quotientByP(x)`\  returns \ :code:`b`\ , where \ :code:`x = a + b p`\ .
 
 .. _l4e4d457874656e6465645061646963-7265636970:
 
@@ -642,11 +621,8 @@ This domain implements \ :code:`Zp`\ , the \ :code:`p`\ -adic completion of the 
 
 .. _l4e4d457874656e6465645061646963-76616c756174696f6e:
 
-.. index::
-   pair: NMExtendedPadic; valuation
-
-:spadfun:`valuation`\: % -> % 
-  \ :code:`valuation(x)`\  is the valuation of \ :code:`x`\ .
+\ :ref:`valuation <l4e4d50616469634e756d62657243617465676f7279-76616c756174696f6e>`\ \: % -> \ :ref:`JLObjInt64 <l4a4c4f626a496e743634>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645061646963-7a65726f3f:
 

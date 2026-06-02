@@ -5,16 +5,16 @@
 NMExtendedQadic(p, deg, prec)
 =============================
 
-:viewcode:`jnpadic.spad line 227 <jnpadic.spad#L227>` :editcode:`[edit on github] <jnpadic.spad#L227>`
+:viewcode:`jnpadic.spad line 207 <jnpadic.spad#L207>` :editcode:`[edit on github] <jnpadic.spad#L207>`
 
-* p: \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+* p: \ :ref:`Integer <l496e7465676572>`\ 
 
 * deg: \ :ref:`Integer <l496e7465676572>`\ 
 
 * prec: \ :ref:`Integer <l496e7465676572>`\ 
 
 
-This is a domain for \ :code:`Qp`\ .
+This is a domain implements unramified extensions of \ :code:`p`\ -adic numbers \$\mathbb{\ :code:`Q`\ }\ :code:`_p`\ \$ of degree \$\ :code:`d`\ \$ using the Nemo Julia package.
 
 
 .. _l4e4d457874656e6465645161646963-30:
@@ -29,40 +29,28 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-2a:
 
-\ :ref:`\* <l4d61676d61-2a>`\ \: (%, %) -> % 
-  from \ :ref:`Magma <l4d61676d61>`\ 
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; *
-
-:spadfun:`\*`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x * q`\  is the multiplication of a \ :code:`q`\ -adic number and a Julia Nemo Fraction integer.
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; *
-
-:spadfun:`\*`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x * i`\  is the multiplication of an Integer and a \ :code:`q`\ -adic number. For example: \example{p := 1 + 2*7 + 4*7^2 + O()\$NPADICZ(7)}
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; *
-
-:spadfun:`\*`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`q * x`\  is the multiplication of a Julia Nemo Fraction integer and a \ :code:`q`\ -adic number.
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; *
-
-:spadfun:`\*`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`i * x`\  is the multiplication of a NemoInteger and a \ :code:`q`\ -adic number.
+\ :ref:`\* <l4e4d50616469634e756d62657243617465676f7279-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
 \ :ref:`\* <l4a4c4f626a65637452696e67-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -78,36 +66,24 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-2b:
 
-\ :ref:`+ <l4162656c69616e53656d6947726f7570-2b>`\ \: (%, %) -> % 
-  from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; +
-
-:spadfun:`+`\: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x + q`\  is the addition of a \ :code:`q`\ -adic number and a Julia Nemo Fraction integer.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (%, \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; +
-
-:spadfun:`+`\: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
-  \ :code:`x + i`\  is the addition of a \ :code:`q`\ -adic number and a Julia Nemo integer.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (%, \ :ref:`NMInteger <l4e4d496e7465676572>`\ ) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; +
-
-:spadfun:`+`\: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`q + x`\  is the addition of a Julia Nemo Fraction integer and a \ :code:`q`\ -adic number.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (\ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 
-.. index::
-   pair: NMExtendedQadic; +
-
-:spadfun:`+`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
-  \ :code:`i + x`\  is the addition of a Julia Nemo Integer and a \ :code:`q`\ -adic number.
+\ :ref:`+ <l4e4d50616469634e756d62657243617465676f7279-2b>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-2d:
 
@@ -115,13 +91,13 @@ This is a domain for \ :code:`Qp`\ .
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % 
-  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4e4d50616469634e756d62657243617465676f7279-2d>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-2f:
 
-\ :ref:`/ <l4669656c64-2f>`\ \: (%, %) -> % 
-  from \ :ref:`Field <l4669656c64>`\ 
+\ :ref:`/ <l4e4d50616469634e756d62657243617465676f7279-2f>`\ \: (%, %) -> % 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-3d:
 
@@ -166,7 +142,7 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-617070726f78696d617465:
 
-\ :ref:`approximate <l4e4d50616469634e756d62657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
+\ :ref:`approximate <l4e4d50616469634e756d62657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
   from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-6173736f6369617465733f:
@@ -206,7 +182,7 @@ This is a domain for \ :code:`Qp`\ .
    pair: NMExtendedQadic; coerce
 
 :spadfun:`coerce`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ :code:`coerce(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
+  \ :code:`coerce(x)`\  coerces \ :code:`x`\  as a unramified extension of \ :code:`p`\ -adics.
 
 .. _l4e4d457874656e6465645161646963-636f6d6d757461746f72:
 
@@ -400,20 +376,20 @@ This is a domain for \ :code:`Qp`\ .
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d457874656e6465645161646963-6a6e7061646963:
+.. _l4e4d457874656e6465645161646963-6a6e7161646963:
 
 .. index::
-   pair: NMExtendedQadic; jnpadic
+   pair: NMExtendedQadic; jnqadic
 
-:spadfun:`jnpadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
+:spadfun:`jnqadic`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`jnqadic(x)`\  returns \ :code:`x`\  as a unramified extension of \ :code:`p`\ -adics.
 
 
 .. index::
-   pair: NMExtendedQadic; jnpadic
+   pair: NMExtendedQadic; jnqadic
 
-:spadfun:`jnpadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
-  \ :code:`jnpadic(x)`\  returns \ :code:`x`\  as the \ :code:`q`\ -adic completion of the Nemo Integer.
+:spadfun:`jnqadic`\: \ :ref:`NMInteger <l4e4d496e7465676572>`\  -> % 
+  \ :code:`jnqadic(x)`\  returns \ :code:`x`\  as a unramified extension of \ :code:`p`\ -adics.
 
 .. _l4e4d457874656e6465645161646963-6c61746578:
 
@@ -448,14 +424,6 @@ This is a domain for \ :code:`Qp`\ .
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
-.. _l4e4d457874656e6465645161646963-6c6966745a:
-
-.. index::
-   pair: NMExtendedQadic; liftZ
-
-:spadfun:`liftZ`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  \ :code:`liftZ(x)`\  lifts \ :code:`x`\  to a Nemo Integer if possible.
-
 .. _l4e4d457874656e6465645161646963-6c6f67:
 
 \ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % 
@@ -466,21 +434,12 @@ This is a domain for \ :code:`Qp`\ .
 \ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
-.. _l4e4d457874656e6465645161646963-6d6f64756c6f50:
-
-\ :ref:`moduloP <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c6f50>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-
 .. _l4e4d457874656e6465645161646963-6d6f64756c7573:
-
-\ :ref:`modulus <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c7573>`\ \: () -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-
 
 .. index::
    pair: NMExtendedQadic; modulus
 
-:spadfun:`modulus`\: () -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+:spadfun:`modulus`\: () -> \ :ref:`Integer <l496e7465676572>`\  
   \ :code:`modulus()`\  returns the value of \ :code:`p`\ .
 
 .. _l4e4d457874656e6465645161646963-6d756c74694575636c696465616e:
@@ -523,7 +482,7 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-6f72646572:
 
-\ :ref:`order <l4e4d50616469634e756d62657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+\ :ref:`order <l4e4d50616469634e756d62657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
   from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-706c656e617279506f776572:
@@ -533,11 +492,8 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-707265636973696f6e:
 
-.. index::
-   pair: NMExtendedQadic; precision
-
-:spadfun:`precision`\: % -> \ :ref:`Integer <l496e7465676572>`\  
-  \ :code:`precision(x)`\  returns the precision used for \ :code:`x`\ .
+\ :ref:`precision <l4e4d50616469634e756d62657243617465676f7279-707265636973696f6e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-7072696d653f:
 
@@ -546,11 +502,8 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-7072696d65:
 
-.. index::
-   pair: NMExtendedQadic; prime
-
-:spadfun:`prime`\: % -> \ :ref:`NMInteger <l4e4d496e7465676572>`\  
-  \ :code:`prime(x)`\  returns the modulus used for \ :code:`x`\ . Convenience function.
+\ :ref:`prime <l4e4d50616469634e756d62657243617465676f7279-7072696d65>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-7072696e636970616c496465616c:
 
@@ -561,11 +514,6 @@ This is a domain for \ :code:`Qp`\ .
 
 \ :ref:`quo <l4575636c696465616e446f6d61696e-71756f>`\ \: (%, %) -> % 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-
-.. _l4e4d457874656e6465645161646963-71756f7469656e74427950:
-
-\ :ref:`quotientByP <l4e4d50616469634e756d62657243617465676f7279-71756f7469656e74427950>`\ \: % -> % 
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-7265636970:
 
@@ -651,11 +599,8 @@ This is a domain for \ :code:`Qp`\ .
 
 .. _l4e4d457874656e6465645161646963-76616c756174696f6e:
 
-.. index::
-   pair: NMExtendedQadic; valuation
-
-:spadfun:`valuation`\: % -> % 
-  \ :code:`valuation(x)`\  is the valuation of \ :code:`x`\ .
+\ :ref:`valuation <l4e4d50616469634e756d62657243617465676f7279-76616c756174696f6e>`\ \: % -> \ :ref:`JLObjInt64 <l4a4c4f626a496e743634>`\  
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
 
 .. _l4e4d457874656e6465645161646963-7a65726f3f:
 
