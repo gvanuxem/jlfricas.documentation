@@ -5,7 +5,7 @@
 BasicKeyedAccessFile
 ====================
 
-:viewcode:`fops.spad line 311 <fops.spad#L311>` :editcode:`[edit on github] <fops.spad#L311>`
+:viewcode:`fops.spad line 324 <fops.spad#L324>` :editcode:`[edit on github] <fops.spad#L324>`
 
 
 This domain implements access to keyed access files (KAF-\ :code:`s`\ ).
@@ -35,6 +35,14 @@ This domain implements access to keyed access files (KAF-\ :code:`s`\ ).
 :spadfun:`open`\: (\ :ref:`FileName <l46696c654e616d65>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
   \ :code:`open opens`\  the keyed access file.
 
+.. _l42617369634b6579656441636365737346696c65-6f70656e496643616e:
+
+.. index::
+   pair: BasicKeyedAccessFile; openIfCan
+
+:spadfun:`openIfCan`\: (\ :ref:`FileName <l46696c654e616d65>`\ , \ :ref:`String <l537472696e67>`\ ) -> Union(%, failed) 
+  \ :code:`openIfCan(n, m)`\  opens the keyed access file. If file can not be opened returns "failed".
+
 .. _l42617369634b6579656441636365737346696c65-72656164:
 
 .. index::
@@ -48,7 +56,7 @@ This domain implements access to keyed access files (KAF-\ :code:`s`\ ).
    pair: BasicKeyedAccessFile; read
 
 :spadfun:`read`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`None <l4e6f6e65>`\ ) -> \ :ref:`None <l4e6f6e65>`\  
-  \ :code:`read(f, key, val)`\  reads item with the \ :code:`key`\  \ :code:`key`\  from \ :code:`f`\ . If \ :code:`key`\  is not presents returns \ :code:`val`\ .
+  \ :code:`read(f, key, val)`\  reads item with the \ :code:`key`\  \ :code:`key`\  from \ :code:`f`\ . If \ :code:`key`\  is not present, \ :code:`val`\  is returned.
 
 .. _l42617369634b6579656441636365737346696c65-72656d6f766521:
 

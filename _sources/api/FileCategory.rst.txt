@@ -80,7 +80,22 @@ This category provides an interface to operate on files in the computer\ :code:`
    pair: FileCategory; open
 
 :spadfun:`open`\: Name -> % 
-  \ :code:`open(s)`\  returns the file \ :code:`s`\  open for input.
+  \ :code:`open(n)`\  returns the file \ :code:`n`\  open for input.
+
+.. _l46696c6543617465676f7279-6f70656e496643616e:
+
+.. index::
+   pair: FileCategory; openIfCan
+
+:spadfun:`openIfCan`\: (Name, \ :ref:`String <l537472696e67>`\ ) -> Union(%, failed) 
+  open(\ :code:`n`\ , mode) returns a file \ :code:`n`\  open for operation in the indicated mode: "input" or "output". If \ :code:`n`\  can not be open returns "failed".
+
+
+.. index::
+   pair: FileCategory; openIfCan
+
+:spadfun:`openIfCan`\: Name -> Union(%, failed) 
+  open(\ :code:`n`\ ) returns the file \ :code:`n`\  open for input. If \ :code:`n`\  can not be open returns "failed".
 
 .. _l46696c6543617465676f7279-7265616421:
 

@@ -329,6 +329,14 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
 :spadfun:`merge`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % if % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   \ :code:`merge(p, a, b)`\  returns an aggregate \ :code:`c`\  which merges \ :code:`a`\  and \ :code:`b`\ . The result is produced by examining each element \ :code:`x`\  of \ :code:`a`\  and \ :code:`y`\  of \ :code:`b`\  successively. If \ :code:`p(x, y)`\  is \ :code:`true`\ , then \ :code:`x`\  is inserted into the result; otherwise \ :code:`y`\  is inserted. If \ :code:`x`\  is chosen, the next element of \ :code:`a`\  is examined, and so on. When all the elements of one aggregate are examined, the remaining elements of the other are appended. For example, \ :code:`merge(<, [1, 3], [2, 7, 5])`\  returns \ :code:`[1, 2, 3, 7, 5]`\ .
 
+.. _l4c696e656172416767726567617465-6d657267655f756e69717565:
+
+.. index::
+   pair: LinearAggregate; merge_unique
+
+:spadfun:`merge_unique`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+  \ :code:`merge_unique(p, a, b)`\  returns an aggregate \ :code:`c`\  which merges a and \ :code:`b`\  uniquely. \ :code:`p`\  is a binary predicate and aggregate a and \ :code:`b`\  is assumed to be ordered under \ :code:`p`\  and without duplicates. The result aggregate \ :code:`c`\  is also ordered under \ :code:`p`\ , and contains all elements from a and \ :code:`b`\ , also without duplicates. For example, \ :code:`merge_unique(<, [1, 3, 5], [3, 5, 6])`\  returns \ :code:`[1, 3, 5, 6]`\ .
+
 .. _l4c696e656172416767726567617465-6d696e:
 
 \ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> S if S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 

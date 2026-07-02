@@ -50,7 +50,7 @@
 <p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/fops.spad#L255">fops.spad line 255</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/fops.spad#L255">[edit on github]</a></p>
 <p>This is domain for storing and reading Spad values in files.</p>
 <span id="l426173696346696c65-636c6f736521"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">close!</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>clos! closes the file.</p>
+<dt><span class="spadfun">close!</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">close!(f)</span></code> closes the file <code class="code docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 <span id="l426173696346696c65-666c757368"></span><dl class="simple" id="index-2">
@@ -58,18 +58,22 @@
 </dd>
 </dl>
 <span id="l426173696346696c65-6f70656e"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">open</span>: (<a class="reference internal" href="FileName.html#l46696c654e616d65"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">open</span> <span class="pre">opens</span></code> the file.</p>
+<dt><span class="spadfun">open</span>: (<a class="reference internal" href="FileName.html#l46696c654e616d65"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">open(n,</span> <span class="pre">m)</span></code> opens the file.</p>
 </dd>
 </dl>
-<span id="l426173696346696c65-72656164"></span><dl class="simple" id="index-4">
+<span id="l426173696346696c65-6f70656e496643616e"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">openIfCan</span>: (<a class="reference internal" href="FileName.html#l46696c654e616d65"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">openIfCan(n,</span> <span class="pre">m)</span></code> opens the file. If file can not be open it returns “failed”.</p>
+</dd>
+</dl>
+<span id="l426173696346696c65-72656164"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">read</span>: % -&gt; <a class="reference internal" href="None.html#l4e6f6e65"><span class="std std-ref">None</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">read</span> <span class="pre">sequentially</span></code> reads one item from the file.</p>
 </dd>
 </dl>
-<span id="l426173696346696c65-72656164496643616e"></span><dl class="simple" id="index-5">
+<span id="l426173696346696c65-72656164496643616e"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">readIfCan</span>: % -&gt; Union(<a class="reference internal" href="None.html#l4e6f6e65"><span class="std std-ref">None</span></a>, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">readIfCan</span> <span class="pre">reads</span></code> one item from the file, otherwise returns <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code></p>
 </dd>
 </dl>
-<span id="l426173696346696c65-777269746521"></span><dl class="simple" id="index-6">
+<span id="l426173696346696c65-777269746521"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">write!</span>: (%, <a class="reference internal" href="None.html#l4e6f6e65"><span class="std std-ref">None</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>write writes one item to the file.</p>
 </dd>
 </dl>

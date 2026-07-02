@@ -17,7 +17,7 @@ This is domain for storing and reading Spad values in files.
    pair: BasicFile; close!
 
 :spadfun:`close!`\: % -> \ :ref:`Void <l566f6964>`\  
-  clos! closes the file.
+  \ :code:`close!(f)`\  closes the file \ :code:`f`\ .
 
 .. _l426173696346696c65-666c757368:
 
@@ -33,7 +33,15 @@ This is domain for storing and reading Spad values in files.
    pair: BasicFile; open
 
 :spadfun:`open`\: (\ :ref:`FileName <l46696c654e616d65>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ :code:`open opens`\  the file.
+  \ :code:`open(n, m)`\  opens the file.
+
+.. _l426173696346696c65-6f70656e496643616e:
+
+.. index::
+   pair: BasicFile; openIfCan
+
+:spadfun:`openIfCan`\: (\ :ref:`FileName <l46696c654e616d65>`\ , \ :ref:`String <l537472696e67>`\ ) -> Union(%, failed) 
+  \ :code:`openIfCan(n, m)`\  opens the file. If file can not be open it returns "failed".
 
 .. _l426173696346696c65-72656164:
 

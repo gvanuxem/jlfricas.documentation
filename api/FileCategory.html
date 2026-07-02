@@ -90,18 +90,26 @@
 </dd>
 </dl>
 <dl class="simple" id="index-6">
-<dt><span class="spadfun">open</span>: Name -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">open(s)</span></code> returns the file <code class="code docutils literal notranslate"><span class="pre">s</span></code> open for input.</p>
+<dt><span class="spadfun">open</span>: Name -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">open(n)</span></code> returns the file <code class="code docutils literal notranslate"><span class="pre">n</span></code> open for input.</p>
 </dd>
 </dl>
-<span id="l46696c6543617465676f7279-7265616421"></span><dl class="simple" id="index-7">
+<span id="l46696c6543617465676f7279-6f70656e496643616e"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">openIfCan</span>: (Name, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; Union(%, failed)</dt><dd><p>open(<code class="code docutils literal notranslate"><span class="pre">n</span></code>, mode) returns a file <code class="code docutils literal notranslate"><span class="pre">n</span></code> open for operation in the indicated mode: “input” or “output”. If <code class="code docutils literal notranslate"><span class="pre">n</span></code> can not be open returns “failed”.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">openIfCan</span>: Name -&gt; Union(%, failed)</dt><dd><p>open(<code class="code docutils literal notranslate"><span class="pre">n</span></code>) returns the file <code class="code docutils literal notranslate"><span class="pre">n</span></code> open for input. If <code class="code docutils literal notranslate"><span class="pre">n</span></code> can not be open returns “failed”.</p>
+</dd>
+</dl>
+<span id="l46696c6543617465676f7279-7265616421"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">read!</span>: % -&gt; S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">read!(f)</span></code> extracts a value from file <code class="code docutils literal notranslate"><span class="pre">f</span></code>. The state of <code class="code docutils literal notranslate"><span class="pre">f</span></code> is modified so a subsequent call to <span class="spadfun">read!</span> will return the next element.</p>
 </dd>
 </dl>
-<span id="l46696c6543617465676f7279-72656f70656e21"></span><dl class="simple" id="index-8">
+<span id="l46696c6543617465676f7279-72656f70656e21"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">reopen!</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">reopen!(f,</span> <span class="pre">mode)</span></code> returns a file <code class="code docutils literal notranslate"><span class="pre">f</span></code> reopened for operation in the indicated mode: “input” or “output”. <code class="code docutils literal notranslate"><span class="pre">reopen!(f,&quot;input&quot;)</span></code> will reopen the file <code class="code docutils literal notranslate"><span class="pre">f</span></code> for input.</p>
 </dd>
 </dl>
-<span id="l46696c6543617465676f7279-777269746521"></span><dl class="simple" id="index-9">
+<span id="l46696c6543617465676f7279-777269746521"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">write!</span>: (%, S) -&gt; S</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">write!(f,</span> <span class="pre">s)</span></code> puts the value <code class="code docutils literal notranslate"><span class="pre">s</span></code> into the file <code class="code docutils literal notranslate"><span class="pre">f</span></code>. The state of <code class="code docutils literal notranslate"><span class="pre">f</span></code> is modified so subsequent calls to <code class="code docutils literal notranslate"><span class="pre">write!</span></code> will append one after another.</p>
 </dd>
 </dl>

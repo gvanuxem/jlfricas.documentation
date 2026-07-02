@@ -5,7 +5,7 @@
 AssociationList(Key, Entry)
 ===========================
 
-:viewcode:`list.spad line 450 <list.spad#L450>` :editcode:`[edit on github] <list.spad#L450>`
+:viewcode:`list.spad line 491 <list.spad#L491>` :editcode:`[edit on github] <list.spad#L491>`
 
 * Key: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
@@ -546,6 +546,16 @@ AssociationList(Key, Entry)
 
 
 \ :ref:`merge <l4c696e656172416767726567617465-6d65726765>`\ \: ((Record(key: Key, entry: Entry), Record(key: Key, entry: Entry)) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % 
+  from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
+
+.. _l4173736f63696174696f6e4c697374-6d657267655f756e6971756521:
+
+\ :ref:`merge_unique! <l457874656e7369626c654c696e656172416767726567617465-6d657267655f756e6971756521>`\ \: ((Record(key: Key, entry: Entry), Record(key: Key, entry: Entry)) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
+  from \ :ref:`ExtensibleLinearAggregate <l457874656e7369626c654c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
+
+.. _l4173736f63696174696f6e4c697374-6d657267655f756e69717565:
+
+\ :ref:`merge_unique <l4c696e656172416767726567617465-6d657267655f756e69717565>`\ \: ((Record(key: Key, entry: Entry), Record(key: Key, entry: Entry)) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % if Record(key: Key, entry: Entry) has \ :ref:`BasicType <l426173696354797065>`\ 
   from \ :ref:`LinearAggregate <l4c696e656172416767726567617465>`\  Record(key: Key, entry: Entry)
 
 .. _l4173736f63696174696f6e4c697374-6d696e:
