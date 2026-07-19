@@ -5,7 +5,7 @@
 OrderedSet
 ==========
 
-:viewcode:`catdef.spad line 1125 <catdef.spad#L1125>` :editcode:`[edit on github] <catdef.spad#L1125>`
+:viewcode:`catdef.spad line 1027 <catdef.spad#L1027>` :editcode:`[edit on github] <catdef.spad#L1027>`
 
 
 The class of totally ordered sets, that is, sets such that for each pair of elements \ :code:`(a, b)`\  exactly one of the following relations holds \ :code:`a<b or a=b or b<a`\  and the relation is transitive, i.e. \ :code:`a<b and b<c => a<c`\ . This order should be the natural order on given structure.
@@ -66,6 +66,30 @@ The class of totally ordered sets, that is, sets such that for each pair of elem
 
 :spadfun:`min`\: (%, %) -> % 
   \ :code:`min(x,y)`\  returns the minimum of \ :code:`x`\  and \ :code:`y`\  relative to \ :code:`"<"`\ .
+
+.. _l4f726465726564536574-6e656761746976653f:
+
+.. index::
+   pair: OrderedSet; negative?
+
+:spadfun:`negative?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+  \ :code:`negative?(x)`\  tests whether \ :code:`x`\  is strictly less than 0.
+
+.. _l4f726465726564536574-706f7369746976653f:
+
+.. index::
+   pair: OrderedSet; positive?
+
+:spadfun:`positive?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+  \ :code:`positive?(x)`\  tests whether \ :code:`x`\  is strictly greater than 0.
+
+.. _l4f726465726564536574-7369676e:
+
+.. index::
+   pair: OrderedSet; sign
+
+:spadfun:`sign`\: % -> \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+  \ :code:`sign(x)`\  is 1 if \ :code:`x`\  is positive, \ :code:`-1`\  if \ :code:`x`\  is negative, 0 if \ :code:`x`\  equals 0.
 
 .. _l4f726465726564536574-736d616c6c65723f:
 

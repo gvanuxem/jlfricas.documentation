@@ -5,7 +5,7 @@
 NMComplexBall
 =============
 
-:viewcode:`jnball.spad line 670 <jnball.spad#L670>` :editcode:`[edit on github] <jnball.spad#L670>`
+:viewcode:`jnball.spad line 904 <jnball.spad#L904>` :editcode:`[edit on github] <jnball.spad#L904>`
 
 
 convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
@@ -13,8 +13,8 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 .. _l4e4d436f6d706c657842616c6c-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d436f6d706c657842616c6c-31:
 
@@ -127,13 +127,20 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 .. index::
    pair: NMComplexBall; abs2
 
-:spadfun:`abs2`\: % -> % 
+:spadfun:`abs2`\: % -> \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 
   
 
 .. _l4e4d436f6d706c657842616c6c-616273:
 
 \ :ref:`abs <l436f6d706c657843617465676f7279-616273>`\ \: % -> % 
   from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256
+
+
+.. index::
+   pair: NMComplexBall; abs
+
+:spadfun:`abs`\: % -> \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 
+  
 
 .. _l4e4d436f6d706c657842616c6c-616363757261637942697473:
 
@@ -172,6 +179,21 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`acsch <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6163736368>`\ \: % -> % 
   from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-61676d:
+
+.. index::
+   pair: NMComplexBall; agm
+
+:spadfun:`agm`\: % -> % 
+  
+
+
+.. index::
+   pair: NMComplexBall; agm
+
+:spadfun:`agm`\: (%, %) -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-616972794169:
 
@@ -260,6 +282,14 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 \ :ref:`atanh <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6174616e68>`\ \: % -> % 
   from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
 
+.. _l4e4d436f6d706c657842616c6c-6261726e657347:
+
+.. index::
+   pair: NMComplexBall; barnesG
+
+:spadfun:`barnesG`\: % -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-6261736973:
 
 \ :ref:`basis <l4672616d65644d6f64756c65-6261736973>`\ \: () -> \ :ref:`Vector <l566563746f72>`\  % 
@@ -323,6 +353,30 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-436869:
+
+.. index::
+   pair: NMComplexBall; Chi
+
+:spadfun:`Chi`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-4369:
+
+.. index::
+   pair: NMComplexBall; Ci
+
+:spadfun:`Ci`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6369737069:
+
+.. index::
+   pair: NMComplexBall; cispi
+
+:spadfun:`cispi`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-636f65726365:
 
@@ -539,6 +593,14 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
+.. _l4e4d436f6d706c657842616c6c-646564656b696e64457461:
+
+.. index::
+   pair: NMComplexBall; dedekindEta
+
+:spadfun:`dedekindEta`\: % -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-646566696e696e67506f6c796e6f6d69616c:
 
 \ :ref:`definingPolynomial <l4d6f6e6f67656e6963416c6765627261-646566696e696e67506f6c796e6f6d69616c>`\ \: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 
@@ -582,6 +644,14 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
+.. _l4e4d436f6d706c657842616c6c-646947616d6d61:
+
+.. index::
+   pair: NMComplexBall; diGamma
+
+:spadfun:`diGamma`\: % -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-64697363726574654c6f67:
 
 \ :ref:`discreteLog <l46696e6974654669656c6443617465676f7279-64697363726574654c6f67>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
@@ -604,6 +674,29 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-4569:
+
+.. index::
+   pair: NMComplexBall; Ei
+
+:spadfun:`Ei`\: % -> % 
+  
+
+
+.. index::
+   pair: NMComplexBall; Ei
+
+:spadfun:`Ei`\: (%, %) -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-656973656e737465696e47:
+
+.. index::
+   pair: NMComplexBall; eisensteinG
+
+:spadfun:`eisensteinG`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-656c6c697074696345:
 
@@ -635,6 +728,22 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-657266:
+
+.. index::
+   pair: NMComplexBall; erf
+
+:spadfun:`erf`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-65726669:
+
+.. index::
+   pair: NMComplexBall; erfi
+
+:spadfun:`erfi`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-6575636c696465616e53697a65:
 
@@ -773,6 +882,30 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 :spadfun:`Gamma`\: (%, %) -> % 
   
 
+.. _l4e4d436f6d706c657842616c6c-67616d6d614c6f776572:
+
+.. index::
+   pair: NMComplexBall; gammaLower
+
+:spadfun:`gammaLower`\: (%, %) -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-67616d6d614c6f776572526567756c6172697a6564:
+
+.. index::
+   pair: NMComplexBall; gammaLowerRegularized
+
+:spadfun:`gammaLowerRegularized`\: (%, %) -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-67616d6d61526567756c6172697a6564:
+
+.. index::
+   pair: NMComplexBall; gammaRegularized
+
+:spadfun:`gammaRegularized`\: (%, %) -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-676364:
 
 \ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % 
@@ -834,6 +967,14 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 :spadfun:`hypergeometric1F1Regularized`\: (%, %, %) -> % 
   
 
+.. _l4e4d436f6d706c657842616c6c-687970657267656f6d6574726963324631:
+
+.. index::
+   pair: NMComplexBall; hypergeometric2F1
+
+:spadfun:`hypergeometric2F1`\: (%, %, %, %) -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-687970657267656f6d657472696355:
 
 .. index::
@@ -874,6 +1015,27 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-6972726564756369626c653f:
+
+\ :ref:`irreducible? <l4e4d52696e67-6972726564756369626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-6a61636f62695468657461:
+
+.. index::
+   pair: NMComplexBall; jacobiTheta
+
+:spadfun:`jacobiTheta`\: (%, %) -> \ :ref:`List <l4c697374>`\  % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6a496e76617269616e74:
+
+.. index::
+   pair: NMComplexBall; jInvariant
+
+:spadfun:`jInvariant`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-6a6c41626f7574:
 
@@ -1074,10 +1236,26 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d436f6d706c657842616c6c-4c69:
+
+.. index::
+   pair: NMComplexBall; Li
+
+:spadfun:`Li`\: % -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-6c696674:
 
 \ :ref:`lift <l4d6f6e6f67656e6963416c6765627261-6c696674>`\ \: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (\ :ref:`NMArbField <l4e4d4172624669656c64>`\  256, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256)
+
+.. _l4e4d436f6d706c657842616c6c-4c694f6666736574:
+
+.. index::
+   pair: NMComplexBall; LiOffset
+
+:spadfun:`LiOffset`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-6c6f673170:
 
@@ -1091,6 +1269,30 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % 
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-6c6f674261726e657347:
+
+.. index::
+   pair: NMComplexBall; logBarnesG
+
+:spadfun:`logBarnesG`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6c6f6747616d6d61:
+
+.. index::
+   pair: NMComplexBall; logGamma
+
+:spadfun:`logGamma`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6c6f6753696e5069:
+
+.. index::
+   pair: NMComplexBall; logSinPi
+
+:spadfun:`logSinPi`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-6c6f6f6b7570:
 
@@ -1111,6 +1313,46 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-6d6f64756c617244656c7461:
+
+.. index::
+   pair: NMComplexBall; modularDelta
+
+:spadfun:`modularDelta`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6d6f64756c61724c616d626461:
+
+.. index::
+   pair: NMComplexBall; modularLambda
+
+:spadfun:`modularLambda`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6d6f64756c617257656265724631:
+
+.. index::
+   pair: NMComplexBall; modularWeberF1
+
+:spadfun:`modularWeberF1`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6d6f64756c617257656265724632:
+
+.. index::
+   pair: NMComplexBall; modularWeberF2
+
+:spadfun:`modularWeberF2`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-6d6f64756c6172576562657246:
+
+.. index::
+   pair: NMComplexBall; modularWeberF
+
+:spadfun:`modularWeberF`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-6d756c74694575636c696465616e:
 
@@ -1189,7 +1431,7 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 .. _l4e4d436f6d706c657842616c6c-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e4d436f6d706c657842616c6c-706f6c6172436f6f7264696e61746573:
 
@@ -1204,12 +1446,12 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 :spadfun:`polygamma`\: (%, %) -> % 
   
 
-.. _l4e4d436f6d706c657842616c6c-706f6c794c6f67:
+.. _l4e4d436f6d706c657842616c6c-706f6c796c6f67:
 
 .. index::
-   pair: NMComplexBall; polyLog
+   pair: NMComplexBall; polylog
 
-:spadfun:`polyLog`\: (%, %) -> % 
+:spadfun:`polylog`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
   
 
 .. _l4e4d436f6d706c657842616c6c-707265636973696f6e:
@@ -1296,6 +1538,14 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-7265636970726f63616c47616d6d61:
+
+.. index::
+   pair: NMComplexBall; reciprocalGamma
+
+:spadfun:`reciprocalGamma`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-726564756365:
 
@@ -1391,6 +1641,22 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 \ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d436f6d706c657842616c6c-726973696e67466163746f7269616c32:
+
+.. index::
+   pair: NMComplexBall; risingFactorial2
+
+:spadfun:`risingFactorial2`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Record(rf: %, d: %) 
+  
+
+.. _l4e4d436f6d706c657842616c6c-726973696e67466163746f7269616c:
+
+.. index::
+   pair: NMComplexBall; risingFactorial
+
+:spadfun:`risingFactorial`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-726f6f744f66556e697479:
 
 .. index::
@@ -1399,10 +1665,18 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 :spadfun:`rootOfUnity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
   
 
+.. _l4e4d436f6d706c657842616c6c-7273717274:
+
+.. index::
+   pair: NMComplexBall; rsqrt
+
+:spadfun:`rsqrt`\: % -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d436f6d706c657842616c6c-736563:
 
@@ -1413,6 +1687,22 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`sech <l4879706572626f6c696346756e6374696f6e43617465676f7279-73656368>`\ \: % -> % 
   from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d436f6d706c657842616c6c-536869:
+
+.. index::
+   pair: NMComplexBall; Shi
+
+:spadfun:`Shi`\: % -> % 
+  
+
+.. _l4e4d436f6d706c657842616c6c-5369:
+
+.. index::
+   pair: NMComplexBall; Si
+
+:spadfun:`Si`\: % -> % 
+  
 
 .. _l4e4d436f6d706c657842616c6c-73696e:
 
@@ -1542,10 +1832,18 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 :spadfun:`urand01`\: () -> % 
   
 
+.. _l4e4d436f6d706c657842616c6c-776569657273747261737350:
+
+.. index::
+   pair: NMComplexBall; weierstrassP
+
+:spadfun:`weierstrassP`\: (%, %) -> % 
+  
+
 .. _l4e4d436f6d706c657842616c6c-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -1704,6 +2002,10 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 
 \ :ref:`multiplicativeValuation <l6d756c7469706c6963617469766556616c756174696f6e>`\  if \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
 
+\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
+
 \ :ref:`NMRing <l4e4d52696e67>`\  
 
 \ :ref:`NMType <l4e4d54797065>`\  
@@ -1763,6 +2065,8 @@ convenience domain that reflects Nemo AcbField(256), i.e. without parameters.
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`StepThrough <l537465705468726f756768>`\  if \ :ref:`NMArbField <l4e4d4172624669656c64>`\  256 has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
 

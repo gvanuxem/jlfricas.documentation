@@ -5,22 +5,22 @@
 NMResidueRing(R, P, poly)
 =========================
 
-:viewcode:`jnemo.spad line 560 <jnemo.spad#L560>` :editcode:`[edit on github] <jnemo.spad#L560>`
+:viewcode:`jnemo.spad line 558 <jnemo.spad#L558>` :editcode:`[edit on github] <jnemo.spad#L558>`
 
 * R: \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\ 
 
-* P: Join(\ :ref:`NMUnivariatePolynomialCategory <l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R, \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ )
+* P: Join(\ :ref:`NMUnivariatePolynomialCategory <l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R, \ :ref:`GcdDomain <l476364446f6d61696e>`\ )
 
 * poly: P
 
 
-This domain allows the manipulation of Nemo residue ring elements using the AbstractAlgebra and Nemo Julia packages. Note: this is only implemen
+This domain allows the manipulation of Nemo residue ring elements using the AbstractAlgebra and Nemo Julia packages. Note: this is only implemented for univariate polynomial rings.
 
 
 .. _l4e4d5265736964756552696e67-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d5265736964756552696e67-31:
 
@@ -159,6 +159,14 @@ This domain allows the manipulation of Nemo residue ring elements using the Abst
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
 
+.. _l4e4d5265736964756552696e67-64617461:
+
+.. index::
+   pair: NMResidueRing; data
+
+:spadfun:`data`\: % -> P 
+  \ :code:`data(x)`\  returns the data of \ :code:`x`\ . See https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/ for more information.
+
 .. _l4e4d5265736964756552696e67-657175616c3f:
 
 \ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
@@ -189,6 +197,11 @@ This domain allows the manipulation of Nemo residue ring elements using the Abst
 
 :spadfun:`gcd`\: (%, %) -> % 
   \ :code:`gcd(x, y)`\  returns a greatest common divisor of \ :code:`x`\  and \ :code:`y`\  using the data and modulus associated.
+
+.. _l4e4d5265736964756552696e67-6972726564756369626c653f:
+
+\ :ref:`irreducible? <l4e4d52696e67-6972726564756369626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d5265736964756552696e67-6a6c41626f7574:
 
@@ -332,10 +345,26 @@ This domain allows the manipulation of Nemo residue ring elements using the Abst
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d5265736964756552696e67-6c696674:
+
+.. index::
+   pair: NMResidueRing; lift
+
+:spadfun:`lift`\: % -> P 
+  \ :code:`lift(x)`\  returns the lift of \ :code:`x`\ . See https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/ for more information.
+
 .. _l4e4d5265736964756552696e67-6d697373696e673f:
 
 \ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d5265736964756552696e67-6d6f64756c7573:
+
+.. index::
+   pair: NMResidueRing; modulus
+
+:spadfun:`modulus`\: () -> P 
+  \ :code:`modulus returns`\  the modulus of the residue ring.
 
 .. _l4e4d5265736964756552696e67-6d757461626c653f:
 
@@ -383,8 +412,8 @@ This domain allows the manipulation of Nemo residue ring elements using the Abst
 
 .. _l4e4d5265736964756552696e67-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d5265736964756552696e67-737472696e67:
 
@@ -403,8 +432,8 @@ This domain allows the manipulation of Nemo residue ring elements using the Abst
 
 .. _l4e4d5265736964756552696e67-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -476,6 +505,8 @@ This domain allows the manipulation of Nemo residue ring elements using the Abst
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
 

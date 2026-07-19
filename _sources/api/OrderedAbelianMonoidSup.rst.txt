@@ -5,7 +5,7 @@
 OrderedAbelianMonoidSup
 =======================
 
-:viewcode:`catdef.spad line 959 <catdef.spad#L959>` :editcode:`[edit on github] <catdef.spad#L959>`
+:viewcode:`catdef.spad line 898 <catdef.spad#L898>` :editcode:`[edit on github] <catdef.spad#L898>`
 
 
 This domain is an OrderedAbelianMonoid with a \ :spadfun:`sup`\  operation added. The purpose of the \ :spadfun:`sup`\  operator in this domain is to act as a supremum with respect to the partial order imposed by \ :spadop:`-`\ , rather than with respect to the total \ :code:`>`\  order (since that is "max").  
@@ -13,8 +13,8 @@ This domain is an OrderedAbelianMonoid with a \ :spadfun:`sup`\  operation added
 
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-2a:
 
@@ -60,6 +60,11 @@ This domain is an OrderedAbelianMonoid with a \ :spadfun:`sup`\  operation added
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
+.. _l4f7264657265644162656c69616e4d6f6e6f6964537570-616273:
+
+\ :ref:`abs <l4f7264657265644162656c69616e53656d6947726f7570-616273>`\ \: % -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  from \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
+
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-636f65726365:
 
 \ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
@@ -88,15 +93,30 @@ This domain is an OrderedAbelianMonoid with a \ :spadfun:`sup`\  operation added
 \ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % 
   from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
+.. _l4f7264657265644162656c69616e4d6f6e6f6964537570-6e656761746976653f:
+
+\ :ref:`negative? <l4f726465726564536574-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-6f70706f736974653f:
 
 \ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
+.. _l4f7264657265644162656c69616e4d6f6e6f6964537570-706f7369746976653f:
+
+\ :ref:`positive? <l4f726465726564536574-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+
+.. _l4f7264657265644162656c69616e4d6f6e6f6964537570-7369676e:
+
+\ :ref:`sign <l4f726465726564536574-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-736d616c6c65723f:
 
@@ -118,8 +138,8 @@ This domain is an OrderedAbelianMonoid with a \ :spadfun:`sup`\  operation added
 
 .. _l4f7264657265644162656c69616e4d6f6e6f6964537570-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  
@@ -134,15 +154,13 @@ This domain is an OrderedAbelianMonoid with a \ :spadfun:`sup`\  operation added
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  
 
-\ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  
-
 \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\  
-
-\ :ref:`OrderedCancellationAbelianMonoid <l4f72646572656443616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  
 
 \ :ref:`PartialOrder <l5061727469616c4f72646572>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 

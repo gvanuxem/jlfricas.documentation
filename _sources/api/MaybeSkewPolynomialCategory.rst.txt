@@ -5,7 +5,7 @@
 MaybeSkewPolynomialCategory(R, E, VarSet)
 =========================================
 
-:viewcode:`polycat.spad line 165 <polycat.spad#L165>` :editcode:`[edit on github] <polycat.spad#L165>`
+:viewcode:`polycat.spad line 167 <polycat.spad#L167>` :editcode:`[edit on github] <polycat.spad#L167>`
 
 * R: Join(\ :ref:`SemiRng <l53656d69526e67>`\ , \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ )
 
@@ -19,8 +19,8 @@ The category for general multi-variate possibly skew polynomials over a ring \ :
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-31:
 
@@ -49,7 +49,7 @@ The category for general multi-variate possibly skew polynomials over a ring \ :
   from \ :ref:`LeftModule <l4c6566744d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
@@ -71,11 +71,11 @@ The category for general multi-variate possibly skew polynomials over a ring \ :
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-2d:
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: % -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+\ :ref:`- <l4162656c69616e47726f7570-2d>`\ \: (%, %) -> % if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  or % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-2f:
@@ -451,8 +451,8 @@ The category for general multi-variate possibly skew polynomials over a ring \ :
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-736d616c6c65723f:
 
@@ -513,12 +513,19 @@ The category for general multi-variate possibly skew polynomials over a ring \ :
    pair: MaybeSkewPolynomialCategory; variables
 
 :spadfun:`variables`\: % -> \ :ref:`List <l4c697374>`\  VarSet 
-  \ :code:`variables(p)`\  returns the list of those variables actually appearing in the polynomial \ :code:`p`\ .
+  \ :code:`variables(p)`\  returns the list of those variables actually appearing in the polynomial \ :code:`p`\  in descending order.
+
+
+.. index::
+   pair: MaybeSkewPolynomialCategory; variables
+
+:spadfun:`variables`\: (%, %) -> \ :ref:`List <l4c697374>`\  VarSet 
+  \ :code:`variables(p, q)`\  returns the list of those variables actually appearing in the polynomial \ :code:`p`\  and \ :code:`q`\  in descending order.
 
 .. _l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  if R has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
@@ -646,6 +653,8 @@ The category for general multi-variate possibly skew polynomials over a ring \ :
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  if R has \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\  and % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  or % has \ :ref:`VariablesCommuteWithCoefficients <l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473>`\  and R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
 

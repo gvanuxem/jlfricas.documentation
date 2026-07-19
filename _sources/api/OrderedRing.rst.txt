@@ -5,16 +5,16 @@
 OrderedRing
 ===========
 
-:viewcode:`catdef.spad line 1073 <catdef.spad#L1073>` :editcode:`[edit on github] <catdef.spad#L1073>`
+:viewcode:`catdef.spad line 974 <catdef.spad#L974>` :editcode:`[edit on github] <catdef.spad#L974>`
 
 
-Ordered sets which are also rings, that is, domains where the ring operations are compatible with the ordering.  
+Ordered sets which are also rings, that is, domains where the ring operations are compatible with the ordering.
 
 
 .. _l4f72646572656452696e67-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4f72646572656452696e67-31:
 
@@ -93,8 +93,8 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 .. _l4f72646572656452696e67-616273:
 
-\ :ref:`abs <l4f7264657265644162656c69616e47726f7570-616273>`\ \: % -> % 
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`abs <l4f7264657265644162656c69616e53656d6947726f7570-616273>`\ \: % -> % 
+  from \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
 
 .. _l4f72646572656452696e67-616e6e6968696c6174653f:
 
@@ -161,8 +161,8 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 .. _l4f72646572656452696e67-6e656761746976653f:
 
-\ :ref:`negative? <l4f7264657265644162656c69616e47726f7570-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`negative? <l4f726465726564536574-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4f72646572656452696e67-6f6e653f:
 
@@ -176,8 +176,8 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 .. _l4f72646572656452696e67-706f7369746976653f:
 
-\ :ref:`positive? <l4f7264657265644162656c69616e47726f7570-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`positive? <l4f726465726564536574-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4f72646572656452696e67-7265636970:
 
@@ -200,13 +200,13 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 .. _l4f72646572656452696e67-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4f72646572656452696e67-7369676e:
 
-\ :ref:`sign <l4f7264657265644162656c69616e47726f7570-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`sign <l4f726465726564536574-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4f72646572656452696e67-736d616c6c65723f:
 
@@ -220,8 +220,8 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 .. _l4f72646572656452696e67-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -248,6 +248,8 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  
 
+\ :ref:`MagmaWithZero <l4d61676d61576974685a65726f>`\  
+
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
 
 \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\  
@@ -258,17 +260,9 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 
 \ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\  
 
-\ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  
-
-\ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  
-
 \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\  
 
-\ :ref:`OrderedCancellationAbelianMonoid <l4f72646572656443616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
-
-\ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  
-
-\ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  
+\ :ref:`OrderedMagmaWithZero <l4f7264657265644d61676d61576974685a65726f>`\  
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  
 
@@ -287,6 +281,8 @@ Ordered sets which are also rings, that is, domains where the ring operations ar
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`unitsKnown <l756e6974734b6e6f776e>`\  
 

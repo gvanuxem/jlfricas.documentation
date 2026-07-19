@@ -9,7 +9,7 @@ WeightedGraph(S, W)
 
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
-* W: \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
+* W: Join(\ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ , \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ )
 
 
 allows us to model weighted graphs This graph assigns a weight to each arrow. This is used when calculating say, lowest 'cost' routes. An arrow with a higher weight is more 'costly' in some way and therefore we try to choose the minimum weight. For arrows in series the overall weight is the sum of the individual weights. For arrows in parallel the overall weight is the minimum of the individual weights. \ :code:`I`\  may change this in future to allow different cost metrics to be plugged in.  

@@ -15,8 +15,8 @@ NMArbField p
 
 .. _l4e4d4172624669656c64-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d4172624669656c64-31:
 
@@ -150,8 +150,8 @@ NMArbField p
 
 .. _l4e4d4172624669656c64-616273:
 
-\ :ref:`abs <l4f7264657265644162656c69616e47726f7570-616273>`\ \: % -> % 
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`abs <l4f7264657265644162656c69616e53656d6947726f7570-616273>`\ \: % -> % 
+  from \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
 
 .. _l4e4d4172624669656c64-616363757261637942697473:
 
@@ -198,6 +198,14 @@ NMArbField p
 
 :spadfun:`addError!`\: (%, %) -> % 
   \ :code:`addError!(x, y)`\  adds the values (absolute) of the midpoint and radius of \ :code:`y`\  to the radius of \ :code:`x`\ .
+
+.. _l4e4d4172624669656c64-61676d:
+
+.. index::
+   pair: NMArbField; agm
+
+:spadfun:`agm`\: (%, %) -> % 
+  \ :code:`agm(x,y)`\  returns the arithmetic-geometric mean of \ :code:`x`\  and \ :code:`y`\ .
 
 .. _l4e4d4172624669656c64-616e6e6968696c6174653f:
 
@@ -261,6 +269,14 @@ NMArbField p
 \ :ref:`base <l466c6f6174696e67506f696e7453797374656d-62617365>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
   from \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
 
+.. _l4e4d4172624669656c64-62696e6f6d69616c:
+
+.. index::
+   pair: NMArbField; binomial
+
+:spadfun:`binomial`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`binomial(x, n)`\  returns the binomial coefficient \ :code:`C`\ (\ :code:`x`\ ,\ :code:`n`\ ).
+
 .. _l4e4d4172624669656c64-62697473:
 
 .. index::
@@ -294,6 +310,38 @@ NMArbField p
 
 \ :ref:`characteristic <l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963>`\ \: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+
+.. _l4e4d4172624669656c64-6368656279736865765432:
+
+.. index::
+   pair: NMArbField; chebyshevT2
+
+:spadfun:`chebyshevT2`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> Record(T: %, Tnm1: %) 
+  \ :code:`chebyshevT2(n,x)`\  returns a record with the values of the Chebyshev polynomial of the first kind evaluated at \ :code:`n`\  and \ :code:`n`\ -1.
+
+.. _l4e4d4172624669656c64-63686562797368657654:
+
+.. index::
+   pair: NMArbField; chebyshevT
+
+:spadfun:`chebyshevT`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
+  \ :code:`chebyshevT(n,x)`\  returns the value of the Chebyshev polynomial of the first kind of degree \ :code:`n`\  evaluated at \ :code:`x`\ .
+
+.. _l4e4d4172624669656c64-6368656279736865765532:
+
+.. index::
+   pair: NMArbField; chebyshevU2
+
+:spadfun:`chebyshevU2`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> Record(U: %, Unm1: %) 
+  \ :code:`chebyshevU2(n,x)`\  returns a record with the values of the Chebyshev polynomial of the second kind evaluated at \ :code:`n`\  and \ :code:`n`\ -1.
+
+.. _l4e4d4172624669656c64-63686562797368657655:
+
+.. index::
+   pair: NMArbField; chebyshevU
+
+:spadfun:`chebyshevU`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
+  \ :code:`chebyshevU(n,x)`\  returns the value of the Chebyshev polynomial of the second kind of degree \ :code:`n`\  evaluated at \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-636f65726365:
 
@@ -488,6 +536,14 @@ NMArbField p
 \ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
+.. _l4e4d4172624669656c64-646947616d6d61:
+
+.. index::
+   pair: NMArbField; diGamma
+
+:spadfun:`diGamma`\: % -> % 
+  \ :code:`diGamma(x)`\  returns logarithmic derivative of the gamma function evaluated at \ :code:`x`\ .
+
 .. _l4e4d4172624669656c64-646967697473:
 
 \ :ref:`digits <l466c6f6174696e67506f696e7453797374656d-646967697473>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
@@ -590,6 +646,14 @@ NMArbField p
 \ :ref:`factor <l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % 
   from \ :ref:`UniqueFactorizationDomain <l556e69717565466163746f72697a6174696f6e446f6d61696e>`\ 
 
+.. _l4e4d4172624669656c64-666163746f7269616c:
+
+.. index::
+   pair: NMArbField; factorial
+
+:spadfun:`factorial`\: % -> % 
+  \ :code:`factorial(x)`\  returns the factorial of \ :code:`x`\ .
+
 .. _l4e4d4172624669656c64-66696e6974653f:
 
 .. index::
@@ -631,6 +695,30 @@ NMArbField p
 
 :spadfun:`Gamma`\: (%, %) -> % 
   \ :code:`Gamma(x,y)`\  is the incomplete Gamma function.
+
+.. _l4e4d4172624669656c64-67616d6d614c6f776572:
+
+.. index::
+   pair: NMArbField; gammaLower
+
+:spadfun:`gammaLower`\: (%, %) -> % 
+  \ :code:`gammaLower(s,x)`\  is the lower incomplete Gamma function.
+
+.. _l4e4d4172624669656c64-67616d6d614c6f776572526567756c6172697a6564:
+
+.. index::
+   pair: NMArbField; gammaLowerRegularized
+
+:spadfun:`gammaLowerRegularized`\: (%, %) -> % 
+  \ :code:`gammaLowerRegularized(s,x)`\  is the regularized lower incomplete Gamma function.
+
+.. _l4e4d4172624669656c64-67616d6d61526567756c6172697a6564:
+
+.. index::
+   pair: NMArbField; gammaRegularized
+
+:spadfun:`gammaRegularized`\: (%, %) -> % 
+  \ :code:`gammaRegularized(s,x)`\  is the regularized upper incomplete Gamma function.
 
 .. _l4e4d4172624669656c64-676364:
 
@@ -687,6 +775,11 @@ NMArbField p
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+
+.. _l4e4d4172624669656c64-6972726564756369626c653f:
+
+\ :ref:`irreducible? <l4e4d52696e67-6972726564756369626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d4172624669656c64-6a6c41626f7574:
 
@@ -889,6 +982,14 @@ NMArbField p
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d4172624669656c64-6c6f673130:
+
+.. index::
+   pair: NMArbField; log10
+
+:spadfun:`log10`\: () -> % 
+  \ :code:`log10()`\  returns log(10).
+
 .. _l4e4d4172624669656c64-6c6f673170:
 
 .. index::
@@ -897,10 +998,26 @@ NMArbField p
 :spadfun:`log1p`\: % -> % 
   \ :code:`log1p(x)`\  logarithm of 1+x computed accurately.
 
+.. _l4e4d4172624669656c64-6c6f6732:
+
+.. index::
+   pair: NMArbField; log2
+
+:spadfun:`log2`\: () -> % 
+  \ :code:`log2()`\  returns log(2).
+
 .. _l4e4d4172624669656c64-6c6f67:
 
 \ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % 
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d4172624669656c64-6c6f6747616d6d61:
+
+.. index::
+   pair: NMArbField; logGamma
+
+:spadfun:`logGamma`\: % -> % 
+  \ :code:`logGamma(x)`\  returns the logarithm of the gamma function evaluated at \ :code:`x`\ .
 
 .. _l4e4d4172624669656c64-6d616e7469737361:
 
@@ -950,8 +1067,8 @@ NMArbField p
 
 .. _l4e4d4172624669656c64-6e656761746976653f:
 
-\ :ref:`negative? <l4f7264657265644162656c69616e47726f7570-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`negative? <l4f726465726564536574-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4172624669656c64-6e6f6e4e656761746976653f:
 
@@ -1028,25 +1145,25 @@ NMArbField p
 .. _l4e4d4172624669656c64-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
-.. _l4e4d4172624669656c64-706f6c794c6f67:
+.. _l4e4d4172624669656c64-706f6c796c6f67:
 
 .. index::
-   pair: NMArbField; polyLog
+   pair: NMArbField; polylog
 
-:spadfun:`polyLog`\: (%, %) -> % 
-  \ :code:`polyLog(x,y)`\  returns the polyLog function applied to \ :code:`x`\  and \ :code:`y`\ .
+:spadfun:`polylog`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`polylog(n,x)`\  returns the polylogarithm function Li_n(\ :code:`x`\ ).
 
 .. _l4e4d4172624669656c64-706f7369746976653f:
 
-\ :ref:`positive? <l4f7264657265644162656c69616e47726f7570-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`positive? <l4f726465726564536574-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4172624669656c64-707265636973696f6e:
 
-\ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  from \ :ref:`FloatingPointSystem <l466c6f6174696e67506f696e7453797374656d>`\ 
+\ :ref:`precision <l4a4c417262697472617279507265636973696f6e-707265636973696f6e>`\ \: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  from \ :ref:`JLArbitraryPrecision <l4a4c417262697472617279507265636973696f6e>`\ 
 
 
 \ :ref:`precision <l466c6f6174696e67506f696e7453797374656d-707265636973696f6e>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
@@ -1088,6 +1205,14 @@ NMArbField p
 \ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d4172624669656c64-7265636970726f63616c47616d6d61:
+
+.. index::
+   pair: NMArbField; reciprocalGamma
+
+:spadfun:`reciprocalGamma`\: % -> % 
+  \ :code:`reciprocalGamma(s,x)`\  is the reciprocal Gamma function i.e. 1/Gamma(\ :code:`x`\ ,\ :code:`y`\ ).
+
 .. _l4e4d4172624669656c64-72656d:
 
 \ :ref:`rem <l4575636c696465616e446f6d61696e-72656d>`\ \: (%, %) -> % 
@@ -1125,15 +1250,31 @@ NMArbField p
 \ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d4172624669656c64-726973696e67466163746f7269616c:
+
+.. index::
+   pair: NMArbField; risingFactorial
+
+:spadfun:`risingFactorial`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`risingFactorial(x, n)`\  returns the rising factorial of \ :code:`x`\ , i.e. \ :code:`x`\ (\ :code:`x+1`\ )...(\ :code:`x+n`\ -1).
+
 .. _l4e4d4172624669656c64-726f756e64:
 
 \ :ref:`round <l5265616c4e756d62657253797374656d-726f756e64>`\ \: % -> % 
   from \ :ref:`RealNumberSystem <l5265616c4e756d62657253797374656d>`\ 
 
+.. _l4e4d4172624669656c64-7273717274:
+
+.. index::
+   pair: NMArbField; rsqrt
+
+:spadfun:`rsqrt`\: % -> % 
+  \ :code:`rsqrt(x)`\  returns the reciprocal of the square root of \ :code:`x`\ , i.e. 1/sqrt(\ :code:`x`\ ).
+
 .. _l4e4d4172624669656c64-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d4172624669656c64-736563:
 
@@ -1155,8 +1296,8 @@ NMArbField p
 
 .. _l4e4d4172624669656c64-7369676e:
 
-\ :ref:`sign <l4f7264657265644162656c69616e47726f7570-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`sign <l4f726465726564536574-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4172624669656c64-73696e:
 
@@ -1178,10 +1319,26 @@ NMArbField p
 \ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
+.. _l4e4d4172624669656c64-7371727431706d31:
+
+.. index::
+   pair: NMArbField; sqrt1pm1
+
+:spadfun:`sqrt1pm1`\: % -> % 
+  \ :code:`sqrt1pm1(x)`\  computes accurately sqrt(1+x)\ :code:`-1`\ .
+
 .. _l4e4d4172624669656c64-73717274:
 
 \ :ref:`sqrt <l5261646963616c43617465676f7279-73717274>`\ \: % -> % 
   from \ :ref:`RadicalCategory <l5261646963616c43617465676f7279>`\ 
+
+.. _l4e4d4172624669656c64-73717274506f73:
+
+.. index::
+   pair: NMArbField; sqrtPos
+
+:spadfun:`sqrtPos`\: % -> % 
+  \ :code:`sqrtPos(x)`\  computes accurately sqrt(\ :code:`x`\ ) assuming \ :code:`x`\  \ :code:`>=`\  0. Discard any negative number in the input interval.
 
 .. _l4e4d4172624669656c64-73717561726546726565:
 
@@ -1273,8 +1430,8 @@ NMArbField p
 
 .. _l4e4d4172624669656c64-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -1369,11 +1526,17 @@ NMArbField p
 
 \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  
 
+\ :ref:`MagmaWithZero <l4d61676d61576974685a65726f>`\  
+
 \ :ref:`Module <l4d6f64756c65>`\  % 
 
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  
 
 \ :ref:`Monoid <l4d6f6e6f6964>`\  
+
+\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 
@@ -1393,19 +1556,11 @@ NMArbField p
 
 \ :ref:`noZeroDivisors <l6e6f5a65726f44697669736f7273>`\  
 
-\ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  
-
-\ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  
-
 \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\  
 
-\ :ref:`OrderedCancellationAbelianMonoid <l4f72646572656443616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  
-
-\ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  
+\ :ref:`OrderedMagmaWithZero <l4f7264657265644d61676d61576974685a65726f>`\  
 
 \ :ref:`OrderedRing <l4f72646572656452696e67>`\  
-
-\ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  
 
@@ -1440,6 +1595,8 @@ NMArbField p
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`TranscendentalFunctionCategory <l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279>`\  
 

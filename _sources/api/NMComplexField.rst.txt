@@ -5,7 +5,7 @@
 NMComplexField
 ==============
 
-:viewcode:`jnball.spad line 1009 <jnball.spad#L1009>` :editcode:`[edit on github] <jnball.spad#L1009>`
+:viewcode:`jnball.spad line 1330 <jnball.spad#L1330>` :editcode:`[edit on github] <jnball.spad#L1330>`
 
 
 \ :ref:`NMComplexField <l4e4d436f6d706c65784669656c64>`\  implements arbitrary precision ball arithmetic using the Nemo Julia package.
@@ -13,8 +13,8 @@ NMComplexField
 
 .. _l4e4d436f6d706c65784669656c64-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d436f6d706c65784669656c64-31:
 
@@ -134,15 +134,19 @@ NMComplexField
 .. index::
    pair: NMComplexField; abs2
 
-:spadfun:`abs2`\: % -> % 
+:spadfun:`abs2`\: % -> \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  
   \ :code:`abs2(x)`\  returns the square of the absolute value of real part of \ :code:`x`\  and imaginary part of \ :code:`x`\ .
 
 .. _l4e4d436f6d706c65784669656c64-616273:
 
+\ :ref:`abs <l436f6d706c657843617465676f7279-616273>`\ \: % -> % 
+  from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ 
+
+
 .. index::
    pair: NMComplexField; abs
 
-:spadfun:`abs`\: % -> % 
+:spadfun:`abs`\: % -> \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  
   \ :code:`abs(x)`\  returns the absolute value of \ :code:`x`\ .
 
 .. _l4e4d436f6d706c65784669656c64-616363757261637942697473:
@@ -182,6 +186,21 @@ NMComplexField
 
 \ :ref:`acsch <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6163736368>`\ \: % -> % 
   from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-61676d:
+
+.. index::
+   pair: NMComplexField; agm
+
+:spadfun:`agm`\: % -> % 
+  \ :code:`agm(x)`\  returns the arithmetic-geometric mean of 1 and \ :code:`x`\ .
+
+
+.. index::
+   pair: NMComplexField; agm
+
+:spadfun:`agm`\: (%, %) -> % 
+  \ :code:`agm(x,y)`\  returns the arithmetic-geometric mean of \ :code:`x`\  and \ :code:`y`\ .
 
 .. _l4e4d436f6d706c65784669656c64-616972794169:
 
@@ -270,6 +289,14 @@ NMComplexField
 \ :ref:`atanh <l4172634879706572626f6c696346756e6374696f6e43617465676f7279-6174616e68>`\ \: % -> % 
   from \ :ref:`ArcHyperbolicFunctionCategory <l4172634879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
 
+.. _l4e4d436f6d706c65784669656c64-6261726e657347:
+
+.. index::
+   pair: NMComplexField; barnesG
+
+:spadfun:`barnesG`\: % -> % 
+  \ :code:`barnesG(x)`\  is the Barnes \ :code:`G`\ -function evaluated at \ :code:`x`\ .
+
 .. _l4e4d436f6d706c65784669656c64-6261736973:
 
 \ :ref:`basis <l4672616d65644d6f64756c65-6261736973>`\ \: () -> \ :ref:`Vector <l566563746f72>`\  % 
@@ -325,6 +352,30 @@ NMComplexField
 
 \ :ref:`charthRoot <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636861727468526f6f74>`\ \: % -> Union(%, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\  or \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-436869:
+
+.. index::
+   pair: NMComplexField; Chi
+
+:spadfun:`Chi`\: % -> % 
+  \ :code:`Chi(x)`\  returns the hyperbolic cosine integral of \ :code:`x`\ .
+
+.. _l4e4d436f6d706c65784669656c64-4369:
+
+.. index::
+   pair: NMComplexField; Ci
+
+:spadfun:`Ci`\: % -> % 
+  \ :code:`Ci(x)`\  returns the cosine integral of \ :code:`x`\ .
+
+.. _l4e4d436f6d706c65784669656c64-6369737069:
+
+.. index::
+   pair: NMComplexField; cispi
+
+:spadfun:`cispi`\: % -> % 
+  \ :code:`cispi(x)`\  returns exp(πix).
 
 .. _l4e4d436f6d706c65784669656c64-636f65726365:
 
@@ -555,6 +606,14 @@ NMComplexField
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
+.. _l4e4d436f6d706c65784669656c64-646564656b696e64457461:
+
+.. index::
+   pair: NMComplexField; dedekindEta
+
+:spadfun:`dedekindEta`\: % -> % 
+  \ :code:`dedekindEta(z)`\  returns the Dedekind eta function evaluated at \ :code:`z`\ .
+
 .. _l4e4d436f6d706c65784669656c64-646566696e696e67506f6c796e6f6d69616c:
 
 \ :ref:`definingPolynomial <l4d6f6e6f67656e6963416c6765627261-646566696e696e67506f6c796e6f6d69616c>`\ \: () -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  
@@ -598,6 +657,14 @@ NMComplexField
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
+.. _l4e4d436f6d706c65784669656c64-646947616d6d61:
+
+.. index::
+   pair: NMComplexField; diGamma
+
+:spadfun:`diGamma`\: % -> % 
+  \ :code:`diGamma(x)`\  returns logarithmic derivative of the gamma function evaluated at \ :code:`x`\ .
+
 .. _l4e4d436f6d706c65784669656c64-64697363726574654c6f67:
 
 \ :ref:`discreteLog <l46696e6974654669656c6443617465676f7279-64697363726574654c6f67>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
@@ -620,6 +687,29 @@ NMComplexField
 
 \ :ref:`divide <l4575636c696465616e446f6d61696e-646976696465>`\ \: (%, %) -> Record(quotient: %, remainder: %) 
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-4569:
+
+.. index::
+   pair: NMComplexField; Ei
+
+:spadfun:`Ei`\: % -> % 
+  \ :code:`Ei(x)`\  returns the exponential integral of \ :code:`x`\ .
+
+
+.. index::
+   pair: NMComplexField; Ei
+
+:spadfun:`Ei`\: (%, %) -> % 
+  \ :code:`Ei(s,x)`\  returns the generalized exponential integral of \ :code:`x`\  E_s(\ :code:`x`\ ).
+
+.. _l4e4d436f6d706c65784669656c64-656973656e737465696e47:
+
+.. index::
+   pair: NMComplexField; eisensteinG
+
+:spadfun:`eisensteinG`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  \ :code:`eisensteinG(k,z)`\  returns the non-normalized Eisenstein series \ :code:`G_k`\ (\ :code:`τ`\ ) of \ :code:`SL_2`\ (\ :code:`Z`\ ) also defined for τ=i∞.
 
 .. _l4e4d436f6d706c65784669656c64-656c6c697074696345:
 
@@ -651,6 +741,22 @@ NMComplexField
 
 \ :ref:`equal? <l4e4d52696e67-657175616c3f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-657266:
+
+.. index::
+   pair: NMComplexField; erf
+
+:spadfun:`erf`\: % -> % 
+  \ :code:`erf(x)`\  is the error function evaluated at \ :code:`x`\ .
+
+.. _l4e4d436f6d706c65784669656c64-65726669:
+
+.. index::
+   pair: NMComplexField; erfi
+
+:spadfun:`erfi`\: % -> % 
+  \ :code:`erfi(x)`\  is the imaginary error function evaluated at \ :code:`x`\ .
 
 .. _l4e4d436f6d706c65784669656c64-6575636c696465616e53697a65:
 
@@ -789,6 +895,30 @@ NMComplexField
 :spadfun:`Gamma`\: (%, %) -> % 
   \ :code:`Gamma(x,y)`\  is the incomplete Gamma function.
 
+.. _l4e4d436f6d706c65784669656c64-67616d6d614c6f776572:
+
+.. index::
+   pair: NMComplexField; gammaLower
+
+:spadfun:`gammaLower`\: (%, %) -> % 
+  \ :code:`gammaLower(s,x)`\  is the lower incomplete Gamma function.
+
+.. _l4e4d436f6d706c65784669656c64-67616d6d614c6f776572526567756c6172697a6564:
+
+.. index::
+   pair: NMComplexField; gammaLowerRegularized
+
+:spadfun:`gammaLowerRegularized`\: (%, %) -> % 
+  \ :code:`gammaLowerRegularized(s,x)`\  is the regularized lower incomplete Gamma function.
+
+.. _l4e4d436f6d706c65784669656c64-67616d6d61526567756c6172697a6564:
+
+.. index::
+   pair: NMComplexField; gammaRegularized
+
+:spadfun:`gammaRegularized`\: (%, %) -> % 
+  \ :code:`gammaRegularized(s,x)`\  is the regularized upper incomplete Gamma function.
+
 .. _l4e4d436f6d706c65784669656c64-676364:
 
 \ :ref:`gcd <l476364446f6d61696e-676364>`\ \: (%, %) -> % 
@@ -850,6 +980,14 @@ NMComplexField
 :spadfun:`hypergeometric1F1Regularized`\: (%, %, %) -> % 
   \ :code:`hypergeometric1F1Regularized(a,b,z)`\  is the regularized confluent hypergeometric function 1F1.
 
+.. _l4e4d436f6d706c65784669656c64-687970657267656f6d6574726963324631:
+
+.. index::
+   pair: NMComplexField; hypergeometric2F1
+
+:spadfun:`hypergeometric2F1`\: (%, %, %, %) -> % 
+  \ :code:`hypergeometric2F1(a,b,c,z)`\  is the Gauss hypergeometric function 2F1.
+
 .. _l4e4d436f6d706c65784669656c64-687970657267656f6d657472696355:
 
 .. index::
@@ -890,6 +1028,27 @@ NMComplexField
 
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-6972726564756369626c653f:
+
+\ :ref:`irreducible? <l4e4d52696e67-6972726564756369626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-6a61636f62695468657461:
+
+.. index::
+   pair: NMComplexField; jacobiTheta
+
+:spadfun:`jacobiTheta`\: (%, %) -> \ :ref:`List <l4c697374>`\  % 
+  \ :code:`jacobiTheta(z,tau)`\  returns a list with the values of the Jacobi theta function evaluated at \ :code:`z`\  and \ :code:`tau`\ .
+
+.. _l4e4d436f6d706c65784669656c64-6a496e76617269616e74:
+
+.. index::
+   pair: NMComplexField; jInvariant
+
+:spadfun:`jInvariant`\: % -> % 
+  \ :code:`jInvariant(z)`\  returns the \ :code:`j`\ -invariant function evaluated at \ :code:`z`\ .
 
 .. _l4e4d436f6d706c65784669656c64-6a6c41626f7574:
 
@@ -1094,6 +1253,30 @@ NMComplexField
 \ :ref:`log <l456c656d656e7461727946756e6374696f6e43617465676f7279-6c6f67>`\ \: % -> % 
   from \ :ref:`ElementaryFunctionCategory <l456c656d656e7461727946756e6374696f6e43617465676f7279>`\ 
 
+.. _l4e4d436f6d706c65784669656c64-6c6f674261726e657347:
+
+.. index::
+   pair: NMComplexField; logBarnesG
+
+:spadfun:`logBarnesG`\: % -> % 
+  \ :code:`logBarnesG(x)`\  is the logarithm of the Barnes \ :code:`G`\ -function evaluated at \ :code:`x`\ .
+
+.. _l4e4d436f6d706c65784669656c64-6c6f6747616d6d61:
+
+.. index::
+   pair: NMComplexField; logGamma
+
+:spadfun:`logGamma`\: % -> % 
+  \ :code:`logGamma(x)`\  returns the logarithm of the gamma function evaluated at \ :code:`x`\ .
+
+.. _l4e4d436f6d706c65784669656c64-6c6f6753696e5069:
+
+.. index::
+   pair: NMComplexField; logSinPi
+
+:spadfun:`logSinPi`\: % -> % 
+  \ :code:`logSinPi(x)`\  logarithm of sin(pi*x) computed accurately without branch cuts the real line.
+
 .. _l4e4d436f6d706c65784669656c64-6c6f6f6b7570:
 
 \ :ref:`lookup <l46696e697465-6c6f6f6b7570>`\ \: % -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`Finite <l46696e697465>`\ 
@@ -1113,6 +1296,46 @@ NMComplexField
 
 \ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-6d6f64756c617244656c7461:
+
+.. index::
+   pair: NMComplexField; modularDelta
+
+:spadfun:`modularDelta`\: % -> % 
+  \ :code:`modularDelta(z)`\  returns the modular delta function evaluated at \ :code:`z`\ .
+
+.. _l4e4d436f6d706c65784669656c64-6d6f64756c61724c616d626461:
+
+.. index::
+   pair: NMComplexField; modularLambda
+
+:spadfun:`modularLambda`\: % -> % 
+  \ :code:`modularLambda(z)`\  returns the modular lambda function evaluated at \ :code:`z`\ .
+
+.. _l4e4d436f6d706c65784669656c64-6d6f64756c617257656265724631:
+
+.. index::
+   pair: NMComplexField; modularWeberF1
+
+:spadfun:`modularWeberF1`\: % -> % 
+  \ :code:`modularWeberF1(q)`\  returns the Weber \ :code:`F1`\  function of \ :code:`q`\  in the complex upper half plane.
+
+.. _l4e4d436f6d706c65784669656c64-6d6f64756c617257656265724632:
+
+.. index::
+   pair: NMComplexField; modularWeberF2
+
+:spadfun:`modularWeberF2`\: % -> % 
+  \ :code:`modularWeberF2(q)`\  returns the Weber \ :code:`F2`\  function of \ :code:`q`\  in the complex upper half plane.
+
+.. _l4e4d436f6d706c65784669656c64-6d6f64756c6172576562657246:
+
+.. index::
+   pair: NMComplexField; modularWeberF
+
+:spadfun:`modularWeberF`\: % -> % 
+  \ :code:`modularWeberF(q)`\  returns the Weber \ :code:`F`\  function of \ :code:`q`\  in the complex upper half plane.
 
 .. _l4e4d436f6d706c65784669656c64-6d756c74694575636c696465616e:
 
@@ -1191,7 +1414,7 @@ NMComplexField
 .. _l4e4d436f6d706c65784669656c64-706c656e617279506f776572:
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
-  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  %
 
 .. _l4e4d436f6d706c65784669656c64-706f6c6172436f6f7264696e61746573:
 
@@ -1206,13 +1429,13 @@ NMComplexField
 :spadfun:`polygamma`\: (%, %) -> % 
   \ :code:`polygamma(x,y)`\  returns the polygamma function applied to \ :code:`x`\  and \ :code:`y`\ .
 
-.. _l4e4d436f6d706c65784669656c64-706f6c794c6f67:
+.. _l4e4d436f6d706c65784669656c64-706f6c796c6f67:
 
 .. index::
-   pair: NMComplexField; polyLog
+   pair: NMComplexField; polylog
 
-:spadfun:`polyLog`\: (%, %) -> % 
-  \ :code:`polyLog(x,y)`\  returns the polyLog function applied to \ :code:`x`\  and \ :code:`y`\ .
+:spadfun:`polylog`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`polylog(n,x)`\  returns the polylogarithm function Li_n(\ :code:`x`\ ).
 
 .. _l4e4d436f6d706c65784669656c64-707265636973696f6e:
 
@@ -1305,6 +1528,14 @@ NMComplexField
 
 \ :ref:`recip <l4d61676d6157697468556e6974-7265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-7265636970726f63616c47616d6d61:
+
+.. index::
+   pair: NMComplexField; reciprocalGamma
+
+:spadfun:`reciprocalGamma`\: % -> % 
+  \ :code:`reciprocalGamma(s,x)`\  is the reciprocal Gamma function i.e. 1/Gamma(\ :code:`x`\ ,\ :code:`y`\ ).
 
 .. _l4e4d436f6d706c65784669656c64-726564756365:
 
@@ -1400,6 +1631,22 @@ NMComplexField
 \ :ref:`rightRecip <l4d61676d6157697468556e6974-72696768745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d436f6d706c65784669656c64-726973696e67466163746f7269616c32:
+
+.. index::
+   pair: NMComplexField; risingFactorial2
+
+:spadfun:`risingFactorial2`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> Record(rf: %, d: %) 
+  \ :code:`risingFactorial2(x, n)`\  returns a record containing the rising factorial \ :code:`x`\ (\ :code:`x+1`\ )...(\ :code:`x+n`\ -1) and its derivative.
+
+.. _l4e4d436f6d706c65784669656c64-726973696e67466163746f7269616c:
+
+.. index::
+   pair: NMComplexField; risingFactorial
+
+:spadfun:`risingFactorial`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`risingFactorial(x, n)`\  returns the rising factorial of \ :code:`x`\ , i.e. \ :code:`x`\ (\ :code:`x+1`\ )...(\ :code:`x+n`\ -1).
+
 .. _l4e4d436f6d706c65784669656c64-726f6f744f66556e697479:
 
 .. index::
@@ -1415,10 +1662,18 @@ NMComplexField
 :spadfun:`rootOfUnity`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
   \ :code:`rootOfUnity(n)`\ Return the root of unity exp(2*\%pi*\%i/n).
 
+.. _l4e4d436f6d706c65784669656c64-7273717274:
+
+.. index::
+   pair: NMComplexField; rsqrt
+
+:spadfun:`rsqrt`\: % -> % 
+  \ :code:`rsqrt(x)`\  returns the reciprocal of the square root of \ :code:`x`\ , i.e. 1/sqrt(\ :code:`x`\ ).
+
 .. _l4e4d436f6d706c65784669656c64-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d436f6d706c65784669656c64-736563:
 
@@ -1429,6 +1684,22 @@ NMComplexField
 
 \ :ref:`sech <l4879706572626f6c696346756e6374696f6e43617465676f7279-73656368>`\ \: % -> % 
   from \ :ref:`HyperbolicFunctionCategory <l4879706572626f6c696346756e6374696f6e43617465676f7279>`\ 
+
+.. _l4e4d436f6d706c65784669656c64-536869:
+
+.. index::
+   pair: NMComplexField; Shi
+
+:spadfun:`Shi`\: % -> % 
+  \ :code:`Shi(x)`\  returns the hyperbolic sine integral of \ :code:`x`\ .
+
+.. _l4e4d436f6d706c65784669656c64-5369:
+
+.. index::
+   pair: NMComplexField; Si
+
+:spadfun:`Si`\: % -> % 
+  \ :code:`Si(x)`\  returns the sine integral of \ :code:`x`\ .
 
 .. _l4e4d436f6d706c65784669656c64-73696e:
 
@@ -1558,10 +1829,18 @@ NMComplexField
 :spadfun:`urand01`\: () -> % 
   \ :code:`urand01()`\  returns an uniformly distributed random number contained in the unit disk.
 
+.. _l4e4d436f6d706c65784669656c64-776569657273747261737350:
+
+.. index::
+   pair: NMComplexField; weierstrassP
+
+:spadfun:`weierstrassP`\: (%, %) -> % 
+  \ :code:`weierstrassP(z,tau)`\  returns the elliptic Weierstrass \ :code:`P`\  function.
+
 .. _l4e4d436f6d706c65784669656c64-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -1716,6 +1995,10 @@ NMComplexField
 
 \ :ref:`multiplicativeValuation <l6d756c7469706c6963617469766556616c756174696f6e>`\  if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
 
+\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
+
+\ :ref:`NMField <l4e4d4669656c64>`\  
+
 \ :ref:`NMRing <l4e4d52696e67>`\  
 
 \ :ref:`NMType <l4e4d54797065>`\  
@@ -1775,6 +2058,8 @@ NMComplexField
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`StepThrough <l537465705468726f756768>`\  if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`FiniteFieldCategory <l46696e6974654669656c6443617465676f7279>`\ 
 

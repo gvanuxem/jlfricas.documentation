@@ -5,7 +5,7 @@
 NMFraction R
 ============
 
-:viewcode:`jnemo.spad line 1833 <jnemo.spad#L1833>` :editcode:`[edit on github] <jnemo.spad#L1833>`
+:viewcode:`jnemo.spad line 1948 <jnemo.spad#L1948>` :editcode:`[edit on github] <jnemo.spad#L1948>`
 
 * R: Join(\ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\ , \ :ref:`IntegralDomain <l496e74656772616c446f6d61696e>`\ )
 
@@ -15,8 +15,8 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d4672616374696f6e-31:
 
@@ -110,12 +110,12 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-3c3d:
 
-\ :ref:`<= <l5061727469616c4f72646572-3c3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`<= <l5061727469616c4f72646572-3c3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
   from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
 
 .. _l4e4d4672616374696f6e-3c:
 
-\ :ref:`< <l5061727469616c4f72646572-3c>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`< <l5061727469616c4f72646572-3c>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
   from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
 
 .. _l4e4d4672616374696f6e-3d:
@@ -125,12 +125,12 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-3e3d:
 
-\ :ref:`>= <l5061727469616c4f72646572-3e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`>= <l5061727469616c4f72646572-3e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
   from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
 
 .. _l4e4d4672616374696f6e-3e:
 
-\ :ref:`> <l5061727469616c4f72646572-3e>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`> <l5061727469616c4f72646572-3e>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
   from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
 
 .. _l4e4d4672616374696f6e-5e:
@@ -161,8 +161,8 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-616273:
 
-\ :ref:`abs <l4f7264657265644162656c69616e47726f7570-616273>`\ \: % -> % if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`abs <l4f7264657265644162656c69616e53656d6947726f7570-616273>`\ \: % -> % if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+  from \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
 
 .. _l4e4d4672616374696f6e-616e6e6968696c6174653f:
 
@@ -477,6 +477,11 @@ Nemo Fractions over an integral domain.
 \ :ref:`inv <l4469766973696f6e52696e67-696e76>`\ \: % -> % 
   from \ :ref:`DivisionRing <l4469766973696f6e52696e67>`\ 
 
+.. _l4e4d4672616374696f6e-6972726564756369626c653f:
+
+\ :ref:`irreducible? <l4e4d52696e67-6972726564756369626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
+
 .. _l4e4d4672616374696f6e-6a6c41626f7574:
 
 \ :ref:`jlAbout <l4a4c4f626a65637454797065-6a6c41626f7574>`\ \: % -> \ :ref:`Void <l566f6964>`\  
@@ -618,12 +623,12 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-6d6178:
 
-\ :ref:`max <l4f726465726564536574-6d6178>`\ \: (%, %) -> % if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`max <l4f726465726564536574-6d6178>`\ \: (%, %) -> % if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
   from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4672616374696f6e-6d696e:
 
-\ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
   from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4672616374696f6e-6d697373696e673f:
@@ -643,8 +648,8 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-6e656761746976653f:
 
-\ :ref:`negative? <l4f7264657265644162656c69616e47726f7570-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`negative? <l4f726465726564536574-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4672616374696f6e-6e6578744974656d:
 
@@ -692,8 +697,8 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-706f7369746976653f:
 
-\ :ref:`positive? <l4f7264657265644162656c69616e47726f7570-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`positive? <l4f726465726564536574-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4672616374696f6e-7072696d653f:
 
@@ -809,13 +814,13 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d4672616374696f6e-7369676e:
 
-\ :ref:`sign <l4f7264657265644162656c69616e47726f7570-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-  from \ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\ 
+\ :ref:`sign <l4f726465726564536574-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4e4d4672616374696f6e-73697a654c6573733f:
 
@@ -879,8 +884,8 @@ Nemo Fractions over an integral domain.
 
 .. _l4e4d4672616374696f6e-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -995,6 +1000,8 @@ Nemo Fractions over an integral domain.
 
 \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\  
 
+\ :ref:`MagmaWithZero <l4d61676d61576974685a65726f>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
+
 \ :ref:`Module <l4d6f64756c65>`\  % 
 
 \ :ref:`Module <l4d6f64756c65>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`CharacteristicZero <l43686172616374657269737469635a65726f>`\ 
@@ -1027,27 +1034,17 @@ Nemo Fractions over an integral domain.
 
 \ :ref:`noZeroDivisors <l6e6f5a65726f44697669736f7273>`\  
 
-\ :ref:`OrderedAbelianGroup <l4f7264657265644162656c69616e47726f7570>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
+\ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
 
-\ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
+\ :ref:`OrderedMagmaWithZero <l4f7264657265644d61676d61576974685a65726f>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
 
-\ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
+\ :ref:`OrderedRing <l4f72646572656452696e67>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
 
-\ :ref:`OrderedCancellationAbelianMonoid <l4f72646572656443616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-
-\ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-
-\ :ref:`OrderedMonoid <l4f7264657265644d6f6e6f6964>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-
-\ :ref:`OrderedRing <l4f72646572656452696e67>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-
-\ :ref:`OrderedSemiGroup <l4f72646572656453656d6947726f7570>`\  if R has \ :ref:`OrderedIntegralDomain <l4f726465726564496e74656772616c446f6d61696e>`\ 
-
-\ :ref:`OrderedSet <l4f726465726564536574>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`OrderedSet <l4f726465726564536574>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
 
 \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\  if R has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
-\ :ref:`PartialOrder <l5061727469616c4f72646572>`\  if R has \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+\ :ref:`PartialOrder <l5061727469616c4f72646572>`\  if R has \ :ref:`OrderedRing <l4f72646572656452696e67>`\ 
 
 \ :ref:`Patternable <l5061747465726e61626c65>`\  R 
 
@@ -1090,6 +1087,8 @@ Nemo Fractions over an integral domain.
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`StepThrough <l537465705468726f756768>`\  if R has \ :ref:`StepThrough <l537465705468726f756768>`\ 
 

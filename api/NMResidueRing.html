@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="NMUnivariateLaurentPolynomial(R, x)" href="NMUnivariateLaurentPolynomial.html" />
-    <link rel="prev" title="NMRealField" href="NMRealField.html" /> 
+    <link rel="prev" title="NMResidueField(R, P, poly)" href="NMResidueField.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
@@ -31,7 +31,7 @@
           <a href="NMUnivariateLaurentPolynomial.html" title="NMUnivariateLaurentPolynomial(R, x)"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="NMRealField.html" title="NMRealField"
+          <a href="NMResidueField.html" title="NMResidueField(R, P, poly)"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
@@ -47,15 +47,15 @@
             
   <section id="nmresiduering-r-p-poly">
 <span id="l4e4d5265736964756552696e67"></span><span id="index-0"></span><h1>NMResidueRing(R, P, poly)<a class="headerlink" href="#nmresiduering-r-p-poly" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L560">jnemo.spad line 560</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L560">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L558">jnemo.spad line 558</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L558">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="NMCommutativeRing.html#l4e4d436f6d6d7574617469766552696e67"><span class="std std-ref">NMCommutativeRing</span></a></p></li>
-<li><p>P: Join(<a class="reference internal" href="NMUnivariatePolynomialCategory.html#l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">NMUnivariatePolynomialCategory</span></a> R, <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a>)</p></li>
+<li><p>P: Join(<a class="reference internal" href="NMUnivariatePolynomialCategory.html#l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">NMUnivariatePolynomialCategory</span></a> R, <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a>)</p></li>
 <li><p>poly: P</p></li>
 </ul>
-<p>This domain allows the manipulation of Nemo residue ring elements using the AbstractAlgebra and Nemo Julia packages. Note: this is only implemen</p>
+<p>This domain allows the manipulation of Nemo residue ring elements using the AbstractAlgebra and Nemo Julia packages. Note: this is only implemented for univariate polynomial rings.</p>
 <dl class="simple" id="l4e4d5265736964756552696e67-30">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="SetWithZero.html#l536574576974685a65726f-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="SetWithZero.html#l536574576974685a65726f"><span class="std std-ref">SetWithZero</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-31">
@@ -150,6 +150,10 @@
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
+<span id="l4e4d5265736964756552696e67-64617461"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">data</span>: % -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">data(x)</span></code> returns the data of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. See <a class="reference external" href="https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/">https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/</a> for more information.</p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-657175616c3f">
 <dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-657175616c3f"><span class="std std-ref">equal?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
@@ -162,12 +166,16 @@
 <dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6578616374446976696465"><span class="std std-ref">exactDivide</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d5265736964756552696e67-657874656e646564476364"></span><dl class="simple" id="index-6">
+<span id="l4e4d5265736964756552696e67-657874656e646564476364"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">extendedGcd</span>: (%, %) -&gt; Record(g: %, s: %, t: %)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">extendedGcd(x,</span> <span class="pre">y)</span></code> returns the extended <code class="code docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
-<span id="l4e4d5265736964756552696e67-676364"></span><dl class="simple" id="index-7">
+<span id="l4e4d5265736964756552696e67-676364"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">gcd</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">gcd(x,</span> <span class="pre">y)</span></code> returns a greatest common divisor of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code> using the data and modulus associated.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4e4d5265736964756552696e67-6972726564756369626c653f">
+<dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-6972726564756369626c653f"><span class="std std-ref">irreducible?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-6a6c41626f7574">
@@ -246,15 +254,15 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d5265736964756552696e67-6a6e72657369647565"></span><dl class="simple" id="index-8">
+<span id="l4e4d5265736964756552696e67-6a6e72657369647565"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">jnresidue</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(i)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">i</span></code> as an element of the residue ring NMResidueRing.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-9">
+<dl class="simple" id="index-10">
 <dt><span class="spadfun">jnresidue</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(i)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">i</span></code> as an element of the residue ring NMResidueRing.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-10">
+<dl class="simple" id="index-11">
 <dt><span class="spadfun">jnresidue</span>: P -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(p)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">p</span></code> as an element of the residue ring NMResidueRing.</p>
 </dd>
 </dl>
@@ -272,8 +280,16 @@
 <dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
+<span id="l4e4d5265736964756552696e67-6c696674"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">lift</span>: % -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">lift(x)</span></code> returns the lift of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. See <a class="reference external" href="https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/">https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/</a> for more information.</p>
+</dd>
+</dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-6d697373696e673f">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d697373696e673f"><span class="std std-ref">missing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<span id="l4e4d5265736964756552696e67-6d6f64756c7573"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">modulus</span>: () -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">modulus</span> <span class="pre">returns</span></code> the modulus of the residue ring.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-6d757461626c653f">
@@ -311,7 +327,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-73616d706c65">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="SetWithZero.html#l536574576974685a65726f-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="SetWithZero.html#l536574576974685a65726f"><span class="std std-ref">SetWithZero</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-737472696e67">
@@ -327,7 +343,7 @@
 </dd>
 </dl>
 <dl class="simple" id="l4e4d5265736964756552696e67-7a65726f3f">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="SetWithZero.html#l536574576974685a65726f-7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SetWithZero.html#l536574576974685a65726f"><span class="std std-ref">SetWithZero</span></a></p>
 </dd>
 </dl>
 <p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
@@ -365,6 +381,7 @@
 <p><a class="reference internal" href="SemiRing.html#l53656d6952696e67"><span class="std std-ref">SemiRing</span></a></p>
 <p><a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a></p>
 <p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="SetWithZero.html#l536574576974685a65726f"><span class="std std-ref">SetWithZero</span></a></p>
 <p><a class="reference internal" href="TwoSidedRecip.html#l54776f53696465645265636970"><span class="std std-ref">TwoSidedRecip</span></a></p>
 <p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
 <span class="target" id="jlfricas-mailing-list"></span></section>
@@ -417,7 +434,7 @@
           <a href="NMUnivariateLaurentPolynomial.html" title="NMUnivariateLaurentPolynomial(R, x)"
              >next</a> |</li>
         <li class="right" >
-          <a href="NMRealField.html" title="NMRealField"
+          <a href="NMResidueField.html" title="NMResidueField(R, P, poly)"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>

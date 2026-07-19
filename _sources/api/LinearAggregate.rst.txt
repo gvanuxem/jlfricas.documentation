@@ -335,7 +335,7 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
    pair: LinearAggregate; merge_unique
 
 :spadfun:`merge_unique`\: ((S, S) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %, %) -> % if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
-  \ :code:`merge_unique(p, a, b)`\  returns an aggregate \ :code:`c`\  which merges a and \ :code:`b`\  uniquely. \ :code:`p`\  is a binary predicate and aggregate a and \ :code:`b`\  is assumed to be ordered under \ :code:`p`\  and without duplicates. The result aggregate \ :code:`c`\  is also ordered under \ :code:`p`\ , and contains all elements from a and \ :code:`b`\ , also without duplicates. For example, \ :code:`merge_unique(<, [1, 3, 5], [3, 5, 6])`\  returns \ :code:`[1, 3, 5, 6]`\ .
+  \ :code:`merge_unique(p, a, b)`\  returns an aggregate \ :code:`c`\  which merges a and \ :code:`b`\  uniquely. \ :code:`p`\  is a binary predicate and aggregates a and \ :code:`b`\  are assumed to be ordered under \ :code:`p`\  and without duplicates. The result aggregate \ :code:`c`\  is also ordered under \ :code:`p`\ , and contains all elements from a and \ :code:`b`\ , also without duplicates. For example, \ :code:`merge_unique(<, [1, 3, 5], [3, 5, 6])`\  returns \ :code:`[1, 3, 5, 6]`\ .
 
 .. _l4c696e656172416767726567617465-6d696e:
 
@@ -355,6 +355,11 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
 
 \ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c696e656172416767726567617465-6e656761746976653f:
+
+\ :ref:`negative? <l4f726465726564536574-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4c696e656172416767726567617465-6e6577:
 
@@ -390,6 +395,11 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
 
 :spadfun:`position`\: (S, %, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  if S has \ :ref:`BasicType <l426173696354797065>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
   \ :code:`position(x, a, n)`\  returns the index \ :code:`i`\  of the first occurrence of \ :code:`x`\  in \ :code:`a`\  where \ :code:`i >= n`\ , and \ :code:`minIndex(a) - 1`\  if no such \ :code:`x`\  is found.
+
+.. _l4c696e656172416767726567617465-706f7369746976653f:
+
+\ :ref:`positive? <l4f726465726564536574-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4c696e656172416767726567617465-71656c74:
 
@@ -473,6 +483,11 @@ A linear aggregate is an aggregate whose elements are indexed by integers. Examp
 
 :spadfun:`setelt!`\: (%, \ :ref:`UniversalSegment <l556e6976657273616c5365676d656e74>`\  \ :ref:`Integer <l496e7465676572>`\ , S) -> S if % has \ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\ 
   \ :code:`setelt!(u, i..j, x)`\  (also written: \ :code:`u(i..j) := x`\ ) destructively replaces each element in the segment \ :code:`u(i..j)`\  by \ :code:`x`\ . The value \ :code:`x`\  is returned. Note: \ :code:`u`\  is destructively changed so that \ :code:`u.k := x for k in i..j`\ ; its length remains unchanged.
+
+.. _l4c696e656172416767726567617465-7369676e:
+
+\ :ref:`sign <l4f726465726564536574-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\  and S has \ :ref:`OrderedSet <l4f726465726564536574>`\  and % has \ :ref:`finiteAggregate <l66696e697465416767726567617465>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l4c696e656172416767726567617465-73697a653f:
 

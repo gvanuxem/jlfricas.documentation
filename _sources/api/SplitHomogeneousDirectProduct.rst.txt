@@ -5,13 +5,13 @@
 SplitHomogeneousDirectProduct(dimtot, dim1, S)
 ==============================================
 
-:viewcode:`gdirprod.spad line 130 <gdirprod.spad#L130>` :editcode:`[edit on github] <gdirprod.spad#L130>`
+:viewcode:`gdirprod.spad line 133 <gdirprod.spad#L133>` :editcode:`[edit on github] <gdirprod.spad#L133>`
 
 * dimtot: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
 
 * dim1: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
 
-* S: \ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\ 
+* S: \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
 
 
 This type represents the finite direct or cartesian product of an underlying ordered component type. The vectors are ordered as if they were split into two blocks. The \ :code:`dim1`\  parameter specifies the length of the first block. The ordering is lexicographic between the blocks but acts like \ :ref:`HomogeneousDirectProduct <l486f6d6f67656e656f757344697265637450726f64756374>`\  within each block. This type is a suitable third argument for \ :ref:`GeneralDistributedMultivariatePolynomial <l47656e6572616c44697374726962757465644d756c746976617269617465506f6c796e6f6d69616c>`\ .
@@ -19,8 +19,8 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  or % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`SemiRng <l53656d69526e67>`\ 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-31:
 
@@ -50,7 +50,7 @@ This type represents the finite direct or cartesian product of an underlying ord
   from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
 
-\ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
+\ :ref:`\* <l4162656c69616e4d6f6e6f6964-2a>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  or % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`SemiRng <l53656d69526e67>`\ 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 
@@ -114,6 +114,11 @@ This type represents the finite direct or cartesian product of an underlying ord
 \ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`BasicType <l426173696354797065>`\ 
 
+.. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-616273:
+
+\ :ref:`abs <l4f7264657265644162656c69616e53656d6947726f7570-616273>`\ \: % -> % if % has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+  from \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\ 
+
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-616e6e6968696c6174653f:
 
 \ :ref:`annihilate? <l526e67-616e6e6968696c6174653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`Ring <l52696e67>`\ 
@@ -157,12 +162,12 @@ This type represents the finite direct or cartesian product of an underlying ord
   from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l4e6f6e4173736f6369617469766552696e67-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % if S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\  or S has \ :ref:`Ring <l52696e67>`\ 
-  from \ :ref:`NonAssociativeRing <l4e6f6e4173736f6369617469766552696e67>`\ 
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: \ :ref:`Integer <l496e7465676572>`\  -> % if S has \ :ref:`Ring <l52696e67>`\  or S has \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`Integer <l496e7465676572>`\ 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  \ :ref:`Integer <l496e7465676572>`\ 
 
 
-\ :ref:`coerce <l416c6765627261-636f65726365>`\ \: S -> % 
-  from \ :ref:`Algebra <l416c6765627261>`\  S
+\ :ref:`coerce <l436f65726369626c6546726f6d-636f65726365>`\ \: S -> % 
+  from \ :ref:`CoercibleFrom <l436f65726369626c6546726f6d>`\  S
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-636f6d6d757461746f72:
 
@@ -261,7 +266,7 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-646f74:
 
-\ :ref:`dot <l44697265637450726f6475637443617465676f7279-646f74>`\ \: (%, %) -> S if S has \ :ref:`SemiRng <l53656d69526e67>`\ 
+\ :ref:`dot <l44697265637450726f6475637443617465676f7279-646f74>`\ \: (%, %) -> S if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`SemiRng <l53656d69526e67>`\ 
   from \ :ref:`DirectProductCategory <l44697265637450726f6475637443617465676f7279>`\ (dimtot, S)
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-656c74:
@@ -441,6 +446,11 @@ This type represents the finite direct or cartesian product of an underlying ord
 \ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`Aggregate <l416767726567617465>`\ 
 
+.. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-6e656761746976653f:
+
+\ :ref:`negative? <l4f726465726564536574-6e656761746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-6f6e653f:
 
 \ :ref:`one? <l4d61676d6157697468556e6974-6f6e653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`Monoid <l4d6f6e6f6964>`\ 
@@ -448,7 +458,7 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-6f70706f736974653f:
 
-\ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+\ :ref:`opposite? <l4162656c69616e4d6f6e6f6964-6f70706f736974653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  or % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`SemiRng <l53656d69526e67>`\ 
   from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-7061727473:
@@ -460,6 +470,11 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 \ :ref:`plenaryPower <l4e6f6e4173736f63696174697665416c6765627261-706c656e617279506f776572>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % if S has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
   from \ :ref:`NonAssociativeAlgebra <l4e6f6e4173736f63696174697665416c6765627261>`\  S
+
+.. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-706f7369746976653f:
+
+\ :ref:`positive? <l4f726465726564536574-706f7369746976653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-71656c74:
 
@@ -535,8 +550,13 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l4d61676d6157697468556e6974-73616d706c65>`\ \: % 
+  from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
+
+.. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-7369676e:
+
+\ :ref:`sign <l4f726465726564536574-7369676e>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  if % has \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-73697a653f:
 
@@ -565,18 +585,18 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-756e6974566563746f72:
 
-\ :ref:`unitVector <l44697265637450726f6475637443617465676f7279-756e6974566563746f72>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % if S has \ :ref:`Monoid <l4d6f6e6f6964>`\ 
+\ :ref:`unitVector <l44697265637450726f6475637443617465676f7279-756e6974566563746f72>`\ \: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> % if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`Monoid <l4d6f6e6f6964>`\ 
   from \ :ref:`DirectProductCategory <l44697265637450726f6475637443617465676f7279>`\ (dimtot, S)
 
 .. _l53706c6974486f6d6f67656e656f757344697265637450726f64756374-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  or % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`SemiRng <l53656d69526e67>`\ 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  if S has \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
 
-\ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  
+\ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
 
 \ :ref:`AbelianProductCategory <l4162656c69616e50726f6475637443617465676f7279>`\  S 
 
@@ -674,13 +694,9 @@ This type represents the finite direct or cartesian product of an underlying ord
 
 \ :ref:`NonAssociativeSemiRng <l4e6f6e4173736f6369617469766553656d69526e67>`\  if S has \ :ref:`SemiRng <l53656d69526e67>`\ 
 
-\ :ref:`OrderedAbelianMonoid <l4f7264657265644162656c69616e4d6f6e6f6964>`\  
-
 \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\  if S has \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\ 
 
 \ :ref:`OrderedAbelianSemiGroup <l4f7264657265644162656c69616e53656d6947726f7570>`\  
-
-\ :ref:`OrderedCancellationAbelianMonoid <l4f72646572656443616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964>`\  if S has \ :ref:`OrderedAbelianMonoidSup <l4f7264657265644162656c69616e4d6f6e6f6964537570>`\ 
 
 \ :ref:`OrderedSet <l4f726465726564536574>`\  
 
@@ -711,6 +727,8 @@ This type represents the finite direct or cartesian product of an underlying ord
 \ :ref:`SemiRng <l53656d69526e67>`\  if S has \ :ref:`SemiRng <l53656d69526e67>`\ 
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  if S has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  or % has \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\  and S has \ :ref:`SemiRng <l53656d69526e67>`\ 
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  if S has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
 
