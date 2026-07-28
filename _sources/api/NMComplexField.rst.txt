@@ -5,7 +5,7 @@
 NMComplexField
 ==============
 
-:viewcode:`jnball.spad line 1330 <jnball.spad#L1330>` :editcode:`[edit on github] <jnball.spad#L1330>`
+:viewcode:`jnball.spad line 1385 <jnball.spad#L1385>` :editcode:`[edit on github] <jnball.spad#L1385>`
 
 
 \ :ref:`NMComplexField <l4e4d436f6d706c65784669656c64>`\  implements arbitrary precision ball arithmetic using the Nemo Julia package.
@@ -139,15 +139,8 @@ NMComplexField
 
 .. _l4e4d436f6d706c65784669656c64-616273:
 
-\ :ref:`abs <l436f6d706c657843617465676f7279-616273>`\ \: % -> % 
+\ :ref:`abs <l436f6d706c657843617465676f7279-616273>`\ \: % -> \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  
   from \ :ref:`ComplexCategory <l436f6d706c657843617465676f7279>`\  \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ 
-
-
-.. index::
-   pair: NMComplexField; abs
-
-:spadfun:`abs`\: % -> \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  
-  \ :code:`abs(x)`\  returns the absolute value of \ :code:`x`\ .
 
 .. _l4e4d436f6d706c65784669656c64-616363757261637942697473:
 
@@ -657,13 +650,13 @@ NMComplexField
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  has \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
 
-.. _l4e4d436f6d706c65784669656c64-646947616d6d61:
+.. _l4e4d436f6d706c65784669656c64-646967616d6d61:
 
 .. index::
-   pair: NMComplexField; diGamma
+   pair: NMComplexField; digamma
 
-:spadfun:`diGamma`\: % -> % 
-  \ :code:`diGamma(x)`\  returns logarithmic derivative of the gamma function evaluated at \ :code:`x`\ .
+:spadfun:`digamma`\: % -> % 
+  \ :code:`digamma(x)`\  returns logarithmic derivative of the gamma function evaluated at \ :code:`x`\ .
 
 .. _l4e4d436f6d706c65784669656c64-64697363726574654c6f67:
 
@@ -1240,6 +1233,21 @@ NMComplexField
 \ :ref:`lift <l4d6f6e6f67656e6963416c6765627261-6c696674>`\ \: % -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\  
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (\ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ , \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  \ :ref:`NMRealField <l4e4d5265616c4669656c64>`\ )
 
+.. _l4e4d436f6d706c65784669656c64-6c696e656172446570656e64656e6365:
+
+.. index::
+   pair: NMComplexField; linearDependence
+
+:spadfun:`linearDependence`\: (\ :ref:`JLMatrix <l4a4c4d6174726978>`\  %, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+  \ :code:`linearDependence(mat, prec)`\  finds a linear dependence of the rows of \ :code:`mat`\ . Heuristic algorithm.
+
+
+.. index::
+   pair: NMComplexField; linearDependence
+
+:spadfun:`linearDependence`\: (\ :ref:`JLVector <l4a4c566563746f72>`\  %, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLVector <l4a4c566563746f72>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+  \ :code:`linearDependence(vec, prec)`\  finds a linear dependence of the entries of \ :code:`vec`\ . Heuristic algorithm.
+
 .. _l4e4d436f6d706c65784669656c64-6c6f673170:
 
 .. index::
@@ -1434,7 +1442,7 @@ NMComplexField
 .. index::
    pair: NMComplexField; polylog
 
-:spadfun:`polylog`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+:spadfun:`polylog`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
   \ :code:`polylog(n,x)`\  returns the polylogarithm function Li_n(\ :code:`x`\ ).
 
 .. _l4e4d436f6d706c65784669656c64-707265636973696f6e:

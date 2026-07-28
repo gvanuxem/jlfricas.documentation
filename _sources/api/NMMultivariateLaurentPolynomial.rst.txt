@@ -5,7 +5,7 @@
 NMMultivariateLaurentPolynomial(R, VarSet)
 ==========================================
 
-:viewcode:`jnpoly.spad line 1470 <jnpoly.spad#L1470>` :editcode:`[edit on github] <jnpoly.spad#L1470>`
+:viewcode:`jnpoly.spad line 1513 <jnpoly.spad#L1513>` :editcode:`[edit on github] <jnpoly.spad#L1513>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -64,7 +64,7 @@ This type is a basic representation of sparse, distributed multivariate Laurent 
    pair: NMMultivariateLaurentPolynomial; *
 
 :spadfun:`\*`\: (\ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\ , %) -> % if R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  or R has \ :ref:`Algebra <l416c6765627261>`\  \ :ref:`NMFraction <l4e4d4672616374696f6e>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
-  \ :code:`q * p`\  is the product of \ :code:`p`\  with a rational \ :code:`q`\  (Fraction(Intger))
+  \ :code:`q * p`\  is the product of \ :code:`p`\  with a rational \ :code:`q`\  (Fraction(Integer))
 
 
 \ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
@@ -272,6 +272,14 @@ This type is a basic representation of sparse, distributed multivariate Laurent 
 \ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
+.. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-636f6e7374616e743f:
+
+.. index::
+   pair: NMMultivariateLaurentPolynomial; constant?
+
+:spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`constant?(p)`\  checks whether or not \ :code:`p`\  is a constant polynomial.
+
 .. _l4e4d4d756c7469766172696174654c617572656e74506f6c796e6f6d69616c-636f6e7374616e74436f656666696369656e74:
 
 .. index::
@@ -363,8 +371,11 @@ This type is a basic representation of sparse, distributed multivariate Laurent 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet
 
 
-\ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
-  from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet
+.. index::
+   pair: NMMultivariateLaurentPolynomial; differentiate
+
+:spadfun:`differentiate`\: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
+  \ :code:`differentiate(p, v)`\  differentiates \ :code:`p`\  with respect to \ :code:`v`\ .
 
 
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
