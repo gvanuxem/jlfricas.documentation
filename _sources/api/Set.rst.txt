@@ -10,7 +10,7 @@ Set S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-A set over a domain \ :code:`S`\  models the usual mathematical notion of a finite set of elements from \ :code:`S`\ . Sets are unordered collections of distinct elements (that is, order and duplication does not matter). The notation \ :code:`set [a, b, c]`\  can be used to create a set and the usual operations such as union and intersection are available to form new sets. If \ :code:`S`\  has OrderdSet, \Language{} maintains the entries in sorted order. Specifically, the parts function returns the entries as a list in ascending order and the \ :spadfun:`extract!`\  operation returns the maximum entry. Given two sets \ :code:`s`\  and \ :code:`t`\  where \ :code:`\#s = m`\  and \ :code:`\#t = n`\ , the complexity of \ :code:`s = t`\  is \ :code:`O(min(n, m))`\  \ :code:`s < t`\  is \ :code:`O(max(n, m))`\  \ :code:`union(s, t)`\ , \ :code:`intersect(s, t)`\ , \ :code:`difference(s, t)`\ , \ :code:`symmetricDifference(s, t)`\  is \ :code:`O(max(n, m))`\  \ :code:`insert!(x, t)`\  and \ :code:`remove!(x, t)`\  is \ :code:`O(n)`\  If \ :code:`S`\  has OrderdSet, then complexity of \ :code:`member?(x, t)`\  is \ :code:`O(log n)`\ , otherwise complexity is \ :code:`O(n)`\ .
+A set over a domain \ :code:`S`\  models the usual mathematical notion of a finite set of elements from \ :code:`S`\ . Sets are unordered collections of distinct elements (that is, order and duplication does not matter). The notation \ :code:`set [a, b, c]`\  can be used to create a set and the usual operations such as union and intersection are available to form new sets. If \ :code:`S`\  has OrderedSet, \Language{} maintains the entries in sorted order. Specifically, the parts function returns the entries as a list in ascending order and the \ :spadfun:`extract!`\  operation returns the maximum entry. Given two sets \ :code:`s`\  and \ :code:`t`\  where \ :code:`\#s = m`\  and \ :code:`\#t = n`\ , the complexity of \ :code:`s = t`\  is \ :code:`O(min(n, m))`\  \ :code:`s < t`\  is \ :code:`O(max(n, m))`\  \ :code:`union(s, t)`\ , \ :code:`intersect(s, t)`\ , \ :code:`difference(s, t)`\ , \ :code:`symmetricDifference(s, t)`\  is \ :code:`O(max(n, m))`\  \ :code:`insert!(x, t)`\  and \ :code:`remove!(x, t)`\  is \ :code:`O(n)`\  If \ :code:`S`\  has OrderedSet, then complexity of \ :code:`member?(x, t)`\  is \ :code:`O(log n)`\ , otherwise complexity is \ :code:`O(n)`\ .
 
 
 .. _l536574-23:
@@ -328,8 +328,8 @@ A set over a domain \ :code:`S`\  models the usual mathematical notion of a fini
 
 .. _l536574-736d616c6c65723f:
 
-\ :ref:`smaller? <l436f6d70617261626c65-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
-  from \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+\ :ref:`smaller? <l436f6d70617261626c65526570726573656e746174696f6e-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+  from \ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\ 
 
 .. _l536574-7375627365743f:
 
@@ -371,6 +371,8 @@ A set over a domain \ :code:`S`\  models the usual mathematical notion of a fini
 \ :ref:`Collection <l436f6c6c656374696f6e>`\  S 
 
 \ :ref:`Comparable <l436f6d70617261626c65>`\  if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
+
+\ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\  if S has \ :ref:`Comparable <l436f6d70617261626c65>`\ 
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\  if S has \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ 
 

@@ -1,0 +1,48 @@
+.. index:: ComparableRepresentation
+
+.. _l436f6d70617261626c65526570726573656e746174696f6e:
+
+ComparableRepresentation
+========================
+
+:viewcode:`catdef.spad line 1003 <catdef.spad#L1003>` :editcode:`[edit on github] <catdef.spad#L1003>`
+
+
+The class of sets equipped with ordering relation depending on representation of elements (needed for technical reasons). The ordering predicate gives strict linear pre-order on representatives. However a different representatives may give different results. If both \ :code:`smaller?(x, y)`\  and \ :code:`smaller?(y, x)`\  are \ :code:`false`\ , then \ :code:`x`\  and \ :code:`y`\  are equal under domain equality. But when \ :code:`x`\  and \ :code:`y`\  are equal under domain equality, \ :code:`smaller?(x, y)`\  may give arbitrary result.
+
+
+.. _l436f6d70617261626c65526570726573656e746174696f6e-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l436f6d70617261626c65526570726573656e746174696f6e-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l436f6d70617261626c65526570726573656e746174696f6e-636f65726365:
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+.. _l436f6d70617261626c65526570726573656e746174696f6e-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l436f6d70617261626c65526570726573656e746174696f6e-736d616c6c65723f:
+
+.. index::
+   pair: ComparableRepresentation; smaller?
+
+:spadfun:`smaller?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`smaller?(x, y)`\  is a strict ordering on depending on representatives of elements of the set. If \ :code:`\%`\  has \ :ref:`Comparable <l436f6d70617261626c65>`\  then \ :code:`smaller?`\  gives mathematical linear order.
+
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+

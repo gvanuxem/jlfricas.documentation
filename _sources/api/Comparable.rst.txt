@@ -8,7 +8,7 @@ Comparable
 :viewcode:`catdef.spad line 991 <catdef.spad#L991>` :editcode:`[edit on github] <catdef.spad#L991>`
 
 
-The class of sets equipped with possibly unnatural linear order (needed for technical reasons).
+The class of sets where ordering predicate provided by \ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\  gives mathematical linear order. That is, if \ :code:`x = y`\  then for all \ :code:`z`\ , \ :code:`smaller?(x, z)`\  is equivalent to \ :code:`smaller?(y, z)`\  and \ :code:`smaller?(z, x)`\  is equivalent to \ :code:`smaller?(z, y)`\ . This category exist because declaring \ :ref:`OrderedSet <l4f726465726564536574>`\  may have undesirable consequences, but we still want to use ordering predicate.
 
 
 .. _l436f6d70617261626c65-3d:
@@ -33,16 +33,15 @@ The class of sets equipped with possibly unnatural linear order (needed for tech
 
 .. _l436f6d70617261626c65-736d616c6c65723f:
 
-.. index::
-   pair: Comparable; smaller?
-
-:spadfun:`smaller?`\: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ :code:`smaller?(x, y)`\  is a strict total ordering on the elements of the set.
+\ :ref:`smaller? <l436f6d70617261626c65526570726573656e746174696f6e-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\ 
 
 
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
 

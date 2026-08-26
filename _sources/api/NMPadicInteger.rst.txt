@@ -5,9 +5,9 @@
 NMPadicInteger p
 ================
 
-:viewcode:`jnpadic.spad line 221 <jnpadic.spad#L221>` :editcode:`[edit on github] <jnpadic.spad#L221>`
+:viewcode:`jnpadic.spad line 223 <jnpadic.spad#L223>` :editcode:`[edit on github] <jnpadic.spad#L223>`
 
-* p: \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+* p: \ :ref:`Integer <l496e7465676572>`\ 
 
 
 Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as sum(\ :code:`i`\  = 0.., a[\ :code:`i`\ ] * p^i), where the a[\ :code:`i`\ ] lie in 0, 1, ..., (\ :code:`p`\  - 1) using the Nemo Julia package.
@@ -15,8 +15,8 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 
 .. _l4e4d5061646963496e7465676572-30:
 
-\ :ref:`0 <l4162656c69616e4d6f6e6f6964-30>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`0 <l536574576974685a65726f-30>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d5061646963496e7465676572-31:
 
@@ -154,7 +154,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 .. _l4e4d5061646963496e7465676572-617070726f78696d617465:
 
 \ :ref:`approximate <l4e4d50616469634e756d62657243617465676f7279-617070726f78696d617465>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-6173736f6369617465733f:
 
@@ -203,7 +203,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 .. _l4e4d5061646963496e7465676572-636f6d706c657465:
 
 \ :ref:`complete <l4e4d50616469634e756d62657243617465676f7279-636f6d706c657465>`\ \: % -> % 
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-636f6e76657274:
 
@@ -253,7 +253,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 .. _l4e4d5061646963496e7465676572-657874656e64:
 
 \ :ref:`extend <l4e4d50616469634e756d62657243617465676f7279-657874656e64>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-657874656e6465644575636c696465616e:
 
@@ -277,6 +277,11 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 
 \ :ref:`gcdPolynomial <l476364446f6d61696e-676364506f6c796e6f6d69616c>`\ \: (\ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
   from \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
+
+.. _l4e4d5061646963496e7465676572-6972726564756369626c653f:
+
+\ :ref:`irreducible? <l4e4d52696e67-6972726564756369626c653f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`NMRing <l4e4d52696e67>`\ 
 
 .. _l4e4d5061646963496e7465676572-6a6c41626f7574:
 
@@ -336,7 +341,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 
 .. _l4e4d5061646963496e7465676572-6a6c4964:
 
-\ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`JLInt64 <l4a4c496e743634>`\  
+\ :ref:`jlId <l4a4c4f626a65637454797065-6a6c4964>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4e4d5061646963496e7465676572-6a6c696d726566:
@@ -456,12 +461,12 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 .. _l4e4d5061646963496e7465676572-6d6f64756c6f50:
 
 \ :ref:`moduloP <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c6f50>`\ \: % -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-6d6f64756c7573:
 
 \ :ref:`modulus <l4e4d50616469634e756d62657243617465676f7279-6d6f64756c7573>`\ \: () -> \ :ref:`Integer <l496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-6d756c74694575636c696465616e:
 
@@ -504,7 +509,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 .. _l4e4d5061646963496e7465676572-6f72646572:
 
 \ :ref:`order <l4e4d50616469634e756d62657243617465676f7279-6f72646572>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-706c656e617279506f776572:
 
@@ -540,7 +545,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 .. _l4e4d5061646963496e7465676572-71756f7469656e74427950:
 
 \ :ref:`quotientByP <l4e4d50616469634e756d62657243617465676f7279-71756f7469656e74427950>`\ \: % -> % 
-  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\ 
+  from \ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p
 
 .. _l4e4d5061646963496e7465676572-7265636970:
 
@@ -568,8 +573,8 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 
 .. _l4e4d5061646963496e7465676572-73616d706c65:
 
-\ :ref:`sample <l4162656c69616e4d6f6e6f6964-73616d706c65>`\ \: % 
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`sample <l536574576974685a65726f-73616d706c65>`\ \: % 
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 .. _l4e4d5061646963496e7465676572-73697a654c6573733f:
 
@@ -624,8 +629,8 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 
 .. _l4e4d5061646963496e7465676572-7a65726f3f:
 
-\ :ref:`zero? <l4162656c69616e4d6f6e6f6964-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  from \ :ref:`AbelianMonoid <l4162656c69616e4d6f6e6f6964>`\ 
+\ :ref:`zero? <l536574576974685a65726f-7a65726f3f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`SetWithZero <l536574576974685a65726f>`\ 
 
 
 \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\  
@@ -684,7 +689,7 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 
 \ :ref:`NMCommutativeRing <l4e4d436f6d6d7574617469766552696e67>`\  
 
-\ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  \ :ref:`NMInteger <l4e4d496e7465676572>`\  
+\ :ref:`NMPadicNumberCategory <l4e4d50616469634e756d62657243617465676f7279>`\  p 
 
 \ :ref:`NMRing <l4e4d52696e67>`\  
 
@@ -719,6 +724,8 @@ Implementation of \ :code:`Zp:`\  \ :code:`p`\ -adic numbers are represented as 
 \ :ref:`SemiRng <l53656d69526e67>`\  
 
 \ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`SetWithZero <l536574576974685a65726f>`\  
 
 \ :ref:`TwoSidedRecip <l54776f53696465645265636970>`\  
 

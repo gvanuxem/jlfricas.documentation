@@ -1,0 +1,93 @@
+.. index:: IndexedVariables
+
+.. _l496e64657865645661726961626c6573:
+
+IndexedVariables ls
+===================
+
+:viewcode:`misc.spad line 1 <misc.spad#L1>` :editcode:`[edit on github] <misc.spad#L1>`
+
+* ls: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+IndexedVariables(ls) implements variables which have names bases on symbols from list \ :code:`ls`\  with number appended. This is useful in case when one needs several groups of variables with variables within groups distinguished by appended number. Note: if symbol names differ only in trailing digits one can create elements of this domain which print the same, but are considered as distinct variables.
+
+
+.. _l496e64657865645661726961626c6573-3c3d:
+
+\ :ref:`<= <l5061727469616c4f72646572-3c3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l496e64657865645661726961626c6573-3c:
+
+\ :ref:`< <l5061727469616c4f72646572-3c>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l496e64657865645661726961626c6573-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l496e64657865645661726961626c6573-3e3d:
+
+\ :ref:`>= <l5061727469616c4f72646572-3e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l496e64657865645661726961626c6573-3e:
+
+\ :ref:`> <l5061727469616c4f72646572-3e>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`PartialOrder <l5061727469616c4f72646572>`\ 
+
+.. _l496e64657865645661726961626c6573-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l496e64657865645661726961626c6573-636f65726365:
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+.. _l496e64657865645661726961626c6573-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l496e64657865645661726961626c6573-6d6178:
+
+\ :ref:`max <l4f726465726564536574-6d6178>`\ \: (%, %) -> % 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+.. _l496e64657865645661726961626c6573-6d696e:
+
+\ :ref:`min <l4f726465726564536574-6d696e>`\ \: (%, %) -> % 
+  from \ :ref:`OrderedSet <l4f726465726564536574>`\ 
+
+.. _l496e64657865645661726961626c6573-736d616c6c65723f:
+
+\ :ref:`smaller? <l436f6d70617261626c65526570726573656e746174696f6e-736d616c6c65723f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\ 
+
+.. _l496e64657865645661726961626c6573-7661726961626c65:
+
+.. index::
+   pair: IndexedVariables; variable
+
+:spadfun:`variable`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> Union(%, failed) 
+  \ :code:`variable(s, n)`\  creates variable with name \ :code:`s`\  and suffix \ :code:`n`\ .
+
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`Comparable <l436f6d70617261626c65>`\  
+
+\ :ref:`ComparableRepresentation <l436f6d70617261626c65526570726573656e746174696f6e>`\  
+
+\ :ref:`OrderedSet <l4f726465726564536574>`\  
+
+\ :ref:`PartialOrder <l5061727469616c4f72646572>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+

@@ -93,11 +93,11 @@ It can plot functions and has an integrated help system.</p>
 </section>
 <section id="what-is-the-relation-between-fricas-and-axiom">
 <h3>2. What is the relation between FriCAS and Axiom?<a class="headerlink" href="#what-is-the-relation-between-fricas-and-axiom" title="Link to this heading">¶</a></h3>
-<p>FriCAS forked from Axiom in 2007. FriCAS seeks different development
-methodology and after fork removed several unused parts (without
+<p>FriCAS forked from Axiom in 2007. FriCAS seeks a different development
+methodology. After the fork, several unused parts are removed (without
 removing functionality). FriCAS fixed a lot of bugs and added new
-functionality. As of April 2013, in the src/algebra subdirectory,
-which hosts mathematical functionality about 25% of code was added
+functionality. As of August 2026, in the src/algebra subdirectory,
+which hosts mathematical functionality, about 40% of code was added
 after the fork.</p>
 <p>See also
 <a class="reference external" href="https://wiki.fricas.org/FriCASAdvantages">FriCAS advantages</a></p>
@@ -107,12 +107,12 @@ after the fork.</p>
 <p>The prefix <em>Fri</em> is a deliberate misspelling of Free – FriCAS sounds
 like Free CAS.</p>
 <p>There is also a second meaning: the Polish word “frykas” (which sounds
-similar to FriCAS) denotes generally tasty food (dainty); the French
+similar to FriCAS) generally denotes tasty food (dainty); the French
 word “fricassee” and the German “Frikassee” name a particular food.</p>
 </section>
 <section id="where-can-i-find-online-information-about-fricas">
 <h3>4. Where can I find online information about FriCAS?<a class="headerlink" href="#where-can-i-find-online-information-about-fricas" title="Link to this heading">¶</a></h3>
-<p>The main entrance point to documentation about FriCAS is
+<p>The main entry point to documentation about FriCAS is
 <a class="reference external" href="https://fricas.github.io">https://fricas.github.io</a>.</p>
 <p>The mailing list
 <a class="reference external" href="https://groups.google.com/group/fricas-devel?hl=en">https://groups.google.com/group/fricas-devel?hl=en</a>
@@ -137,7 +137,7 @@ An older version is available in .xhtml form at
 <p>The older bugtrackers at
 <a class="reference external" href="https://sourceforge.net/tracker/?atid=972421&amp;group_id=200168">SourceForge</a>
 and
-the <a class="reference external" href="`https://wiki.fricas.org/IssueTracker">FriCAS wiki</a>
+the <a class="reference external" href="https://wiki.fricas.org/IssueTracker">FriCAS wiki</a>
 should not be used anymore.</p>
 </section>
 <section id="how-can-one-use-fricas-in-a-pipe-or-in-batch-mode">
@@ -145,7 +145,7 @@ should not be used anymore.</p>
 <p>Currently trying to run plain <code class="docutils literal notranslate"><span class="pre">fricas</span></code> command in a pipe hangs
 (this is a bug, but fix requires substantial change).
 Instead, one needs to pass <code class="docutils literal notranslate"><span class="pre">-nosman</span></code> option.</p>
-<p>There several ways to let FriCAS process commands from a file.</p>
+<p>There are several ways to let FriCAS process commands from a file.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>fricas -nosman &lt; tst.input &gt; tst.output
 cat tst.input | fricas -nosman &gt; tst.output
 echo &#39;)read tst.input&#39; | fricas -nosman &gt; tst.output
@@ -154,7 +154,7 @@ echo &#39;)read tst.input&#39; | fricas -nosman &gt; tst.output
 <p>Whereas the first two versions do not show the input in <code class="docutils literal notranslate"><span class="pre">tst.output</span></code>,
 the last command does. However, in the latter case it is hard to
 distinguish input from output.</p>
-<p>Note: Similarly to the command line, pipe mode requires each function
+<p>Note: Similar to the command line, pipe mode requires each function
 to be defined in a single line.</p>
 </section>
 <section id="how-to-find-where-an-exported-function-is-implemented">
@@ -166,7 +166,7 @@ specify all parameters. Then click on ‘Operations’ and finally on
 clicking on ‘Operations’ click on an operation name and then click on
 ‘Implementations’.</p>
 <p>In a direct way you can just type the function name with a full
-specification from which domain, for example:</p>
+specification of its domain, for example:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>antiCommutator $ Polynomial(Integer)
 </pre></div>
 </div>
@@ -200,7 +200,7 @@ you may have to manually run</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>xrdb -m ~/.Xresources
 </pre></div>
 </div>
-<p>If you work with a 4K-display and want to make the font bigger, you
+<p>If you work on a 4K-display and want to make the font bigger, you
 can add the following to your <code class="docutils literal notranslate"><span class="pre">.Xresources</span></code> file.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FriCAS.hyperdoc.Geometry: =1500x800+0+0
 FriCAS.hyperdoc.RmFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
@@ -226,16 +226,25 @@ your computer. Use <code class="docutils literal notranslate"><span class="pre">
 </section>
 <section id="why-does-fricas-behave-differently-after-loading-new-code">
 <h3>11. Why does FriCAS behave differently after loading new code?<a class="headerlink" href="#why-does-fricas-behave-differently-after-loading-new-code" title="Link to this heading">¶</a></h3>
-<p>When FriCAS loads new code, current variables become invalid.
-This happens when you use</p>
+<p>When FriCAS loads new code, values of variables may become invalid.
+In particular, in the past, expression stored in a variable before
+loading could lead to wrong result when used after load.  This
+problem with expressions should be fixed now, but in general there
+is still possibility that value stored in a variable may become
+invalid after load.</p>
+<p>The problem can happen when you use</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>)lib SOMELIB
 </pre></div>
 </div>
-<p>or automatically when you compile a file via</p>
+<p>or when you compile a file via</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>)compile foo.spad
 </pre></div>
 </div>
-<p>You have to load and compile code before you start your computation.</p>
+<p>FriCAS automatically loads domains on demand, such automatic loads
+do not cause a problem.</p>
+<p>If you experience mysterious problems after ‘)lib’ or ‘)compile’,
+you should try loading and compiling code before you start your
+computation.</p>
 </section>
 <section id="is-there-exception-handling-in-fricas">
 <h3>12. Is there exception handling in FriCAS?<a class="headerlink" href="#is-there-exception-handling-in-fricas" title="Link to this heading">¶</a></h3>
@@ -256,7 +265,7 @@ an error.</p>
 </section>
 <section id="can-i-run-a-function-under-a-time-constraint">
 <h3>13. Can I run a function under a time constraint?<a class="headerlink" href="#can-i-run-a-function-under-a-time-constraint" title="Link to this heading">¶</a></h3>
-<p>Checkout the
+<p>Check out the
 <a class="reference external" href="https://fricas.github.io/api/TimeoutPackage.html">TimeoutPackage</a>.</p>
 </section>
 <section id="how-can-i-compile-fspace-spad">
@@ -268,8 +277,8 @@ an error.</p>
 )compile fspace.spad
 </pre></div>
 </div>
-<p>When developing similar changes you need to recompile all things which
-depend on the change and which you want to use, directly or
+<p>When developing similar changes, you need to recompile everything that
+depends on the change and that you want to use, directly or
 indirectly.</p>
 <p>Full build takes care of bootstrapping and recompiles everything, so
 after that things work in expected way.</p>
@@ -291,7 +300,7 @@ compiler, but not in the interpreter.</p>
 <p>This list has been slightly adapted to match the new name FriCAS.</p>
 <section id="the-fricas-command-fails">
 <h3>1. The fricas command fails.<a class="headerlink" href="#the-fricas-command-fails" title="Link to this heading">¶</a></h3>
-<p>This is likely one of two problems.</p>
+<p>This is likely due to one of two problems.</p>
 <p>1. FriCAS uses clef as its command line editor. This has functionality
 similar to GNU Readline but was written independently. The fricas
 command uses</p>
@@ -400,7 +409,7 @@ typeless <code class="docutils literal notranslate"><span class="pre">%pi</span>
 it further as required by the context.</p>
 <p>One could argue that it is unfair to single <code class="docutils literal notranslate"><span class="pre">%pi</span></code> out from other
 constants, but it occurs frequently enough in school examples
-(specially for graphs) so it was worth a special hack. In a
+(especially for graphs) so it was worth a special hack. In a
 non-interactive environment (library), HACKPI would not exist.</p>
 </section>
 <section id="why-do-fricas-input-defined-functions-fail-in-fricas">
@@ -535,7 +544,7 @@ recursion of the traced function.</p>
 </div>
 <p>will cause the display of only 10 levels of trace information for the
 recursive execution of a user function fib.</p>
-<p><code class="docutils literal notranslate"><span class="pre">)math</span></code> causes – the function arguments and return value to be displayed
+<p><code class="docutils literal notranslate"><span class="pre">)math</span></code> – causes the function arguments and return value to be displayed
 in the FriCAS monospace two-dimensional math format.</p>
 <p><code class="docutils literal notranslate"><span class="pre">)nonquietly</span></code> – causes the display of additional messages when a function
 is traced.</p>
@@ -593,7 +602,7 @@ to specify that only particular operations should be traced.</p>
 </div>
 <p>traces four operations from the domain Integer. Since + and - are special
 characters, it is necessary to escape them with an underscore.</p>
-<p>Also See: <code class="docutils literal notranslate"><span class="pre">)boot</span></code>, <code class="docutils literal notranslate"><span class="pre">)lisp</span></code> , and <code class="docutils literal notranslate"><span class="pre">)ltrace</span></code>. Please refer to the
+<p>Also See: <code class="docutils literal notranslate"><span class="pre">)boot</span></code>, <code class="docutils literal notranslate"><span class="pre">)lisp</span></code>, and <code class="docutils literal notranslate"><span class="pre">)ltrace</span></code>. Please refer to the
 FriCAS Book section “FriCAS System Commands” for more detailed information.</p>
 </section>
 <section id="how-can-i-access-lisp-code-from-the-fricas-command-line">
