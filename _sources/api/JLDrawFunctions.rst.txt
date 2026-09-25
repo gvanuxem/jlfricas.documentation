@@ -5,7 +5,7 @@
 JLDrawFunctions Ex
 ==================
 
-:viewcode:`jplot.spad line 414 <jplot.spad#L414>` :editcode:`[edit on github] <jplot.spad#L414>`
+:viewcode:`jplot.spad line 910 <jplot.spad#L910>` :editcode:`[edit on github] <jplot.spad#L910>`
 
 * Ex: Join(\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ , \ :ref:`SetCategory <l53657443617465676f7279>`\ )
 
@@ -19,7 +19,7 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContour!
 
 :spadfun:`jlContour!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f(x, y), x = a..b, y = c..d)`\  adds the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlContour!(f(x, y), x = a..b, y = c..d)`\  adds the contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c436f6e746f7572:
 
@@ -27,7 +27,7 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContour
 
 :spadfun:`jlContour`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f(x, y), x = a..b, y = c..d)`\  draws the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlContour(f(x, y), x = a..b, y = c..d)`\  draws the contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c436f6e746f75726621:
 
@@ -35,7 +35,7 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f(x, y), x = a..b, y = c..d)`\  adds the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Fills area between contours.
+  \ :code:`jlContourf!(f(x, y), x = a..b, y = c..d)`\  adds the filled contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Fills area between contours.
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c436f6e746f757266:
 
@@ -43,7 +43,61 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContourf
 
 :spadfun:`jlContourf`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f(x, y), x = a..b, y = c..d)`\  draws the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Fills area between contours.
+  \ :code:`jlContourf(f(x, y), x = a..b, y = c..d)`\  draws the filled contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Fills area between contours.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c486561746d617021:
+
+.. index::
+   pair: JLDrawFunctions; jlHeatmap!
+
+:spadfun:`jlHeatmap!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap!(f(x, y), x = a..b, y = c..d)`\  adds a 2D heatmap on the existing plot.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c486561746d6170:
+
+.. index::
+   pair: JLDrawFunctions; jlHeatmap
+
+:spadfun:`jlHeatmap`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap(f(x, y), x = a..b, y = c..d)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ).
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c496d706c69636974506c6f74:
+
+.. index::
+   pair: JLDrawFunctions; jlImplicitPlot
+
+:spadfun:`jlImplicitPlot`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlImplicitPlot(f(x, y), x = a..b, y = c..d)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c506172616d6574726963506c6f7421:
+
+.. index::
+   pair: JLDrawFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (Ex, Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(x(t), y(t), z(t), t = a..b)`\  adds the 3D space curve on existing plot.
+
+
+.. index::
+   pair: JLDrawFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(x(t), y(t), t = a..b)`\  adds the 2D parametric curve on existing plot.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c506172616d6574726963506c6f74:
+
+.. index::
+   pair: JLDrawFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (Ex, Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(x(t), y(t), z(t), t = a..b)`\  draws the 3D space curve.
+
+
+.. index::
+   pair: JLDrawFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(x(t), y(t), t = a..b)`\  draws the 2D parametric curve.
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506c6f7421:
 
@@ -60,6 +114,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
 :spadfun:`jlPlot!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlot!(f(x, y), x = a..b, y = c..d)`\  adds the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
 
+
+.. index::
+   pair: JLDrawFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: (\ :ref:`List <l4c697374>`\  Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!([f1, f2, ...], x = a..b)`\  adds multiple curves on the existing plot.
+
 .. _l4a4c4472617746756e6374696f6e73-6a6c506c6f74:
 
 .. index::
@@ -73,7 +134,30 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f(x, y), x = a..b, y = c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlPlot(f(x, y), x = a..b, y = c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+
+
+.. index::
+   pair: JLDrawFunctions; jlPlot
+
+:spadfun:`jlPlot`\: (\ :ref:`List <l4c697374>`\  Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot([f1, f2, ...], x = a..b)`\  draws multiple curves on the same plot.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c506f6c617221:
+
+.. index::
+   pair: JLDrawFunctions; jlPolar!
+
+:spadfun:`jlPolar!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar!(r(theta), theta = a..b)`\  adds the polar curve on existing plot.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c506f6c6172:
+
+.. index::
+   pair: JLDrawFunctions; jlPolar
+
+:spadfun:`jlPolar`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar(r(theta), theta = a..b)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta).
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c5375726661636521:
 
@@ -89,7 +173,15 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlSurface
 
 :spadfun:`jlSurface`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f(x, y), x = a..b, y = c..d)`\  draws the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlSurface(f(x, y), x = a..b, y = c..d)`\  draws the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+
+.. _l4a4c4472617746756e6374696f6e73-6a6c566563746f724669656c64:
+
+.. index::
+   pair: JLDrawFunctions; jlVectorField
+
+:spadfun:`jlVectorField`\: (Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlVectorField(u(x, y), v(x, y), x = a..b, y = c..d)`\  draws the 2D vector field.
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c576972656672616d6521:
 
@@ -105,6 +197,6 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f(x, y), x = a..b, y = c..d)`\  draws the wireframe of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ ; \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlWireframe(f(x, y), x = a..b, y = c..d)`\  draws the wireframe of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ ; \ :code:`f(x, y)`\  appears as the title.
 
 

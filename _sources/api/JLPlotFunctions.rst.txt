@@ -41,7 +41,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContour!
 
 :spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlContour!(f, a..b, c..d)`\  adds the contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContour!
+
+:spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour!(f, a..b, c..d, n)`\  adds the contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContour!
+
+:spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour!(f, a..b, c..d, n, title)`\  adds the contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContour!
+
+:spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour!(f, a..b, c..d, title)`\  adds the contour plot with title.
 
 
 .. index::
@@ -56,7 +77,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContour
 
 :spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlContour(f, a..b, c..d)`\  draws the contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+
+.. index::
+   pair: JLPlotFunctions; jlContour
+
+:spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour(f, a..b, c..d, n)`\  draws the contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContour
+
+:spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour(f, a..b, c..d, n, title)`\  draws the contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContour
+
+:spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContour(f, a..b, c..d, title)`\  draws the contour plot with title.
 
 
 .. index::
@@ -71,7 +113,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Fill area between contours.
+  \ :code:`jlContourf!(f, a..b, c..d)`\  adds the filled contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Fill area between contours.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContourf!
+
+:spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf!(f, a..b, c..d, n)`\  adds the filled contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContourf!
+
+:spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf!(f, a..b, c..d, n, title)`\  adds the filled contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContourf!
+
+:spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf!(f, a..b, c..d, title)`\  adds the filled contour plot with title.
 
 
 .. index::
@@ -86,7 +149,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContourf
 
 :spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f, a..b, c..d)`\  draws the contour plot of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Fill area between contours.
+  \ :code:`jlContourf(f, a..b, c..d)`\  draws the filled contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Fill area between contours.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContourf
+
+:spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf(f, a..b, c..d, n)`\  draws the filled contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContourf
+
+:spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf(f, a..b, c..d, n, title)`\  draws the filled contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlContourf
+
+:spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlContourf(f, a..b, c..d, title)`\  draws the filled contour plot with title.
 
 
 .. index::
@@ -127,6 +211,221 @@ low level plotting functions using the Plots package for Julia.
 :spadfun:`jlDensity`\: \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\  -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlDensity(x)`\  draws a line plot of a kernel density estimate of \ :code:`x`\ .
 
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c486561746d617021:
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap!
+
+:spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap!(f, a..b, c..d)`\  adds a 2D heatmap on the existing plot.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap!
+
+:spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap!(f, a..b, c..d, n)`\  adds a 2D heatmap using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap!
+
+:spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap!(f, a..b, c..d, n, title)`\  adds a 2D heatmap with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap!
+
+:spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap!(f, a..b, c..d, title)`\  adds a 2D heatmap with title.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap!
+
+:spadfun:`jlHeatmap!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap!(x, y, mat)`\  adds a heatmap of surface mat on existing graphic.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c486561746d6170:
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap
+
+:spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap(f, a..b, c..d)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ).
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap
+
+:spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap(f, a..b, c..d, n)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap
+
+:spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap(f, a..b, c..d, n, title)`\  draws a 2D heatmap with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap
+
+:spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap(f, a..b, c..d, title)`\  draws a 2D heatmap with title.
+
+
+.. index::
+   pair: JLPlotFunctions; jlHeatmap
+
+:spadfun:`jlHeatmap`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlHeatmap(x, y, mat)`\  draws a heatmap of surface mat.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c496d706c69636974506c6f74:
+
+.. index::
+   pair: JLPlotFunctions; jlImplicitPlot
+
+:spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlImplicitPlot(f, a..b, c..d)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0.
+
+
+.. index::
+   pair: JLPlotFunctions; jlImplicitPlot
+
+:spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlImplicitPlot(f, a..b, c..d, n)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0 using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlImplicitPlot
+
+:spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlImplicitPlot(f, a..b, c..d, n, title)`\  draws the 2D implicit curve with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlImplicitPlot
+
+:spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlImplicitPlot(f, a..b, c..d, title)`\  draws the 2D implicit curve with title.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506172616d6574726963506c6f7421:
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b)`\  adds the 3D space curve on existing plot.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, n)`\  adds the 3D space curve using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, n, title)`\  adds the 3D space curve with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, title)`\  adds the 3D space curve with title.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, a..b)`\  adds the 2D parametric curve on existing plot.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, a..b, n)`\  adds the 2D parametric curve using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, a..b, n, title)`\  adds the 2D parametric curve with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot!
+
+:spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot!(fx, fy, a..b, title)`\  adds the 2D parametric curve with title.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506172616d6574726963506c6f74:
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b)`\  draws the 3D space curve (\ :code:`fx`\ (\ :code:`t`\ ), \ :code:`fy`\ (\ :code:`t`\ ), \ :code:`fz`\ (\ :code:`t`\ )).
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b, n)`\  draws the 3D space curve using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b, n, title)`\  draws the 3D space curve with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b, title)`\  draws the 3D space curve with title.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, a..b)`\  draws the 2D parametric curve (\ :code:`fx`\ (\ :code:`t`\ ), \ :code:`fy`\ (\ :code:`t`\ )).
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, a..b, n)`\  draws the 2D parametric curve using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, a..b, n, title)`\  draws the 2D parametric curve with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlParametricPlot
+
+:spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlParametricPlot(fx, fy, a..b, title)`\  draws the 2D parametric curve with title.
+
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f7421:
 
 .. index::
@@ -139,8 +438,50 @@ low level plotting functions using the Plots package for Julia.
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
+:spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, c..d, n)`\  adds the graph of \ :code:`z = f(x, y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, c..d, n, title)`\  adds the graph of \ :code:`z = f(x, y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, c..d, title)`\  adds the graph of \ :code:`z = f(x, y)`\  with title.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot!
+
 :spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlot!(f, a..b)`\  adds the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  to the existing graph object.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, n)`\  adds the graph of \ :code:`y = f(x)`\  using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, n, title)`\  adds the graph of \ :code:`y = f(x)`\  with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot!
+
+:spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot!(f, a..b, title)`\  adds the graph of \ :code:`y = f(x)`\  with title.
 
 
 .. index::
@@ -156,13 +497,42 @@ low level plotting functions using the Plots package for Julia.
 :spadfun:`jlPlot!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlot!(x,y,z)`\  draws a plot using elements of \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\  on the existing graph object.
 
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f743364506f696e7473:
+
+.. index::
+   pair: JLPlotFunctions; jlPlot3dPoints
+
+:spadfun:`jlPlot3dPoints`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  \ :code:`jlPlot3dPoints()`\  returns the default number of grid points per axis used for 3D surface, wireframe and contour plots.
+
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74:
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ 
+  \ :code:`jlPlot(f, a..b, c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot
+
+:spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, c..d, n)`\  draws the graph of \ :code:`z = f(x, y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot
+
+:spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, c..d, n, title)`\  draws the graph of \ :code:`z = f(x, y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot
+
+:spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, c..d, title)`\  draws the graph of \ :code:`z = f(x, y)`\  with title.
 
 
 .. index::
@@ -170,6 +540,27 @@ low level plotting functions using the Plots package for Julia.
 
 :spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlot(f, a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . For example: \example{jlPlot(x+->sinc(x),-15..15)}
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot
+
+:spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, n)`\  draws the graph of \ :code:`y = f(x)`\  using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot
+
+:spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, n, title)`\  draws the graph of \ :code:`y = f(x)`\  with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlot
+
+:spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlot(f, a..b, title)`\  draws the graph of \ :code:`y = f(x)`\  with title.
 
 
 .. index::
@@ -185,13 +576,61 @@ low level plotting functions using the Plots package for Julia.
 :spadfun:`jlPlot`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlot(x,y,z)`\  draws a plot using elements of \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ .
 
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74436f6c6f724d617021:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotColorMap!
+
+:spadfun:`jlPlotColorMap!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotColorMap!(palette)`\  sets the color \ :code:`palette`\  / colormap (e.g. "viridis", "plasma", "inferno", "turbo", "coolwarm", "cividis").
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f7444706921:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotDpi!
+
+:spadfun:`jlPlotDpi!`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotDpi!(dpi)`\  sets the figure rendering resolution in DPI (dots per inch).
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f744772696421:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotGrid!
+
+:spadfun:`jlPlotGrid!`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotGrid!(flag)`\  enables or disables grid lines on the plot.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f744c6567656e6421:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotLegend!
+
+:spadfun:`jlPlotLegend!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotLegend!(pos)`\  sets the legend position ("topleft", "topright", "bottomleft", "bottomright", "outertopright", "none", "false").
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74506f696e7473:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotPoints
+
+:spadfun:`jlPlotPoints`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  \ :code:`jlPlotPoints()`\  returns the default number of points used for 1D and 2D curves.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f7453697a6521:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotSize!
+
+:spadfun:`jlPlotSize!`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotSize!(w, h)`\  sets the plot window dimensions in pixels (width, height).
+
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c6521:
 
 .. index::
    pair: JLPlotFunctions; jlPlotTitle!
 
 :spadfun:`jlPlotTitle!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotTitle!(title)`\  draws `title' as plot \ :code:`title`\  in the current plot. For example: jlPlotTitle! "sin(\ :code:`x`\ )" if you have the LaTeXStrings Julia package \example{jlPlotTitle! jlLatex latex sin(x)} For simple expressions \ :code:`title`\  will automatically be enclosed between \$. So use: \example{jlPlotTitle! jlLatex "sin(x)"} For normal text and equations insert dollar signs \$ as needed. \example{jlPlotTitle! jlLatex "Plot: \$sin(x)\$"}
+  \ :code:`jlPlotTitle!(title)`\  draws `title' as plot \ :code:`title`\  in the current plot. For example: \example{jlPlotTitle! "sin(x)"} if you have the LaTeXStrings Julia package \example{jlPlotTitle! jlLatex latex sin(x)} For simple expressions \ :code:`title`\  will automatically be enclosed between \$. So use: \example{jlPlotTitle! jlLatex "sin(x)"} For normal text and equations insert dollar signs \$ as needed. \example{jlPlotTitle! jlLatex "Plot: \$sin(x)\$"}
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74586c6162656c21:
 
@@ -206,8 +645,37 @@ low level plotting functions using the Plots package for Julia.
 .. index::
    pair: JLPlotFunctions; jlPlotXlims!
 
+:spadfun:`jlPlotXlims!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotXlims!
+
+:spadfun:`jlPlotXlims!`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotXlims!
+
 :spadfun:`jlPlotXlims!`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotXlims!
+
+:spadfun:`jlPlotXlims!`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotXlims!(range)`\  sets \ :code:`x`\  plot limits.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74587363616c6521:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotXscale!
+
+:spadfun:`jlPlotXscale!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotXscale!(scale)`\  sets the \ :code:`x`\ -axis \ :code:`scale`\  ("identity", "log10", "log2", "ln").
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74596c6162656c21:
 
@@ -222,8 +690,37 @@ low level plotting functions using the Plots package for Julia.
 .. index::
    pair: JLPlotFunctions; jlPlotYlims!
 
+:spadfun:`jlPlotYlims!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotYlims!
+
+:spadfun:`jlPlotYlims!`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotYlims!
+
 :spadfun:`jlPlotYlims!`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotYlims!
+
+:spadfun:`jlPlotYlims!`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotYlims!(range)`\  sets \ :code:`y`\  plot limits.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74597363616c6521:
+
+.. index::
+   pair: JLPlotFunctions; jlPlotYscale!
+
+:spadfun:`jlPlotYscale!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotYscale!(scale)`\  sets the \ :code:`y`\ -axis \ :code:`scale`\  ("identity", "log10", "log2", "ln").
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745a6c6162656c21:
 
@@ -238,8 +735,87 @@ low level plotting functions using the Plots package for Julia.
 .. index::
    pair: JLPlotFunctions; jlPlotZlims!
 
+:spadfun:`jlPlotZlims!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotZlims!
+
+:spadfun:`jlPlotZlims!`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotZlims!
+
 :spadfun:`jlPlotZlims!`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPlotZlims!
+
+:spadfun:`jlPlotZlims!`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPlotZlims!(range)`\  sets \ :code:`z`\  plot limits.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506f6c617221:
+
+.. index::
+   pair: JLPlotFunctions; jlPolar!
+
+:spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar!(f, a..b)`\  adds the polar curve on existing plot.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPolar!
+
+:spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar!(f, a..b, n)`\  adds the polar curve using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPolar!
+
+:spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar!(f, a..b, n, title)`\  adds the polar curve with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPolar!
+
+:spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar!(f, a..b, title)`\  adds the polar curve with title.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c506f6c6172:
+
+.. index::
+   pair: JLPlotFunctions; jlPolar
+
+:spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar(f, a..b)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta).
+
+
+.. index::
+   pair: JLPlotFunctions; jlPolar
+
+:spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar(f, a..b, n)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta) using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPolar
+
+:spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar(f, a..b, n, title)`\  draws the polar curve with title using \ :code:`n`\  points.
+
+
+.. index::
+   pair: JLPlotFunctions; jlPolar
+
+:spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlPolar(f, a..b, title)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta) with title.
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c52616e6765:
 
@@ -254,7 +830,7 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlRange
 
 :spadfun:`jlRange`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\  
-  \ :code:`jlRange(range)`\  is a utility function that returns a JLFloat64Vector with 250 points from \ :code:`low(range)`\  to \ :code:`high(range)`\ .
+  \ :code:`jlRange(range)`\  is a utility function that returns a JLFloat64Vector with jlPlotPoints() points from \ :code:`low(range)`\  to \ :code:`high(range)`\ .
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c53617665506c6f74:
 
@@ -262,7 +838,23 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSavePlot
 
 :spadfun:`jlSavePlot`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSavePlot(file)`\  save the current plot in \ :code:`file`\ . Supported formats: \ :code:`png`\  (default), \ :code:`PDF`\ , \ :code:`svg`\  and more. See https://docs.juliaplots.org/latest/output/\#savefig-/-format
+  \ :code:`jlSavePlot(file)`\  saves the current plot in \ :code:`file`\ . Supported formats: \ :code:`png`\  (default), \ :code:`PDF`\ , \ :code:`svg`\  and more. See https://docs.juliaplots.org/latest/output/\#savefig-/-format
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c536574506c6f743364506f696e747321:
+
+.. index::
+   pair: JLPlotFunctions; jlSetPlot3dPoints!
+
+:spadfun:`jlSetPlot3dPoints!`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  \ :code:`jlSetPlot3dPoints!(n)`\  sets the default number of grid points per axis used for 3D plots and returns the previous value.
+
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c536574506c6f74506f696e747321:
+
+.. index::
+   pair: JLPlotFunctions; jlSetPlotPoints!
+
+:spadfun:`jlSetPlotPoints!`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
+  \ :code:`jlSetPlotPoints!(n)`\  sets the default number of points used for 1D and 2D curves and returns the previous value.
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c536574506c6f74734261636b656e6421:
 
@@ -270,7 +862,7 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSetPlotsBackend!
 
 :spadfun:`jlSetPlotsBackend!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSetPlotsBackend!(backend)`\  sets the \ :code:`backend`\  for plotting. The available backends are "gr", gaston", "plotly", "plotlyjs", "pythonplot", "pgfplotsx", "unicodeplots" and "inspectdr".
+  \ :code:`jlSetPlotsBackend!(backend)`\  sets the \ :code:`backend`\  for plotting. The available backends are "gr", "gaston", "plotly", "plotlyjs", "pythonplot", "pgfplotsx", "unicodeplots" and "inspectdr".
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c5375726661636521:
 
@@ -278,7 +870,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(f, a..b, c..d)`\  draws the surface of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlSurface!(f, a..b, c..d)`\  adds the surface of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+
+.. index::
+   pair: JLPlotFunctions; jlSurface!
+
+:spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface!(f, a..b, c..d, n)`\  adds the surface of \ :code:`z = f(x,y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlSurface!
+
+:spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface!(f, a..b, c..d, n, title)`\  adds the surface of \ :code:`z = f(x,y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlSurface!
+
+:spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface!(f, a..b, c..d, title)`\  adds the surface of \ :code:`z = f(x,y)`\  with title.
 
 
 .. index::
@@ -293,7 +906,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSurface
 
 :spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f, a..b, c..d)`\  draws the surface of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlSurface(f, a..b, c..d)`\  draws the surface of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+
+.. index::
+   pair: JLPlotFunctions; jlSurface
+
+:spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface(f, a..b, c..d, n)`\  draws the surface of \ :code:`z = f(x,y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlSurface
+
+:spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface(f, a..b, c..d, n, title)`\  draws the surface of \ :code:`z = f(x,y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlSurface
+
+:spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlSurface(f, a..b, c..d, title)`\  draws the surface of \ :code:`z = f(x,y)`\  with title.
 
 
 .. index::
@@ -302,13 +936,63 @@ low level plotting functions using the Plots package for Julia.
 :spadfun:`jlSurface`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlSurface(x,y,mat)`\  draws the plot surface of \ :code:`mat`\ .
 
+.. _l4a4c506c6f7446756e6374696f6e73-6a6c566563746f724669656c64:
+
+.. index::
+   pair: JLPlotFunctions; jlVectorField
+
+:spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlVectorField(u, v, a..b, c..d)`\  draws the 2D vector field (\ :code:`u`\ (\ :code:`x`\ , \ :code:`y`\ ), \ :code:`v`\ (\ :code:`x`\ , \ :code:`y`\ )).
+
+
+.. index::
+   pair: JLPlotFunctions; jlVectorField
+
+:spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlVectorField(u, v, a..b, c..d, n)`\  draws the 2D vector field using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlVectorField
+
+:spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlVectorField(u, v, a..b, c..d, n, title)`\  draws the 2D vector field with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlVectorField
+
+:spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlVectorField(u, v, a..b, c..d, title)`\  draws the 2D vector field with title.
+
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c576972656672616d6521:
 
 .. index::
    pair: JLPlotFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(f, a..b, c..d)`\  draws add the wireframe of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlWireframe!(f, a..b, c..d)`\  adds the wireframe of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+
+
+.. index::
+   pair: JLPlotFunctions; jlWireframe!
+
+:spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe!(f, a..b, c..d, n)`\  adds the wireframe using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlWireframe!
+
+:spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe!(f, a..b, c..d, n, title)`\  adds the wireframe with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlWireframe!
+
+:spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe!(f, a..b, c..d, title)`\  adds the wireframe with title.
 
 
 .. index::
@@ -323,7 +1007,28 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f, a..b, c..d)`\  draws the wireframe of \ :code:`y = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlWireframe(f, a..b, c..d)`\  draws the wireframe of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+
+
+.. index::
+   pair: JLPlotFunctions; jlWireframe
+
+:spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe(f, a..b, c..d, n)`\  draws the wireframe using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlWireframe
+
+:spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe(f, a..b, c..d, n, title)`\  draws the wireframe with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+
+
+.. index::
+   pair: JLPlotFunctions; jlWireframe
+
+:spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlWireframe(f, a..b, c..d, title)`\  draws the wireframe with title.
 
 
 .. index::

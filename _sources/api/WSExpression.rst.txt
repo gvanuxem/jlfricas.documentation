@@ -737,6 +737,27 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
   from \ :ref:`FunctionSpace2 <l46756e6374696f6e537061636532>`\ (%, \ :ref:`Kernel <l4b65726e656c>`\  %)
 
 
+.. index::
+   pair: WSExpression; convert
+
+:spadfun:`convert`\: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Float <l466c6f6174>`\  -> % 
+  \ :code:`convert(p)`\  converts \ :code:`p`\  to a WSExpression.
+
+
+.. index::
+   pair: WSExpression; convert
+
+:spadfun:`convert`\: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`convert(p)`\  converts \ :code:`p`\  to a WSExpression.
+
+
+.. index::
+   pair: WSExpression; convert
+
+:spadfun:`convert`\: \ :ref:`Polynomial <l506f6c796e6f6d69616c>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`convert(p)`\  converts \ :code:`p`\  to a WSExpression.
+
+
 \ :ref:`convert <l4d6f6e6f67656e6963416c6765627261-636f6e76657274>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> % 
   from \ :ref:`MonogenicAlgebra <l4d6f6e6f67656e6963416c6765627261>`\ (%, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %)
 
@@ -825,6 +846,10 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 .. _l575345787072657373696f6e-44:
 
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: % -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+
+
 \ :ref:`D <l446966666572656e7469616c457874656e73696f6e-44>`\ \: (%, % -> %) -> % 
   from \ :ref:`DifferentialExtension <l446966666572656e7469616c457874656e73696f6e>`\  %
 
@@ -855,6 +880,10 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`D <l446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
 \ :ref:`D <l5061727469616c446966666572656e7469616c52696e67-44>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
@@ -998,6 +1027,10 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
   from \ :ref:`PartialDifferentialRing <l5061727469616c446966666572656e7469616c52696e67>`\  \ :ref:`Symbol <l53796d626f6c>`\ 
+
+
+\ :ref:`differentiate <l446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if % has \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
+  from \ :ref:`DifferentialRing <l446966666572656e7469616c52696e67>`\ 
 
 
 \ :ref:`differentiate <l5061727469616c446966666572656e7469616c52696e67-646966666572656e7469617465>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
@@ -1904,7 +1937,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; guessSequenceFunction
 
 :spadfun:`guessSequenceFunction`\: (%, %) -> % 
-  \ :code:`guessSequenceFunction(l,x)`\  finds the sequence function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . For example: \example{guessSequenceFunction([1,2,4,jWSInt 8]::WSList(WSInteger),x)}
+  \ :code:`guessSequenceFunction(l,x)`\  finds the sequence function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . For example: \example{guessSequenceFunction([1,2,4,jWSInteger 8]::WSList(WSInteger),x)}
 
 
 .. index::
@@ -3247,7 +3280,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; modularLambda
 
 :spadfun:`modularLambda`\: % -> % 
-  \ :code:`modularLambda()`\  computes the lambda modular function.
+  \ :code:`modularLambda(tau)`\  computes the lambda modular function.
 
 .. _l575345787072657373696f6e-6d6f6e6f6d69616c4c697374:
 

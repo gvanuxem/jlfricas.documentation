@@ -182,15 +182,15 @@ make.</p>
 <li><p><a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a> 1.0.7 or later (preferred)</p>
 <p><a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">http://sbcl.sourceforge.net/platform-table.html</a></p>
 </li>
-<li><p><a class="reference external" href="http://ccl.clozure.com/manual/chapter2.2.html">Clozure CL</a> (former openmcl), starting from openmcl 1.1 prerelease
+<li><p><a class="reference external" href="https://ccl.clozure.com/">Clozure CL</a> (former openmcl), starting from openmcl 1.1 prerelease
 070512</p>
 <p><a class="reference external" href="https://ccl.clozure.com/download.html">https://ccl.clozure.com/download.html</a></p>
 </li>
-<li><p><a class="reference external" href="http://ecls.sourceforge.net">ECL</a> 0.9l or later</p>
+<li><p><a class="reference external" href="https://ecl.common-lisp.dev/main.html">ECL</a> 0.9l or later</p>
 <p><a class="reference external" href="https://common-lisp.net/project/ecl">https://common-lisp.net/project/ecl</a></p>
 </li>
-<li><p><a class="reference external" href="http://clisp.cons.org">CLISP</a> 2.41 or later</p></li>
-<li><p><a class="reference external" href="https://www.cons.org/cmucl/">CMUCL</a></p></li>
+<li><p><a class="reference external" href="https://clisp.sourceforge.io/">CLISP</a> 2.41 or later</p></li>
+<li><p><a class="reference external" href="https://cmucl.org">CMUCL</a></p></li>
 <li><p>FriCAS builds also using <a class="reference external" href="https://www.gnu.org/software/gcl">GCL</a>, at least build using released version
 2.6.14 works.  Build using older GCL versions no longer works.
 Note that with default setting build is likely to fail.
@@ -222,14 +222,14 @@ for your system at <a class="reference external" href="https://julialang.org/ins
 </section>
 <section id="jfricas-optional">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">jFriCAS (optional)</a><a class="headerlink" href="#jfricas-optional" title="Link to this heading">¶</a></h3>
-<p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is an interface for running <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> in a <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook.
+<p>jFriCAS is an interface for running <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> in a <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook.
 It should be installed <strong>after</strong> <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a> has been installed.</p>
 <p><strong>Note:</strong> It currently only works with an <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a> image that has the
 <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a> webserver included.  See next section.</p>
 </section>
 <section id="hunchentoot-optional">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">Hunchentoot (optional)</a><a class="headerlink" href="#hunchentoot-optional" title="Link to this heading">¶</a></h3>
-<p>The <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> interface needs a web server built into FRICASsys binary.
+<p>The jFriCAS interface needs a web server built into FRICASsys binary.
 This can be done by using Lisp (currently only <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a>) containing
 the <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a> web server. If <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a> does not include the <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a>
 web server, you can install the hunchentoot packages of your distribution
@@ -239,8 +239,8 @@ On a Debian based system it can be installed with
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>./configure --enable-julia --enable-hunchentoot
 </pre></div>
 </div>
-<p>jlFriCAS built in this way will contain <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a> and can be used
-by <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a>.</p>
+<p>jlFriCAS built this way will contain <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a> and can be used
+by jFriCAS.</p>
 </section>
 <section id="x-libraries-optional-but-needed-for-graphics-and-hyperdoc">
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">X libraries (optional, but needed for graphics and HyperDoc)</a><a class="headerlink" href="#x-libraries-optional-but-needed-for-graphics-and-hyperdoc" title="Link to this heading">¶</a></h3>
@@ -377,17 +377,18 @@ cd fr-build
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">/path/to/your/lisp</span></code> is name of your Lisp.  For example,
 type</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>../jlfricas/configure --with-lisp=&quot;sbcl --dynamic-space-size 4096&quot; --prefix=/tmp/usr --enable-gmp --enable-aldor
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>../jlfricas/configure --with-lisp=&quot;sbcl --dynamic-space-size 4096&quot; \
+                      --prefix=/tmp/usr --enable-gmp --enable-aldor
 </pre></div>
 </div>
 <p>to build with <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a> and 4 GiB dynamic space, use <a class="reference external" href="https://gmplib.org">GMP</a>, and enable the
 build of the <a class="reference external" href="https://github.com/aldorlang/aldor">Aldor</a> library <code class="docutils literal notranslate"><span class="pre">libfricas.al</span></code>.</p>
 <p>Use</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--with-lisp=&quot;/path/to/hsbcl&quot;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--with-lisp=sbcl --enable-hunchentoot
 </pre></div>
 </div>
 <p>to include the <a class="reference external" href="https://edicl.github.io/hunchentoot/">Hunchentoot</a> webserver if you later want to install
-<a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a>.</p>
+jFriCAS.</p>
 <p>Type</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>../jlfricas/configure --help
 </pre></div>
@@ -420,9 +421,9 @@ $HOME/jlfricas/configure --with-lisp=sbcl --enable-julia &amp;&amp; make &amp;&a
 <p>Currently <code class="docutils literal notranslate"><span class="pre">--with-lisp</span></code> option accepts all supported lisp variants,
 namely SBCL, CLISP, ECL, GCL and Clozure CL (openmcl).  Note: the
 argument is just a command to invoke the respective Lisp variant.
-The build machinery will automatically detect which Lisp is in use and
-adjust as needed.</p>
-<p>Note that <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> has currently only been tested to work with <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a>.</p>
+The build machinery will automatically detect which Lisp is in use
+and adjust as needed.</p>
+<p>Note that jFriCAS has currently only been tested to work with <a class="reference external" href="http://sbcl.sourceforge.net/platform-table.html">SBCL</a>.</p>
 </section>
 <section id="hyperdoc-and-graphics">
 <h3><a class="toc-backref" href="#id21" role="doc-backlink">HyperDoc and graphics</a><a class="headerlink" href="#hyperdoc-and-graphics" title="Link to this heading">¶</a></h3>
@@ -495,7 +496,7 @@ if you install via a package manager).  Currently there are two
 available <a class="reference external" href="https://gmplib.org">GMP</a> versions, version 5 is much faster than version 4.  Then
 configure FriCAS adding <code class="docutils literal notranslate"><span class="pre">--enable-gmp</span></code> option to the <code class="docutils literal notranslate"><span class="pre">configure</span></code>
 arguments.</p>
-<p>FriCAS also has support for using <a class="reference external" href="https://gmplib.org">GMP</a> with <a class="reference external" href="http://ccl.clozure.com/manual/chapter2.2.html">Clozure CL</a>.  Currently
+<p>FriCAS also has support for using <a class="reference external" href="https://gmplib.org">GMP</a> with <a class="reference external" href="https://ccl.clozure.com/">Clozure CL</a>.  Currently
 Clozure CL with GMP works on 32/64 bit Intel/AMD processors and ARM
 (using Clozure CL with GMP is not supported on Power PC processors).</p>
 <p>When you have GMP installed in a non-standard location (this usually
@@ -529,7 +530,7 @@ Guide) do</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make book
 </pre></div>
 </div>
-<p>This build <a class="reference external" href="https://gvanuxem.github.io/jlfricas/book.pdf">jlFriCAS Book</a> into <code class="docutils literal notranslate"><span class="pre">src/doc/book.pdf</span></code>.</p>
+<p>This builds <a class="reference external" href="https://gvanuxem.github.io/jlfricas/book.pdf">jlFriCAS Book</a> into <code class="docutils literal notranslate"><span class="pre">src/doc/book.pdf</span></code>.</p>
 <p>The <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS home page</a> can be built via</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>make webdoc
 </pre></div>
@@ -645,59 +646,48 @@ sieve(n: N): N  == {
 </section>
 <section id="install-jfricas">
 <h3><a class="toc-backref" href="#id27" role="doc-backlink">Install jFriCAS</a><a class="headerlink" href="#install-jfricas" title="Link to this heading">¶</a></h3>
-<p>There are a couple of things to install.</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://jupyter.org">Jupyter</a></p></li>
-<li><p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a></p></li>
-</ol>
-<p>The simplest way to install <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is via <cite>pip</cite> as follows</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-pip
-pip3 install jupyter
-pip3 install jfricas
+<p>You must have Python 3 and Pip installed. Since below we present an
+installation of jFriCAS into a virtual environment, you should also
+have the Python venv module.</p>
+<p>Install the prerequisites if not yet available (needs root access, but
+it may already be installed on your system).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-pip python3-venv
 </pre></div>
 </div>
-<p>You can also install <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> into a python virtual environment from
-<a class="reference external" href="https://pypi.org/project/jfricas/">jfricas at PyPI</a> or from the
-git repository.</p>
-<p>Below, we describe the installation from the git repository.</p>
 <p>Except for the file <code class="docutils literal notranslate"><span class="pre">$HOME/.jupyter/jupyter_notebook_config.py</span></code> that
 maybe necessary to create, the following description will put most of
-the things (in particular the git repositories) under the directory
-<code class="docutils literal notranslate"><span class="pre">$FDIR</span></code>.
-We assume that FriCAS will be installed into <code class="docutils literal notranslate"><span class="pre">$FRICASINSTALL</span></code>.
+the things under the directory <code class="docutils literal notranslate"><span class="pre">$FDIR</span></code>.
+We assume that FriCAS is installed into <code class="docutils literal notranslate"><span class="pre">$FRICASINSTALL</span></code>.
 jFriCAS and <a class="reference external" href="https://jupyter.org">Jupyter</a> will go into <code class="docutils literal notranslate"><span class="pre">$JFRICASINSTALL</span></code>
 You can change any of these paths.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FDIR=$HOME/fricas
-GITREPOS=$FDIR
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FDIR=$HOME/jlfricas
 FRICASINSTALL=$FDIR/install
 export PATH=$FRICASINSTALL/bin:$PATH
 VENV=$FDIR/venv
 JFRICASINSTALL=$VENV/jfricas
-mkdir -p $FDIR $GITREPOS $FRICASINSTALL $JFRICASINSTALL
+mkdir -p $FDIR $JFRICASINSTALL
 </pre></div>
 </div>
 <section id="jfricas-installation">
 <h4>jFriCAS installation<a class="headerlink" href="#jfricas-installation" title="Link to this heading">¶</a></h4>
-<p><a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> is the <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook interface to <a class="reference external" href="https://gvanuxem.github.io/jlfricas/index.html">jlFriCAS</a>.  Of course,
-<a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> needs <a class="reference external" href="https://jupyter.org">Jupyter</a> in a reasonably recent version (at least 4).</p>
-<p>Install prerequisites if not yet available (needs root access, but it
-may already be installed on your system).</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo apt install python3-pip python3-venv
-</pre></div>
-</div>
-<p>Prepare directories and download <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a>.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd $GITREPOS
-git clone https://github.com/fricas/jfricas
-</pre></div>
-</div>
-<p>Install prerequisites, <a class="reference external" href="https://jupyter.org">Jupyter</a> and <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a>.</p>
-<p><strong>WARNING</strong>: Do not install jfricas 1.0.0 from PyPI, as that will
-not work.  If you have it installed, then uninstall it first.</p>
+<p>jFriCAS is the <a class="reference external" href="https://jupyter.org">Jupyter</a> notebook interface to <a href="#id31"><span class="problematic" id="id32">FriCAS_</span></a>.  Of course,
+jFriCAS needs <a class="reference external" href="https://jupyter.org">Jupyter</a> in a reasonably recent version (at least 4).</p>
+<p>Create a virtual environment and install <a class="reference external" href="https://jupyter.org">Jupyter</a>.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python3 -m venv $JFRICASINSTALL
 source $JFRICASINSTALL/bin/activate
 pip3 install jupyter
-cd $GITREPOS/jfricas
-pip3 install .
+</pre></div>
+</div>
+<p>Now we put a file <code class="docutils literal notranslate"><span class="pre">fricaskernel.py</span></code> into a place where python can
+find it and install <code class="docutils literal notranslate"><span class="pre">kernel.json</span></code> so that <a class="reference external" href="https://jupyter.org">Jupyter</a> can find the
+<a href="#id33"><span class="problematic" id="id34">FriCAS_</span></a> kernel.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PYSITE=$(python3 -c &quot;import site; print(site.getsitepackages()[0])&quot;)
+JF=$PYSITE/jfricas
+mkdir -p $JF
+cd $JF
+( echo &#39;kernel()$JFriCAS&#39;; echo &#39;fricaskernel()$JFriCAS&#39; ) \
+| fricas -nosman; \
+jupyter kernelspec install ./ --name=&#39;jfricas&#39; --sys-prefix
 jupyter kernelspec list
 </pre></div>
 </div>
@@ -779,7 +769,7 @@ _SCRIPT_EXTENSIONS = {
 <h4>Make Jupytext available<a class="headerlink" href="#make-jupytext-available" title="Link to this heading">¶</a></h4>
 <p>In Ubuntu 22.04 you do not need to run the commands from this section.
 It seemingly works without having to change something in the
-configuration file.  There were even reports that <a class="reference external" href="https://jfricas.readthedocs.io">jFriCAS</a> stopped
+configuration file.  There were even reports that jFriCAS stopped
 working if <code class="docutils literal notranslate"><span class="pre">c.NotebookApp.contents_manager_class</span></code> was set.  However,
 for older versions of <a class="reference external" href="https://jupytext.readthedocs.io">JupyText</a> and/or <a class="reference external" href="https://jupyter.org">Jupyter</a>, the following had to be
 configured.</p>
@@ -820,8 +810,7 @@ jfricas
 </div>
 <p>If something does not work then look at the end of <code class="docutils literal notranslate"><span class="pre">fricaskernel.py</span></code>
 and experiment with different versions of how to start FriCAS.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FRICASKERNEL=$(find $JFRICASINSTALL -type f | grep &#39;fricaskernel\.py$&#39;)
-emacs $FRICASKERNEL
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>emacs $PYSITE/jfricas/fricaskernel.py
 </pre></div>
 </div>
 <p>You can also download or clone the demo notebooks from
@@ -833,7 +822,7 @@ you see at
 <section id="install-frimacs">
 <h3><a class="toc-backref" href="#id28" role="doc-backlink">Install frimacs</a><a class="headerlink" href="#install-frimacs" title="Link to this heading">¶</a></h3>
 <p><a class="reference external" href="https://github.com/pdo/frimacs">frimacs</a> is an <a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a> mode for FriCAS with special features to
-edit <code class="docutils literal notranslate"><span class="pre">.input</span></code> and <code class="docutils literal notranslate"><span class="pre">.spad</span></code> files as well as executing a <a href="#id31"><span class="problematic" id="id32">FriCAS_</span></a>
+edit <code class="docutils literal notranslate"><span class="pre">.input</span></code> and <code class="docutils literal notranslate"><span class="pre">.spad</span></code> files as well as executing a <a href="#id35"><span class="problematic" id="id36">FriCAS_</span></a>
 session inside an <a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a> buffer.</p>
 <p>Install as follows.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd $GITREPOS
@@ -845,7 +834,7 @@ git clone https://github.com/pdo/frimacs.git
 </pre></div>
 </div>
 <p>to your <code class="docutils literal notranslate"><span class="pre">.emacs</span></code> or <code class="docutils literal notranslate"><span class="pre">.emacs.d/init.el</span></code> file.</p>
-<p>To start a <a href="#id33"><span class="problematic" id="id34">FriCAS_</span></a> session use</p>
+<p>To start a <a href="#id37"><span class="problematic" id="id38">FriCAS_</span></a> session use</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>M-x frimacs-run-fricas
 </pre></div>
 </div>
@@ -916,6 +905,7 @@ typing</p>
 to decrease use of virtual memory.</p>
 </li>
 <li><p>CLISP built with threads support may fail to compile FriCAS.</p></li>
+<li><p>CLISP 2.49 is incompatible with Windows 11.</p></li>
 <li><p>On new Linux kernel build using Clisp may take very long time.  This
 is caused by frequent calls to <code class="docutils literal notranslate"><span class="pre">fsync</span></code> performed without need by
 Clisp.</p></li>
@@ -978,7 +968,7 @@ Lisp printer.  This bug causes incorrect printing of FriCAS types.
 Also, Clozure CL earlier than release 1.2 has bug in complex cosine
 function.  Those bugs are fixed in release 1.2.  If you want to use
 earlier version you can work around the bugs applying the
-<code class="docutils literal notranslate"><span class="pre">contib/omcl.diff</span></code> patch and recompiling the compiler (see the
+<code class="docutils literal notranslate"><span class="pre">contrib/omcl.diff</span></code> patch and recompiling the compiler (see the
 patch or Clozure CL documentation for instructions).</p></li>
 <li><p>Older versions of Clisp may fail to build FriCAS complaining about
 opening already opened file – this is error is spurious, the file
