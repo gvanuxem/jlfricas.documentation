@@ -47,7 +47,7 @@
             
   <section id="jlobjr">
 <span id="l4a4c4f626a52"></span><span id="index-0"></span><h1>JLObjR<a class="headerlink" href="#jlobjr" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L700">jobject.spad line 700</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L700">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L706">jobject.spad line 706</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L706">[edit on github]</a></p>
 <p>Convenience domain for Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The RCall package has to be installed in Julia. Note that the RCall Julia package uses a similar scheme for Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> objects to the one of jlFriCAS for JLObjectType references.</p>
 <dl class="simple" id="l4a4c4f626a52-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
@@ -175,12 +175,24 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c726566"><span class="std std-ref">jlref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a52-6a6c524c696272617279"></span><dl class="simple" id="index-12">
+<span id="l4a4c4f626a52-6a6c524576616c"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">jlREval</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlREval(rexpr)</span></code> evaluates the <code class="code docutils literal notranslate"><span class="pre">R</span></code> expression <code class="code docutils literal notranslate"><span class="pre">rexpr</span></code> in the Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> environment.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c524c696272617279"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">jlRLibrary</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRLibrary(pkg)</span></code> loads the <code class="code docutils literal notranslate"><span class="pre">R</span></code> package ‘pkg’ in the Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> environment.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a52-6a6c525072696e74"></span><dl class="simple" id="index-13">
+<span id="l4a4c4f626a52-6a6c525061727365"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">jlRParse</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRParse(str)</span></code> parses the <code class="code docutils literal notranslate"><span class="pre">R</span></code> expression <code class="code docutils literal notranslate"><span class="pre">str</span></code> and returns it as a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. Can be evaluated using the jlREval function for example.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c525072696e74"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">jlRPrint</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRPrint(robj)</span></code> prints the <code class="code docutils literal notranslate"><span class="pre">R</span></code> representation of <code class="code docutils literal notranslate"><span class="pre">robj</span></code>.</p>
+</dd>
+</dl>
+<span id="l4a4c4f626a52-6a6c5254797065"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">jlRType</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRType(robj)</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">R</span></code> type of the Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object <code class="code docutils literal notranslate"><span class="pre">robj</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a52-6a6c54657874">
@@ -191,12 +203,12 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a52-6a72"></span><dl class="simple" id="index-14">
+<span id="l4a4c4f626a52-6a72"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">jr</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(obj)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-15">
-<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: example{jr “optim(0, $(x -&gt; x-cos(x)), method=’L-BFGS-B’)”} example{a:= nrand(10,4)} example{b := jr(a::JLMatrix(JLObjFloat64))} example{jlRApply(“prcomp”, b)}</p>
+<dl class="simple" id="index-18">
+<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object using the Julia &#64;R_str macro. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: example{jr “optim(0, $(x -&gt; x-cos(x)), method=’L-BFGS-B’)”} example{a:= nrand(10,4)} example{b := jr(a::JLMatrix(JLObjFloat64))} example{jlRApply(“prcomp”, b)}</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a52-6c61746578">

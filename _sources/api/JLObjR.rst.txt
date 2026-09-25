@@ -5,7 +5,7 @@
 JLObjR
 ======
 
-:viewcode:`jobject.spad line 700 <jobject.spad#L700>` :editcode:`[edit on github] <jobject.spad#L700>`
+:viewcode:`jobject.spad line 706 <jobject.spad#L706>` :editcode:`[edit on github] <jobject.spad#L706>`
 
 
 Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The RCall package has to be installed in Julia. Note that the RCall Julia package uses a similar scheme for Julia \ :code:`R`\  objects to the one of jlFriCAS for JLObjectType references.
@@ -202,6 +202,14 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 \ :ref:`jlref <l4a4c4f626a65637454797065-6a6c726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a52-6a6c524576616c:
+
+.. index::
+   pair: JLObjR; jlREval
+
+:spadfun:`jlREval`\: % -> % 
+  \ :code:`jlREval(rexpr)`\  evaluates the \ :code:`R`\  expression \ :code:`rexpr`\  in the Julia \ :code:`R`\  environment.
+
 .. _l4a4c4f626a52-6a6c524c696272617279:
 
 .. index::
@@ -210,6 +218,14 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 :spadfun:`jlRLibrary`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlRLibrary(pkg)`\  loads the \ :code:`R`\  package 'pkg' in the Julia \ :code:`R`\  environment.
 
+.. _l4a4c4f626a52-6a6c525061727365:
+
+.. index::
+   pair: JLObjR; jlRParse
+
+:spadfun:`jlRParse`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ :code:`jlRParse(str)`\  parses the \ :code:`R`\  expression \ :code:`str`\  and returns it as a Julia \ :code:`R`\  object. Can be evaluated using the jlREval function for example.
+
 .. _l4a4c4f626a52-6a6c525072696e74:
 
 .. index::
@@ -217,6 +233,14 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 
 :spadfun:`jlRPrint`\: % -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlRPrint(robj)`\  prints the \ :code:`R`\  representation of \ :code:`robj`\ .
+
+.. _l4a4c4f626a52-6a6c5254797065:
+
+.. index::
+   pair: JLObjR; jlRType
+
+:spadfun:`jlRType`\: % -> % 
+  \ :code:`jlRType(robj)`\  returns the \ :code:`R`\  type of the Julia \ :code:`R`\  object \ :code:`robj`\ .
 
 .. _l4a4c4f626a52-6a6c54657874:
 
@@ -241,7 +265,7 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jr
 
 :spadfun:`jr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object. Use jlDisplay(robj) to display the \ :code:`R`\  object robj. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"} \example{a:= nrand(10,4)} \example{b := jr(a::JLMatrix(JLObjFloat64))} \example{jlRApply("prcomp", b)}
+  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object using the Julia @R_str macro. Use jlDisplay(robj) to display the \ :code:`R`\  object robj. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"} \example{a:= nrand(10,4)} \example{b := jr(a::JLMatrix(JLObjFloat64))} \example{jlRApply("prcomp", b)}
 
 .. _l4a4c4f626a52-6c61746578:
 
