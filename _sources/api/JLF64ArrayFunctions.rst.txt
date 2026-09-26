@@ -5,13 +5,20 @@
 JLF64ArrayFunctions
 ===================
 
-:viewcode:`jafunctions.spad line 147 <jafunctions.spad#L147>` :editcode:`[edit on github] <jafunctions.spad#L147>`
+:viewcode:`jafunctions.spad line 144 <jafunctions.spad#L144>` :editcode:`[edit on github] <jafunctions.spad#L144>`
 
 
 This package provides different Julia utility functions for operations using CPU/GPU supported data types. Internal package.
 
 
 .. _l4a4c463634417272617946756e6374696f6e73-6a6c4170706c7946756e6374696f6e21:
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlApplyFunction!(func, vec)`\  applies \ :code:`func`\  to cvec.
+
 
 .. index::
    pair: JLF64ArrayFunctions; jlApplyFunction!
@@ -37,8 +44,22 @@ This package provides different Julia utility functions for operations using CPU
 .. index::
    pair: JLF64ArrayFunctions; jlApplyFunction!
 
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlApplyFunction!(func, cmat, nr)`\  applies \ :code:`func`\  to the matrix mat, internally a vector, where the number of rows is \ :code:`nr`\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlApplyFunction!(func, cmat1, cmat2)`\  applies the Julia function \ :code:`func`\  to \ :code:`cmat2`\  and overwrites \ :code:`cmat1`\  with the result. Please note that overwriting is done by Julia and not FriCAS. See Julia 'copy!' or adjoint! for example.
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlApplyFunction!(func, vec)`\  applies \ :code:`func`\  to vec.
 
 
 .. index::
@@ -65,6 +86,13 @@ This package provides different Julia utility functions for operations using CPU
 .. index::
    pair: JLF64ArrayFunctions; jlApplyFunction!
 
+:spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`jlApplyFunction!(func, mat, nr)`\  applies \ :code:`func`\  to the matrix \ :code:`mat`\ , internally a vector, where the number of rows is \ :code:`nr`\ .
+
+
+.. index::
+   pair: JLF64ArrayFunctions; jlApplyFunction!
+
 :spadfun:`jlApplyFunction!`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
   \ :code:`jlApplyFunction!(func, mat1, mat2)`\  applies the Julia function \ :code:`func`\  to \ :code:`mat2`\  and overwrites \ :code:`mat1`\  with the result. Please note that overwriting is done by Julia and not FriCAS. See Julia 'copy!' or transpose! for example.
 
@@ -75,13 +103,6 @@ This package provides different Julia utility functions for operations using CPU
 
 :spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
   \ :code:`jlApplyFunction(func, cvec)`\  returns the output value of \ :code:`func`\  applied to cvec.
-
-
-.. index::
-   pair: JLF64ArrayFunctions; jlApplyFunction
-
-:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlApplyFunction(func, vec)`\  applies \ :code:`func`\  to cvec.
 
 
 .. index::
@@ -101,13 +122,6 @@ This package provides different Julia utility functions for operations using CPU
 .. index::
    pair: JLF64ArrayFunctions; jlApplyFunction
 
-:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlApplyFunction(func, cmat, nr)`\  applies \ :code:`func`\  to the matrix mat, internally a vector, where the numer of rows is \ :code:`nr`\ .
-
-
-.. index::
-   pair: JLF64ArrayFunctions; jlApplyFunction
-
 :spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLComplexF64Vector <l4a4c436f6d706c6578463634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
   \ :code:`jlApplyFunction(func, cmat, nr, p)`\  returns the output value of \ :code:`func`\  applied to \ :code:`cmat`\ , internally a vector, where the number of rows is \ :code:`nr`\  and \ :code:`p`\  an additional parameter.
 
@@ -122,13 +136,6 @@ This package provides different Julia utility functions for operations using CPU
 .. index::
    pair: JLF64ArrayFunctions; jlApplyFunction
 
-:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlApplyFunction(func, vec)`\  applies \ :code:`func`\  to vec.
-
-
-.. index::
-   pair: JLF64ArrayFunctions; jlApplyFunction
-
 :spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
   \ :code:`jlApplyFunction(func, vec, p)`\  returns the output value of \ :code:`func`\  applied to \ :code:`vec`\  with parameter \ :code:`p`\ .
 
@@ -138,13 +145,6 @@ This package provides different Julia utility functions for operations using CPU
 
 :spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  
   \ :code:`jlApplyFunction(func, mat, nr)`\  returns the output value of \ :code:`func`\  applied to \ :code:`mat`\ , internally a vector, where the number of rows is \ :code:`nr`\ .
-
-
-.. index::
-   pair: JLF64ArrayFunctions; jlApplyFunction
-
-:spadfun:`jlApplyFunction`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlApplyFunction(func, mat, nr)`\  applies \ :code:`func`\  to the matrix \ :code:`mat`\ , internally a vector, where the numer of rows is \ :code:`nr`\ .
 
 
 .. index::
