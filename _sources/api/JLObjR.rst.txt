@@ -5,11 +5,16 @@
 JLObjR
 ======
 
-:viewcode:`jobject.spad line 696 <jobject.spad#L696>` :editcode:`[edit on github] <jobject.spad#L696>`
+:viewcode:`jobject.spad line 727 <jobject.spad#L727>` :editcode:`[edit on github] <jobject.spad#L727>`
 
 
 Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The RCall package has to be installed in Julia. Note that the RCall Julia package uses a similar scheme for Julia \ :code:`R`\  objects to the one of jlFriCAS for JLObjectType references.
 
+
+.. _l4a4c4f626a52-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a52-3d:
 
@@ -55,6 +60,49 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a4c4f626a52-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a52-656c74:
+
+.. index::
+   pair: JLObjR; elt
+
+:spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`elt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+
+
+\ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+
+.. index::
+   pair: JLObjR; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
+  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example: \example{ret := jlApply("svd", jobject("rand(4,4)")); ret.U}
+
+
+\ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+.. _l4a4c4f626a52-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a52-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a52-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a52-6a6c41626f7574:
 
@@ -122,6 +170,11 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 \ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a52-6a6c4e616d6573:
+
+\ :ref:`jlNames <l4a4c4f626a65637454797065-6a6c4e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
 .. _l4a4c4f626a52-6a6c4f626a656374:
 
 \ :ref:`jlObject <l4a4c4f626a65637454797065-6a6c4f626a656374>`\ \: () -> \ :ref:`String <l537472696e67>`\  
@@ -138,7 +191,7 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jlRApply
 
 :spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ :code:`jlRApply(func, robj)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  object robj.
+  \ :code:`jlRApply(func, robj)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  object robj. For example: \example{jlRApply("abs", (-2)::JLObjR)} \example{jlREval "mtcars";} \example{jlRApply("summary", \%)}
 
 
 .. index::
@@ -182,7 +235,7 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jlRCopy
 
 :spadfun:`jlRCopy`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlRCopy(robj)`\  returns a Julia object copy of the \ :code:`R`\  object \ :code:`robj`\  if possible.
+  \ :code:`jlRCopy(robj)`\  returns a Julia object copy of the \ :code:`R`\  object \ :code:`robj`\  if possible. Use jlType to know the resulting type of \ :code:`robj`\  if necessary. For example: \example{robj:=jlREval "mtcars";} \example{jlRCopy robj}
 
 .. _l4a4c4f626a52-6a6c52446f63756d656e746174696f6e:
 
@@ -209,6 +262,13 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 
 :spadfun:`jlREval`\: % -> % 
   \ :code:`jlREval(rexpr)`\  evaluates the \ :code:`R`\  expression \ :code:`rexpr`\  in the Julia \ :code:`R`\  environment.
+
+
+.. index::
+   pair: JLObjR; jlREval
+
+:spadfun:`jlREval`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> % 
+  \ :code:`jlREval(obj)`\  evaluates the expression \ :code:`obj`\  as a Julia object in the Julia \ :code:`R`\  environment. For example: \example{jlREval "mtcars"}
 
 .. _l4a4c4f626a52-6a6c524c696272617279:
 
@@ -258,24 +318,34 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jr
 
 :spadfun:`jr`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> % 
-  \ :code:`jr(obj)`\  returns \ :code:`obj`\  as a Julia \ :code:`R`\  object.
+  \ :code:`jr(obj)`\  returns \ :code:`obj`\  as a Julia \ :code:`R`\  object. This is the preferred method. For example: \example{a:= nrand(10,4)} \example{b := jr(a::JLMatrix(JLObjFloat64))} \example{jlRApply("prcomp", b)}
 
 
 .. index::
    pair: JLObjR; jr
 
 :spadfun:`jr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object using the Julia @R_str macro. Use jlDisplay(robj) to display the \ :code:`R`\  object robj. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"} \example{a:= nrand(10,4)} \example{b := jr(a::JLMatrix(JLObjFloat64))} \example{jlRApply("prcomp", b)}
+  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object using the Julia @R_str macro. Use jlDisplay(robj) to display the \ :code:`R`\  object robj if necessary. For example: \example{jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"} \example{ret:= jlRCopy \%} \example{qelt(ret,par), qelt(ret,value)}
 
 .. _l4a4c4f626a52-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
+.. _l4a4c4f626a52-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
 .. _l4a4c4f626a52-6d697373696e673f:
 
 \ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a52-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a52-6d757461626c653f:
 
@@ -287,17 +357,56 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
 \ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a52-71656c74:
+
+.. index::
+   pair: JLObjR; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`qelt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+
+
+\ :ref:`qelt <l4a4c4f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+
+.. index::
+   pair: JLObjR; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
+  \ :code:`qelt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . No checks are done regarding the existence of the \ :code:`sym`\  property. If it does not exist, Julia throws an error.
+
+
+\ :ref:`qelt <l4a4c4f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+.. _l4a4c4f626a52-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a52-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
 .. _l4a4c4f626a52-737472696e67:
 
 \ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLType <l4a4c54797065>`\ 
 
 
+\ :ref:`Aggregate <l416767726567617465>`\  
+
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\  
 
 \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\  
 

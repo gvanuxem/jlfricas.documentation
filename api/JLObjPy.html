@@ -48,8 +48,12 @@
             
   <section id="jlobjpy">
 <span id="l4a4c4f626a5079"></span><span id="index-0"></span><h1>JLObjPy<a class="headerlink" href="#jlobjpy" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L528">jobject.spad line 528</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L528">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L532">jobject.spad line 532</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L532">[edit on github]</a></p>
 <p>Convenience domain for Julia Python objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The PythonCall package has to be installed in Julia. Note that the PythonCall Julia package uses a similar scheme for Julia Python objects to the one of jlFriCAS for JLObjectType references.</p>
+<dl class="simple" id="l4a4c4f626a5079-23">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c4f626a5079-3d">
 <dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
@@ -78,6 +82,34 @@
 </dl>
 <dl class="simple" id="l4a4c4f626a5079-636f6e76657274">
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-636f7079">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-636f7079"><span class="std std-ref">copy</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<span id="l4a4c4f626a5079-656c74"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">ind)</span></code> returns the element at index ind of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. It can be used, for example, with a Tuple or a Vector.</p>
+</dd>
+<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. For example: example{ret := jlApply(“svd”, jobject(“rand(4,4)”)); ret.U}</p>
+</dd>
+<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-656d7074793f">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-656d7074793f"><span class="std std-ref">empty?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-656d707479">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-656d707479"><span class="std std-ref">empty</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-65713f">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-65713f"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a5079-6a6c41626f7574">
@@ -128,6 +160,10 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c696d726566"><span class="std std-ref">jlimref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4a4c4f626a5079-6a6c4e616d6573">
+<dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4e616d6573"><span class="std std-ref">jlNames</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c4f626a5079-6a6c4f626a656374">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c4f626a656374"><span class="std std-ref">jlObject</span></a>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
@@ -136,83 +172,83 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573"><span class="std std-ref">jlPropertyNames</span></a>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a6c50794170706c79"></span><dl class="simple" id="index-4">
+<span id="l4a4c4f626a5079-6a6c50794170706c79"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(func,</span> <span class="pre">pyobj)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the Python object pyobj.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-5">
+<dl class="simple" id="index-7">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-6">
+<dl class="simple" id="index-8">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-7">
+<dl class="simple" id="index-9">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3,</span> <span class="pre">pyobj4)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj4</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-8">
+<dl class="simple" id="index-10">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3,</span> <span class="pre">pyobj4,</span> <span class="pre">pyobj5)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj4</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj5</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-9">
+<dl class="simple" id="index-11">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. example{jlPyApply(“numpy”, “array”, jpyobj(“[1,2,3]”))} creates a numpy array from the Python list [1,2,3]. jlPyApply(“math”, “sqrt”, 2) computes the square root of 2.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-10">
+<dl class="simple" id="index-12">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code></p>
 </dd>
 </dl>
-<dl class="simple" id="index-11">
+<dl class="simple" id="index-13">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-12">
+<dl class="simple" id="index-14">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3,</span> <span class="pre">pyobj4)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj4</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-13">
+<dl class="simple" id="index-15">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3,</span> <span class="pre">pyobj4,</span> <span class="pre">pyobj5)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj4</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj5</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-14">
+<dl class="simple" id="index-16">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod1,</span> <span class="pre">mod2,</span> <span class="pre">func,</span> <span class="pre">pyobj)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod1</span></code>.<code class="code docutils literal notranslate"><span class="pre">mod2</span></code> to the Python object pyobj.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-15">
+<dl class="simple" id="index-17">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod1,</span> <span class="pre">mod2,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod1</span></code>.<code class="code docutils literal notranslate"><span class="pre">mod2</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-16">
+<dl class="simple" id="index-18">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod1,</span> <span class="pre">mod2,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod1</span></code>.<code class="code docutils literal notranslate"><span class="pre">mod2</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-17">
+<dl class="simple" id="index-19">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod1,</span> <span class="pre">mod2,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3,</span> <span class="pre">pyobj4)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod1</span></code>.<code class="code docutils literal notranslate"><span class="pre">mod2</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj4</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-18">
+<dl class="simple" id="index-20">
 <dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod1,</span> <span class="pre">mod2,</span> <span class="pre">func,</span> <span class="pre">pyobj1,</span> <span class="pre">pyobj2,</span> <span class="pre">pyobj3,</span> <span class="pre">pyobj4,</span> <span class="pre">pyobj5)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod1</span></code>.<code class="code docutils literal notranslate"><span class="pre">mod2</span></code> to the Python objects <code class="code docutils literal notranslate"><span class="pre">pyobj1</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj2</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj3</span></code>, <code class="code docutils literal notranslate"><span class="pre">pyobj4</span></code> and <code class="code docutils literal notranslate"><span class="pre">pyobj5</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a6c5079436f6e76657274"></span><dl class="simple" id="index-19">
+<span id="l4a4c4f626a5079-6a6c5079436f6e76657274"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">jlPyConvert</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyConvert(type,</span> <span class="pre">pyobj)</span></code> converts the Python object pyobj to the Julia <code class="code docutils literal notranslate"><span class="pre">type</span></code> ‘type’.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a6c5079446f63756d656e746174696f6e"></span><dl class="simple" id="index-20">
+<span id="l4a4c4f626a5079-6a6c5079446f63756d656e746174696f6e"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">jlPyDocumentation</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyDocumentation(obj)</span></code> displays the Python documentation for the Python object <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. Use <code class="code docutils literal notranslate"><span class="pre">'q'</span></code> followed by ENTER to quit.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a6c5079496d706f7274"></span><dl class="simple" id="index-21">
+<span id="l4a4c4f626a5079-6a6c5079496d706f7274"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">jlPyImport</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyImport(mod)</span></code> imports the Python module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> in the Julia Python environment.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a6c507952657072"></span><dl class="simple" id="index-22">
+<span id="l4a4c4f626a5079-6a6c507952657072"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">jlPyRepr</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyRepr(pyobj)</span></code> returns the Julia Python object representing the Python object <code class="code docutils literal notranslate"><span class="pre">pyobj</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a6c507954797065"></span><dl class="simple" id="index-23">
+<span id="l4a4c4f626a5079-6a6c507954797065"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">jlPyType</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyType(pyobj)</span></code> returns the Python type of the Python object <code class="code docutils literal notranslate"><span class="pre">pyobj</span></code>.</p>
 </dd>
 </dl>
@@ -232,11 +268,11 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a5079-6a707974686f6e"></span><dl class="simple" id="index-24">
+<span id="l4a4c4f626a5079-6a707974686f6e"></span><dl class="simple" id="index-26">
 <dt><span class="spadfun">jpython</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jpython(obj)</span></code> coerces the Julia object <code class="code docutils literal notranslate"><span class="pre">obj</span></code> to a Julia Python object. Use jlDisplay(pyobj) to display the Python object pyobj.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-25">
+<dl class="simple" id="index-27">
 <dt><span class="spadfun">jpython</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jpython(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia Python object. Use jlDisplay(pyobj) to display the Python object pyobj.</p>
 </dd>
 </dl>
@@ -244,8 +280,16 @@
 <dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
+<dl class="simple" id="l4a4c4f626a5079-6c6573733f">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-6c6573733f"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c4f626a5079-6d697373696e673f">
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d697373696e673f"><span class="std std-ref">missing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-6d6f72653f">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-6d6f72653f"><span class="std std-ref">more?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a5079-6d757461626c653f">
@@ -256,13 +300,36 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6e6f7468696e673f"><span class="std std-ref">nothing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
+<span id="l4a4c4f626a5079-71656c74"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">qelt(obj,</span> <span class="pre">ind)</span></code> returns the element at index ind of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. It can be used, for example, with a Tuple or a Vector.</p>
+</dd>
+<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-71656c74"><span class="std std-ref">qelt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">qelt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. No checks are done regarding the existence of the <code class="code docutils literal notranslate"><span class="pre">sym</span></code> property. If it does not exist, Julia throws an error.</p>
+</dd>
+<dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-71656c74"><span class="std std-ref">qelt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-73616d706c65">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a4c4f626a5079-73697a653f">
+<dt><a class="reference internal" href="Aggregate.html#l416767726567617465-73697a653f"><span class="std std-ref">size?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
 <dl class="simple" id="l4a4c4f626a5079-737472696e67">
 <dt><a class="reference internal" href="JLType.html#l4a4c54797065-737472696e67"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
 </dd>
 </dl>
+<p><a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 <p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 <p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 <p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+<p><a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a></p>
+<p><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 <p><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 <p><a class="reference internal" href="JLType.html#l4a4c54797065"><span class="std std-ref">JLType</span></a></p>
 <p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>

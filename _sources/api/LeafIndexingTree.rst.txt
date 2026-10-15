@@ -1,0 +1,511 @@
+.. index:: LeafIndexingTree
+
+.. _l4c656166496e646578696e6754726565:
+
+LeafIndexingTree
+================
+
+:viewcode:`tree.spad line 639 <tree.spad#L639>` :editcode:`[edit on github] <tree.spad#L639>`
+
+
+\ :ref:`LeafIndexingTree <l4c656166496e646578696e6754726565>`\  is a tree where the children of each node are totally ordered from left to right, smaller means left. The root node has an arbitrary label (= value). Each other node has as label the number of leaves in the subtree of its parent node \ :code:`y`\ , consisting of all the childrens left to the edge \ :code:`x`\ -\ :code:`y`\ . These edges are labeled from left to right by 1,2,... Assume that there are exactly \ :code:`l`\  leaves. This setting determines a bijection between {0,1,...,\ :code:`l`\ -1} and the leaves, respectively the paths given as list of edge numbers from the root node to the leaves: \ :code:`rank`\  and \ :code:`unrank`\ . Output is inherited from \ :code:`Tree(NNI)`\  and implemented in the package \ :ref:`TreeOutput <l547265654f7574707574>`\ . See its documentation for more details.
+
+
+.. _l4c656166496e646578696e6754726565-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-3d:
+
+\ :ref:`= <l426173696354797065-3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4c656166496e646578696e6754726565-7e3d:
+
+\ :ref:`~= <l426173696354797065-7e3d>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`BasicType <l426173696354797065>`\ 
+
+.. _l4c656166496e646578696e6754726565-616e793f:
+
+\ :ref:`any? <l486f6d6f67656e656f7573416767726567617465-616e793f>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6368696c643f:
+
+\ :ref:`child? <l526563757273697665416767726567617465-6368696c643f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6368696c6472656e:
+
+\ :ref:`children <l526563757273697665416767726567617465-6368696c6472656e>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6368696c6472656e56616c756573:
+
+.. index::
+   pair: LeafIndexingTree; childrenValues
+
+:spadfun:`childrenValues`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`childrenValues(t)`\  considers the \ :code:`k`\  children \ :code:`t`\ (0), .., \ :code:`t`\ (\ :code:`k`\ -1) and returns the partial sums \ :code:`v`\ (\ :code:`t0`\ )+..\ :code:`+v`\ (\ :code:`t`\ (\ :code:`i`\ -1)) for 1 \ :code:`<=`\  \ :code:`i`\  \ :code:`<=`\  \ :code:`k`\ .
+
+.. _l4c656166496e646578696e6754726565-636f65726365:
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\ 
+
+
+\ :ref:`coerce <l436f65726369626c65546f-636f65726365>`\ \: % -> \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-636f756e74:
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+
+\ :ref:`count <l486f6d6f67656e656f7573416767726567617465-636f756e74>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6379636c69633f:
+
+\ :ref:`cyclic? <l526563757273697665416767726567617465-6379636c69633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6465707468:
+
+.. index::
+   pair: LeafIndexingTree; depth
+
+:spadfun:`depth`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`depth(t)`\  returns the length of the longest path from root to a leaf. Should be moved to \ :code:`RecursiveAggregate`\ .
+
+.. _l4c656166496e646578696e6754726565-64697374616e6365:
+
+\ :ref:`distance <l526563757273697665416767726567617465-64697374616e6365>`\ \: (%, %) -> \ :ref:`Integer <l496e7465676572>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-656c74:
+
+\ :ref:`elt <l456c7461626c65-656c74>`\ \: (%, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  from \ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %)
+
+
+\ :ref:`elt <l526563757273697665416767726567617465-656c74>`\ \: (%, value) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-656e756d6572617465:
+
+.. index::
+   pair: LeafIndexingTree; enumerate
+
+:spadfun:`enumerate`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`enumerate(t)`\  constructs all paths from the root of \ :code:`t`\  to its leaves. If a node has \ :code:`c`\  children, then its edges to these children are labelled by 1..\ :code:`v`\ . To get the corresponding combinatorial objects, one has to apply the appropriate \ :code:`pathTo...`\  function.
+
+.. _l4c656166496e646578696e6754726565-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-6576616c:
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`Equation <l4571756174696f6e>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+  from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+
+\ :ref:`eval <l4576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`Equation <l4571756174696f6e>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+  from \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+
+\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % if \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
+
+.. _l4c656166496e646578696e6754726565-65766572793f:
+
+\ :ref:`every? <l486f6d6f67656e656f7573416767726567617465-65766572793f>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-67727472:
+
+.. index::
+   pair: LeafIndexingTree; grtr
+
+:spadfun:`grtr`\: (\ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`grtr(path1, path2)`\  is used to sort lists of unordered set partitions. First, according to the lexicographical order of the lengths of the subsets, then according to the entries in descending order.
+
+.. _l4c656166496e646578696e6754726565-68617368:
+
+\ :ref:`hash <l4861736861626c65-68617368>`\ \: % -> \ :ref:`SingleInteger <l53696e676c65496e7465676572>`\  
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4c656166496e646578696e6754726565-6861736855706461746521:
+
+\ :ref:`hashUpdate! <l4861736861626c65-6861736855706461746521>`\ \: (\ :ref:`HashState <l486173685374617465>`\ , %) -> \ :ref:`HashState <l486173685374617465>`\  
+  from \ :ref:`Hashable <l4861736861626c65>`\ 
+
+.. _l4c656166496e646578696e6754726565-69734c656166496e646578696e67547265653f:
+
+.. index::
+   pair: LeafIndexingTree; isLeafIndexingTree?
+
+:spadfun:`isLeafIndexingTree?`\: \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`isLeafIndexingTree?(t)`\  checks, if the given tree is a leaf indexing tree. This has to be checked by inspecting all nodes \ :code:`y`\ , whether either the node is a leaf or if each value of a child \ :code:`x`\  is the number of leaves which can be reached starting from the node via the edges left to the the edge \ :code:`y`\ -\ :code:`x`\ . The value of the root does not play a role, so it can be abitrary.
+
+.. _l4c656166496e646578696e6754726565-697350617468546f4c6561663f:
+
+.. index::
+   pair: LeafIndexingTree; isPathToLeaf?
+
+:spadfun:`isPathToLeaf?`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`isPathToLeaf?(t, ln)`\  checks whether \ :code:`ln`\  is a path from \ :code:`t`\  to a leave of \ :code:`t`\ , in particular two neighboured entries must satisfy a parent-child relationship. Note, that the \ :code:`m`\  leaves are in 1-1-correspondence with such paths, as the graph is a tree. And also with the set {0,..\ :code:`m`\ -1} the ranks.
+
+.. _l4c656166496e646578696e6754726565-6c61746578:
+
+\ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
+  from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+.. _l4c656166496e646578696e6754726565-6c6561663f:
+
+\ :ref:`leaf? <l526563757273697665416767726567617465-6c6561663f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6c656166496e646578696e6754726565:
+
+.. index::
+   pair: LeafIndexingTree; leafIndexingTree
+
+:spadfun:`leafIndexingTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
+  \ :code:`leafIndexingTree(v, lt)`\  considers \ :code:`lt`\  as the list of children and adds a parent node with value \ :code:`v`\  to create a new tree with this root. Before it changes the values of the child trees value(\ :code:`lt`\ (1)) = 0, value(\ :code:`lt`\ (2)) = \#leaves(\ :code:`lt`\ (1)), value(\ :code:`lt`\ (3))= \#leaves(\ :code:`lt`\ (1)) + \#leaves(\ :code:`lt`\ (2)) and so on.
+
+
+.. index::
+   pair: LeafIndexingTree; leafIndexingTree
+
+:spadfun:`leafIndexingTree`\: \ :ref:`List <l4c697374>`\  % -> % 
+  \ :code:`leafIndexingTree(lt)`\  considers \ :code:`lt`\  as the list of children and adds a parent node with value 0 to create a new tree with this root. Before it changes the values of the child trees value(\ :code:`lt`\ (1)) = 0, value(\ :code:`lt`\ (2)) = \#leaves(\ :code:`lt`\ (1)), value(\ :code:`lt`\ (3))= \#leaves(\ :code:`lt`\ (1)) + \#leaves(\ :code:`lt`\ (2)) and so on.
+
+
+.. index::
+   pair: LeafIndexingTree; leafIndexingTree
+
+:spadfun:`leafIndexingTree`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ :code:`leafIndexingTree(v)`\  creates a leaf indexing tree with value \ :code:`v`\ , and no children.
+
+
+.. index::
+   pair: LeafIndexingTree; leafIndexingTree
+
+:spadfun:`leafIndexingTree`\: \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ :code:`leafIndexingTree(t)`\  modifies \ :code:`t`\  to become a leaf indexing tree by setting the values for the required counting.
+
+.. _l4c656166496e646578696e6754726565-6c6561766573:
+
+\ :ref:`leaves <l526563757273697665416767726567617465-6c6561766573>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-6c6f67696346756e6374696f6e54726565:
+
+.. index::
+   pair: LeafIndexingTree; logicFunctionTree
+
+:spadfun:`logicFunctionTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`logicFunctionTree(n,k)`\  constructs the tree of all logic functions in \ :code:`n`\  variables and exactly \ :code:`k`\  minterms. Use with care as there are \ :code:`binomial(2^n,k)`\  of them.
+
+
+.. index::
+   pair: LeafIndexingTree; logicFunctionTree
+
+:spadfun:`logicFunctionTree`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  \ :code:`logicFunctionTree(n)`\  constructs the tree with depth 2 for all logic function in \ :code:`n`\  variables, represented in canonocial \ :code:`DNF`\ -form as a sum of (\ :code:`s`\ -1) of the 2^n minterms for 1 \ :code:`<=`\  \ :code:`s`\  \ :code:`<=`\  2^n+1 (children). For each (\ :code:`s`\ -1) at the next level we choose the (\ :code:`t`\ -1)\ :code:`-`\ th (\ :code:`s`\ -1)-subset of the 2^n minterms, for 1 \ :code:`<=`\  \ :code:`t`\  \ :code:`<=`\  binomial(2^n, \ :code:`s`\ ). The path from the root to such a leaf is [\ :code:`s`\ ,\ :code:`t`\ ]. Note, a conversion function \ :code:`pathToLogicFunction`\  is still missing as we need \ :code:`p`\ -restricted integer and a domain \ :code:`LogicFunction`\  not yet in the system. Use with care as there are \ :code:`2^(2^n)`\  of them.
+
+.. _l4c656166496e646578696e6754726565-6d617021:
+
+\ :ref:`map! <l486f6d6f67656e656f7573416767726567617465-6d617021>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6d6170:
+
+\ :ref:`map <l486f6d6f67656e656f7573416767726567617465-6d6170>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % 
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6d6178:
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+
+\ :ref:`max <l486f6d6f67656e656f7573416767726567617465-6d6178>`\ \: ((\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\ , %) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6d656d6265723f:
+
+\ :ref:`member? <l486f6d6f67656e656f7573416767726567617465-6d656d6265723f>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6d656d62657273:
+
+\ :ref:`members <l486f6d6f67656e656f7573416767726567617465-6d656d62657273>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6d696e:
+
+\ :ref:`min <l486f6d6f67656e656f7573416767726567617465-6d696e>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-6e65787445646765:
+
+.. index::
+   pair: LeafIndexingTree; nextEdge
+
+:spadfun:`nextEdge`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`nextEdge(r: NNI, lvs: List NNI)`\  returns the largest \ :code:`i`\  such that \ :code:`lvs`\ (\ :code:`i`\ ) \ :code:`<=`\  \ :code:`r`\ . It is required, but unchecked, that the entries of \ :code:`lvs`\  are strictly increasing from left to right. The labelling of the edges starts with 1.
+
+.. _l4c656166496e646578696e6754726565-6e6f64653f:
+
+\ :ref:`node? <l526563757273697665416767726567617465-6e6f64653f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6e6f646573:
+
+\ :ref:`nodes <l526563757273697665416767726567617465-6e6f646573>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-6e756d6265724f664368696c6472656e:
+
+.. index::
+   pair: LeafIndexingTree; numberOfChildren
+
+:spadfun:`numberOfChildren`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`numberOfChildren(t)`\  returns the number of children of the root of tree \ :code:`t`\ .
+
+.. _l4c656166496e646578696e6754726565-6e756d6265724f664c6561766573:
+
+.. index::
+   pair: LeafIndexingTree; numberOfLeaves
+
+:spadfun:`numberOfLeaves`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`numberOfLeaves(t)`\  counts the number of leaves of \ :code:`t`\ .
+
+.. _l4c656166496e646578696e6754726565-6e756d6265724f664e6f646573:
+
+.. index::
+   pair: LeafIndexingTree; numberOfNodes
+
+:spadfun:`numberOfNodes`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  numberOfNode(\ :code:`t`\ , \ :code:`d`\ ) counts the number of nodes of \ :code:`t`\  with depth \ :code:`d`\  including leaves with smaller depth.
+
+.. _l4c656166496e646578696e6754726565-50:
+
+.. index::
+   pair: LeafIndexingTree; P
+
+:spadfun:`P`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`P(n,k)`\  returns the number of unordered \ :code:`k`\  - number partitions of \ :code:`n`\ , e.g. \ :code:`P(7,3) = 4 = \#{[5,1,1],[4,2,1],[3,3,1],[3,2,2]}`\ 
+
+.. _l4c656166496e646578696e6754726565-7061727473:
+
+\ :ref:`parts <l486f6d6f67656e656f7573416767726567617465-7061727473>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-70617468546f5065726d75746174696f6e4379636c6573:
+
+.. index::
+   pair: LeafIndexingTree; pathToPermutationCycles
+
+:spadfun:`pathToPermutationCycles`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`pathToPermutationCycles(n,k,lp)`\  constructs the permutation of {1,..,\ :code:`n`\ } with \ :code:`k`\  cycles, represented by the path from the root of its tree to a leave.
+
+.. _l4c656166496e646578696e6754726565-70617468546f537562736574:
+
+.. index::
+   pair: LeafIndexingTree; pathToSubset
+
+:spadfun:`pathToSubset`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`Integer <l496e7465676572>`\  
+  \ :code:`pathToSubset(n, k, lp)`\  constructs a \ :code:`k`\ -subset of {1,...,\ :code:`n`\ } which corresponds to a leaf of subsetTree(\ :code:`n`\ ,\ :code:`k`\ ). Elements are in descending Order
+
+.. _l4c656166496e646578696e6754726565-70617468546f556e6f7264657265644e756d626572506172746974696f6e:
+
+.. index::
+   pair: LeafIndexingTree; pathToUnorderedNumberPartition
+
+:spadfun:`pathToUnorderedNumberPartition`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`pathToUnorderedNumberPartition(n,k,lp)`\  constructs the unordered number partition of \ :code:`n`\  with \ :code:`k`\  components, represented by the path from the root of its tree to a leave.
+
+.. _l4c656166496e646578696e6754726565-70617468546f556e6f726465726564536574506172746974696f6e:
+
+.. index::
+   pair: LeafIndexingTree; pathToUnorderedSetPartition
+
+:spadfun:`pathToUnorderedSetPartition`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`pathToUnorderedSetPartition(n,k,lp)`\  constructs the unordered set partition of \ :code:`n`\  in \ :code:`k`\  non-empty subsets, represented by the path from the root of its tree to a leave.
+
+.. _l4c656166496e646578696e6754726565-7065726d75746174696f6e4379636c657354726565:
+
+.. index::
+   pair: LeafIndexingTree; permutationCyclesTree
+
+:spadfun:`permutationCyclesTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`permutationCyclesTree(n, k)`\ , abbreviated by [\ :code:`n`\ , \ :code:`k`\ ] gives the tree for the permutations of {1,2,..,\ :code:`n`\ } with exactly \ :code:`k`\  cycles. Their number is \ :code:`stirling1(n,k)`\ . The constructing recursion is [\ :code:`n`\ ,\ :code:`k`\ ] = [\ :code:`n`\ -\ :code:`k`\ ,\ :code:`k`\ ] + (\ :code:`n`\ -1)[\ :code:`n`\ -1,\ :code:`k`\ -1], termination is [\ :code:`n`\ ,\ :code:`n`\ ] = [(1),(2),..,(\ :code:`n`\ )], [2,1] = [(1,2)] first edge drop cycle (\ :code:`n`\ ), if possible, next (\ :code:`n`\ -1) edges: drop \ :code:`n`\  out of the cycle, where \ :code:`i`\  is mapped to \ :code:`n`\ , 1 \ :code:`<=`\  \ :code:`i`\  \ :code:`<=`\  \ :code:`n`\ -1. Bijections: [\ :code:`n`\ -1,\ :code:`k`\ -1] \ :code:`->`\  [\ :code:`n`\ ,\ :code:`k`\ ], c1*c2*..\ :code:`*c`\ (\ :code:`k`\ -1) +-> c1*c2*..\ :code:`*c`\ (\ :code:`k`\ -1)*(\ :code:`n`\ ) case 1 \ :code:`<=`\  \ :code:`i`\  \ :code:`<=`\  \ :code:`n`\ -1 : [\ :code:`n`\ -1,\ :code:`k`\ ] \ :code:`->`\  [\ :code:`n`\ ,\ :code:`k`\ ], c1*c2*..\ :code:`*ck`\  +-> _ c1*c2*..\ :code:`*cj`\ \ :code:`'*`\ ..\ :code:`*cl`\  where \ :code:`cj=`\ (...\ :code:`i`\ ,\ :code:`n`\ ,\ :code:`l`\ ,,,) is the cycle where \ :code:`i`\  is mapped to \ :code:`n`\  while \ :code:`cj`\ \ :code:`'=`\ (...\ :code:`i`\ ,\ :code:`l`\ ,,,) is the cycle where \ :code:`n`\  is cancelled.
+
+.. _l4c656166496e646578696e6754726565-72616e646f6d50617468:
+
+.. index::
+   pair: LeafIndexingTree; randomPath
+
+:spadfun:`randomPath`\: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`randomPath(t)`\  constructs path from the root of \ :code:`t`\  to one leaf. Each leaf has equal chance to be selected by random.
+
+.. _l4c656166496e646578696e6754726565-72616e6b:
+
+.. index::
+   pair: LeafIndexingTree; rank
+
+:spadfun:`rank`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`rank(t, path)`\  returns the rank of the leaf at the end of the path. This is the number starting with 0 from left to right in the natural ordering of the leaves given by the ordering of the children at each node.
+
+.. _l4c656166496e646578696e6754726565-72657472616374:
+
+\ :ref:`retract <l5265747261637461626c6546726f6d-72657472616374>`\ \: \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> % 
+  from \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-72657472616374496643616e:
+
+\ :ref:`retractIfCan <l5265747261637461626c6546726f6d-72657472616374496643616e>`\ \: \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> Union(%, failed) 
+  from \ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-7365746368696c6472656e21:
+
+\ :ref:`setchildren! <l526563757273697665416767726567617465-7365746368696c6472656e21>`\ \: (%, \ :ref:`List <l4c697374>`\  %) -> % 
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-736574436f756e74696e6756616c756573:
+
+.. index::
+   pair: LeafIndexingTree; setCountingValues
+
+:spadfun:`setCountingValues`\: \ :ref:`List <l4c697374>`\  % -> \ :ref:`List <l4c697374>`\  % 
+  \ :code:`setCountingValues(lt)`\  sets all values to satisfy the counting conditions of a leaf indexing tree.
+
+.. _l4c656166496e646578696e6754726565-736574656c7421:
+
+\ :ref:`setelt! <l526563757273697665416767726567617465-736574656c7421>`\ \: (%, value, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-73657476616c756521:
+
+\ :ref:`setvalue! <l526563757273697665416767726567617465-73657476616c756521>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+.. _l4c656166496e646578696e6754726565-73657456616c7565:
+
+.. index::
+   pair: LeafIndexingTree; setValue
+
+:spadfun:`setValue`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`setValue(t, v)`\  sets \ :code:`v`\  as the new value of tree \ :code:`t`\ .
+
+.. _l4c656166496e646578696e6754726565-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4c656166496e646578696e6754726565-73756273657454726565:
+
+.. index::
+   pair: LeafIndexingTree; subsetTree
+
+:spadfun:`subsetTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`subsetTree(n, k)`\  constructs the tree with depth \ :code:`k`\  for all \ :code:`k`\ -subsets of an \ :code:`n`\ -element set as {1,2,..,\ :code:`n`\ }. Its elements are sorted in decreasing order. A path (\ :code:`p1`\ ,\ :code:`p2`\ ,..,\ :code:`pk`\ ) from root to a leave represents the subset {\ :code:`s1`\  \ :code:`:=`\  \ :code:`n`\ -\ :code:`p1+1`\ , \ :code:`s2`\  \ :code:`:=`\  \ :code:`s1`\ -\ :code:`p2+1`\ , ...}.
+
+.. _l4c656166496e646578696e6754726565-756e6f7264657265644e756d626572506172746974696f6e54726565:
+
+.. index::
+   pair: LeafIndexingTree; unorderedNumberPartitionTree
+
+:spadfun:`unorderedNumberPartitionTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`unorderedNumberPartitionTree(n,k)`\ , abbreviated by \ :code:`P`\ (\ :code:`n`\ ,\ :code:`k`\ ), gives the tree forthe unordered number partitions of \ :code:`n`\  in exactly \ :code:`k`\  summands > 0. Therr number can be computed by \ :code:`P(n,k)`\ . Recursion is \ :code:`P`\ (\ :code:`n`\ ,\ :code:`k`\ ) = \ :code:`P`\ (\ :code:`n`\ -\ :code:`k`\ ,\ :code:`k`\ ) + \ :code:`P`\ (\ :code:`n`\ -1,\ :code:`k`\ -1), Termination is \ :code:`P`\ (\ :code:`n`\ ,\ :code:`n`\ ) = {[1,1,..,1]}, \ :code:`P`\ (\ :code:`n`\ ,1) = {[\ :code:`n`\ ]}. First edge -[1,1,,1], if smallest element \ :code:`>=`\  2, otherwise second edge drop: ..,1]. Bijections: \ :code:`P`\ (\ :code:`n`\ ,\ :code:`k`\ ,\ :code:`>1`\ ) \ :code:`->`\  \ :code:`P`\ (\ :code:`n`\ -\ :code:`k`\ ,\ :code:`k`\ ), \ :code:`p`\  +-> \ :code:`p-`\ [1,1,..,1] \ :code:`P`\ (\ :code:`n`\ ,\ :code:`k`\ ,1) \ :code:`->`\  \ :code:`P`\ (\ :code:`n`\ -1,\ :code:`k`\ -1), \ :code:`p`\  = [\ :code:`p1`\ ,\ :code:`p2`\ ,..,.\ :code:`p`\ (\ :code:`k`\ -1),1] +-> [\ :code:`p1`\ ,\ :code:`p2`\ ,..,.\ :code:`p`\ (\ :code:`k`\ -1)]
+
+.. _l4c656166496e646578696e6754726565-756e6f726465726564536574506172746974696f6e54726565:
+
+.. index::
+   pair: LeafIndexingTree; unorderedSetPartitionTree
+
+:spadfun:`unorderedSetPartitionTree`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
+  \ :code:`unorderedSetPartitionTree(n,k)`\ , abbreviated by {\ :code:`n`\ ,\ :code:`k`\ }, gives the tree for the unordered set partitions of \ :code:`n`\  in exactly \ :code:`k`\  non-empty subsets, a \ :code:`k`\ -clustering. Recursion is {\ :code:`n`\ ,\ :code:`k`\ } = {\ :code:`n`\ -1,\ :code:`k`\ -1} + \ :code:`k`\ {\ :code:`n`\ -1,\ :code:`k`\ }, termination is {\ :code:`n`\ ,\ :code:`n`\ } = {{1},{2},..,{\ :code:`n`\ }}, {\ :code:`n`\ ,1} = {{1,2,..,\ :code:`n`\ }} First edge drop 1-element set {\ :code:`n`\ }, next \ :code:`k`\  edges 2 \ :code:`<=`\  \ :code:`i`\  \ :code:`<=`\  k+1: drop \ :code:`n`\  from the \ :code:`i`\ -th subset where it is included, bijections: {\ :code:`n`\ -1,\ :code:`k`\ -1} \ :code:`->`\  {\ :code:`n`\ ,\ :code:`k`\ }, \ :code:`c`\  = {\ :code:`c1`\ ,\ :code:`c2`\ , ..., \ :code:`c`\ (\ :code:`k`\ -1)} +-> {\ :code:`c1`\ ,\ :code:`c2`\ , ..., \ :code:`c`\ (\ :code:`k`\ -1), {\ :code:`n`\ }} case i: {\ :code:`n`\ -1,\ :code:`k`\ ) \ :code:`->`\  {\ :code:`n`\ ,\ :code:`k`\ }, \ :code:`c`\  = {\ :code:`c1`\ ,\ :code:`c2`\ , ..., \ :code:`ck`\ } +-> {\ :code:`c1`\ ,\ :code:`c2`\ , ..., \ :code:`c`\ (\ :code:`i`\ -1), \ :code:`ci`\  union {\ :code:`n`\ }, \ :code:`c`\ (\ :code:`i+1`\ ),..,\ :code:`ck`\ }
+
+.. _l4c656166496e646578696e6754726565-756e72616e6b:
+
+.. index::
+   pair: LeafIndexingTree; unrank
+
+:spadfun:`unrank`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`unrank(t, r)`\  returns the path from top node of \ :code:`t`\  to the leaf, numbered by \ :code:`r`\ . Argument \ :code:`r`\  must satisfy 0 \ :code:`<=`\  \ :code:`r`\  < numberOfLeaves(\ :code:`t`\ ).
+
+.. _l4c656166496e646578696e6754726565-76616c7565:
+
+\ :ref:`value <l526563757273697665416767726567617465-76616c7565>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+
+\ :ref:`Aggregate <l416767726567617465>`\  
+
+\ :ref:`BasicType <l426173696354797065>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+
+\ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+
+\ :ref:`Eltable <l456c7461626c65>`\ (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) 
+
+\ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  if \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`Hashable <l4861736861626c65>`\  
+
+\ :ref:`HomogeneousAggregate <l486f6d6f67656e656f7573416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+
+\ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) if \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  has \ :ref:`Evalable <l4576616c61626c65>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ 
+
+\ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+
+\ :ref:`RetractableFrom <l5265747261637461626c6546726f6d>`\  \ :ref:`Tree <l54726565>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+
+\ :ref:`SetCategory <l53657443617465676f7279>`\  
+
+\ :ref:`shallowlyMutable <l7368616c6c6f776c794d757461626c65>`\  
+

@@ -5,11 +5,16 @@
 JLObjPy
 =======
 
-:viewcode:`jobject.spad line 528 <jobject.spad#L528>` :editcode:`[edit on github] <jobject.spad#L528>`
+:viewcode:`jobject.spad line 532 <jobject.spad#L532>` :editcode:`[edit on github] <jobject.spad#L532>`
 
 
 Convenience domain for Julia Python objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The PythonCall package has to be installed in Julia. Note that the PythonCall Julia package uses a similar scheme for Julia Python objects to the one of jlFriCAS for JLObjectType references.
 
+
+.. _l4a4c4f626a5079-23:
+
+\ :ref:`# <l416767726567617465-23>`\ \: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a5079-3d:
 
@@ -55,6 +60,49 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l4a4c4f626a5079-636f7079:
+
+\ :ref:`copy <l416767726567617465-636f7079>`\ \: % -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a5079-656c74:
+
+.. index::
+   pair: JLObjPy; elt
+
+:spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`elt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+
+
+\ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+
+.. index::
+   pair: JLObjPy; elt
+
+:spadfun:`elt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
+  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example: \example{ret := jlApply("svd", jobject("rand(4,4)")); ret.U}
+
+
+\ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+.. _l4a4c4f626a5079-656d7074793f:
+
+\ :ref:`empty? <l416767726567617465-656d7074793f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a5079-656d707479:
+
+\ :ref:`empty <l416767726567617465-656d707479>`\ \: () -> % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a5079-65713f:
+
+\ :ref:`eq? <l416767726567617465-65713f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a5079-6a6c41626f7574:
 
@@ -120,6 +168,11 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 .. _l4a4c4f626a5079-6a6c696d726566:
 
 \ :ref:`jlimref <l4a4c4f626a65637454797065-6a6c696d726566>`\ \: \ :ref:`String <l537472696e67>`\  -> % 
+  from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a5079-6a6c4e616d6573:
+
+\ :ref:`jlNames <l4a4c4f626a65637454797065-6a6c4e616d6573>`\ \: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
 .. _l4a4c4f626a5079-6a6c4f626a656374:
@@ -318,10 +371,20 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
+.. _l4a4c4f626a5079-6c6573733f:
+
+\ :ref:`less? <l416767726567617465-6c6573733f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
 .. _l4a4c4f626a5079-6d697373696e673f:
 
 \ :ref:`missing? <l4a4c4f626a65637454797065-6d697373696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l4a4c4f626a5079-6d6f72653f:
+
+\ :ref:`more? <l416767726567617465-6d6f72653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
 
 .. _l4a4c4f626a5079-6d757461626c653f:
 
@@ -333,17 +396,56 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
 \ :ref:`nothing? <l4a4c4f626a65637454797065-6e6f7468696e673f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
 
+.. _l4a4c4f626a5079-71656c74:
+
+.. index::
+   pair: JLObjPy; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
+  \ :code:`qelt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+
+
+\ :ref:`qelt <l4a4c4f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+
+.. index::
+   pair: JLObjPy; qelt
+
+:spadfun:`qelt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
+  \ :code:`qelt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . No checks are done regarding the existence of the \ :code:`sym`\  property. If it does not exist, Julia throws an error.
+
+
+\ :ref:`qelt <l4a4c4f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
+  from \ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\ 
+
+.. _l4a4c4f626a5079-73616d706c65:
+
+\ :ref:`sample <l416767726567617465-73616d706c65>`\ \: % 
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
+.. _l4a4c4f626a5079-73697a653f:
+
+\ :ref:`size? <l416767726567617465-73697a653f>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  from \ :ref:`Aggregate <l416767726567617465>`\ 
+
 .. _l4a4c4f626a5079-737472696e67:
 
 \ :ref:`string <l4a4c54797065-737472696e67>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`JLType <l4a4c54797065>`\ 
 
 
+\ :ref:`Aggregate <l416767726567617465>`\  
+
 \ :ref:`BasicType <l426173696354797065>`\  
 
 \ :ref:`CoercibleTo <l436f65726369626c65546f>`\  \ :ref:`OutputForm <l4f7574707574466f726d>`\  
 
 \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\  
+
+\ :ref:`finiteAggregate <l66696e697465416767726567617465>`\  
+
+\ :ref:`JLObjectAggregate <l4a4c4f626a656374416767726567617465>`\  
 
 \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\  
 

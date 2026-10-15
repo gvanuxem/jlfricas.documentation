@@ -10,7 +10,7 @@ Tree S
 * S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
 
 
-Tree(S) is a basic domain of tree structures. Each tree is either empty or has a \ *node*\  consisting of a value and a list of (sub)trees.
+Tree(S) is a basic domain of tree structures. Each tree is either empty or has a \ *node*\  consisting of a value and a list of (sub)trees. Corecion to \ :ref:`OutputForm <l4f7574707574466f726d>`\  is provided by the package \ :ref:`TreeOutput <l547265654f7574707574>`\ , see it for more documentation.
 
 
 .. _l54726565-23:
@@ -66,6 +66,14 @@ Tree(S) is a basic domain of tree structures. Each tree is either empty or has a
 
 \ :ref:`cyclic? <l526563757273697665416767726567617465-6379636c69633f>`\ \: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  S
+
+.. _l54726565-6465707468:
+
+.. index::
+   pair: Tree; depth
+
+:spadfun:`depth`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`depth(t)`\  returns the length of the longest path from root to a leaf. Should be moved to \ :code:`RecursiveAggregate`\ .
 
 .. _l54726565-64697374616e6365:
 
@@ -192,6 +200,14 @@ Tree(S) is a basic domain of tree structures. Each tree is either empty or has a
 
 \ :ref:`nodes <l526563757273697665416767726567617465-6e6f646573>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
   from \ :ref:`RecursiveAggregate <l526563757273697665416767726567617465>`\  S
+
+.. _l54726565-6e756d6265724f664e6f646573:
+
+.. index::
+   pair: Tree; numberOfNodes
+
+:spadfun:`numberOfNodes`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  numberOfNode(\ :code:`t`\ ,\ :code:`d`\ ) counts the number of nodes of \ :code:`t`\  with depth \ :code:`d`\  including leaves with smaller depth.
 
 .. _l54726565-7061727473:
 

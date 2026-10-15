@@ -1,0 +1,54 @@
+.. index:: TreeOutput
+
+.. _l547265654f7574707574:
+
+TreeOutput S
+============
+
+:viewcode:`tree.spad line 494 <tree.spad#L494>` :editcode:`[edit on github] <tree.spad#L494>`
+
+* S: \ :ref:`SetCategory <l53657443617465676f7279>`\ 
+
+
+This package implements new output for trees. Output depends on two paramenters, maximal depth and maximal number of leaves. Maximal depth can be queried using \ :code:`outputDepth()`\  and set to \ :code:`d`\  using \ :code:`outputDepth(d)`\ . Similarly maximal number of leaves can be queried using \ :code:`outputNofLeaves()`\  and set to \ :code:`n`\  using \ :code:`outputNofLeaves(n)`\ . Default depth is 2 and default number of leaves is 1000. The trees are output until reaching maximal depth \ :code:`d`\ . Leaves are depicted by \ :code:`<v>`\  while the other nodes of depth \ :code:`d`\  list the labels of their children: \ :code:`v-`\ [\ :code:`v1`\  \ :code:`v2`\  ... \ :code:`vk`\ ]. Note further, that the tree grows from left to right and for the edges left to right is depicted from top to bottom. Also, maximal number of leaves that are output is restriced by \ :code:`outputNofLeaves()`\ .
+
+
+.. _l547265654f7574707574-6f75747075744465707468:
+
+.. index::
+   pair: TreeOutput; outputDepth
+
+:spadfun:`outputDepth`\: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`outputDepth()`\  gives the depth until which a tree is depicted.
+
+
+.. index::
+   pair: TreeOutput; outputDepth
+
+:spadfun:`outputDepth`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`outputDepth(d)`\  sets the depth until which a tree is depicted to \ :code:`d`\ . It overwrites the default value 2.
+
+.. _l547265654f7574707574-6f75747075744e6f664c6561766573:
+
+.. index::
+   pair: TreeOutput; outputNofLeaves
+
+:spadfun:`outputNofLeaves`\: () -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`outputNofLeaves()`\  gives the maximal number of leaves, up to then a tree is depicted.
+
+
+.. index::
+   pair: TreeOutput; outputNofLeaves
+
+:spadfun:`outputNofLeaves`\: \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`outputNofLeaves(d)`\  sets internal \ :code:`nofLeaves`\  up to then a tree is depicted. It overwrites the default value 1000.
+
+.. _l547265654f7574707574-746f5f6f7574707574:
+
+.. index::
+   pair: TreeOutput; to_output
+
+:spadfun:`to_output`\: \ :ref:`Tree <l54726565>`\  S -> \ :ref:`OutputForm <l4f7574707574466f726d>`\  
+  \ :code:`to_output(t)`\  convert tree \ :code:`t`\  to \ :ref:`OutputForm <l4f7574707574466f726d>`\ .
+
+
