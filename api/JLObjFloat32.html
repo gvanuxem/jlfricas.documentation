@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=46f59be4" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
@@ -238,7 +238,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-12">
-<dt><span class="spadfun">jfloat32</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat32</span></code>(<code class="code docutils literal notranslate"><span class="pre">str</span></code>) evaluates <code class="code docutils literal notranslate"><span class="pre">str</span></code> in Julia and returns the Julia <code class="code docutils literal notranslate"><span class="pre">Float32</span></code> object. For example: example{jfloat32(“sin(<code class="code docutils literal notranslate"><span class="pre">pi</span></code>)”)} example{jfloat32(“0.7”)}</p>
+<dt><span class="spadfun">jfloat32</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat32</span></code>(<code class="code docutils literal notranslate"><span class="pre">str</span></code>) evaluates <code class="code docutils literal notranslate"><span class="pre">str</span></code> in Julia and returns the Julia <code class="code docutils literal notranslate"><span class="pre">Float32</span></code> object. For example: <code class="code docutils literal notranslate"><span class="pre">jfloat32(&quot;sin(:code:`pi</span></code>)”)` <code class="code docutils literal notranslate"><span class="pre">jfloat32(&quot;0.7&quot;)</span></code></p>
 </dd>
 </dl>
 <span id="l4a4c4f626a466c6f61743332-6a696e663332"></span><dl class="simple" id="index-13">
@@ -278,11 +278,11 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a466c6f61743332-6a6c463332434170706c79"></span><dl class="simple" id="index-16">
-<dt><span class="spadfun">jlF32CApply</span>: (<a class="reference internal" href="JLObjDynamicLinker.html#l4a4c4f626a44796e616d69634c696e6b6572"><span class="std std-ref">JLObjDynamicLinker</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlF32CApply(func,</span> <span class="pre">x)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>. For example: example{libm:= jlDlOpen “libopenlibm”} example{squareRoot:=jlDlSym(libm,jsym(sqrtf))} example{jlF32CApply(squareRoot,jfloat32(2))}</p>
+<dt><span class="spadfun">jlF32CApply</span>: (<a class="reference internal" href="JLObjDynamicLinker.html#l4a4c4f626a44796e616d69634c696e6b6572"><span class="std std-ref">JLObjDynamicLinker</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlF32CApply(func,</span> <span class="pre">x)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>. For example: <code class="code docutils literal notranslate"><span class="pre">libm:=</span> <span class="pre">jlDlOpen</span> <span class="pre">&quot;libopenlibm&quot;</span></code> <code class="code docutils literal notranslate"><span class="pre">squareRoot:=jlDlSym(libm,jsym(sqrtf))</span></code> <code class="code docutils literal notranslate"><span class="pre">jlF32CApply(squareRoot,jfloat32(2))</span></code></p>
 </dd>
 </dl>
 <dl class="simple" id="index-17">
-<dt><span class="spadfun">jlF32CApply</span>: (<a class="reference internal" href="JLObjDynamicLinker.html#l4a4c4f626a44796e616d69634c696e6b6572"><span class="std std-ref">JLObjDynamicLinker</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlF32CApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. For example: example{libm:= jlDlOpen “libopenlibm”} example{power:=jlDlSym(libm,jsym(powf))} example{jlF32CApply(power,jfloat32(2),jfloat32(7))}</p>
+<dt><span class="spadfun">jlF32CApply</span>: (<a class="reference internal" href="JLObjDynamicLinker.html#l4a4c4f626a44796e616d69634c696e6b6572"><span class="std std-ref">JLObjDynamicLinker</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlF32CApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. For example: <code class="code docutils literal notranslate"><span class="pre">libm:=</span> <span class="pre">jlDlOpen</span> <span class="pre">&quot;libopenlibm&quot;</span></code> <code class="code docutils literal notranslate"><span class="pre">power:=jlDlSym(libm,jsym(powf))</span></code> <code class="code docutils literal notranslate"><span class="pre">jlF32CApply(power,jfloat32(2),jfloat32(7))</span></code></p>
 </dd>
 </dl>
 <dl class="simple" id="index-18">

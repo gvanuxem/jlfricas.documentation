@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=46f59be4" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
@@ -96,7 +96,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-5">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. For example: example{ret := jlApply(“svd”, jobject(“rand(4,4)”)); ret.U}</p>
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. For example: <code class="code docutils literal notranslate"><span class="pre">ret</span> <span class="pre">:=</span> <span class="pre">jlApply(&quot;svd&quot;,</span> <span class="pre">jobject(&quot;rand(4,4)&quot;));</span> <span class="pre">ret.U</span></code></p>
 </dd>
 <dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 </dd>
@@ -174,7 +174,7 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a52-6a6c524170706c79"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: example{jlRApply(“abs”, (-2)::JLObjR)} example{jlREval “mtcars”;} example{jlRApply(“summary”, %)}</p>
+<dt><span class="spadfun">jlRApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRApply(func,</span> <span class="pre">robj)</span></code> applies the <code class="code docutils literal notranslate"><span class="pre">R</span></code> function <code class="code docutils literal notranslate"><span class="pre">func</span></code> form the module __main__ to the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj. For example: <code class="code docutils literal notranslate"><span class="pre">jlRApply(&quot;abs&quot;,</span> <span class="pre">(-2)::JLObjR)</span></code> <code class="code docutils literal notranslate"><span class="pre">jlREval</span> <span class="pre">&quot;mtcars&quot;;</span></code> <code class="code docutils literal notranslate"><span class="pre">jlRApply(&quot;summary&quot;,</span> <span class="pre">%)</span></code></p>
 </dd>
 </dl>
 <dl class="simple" id="index-7">
@@ -198,7 +198,7 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a52-6a6c52436f7079"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">jlRCopy</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRCopy(robj)</span></code> returns a Julia object copy of the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object <code class="code docutils literal notranslate"><span class="pre">robj</span></code> if possible. Use jlType to know the resulting type of <code class="code docutils literal notranslate"><span class="pre">robj</span></code> if necessary. For example: example{robj:=jlREval “mtcars”;} example{jlRCopy robj}</p>
+<dt><span class="spadfun">jlRCopy</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlRCopy(robj)</span></code> returns a Julia object copy of the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object <code class="code docutils literal notranslate"><span class="pre">robj</span></code> if possible. Use jlType to know the resulting type of <code class="code docutils literal notranslate"><span class="pre">robj</span></code> if necessary. For example: <code class="code docutils literal notranslate"><span class="pre">robj:=jlREval</span> <span class="pre">&quot;mtcars&quot;;</span></code> <code class="code docutils literal notranslate"><span class="pre">jlRCopy</span> <span class="pre">robj</span></code></p>
 </dd>
 </dl>
 <span id="l4a4c4f626a52-6a6c52446f63756d656e746174696f6e"></span><dl class="simple" id="index-13">
@@ -218,7 +218,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-15">
-<dt><span class="spadfun">jlREval</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlREval(obj)</span></code> evaluates the expression <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a Julia object in the Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> environment. For example: example{jlREval “mtcars”}</p>
+<dt><span class="spadfun">jlREval</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlREval(obj)</span></code> evaluates the expression <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a Julia object in the Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> environment. For example: <code class="code docutils literal notranslate"><span class="pre">jlREval</span> <span class="pre">&quot;mtcars&quot;</span></code></p>
 </dd>
 </dl>
 <span id="l4a4c4f626a52-6a6c524c696272617279"></span><dl class="simple" id="index-16">
@@ -246,11 +246,11 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a52-6a72"></span><dl class="simple" id="index-20">
-<dt><span class="spadfun">jr</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(obj)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. This is the preferred method. For example: example{a:= nrand(10,4)} example{b := jr(a::JLMatrix(JLObjFloat64))} example{jlRApply(“prcomp”, b)}</p>
+<dt><span class="spadfun">jr</span>: <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(obj)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object. This is the preferred method. For example: <code class="code docutils literal notranslate"><span class="pre">a:=</span> <span class="pre">nrand(10,4)</span></code> <code class="code docutils literal notranslate"><span class="pre">b</span> <span class="pre">:=</span> <span class="pre">jr(a::JLMatrix(JLObjFloat64))</span></code> <code class="code docutils literal notranslate"><span class="pre">jlRApply(&quot;prcomp&quot;,</span> <span class="pre">b)</span></code></p>
 </dd>
 </dl>
 <dl class="simple" id="index-21">
-<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object using the Julia &#64;R_str macro. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj if necessary. For example: example{jr “optim(0, $(x -&gt; x-cos(x)), method=’L-BFGS-B’)”} example{ret:= jlRCopy %} example{qelt(ret,par), qelt(ret,value)}</p>
+<dt><span class="spadfun">jr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jr(str)</span></code> coerces the string <code class="code docutils literal notranslate"><span class="pre">str</span></code> to a Julia <code class="code docutils literal notranslate"><span class="pre">R</span></code> object using the Julia &#64;R_str macro. Use jlDisplay(robj) to display the <code class="code docutils literal notranslate"><span class="pre">R</span></code> object robj if necessary. For example: <code class="code docutils literal notranslate"><span class="pre">jr</span> <span class="pre">&quot;optim(0,</span> <span class="pre">$(x</span> <span class="pre">-&gt;</span> <span class="pre">x-cos(x)),</span> <span class="pre">method='L-BFGS-B')&quot;</span></code> <code class="code docutils literal notranslate"><span class="pre">ret:=</span> <span class="pre">jlRCopy</span> <span class="pre">%</span></code> <code class="code docutils literal notranslate"><span class="pre">qelt(ret,par),</span> <span class="pre">qelt(ret,value)</span></code></p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a52-6c61746578">

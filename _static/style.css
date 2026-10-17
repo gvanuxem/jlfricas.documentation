@@ -1,13 +1,13 @@
-/* Inline code produced by \spad{...} (rendered as :code: / code.docutils.literal).
-   Sphinx's classic theme hard-codes a light #ecf0f3 background for "code",
-   which combined with dark-theme text produces white text on a white background. */
+/* jlFriCAS Sphinx documentation styling matching docs/index.* and contrib/generate_jldocs.py.
+   Inline code produced by \spad{...} (rendered as :code: / code.docutils.literal) uses light gray text. */
+
 code, tt, code.literal, code.docutils.literal, .docutils.literal {
-    background-color: #0f172a !important;  /* slate-900 dark background */
-    color: #50fa7b !important;             /* bright readable green */
+    background-color: rgba(30, 41, 59, 0.8) !important;  /* slate-800 background matching docs/index */
+    color: #cbd5e1 !important;                            /* light gray (slate-300) for \spad{...} */
     font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 0.95em;
-    padding: 0.1em 0.35em;
-    border: 1px solid #1e293b;
+    font-size: 0.9em;
+    padding: 0.15em 0.4em;
+    border: 1px solid rgba(51, 65, 85, 0.5);              /* slate-700 border matching docs/index */
     border-radius: 4px;
 }
 
@@ -19,7 +19,7 @@ code span.pre, tt span.pre, .docutils.literal span.pre {
     border: none !important;
 }
 
-/* Code inside links or headings keeps the link colour, no box */
+/* Code inside links or headings keeps the link / heading color, no box */
 a code, a code span.pre, code.xref,
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     background-color: transparent !important;
@@ -28,18 +28,28 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     padding: 0 !important;
 }
 
-/* Ensure links inside inline code stay legible */
+/* Ensure links inside inline code stay legible with docs/index primary link color */
 code a, a code, tt a, a tt {
     color: #60a5fa !important;
 }
 
-/* FriCAS SPAD roles, readable on the dark background */
+code a:hover, a:hover code, tt a:hover, a:hover tt {
+    color: #93c5fd !important;
+}
+
+/* FriCAS SPAD roles matching docs/index & generate_jldocs colors */
 .spadop { color: #f472b6 !important; }
 .spadfun { color: #38bdf8 !important; }
 .spadtype { color: #a78bfa !important; }
 
-/* Table headers and field list terms override for dark theme */
+/* Table headers and field list terms override for dark theme matching docs/index */
 th, dl.field-list > dt {
     background-color: #1e293b !important;
-    color: #f8fafc !important;
+    color: #f1f5f9 !important;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.7) !important;
 }
+
+table.docutils td {
+    border-bottom: 1px solid rgba(51, 65, 85, 0.3) !important;
+}
+

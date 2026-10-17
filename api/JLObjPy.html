@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=46f59be4" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
@@ -96,7 +96,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-5">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. For example: example{ret := jlApply(“svd”, jobject(“rand(4,4)”)); ret.U}</p>
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. For example: <code class="code docutils literal notranslate"><span class="pre">ret</span> <span class="pre">:=</span> <span class="pre">jlApply(&quot;svd&quot;,</span> <span class="pre">jobject(&quot;rand(4,4)&quot;));</span> <span class="pre">ret.U</span></code></p>
 </dd>
 <dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 </dd>
@@ -194,7 +194,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-11">
-<dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. example{jlPyApply(“numpy”, “array”, jpyobj(“[1,2,3]”))} creates a numpy array from the Python list [1,2,3]. jlPyApply(“math”, “sqrt”, 2) computes the square root of 2.</p>
+<dt><span class="spadfun">jlPyApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlPyApply(mod,</span> <span class="pre">func,</span> <span class="pre">pyobj)</span></code> applies the Python function <code class="code docutils literal notranslate"><span class="pre">func</span></code> from the module <code class="code docutils literal notranslate"><span class="pre">mod</span></code> to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. <code class="code docutils literal notranslate"><span class="pre">jlPyApply(&quot;numpy&quot;,</span> <span class="pre">&quot;array&quot;,</span> <span class="pre">jpyobj(&quot;[1,2,3]&quot;))</span></code> creates a numpy array from the Python list [1,2,3]. jlPyApply(“math”, “sqrt”, 2) computes the square root of 2.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-12">
