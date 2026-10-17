@@ -1,0 +1,48 @@
+/* jlFriCAS dark-theme overrides for the Sphinx documentation.
+   Loaded via html_css_files in conf.py, after the theme's classic.css. */
+
+/* Inline code produced by \spad{...} (rendered as :code: / code.docutils.literal).
+   Sphinx's classic theme hard-codes a light #ecf0f3 background for "code",
+   which combined with dark-theme text produces white text on a white background. */
+code, tt, code.literal, code.docutils.literal, .docutils.literal {
+    background-color: #0f172a !important;  /* slate-900 dark background */
+    color: #50fa7b !important;             /* bright readable green */
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.95em;
+    padding: 0.1em 0.35em;
+    border: 1px solid #1e293b;
+    border-radius: 4px;
+}
+
+/* Ensure inner pre spans inherit color and remain transparent */
+code span.pre, tt span.pre, .docutils.literal span.pre {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Code inside links or headings keeps the link colour, no box */
+a code, a code span.pre, code.xref,
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    background-color: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    padding: 0 !important;
+}
+
+/* Ensure links inside inline code stay legible */
+code a, a code, tt a, a tt {
+    color: #60a5fa !important;
+}
+
+/* FriCAS SPAD roles, readable on the dark background */
+.spadop { color: #f472b6 !important; }
+.spadfun { color: #38bdf8 !important; }
+.spadtype { color: #a78bfa !important; }
+
+/* Table headers and field list terms override for dark theme */
+th, dl.field-list > dt {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+}
