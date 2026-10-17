@@ -294,7 +294,23 @@ Convenience domain for Julia \ :code:`Float64`\ , objects that are used within J
    pair: JLObjFloat64; jfloat64
 
 :spadfun:`jfloat64`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jfloat64`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float64`\  object. For example: \ :code:`jfloat64("sin(\ :code:`pi`\ )")`\  \ :code:`jfloat64("0.7")`\ 
+  \ :code:`jfloat64`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float64`\  object. For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jfloat64("sin(\ :code:`pi`\ )")
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jfloat64("0.7")
+
+  
 
 .. _l4a4c4f626a466c6f61743634-6a696e663634:
 
@@ -361,21 +377,93 @@ Convenience domain for Julia \ :code:`Float64`\ , objects that are used within J
    pair: JLObjFloat64; jlF64CApply
 
 :spadfun:`jlF64CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %) -> % 
-  \ :code:`jlF64CApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . For example: \ :code:`libm:= jlDlOpen "libopenlibm"`\  \ :code:`squareRoot:=jlDlSym(libm,jsym(sqrt))`\  \ :code:`jlF64CApply(squareRoot,jfloat64(2))`\ 
+  \ :code:`jlF64CApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        libm:= jlDlOpen "libopenlibm"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        squareRoot:=jlDlSym(libm,jsym(sqrt))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlF64CApply(squareRoot,jfloat64(2))
+
+  
 
 
 .. index::
    pair: JLObjFloat64; jlF64CApply
 
 :spadfun:`jlF64CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %) -> % 
-  \ :code:`jlF64CApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . For example: \ :code:`libm:= jlDlOpen "libopenlibm"`\  \ :code:`power:=jlDlSym(libm,jsym(pow))`\  \ :code:`jlF64CApply(power,jfloat64(2),jfloat64(7))`\ 
+  \ :code:`jlF64CApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        libm:= jlDlOpen "libopenlibm"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        power:=jlDlSym(libm,jsym(pow))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlF64CApply(power,jfloat64(2),jfloat64(7))
+
+  
 
 
 .. index::
    pair: JLObjFloat64; jlF64CApply
 
 :spadfun:`jlF64CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %, %) -> % 
-  \ :code:`jlF64CApply(func, x, y, z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . For example with \ :code:`GSL`\ -2.8: \ :code:`gsl:= jlDlOpen "libgsl.so.28"`\  \ :code:`hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))`\  \ :code:`jlF64CApply(hypot3,jfloat64(2),jfloat64(7),jfloat64(9.0))`\ 
+  \ :code:`jlF64CApply(func, x, y, z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . For example with \ :code:`GSL`\ -2.8: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        gsl:= jlDlOpen "libgsl.so.28"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlF64CApply(hypot3,jfloat64(2),jfloat64(7),jfloat64(9.0))
+
+  
 
 .. _l4a4c4f626a466c6f61743634-6a6c4669656c644e616d6573:
 

@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -546,8 +547,18 @@
 <dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-71756f"><span class="std std-ref">quo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d4672616374696f6e-72616e646f6d"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">random</span>: (<a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">random(seg1,</span> <span class="pre">seg2)</span></code> returns a random fraction depending on the base ring. For example: <code class="code docutils literal notranslate"><span class="pre">FRPRing:=NFRAC(NUP(NINT,'x))</span></code> <code class="code docutils literal notranslate"><span class="pre">random(1..5,-10..10)$FRPRing</span></code></p>
+<span id="l4e4d4672616374696f6e-72616e646f6d"></span><dl id="index-7">
+<dt><span class="spadfun">random</span>: (<a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">random(seg1,</span> <span class="pre">seg2)</span></code> returns a random fraction depending on the base ring. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>FRPRing:=NFRAC(NUP(NINT,&#39;x))
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>random(1..5,-10..10)\$FRPRing
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <dl class="simple" id="index-8">

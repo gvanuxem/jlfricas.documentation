@@ -83,7 +83,15 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example: \ :code:`ret := jlApply("svd", jobject("rand(4,4)")); ret.U`\ 
+  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        ret := jlApply("svd", jobject("rand(4,4)")); ret.U
+
+  
 
 
 \ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -226,7 +234,15 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; jlPyApply
 
 :spadfun:`jlPyApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ :code:`jlPyApply(mod, func, pyobj)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. \ :code:`jlPyApply("numpy", "array", jpyobj("[1,2,3]"))`\  creates a numpy array from the Python list [1,2,3]. jlPyApply("math", "sqrt", 2) computes the square root of 2.
+  \ :code:`jlPyApply(mod, func, pyobj)`\  applies the Python function \ :code:`func`\  from the module \ :code:`mod`\  to the Python object pyobj. For example: Numpy needs to be installed, see the Julia package CondaPkg. 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPyApply("numpy", "array", jpyobj("[1,2,3]"))
+
+   creates a numpy array from the Python list [1,2,3]. jlPyApply("math", "sqrt", 2) computes the square root of 2.
 
 
 .. index::

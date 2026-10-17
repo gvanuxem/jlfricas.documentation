@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -421,12 +422,22 @@
 <dt><span class="spadfun">jfloat</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat(q)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">q</span></code> as a JFLoat.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-19">
-<dt><span class="spadfun">jfloat</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat(z)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">z</span></code> as a JFLoat. For example: <code class="code docutils literal notranslate"><span class="pre">sqrt(jfloat(2)^2+7.0^2+9.^2)</span></code></p>
+<dl id="index-19">
+<dt><span class="spadfun">jfloat</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat(z)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">z</span></code> as a JFLoat. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sqrt(jfloat(2)^2+7.0^2+9.^2)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
-<dl class="simple" id="index-20">
-<dt><span class="spadfun">jfloat</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat(z)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">z</span></code> as a JFLoat. For example where automatic coercions is also used: <code class="code docutils literal notranslate"><span class="pre">sqrt(jfloat(2.0)^2+7.0^2+9.^2)</span></code></p>
+<dl id="index-20">
+<dt><span class="spadfun">jfloat</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat(z)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">z</span></code> as a JFLoat. For example where automatic coercions is also used:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sqrt(jfloat(2.0)^2+7.0^2+9.^2)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <span id="l4a4c466c6f6174-6a696e66"></span><dl class="simple" id="index-21">
@@ -499,16 +510,94 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c696d726566"><span class="std std-ref">jlimref</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4a4c466c6f6174-6a6c4d5046524170706c79"></span><dl class="simple" id="index-27">
-<dt><span class="spadfun">jlMPFRApply</span>: (<a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(func,</span> <span class="pre">x)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>. It is expected that the <code class="code docutils literal notranslate"><span class="pre">C</span></code> function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. <code class="code docutils literal notranslate"><span class="pre">mpfr:=jlDlOpen</span> <span class="pre">&quot;libmpfr&quot;</span></code> <code class="code docutils literal notranslate"><span class="pre">sym:=</span> <span class="pre">jlDlSym(mpfr,jsym(mpfr_gamma))</span></code> <code class="code docutils literal notranslate"><span class="pre">val:=jfloat(&quot;0.7&quot;);</span></code> <code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(sym,val)</span></code> <code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> 1.29805533264755778568117117915281161778… <code class="code docutils literal notranslate"><span class="pre">jlDlClose(mpfr)</span></code></p>
+<span id="l4a4c466c6f6174-6a6c4d5046524170706c79"></span><dl id="index-27">
+<dt><span class="spadfun">jlMPFRApply</span>: (<a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(func,</span> <span class="pre">x)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>. It is expected that the <code class="code docutils literal notranslate"><span class="pre">C</span></code> function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest.</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mpfr:=jlDlOpen &quot;libmpfr&quot;
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sym:= jlDlSym(mpfr,jsym(mpfr_gamma))
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>val:=jfloat(&quot;0.7&quot;);
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlMPFRApply(sym,val)
+</pre></div>
+</div>
+</div></blockquote>
+<p><code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> 1.29805533264755778568117117915281161778…</p>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlClose(mpfr)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
-<dl class="simple" id="index-28">
-<dt><span class="spadfun">jlMPFRApply</span>: (<a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. It is expected that the <code class="code docutils literal notranslate"><span class="pre">C</span></code> function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. <code class="code docutils literal notranslate"><span class="pre">mpfr:=j</span> <span class="pre">lDlOpen</span> <span class="pre">&quot;libmpfr&quot;</span></code> <code class="code docutils literal notranslate"><span class="pre">sym:=</span> <span class="pre">jlDlSym(mpfr,jsym(mpfr_pow))</span></code> <code class="code docutils literal notranslate"><span class="pre">val:=jfloat(&quot;0.7&quot;);</span></code> <code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(sym,val,</span> <span class="pre">jfloat(2))</span></code> <code class="code docutils literal notranslate"><span class="pre">jlDlClose(mpfr)</span></code></p>
+<dl id="index-28">
+<dt><span class="spadfun">jlMPFRApply</span>: (<a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. It is expected that the <code class="code docutils literal notranslate"><span class="pre">C</span></code> function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest.</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mpfr:=j lDlOpen &quot;libmpfr&quot;
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sym:= jlDlSym(mpfr,jsym(mpfr_pow))
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>val:=jfloat(&quot;0.7&quot;);
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlMPFRApply(sym,val, jfloat(2))
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlClose(mpfr)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
-<dl class="simple" id="index-29">
-<dt><span class="spadfun">jlMPFRApply</span>: (<a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(func,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">y</span></code> and <code class="code docutils literal notranslate"><span class="pre">z</span></code>. It is expected that the <code class="code docutils literal notranslate"><span class="pre">C</span></code> function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses Julia rounding mode, default to nearest. <code class="code docutils literal notranslate"><span class="pre">mpfr:=j</span> <span class="pre">lDlOpen</span> <span class="pre">&quot;libmpfr&quot;</span></code> <code class="code docutils literal notranslate"><span class="pre">sym:=</span> <span class="pre">jlDlSym(mpfr,jsym(mpfr_fma))</span></code> <code class="code docutils literal notranslate"><span class="pre">val:=jfloat(&quot;0.7&quot;);</span></code> <code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(sym,val,</span> <span class="pre">jfloat(2),</span> <span class="pre">jfloat(5))</span></code> <code class="code docutils literal notranslate"><span class="pre">jlDlClose(mpfr)</span></code></p>
+<dl id="index-29">
+<dt><span class="spadfun">jlMPFRApply</span>: (<a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlMPFRApply(func,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">y</span></code> and <code class="code docutils literal notranslate"><span class="pre">z</span></code>. It is expected that the <code class="code docutils literal notranslate"><span class="pre">C</span></code> function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses Julia rounding mode, default to nearest.</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mpfr:=j lDlOpen &quot;libmpfr&quot;
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sym:= jlDlSym(mpfr,jsym(mpfr_fma))
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>val:=jfloat(&quot;0.7&quot;);
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlMPFRApply(sym,val, jfloat(2), jfloat(5))
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlClose(mpfr)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c466c6f6174-6a6c4e616d6573">

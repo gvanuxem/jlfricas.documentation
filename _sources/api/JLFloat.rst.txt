@@ -562,14 +562,30 @@ JLFloat
    pair: JLFloat; jfloat
 
 :spadfun:`jfloat`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ :code:`jfloat(z)`\  returns \ :code:`z`\  as a JFLoat. For example: \ :code:`sqrt(jfloat(2)^2+7.0^2+9.^2)`\ 
+  \ :code:`jfloat(z)`\  returns \ :code:`z`\  as a JFLoat. For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        sqrt(jfloat(2)^2+7.0^2+9.^2)
+
+  
 
 
 .. index::
    pair: JLFloat; jfloat
 
 :spadfun:`jfloat`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jfloat(z)`\  returns \ :code:`z`\  as a JFLoat. For example where automatic coercions is also used: \ :code:`sqrt(jfloat(2.0)^2+7.0^2+9.^2)`\ 
+  \ :code:`jfloat(z)`\  returns \ :code:`z`\  as a JFLoat. For example where automatic coercions is also used: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        sqrt(jfloat(2.0)^2+7.0^2+9.^2)
+
+  
 
 .. _l4a4c466c6f6174-6a696e66:
 
@@ -687,21 +703,141 @@ JLFloat
    pair: JLFloat; jlMPFRApply
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %) -> % 
-  \ :code:`jlMPFRApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . It is expected that the \ :code:`C`\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. \ :code:`mpfr:=jlDlOpen "libmpfr"`\  \ :code:`sym:= jlDlSym(mpfr,jsym(mpfr_gamma))`\  \ :code:`val:=jfloat("0.7");`\  \ :code:`jlMPFRApply(sym,val)`\  \ :code:`=>`\  1.29805533264755778568117117915281161778... \ :code:`jlDlClose(mpfr)`\ 
+  \ :code:`jlMPFRApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . It is expected that the \ :code:`C`\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        mpfr:=jlDlOpen "libmpfr"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        sym:= jlDlSym(mpfr,jsym(mpfr_gamma))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        val:=jfloat("0.7");
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlMPFRApply(sym,val)
+
+   \ :code:`=>`\  1.29805533264755778568117117915281161778... 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlDlClose(mpfr)
+
+  
 
 
 .. index::
    pair: JLFloat; jlMPFRApply
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %, %) -> % 
-  \ :code:`jlMPFRApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . It is expected that the \ :code:`C`\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. \ :code:`mpfr:=j lDlOpen "libmpfr"`\  \ :code:`sym:= jlDlSym(mpfr,jsym(mpfr_pow))`\  \ :code:`val:=jfloat("0.7");`\  \ :code:`jlMPFRApply(sym,val, jfloat(2))`\  \ :code:`jlDlClose(mpfr)`\ 
+  \ :code:`jlMPFRApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . It is expected that the \ :code:`C`\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and and as a last parameter, the rounding mode. See MPFR. Uses Julia rounding mode, default to nearest. 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        mpfr:=j lDlOpen "libmpfr"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        sym:= jlDlSym(mpfr,jsym(mpfr_pow))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        val:=jfloat("0.7");
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlMPFRApply(sym,val, jfloat(2))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlDlClose(mpfr)
+
+  
 
 
 .. index::
    pair: JLFloat; jlMPFRApply
 
 :spadfun:`jlMPFRApply`\: (\ :ref:`JLObject <l4a4c4f626a656374>`\ , %, %, %) -> % 
-  \ :code:`jlMPFRApply(func, x, y, z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . It is expected that the \ :code:`C`\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses Julia rounding mode, default to nearest. \ :code:`mpfr:=j lDlOpen "libmpfr"`\  \ :code:`sym:= jlDlSym(mpfr,jsym(mpfr_fma))`\  \ :code:`val:=jfloat("0.7");`\  \ :code:`jlMPFRApply(sym,val, jfloat(2), jfloat(5))`\  \ :code:`jlDlClose(mpfr)`\ 
+  \ :code:`jlMPFRApply(func, x, y, z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . It is expected that the \ :code:`C`\  function modifies the first parameters for the returned value (provided by FriCAS and returned here) and as a last parameter, the rounding mode (the default mode is used here). See MPFR. Uses Julia rounding mode, default to nearest. 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        mpfr:=j lDlOpen "libmpfr"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        sym:= jlDlSym(mpfr,jsym(mpfr_fma))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        val:=jfloat("0.7");
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlMPFRApply(sym,val, jfloat(2), jfloat(5))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlDlClose(mpfr)
+
+  
 
 .. _l4a4c466c6f6174-6a6c4e616d6573:
 

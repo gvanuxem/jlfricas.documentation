@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -161,8 +162,26 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l57534f626a656374-6a5753496e74657270726574"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">jWSInterpret</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jWSInterpret(Type|Form,</span> <span class="pre">Expr)</span></code> interprets Expr to be of type Type or Form using the Wolfram Symbolic Language. For example: <code class="code docutils literal notranslate"><span class="pre">jWSInterpret(&quot;Number&quot;,&quot;3.2&quot;)&#64;WSREAL</span></code> <code class="code docutils literal notranslate"><span class="pre">jWSInterpret(&quot;Real&quot;,&quot;3.2&quot;)&#64;WSREAL</span></code> <code class="code docutils literal notranslate"><span class="pre">jWSInterpret(&quot;Location&quot;,&quot;Lille&quot;)$WSEXPR</span></code> See jWSExpr “<code class="code docutils literal notranslate"><span class="pre">$</span></code>InterpreterTypes”</p>
+<span id="l57534f626a656374-6a5753496e74657270726574"></span><dl id="index-5">
+<dt><span class="spadfun">jWSInterpret</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jWSInterpret(Type|Form,</span> <span class="pre">Expr)</span></code> interprets Expr to be of type Type or Form using the Wolfram Symbolic Language. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jWSInterpret(&quot;Number&quot;,&quot;3.2&quot;)@WSREAL
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jWSInterpret(&quot;Real&quot;,&quot;3.2&quot;)@WSREAL
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jWSInterpret(&quot;Location&quot;,&quot;Lille&quot;)\$WSEXPR
+</pre></div>
+</div>
+</div></blockquote>
+<p>See jWSExpr “<code class="code docutils literal notranslate"><span class="pre">$</span></code>InterpreterTypes”</p>
+</div>
 </dd>
 </dl>
 <dl class="simple" id="index-6">

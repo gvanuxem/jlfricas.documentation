@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -73,12 +74,35 @@
 <dt><span class="spadfun">jlAbout</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlAbout(obj)</span></code> displays Julia information about <code class="code docutils literal notranslate"><span class="pre">obj</span></code> if you have About.<code class="code docutils literal notranslate"><span class="pre">jl</span></code> installed in Julia. In the Julia interpreter, enter in the package management mode with ‘]’, and issue: pkg&gt; add “<a class="reference external" href="https://github.com/tecosaur/About">https://github.com/tecosaur/About</a>.<code class="code docutils literal notranslate"><span class="pre">jl&quot;</span></code></p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c4170706c79"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj)</span></code> applies the function <code class="code docutils literal notranslate"><span class="pre">func</span></code> with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(<code class="code docutils literal notranslate"><span class="pre">JLObjFloat64</span></code>): <code class="code docutils literal notranslate"><span class="pre">M:=nrand(4,4);</span></code> <code class="code docutils literal notranslate"><span class="pre">jlApply(&quot;svd&quot;,</span> <span class="pre">M::JLMatrix(JLObjFloat64)).S</span></code> should be “equivalent” to svdvals(<code class="code docutils literal notranslate"><span class="pre">M</span></code>).</p>
+<span id="l4a4c4f626a65637454797065-6a6c4170706c79"></span><dl id="index-3">
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj)</span></code> applies the function <code class="code docutils literal notranslate"><span class="pre">func</span></code> with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(<code class="code docutils literal notranslate"><span class="pre">JLObjFloat64</span></code>):</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>M:=nrand(4,4);
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlApply(&quot;svd&quot;, M::JLMatrix(JLObjFloat64)).S
+</pre></div>
+</div>
+</div></blockquote>
+<p>should be “equivalent” to svdvals(<code class="code docutils literal notranslate"><span class="pre">M</span></code>).</p>
+</div>
 </dd>
 </dl>
-<dl class="simple" id="index-4">
-<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2)</span></code> applies the function <code class="code docutils literal notranslate"><span class="pre">func</span></code> with <code class="code docutils literal notranslate"><span class="pre">obj1</span></code> and <code class="code docutils literal notranslate"><span class="pre">obj2</span></code> as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, <code class="code docutils literal notranslate"><span class="pre">v</span></code>)): <code class="code docutils literal notranslate"><span class="pre">v:=urand01(5)$JLVector(JLFloat)</span></code> <code class="code docutils literal notranslate"><span class="pre">jlApply(&quot;map&quot;,</span> <span class="pre">&quot;cos&quot;,</span> <span class="pre">coerce</span> <span class="pre">v)</span></code></p>
+<dl id="index-4">
+<dt><span class="spadfun">jlApply</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, %, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlApply(func,</span> <span class="pre">obj1,</span> <span class="pre">obj2)</span></code> applies the function <code class="code docutils literal notranslate"><span class="pre">func</span></code> with <code class="code docutils literal notranslate"><span class="pre">obj1</span></code> and <code class="code docutils literal notranslate"><span class="pre">obj2</span></code> as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, <code class="code docutils literal notranslate"><span class="pre">v</span></code>)):</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>v:=urand01(5)\$JLVector(JLFloat)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlApply(&quot;map&quot;, &quot;cos&quot;, coerce v)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <dl class="simple" id="index-5">
@@ -129,8 +153,13 @@
 <dt><span class="spadfun">jlNames</span>: % -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlNames(obj)</span></code> returns the names of <code class="code docutils literal notranslate"><span class="pre">obj</span></code> depending of the type of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c4f626a656374"></span><dl class="simple" id="index-17">
-<dt><span class="spadfun">jlObject</span>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlObject()</span></code> returns the internal Julia name of the Julia module used. For example: <code class="code docutils literal notranslate"><span class="pre">jlObject()$NMUnivariatePolynomial(NINT,'x)</span></code></p>
+<span id="l4a4c4f626a65637454797065-6a6c4f626a656374"></span><dl id="index-17">
+<dt><span class="spadfun">jlObject</span>: () -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlObject()</span></code> returns the internal Julia name of the Julia module used. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlObject()\$NMUnivariatePolynomial(NINT,&#39;x)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <span id="l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573"></span><dl class="simple" id="index-18">
@@ -145,8 +174,33 @@
 <dt><span class="spadfun">jlref</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlref(str)</span></code> evaluates the Julia command <code class="code docutils literal notranslate"><span class="pre">str</span></code> and returns the corresponding FriCAS Julia mutable object.</p>
 </dd>
 </dl>
-<span id="l4a4c4f626a65637454797065-6a6c54657874"></span><dl class="simple" id="index-21">
-<dt><span class="spadfun">jlText</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlText(obj,</span> <span class="pre">mimest)</span></code> returns the text representation of <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a list of String lines with mime subtype mimest, for example “plain” for “text/plain” or “html” for “text/html” if is implemented at Julia level. Use internally the ‘show’ method. For example: <code class="code docutils literal notranslate"><span class="pre">df:=jdframe</span> <span class="pre">nrand(6,3)</span></code> <code class="code docutils literal notranslate"><span class="pre">jlText(df,</span> <span class="pre">&quot;plain&quot;)</span></code> <code class="code docutils literal notranslate"><span class="pre">jlText(df,</span> <span class="pre">&quot;html&quot;)</span></code> <code class="code docutils literal notranslate"><span class="pre">jlText(df,</span> <span class="pre">&quot;csv&quot;)</span></code> <code class="code docutils literal notranslate"><span class="pre">jlText(df,</span> <span class="pre">&quot;latex&quot;)</span></code></p>
+<span id="l4a4c4f626a65637454797065-6a6c54657874"></span><dl id="index-21">
+<dt><span class="spadfun">jlText</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlText(obj,</span> <span class="pre">mimest)</span></code> returns the text representation of <code class="code docutils literal notranslate"><span class="pre">obj</span></code> as a list of String lines with mime subtype mimest, for example “plain” for “text/plain” or “html” for “text/html” if is implemented at Julia level. Use internally the ‘show’ method. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>df:=jdframe nrand(6,3)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlText(df, &quot;plain&quot;)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlText(df, &quot;html&quot;)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlText(df, &quot;csv&quot;)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlText(df, &quot;latex&quot;)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <span id="l4a4c4f626a65637454797065-6a6c54797065"></span><dl class="simple" id="index-22">

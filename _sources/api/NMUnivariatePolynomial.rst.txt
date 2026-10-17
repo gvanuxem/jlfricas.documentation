@@ -12,7 +12,103 @@ NMUnivariatePolynomial(R, x)
 * x: \ :ref:`Symbol <l53796d626f6c>`\ 
 
 
-Univariate polynomial domain using the Nemo Julia package Author: \ :code:`G`\ . Vanuxem Date Created: March, 2024 Nested polynomials Fatemans\ :code:`'s`\  benchmark: \ :code:`R:=NUP(NINT,'x)`\  \ :code:`x:=x::R`\  \ :code:`RR := NUP(R,'y)`\  \ :code:`y:=y::RR`\  \ :code:`RRR := NUP(RR,'z)`\  \ :code:`z:=z::RRR`\  \ :code:`T:=NUP(RRR,'t)`\  \ :code:`t:=t::T`\  \ :code:`f := 1 + x + y + z + t`\  \ :code:`p := f^30;`\  \ :code:`)set message time on`\  \ :code:`p*(p + 1);`\ 
+Univariate polynomial domain using the Nemo Julia package Author: \ :code:`G`\ . Vanuxem Date Created: March, 2024 Nested polynomials Fatemans\ :code:`'s`\  benchmark: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        R:=NUP(NINT,'x)
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        x:=x::R
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        RR := NUP(R,'y)
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        y:=y::RR
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        RRR := NUP(RR,'z)
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        z:=z::RRR
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        T:=NUP(RRR,'t)
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        t:=t::T
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := 1 + x + y + z + t
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        p := f^30;
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        )set message time on
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        p*(p + 1);
+
+  
 
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-30:
@@ -320,7 +416,23 @@ Univariate polynomial domain using the Nemo Julia package Author: \ :code:`G`\ .
    pair: NMUnivariatePolynomial; cyclotomicPolynomial
 
 :spadfun:`cyclotomicPolynomial`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ :code:`cyclotomicPolynomial(n,p)`\  returns the \ :code:`n`\ -th cyclotomic polynomial \ :code:`Φn`\ . For example: \ :code:`x:=x::NUP(NINT,'x)`\  \ :code:`cyclotomicPolynomial(15,x)`\ 
+  \ :code:`cyclotomicPolynomial(n,p)`\  returns the \ :code:`n`\ -th cyclotomic polynomial \ :code:`Φn`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        x:=x::NUP(NINT,'x)
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        cyclotomicPolynomial(15,x)
+
+  
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-44:
 
@@ -1301,7 +1413,23 @@ Univariate polynomial domain using the Nemo Julia package Author: \ :code:`G`\ .
    pair: NMUnivariatePolynomial; swinnertonDyerPolynomial
 
 :spadfun:`swinnertonDyerPolynomial`\: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , %) -> % if R has \ :ref:`IntegerNumberSystem <l496e74656765724e756d62657253797374656d>`\ 
-  \ :code:`swinnertonDyerPolynomial(n, p)`\  returns the Swinnerton-Dyer polynomial \ :code:`Sn`\ . \ :code:`x:=x::NUP(NINT,'x)`\  \ :code:`swinnertonDyerPolynomial(4,x)`\ 
+  \ :code:`swinnertonDyerPolynomial(n, p)`\  returns the Swinnerton-Dyer polynomial \ :code:`Sn`\ . 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        x:=x::NUP(NINT,'x)
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        swinnertonDyerPolynomial(4,x)
+
+  
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-7465726d3f:
 

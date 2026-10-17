@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -362,8 +363,18 @@
 <dt><a class="reference internal" href="WSAggregate.html#l5753416767726567617465-696e74657273656374696f6e"><span class="std std-ref">intersection</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="WSAggregate.html#l5753416767726567617465"><span class="std std-ref">WSAggregate</span></a> <a class="reference internal" href="WSVector.html#l5753566563746f72"><span class="std std-ref">WSVector</span></a> E</p>
 </dd>
 </dl>
-<span id="l57534d6174726978-696e7665727365"></span><dl class="simple" id="index-26">
-<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">inverse(m)</span></code> computes the inverse of <code class="code docutils literal notranslate"><span class="pre">m</span></code>. For example: <code class="code docutils literal notranslate"><span class="pre">m:=jWSMatrix(&quot;{{a,</span> <span class="pre">b},</span> <span class="pre">{b,</span> <span class="pre">a}}&quot;)&#64;WSMAT(WSEXPR)</span></code> <code class="code docutils literal notranslate"><span class="pre">inverse</span> <span class="pre">m</span></code></p>
+<span id="l57534d6174726978-696e7665727365"></span><dl id="index-26">
+<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">inverse(m)</span></code> computes the inverse of <code class="code docutils literal notranslate"><span class="pre">m</span></code>. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>m:=jWSMatrix(&quot;\{\{a, b\}, \{b, a\}\}&quot;)@WSMAT(WSEXPR)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>inverse m
+</pre></div>
+</div>
+</div>
 </dd>
 <dt><a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279-696e7665727365"><span class="std std-ref">inverse</span></a>: % -&gt; Union(%, failed) if E has <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></dt><dd><p>from <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(E, <a class="reference internal" href="WSVector.html#l5753566563746f72"><span class="std std-ref">WSVector</span></a> E, <a class="reference internal" href="WSVector.html#l5753566563746f72"><span class="std std-ref">WSVector</span></a> E)</p>
 </dd>
@@ -550,8 +561,18 @@
 <dt><span class="spadfun">matrix</span>: <a class="reference internal" href="WSVector.html#l5753566563746f72"><span class="std std-ref">WSVector</span></a> E -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">matrix(vec)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">vec</span></code> as a matrix (inplace coercion).</p>
 </dd>
 </dl>
-<span id="l57534d6174726978-6d617472697846756e6374696f6e"></span><dl class="simple" id="index-33">
-<dt><span class="spadfun">matrixFunction</span>: (<a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a>, %) -&gt; <a class="reference internal" href="#l57534d6174726978"><span class="std std-ref">WSMatrix</span></a> <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">matrixFunction(func,</span> <span class="pre">m)</span></code> applies the matrix function <code class="code docutils literal notranslate"><span class="pre">func</span></code>, if available, to the matrix <code class="code docutils literal notranslate"><span class="pre">m</span></code>. The Wolfram Language operator needs to be used. Note that it is not an element-wise operation. For example: <code class="code docutils literal notranslate"><span class="pre">m</span> <span class="pre">:=</span> <span class="pre">jWSMatrix(&quot;{{1.2,</span> <span class="pre">1.7},{1.12,</span> <span class="pre">-2.1}}&quot;)&#64;WSMAT(WSREAL)</span></code> <code class="code docutils literal notranslate"><span class="pre">matrixFunction(&quot;Sqrt&quot;,</span> <span class="pre">m)</span></code></p>
+<span id="l57534d6174726978-6d617472697846756e6374696f6e"></span><dl id="index-33">
+<dt><span class="spadfun">matrixFunction</span>: (<a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a>, %) -&gt; <a class="reference internal" href="#l57534d6174726978"><span class="std std-ref">WSMatrix</span></a> <a class="reference internal" href="WSExpression.html#l575345787072657373696f6e"><span class="std std-ref">WSExpression</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">matrixFunction(func,</span> <span class="pre">m)</span></code> applies the matrix function <code class="code docutils literal notranslate"><span class="pre">func</span></code>, if available, to the matrix <code class="code docutils literal notranslate"><span class="pre">m</span></code>. The Wolfram Language operator needs to be used. Note that it is not an element-wise operation. For example:</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>m := jWSMatrix(&quot;\{\{1.2, 1.7\},\{1.12, -2.1\}\}&quot;)@WSMAT(WSREAL)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>matrixFunction(&quot;Sqrt&quot;, m)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <dl class="simple" id="l57534d6174726978-6d6178">
@@ -718,12 +739,32 @@
 <dt><a class="reference internal" href="WSAggregate.html#l5753416767726567617465-71736574656c74"><span class="std std-ref">qsetelt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="WSVector.html#l5753566563746f72"><span class="std std-ref">WSVector</span></a> E) -&gt; %</dt><dd><p>from <a class="reference internal" href="WSAggregate.html#l5753416767726567617465"><span class="std std-ref">WSAggregate</span></a> <a class="reference internal" href="WSVector.html#l5753566563746f72"><span class="std std-ref">WSVector</span></a> E</p>
 </dd>
 </dl>
-<span id="l57534d6174726978-72616e646f6d436f6d706c65784d6174726978"></span><dl class="simple" id="index-46">
-<dt><span class="spadfun">randomComplexMatrix</span>: (<a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSComplex.html#l5753436f6d706c6578"><span class="std std-ref">WSComplex</span></a>, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSInteger.html#l5753496e7465676572"><span class="std std-ref">WSInteger</span></a>) -&gt; <a class="reference internal" href="#l57534d6174726978"><span class="std std-ref">WSMatrix</span></a> <a class="reference internal" href="WSComplex.html#l5753436f6d706c6578"><span class="std std-ref">WSComplex</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">randomComplexMatrix(range,</span> <span class="pre">dims)</span></code> returns a random matrix with random complex numbers in the <code class="code docutils literal notranslate"><span class="pre">range</span></code> <code class="code docutils literal notranslate"><span class="pre">range</span></code> and dims dimensions. <code class="code docutils literal notranslate"><span class="pre">range:=jWSList(&quot;{1+I}&quot;)&#64;WSLIST(WSCPLX)</span></code> <code class="code docutils literal notranslate"><span class="pre">randomComplexMatrix(range,jWSList(&quot;{3,3}&quot;)$WSLIST(WSINT))&#64;WSMAT(WSCPLX)</span></code></p>
+<span id="l57534d6174726978-72616e646f6d436f6d706c65784d6174726978"></span><dl id="index-46">
+<dt><span class="spadfun">randomComplexMatrix</span>: (<a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSComplex.html#l5753436f6d706c6578"><span class="std std-ref">WSComplex</span></a>, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSInteger.html#l5753496e7465676572"><span class="std std-ref">WSInteger</span></a>) -&gt; <a class="reference internal" href="#l57534d6174726978"><span class="std std-ref">WSMatrix</span></a> <a class="reference internal" href="WSComplex.html#l5753436f6d706c6578"><span class="std std-ref">WSComplex</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">randomComplexMatrix(range,</span> <span class="pre">dims)</span></code> returns a random matrix with random complex numbers in the <code class="code docutils literal notranslate"><span class="pre">range</span></code> <code class="code docutils literal notranslate"><span class="pre">range</span></code> and dims dimensions.</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>range:=jWSList(&quot;\{1+I\}&quot;)@WSLIST(WSCPLX)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>randomComplexMatrix(range,jWSList(&quot;\{3,3\}&quot;)\$WSLIST(WSINT))@WSMAT(WSCPLX)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
-<span id="l57534d6174726978-72616e646f6d5265616c4d6174726978"></span><dl class="simple" id="index-47">
-<dt><span class="spadfun">randomRealMatrix</span>: (<a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSReal.html#l57535265616c"><span class="std std-ref">WSReal</span></a>, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSInteger.html#l5753496e7465676572"><span class="std std-ref">WSInteger</span></a>) -&gt; <a class="reference internal" href="#l57534d6174726978"><span class="std std-ref">WSMatrix</span></a> <a class="reference internal" href="WSReal.html#l57535265616c"><span class="std std-ref">WSReal</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">randomRealMatrix(range,</span> <span class="pre">dims)</span></code> returns a random matrix with random numbers in the <code class="code docutils literal notranslate"><span class="pre">range</span></code> <code class="code docutils literal notranslate"><span class="pre">range</span></code> and dims dimensions. <code class="code docutils literal notranslate"><span class="pre">range</span> <span class="pre">:=</span> <span class="pre">jWSList(&quot;{-5,5}&quot;)$WSLIST(WSREAL)</span></code> <code class="code docutils literal notranslate"><span class="pre">randomRealMatrix(range,jWSList(&quot;{3,3}&quot;)$WSLIST(WSINT))&#64;WSMAT(WSREAL)</span></code></p>
+<span id="l57534d6174726978-72616e646f6d5265616c4d6174726978"></span><dl id="index-47">
+<dt><span class="spadfun">randomRealMatrix</span>: (<a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSReal.html#l57535265616c"><span class="std std-ref">WSReal</span></a>, <a class="reference internal" href="WSList.html#l57534c697374"><span class="std std-ref">WSList</span></a> <a class="reference internal" href="WSInteger.html#l5753496e7465676572"><span class="std std-ref">WSInteger</span></a>) -&gt; <a class="reference internal" href="#l57534d6174726978"><span class="std std-ref">WSMatrix</span></a> <a class="reference internal" href="WSReal.html#l57535265616c"><span class="std std-ref">WSReal</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">randomRealMatrix(range,</span> <span class="pre">dims)</span></code> returns a random matrix with random numbers in the <code class="code docutils literal notranslate"><span class="pre">range</span></code> <code class="code docutils literal notranslate"><span class="pre">range</span></code> and dims dimensions.</p>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>range := jWSList(&quot;\{-5,5\}&quot;)\$WSLIST(WSREAL)
+</pre></div>
+</div>
+</div>
+<div class="fricas-example docutils container">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>randomRealMatrix(range,jWSList(&quot;\{3,3\}&quot;)\$WSLIST(WSINT))@WSMAT(WSREAL)
+</pre></div>
+</div>
+</div>
 </dd>
 </dl>
 <dl class="simple" id="l57534d6174726978-72616e6b">

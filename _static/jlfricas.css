@@ -53,3 +53,92 @@ table.docutils td {
     border-bottom: 1px solid rgba(51, 65, 85, 0.3) !important;
 }
 
+/* FriCAS Example Code Block Styling (\example{...}) */
+div.fricas-example {
+    margin: 1rem 0 !important;
+    background-color: #020617 !important;
+    border: 1px solid rgba(51, 65, 85, 0.7) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.fricas-example-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.45rem 0.85rem !important;
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.6) !important;
+    user-select: none;
+}
+
+.fricas-example-title {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    font-size: 0.82rem !important;
+    font-weight: 500 !important;
+    color: #94a3b8 !important;
+    letter-spacing: 0.03em !important;
+}
+
+.fricas-copy-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 3px 9px !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    color: #cbd5e1 !important;
+    background-color: rgba(30, 41, 59, 0.6) !important;
+    border: 1px solid rgba(51, 65, 85, 0.8) !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease-in-out !important;
+    line-height: 1.4 !important;
+}
+
+.fricas-copy-btn:hover {
+    background-color: rgba(51, 65, 85, 0.8) !important;
+    border-color: rgba(100, 116, 139, 0.9) !important;
+    color: #ffffff !important;
+}
+
+.fricas-copy-btn:active {
+    transform: scale(0.97);
+}
+
+.fricas-copy-btn.copied {
+    color: #34d399 !important;
+    border-color: rgba(52, 211, 153, 0.5) !important;
+    background-color: rgba(6, 78, 59, 0.4) !important;
+}
+
+.fricas-copy-icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+div.fricas-example .highlight,
+div.fricas-example div[class^="highlight"] {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+div.fricas-example pre {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0.85rem 1rem !important;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+    color: #f1f5f9 !important;
+    overflow-x: auto !important;
+    white-space: pre !important;
+}
+

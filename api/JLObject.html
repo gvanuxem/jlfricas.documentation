@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=6f8d7da5" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     
     <script src="../_static/documentation_options.js?v=dad89e49"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -207,8 +208,16 @@
 <dt><span class="spadfun">jobject</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jobject(n)</span></code> returns the JLObject representing the integer <code class="code docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-10">
-<dt><span class="spadfun">jobject</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jobject(str)</span></code> constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: <code class="code docutils literal notranslate"><span class="pre">jobject(&quot;rand(Float64,(2,3,4))&quot;)</span></code> returns a 2x3x4 array of <code class="code docutils literal notranslate"><span class="pre">Float64</span></code> elements. A Julia exception is raised if error(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) occur(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) during parsing/evaluation.</p>
+<dl id="index-10">
+<dt><span class="spadfun">jobject</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jobject(str)</span></code> constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example:</p>
+<div class="fricas-example docutils container">
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jobject(&quot;rand(Float64,(2,3,4))&quot;)
+</pre></div>
+</div>
+</div></blockquote>
+<p>returns a 2x3x4 array of <code class="code docutils literal notranslate"><span class="pre">Float64</span></code> elements. A Julia exception is raised if error(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) occur(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) during parsing/evaluation.</p>
+</div>
 </dd>
 </dl>
 <span id="l4a4c4f626a656374-6a737472696e67"></span><dl class="simple" id="index-11">

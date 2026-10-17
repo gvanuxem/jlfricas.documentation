@@ -392,21 +392,45 @@ Parent category of Julia machine float domains implemented in Common Lisp.
    pair: JLMachineFloat; jlCApply
 
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , %) -> % 
-  \ :code:`jlCApply(lib, func, x)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to argument \ :code:`x`\ . For example: \ :code:`jlCApply("libm.so.6",jsym(sqrt),jf64(2.0))`\ 
+  \ :code:`jlCApply(lib, func, x)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to argument \ :code:`x`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlCApply("libm.so.6",jsym(sqrt),jf64(2.0))
+
+  
 
 
 .. index::
    pair: JLMachineFloat; jlCApply
 
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , %, %) -> % 
-  \ :code:`jlCApply(lib, func, x, y)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to arguments \ :code:`x`\  and \ :code:`y`\ . For example: \ :code:`jlCApply("libopenlibm", jsym(pow),jf64(2.7),jf64(3.0))`\  OpenLibm library is provided by Julia.
+  \ :code:`jlCApply(lib, func, x, y)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to arguments \ :code:`x`\  and \ :code:`y`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlCApply("libopenlibm", jsym(pow),jf64(2.7),jf64(3.0))
+
+   OpenLibm library is provided by Julia.
 
 
 .. index::
    pair: JLMachineFloat; jlCApply
 
 :spadfun:`jlCApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ , %, %, %) -> % 
-  \ :code:`jlCApply(lib, func, x, y, z)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to arguments \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . For example if you have the GNU Scientific Library installed: \ :code:`jlCApply("libgsl",jsym(gsl_hypot3),jf64(2.0),jf64(7.0),jf64(9.0))`\ 
+  \ :code:`jlCApply(lib, func, x, y, z)`\  applies the \ :code:`C`\  function \ :code:`func`\  from the library \ :code:`lib`\  to arguments \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . For example if you have the GNU Scientific Library installed: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlCApply("libgsl",jsym(gsl_hypot3),jf64(2.0),jf64(7.0),jf64(9.0))
+
+  
 
 .. _l4a4c4d616368696e65466c6f6174-6c61746578:
 

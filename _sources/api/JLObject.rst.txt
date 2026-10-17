@@ -244,7 +244,15 @@ Generic Julia objects i.e. objects that are used within Julia, and not directly 
    pair: JLObject; jobject
 
 :spadfun:`jobject`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jobject(str)`\  constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: \ :code:`jobject("rand(Float64,(2,3,4))")`\  returns a 2x3x4 array of \ :code:`Float64`\  elements. A Julia exception is raised if error(\ :code:`s`\ ) occur(\ :code:`s`\ ) during parsing/evaluation.
+  \ :code:`jobject(str)`\  constructs an arbitrary Julia object depending on string used (evaluated by Julia). For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jobject("rand(Float64,(2,3,4))")
+
+   returns a 2x3x4 array of \ :code:`Float64`\  elements. A Julia exception is raised if error(\ :code:`s`\ ) occur(\ :code:`s`\ ) during parsing/evaluation.
 
 .. _l4a4c4f626a656374-6a737472696e67:
 

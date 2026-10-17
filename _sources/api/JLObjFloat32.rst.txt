@@ -294,7 +294,23 @@ Convenience domain for Julia \ :code:`Float32`\ , objects that are used within J
    pair: JLObjFloat32; jfloat32
 
 :spadfun:`jfloat32`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jfloat32`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float32`\  object. For example: \ :code:`jfloat32("sin(\ :code:`pi`\ )")`\  \ :code:`jfloat32("0.7")`\ 
+  \ :code:`jfloat32`\ (\ :code:`str`\ ) evaluates \ :code:`str`\  in Julia and returns the Julia \ :code:`Float32`\  object. For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jfloat32("sin(\ :code:`pi`\ )")
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jfloat32("0.7")
+
+  
 
 .. _l4a4c4f626a466c6f61743332-6a696e663332:
 
@@ -361,14 +377,62 @@ Convenience domain for Julia \ :code:`Float32`\ , objects that are used within J
    pair: JLObjFloat32; jlF32CApply
 
 :spadfun:`jlF32CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %) -> % 
-  \ :code:`jlF32CApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . For example: \ :code:`libm:= jlDlOpen "libopenlibm"`\  \ :code:`squareRoot:=jlDlSym(libm,jsym(sqrtf))`\  \ :code:`jlF32CApply(squareRoot,jfloat32(2))`\ 
+  \ :code:`jlF32CApply(func, x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        libm:= jlDlOpen "libopenlibm"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        squareRoot:=jlDlSym(libm,jsym(sqrtf))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlF32CApply(squareRoot,jfloat32(2))
+
+  
 
 
 .. index::
    pair: JLObjFloat32; jlF32CApply
 
 :spadfun:`jlF32CApply`\: (\ :ref:`JLObjDynamicLinker <l4a4c4f626a44796e616d69634c696e6b6572>`\ , %, %) -> % 
-  \ :code:`jlF32CApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . For example: \ :code:`libm:= jlDlOpen "libopenlibm"`\  \ :code:`power:=jlDlSym(libm,jsym(powf))`\  \ :code:`jlF32CApply(power,jfloat32(2),jfloat32(7))`\ 
+  \ :code:`jlF32CApply(func, x, y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . For example: 
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        libm:= jlDlOpen "libopenlibm"
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        power:=jlDlSym(libm,jsym(powf))
+
+   
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlF32CApply(power,jfloat32(2),jfloat32(7))
+
+  
 
 
 .. index::
