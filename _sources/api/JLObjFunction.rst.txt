@@ -83,7 +83,7 @@ Convenience domain for Julia Functions, objects that are used within Julia, and 
    pair: JLObjFunction; jfunction
 
 :spadfun:`jfunction`\: \ :ref:`FunctionCalled <l46756e6374696f6e43616c6c6564>`\  f -> % 
-  \ :code:`jfunction(func)`\  returns a Julia Function from the FriCAS function \ :code:`func`\ . \ :code:`func`\  must be compatible with 1D format. 
+  \ :code:`jfunction(func)`\  returns a Julia Function from the FriCAS function \ :code:`func`\ . \ :code:`func`\  must be compatible with 1D format.
 
   .. container:: fricas-example
 
@@ -91,23 +91,14 @@ Convenience domain for Julia Functions, objects that are used within Julia, and 
 
         f(x)==sin(x)
 
-   In FriCAS: \ :code:`f`\ (0.7) In Julia: 
+  In FriCAS: \ :code:`f`\ (0.7) In Julia:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         ff:=jfunction(f)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         ff(jfloat 0.7)
-
-  
 
 
 .. index::

@@ -392,11 +392,7 @@
 <dt><span class="spadfun">coefficient</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coefficient(p,expr)</span></code> returns the coefficient of <code class="code docutils literal notranslate"><span class="pre">expr</span></code> in <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:= jWSExpr x
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>coefficient((x - y)^4, x * y^3)
+coefficient((x - y)^4, x * y^3)
 </pre></div>
 </div>
 </div>
@@ -684,11 +680,7 @@
 <dt><span class="spadfun">derivative</span>: (<a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">derivative(func,</span> <span class="pre">n,</span> <span class="pre">var)</span></code> returns the derivative of order <code class="code docutils literal notranslate"><span class="pre">n</span></code> of <code class="code docutils literal notranslate"><span class="pre">func</span></code> applied to var.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x := jWSExpr x
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fprimex:=derivative(operator(&#39;f),1,x)
+fprimex:=derivative(operator(&#39;f),1,x)
 </pre></div>
 </div>
 </div>
@@ -775,21 +767,9 @@
 <dt><span class="spadfun">dSolve</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">dSolve(expr,</span> <span class="pre">funcs,</span> <span class="pre">vars)</span></code> solves the (list of) differential equation(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) <code class="code docutils literal notranslate"><span class="pre">expr</span></code> for the function(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) <code class="code docutils literal notranslate"><span class="pre">funcs</span></code> with independent variable(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) vars.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=jWSExpr x;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fx:=derivative(operator(&#39;f),0,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fprimex:=derivative(operator(&#39;f),1,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>dSolve(jWSEqual(fprimex + fx , a *sin(x)),fx,x)
+fx:=derivative(operator(&#39;f),0,x)
+fprimex:=derivative(operator(&#39;f),1,x)
+dSolve(jWSEqual(fprimex + fx , a *sin(x)),fx,x)
 </pre></div>
 </div>
 </div>
@@ -799,21 +779,9 @@
 <dt><span class="spadfun">dSolve</span>: (<a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> %, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">dSolve(eq,</span> <span class="pre">func,var)</span></code> solves the differential equation <code class="code docutils literal notranslate"><span class="pre">eq</span></code> for the function(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) funcs with independent variable(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) vars.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=jWSExpr x;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fx:=derivative(operator(&#39;f),0,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fprimex:=derivative(operator(&#39;f),1,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>dSolve(fprimex + fx = a * sin(x)/cos(x),fx,x)
+fx:=derivative(operator(&#39;f),0,x)
+fprimex:=derivative(operator(&#39;f),1,x)
+dSolve(fprimex + fx = a * sin(x)/cos(x),fx,x)
 </pre></div>
 </div>
 </div>
@@ -823,31 +791,11 @@
 <dt><span class="spadfun">dSolveValue</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">dSolveValue(expr,funcs,</span> <span class="pre">vars)</span></code> returns the value determined by the differential equation(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) in <code class="code docutils literal notranslate"><span class="pre">expr</span></code> for the function(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) <code class="code docutils literal notranslate"><span class="pre">funcs</span></code> with independent variable(<code class="code docutils literal notranslate"><span class="pre">s</span></code>) vars.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=jWSExpr x;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>f:=derivative(operator(&#39;f),0)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>f0:=derivative(operator(&#39;f),0,0)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fx:=derivative(operator(&#39;f),0,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fprimex:=derivative(operator(&#39;f),1,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>dSolveValue(jWSExpr([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)
+f:=derivative(operator(&#39;f),0)
+f0:=derivative(operator(&#39;f),0,0)
+fx:=derivative(operator(&#39;f),0,x)
+fprimex:=derivative(operator(&#39;f),1,x)
+dSolveValue(jWSExpr([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)
 </pre></div>
 </div>
 </div>
@@ -1039,16 +987,8 @@
 <dt><span class="spadfun">exponent</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">exponent(p,expr)</span></code> returns the maximum exponent of <code class="code docutils literal notranslate"><span class="pre">p</span></code> for <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:= jWSExpr x;y := jWSExpr y
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p:=(x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>exponent(\%,(x^2-2))
+p:=(x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y)
+exponent(\%,(x^2-2))
 </pre></div>
 </div>
 </div>
@@ -1058,16 +998,8 @@
 <dt><span class="spadfun">exponent</span>: (%, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">exponent(p,</span> <span class="pre">expr,</span> <span class="pre">map)</span></code> applies map to the exponents related to <code class="code docutils literal notranslate"><span class="pre">expr</span></code> and returns it. By default map = “Max”.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:= jWSExpr x;y := jWSExpr y
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p:=expand((x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>exponent(p,x,&quot;Min&quot;)
+p:=expand((x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y))
+exponent(p,x,&quot;Min&quot;)
 </pre></div>
 </div>
 </div>
@@ -1099,17 +1031,11 @@
 <dt><span class="spadfun">extendedSimplify</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">extendedSimplify(expr)</span></code> is the extended version of simplify. This is the full version of simplify.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:= jWSExpr x
+expr := Gamma(x)/Gamma(x-1)
 </pre></div>
 </div>
 </div>
-<div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>expr := Gamma(x)/Gamma(x-1)
-</pre></div>
-</div>
-</div></blockquote>
 <p>Compare with simplify(<code class="code docutils literal notranslate"><span class="pre">expr</span></code>).</p>
-</div>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>extendedSimplify(expr)
 </pre></div>
@@ -1137,11 +1063,7 @@
 <dt><span class="spadfun">factor</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">factor(expr,</span> <span class="pre">opt)</span></code> factors the expression or polynomial <code class="code docutils literal notranslate"><span class="pre">expr</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x := jWSExpr x;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>factor(1 + x^2, &quot;GaussianIntegers -&gt; True&quot;)
+factor(1 + x^2, &quot;GaussianIntegers -&gt; True&quot;)
 </pre></div>
 </div>
 </div>
@@ -1165,16 +1087,8 @@
 <dt><span class="spadfun">factorPolynomial</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">factorPolynomial(p)</span></code> factorizes the polynomial <code class="code docutils literal notranslate"><span class="pre">p</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x := jWSExpr x
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p:=expand(chebyshevT(7,x)* chebyshevU(9,x))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>factorPolynomial p
+p:=expand(chebyshevT(7,x)* chebyshevU(9,x))
+factorPolynomial p
 </pre></div>
 </div>
 </div>
@@ -1246,11 +1160,7 @@
 <dt><span class="spadfun">findRoot</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">findRoot(expr,start)</span></code> tries to find the root of <code class="code docutils literal notranslate"><span class="pre">expr</span></code> starting at <code class="code docutils literal notranslate"><span class="pre">start</span></code>.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:= jWSExpr x
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>findRoot(sin(x) + cos(x), &quot;\{x, 0\}&quot;)
+findRoot(sin(x) + cos(x), &quot;\{x, 0\}&quot;)
 </pre></div>
 </div>
 </div>
@@ -1302,16 +1212,8 @@
 <dt><span class="spadfun">fromCoefficientRules</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">fromCoefficientRules(list,</span> <span class="pre">vars)</span></code> constructs the polynomial from the <code class="code docutils literal notranslate"><span class="pre">list</span></code> of coefficients and exponents rules.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:= jWSExpr x;y := jWSExpr y
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>coefficientRules((x + y)^2+x^11,jWSExpr [x,y])
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fromCoefficientRules(\%, jWSExpr [x,y])
+coefficientRules((x + y)^2+x^11,jWSExpr [x,y])
+fromCoefficientRules(\%, jWSExpr [x,y])
 </pre></div>
 </div>
 </div>
@@ -1537,30 +1439,18 @@
 <dt><span class="spadfun">integrate</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">integrate(expr,</span> <span class="pre">opts|var)</span></code> integrates <code class="code docutils literal notranslate"><span class="pre">expr</span></code> with respect to opt or var as options. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=jWSExpr x;integrate(1/(x^4-1),x)
+opt:=jWSList [x,-1,1]
+integrate(cos(x),opt)
 </pre></div>
 </div>
 </div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>opt:=jWSList [x,-1,1]
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>integrate(cos(x),opt)
-</pre></div>
-</div>
-</div></blockquote>
 <p><code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> 2 sin(1)</p>
-</div>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>integrate(cos(x),&quot;\{x,-1.0,1.0\}&quot;)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>integrate(cos(x),&quot;\{x,-1.0,1.0\}&quot;)
 </pre></div>
 </div>
-</div></blockquote>
-<p><code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> 1.68294</p>
 </div>
+<p><code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> 1.68294</p>
 </dd>
 </dl>
 <dl class="simple" id="index-153">
@@ -1750,11 +1640,7 @@
 <dt><span class="spadfun">jlEval</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlEval(expr,</span> <span class="pre">param1,</span> <span class="pre">param2)</span></code> evaluates expression <code class="code docutils literal notranslate"><span class="pre">expr</span></code> with <code class="code docutils literal notranslate"><span class="pre">param1</span></code> and <code class="code docutils literal notranslate"><span class="pre">param2</span></code> as parameters. See also <cite>eval</cite> or <cite>replaceAll</cite>.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>a:=jWSExpr(&quot;a&quot;);b:=jWSExpr(&quot;b&quot;);
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlEval(sqrt(a^2+b^2),&quot;a=1.0&quot;,&quot;b=1.0&quot;)
+jlEval(sqrt(a^2+b^2),&quot;a=1.0&quot;,&quot;b=1.0&quot;)
 </pre></div>
 </div>
 </div>
@@ -1835,13 +1721,11 @@
 <span id="l575345787072657373696f6e-6a6c5753446566696e65643f"></span><dl id="index-181">
 <dt><span class="spadfun">jlWSDefined?</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlWSDefined?(sym)</span></code> checks whether or not the symbol <code class="code docutils literal notranslate"><span class="pre">sym</span></code> is defined in the <code class="code docutils literal notranslate"><span class="pre">WS</span></code> language. For example:</p>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlWSDefined? &quot;Sin&quot;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlWSDefined? &quot;Sin&quot;
 </pre></div>
 </div>
-</div></blockquote>
-<p><code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> <code class="code docutils literal notranslate"><span class="pre">true</span></code></p>
 </div>
+<p><code class="code docutils literal notranslate"><span class="pre">=&gt;</span></code> <code class="code docutils literal notranslate"><span class="pre">true</span></code></p>
 </dd>
 </dl>
 <span id="l575345787072657373696f6e-6a6c5753507265636973696f6e"></span><dl class="simple" id="index-182">
@@ -1936,27 +1820,13 @@
 <dt><span class="spadfun">jWSExpr</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jWSExpr(str)</span></code> constructs <code class="code docutils literal notranslate"><span class="pre">str</span></code> as a WSExpression evaluating <code class="code docutils literal notranslate"><span class="pre">str</span></code> as a Wolfram Symbolic Language expression. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jWSExpr &quot;Factorial[5]&quot;
+jWSExpr &quot;3.14159&quot;
+jlWSDateString(jWSExpr &quot;Tomorrow&quot;)
+toString jWSExpr &quot;TextSentences[WikipediaData[_&quot;Sun_&quot;]][[;; 40]]&quot;
 </pre></div>
 </div>
 </div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jWSExpr &quot;3.14159&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlWSDateString(jWSExpr &quot;Tomorrow&quot;)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>toString jWSExpr &quot;TextSentences[WikipediaData[_&quot;Sun_&quot;]][[;; 40]]&quot;
-</pre></div>
-</div>
-</div></blockquote>
 <p>Example: jWSExpr “Probability[<code class="code docutils literal notranslate"><span class="pre">x</span></code> &lt; 1, <code class="code docutils literal notranslate"><span class="pre">x</span></code> <code class="code docutils literal notranslate"><span class="pre">[</span></code>Distributed] NormalDistribution[]]”</p>
-</div>
 </dd>
 </dl>
 <dl class="simple" id="index-203">
@@ -2017,16 +1887,8 @@
 <dt><span class="spadfun">jWSRule</span>: <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jWSRule(eq)</span></code> returns the Julia <code class="code docutils literal notranslate"><span class="pre">WS</span></code> rule <code class="code docutils literal notranslate"><span class="pre">lhs</span></code>-&gt;rhs for the equation <code class="code docutils literal notranslate"><span class="pre">eq</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x := jWSExpr x
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p := 1/2 * legendreQ(5,x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>replaceAll(p, jWSRule(x = jWSExpr &quot;1.55555556444883838383833777333333333&quot;))
+p := 1/2 * legendreQ(5,x)
+replaceAll(p, jWSRule(x = jWSExpr &quot;1.55555556444883838383833777333333333&quot;))
 </pre></div>
 </div>
 </div>
@@ -2375,16 +2237,8 @@
 <dt><span class="spadfun">normal</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">normal(expr)</span></code> converts <code class="code docutils literal notranslate"><span class="pre">expr</span></code> to a normal expression from different expression types. Can be applied to a power series for example. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=jWSExpr x
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>s:=series(exp(x),jWSExpr &quot;\{x,0,10\}&quot;)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>normal(s)::EXPR INT
+s:=series(exp(x),jWSExpr &quot;\{x,0,10\}&quot;)
+normal(s)::EXPR INT
 </pre></div>
 </div>
 </div>
@@ -2484,16 +2338,8 @@
 <dt><span class="spadfun">numericMinimize</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">numericMinimize(expr,</span> <span class="pre">vars)</span></code> minimizes numerically the expression function <code class="code docutils literal notranslate"><span class="pre">expr</span></code> with respect to vars. For example, global optimization from the SIAM 100 digits challenge:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x := jWSExpr(x);y:=jWSExpr y;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>expr := exp(sin(50*x))+sin(60*exp(y))+ sin(70*sin(x))+ sin(sin(80*y))-sin(10*(x+y))+(x^2+y^2)/4
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>numericMinimize(expr, jWSList [x,y])
+expr := exp(sin(50*x))+sin(60*exp(y))+ sin(70*sin(x))+ sin(sin(80*y))-sin(10*(x+y))+(x^2+y^2)/4
+numericMinimize(expr, jWSList [x,y])
 </pre></div>
 </div>
 </div>
@@ -3107,26 +2953,10 @@
 <dt><span class="spadfun">series</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">series(expr,</span> <span class="pre">opt)</span></code> returns a series from <code class="code docutils literal notranslate"><span class="pre">expr</span></code>.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=jWSExpr(x);a:=jWSExpr(a);
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>opt:=jWSList [x,\ :code:`pi`\ ()\$WSEXPR/4,7]
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>series(sin(a*x),opt)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>series(cos(x),&quot;\{x, 0, 12\}&quot;)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>series(inverseErfc(x),&quot;\{x,0,3\}&quot;)
+opt:=jWSList [x,\ :code:`pi`\ ()$WSEXPR/4,7]
+series(sin(a*x),opt)
+series(cos(x),&quot;\{x, 0, 12\}&quot;)
+series(inverseErfc(x),&quot;\{x,0,3\}&quot;)
 </pre></div>
 </div>
 </div>
@@ -3505,7 +3335,7 @@
 <span id="l575345787072657373696f6e-7a65726f3f"></span><dl id="index-414">
 <dt><span class="spadfun">zero?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">zero?</span> <span class="pre">x</span></code> tries to determine if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is 0. For example:</p>
 <div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>expr:=0\$WSEXPR/1*sqrt(17::WSEXPR); zero? expr
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>expr:=0$WSEXPR/1*sqrt(17::WSEXPR); zero? expr
 </pre></div>
 </div>
 </div>

@@ -539,15 +539,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . For example: 
+  \ :code:`jlPlot(f, a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         jlPlot(x+->sinc(x),-15..15)
-
-  
 
 
 .. index::
@@ -638,7 +636,7 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotTitle!
 
 :spadfun:`jlPlotTitle!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotTitle!(title)`\  draws \ :code:`title`\  as plot \ :code:`title`\  in the current plot. For example: 
+  \ :code:`jlPlotTitle!(title)`\  draws \ :code:`title`\  as plot \ :code:`title`\  in the current plot. For example:
 
   .. container:: fricas-example
 
@@ -646,7 +644,7 @@ low level plotting functions using the Plots package for Julia.
 
         jlPlotTitle! "sin(x)"
 
-   if you have the LaTeXStrings Julia package 
+  if you have the LaTeXStrings Julia package
 
   .. container:: fricas-example
 
@@ -654,7 +652,7 @@ low level plotting functions using the Plots package for Julia.
 
         jlPlotTitle! jlLatex latex sin(x)
 
-   For simple expressions \ :code:`title`\  will automatically be enclosed between \$. So use: 
+  For simple expressions \ :code:`title`\  will automatically be enclosed between \$. So use:
 
   .. container:: fricas-example
 
@@ -662,15 +660,13 @@ low level plotting functions using the Plots package for Julia.
 
         jlPlotTitle! jlLatex "sin(x)"
 
-   For normal text and equations insert dollar signs \$ as needed. 
+  For normal text and equations insert dollar signs \$ as needed.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        jlPlotTitle! jlLatex "Plot: \$sin(x)\$"
-
-  
+        jlPlotTitle! jlLatex "Plot: $sin(x)$"
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74586c6162656c21:
 

@@ -242,11 +242,7 @@
 <dt><span class="spadfun">jfloat32</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfloat32</span></code>(<code class="code docutils literal notranslate"><span class="pre">str</span></code>) evaluates <code class="code docutils literal notranslate"><span class="pre">str</span></code> in Julia and returns the Julia <code class="code docutils literal notranslate"><span class="pre">Float32</span></code> object. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jfloat32(&quot;sin(\ :code:`pi`\ )&quot;)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jfloat32(&quot;0.7&quot;)
+jfloat32(&quot;0.7&quot;)
 </pre></div>
 </div>
 </div>
@@ -292,16 +288,8 @@
 <dt><span class="spadfun">jlF32CApply</span>: (<a class="reference internal" href="JLObjDynamicLinker.html#l4a4c4f626a44796e616d69634c696e6b6572"><span class="std std-ref">JLObjDynamicLinker</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlF32CApply(func,</span> <span class="pre">x)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libm:= jlDlOpen &quot;libopenlibm&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>squareRoot:=jlDlSym(libm,jsym(sqrtf))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlF32CApply(squareRoot,jfloat32(2))
+squareRoot:=jlDlSym(libm,jsym(sqrtf))
+jlF32CApply(squareRoot,jfloat32(2))
 </pre></div>
 </div>
 </div>
@@ -311,16 +299,8 @@
 <dt><span class="spadfun">jlF32CApply</span>: (<a class="reference internal" href="JLObjDynamicLinker.html#l4a4c4f626a44796e616d69634c696e6b6572"><span class="std std-ref">JLObjDynamicLinker</span></a>, %, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlF32CApply(func,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libm:= jlDlOpen &quot;libopenlibm&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>power:=jlDlSym(libm,jsym(powf))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlF32CApply(power,jfloat32(2),jfloat32(7))
+power:=jlDlSym(libm,jsym(powf))
+jlF32CApply(power,jfloat32(2),jfloat32(7))
 </pre></div>
 </div>
 </div>

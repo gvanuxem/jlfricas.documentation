@@ -73,13 +73,11 @@
 <span id="l4a4c4f626a44796e616d69634c696e6b6572-6a646c696e6b"></span><dl id="index-1">
 <dt><span class="spadfun">jdlink</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jdlink(lib)</span></code> opens/loads the dynamic shared library <code class="code docutils literal notranslate"><span class="pre">lib</span></code> and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer necessary using jlDlClose.</p>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libm := jdlink &quot;libopenlibm&quot;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libm := jdlink &quot;libopenlibm&quot;
 </pre></div>
 </div>
-</div></blockquote>
-<p>Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.</p>
 </div>
+<p>Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4a4c4f626a44796e616d69634c696e6b6572-6a6c41626f7574">
@@ -106,16 +104,8 @@
 <dt><span class="spadfun">jlDlCApply</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlCApply(func,x)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>. The Julia type of <code class="code docutils literal notranslate"><span class="pre">x</span></code> must be compatible with the Libdl Julia module. Type of the returned value is assumed to be the same as the type of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libm:= jlDlOpen &quot;libopenlibm&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>squareRoot:=jlDlSym(libm,jsym(sqrt))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlCApply(squareRoot,jobject(&quot;2.&quot;))
+squareRoot:=jlDlSym(libm,jsym(sqrt))
+jlDlCApply(squareRoot,jobject(&quot;2.&quot;))
 </pre></div>
 </div>
 </div>
@@ -125,16 +115,8 @@
 <dt><span class="spadfun">jlDlCApply</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlCApply(func,x,y)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>. Type of the returned value is assumed to be the same as the type of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libgsl:= jlDlOpen &quot;libgsl&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ipower:=jlDlSym(libgsl, gsl_pow_int)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlCApply(ipower,jobject(&quot;2.0&quot;),jobject(&quot;7&quot;))
+ipower:=jlDlSym(libgsl, gsl_pow_int)
+jlDlCApply(ipower,jobject(&quot;2.0&quot;),jobject(&quot;7&quot;))
 </pre></div>
 </div>
 </div>
@@ -144,21 +126,9 @@
 <dt><span class="spadfun">jlDlCApply</span>: (%, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlCApply(func,x,y,z)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">y</span></code> and <code class="code docutils literal notranslate"><span class="pre">z</span></code>. Returned value is assumed the same type as type of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. Use jlDlCApply with type options if necessary. For example with GSL:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>gsl:= jlDlOpen &quot;libgsl&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlCApply(hypot3,jobject(&quot;2.&quot;),jobject(&quot;7.&quot;),jobject(&quot;9.0&quot;))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlCApply(hypot3,jfloat64(&quot;2.&quot;),jfloat64(&quot;7.&quot;),9.0::JLObjFloat64)
+hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))
+jlDlCApply(hypot3,jobject(&quot;2.&quot;),jobject(&quot;7.&quot;),jobject(&quot;9.0&quot;))
+jlDlCApply(hypot3,jfloat64(&quot;2.&quot;),jfloat64(&quot;7.&quot;),9.0::JLObjFloat64)
 </pre></div>
 </div>
 </div>
@@ -168,26 +138,10 @@
 <dt><span class="spadfun">jlDlCApply</span>: (%, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlCApply(func,</span> <span class="pre">ctype,</span> <span class="pre">x,</span> <span class="pre">xctype)</span></code> applies the function pointer <code class="code docutils literal notranslate"><span class="pre">func</span></code> to <code class="code docutils literal notranslate"><span class="pre">x</span></code> given its Julia <code class="code docutils literal notranslate"><span class="pre">C</span></code> type (xctype) or its supported Julia type, for example “Float64” or “Cdouble”. Returned value is assumed to be a <code class="code docutils literal notranslate"><span class="pre">C</span></code> type <code class="code docutils literal notranslate"><span class="pre">ctype</span></code> (or any Julia supported types). For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>libm:= jlDlOpen &quot;libopenlibm&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>squareRoot:= jlDlSym(libm,jsym(sqrt))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlCApply(squareRoot, &quot;Cdouble&quot;, jobject(&quot;2.&quot;), &quot;Cdouble&quot;)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sinus:=jlDlSym(libm,jsym(sin))
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlCApply(sinus,&quot;Float64&quot;, jobject(&quot;2.&quot;), &quot;Float64&quot;)
+squareRoot:= jlDlSym(libm,jsym(sqrt))
+jlDlCApply(squareRoot, &quot;Cdouble&quot;, jobject(&quot;2.&quot;), &quot;Cdouble&quot;)
+sinus:=jlDlSym(libm,jsym(sin))
+jlDlCApply(sinus,&quot;Float64&quot;, jobject(&quot;2.&quot;), &quot;Float64&quot;)
 </pre></div>
 </div>
 </div>
@@ -230,33 +184,27 @@
 <dl id="index-12">
 <dt><span class="spadfun">jlDlOpen</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlOpen(lib,</span> <span class="pre">flags)</span></code> opens/loads the dynamic shared library <code class="code docutils literal notranslate"><span class="pre">lib</span></code> and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. The Julia module Libdl must be loaded/imported before using this function.</p>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlUsing &quot;Libdl&quot;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlUsing &quot;Libdl&quot;
 </pre></div>
 </div>
-</div></blockquote>
+</div>
 <p><code class="code docutils literal notranslate"><span class="pre">--</span></code> for flags</p>
-</div>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlOpen(&quot;libopenlibm&quot;, jobject &quot;Libdl.RTLD_NOW&quot;)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlOpen(&quot;libopenlibm&quot;, jobject &quot;Libdl.RTLD_NOW&quot;)
 </pre></div>
 </div>
-</div></blockquote>
-<p>flags can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.</p>
 </div>
+<p>flags can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.</p>
 </dd>
 </dl>
 <dl id="index-13">
 <dt><span class="spadfun">jlDlOpen</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a>, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlOpen(lib,</span> <span class="pre">flags,</span> <span class="pre">throw)</span></code> opens/loads the dynamic shared library <code class="code docutils literal notranslate"><span class="pre">lib</span></code> and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. ‘throw’ determines whether or not Julia throws an error if the library cannot be loaded. The Julia module must be be loaded/imported before using this function.</p>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlOpen(&quot;libopenlibm&quot;, jobject &quot;Libdl.RTLD_NOW&quot;, false)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>jlDlOpen(&quot;libopenlibm&quot;, jobject &quot;Libdl.RTLD_NOW&quot;, false)
 </pre></div>
 </div>
-</div></blockquote>
-<p><code class="code docutils literal notranslate"><span class="pre">flags</span></code> can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these <code class="code docutils literal notranslate"><span class="pre">flags</span></code>.</p>
 </div>
+<p><code class="code docutils literal notranslate"><span class="pre">flags</span></code> can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these <code class="code docutils literal notranslate"><span class="pre">flags</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-14">
@@ -275,11 +223,7 @@
 <dt><span class="spadfun">jlDlSym</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jlDlSym(lib,</span> <span class="pre">sym)</span></code> returns the pointer to the symbol <code class="code docutils literal notranslate"><span class="pre">sym</span></code> in the library referenced by <code class="code docutils literal notranslate"><span class="pre">lib</span></code>. See jlDlOpen.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>lnk:=jdlink &quot;libjulia&quot;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sym := jlDlSym(lnk,&quot;jl_eval_string&quot;)
+sym := jlDlSym(lnk,&quot;jl_eval_string&quot;)
 </pre></div>
 </div>
 </div>

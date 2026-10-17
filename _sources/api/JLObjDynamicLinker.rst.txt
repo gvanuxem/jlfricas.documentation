@@ -41,7 +41,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jdlink
 
 :spadfun:`jdlink`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jdlink(lib)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer necessary using jlDlClose. 
+  \ :code:`jdlink(lib)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer necessary using jlDlClose.
 
   .. container:: fricas-example
 
@@ -49,7 +49,7 @@ Generic Julia objects used for dynamically linking shared libraries.
 
         libm := jdlink "libopenlibm"
 
-   Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.
+  Throws a Julia error if it is not found. Use jlDlOpen for a version with options and/or without Julia errors.
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c41626f7574:
 
@@ -88,148 +88,63 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlDlCApply(func,x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . The Julia type of \ :code:`x`\  must be compatible with the Libdl Julia module. Type of the returned value is assumed to be the same as the type of \ :code:`x`\ . For example: 
+  \ :code:`jlDlCApply(func,x)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ . The Julia type of \ :code:`x`\  must be compatible with the Libdl Julia module. Type of the returned value is assumed to be the same as the type of \ :code:`x`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         libm:= jlDlOpen "libopenlibm"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         squareRoot:=jlDlSym(libm,jsym(sqrt))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlDlCApply(squareRoot,jobject("2."))
-
-  
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlDlCApply(func,x,y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . Type of the returned value is assumed to be the same as the type of \ :code:`x`\ . For example: 
+  \ :code:`jlDlCApply(func,x,y)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  and \ :code:`y`\ . Type of the returned value is assumed to be the same as the type of \ :code:`x`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         libgsl:= jlDlOpen "libgsl"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         ipower:=jlDlSym(libgsl, gsl_pow_int)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlDlCApply(ipower,jobject("2.0"),jobject("7"))
-
-  
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlDlCApply(func,x,y,z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . Returned value is assumed the same type as type of \ :code:`x`\ . Use jlDlCApply with type options if necessary. For example with GSL: 
+  \ :code:`jlDlCApply(func,x,y,z)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . Returned value is assumed the same type as type of \ :code:`x`\ . Use jlDlCApply with type options if necessary. For example with GSL:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         gsl:= jlDlOpen "libgsl"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         hypot3:= jlDlSym(gsl,jsym(gsl_hypot3))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlDlCApply(hypot3,jobject("2."),jobject("7."),jobject("9.0"))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlDlCApply(hypot3,jfloat64("2."),jfloat64("7."),9.0::JLObjFloat64)
-
-  
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlCApply
 
 :spadfun:`jlDlCApply`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlDlCApply(func, ctype, x, xctype)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  given its Julia \ :code:`C`\  type (xctype) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ :code:`C`\  type \ :code:`ctype`\  (or any Julia supported types). For example: 
+  \ :code:`jlDlCApply(func, ctype, x, xctype)`\  applies the function pointer \ :code:`func`\  to \ :code:`x`\  given its Julia \ :code:`C`\  type (xctype) or its supported Julia type, for example "Float64" or "Cdouble". Returned value is assumed to be a \ :code:`C`\  type \ :code:`ctype`\  (or any Julia supported types). For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         libm:= jlDlOpen "libopenlibm"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         squareRoot:= jlDlSym(libm,jsym(sqrt))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlDlCApply(squareRoot, "Cdouble", jobject("2."), "Cdouble")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         sinus:=jlDlSym(libm,jsym(sin))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlDlCApply(sinus,"Float64", jobject("2."), "Float64")
-
-  
 
 
 .. index::
@@ -251,15 +166,13 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlClose
 
 :spadfun:`jlDlClose`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ :code:`jlDlClose(libPtr)`\  unloads explicitly the shared library. Returns \ :code:`true`\  if the shared object was successfully unloaded, \ :code:`false`\  otherwise. 
+  \ :code:`jlDlClose(libPtr)`\  unloads explicitly the shared library. Returns \ :code:`true`\  if the shared object was successfully unloaded, \ :code:`false`\  otherwise.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         jlDlClose(lib)
-
-  
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c446c46696e644c6962:
 
@@ -283,7 +196,7 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ :code:`jlDlOpen(lib, throw)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. 'throw' determines whether or not Julia throws an error if the library cannot be loaded. 
+  \ :code:`jlDlOpen(lib, throw)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. 'throw' determines whether or not Julia throws an error if the library cannot be loaded.
 
   .. container:: fricas-example
 
@@ -291,14 +204,12 @@ Generic Julia objects used for dynamically linking shared libraries.
 
         jlDlOpen("libopenlibm", true)
 
-  
-
 
 .. index::
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ ) -> % 
-  \ :code:`jlDlOpen(lib, flags)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. The Julia module Libdl must be loaded/imported before using this function. 
+  \ :code:`jlDlOpen(lib, flags)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. The Julia module Libdl must be loaded/imported before using this function.
 
   .. container:: fricas-example
 
@@ -306,7 +217,7 @@ Generic Julia objects used for dynamically linking shared libraries.
 
         jlUsing "Libdl"
 
-   \ :code:`--`\  for flags 
+  \ :code:`--`\  for flags
 
   .. container:: fricas-example
 
@@ -314,14 +225,14 @@ Generic Julia objects used for dynamically linking shared libraries.
 
         jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW")
 
-   flags can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.
+  flags can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these flags.
 
 
 .. index::
    pair: JLObjDynamicLinker; jlDlOpen
 
 :spadfun:`jlDlOpen`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`JLObject <l4a4c4f626a656374>`\ , \ :ref:`Boolean <l426f6f6c65616e>`\ ) -> % 
-  \ :code:`jlDlOpen(lib, flags, throw)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library cannot be loaded. The Julia module must be be loaded/imported before using this function. 
+  \ :code:`jlDlOpen(lib, flags, throw)`\  opens/loads the dynamic shared library \ :code:`lib`\  and returns a reference pointer that can be used to obtain addresses of its exported symbols using jlDlSym. It is up to the user to unload the shared object when it is no longer used. Does not throw an error if the library cannot be loaded by default and returns nothing in this case. Use the nothing? operation on the returned value if necessary. 'throw' determines whether or not Julia throws an error if the library cannot be loaded. The Julia module must be be loaded/imported before using this function.
 
   .. container:: fricas-example
 
@@ -329,7 +240,7 @@ Generic Julia objects used for dynamically linking shared libraries.
 
         jlDlOpen("libopenlibm", jobject "Libdl.RTLD_NOW", false)
 
-   \ :code:`flags`\  can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these \ :code:`flags`\ .
+  \ :code:`flags`\  can be one or combination of: RTLD_DEEPBIND RTLD_FIRST RTLD_GLOBAL RTLD_LAZY RTLD_LOCAL RTLD_NODELETE RTLD_NOLOAD RTLD_NOW Note: the Julia module Libdl must be loaded or imported before using these \ :code:`flags`\ .
 
 
 .. index::
@@ -359,23 +270,14 @@ Generic Julia objects used for dynamically linking shared libraries.
    pair: JLObjDynamicLinker; jlDlSym
 
 :spadfun:`jlDlSym`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ :code:`jlDlSym(lib, sym)`\  returns the pointer to the symbol \ :code:`sym`\  in the library referenced by \ :code:`lib`\ . See jlDlOpen. 
+  \ :code:`jlDlSym(lib, sym)`\  returns the pointer to the symbol \ :code:`sym`\  in the library referenced by \ :code:`lib`\ . See jlDlOpen.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         lnk:=jdlink "libjulia"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         sym := jlDlSym(lnk,"jl_eval_string")
-
-  
 
 .. _l4a4c4f626a44796e616d69634c696e6b6572-6a6c44756d70:
 

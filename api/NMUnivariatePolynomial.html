@@ -59,61 +59,17 @@
 <blockquote>
 <div><div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>R:=NUP(NINT,&#39;x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=x::R
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>RR := NUP(R,&#39;y)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>y:=y::RR
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>RRR := NUP(RR,&#39;z)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>z:=z::RRR
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>T:=NUP(RRR,&#39;t)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>t:=t::T
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>f := 1 + x + y + z + t
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p := f^30;
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>)set message time on
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p*(p + 1);
+x:=x::R
+RR := NUP(R,&#39;y)
+y:=y::RR
+RRR := NUP(RR,&#39;z)
+z:=z::RRR
+T:=NUP(RRR,&#39;t)
+t:=t::T
+f := 1 + x + y + z + t
+p := f^30;
+)set message time on
+p*(p + 1);
 </pre></div>
 </div>
 </div>
@@ -314,11 +270,7 @@
 <dt><span class="spadfun">cyclotomicPolynomial</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">cyclotomicPolynomial(n,p)</span></code> returns the <code class="code docutils literal notranslate"><span class="pre">n</span></code>-th cyclotomic polynomial <code class="code docutils literal notranslate"><span class="pre">Φn</span></code>. For example:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=x::NUP(NINT,&#39;x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cyclotomicPolynomial(15,x)
+cyclotomicPolynomial(15,x)
 </pre></div>
 </div>
 </div>
@@ -978,11 +930,7 @@
 <dt><span class="spadfun">swinnertonDyerPolynomial</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if R has <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">swinnertonDyerPolynomial(n,</span> <span class="pre">p)</span></code> returns the Swinnerton-Dyer polynomial <code class="code docutils literal notranslate"><span class="pre">Sn</span></code>.</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x:=x::NUP(NINT,&#39;x)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>swinnertonDyerPolynomial(4,x)
+swinnertonDyerPolynomial(4,x)
 </pre></div>
 </div>
 </div>

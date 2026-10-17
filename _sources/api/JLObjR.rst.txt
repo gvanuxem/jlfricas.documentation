@@ -83,15 +83,13 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example: 
+  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         ret := jlApply("svd", jobject("rand(4,4)")); ret.U
-
-  
 
 
 \ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -199,31 +197,15 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jlRApply
 
 :spadfun:`jlRApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
-  \ :code:`jlRApply(func, robj)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  object robj. For example: 
+  \ :code:`jlRApply(func, robj)`\  applies the \ :code:`R`\  function \ :code:`func`\  form the module __main__ to the \ :code:`R`\  object robj. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         jlRApply("abs", (-2)::JLObjR)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlREval "mtcars";
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlRApply("summary", \%)
-
-  
 
 
 .. index::
@@ -267,23 +249,14 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jlRCopy
 
 :spadfun:`jlRCopy`\: % -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlRCopy(robj)`\  returns a Julia object copy of the \ :code:`R`\  object \ :code:`robj`\  if possible. Use jlType to know the resulting type of \ :code:`robj`\  if necessary. For example: 
+  \ :code:`jlRCopy(robj)`\  returns a Julia object copy of the \ :code:`R`\  object \ :code:`robj`\  if possible. Use jlType to know the resulting type of \ :code:`robj`\  if necessary. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         robj:=jlREval "mtcars";
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlRCopy robj
-
-  
 
 .. _l4a4c4f626a52-6a6c52446f63756d656e746174696f6e:
 
@@ -316,15 +289,13 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jlREval
 
 :spadfun:`jlREval`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> % 
-  \ :code:`jlREval(obj)`\  evaluates the expression \ :code:`obj`\  as a Julia object in the Julia \ :code:`R`\  environment. For example: 
+  \ :code:`jlREval(obj)`\  evaluates the expression \ :code:`obj`\  as a Julia object in the Julia \ :code:`R`\  environment. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         jlREval "mtcars"
-
-  
 
 .. _l4a4c4f626a52-6a6c524c696272617279:
 
@@ -374,62 +345,30 @@ Convenience domain for Julia \ :code:`R`\  objects that are used within Julia, a
    pair: JLObjR; jr
 
 :spadfun:`jr`\: \ :ref:`JLObject <l4a4c4f626a656374>`\  -> % 
-  \ :code:`jr(obj)`\  returns \ :code:`obj`\  as a Julia \ :code:`R`\  object. This is the preferred method. For example: 
+  \ :code:`jr(obj)`\  returns \ :code:`obj`\  as a Julia \ :code:`R`\  object. This is the preferred method. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         a:= nrand(10,4)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         b := jr(a::JLMatrix(JLObjFloat64))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlRApply("prcomp", b)
-
-  
 
 
 .. index::
    pair: JLObjR; jr
 
 :spadfun:`jr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object using the Julia @R_str macro. Use jlDisplay(robj) to display the \ :code:`R`\  object robj if necessary. For example: 
+  \ :code:`jr(str)`\  coerces the string \ :code:`str`\  to a Julia \ :code:`R`\  object using the Julia @R_str macro. Use jlDisplay(robj) to display the \ :code:`R`\  object robj if necessary. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        jr "optim(0, \$(x -> x-cos(x)), method='L-BFGS-B')"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
+        jr "optim(0, $(x -> x-cos(x)), method='L-BFGS-B')"
         ret:= jlRCopy \%
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         qelt(ret,par), qelt(ret,value)
-
-  
 
 .. _l4a4c4f626a52-6c61746578:
 

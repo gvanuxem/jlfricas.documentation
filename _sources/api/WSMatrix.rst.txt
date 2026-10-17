@@ -511,23 +511,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; inverse
 
 :spadfun:`inverse`\: % -> % 
-  \ :code:`inverse(m)`\  computes the inverse of \ :code:`m`\ . For example: 
+  \ :code:`inverse(m)`\  computes the inverse of \ :code:`m`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         m:=jWSMatrix("\{\{a, b\}, \{b, a\}\}")@WSMAT(WSEXPR)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         inverse m
-
-  
 
 
 \ :ref:`inverse <l4d617472697843617465676f7279-696e7665727365>`\ \: % -> Union(%, failed) if E has \ :ref:`Field <l4669656c64>`\ 
@@ -800,23 +791,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; matrixFunction
 
 :spadfun:`matrixFunction`\: (\ :ref:`WSExpression <l575345787072657373696f6e>`\ , %) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ :code:`matrixFunction(func, m)`\  applies the matrix function \ :code:`func`\ , if available, to the matrix \ :code:`m`\ . The Wolfram Language operator needs to be used. Note that it is not an element-wise operation. For example: 
+  \ :code:`matrixFunction(func, m)`\  applies the matrix function \ :code:`func`\ , if available, to the matrix \ :code:`m`\ . The Wolfram Language operator needs to be used. Note that it is not an element-wise operation. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         m := jWSMatrix("\{\{1.2, 1.7\},\{1.12, -2.1\}\}")@WSMAT(WSREAL)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         matrixFunction("Sqrt", m)
-
-  
 
 .. _l57534d6174726978-6d6178:
 
@@ -1067,23 +1049,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; randomComplexMatrix
 
 :spadfun:`randomComplexMatrix`\: (\ :ref:`WSList <l57534c697374>`\  \ :ref:`WSComplex <l5753436f6d706c6578>`\ , \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSComplex <l5753436f6d706c6578>`\  
-  \ :code:`randomComplexMatrix(range, dims)`\  returns a random matrix with random complex numbers in the \ :code:`range`\  \ :code:`range`\  and dims dimensions. 
+  \ :code:`randomComplexMatrix(range, dims)`\  returns a random matrix with random complex numbers in the \ :code:`range`\  \ :code:`range`\  and dims dimensions.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         range:=jWSList("\{1+I\}")@WSLIST(WSCPLX)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
-        randomComplexMatrix(range,jWSList("\{3,3\}")\$WSLIST(WSINT))@WSMAT(WSCPLX)
-
-  
+        randomComplexMatrix(range,jWSList("\{3,3\}")$WSLIST(WSINT))@WSMAT(WSCPLX)
 
 .. _l57534d6174726978-72616e646f6d5265616c4d6174726978:
 
@@ -1091,23 +1064,14 @@ Julia Wolfram Symbolic matrices using the MathLink Julia package.
    pair: WSMatrix; randomRealMatrix
 
 :spadfun:`randomRealMatrix`\: (\ :ref:`WSList <l57534c697374>`\  \ :ref:`WSReal <l57535265616c>`\ , \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\ ) -> \ :ref:`WSMatrix <l57534d6174726978>`\  \ :ref:`WSReal <l57535265616c>`\  
-  \ :code:`randomRealMatrix(range, dims)`\  returns a random matrix with random numbers in the \ :code:`range`\  \ :code:`range`\  and dims dimensions. 
+  \ :code:`randomRealMatrix(range, dims)`\  returns a random matrix with random numbers in the \ :code:`range`\  \ :code:`range`\  and dims dimensions.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        range := jWSList("\{-5,5\}")\$WSLIST(WSREAL)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
-        randomRealMatrix(range,jWSList("\{3,3\}")\$WSLIST(WSINT))@WSMAT(WSREAL)
-
-  
+        range := jWSList("\{-5,5\}")$WSLIST(WSREAL)
+        randomRealMatrix(range,jWSList("\{3,3\}")$WSLIST(WSINT))@WSMAT(WSREAL)
 
 .. _l57534d6174726978-72616e6b:
 

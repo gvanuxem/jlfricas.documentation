@@ -52,46 +52,30 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlApply(func, obj)`\  applies the function \ :code:`func`\  with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(\ :code:`JLObjFloat64`\ ): 
+  \ :code:`jlApply(func, obj)`\  applies the function \ :code:`func`\  with obj as parameter and returns the result as a FriCAS JLObject. For example, using JLMatrix(\ :code:`JLObjFloat64`\ ):
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         M:=nrand(4,4);
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlApply("svd", M::JLMatrix(JLObjFloat64)).S
 
-   should be "equivalent" to svdvals(\ :code:`M`\ ).
+  should be "equivalent" to svdvals(\ :code:`M`\ ).
 
 
 .. index::
    pair: JLObjectType; jlApply
 
 :spadfun:`jlApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`jlApply(func, obj1, obj2)`\  applies the function \ :code:`func`\  with \ :code:`obj1`\  and \ :code:`obj2`\  as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, \ :code:`v`\ )): 
+  \ :code:`jlApply(func, obj1, obj2)`\  applies the function \ :code:`func`\  with \ :code:`obj1`\  and \ :code:`obj2`\  as parameters and returns the result as a FriCAS JLObject. For example (equivalent to map(cos, \ :code:`v`\ )):
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        v:=urand01(5)\$JLVector(JLFloat)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
+        v:=urand01(5)$JLVector(JLFloat)
         jlApply("map", "cos", coerce v)
-
-  
 
 
 .. index::
@@ -192,15 +176,13 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlObject
 
 :spadfun:`jlObject`\: () -> \ :ref:`String <l537472696e67>`\  
-  \ :code:`jlObject()`\  returns the internal Julia name of the Julia module used. For example: 
+  \ :code:`jlObject()`\  returns the internal Julia name of the Julia module used. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        jlObject()\$NMUnivariatePolynomial(NINT,'x)
-
-  
+        jlObject()$NMUnivariatePolynomial(NINT,'x)
 
 .. _l4a4c4f626a65637454797065-6a6c50726f70657274794e616d6573:
 
@@ -232,47 +214,17 @@ Category for arbitrary Julia objects, more precisely objects that are used withi
    pair: JLObjectType; jlText
 
 :spadfun:`jlText`\: (%, \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\  
-  \ :code:`jlText(obj, mimest)`\  returns the text representation of \ :code:`obj`\  as a list of String lines with mime subtype mimest, for example "plain" for "text/plain" or "html" for "text/html" if is implemented at Julia level. Use internally the 'show' method. For example: 
+  \ :code:`jlText(obj, mimest)`\  returns the text representation of \ :code:`obj`\  as a list of String lines with mime subtype mimest, for example "plain" for "text/plain" or "html" for "text/html" if is implemented at Julia level. Use internally the 'show' method. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         df:=jdframe nrand(6,3)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlText(df, "plain")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlText(df, "html")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlText(df, "csv")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlText(df, "latex")
-
-  
 
 .. _l4a4c4f626a65637454797065-6a6c54797065:
 

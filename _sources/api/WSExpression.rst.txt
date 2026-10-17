@@ -520,23 +520,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coefficient
 
 :spadfun:`coefficient`\: (%, %) -> % 
-  \ :code:`coefficient(p,expr)`\  returns the coefficient of \ :code:`expr`\  in \ :code:`p`\ . 
+  \ :code:`coefficient(p,expr)`\  returns the coefficient of \ :code:`expr`\  in \ :code:`p`\ .
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:= jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         coefficient((x - y)^4, x * y^3)
-
-  
 
 
 .. index::
@@ -674,15 +665,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language Expression. For example: 
+  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language Expression. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         expr := "Sqrt[x]"::WSEXPR;jlEval(expr,"x=2.0")
-
-  
 
 
 .. index::
@@ -1010,7 +999,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; derivative
 
 :spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , %) -> % 
-  \ :code:`derivative(func,n)`\  returns the derivative of order \ :code:`n`\  of \ :code:`func`\ . 
+  \ :code:`derivative(func,n)`\  returns the derivative of order \ :code:`n`\  of \ :code:`func`\ .
 
   .. container:: fricas-example
 
@@ -1018,30 +1007,19 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         fprime:=derivative(operator('f),1)
 
-  
-
 
 .. index::
    pair: WSExpression; derivative
 
 :spadfun:`derivative`\: (\ :ref:`BasicOperator <l42617369634f70657261746f72>`\ , %, %) -> % 
-  \ :code:`derivative(func, n, var)`\  returns the derivative of order \ :code:`n`\  of \ :code:`func`\  applied to var. 
+  \ :code:`derivative(func, n, var)`\  returns the derivative of order \ :code:`n`\  of \ :code:`func`\  applied to var.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x := jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fprimex:=derivative(operator('f),1,x)
-
-  
 
 .. _l575345787072657373696f6e-646966666572656e7469617465:
 
@@ -1153,15 +1131,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; distribute
 
 :spadfun:`distribute`\: % -> % 
-  \ :code:`distribute(expr)`\  distributes \ :code:`expr`\  over addition. For illustration: 
+  \ :code:`distribute(expr)`\  distributes \ :code:`expr`\  over addition. For illustration:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         distribute(jWSExpr "(x + y) * (a + b + c)")
-
-  
 
 
 .. index::
@@ -1181,78 +1157,32 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dSolve
 
 :spadfun:`dSolve`\: (%, %, %) -> % 
-  \ :code:`dSolve(expr, funcs, vars)`\  solves the (list of) differential equation(\ :code:`s`\ ) \ :code:`expr`\  for the function(\ :code:`s`\ ) \ :code:`funcs`\  with independent variable(\ :code:`s`\ ) vars. 
+  \ :code:`dSolve(expr, funcs, vars)`\  solves the (list of) differential equation(\ :code:`s`\ ) \ :code:`expr`\  for the function(\ :code:`s`\ ) \ :code:`funcs`\  with independent variable(\ :code:`s`\ ) vars.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr x;
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fx:=derivative(operator('f),0,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fprimex:=derivative(operator('f),1,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         dSolve(jWSEqual(fprimex + fx , a *sin(x)),fx,x)
-
-  
 
 
 .. index::
    pair: WSExpression; dSolve
 
 :spadfun:`dSolve`\: (\ :ref:`Equation <l4571756174696f6e>`\  %, %, %) -> % 
-  \ :code:`dSolve(eq, func,var)`\  solves the differential equation \ :code:`eq`\  for the function(\ :code:`s`\ ) funcs with independent variable(\ :code:`s`\ ) vars. 
+  \ :code:`dSolve(eq, func,var)`\  solves the differential equation \ :code:`eq`\  for the function(\ :code:`s`\ ) funcs with independent variable(\ :code:`s`\ ) vars.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr x;
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fx:=derivative(operator('f),0,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fprimex:=derivative(operator('f),1,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         dSolve(fprimex + fx = a * sin(x)/cos(x),fx,x)
-
-  
 
 .. _l575345787072657373696f6e-64536f6c766556616c7565:
 
@@ -1260,55 +1190,18 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; dSolveValue
 
 :spadfun:`dSolveValue`\: (%, %, %) -> % 
-  \ :code:`dSolveValue(expr,funcs, vars)`\  returns the value determined by the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function(\ :code:`s`\ ) \ :code:`funcs`\  with independent variable(\ :code:`s`\ ) vars. 
+  \ :code:`dSolveValue(expr,funcs, vars)`\  returns the value determined by the differential equation(\ :code:`s`\ ) in \ :code:`expr`\  for the function(\ :code:`s`\ ) \ :code:`funcs`\  with independent variable(\ :code:`s`\ ) vars.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr x;
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         f:=derivative(operator('f),0)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         f0:=derivative(operator('f),0,0)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fx:=derivative(operator('f),0,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fprimex:=derivative(operator('f),1,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         dSolveValue(jWSExpr([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)
-
-  
 
 
 .. index::
@@ -1648,62 +1541,30 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; exponent
 
 :spadfun:`exponent`\: (%, %) -> % 
-  \ :code:`exponent(p,expr)`\  returns the maximum exponent of \ :code:`p`\  for \ :code:`expr`\ . 
+  \ :code:`exponent(p,expr)`\  returns the maximum exponent of \ :code:`p`\  for \ :code:`expr`\ .
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:= jWSExpr x;y := jWSExpr y
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         p:=(x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         exponent(\%,(x^2-2))
-
-  
 
 
 .. index::
    pair: WSExpression; exponent
 
 :spadfun:`exponent`\: (%, %, %) -> % 
-  \ :code:`exponent(p, expr, map)`\  applies map to the exponents related to \ :code:`expr`\  and returns it. By default map = "Max". 
+  \ :code:`exponent(p, expr, map)`\  applies map to the exponents related to \ :code:`expr`\  and returns it. By default map = "Max".
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:= jWSExpr x;y := jWSExpr y
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         p:=expand((x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         exponent(p,x,"Min")
-
-  
 
 .. _l575345787072657373696f6e-65787072657373496465616c4d656d626572:
 
@@ -1746,31 +1607,22 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; extendedSimplify
 
 :spadfun:`extendedSimplify`\: % -> % 
-  \ :code:`extendedSimplify(expr)`\  is the extended version of simplify. This is the full version of simplify. 
+  \ :code:`extendedSimplify(expr)`\  is the extended version of simplify. This is the full version of simplify.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:= jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         expr := Gamma(x)/Gamma(x-1)
 
-   Compare with simplify(\ :code:`expr`\ ). 
+  Compare with simplify(\ :code:`expr`\ ).
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         extendedSimplify(expr)
-
-  
 
 
 .. index::
@@ -1808,23 +1660,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factor
 
 :spadfun:`factor`\: (%, %) -> % 
-  \ :code:`factor(expr, opt)`\  factors the expression or polynomial \ :code:`expr`\ . For example: 
+  \ :code:`factor(expr, opt)`\  factors the expression or polynomial \ :code:`expr`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x := jWSExpr x;
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         factor(1 + x^2, "GaussianIntegers -> True")
-
-  
 
 .. _l575345787072657373696f6e-666163746f7269616c:
 
@@ -1854,31 +1697,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; factorPolynomial
 
 :spadfun:`factorPolynomial`\: % -> % 
-  \ :code:`factorPolynomial(p)`\  factorizes the polynomial \ :code:`p`\ . For example: 
+  \ :code:`factorPolynomial(p)`\  factorizes the polynomial \ :code:`p`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x := jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         p:=expand(chebyshevT(7,x)* chebyshevU(9,x))
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         factorPolynomial p
-
-  
 
 
 \ :ref:`factorPolynomial <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-666163746f72506f6c796e6f6d69616c>`\ \: \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % -> \ :ref:`Factored <l466163746f726564>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  % 
@@ -1999,23 +1826,14 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; findRoot
 
 :spadfun:`findRoot`\: (%, %) -> % 
-  \ :code:`findRoot(expr,start)`\  tries to find the root of \ :code:`expr`\  starting at \ :code:`start`\ . 
+  \ :code:`findRoot(expr,start)`\  tries to find the root of \ :code:`expr`\  starting at \ :code:`start`\ .
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:= jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         findRoot(sin(x) + cos(x), "\{x, 0\}")
-
-  
 
 .. _l575345787072657373696f6e-6669727374:
 
@@ -2089,31 +1907,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; fromCoefficientRules
 
 :spadfun:`fromCoefficientRules`\: (%, %) -> % 
-  \ :code:`fromCoefficientRules(list, vars)`\  constructs the polynomial from the \ :code:`list`\  of coefficients and exponents rules. 
+  \ :code:`fromCoefficientRules(list, vars)`\  constructs the polynomial from the \ :code:`list`\  of coefficients and exponents rules.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:= jWSExpr x;y := jWSExpr y
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         coefficientRules((x + y)^2+x^11,jWSExpr [x,y])
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         fromCoefficientRules(\%, jWSExpr [x,y])
-
-  
 
 .. _l575345787072657373696f6e-66756e6374696f6e457870616e64:
 
@@ -2121,15 +1923,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; functionExpand
 
 :spadfun:`functionExpand`\: % -> % 
-  \ :code:`functionExpand(expr)`\  tries to expand functions in \ :code:`expr`\  to more elementary functions. For example: 
+  \ :code:`functionExpand(expr)`\  tries to expand functions in \ :code:`expr`\  to more elementary functions. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         functionExpand sphericalBesselJ(3,8)
-
-  
 
 
 .. index::
@@ -2243,7 +2043,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; guessGeneratingFunction
 
 :spadfun:`guessGeneratingFunction`\: (%, %) -> % 
-  \ :code:`guessGeneratingFunction(l,x)`\  finds the generating function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example: 
+  \ :code:`guessGeneratingFunction(l,x)`\  finds the generating function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example:
 
   .. container:: fricas-example
 
@@ -2251,14 +2051,12 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         guessGeneratingFunction(jWSExpr("{1,2,4,8}"),x)
 
-  
-
 
 .. index::
    pair: WSExpression; guessGeneratingFunction
 
 :spadfun:`guessGeneratingFunction`\: (\ :ref:`WSList <l57534c697374>`\  %, %) -> % 
-  \ :code:`guessGeneratingFunction(l,x)`\  finds the generating function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example: 
+  \ :code:`guessGeneratingFunction(l,x)`\  finds the generating function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example:
 
   .. container:: fricas-example
 
@@ -2266,15 +2064,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         guessGeneratingFunction([1,2,4,8],x)
 
-  
-
 .. _l575345787072657373696f6e-677565737353657175656e636546756e6374696f6e:
 
 .. index::
    pair: WSExpression; guessSequenceFunction
 
 :spadfun:`guessSequenceFunction`\: % -> % 
-  \ :code:`guessSequenceFunction(l)`\  finds the sequence from the list of coefficients \ :code:`l`\  Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example: 
+  \ :code:`guessSequenceFunction(l)`\  finds the sequence from the list of coefficients \ :code:`l`\  Or from the list of lists \ :code:`l`\  (list of pairs as list (\ :code:`n`\ -th, coef-th)). For example:
 
   .. container:: fricas-example
 
@@ -2282,14 +2078,12 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         guessSequenceFunction(jWSExpr("{1,2,4,8}"))
 
-  
-
 
 .. index::
    pair: WSExpression; guessSequenceFunction
 
 :spadfun:`guessSequenceFunction`\: (%, %) -> % 
-  \ :code:`guessSequenceFunction(l,x)`\  finds the sequence function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . For example: 
+  \ :code:`guessSequenceFunction(l,x)`\  finds the sequence function applied to \ :code:`x`\  from the list of coefficients \ :code:`l`\ . For example:
 
   .. container:: fricas-example
 
@@ -2297,22 +2091,18 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         guessSequenceFunction([1,2,4,jWSInteger 8]::WSList(WSInteger),x)
 
-  
-
 
 .. index::
    pair: WSExpression; guessSequenceFunction
 
 :spadfun:`guessSequenceFunction`\: \ :ref:`WSList <l57534c697374>`\  \ :ref:`WSInteger <l5753496e7465676572>`\  -> % 
-  \ :code:`guessSequenceFunction(l)`\  finds the sequence from the list of coefficients \ :code:`l`\ . For example: 
+  \ :code:`guessSequenceFunction(l)`\  finds the sequence from the list of coefficients \ :code:`l`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         guessSequenceFunction(jWSExpr("{1,2,4,8}"))
-
-  
 
 .. _l575345787072657373696f6e-6861686e5f70:
 
@@ -2480,31 +2270,17 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; integrate
 
 :spadfun:`integrate`\: (%, %) -> % 
-  \ :code:`integrate(expr, opts|var)`\  integrates \ :code:`expr`\  with respect to opt or var as options. For example: 
+  \ :code:`integrate(expr, opts|var)`\  integrates \ :code:`expr`\  with respect to opt or var as options. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr x;integrate(1/(x^4-1),x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         opt:=jWSList [x,-1,1]
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         integrate(cos(x),opt)
 
-   \ :code:`=>`\  2 sin(1) 
+  \ :code:`=>`\  2 sin(1)
 
   .. container:: fricas-example
 
@@ -2512,7 +2288,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         integrate(cos(x),"\{x,-1.0,1.0\}")
 
-   \ :code:`=>`\  1.68294
+  \ :code:`=>`\  1.68294
 
 
 .. index::
@@ -2807,7 +2583,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlEval
 
 :spadfun:`jlEval`\: (%, \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ :code:`jlEval(expr, param)`\  evaluates expression \ :code:`expr`\  with param as parameter(\ :code:`s`\ ). See also `eval` or `replaceAll`. For example: 
+  \ :code:`jlEval(expr, param)`\  evaluates expression \ :code:`expr`\  with param as parameter(\ :code:`s`\ ). See also `eval` or `replaceAll`. For example:
 
   .. container:: fricas-example
 
@@ -2815,30 +2591,19 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         x:=jWSExpr("x");jlEval(sqrt(x),"x=2.0")
 
-  
-
 
 .. index::
    pair: WSExpression; jlEval
 
 :spadfun:`jlEval`\: (%, \ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ ) -> % 
-  \ :code:`jlEval(expr, param1, param2)`\  evaluates expression \ :code:`expr`\  with \ :code:`param1`\  and \ :code:`param2`\  as parameters. See also `eval` or `replaceAll`. 
+  \ :code:`jlEval(expr, param1, param2)`\  evaluates expression \ :code:`expr`\  with \ :code:`param1`\  and \ :code:`param2`\  as parameters. See also `eval` or `replaceAll`.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         a:=jWSExpr("a");b:=jWSExpr("b");
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlEval(sqrt(a^2+b^2),"a=1.0","b=1.0")
-
-  
 
 
 .. index::
@@ -2944,7 +2709,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlWSDefined?
 
 :spadfun:`jlWSDefined?`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ :code:`jlWSDefined?(sym)`\  checks whether or not the symbol \ :code:`sym`\  is defined in the \ :code:`WS`\  language. For example: 
+  \ :code:`jlWSDefined?(sym)`\  checks whether or not the symbol \ :code:`sym`\  is defined in the \ :code:`WS`\  language. For example:
 
   .. container:: fricas-example
 
@@ -2952,7 +2717,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         jlWSDefined? "Sin"
 
-   \ :code:`=>`\  \ :code:`true`\ 
+  \ :code:`=>`\  \ :code:`true`\ 
 
 .. _l575345787072657373696f6e-6a6c5753507265636973696f6e:
 
@@ -3117,39 +2882,18 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSExpr
 
 :spadfun:`jWSExpr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jWSExpr(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language expression. For example: 
+  \ :code:`jWSExpr(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language expression. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         jWSExpr "Factorial[5]"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jWSExpr "3.14159"
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         jlWSDateString(jWSExpr "Tomorrow")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         toString jWSExpr "TextSentences[WikipediaData[_"Sun_"]][[;; 40]]"
 
-   Example: jWSExpr "Probability[\ :code:`x`\  < 1, \ :code:`x`\  \ :code:`\[`\ Distributed] NormalDistribution[]]"
+  Example: jWSExpr "Probability[\ :code:`x`\  < 1, \ :code:`x`\  \ :code:`\[`\ Distributed] NormalDistribution[]]"
 
 
 .. index::
@@ -3217,7 +2961,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSQuantity
 
 :spadfun:`jWSQuantity`\: % -> % 
-  \ :code:`jWSQuantity(jWSString(u))`\  returns quantity unit \ :code:`u`\  of 1. For example: 
+  \ :code:`jWSQuantity(jWSString(u))`\  returns quantity unit \ :code:`u`\  of 1. For example:
 
   .. container:: fricas-example
 
@@ -3225,22 +2969,18 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         jWSQuantity jWSString "Meter"
 
-  
-
 
 .. index::
    pair: WSExpression; jWSQuantity
 
 :spadfun:`jWSQuantity`\: (%, %) -> % 
-  \ :code:`jWSQuantity(x,jWSString(u))`\  returns quantity unit \ :code:`u`\  of \ :code:`x`\ . For example: 
+  \ :code:`jWSQuantity(x,jWSString(u))`\  returns quantity unit \ :code:`u`\  of \ :code:`x`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         jWSQuantity(1.2, jWSString "Meter")
-
-  
 
 .. _l575345787072657373696f6e-6a575352756c65:
 
@@ -3255,31 +2995,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSRule
 
 :spadfun:`jWSRule`\: \ :ref:`Equation <l4571756174696f6e>`\  % -> % 
-  \ :code:`jWSRule(eq)`\  returns the Julia \ :code:`WS`\  rule \ :code:`lhs`\ ->rhs for the equation \ :code:`eq`\ . For example: 
+  \ :code:`jWSRule(eq)`\  returns the Julia \ :code:`WS`\  rule \ :code:`lhs`\ ->rhs for the equation \ :code:`eq`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x := jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         p := 1/2 * legendreQ(5,x)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         replaceAll(p, jWSRule(x = jWSExpr "1.55555556444883838383833777333333333"))
-
-  
 
 .. _l575345787072657373696f6e-6a57535461626c65:
 
@@ -3379,15 +3103,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; laguerreL
 
 :spadfun:`laguerreL`\: (%, %) -> % 
-  \ :code:`laguerreL(n, x)`\  returns the Laguerre polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number. For example: 
+  \ :code:`laguerreL(n, x)`\  returns the Laguerre polynomial or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         laguerreL(5, jWSExpr x)
-
-  
 
 
 .. index::
@@ -3467,15 +3189,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; legendreQ
 
 :spadfun:`legendreQ`\: (%, %) -> % 
-  \ :code:`legendreQ(n, x)`\  returns the Legendre function of the second kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number. 
+  \ :code:`legendreQ(n, x)`\  returns the Legendre function of the second kind or evaluates it at \ :code:`x`\  if \ :code:`x`\  is a number.
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         legendreQ(3,jWSExpr x)
-
-  
 
 
 .. index::
@@ -3535,15 +3255,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; limit
 
 :spadfun:`limit`\: (%, %) -> % 
-  \ :code:`limit(expr, params)`\  returns the limit, eventually nested or multivariate, of \ :code:`expr`\ . For example: 
+  \ :code:`limit(expr, params)`\  returns the limit, eventually nested or multivariate, of \ :code:`expr`\ . For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr x; limit(sin(x)-sin(x-1/x),"x->Infinity")
-
-  
 
 .. _l575345787072657373696f6e-6c6f673130:
 
@@ -3852,31 +3570,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; normal
 
 :spadfun:`normal`\: % -> % 
-  \ :code:`normal(expr)`\  converts \ :code:`expr`\  to a normal expression from different expression types. Can be applied to a power series for example. For example: 
+  \ :code:`normal(expr)`\  converts \ :code:`expr`\  to a normal expression from different expression types. Can be applied to a power series for example. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr x
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         s:=series(exp(x),jWSExpr "\{x,0,10\}")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         normal(s)::EXPR INT
-
-  
 
 
 .. index::
@@ -4043,31 +3745,15 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericMinimize
 
 :spadfun:`numericMinimize`\: (%, %) -> % 
-  \ :code:`numericMinimize(expr, vars)`\  minimizes numerically the expression function \ :code:`expr`\  with respect to vars. For example, global optimization from the SIAM 100 digits challenge: 
+  \ :code:`numericMinimize(expr, vars)`\  minimizes numerically the expression function \ :code:`expr`\  with respect to vars. For example, global optimization from the SIAM 100 digits challenge:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x := jWSExpr(x);y:=jWSExpr y;
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         expr := exp(sin(50*x))+sin(60*exp(y))+ sin(70*sin(x))+ sin(sin(80*y))-sin(10*(x+y))+(x^2+y^2)/4
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         numericMinimize(expr, jWSList [x,y])
-
-  
 
 
 .. index::
@@ -4089,7 +3775,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericProduct
 
 :spadfun:`numericProduct`\: (%, %) -> % 
-  \ :code:`numericProduct(f(n),range)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example 
+  \ :code:`numericProduct(f(n),range)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example
 
   .. container:: fricas-example
 
@@ -4127,7 +3813,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; numericSum
 
 :spadfun:`numericSum`\: (%, %) -> % 
-  \ :code:`numericSum(f(n),range)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example 
+  \ :code:`numericSum(f(n),range)`\  returns an evaluated numerical approximation of the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example
 
   .. container:: fricas-example
 
@@ -4196,15 +3882,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; percentForm
 
 :spadfun:`percentForm`\: % -> % 
-  \ :code:`percentForm(x)`\  returns the printed representation of \ :code:`x`\  in percent form. For example: 
+  \ :code:`percentForm(x)`\  returns the printed representation of \ :code:`x`\  in percent form. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         percentForm jWSExpr 0.50
-
-  
 
 
 .. index::
@@ -4413,7 +4097,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; product
 
 :spadfun:`product`\: (%, %) -> % 
-  \ :code:`product(f(n),range)`\  returns the product \ :code:`f`\ (imin) * ... * \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example 
+  \ :code:`product(f(n),range)`\  returns the product \ :code:`f`\ (imin) * ... * \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example
 
   .. container:: fricas-example
 
@@ -4815,15 +4499,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; residueSum
 
 :spadfun:`residueSum`\: (%, %) -> % 
-  \ :code:`residueSum(expr, var)`\  returns the residue of \ :code:`expr`\ . 
+  \ :code:`residueSum(expr, var)`\  returns the residue of \ :code:`expr`\ .
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         residueSum(Gamma(x),x)
-
-  
 
 .. _l575345787072657373696f6e-72657374:
 
@@ -5108,47 +4790,17 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; series
 
 :spadfun:`series`\: (%, %) -> % 
-  \ :code:`series(expr, opt)`\  returns a series from \ :code:`expr`\ . 
+  \ :code:`series(expr, opt)`\  returns a series from \ :code:`expr`\ .
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr(x);a:=jWSExpr(a);
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
-        opt:=jWSList [x,\ :code:`pi`\ ()\$WSEXPR/4,7]
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
+        opt:=jWSList [x,\ :code:`pi`\ ()$WSEXPR/4,7]
         series(sin(a*x),opt)
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         series(cos(x),"\{x, 0, 12\}")
-
-   
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
         series(inverseErfc(x),"\{x,0,3\}")
-
-  
 
 .. _l575345787072657373696f6e-736574656c7421:
 
@@ -5201,7 +4853,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; simplify
 
 :spadfun:`simplify`\: % -> % 
-  \ :code:`simplify(expr)`\  simplifies the \ :code:`expr`\ . 
+  \ :code:`simplify(expr)`\  simplifies the \ :code:`expr`\ .
 
   .. container:: fricas-example
 
@@ -5209,22 +4861,18 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         x:=jWSExpr("x"); simplify(sqrt(x^2)^2)
 
-  
-
 
 .. index::
    pair: WSExpression; simplify
 
 :spadfun:`simplify`\: (%, %) -> % 
-  \ :code:`simplify(expr, assumptions)`\  simplifies the expression \ :code:`expr`\  assuming that assumptions are satisfied. For example: 
+  \ :code:`simplify(expr, assumptions)`\  simplifies the expression \ :code:`expr`\  assuming that assumptions are satisfied. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
         x:=jWSExpr("x"); simplify(sqrt(x^2), "x>0")
-
-  
 
 .. _l575345787072657373696f6e-73696e:
 
@@ -5425,7 +5073,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; sum
 
 :spadfun:`sum`\: (%, %) -> % 
-  \ :code:`sum(f(n),range)`\  returns the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example 
+  \ :code:`sum(f(n),range)`\  returns the sum \ :code:`f`\ (imin) + ... + \ :code:`f`\ (imax) defined by the list \ :code:`range`\ , for example
 
   .. container:: fricas-example
 
@@ -5754,15 +5402,13 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; zero?
 
 :spadfun:`zero?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ :code:`zero? x`\  tries to determine if \ :code:`x`\  is 0. For example: 
+  \ :code:`zero? x`\  tries to determine if \ :code:`x`\  is 0. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        expr:=0\$WSEXPR/1*sqrt(17::WSEXPR); zero? expr
-
-  
+        expr:=0$WSEXPR/1*sqrt(17::WSEXPR); zero? expr
 
 .. _l575345787072657373696f6e-7a65726f4f66:
 

@@ -98,20 +98,14 @@
 <span id="l4a4c4f626a46756e6374696f6e-6a66756e6374696f6e"></span><dl id="index-6">
 <dt><span class="spadfun">jfunction</span>: <a class="reference internal" href="FunctionCalled.html#l46756e6374696f6e43616c6c6564"><span class="std std-ref">FunctionCalled</span></a> f -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jfunction(func)</span></code> returns a Julia Function from the FriCAS function <code class="code docutils literal notranslate"><span class="pre">func</span></code>. <code class="code docutils literal notranslate"><span class="pre">func</span></code> must be compatible with 1D format.</p>
 <div class="fricas-example docutils container">
-<blockquote>
-<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>f(x)==sin(x)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>f(x)==sin(x)
 </pre></div>
 </div>
-</div></blockquote>
-<p>In FriCAS: <code class="code docutils literal notranslate"><span class="pre">f</span></code>(0.7) In Julia:</p>
 </div>
+<p>In FriCAS: <code class="code docutils literal notranslate"><span class="pre">f</span></code>(0.7) In Julia:</p>
 <div class="fricas-example docutils container">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ff:=jfunction(f)
-</pre></div>
-</div>
-</div>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ff(jfloat 0.7)
+ff(jfloat 0.7)
 </pre></div>
 </div>
 </div>
