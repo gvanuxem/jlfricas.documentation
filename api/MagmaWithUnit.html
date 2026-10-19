@@ -51,7 +51,7 @@
   <section id="magmawithunit">
 <span id="l4d61676d6157697468556e6974"></span><span id="index-0"></span><h1>MagmaWithUnit<a class="headerlink" href="#magmawithunit" title="Link to this heading">¶</a></h1>
 <p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/naalgc.spad#L44">naalgc.spad line 44</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/naalgc.spad#L44">[edit on github]</a></p>
-<p>MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a binary operation and a unit element. Axioms leftIdentity(“*”:(%,%)<code class="code docutils literal notranslate"><span class="pre">-&gt;</span></code>%,1)   1*x=x rightIdentity(“*”:(%,%)<code class="code docutils literal notranslate"><span class="pre">-&gt;</span></code>%,1)   x*1=x Common Additional Axioms unitsKnown—if “recip” says “failed”, that PROVES input wasn<code class="code docutils literal notranslate"><span class="pre">'t</span></code> a unit</p>
+<p>MagmaWithUnit is the class of multiplicative magmas with unit, i.e. sets with a binary operation and a unit element. Axioms leftIdentity(“*”:(%,%)<code class="code docutils literal notranslate"><span class="pre">-&gt;</span></code>%,1)   1*x=x rightIdentity(“*”:(%,%)<code class="code docutils literal notranslate"><span class="pre">-&gt;</span></code>%,1)   x*1=x Common Additional Axioms unitsKnown—if “recip” says “failed”, that PROVES input wasn’t a unit</p>
 <p id="index-1"><span id="l4d61676d6157697468556e6974-31"></span><span class="spadfun">1</span>: %</p>
 <dl class="simple" id="l4d61676d6157697468556e6974-2a">
 <dt><a class="reference internal" href="Magma.html#l4d61676d61-2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
@@ -86,7 +86,7 @@
 </dd>
 </dl>
 <span id="l4d61676d6157697468556e6974-6c6566745265636970"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">leftRecip</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">leftRecip(a)</span></code> returns an element, which is a left inverse of <code class="code docutils literal notranslate"><span class="pre">a</span></code>, or <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if such an element doesn<code class="code docutils literal notranslate"><span class="pre">'t</span></code> exist or cannot be determined (see unitsKnown).</p>
+<dt><span class="spadfun">leftRecip</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">leftRecip(a)</span></code> returns an element, which is a left inverse of <code class="code docutils literal notranslate"><span class="pre">a</span></code>, or <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if such an element doesn’t exist or cannot be determined (see unitsKnown).</p>
 </dd>
 </dl>
 <span id="l4d61676d6157697468556e6974-6f6e653f"></span><dl class="simple" id="index-5">
@@ -94,7 +94,7 @@
 </dd>
 </dl>
 <span id="l4d61676d6157697468556e6974-7265636970"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">recip</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">recip(a)</span></code> returns an element, which is both a left and a right inverse of <code class="code docutils literal notranslate"><span class="pre">a</span></code>, or <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if such an element doesn<code class="code docutils literal notranslate"><span class="pre">'t</span></code> exist or cannot be determined (see unitsKnown).</p>
+<dt><span class="spadfun">recip</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">recip(a)</span></code> returns an element, which is both a left and a right inverse of <code class="code docutils literal notranslate"><span class="pre">a</span></code>, or <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if such an element doesn’t exist or cannot be determined (see unitsKnown).</p>
 </dd>
 </dl>
 <span id="l4d61676d6157697468556e6974-7269676874506f776572"></span><dl class="simple" id="index-7">
@@ -104,7 +104,7 @@
 </dd>
 </dl>
 <span id="l4d61676d6157697468556e6974-72696768745265636970"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">rightRecip</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">rightRecip(a)</span></code> returns an element, which is a right inverse of <code class="code docutils literal notranslate"><span class="pre">a</span></code>, or <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if such an element doesn<code class="code docutils literal notranslate"><span class="pre">'t</span></code> exist or cannot be determined (see unitsKnown).</p>
+<dt><span class="spadfun">rightRecip</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">rightRecip(a)</span></code> returns an element, which is a right inverse of <code class="code docutils literal notranslate"><span class="pre">a</span></code>, or <code class="code docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if such an element doesn’t exist or cannot be determined (see unitsKnown).</p>
 </dd>
 </dl>
 <span id="l4d61676d6157697468556e6974-73616d706c65"></span><dl class="simple" id="index-9">

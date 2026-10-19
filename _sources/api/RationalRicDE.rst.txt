@@ -21,7 +21,7 @@ In-field solution of Riccati equations, rational case.
    pair: RationalRicDE; polyRicDE
 
 :spadfun:`polyRicDE`\: (\ :ref:`LinearOrdinaryDifferentialOperator2 <l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7232>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP), UP -> \ :ref:`List <l4c697374>`\  F) -> \ :ref:`List <l4c697374>`\  Record(poly: UP, eq: \ :ref:`LinearOrdinaryDifferentialOperator2 <l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7232>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP)) 
-  \ :code:`polyRicDE(op, zeros)`\  returns \ :code:`[[p1, L1], [p2, L2], ... , [pk, Lk]]`\  such that the polynomial part of any rational solution of the associated Riccati equation of \ :code:`op y = 0`\  must be one of the \ :code:`pi`\ \ :code:`'s`\  (up to the constant coefficient), in which case the equation for \ :code:`z = y e^{-int p}`\  is \ :code:`Li z = 0`\ . \ :code:`zeros`\  is a zero finder in \ :code:`UP`\ .
+  \ :code:`polyRicDE(op, zeros)`\  returns \ :code:`[[p1, L1], [p2, L2], ... , [pk, Lk]]`\  such that the polynomial part of any rational solution of the associated Riccati equation of \ :code:`op y = 0`\  must be one of the \ :code:`pi`\ 's (up to the constant coefficient), in which case the equation for \ :code:`z = y e^{-int p}`\  is \ :code:`Li z = 0`\ . \ :code:`zeros`\  is a zero finder in \ :code:`UP`\ .
 
 .. _l526174696f6e616c5269634445-72696344736f6c7665:
 
@@ -86,6 +86,6 @@ In-field solution of Riccati equations, rational case.
    pair: RationalRicDE; singRicDE
 
 :spadfun:`singRicDE`\: (\ :ref:`LinearOrdinaryDifferentialOperator2 <l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7232>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP), UP -> \ :ref:`Factored <l466163746f726564>`\  UP) -> \ :ref:`List <l4c697374>`\  Record(frac: \ :ref:`Fraction <l4672616374696f6e>`\  UP, eq: \ :ref:`LinearOrdinaryDifferentialOperator2 <l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7232>`\ (UP, \ :ref:`Fraction <l4672616374696f6e>`\  UP)) 
-  \ :code:`singRicDE(op, ezfactor)`\  returns \ :code:`[[f1, L1], [f2, L2], ..., [fk, Lk]]`\  such that the singular \ :code:`++`\  part of any rational solution of the associated Riccati equation of \ :code:`op y = 0`\  must be one of the \ :code:`fi`\ \ :code:`'s`\  (up to the constant coefficient), in which case the equation for \ :code:`z = y e^{-int ai}`\  is \ :code:`Li z = 0`\ . Argument \ :code:`ezfactor`\  is a factorisation in \ :code:`UP`\ , not necessarily into irreducibles.
+  \ :code:`singRicDE(op, ezfactor)`\  returns \ :code:`[[f1, L1], [f2, L2], ..., [fk, Lk]]`\  such that the singular \ :code:`++`\  part of any rational solution of the associated Riccati equation of \ :code:`op y = 0`\  must be one of the \ :code:`fi`\ 's (up to the constant coefficient), in which case the equation for \ :code:`z = y e^{-int ai}`\  is \ :code:`Li z = 0`\ . Argument \ :code:`ezfactor`\  is a factorisation in \ :code:`UP`\ , not necessarily into irreducibles.
 
 

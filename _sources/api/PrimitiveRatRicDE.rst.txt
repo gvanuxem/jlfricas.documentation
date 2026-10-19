@@ -40,7 +40,7 @@ In-field solution of Riccati equations, primitive case.
    pair: PrimitiveRatRicDE; constantCoefficientRicDE
 
 :spadfun:`constantCoefficientRicDE`\: (L, UP -> \ :ref:`List <l4c697374>`\  F) -> \ :ref:`List <l4c697374>`\  Record(constant: F, eq: L) 
-  \ :code:`constantCoefficientRicDE(op, ric)`\  returns \ :code:`[[a1, L1], [a2, L2], ... , [ak, Lk]]`\  such that any rational solution with no polynomial part of the associated Riccati equation of \ :code:`op y = 0`\  must be one of the \ :code:`ai`\ \ :code:`'s`\  in which case the equation for \ :code:`z = y e^{-int ai}`\  is \ :code:`Li z = 0`\ . \ :code:`ric`\  is a Riccati equation solver over \ :code:`F`\ , whose input is the associated linear equation.
+  \ :code:`constantCoefficientRicDE(op, ric)`\  returns \ :code:`[[a1, L1], [a2, L2], ... , [ak, Lk]]`\  such that any rational solution with no polynomial part of the associated Riccati equation of \ :code:`op y = 0`\  must be one of the \ :code:`ai`\ 's in which case the equation for \ :code:`z = y e^{-int ai}`\  is \ :code:`Li z = 0`\ . \ :code:`ric`\  is a Riccati equation solver over \ :code:`F`\ , whose input is the associated linear equation.
 
 .. _l5072696d69746976655261745269634445-64656e6f6d5269634445:
 
@@ -64,7 +64,7 @@ In-field solution of Riccati equations, primitive case.
    pair: PrimitiveRatRicDE; polyRicDE
 
 :spadfun:`polyRicDE`\: (L, UP -> \ :ref:`List <l4c697374>`\  F) -> \ :ref:`List <l4c697374>`\  Record(poly: UP, eq: L) 
-  \ :code:`polyRicDE(op, zeros)`\  returns \ :code:`[[p1, L1], [p2, L2], ... , [pk, Lk]]`\  such that the polynomial part of any rational solution of the associated Riccati equation of \ :code:`op y=0`\  must be one of the \ :code:`pi`\ \ :code:`'s`\  (up to the constant coefficient), in which case the equation for \ :code:`z=y e^{-int p}`\  is \ :code:`Li z =0`\ . \ :code:`zeros`\  is a zero finder in \ :code:`UP`\ .
+  \ :code:`polyRicDE(op, zeros)`\  returns \ :code:`[[p1, L1], [p2, L2], ... , [pk, Lk]]`\  such that the polynomial part of any rational solution of the associated Riccati equation of \ :code:`op y=0`\  must be one of the \ :code:`pi`\ 's (up to the constant coefficient), in which case the equation for \ :code:`z=y e^{-int p}`\  is \ :code:`Li z =0`\ . \ :code:`zeros`\  is a zero finder in \ :code:`UP`\ .
 
 .. _l5072696d69746976655261745269634445-73696e675269634445:
 
@@ -72,6 +72,6 @@ In-field solution of Riccati equations, primitive case.
    pair: PrimitiveRatRicDE; singRicDE
 
 :spadfun:`singRicDE`\: (L, (UP, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  UP) -> \ :ref:`List <l4c697374>`\  UP, UP -> \ :ref:`Factored <l466163746f726564>`\  UP) -> \ :ref:`List <l4c697374>`\  Record(frac: \ :ref:`Fraction <l4672616374696f6e>`\  UP, eq: L) 
-  \ :code:`singRicDE(op, zeros, ezfactor)`\  returns \ :code:`[[f1, L1], [f2, L2], ... , [fk, Lk]]`\  such that the singular part of any rational solution of the associated Riccati equation of \ :code:`op y=0`\  must be one of the \ :code:`fi`\ \ :code:`'s`\  (up to the constant coefficient), in which case the equation for \ :code:`z=y e^{-int p}`\  is \ :code:`Li z=0`\ . \ :code:`zeros(C(x), H(x, y))`\  returns all the \ :code:`P_i(x)`\ \ :code:`'s`\  such that \ :code:`H(x, P_i(x)) = 0 modulo C(x)`\ . Argument \ :code:`ezfactor`\  is a factorisation in \ :code:`UP`\ , not necessarily into irreducibles.
+  \ :code:`singRicDE(op, zeros, ezfactor)`\  returns \ :code:`[[f1, L1], [f2, L2], ... , [fk, Lk]]`\  such that the singular part of any rational solution of the associated Riccati equation of \ :code:`op y=0`\  must be one of the \ :code:`fi`\ 's (up to the constant coefficient), in which case the equation for \ :code:`z=y e^{-int p}`\  is \ :code:`Li z=0`\ . \ :code:`zeros(C(x), H(x, y))`\  returns all the \ :code:`P_i(x)`\ 's such that \ :code:`H(x, P_i(x)) = 0 modulo C(x)`\ . Argument \ :code:`ezfactor`\  is a factorisation in \ :code:`UP`\ , not necessarily into irreducibles.
 
 

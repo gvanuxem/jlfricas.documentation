@@ -12,7 +12,7 @@ ComplexRootFindingPackage(R, UP)
 * UP: \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  \ :ref:`Complex <l436f6d706c6578>`\  R
 
 
-\ :ref:`ComplexRootFindingPackage <l436f6d706c6578526f6f7446696e64696e675061636b616765>`\  provides functions to find all roots of a polynomial \ :code:`p`\  over the complex number by using Plesken\ :code:`'s`\  idea to calculate in the polynomial ring modulo \ :code:`f`\  and employing the Chinese Remainder Theorem. In this first version, the precision (see \ :ref:`digits <l466c6f6174-646967697473>`\ ) is not increased when this is necessary to avoid rounding errors. Hence it is the user\ :code:`'s`\  responsibility to increase the precision if necessary. Note also, if this package is called with e.g. Fraction Integer, the precise calculations could require a lot of time. Also note that evaluating the zeros is not necessarily a good check whether the result is correct: already evaluation can cause rounding errors.
+\ :ref:`ComplexRootFindingPackage <l436f6d706c6578526f6f7446696e64696e675061636b616765>`\  provides functions to find all roots of a polynomial \ :code:`p`\  over the complex number by using Plesken's idea to calculate in the polynomial ring modulo \ :code:`f`\  and employing the Chinese Remainder Theorem. In this first version, the precision (see \ :ref:`digits <l466c6f6174-646967697473>`\ ) is not increased when this is necessary to avoid rounding errors. Hence it is the user's responsibility to increase the precision if necessary. Note also, if this package is called with e.g. Fraction Integer, the precise calculations could require a lot of time. Also note that evaluating the zeros is not necessarily a good check whether the result is correct: already evaluation can cause rounding errors.
 
 
 .. _l436f6d706c6578526f6f7446696e64696e675061636b616765-636f6d706c65785a65726f73:
@@ -143,6 +143,6 @@ ComplexRootFindingPackage(R, UP)
    pair: ComplexRootFindingPackage; startPolynomial
 
 :spadfun:`startPolynomial`\: UP -> Record(start: UP, factors: \ :ref:`Factored <l466163746f726564>`\  UP) 
-  \ :code:`startPolynomial(p)`\  uses the ideas of Schoenhage\ :code:`'s`\  variant of Graeffe\ :code:`'s`\  method to construct circles which separate roots to get a good start polynomial, i.e. one whose image under the Chinese Remainder Isomorphism has both entries of norm smaller and greater or equal to 1. In case the roots are found during internal calculations. The corresponding factors are in \ *factors*\  which are otherwise 1.
+  \ :code:`startPolynomial(p)`\  uses the ideas of Schoenhage's variant of Graeffe's method to construct circles which separate roots to get a good start polynomial, i.e. one whose image under the Chinese Remainder Isomorphism has both entries of norm smaller and greater or equal to 1. In case the roots are found during internal calculations. The corresponding factors are in \ *factors*\  which are otherwise 1.
 
 

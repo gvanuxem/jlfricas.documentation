@@ -10,7 +10,7 @@ PartialFraction R
 * R: \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 
-The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implements partial fractions over a euclidean domain \ :code:`R`\ . This requirement on the argument domain allows us to normalize the fractions. Of particular interest are the 2 forms for these fractions. The ``compact\ :code:`''`\  form has only one fractional term per prime in the denominator, while the \ :code:```p`\ -adic\ :code:`''`\  form expands each numerator \ :code:`p`\ -adically via the prime \ :code:`p`\  in the denominator. For computational efficiency, the compact form is used, though the \ :code:`p`\ -adic form may be gotten by calling the function \ :ref:`padicFraction <l5061727469616c4672616374696f6e-70616469634672616374696f6e>`\ . For a general euclidean domain, it is not known how to factor the denominator. Thus the function \ :ref:`partialFraction <l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e>`\  takes an element of Factored(R) as its second argument.
+The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implements partial fractions over a euclidean domain \ :code:`R`\ . This requirement on the argument domain allows us to normalize the fractions. Of particular interest are the 2 forms for these fractions. The ``compact'' form has only one fractional term per prime in the denominator, while the \ :code:```p`\ -adic'' form expands each numerator \ :code:`p`\ -adically via the prime \ :code:`p`\  in the denominator. For computational efficiency, the compact form is used, though the \ :code:`p`\ -adic form may be gotten by calling the function \ :ref:`padicFraction <l5061727469616c4672616374696f6e-70616469634672616374696f6e>`\ . For a general euclidean domain, it is not known how to factor the denominator. Thus the function \ :ref:`partialFraction <l5061727469616c4672616374696f6e-7061727469616c4672616374696f6e>`\  takes an element of Factored(R) as its second argument.
 
 
 .. _l5061727469616c4672616374696f6e-30:
@@ -302,7 +302,7 @@ The domain \ :ref:`PartialFraction <l5061727469616c4672616374696f6e>`\  implemen
    pair: PartialFraction; padicallyExpand
 
 :spadfun:`padicallyExpand`\: (R, R) -> \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  R 
-  \ :code:`padicallyExpand(p, x)`\  is a utility function that expands the second argument \ :code:`x`\  \ :code:```p`\ -adically\ :code:`''`\  in the first.
+  \ :code:`padicallyExpand(p, x)`\  is a utility function that expands the second argument \ :code:`x`\  \ :code:```p`\ -adically'' in the first.
 
 .. _l5061727469616c4672616374696f6e-70616469634672616374696f6e:
 
