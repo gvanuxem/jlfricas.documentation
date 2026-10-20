@@ -5,7 +5,7 @@
 JLDrawFunctions Ex
 ==================
 
-:viewcode:`jplot.spad line 909 <jplot.spad#L909>` :editcode:`[edit on github] <jplot.spad#L909>`
+:viewcode:`jplot.spad line 1348 <jplot.spad#L1348>` :editcode:`[edit on github] <jplot.spad#L1348>`
 
 * Ex: Join(\ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`InputForm <l496e707574466f726d>`\ , \ :ref:`SetCategory <l53657443617465676f7279>`\ )
 
@@ -19,7 +19,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContour!
 
 :spadfun:`jlContour!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f(x, y), x = a..b, y = c..d)`\  adds the contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlContour!(f(x, y), x = a..b, y = c..d)`\  adds the contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Example (Concentric Circular Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlContour!(cos(x^2 + y^2), x = -3.0..3.0, y = -3.0..3.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c436f6e746f7572:
 
@@ -27,7 +33,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContour
 
 :spadfun:`jlContour`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f(x, y), x = a..b, y = c..d)`\  draws the contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlContour(f(x, y), x = a..b, y = c..d)`\  draws the contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Example (Rosenbrock Banana Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlContour((1 - x)^2 + 10*(y - x^2)^2, x = -2.0..2.0, y = -1.0..3.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c436f6e746f75726621:
 
@@ -35,7 +47,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f(x, y), x = a..b, y = c..d)`\  adds the filled contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Fills area between contours.
+  \ :code:`jlContourf!(f(x, y), x = a..b, y = c..d)`\  adds the filled contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Fills area between contours. Example (Dipole Peaks Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlContourf!(exp(-(x-1)^2 - y^2) - exp(-(x+1)^2 - y^2), x = -3.0..3.0, y = -2.0..2.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c436f6e746f757266:
 
@@ -43,7 +61,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlContourf
 
 :spadfun:`jlContourf`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f(x, y), x = a..b, y = c..d)`\  draws the filled contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Fills area between contours.
+  \ :code:`jlContourf(f(x, y), x = a..b, y = c..d)`\  draws the filled contour plot of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Fills area between contours. Example (Egg Carton Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlContourf(sin(x)*cos(y), x = -4.0..4.0, y = -4.0..4.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c486561746d617021:
 
@@ -51,7 +75,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlHeatmap!
 
 :spadfun:`jlHeatmap!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap!(f(x, y), x = a..b, y = c..d)`\  adds a 2D heatmap on the existing plot.
+  \ :code:`jlHeatmap!(f(x, y), x = a..b, y = c..d)`\  adds a 2D heatmap on the existing plot. Example (Chladni Interference Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlHeatmap!(cos(2*x)*cos(2*y), x = -3.0..3.0, y = -3.0..3.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c486561746d6170:
 
@@ -59,7 +89,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlHeatmap
 
 :spadfun:`jlHeatmap`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap(f(x, y), x = a..b, y = c..d)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ).
+  \ :code:`jlHeatmap(f(x, y), x = a..b, y = c..d)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ). Example (Concentric Waves Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlHeatmap(sin(x^2 + y^2), x = -3.0..3.0, y = -3.0..3.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c496d706c69636974506c6f74:
 
@@ -67,7 +103,14 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlImplicitPlot
 
 :spadfun:`jlImplicitPlot`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlImplicitPlot(f(x, y), x = a..b, y = c..d)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0.
+  \ :code:`jlImplicitPlot(f(x, y), x = a..b, y = c..d)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0. Example (Folium of Descartes and Lemniscate of Bernoulli):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlImplicitPlot(x^3 + y^3 - 3*x*y, x = -3.0..3.0, y = -3.0..3.0)
+        jlImplicitPlot((x^2 + y^2)^2 - 2*(x^2 - y^2), x = -2.0..2.0, y = -2.0..2.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506172616d6574726963506c6f7421:
 
@@ -75,14 +118,26 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (Ex, Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(x(t), y(t), z(t), t = a..b)`\  adds the 3D space curve on existing plot.
+  \ :code:`jlParametricPlot!(x(t), y(t), z(t), t = a..b)`\  adds the 3D space curve on existing plot. Example (Trefoil Knot):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlParametricPlot!(sin(t) + 2*sin(2*t), cos(t) - 2*cos(2*t), -sin(3*t), t = 0..2*\%\ :code:`pi`\ )
 
 
 .. index::
    pair: JLDrawFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(x(t), y(t), t = a..b)`\  adds the 2D parametric curve on existing plot.
+  \ :code:`jlParametricPlot!(x(t), y(t), t = a..b)`\  adds the 2D parametric curve on existing plot. Example (Lissajous 3:4 Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlParametricPlot!(sin(3*t), sin(4*t), t = 0..2*\%\ :code:`pi`\ )
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506172616d6574726963506c6f74:
 
@@ -90,14 +145,26 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (Ex, Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(x(t), y(t), z(t), t = a..b)`\  draws the 3D space curve.
+  \ :code:`jlParametricPlot(x(t), y(t), z(t), t = a..b)`\  draws the 3D space curve. Example (Circular Helix):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlParametricPlot(cos(t), sin(t), t/5, t = 0..4*\%\ :code:`pi`\ )
 
 
 .. index::
    pair: JLDrawFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(x(t), y(t), t = a..b)`\  draws the 2D parametric curve.
+  \ :code:`jlParametricPlot(x(t), y(t), t = a..b)`\  draws the 2D parametric curve. Example (Astroid Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlParametricPlot(cos(t)^3, sin(t)^3, t = 0..2*\%\ :code:`pi`\ )
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506c6f7421:
 
@@ -105,21 +172,39 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f(x), x = a..b)`\  adds the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  on the existing graphic window. \ :code:`f(x)`\  appears as the title.
+  \ :code:`jlPlot!(f(x), x = a..b)`\  adds the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  on the existing graphic window. \ :code:`f(x)`\  appears as the title. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot!(cos(x), x = -\%\ :code:`pi`\ ..\%\ :code:`pi`\ )
 
 
 .. index::
    pair: JLDrawFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f(x, y), x = a..b, y = c..d)`\  adds the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlPlot!(f(x, y), x = a..b, y = c..d)`\  adds the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Example (Elliptic Paraboloid Bowl):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot!((x^2 + y^2)/2, x = -2.0..2.0, y = -2.0..2.0)
 
 
 .. index::
    pair: JLDrawFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`List <l4c697374>`\  Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!([f1, f2, ...], x = a..b)`\  adds multiple curves on the existing plot.
+  \ :code:`jlPlot!([f1, f2, ...], x = a..b)`\  adds multiple curves on the existing plot. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot!([cos(2*x), sin(3*x)], x = -\%\ :code:`pi`\ ..\%\ :code:`pi`\ )
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506c6f74:
 
@@ -127,21 +212,39 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f(x), x = a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . \ :code:`f(x)`\  appears as the title.
+  \ :code:`jlPlot(f(x), x = a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . \ :code:`f(x)`\  appears as the title. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot(sin(x), x = -\%\ :code:`pi`\ ..\%\ :code:`pi`\ )
 
 
 .. index::
    pair: JLDrawFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f(x, y), x = a..b, y = c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlPlot(f(x, y), x = a..b, y = c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Example (Hyperbolic Paraboloid / Saddle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot(x^2 - y^2, x = -2.0..2.0, y = -2.0..2.0)
 
 
 .. index::
    pair: JLDrawFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`List <l4c697374>`\  Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot([f1, f2, ...], x = a..b)`\  draws multiple curves on the same plot.
+  \ :code:`jlPlot([f1, f2, ...], x = a..b)`\  draws multiple curves on the same plot. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot([sin(x), cos(x), sin(2*x)], x = -\%\ :code:`pi`\ ..\%\ :code:`pi`\ )
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506f6c617221:
 
@@ -149,7 +252,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlPolar!
 
 :spadfun:`jlPolar!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar!(r(theta), theta = a..b)`\  adds the polar curve on existing plot.
+  \ :code:`jlPolar!(r(theta), theta = a..b)`\  adds the polar curve on existing plot. Example (4-Petal Rose):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPolar!(sin(2*t), t = 0..2*\%\ :code:`pi`\ )
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c506f6c6172:
 
@@ -157,7 +266,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlPolar
 
 :spadfun:`jlPolar`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar(r(theta), theta = a..b)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta).
+  \ :code:`jlPolar(r(theta), theta = a..b)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta). Example (Cardioid):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPolar(1 + cos(t), t = 0..2*\%\ :code:`pi`\ )
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c5375726661636521:
 
@@ -165,7 +280,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(f(x, y), x = a..b, y = c..d)`\  adds the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlSurface!(f(x, y), x = a..b, y = c..d)`\  adds the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Example (Gaussian Bell Hill):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlSurface!(exp(-x^2 - y^2), x = -2.0..2.0, y = -2.0..2.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c53757266616365:
 
@@ -173,7 +294,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlSurface
 
 :spadfun:`jlSurface`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f(x, y), x = a..b, y = c..d)`\  draws the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlSurface(f(x, y), x = a..b, y = c..d)`\  draws the surface of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . \ :code:`f(x, y)`\  appears as the title. Example (Sombrero / Circular Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlSurface(exp(-(x^2 + y^2)/4)*cos(sqrt(x^2 + y^2)), x = -5.0..5.0, y = -5.0..5.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c566563746f724669656c64:
 
@@ -181,7 +308,14 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlVectorField
 
 :spadfun:`jlVectorField`\: (Ex, Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlVectorField(u(x, y), v(x, y), x = a..b, y = c..d)`\  draws the 2D vector field.
+  \ :code:`jlVectorField(u(x, y), v(x, y), x = a..b, y = c..d)`\  draws the 2D vector field. Example (Rotational Vortex and Hyperbolic Saddle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlVectorField(-y, x, x = -2.0..2.0, y = -2.0..2.0)
+        jlVectorField(x, -y, x = -2.0..2.0, y = -2.0..2.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c576972656672616d6521:
 
@@ -189,7 +323,13 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(f(x, y), x = a..b, y = c..d)`\  adds the wireframe of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlWireframe!(f(x, y), x = a..b, y = c..d)`\  adds the wireframe of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph window. \ :code:`f(x, y)`\  appears as the title. Example (Cone Wireframe):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlWireframe!(sqrt(x^2 + y^2), x = -3.0..3.0, y = -3.0..3.0)
 
 .. _l4a4c4472617746756e6374696f6e73-6a6c576972656672616d65:
 
@@ -197,6 +337,12 @@ JLDrawFunctions provides top level functions for drawing graphics of expressions
    pair: JLDrawFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: (Ex, \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`SegmentBinding <l5365676d656e7442696e64696e67>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f(x, y), x = a..b, y = c..d)`\  draws the wireframe of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ ; \ :code:`f(x, y)`\  appears as the title.
+  \ :code:`jlWireframe(f(x, y), x = a..b, y = c..d)`\  draws the wireframe of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ ; \ :code:`f(x, y)`\  appears as the title. Example (Monkey Saddle Wireframe):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlWireframe(x^3 - 3*x*y^2, x = -2.0..2.0, y = -2.0..2.0)
 
 

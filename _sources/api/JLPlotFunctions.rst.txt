@@ -17,7 +17,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlBar!
 
 :spadfun:`jlBar!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlBar!(x,y)`\  draws a bar plot of \ :code:`y`\  \ :code:`vs`\  \ :code:`x`\  on the existing graph object.
+  \ :code:`jlBar!(x,y)`\  draws a bar plot of \ :code:`y`\  \ :code:`vs`\  \ :code:`x`\  on the existing graph object. Example (Shifted Gaussian Distribution):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-3.0..3.0, 25);
+        vz := map(x +-> (t := x pretend DoubleFloat; coerce(0.5*exp(-(t-1.0)^2/2.0))@JF64), vx);
+        jlBar!(vx, vz)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c426172:
 
@@ -25,7 +33,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlBar
 
 :spadfun:`jlBar`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlBar(x,y)`\  draws a bar plot of \ :code:`y`\  \ :code:`vs`\  \ :code:`x`\ .
+  \ :code:`jlBar(x,y)`\  draws a bar plot of \ :code:`y`\  \ :code:`vs`\  \ :code:`x`\ . Example (Standard Normal Distribution):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-3.0..3.0, 25);
+        vy := map(x +-> (t := x pretend DoubleFloat; coerce(exp(-t^2/2.0))@JF64), vx);
+        jlBar(vx, vy)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c436c6f7365506c6f7473:
 
@@ -33,7 +49,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlClosePlots
 
 :spadfun:`jlClosePlots`\: (Void) 
-  \ :code:`jlClosePlots()`\  closes all plot windows.
+  \ :code:`jlClosePlots()`\  closes all plot windows. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlClosePlots()
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c436f6e746f757221:
 
@@ -41,35 +63,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContour!
 
 :spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f, a..b, c..d)`\  adds the contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlContour!(f, a..b, c..d)`\  adds the contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Example (Hyperbolic Paraboloid Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^2 - v^2;
+        jlContour!(g, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlContour!
 
 :spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f, a..b, c..d, n)`\  adds the contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContour!(f, a..b, c..d, n)`\  adds the contour plot using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Double-well Potential Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (u^2 - 1.0)^2 + v^2;
+        jlContour!(g, -2.0..2.0, -2.0..2.0, 50)
 
 
 .. index::
    pair: JLPlotFunctions; jlContour!
 
 :spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f, a..b, c..d, n, title)`\  adds the contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContour!(f, a..b, c..d, n, title)`\  adds the contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Interference Pattern Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(2.0*u) + cos(2.0*v);
+        jlContour!(g, -3.0..3.0, -3.0..3.0, 50, "Interference Pattern Contours (50x50)")
 
 
 .. index::
    pair: JLPlotFunctions; jlContour!
 
 :spadfun:`jlContour!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(f, a..b, c..d, title)`\  adds the contour plot with title.
+  \ :code:`jlContour!(f, a..b, c..d, title)`\  adds the contour plot with title. Example (Gaussian Peak Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-u^2 - v^2);
+        jlContour!(g, -2.0..2.0, -2.0..2.0, "Gaussian Peak Contours")
 
 
 .. index::
    pair: JLPlotFunctions; jlContour!
 
 :spadfun:`jlContour!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour!(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\  on the existing graph object.
+  \ :code:`jlContour!(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\  on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlContour!(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c436f6e746f7572:
 
@@ -77,35 +135,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContour
 
 :spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f, a..b, c..d)`\  draws the contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlContour(f, a..b, c..d)`\  draws the contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Example (Rosenbrock Banana Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - u)^2 + 10.0*(v - u^2)^2;
+        jlContour(f, -2.0..2.0, -1.0..3.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlContour
 
 :spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f, a..b, c..d, n)`\  draws the contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContour(f, a..b, c..d, n)`\  draws the contour plot using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Concentric Circular Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(u^2 + v^2);
+        jlContour(f, -3.0..3.0, -3.0..3.0, 50)
 
 
 .. index::
    pair: JLPlotFunctions; jlContour
 
 :spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f, a..b, c..d, n, title)`\  draws the contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContour(f, a..b, c..d, n, title)`\  draws the contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Orthogonal Hyperbolic Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u*v;
+        jlContour(f, -2.0..2.0, -2.0..2.0, 50, "Hyperbolic Contours (50x50)")
 
 
 .. index::
    pair: JLPlotFunctions; jlContour
 
 :spadfun:`jlContour`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(f, a..b, c..d, title)`\  draws the contour plot with title.
+  \ :code:`jlContour(f, a..b, c..d, title)`\  draws the contour plot with title. Example (Monkey Saddle Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 - 3.0*u*v^2;
+        jlContour(f, -2.0..2.0, -2.0..2.0, "Monkey Saddle Contours")
 
 
 .. index::
    pair: JLPlotFunctions; jlContour
 
 :spadfun:`jlContour`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContour(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\ .
+  \ :code:`jlContour(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlContour(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c436f6e746f75726621:
 
@@ -113,35 +207,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f, a..b, c..d)`\  adds the filled contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Fill area between contours.
+  \ :code:`jlContourf!(f, a..b, c..d)`\  adds the filled contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Fill area between contours. Example (Saddle Surface Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^2 - v^2;
+        jlContourf!(g, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f, a..b, c..d, n)`\  adds the filled contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContourf!(f, a..b, c..d, n)`\  adds the filled contour plot using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Monkey Saddle Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 - 3.0*u*v^2;
+        jlContourf!(g, -2.0..2.0, -2.0..2.0, 50)
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f, a..b, c..d, n, title)`\  adds the filled contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContourf!(f, a..b, c..d, n, title)`\  adds the filled contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Checkerboard Standing Wave):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(2.0*u)*sin(2.0*v);
+        jlContourf!(g, -3.0..3.0, -3.0..3.0, 50, "Checkerboard Standing Wave (50x50)")
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(f, a..b, c..d, title)`\  adds the filled contour plot with title.
+  \ :code:`jlContourf!(f, a..b, c..d, title)`\  adds the filled contour plot with title. Example (Dipole Peaks Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-(u-1.0)^2 - v^2) - exp(-(u+1.0)^2 - v^2);
+        jlContourf!(g, -3.0..3.0, -2.0..2.0, "Dipole Peaks Filled Contours")
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf!
 
 :spadfun:`jlContourf!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf!(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\  on the existing graph object. Fill area between contours.
+  \ :code:`jlContourf!(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\  on the existing graph object. Fill area between contours. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlContourf!(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c436f6e746f757266:
 
@@ -149,35 +279,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlContourf
 
 :spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f, a..b, c..d)`\  draws the filled contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Fill area between contours.
+  \ :code:`jlContourf(f, a..b, c..d)`\  draws the filled contour plot of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Fill area between contours. Example (2D Mexican Hat Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - (u^2 + v^2)/2.0)*exp(-(u^2 + v^2)/2.0);
+        jlContourf(f, -3.0..3.0, -3.0..3.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf
 
 :spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f, a..b, c..d, n)`\  draws the filled contour plot using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContourf(f, a..b, c..d, n)`\  draws the filled contour plot using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Rosenbrock Valley Filled Contours):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - u)^2 + 10.0*(v - u^2)^2;
+        jlContourf(f, -2.0..2.0, -1.0..3.0, 50)
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf
 
 :spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f, a..b, c..d, n, title)`\  draws the filled contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlContourf(f, a..b, c..d, n, title)`\  draws the filled contour plot with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Wave Interference):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(u) + cos(v);
+        jlContourf(f, -4.0..4.0, -4.0..4.0, 50, "Wave Interference (50x50)")
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf
 
 :spadfun:`jlContourf`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(f, a..b, c..d, title)`\  draws the filled contour plot with title.
+  \ :code:`jlContourf(f, a..b, c..d, title)`\  draws the filled contour plot with title. Example (Concentric Circular Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(u^2 + v^2);
+        jlContourf(f, -3.0..3.0, -3.0..3.0, "Concentric Waves")
 
 
 .. index::
    pair: JLPlotFunctions; jlContourf
 
 :spadfun:`jlContourf`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlContourf(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\ . Fill area between contours.
+  \ :code:`jlContourf(x,y,mat)`\  draws the contour plot of surface \ :code:`mat`\ . Fill area between contours. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlContourf(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c43757276657321:
 
@@ -185,7 +351,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlCurves!
 
 :spadfun:`jlCurves!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlCurves!(x,y)`\  draws a Bezier plot curve from (\ :code:`x`\ .1,\ :code:`y`\ .1) to (\ :code:`x`\ .end,\ :code:`y`\ .end) with control points (\ :code:`x`\ .2,\ :code:`y`\ .2),..., (\ :code:`x`\ .end-1,\ :code:`y`\ .end-1) and draws it on the existing graph object.
+  \ :code:`jlCurves!(x,y)`\  draws a Bezier plot curve from (\ :code:`x`\ .1,\ :code:`y`\ .1) to (\ :code:`x`\ .end,\ :code:`y`\ .end) with control points (\ :code:`x`\ .2,\ :code:`y`\ .2),..., (\ :code:`x`\ .end-1,\ :code:`y`\ .end-1) and draws it on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vz := map(x +-> coerce(cos(x pretend DoubleFloat))@JF64, vx);
+        jlCurves!(vx, vz)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c437572766573:
 
@@ -193,7 +367,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlCurves
 
 :spadfun:`jlCurves`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlCurves(x,y)`\  draws a Bezier plot curve from (\ :code:`x`\ .1,\ :code:`y`\ .1) to (\ :code:`x`\ .end,\ :code:`y`\ .end) with control points (\ :code:`x`\ .2,\ :code:`y`\ .2),..., (\ :code:`x`\ .end-1,\ :code:`y`\ .end-1) and draws it.
+  \ :code:`jlCurves(x,y)`\  draws a Bezier plot curve from (\ :code:`x`\ .1,\ :code:`y`\ .1) to (\ :code:`x`\ .end,\ :code:`y`\ .end) with control points (\ :code:`x`\ .2,\ :code:`y`\ .2),..., (\ :code:`x`\ .end-1,\ :code:`y`\ .end-1) and draws it. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vy := map(x +-> coerce(sin(x pretend DoubleFloat))@JF64, vx);
+        jlCurves(vx, vy)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c44656e7369747921:
 
@@ -201,7 +383,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlDensity!
 
 :spadfun:`jlDensity!`\: \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlDensity!(x)`\  draws a line plot of a kernel density estimate of \ :code:`x`\  on the existing graph object.
+  \ :code:`jlDensity!(x)`\  draws a line plot of a kernel density estimate of \ :code:`x`\  on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vz := map(x +-> coerce(cos(x pretend DoubleFloat))@JF64, vx);
+        jlDensity!(vz)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c44656e73697479:
 
@@ -209,7 +399,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlDensity
 
 :spadfun:`jlDensity`\: \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlDensity(x)`\  draws a line plot of a kernel density estimate of \ :code:`x`\ .
+  \ :code:`jlDensity(x)`\  draws a line plot of a kernel density estimate of \ :code:`x`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vy := map(x +-> coerce(sin(x pretend DoubleFloat))@JF64, vx);
+        jlDensity(vy)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c486561746d617021:
 
@@ -217,35 +415,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlHeatmap!
 
 :spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap!(f, a..b, c..d)`\  adds a 2D heatmap on the existing plot.
+  \ :code:`jlHeatmap!(f, a..b, c..d)`\  adds a 2D heatmap on the existing plot. Example (Saddle Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^2 - v^2;
+        jlHeatmap!(g, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap!
 
 :spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap!(f, a..b, c..d, n)`\  adds a 2D heatmap using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlHeatmap!(f, a..b, c..d, n)`\  adds a 2D heatmap using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Monkey Saddle Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 - 3.0*u*v^2;
+        jlHeatmap!(g, -2.0..2.0, -2.0..2.0, 60)
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap!
 
 :spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap!(f, a..b, c..d, n, title)`\  adds a 2D heatmap with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlHeatmap!(f, a..b, c..d, n, title)`\  adds a 2D heatmap with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Interference Pattern Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(2.0*u)*cos(2.0*v);
+        jlHeatmap!(g, -3.0..3.0, -3.0..3.0, 60, "Interference Pattern Heatmap (60x60)")
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap!
 
 :spadfun:`jlHeatmap!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap!(f, a..b, c..d, title)`\  adds a 2D heatmap with title.
+  \ :code:`jlHeatmap!(f, a..b, c..d, title)`\  adds a 2D heatmap with title. Example (Mexican Hat Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - (u^2 + v^2)/2.0)*exp(-(u^2 + v^2)/2.0);
+        jlHeatmap!(g, -3.0..3.0, -3.0..3.0, "Mexican Hat Heatmap")
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap!
 
 :spadfun:`jlHeatmap!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap!(x, y, mat)`\  adds a heatmap of surface mat on existing graphic.
+  \ :code:`jlHeatmap!(x, y, mat)`\  adds a heatmap of surface mat on existing graphic. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlHeatmap!(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c486561746d6170:
 
@@ -253,35 +487,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlHeatmap
 
 :spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap(f, a..b, c..d)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ).
+  \ :code:`jlHeatmap(f, a..b, c..d)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ). Example (Dipole Twin Peaks Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-(u-1.0)^2 - v^2) - exp(-(u+1.0)^2 - v^2);
+        jlHeatmap(f, -3.0..3.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap
 
 :spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap(f, a..b, c..d, n)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlHeatmap(f, a..b, c..d, n)`\  draws a 2D heatmap of \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Concentric Waves Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(u^2 + v^2);
+        jlHeatmap(f, -3.0..3.0, -3.0..3.0, 60)
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap
 
 :spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap(f, a..b, c..d, n, title)`\  draws a 2D heatmap with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlHeatmap(f, a..b, c..d, n, title)`\  draws a 2D heatmap with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Sombrero Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-(u^2 + v^2)/4.0)*cos(sqrt(u^2 + v^2));
+        jlHeatmap(f, -5.0..5.0, -5.0..5.0, 60, "Sombrero Heatmap (60x60)")
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap
 
 :spadfun:`jlHeatmap`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap(f, a..b, c..d, title)`\  draws a 2D heatmap with title.
+  \ :code:`jlHeatmap(f, a..b, c..d, title)`\  draws a 2D heatmap with title. Example (Rosenbrock Valley Heatmap):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - u)^2 + 10.0*(v - u^2)^2;
+        jlHeatmap(f, -2.0..2.0, -1.0..3.0, "Rosenbrock Valley Heatmap")
 
 
 .. index::
    pair: JLPlotFunctions; jlHeatmap
 
 :spadfun:`jlHeatmap`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlHeatmap(x, y, mat)`\  draws a heatmap of surface mat.
+  \ :code:`jlHeatmap(x, y, mat)`\  draws a heatmap of surface mat. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlHeatmap(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c496d706c69636974506c6f74:
 
@@ -289,28 +559,56 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlImplicitPlot
 
 :spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlImplicitPlot(f, a..b, c..d)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0.
+  \ :code:`jlImplicitPlot(f, a..b, c..d)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0. Example (Folium of Descartes):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 + v^3 - 3.0*u*v;
+        jlImplicitPlot(f, -3.0..3.0, -3.0..3.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlImplicitPlot
 
 :spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlImplicitPlot(f, a..b, c..d, n)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0 using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlImplicitPlot(f, a..b, c..d, n)`\  draws the 2D implicit curve \ :code:`f`\ (\ :code:`x`\ , \ :code:`y`\ ) = 0 using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Lemniscate of Bernoulli):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (u^2 + v^2)^2 - 2.0*(u^2 - v^2);
+        jlImplicitPlot(f, -2.0..2.0, -2.0..2.0, 70)
 
 
 .. index::
    pair: JLPlotFunctions; jlImplicitPlot
 
 :spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlImplicitPlot(f, a..b, c..d, n, title)`\  draws the 2D implicit curve with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlImplicitPlot(f, a..b, c..d, n, title)`\  draws the 2D implicit curve with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Heart Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (u^2 + v^2 - 1.0)^3 - u^2 * v^3;
+        jlImplicitPlot(f, -1.5..1.5, -1.5..1.5, 80, "Heart Curve (80x80)")
 
 
 .. index::
    pair: JLPlotFunctions; jlImplicitPlot
 
 :spadfun:`jlImplicitPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlImplicitPlot(f, a..b, c..d, title)`\  draws the 2D implicit curve with title.
+  \ :code:`jlImplicitPlot(f, a..b, c..d, title)`\  draws the 2D implicit curve with title. Example (Cassini Oval):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (u^2 + v^2)^2 - 2.0*(u^2 - v^2) - 0.5;
+        jlImplicitPlot(f, -2.0..2.0, -2.0..2.0, "Cassini Oval")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506172616d6574726963506c6f7421:
 
@@ -318,56 +616,124 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, fz, a..b)`\  adds the 3D space curve on existing plot.
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b)`\  adds the 3D space curve on existing plot. Example (Conical Helix):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> t*cos(2.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> t*sin(2.0*t);
+        h := (t : DoubleFloat) : DoubleFloat +-> t;
+        jlParametricPlot!(f, g, h, 0.0..12.57)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, n)`\  adds the 3D space curve using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, n)`\  adds the 3D space curve using \ :code:`n`\  points. Example (Twisted Cubic Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> t;
+        g := (t : DoubleFloat) : DoubleFloat +-> t^2;
+        h := (t : DoubleFloat) : DoubleFloat +-> t^3;
+        jlParametricPlot!(f, g, h, -1.5..1.5, 100)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, n, title)`\  adds the 3D space curve with title using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, n, title)`\  adds the 3D space curve with title using \ :code:`n`\  points. Example (3D Lissajous Knot):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> cos(2.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(3.0*t);
+        h := (t : DoubleFloat) : DoubleFloat +-> cos(5.0*t);
+        jlParametricPlot!(f, g, h, 0.0..6.283, 250, "3D Lissajous Knot (250 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, title)`\  adds the 3D space curve with title.
+  \ :code:`jlParametricPlot!(fx, fy, fz, a..b, title)`\  adds the 3D space curve with title. Example (Baseball Seam Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> sin(t) + 0.4*sin(3.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> cos(t) - 0.4*cos(3.0*t);
+        h := (t : DoubleFloat) : DoubleFloat +-> 0.8*sin(2.0*t);
+        jlParametricPlot!(f, g, h, 0.0..6.283, "Baseball Seam Curve")
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, a..b)`\  adds the 2D parametric curve on existing plot.
+  \ :code:`jlParametricPlot!(fx, fy, a..b)`\  adds the 2D parametric curve on existing plot. Example (Unit Circle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> cos(t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(t);
+        jlParametricPlot!(f, g, 0.0..6.283)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, a..b, n)`\  adds the 2D parametric curve using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot!(fx, fy, a..b, n)`\  adds the 2D parametric curve using \ :code:`n`\  points. Example (Lemniscate of Gerono):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> sin(t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(t)*cos(t);
+        jlParametricPlot!(f, g, 0.0..6.283, 150)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, a..b, n, title)`\  adds the 2D parametric curve with title using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot!(fx, fy, a..b, n, title)`\  adds the 2D parametric curve with title using \ :code:`n`\  points. Example (Lissajous 5:6 Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> sin(5.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(6.0*t);
+        jlParametricPlot!(f, g, 0.0..6.283, 300, "Lissajous 5:6 (300 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot!
 
 :spadfun:`jlParametricPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot!(fx, fy, a..b, title)`\  adds the 2D parametric curve with title.
+  \ :code:`jlParametricPlot!(fx, fy, a..b, title)`\  adds the 2D parametric curve with title. Example (Logarithmic Spiral):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> exp(t/10.0)*cos(t);
+        g := (t : DoubleFloat) : DoubleFloat +-> exp(t/10.0)*sin(t);
+        jlParametricPlot!(f, g, 0.0..18.85, "Logarithmic Spiral")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506172616d6574726963506c6f74:
 
@@ -375,56 +741,124 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, fz, a..b)`\  draws the 3D space curve (\ :code:`fx`\ (\ :code:`t`\ ), \ :code:`fy`\ (\ :code:`t`\ ), \ :code:`fz`\ (\ :code:`t`\ )).
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b)`\  draws the 3D space curve (\ :code:`fx`\ (\ :code:`t`\ ), \ :code:`fy`\ (\ :code:`t`\ ), \ :code:`fz`\ (\ :code:`t`\ )). Example (Circular Helix):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> cos(t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(t);
+        h := (t : DoubleFloat) : DoubleFloat +-> t / 5.0;
+        jlParametricPlot(f, g, h, 0.0..18.85)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, fz, a..b, n)`\  draws the 3D space curve using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b, n)`\  draws the 3D space curve using \ :code:`n`\  points. Example (Trefoil Knot):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> sin(t) + 2.0*sin(2.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> cos(t) - 2.0*cos(2.0*t);
+        h := (t : DoubleFloat) : DoubleFloat +-> -sin(3.0*t);
+        jlParametricPlot(f, g, h, 0.0..6.283, 200)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, fz, a..b, n, title)`\  draws the 3D space curve with title using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b, n, title)`\  draws the 3D space curve with title using \ :code:`n`\  points. Example (Toroidal Spiral Knot):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> (2.0 + cos(10.0*t))*cos(t);
+        g := (t : DoubleFloat) : DoubleFloat +-> (2.0 + cos(10.0*t))*sin(t);
+        h := (t : DoubleFloat) : DoubleFloat +-> sin(10.0*t);
+        jlParametricPlot(f, g, h, 0.0..6.283, 300, "Toroidal Spiral Knot (300 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, fz, a..b, title)`\  draws the 3D space curve with title.
+  \ :code:`jlParametricPlot(fx, fy, fz, a..b, title)`\  draws the 3D space curve with title. Example (Viviani's Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> 1.0 + cos(t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(t);
+        h := (t : DoubleFloat) : DoubleFloat +-> 2.0*sin(t/2.0);
+        jlParametricPlot(f, g, h, -6.283..6.283, "Viviani's Curve")
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, a..b)`\  draws the 2D parametric curve (\ :code:`fx`\ (\ :code:`t`\ ), \ :code:`fy`\ (\ :code:`t`\ )).
+  \ :code:`jlParametricPlot(fx, fy, a..b)`\  draws the 2D parametric curve (\ :code:`fx`\ (\ :code:`t`\ ), \ :code:`fy`\ (\ :code:`t`\ )). Example (Astroid Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> cos(t)^3;
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(t)^3;
+        jlParametricPlot(f, g, 0.0..6.283)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, a..b, n)`\  draws the 2D parametric curve using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot(fx, fy, a..b, n)`\  draws the 2D parametric curve using \ :code:`n`\  points. Example (Lissajous 3:4 Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> sin(3.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(4.0*t);
+        jlParametricPlot(f, g, 0.0..6.283, 200)
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, a..b, n, title)`\  draws the 2D parametric curve with title using \ :code:`n`\  points.
+  \ :code:`jlParametricPlot(fx, fy, a..b, n, title)`\  draws the 2D parametric curve with title using \ :code:`n`\  points. Example (Trefoil Knot Projection):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> sin(t) + 2.0*sin(2.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> cos(t) - 2.0*cos(2.0*t);
+        jlParametricPlot(f, g, 0.0..6.283, 200, "Trefoil Projection (200 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlParametricPlot
 
 :spadfun:`jlParametricPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlParametricPlot(fx, fy, a..b, title)`\  draws the 2D parametric curve with title.
+  \ :code:`jlParametricPlot(fx, fy, a..b, title)`\  draws the 2D parametric curve with title. Example (Deltoid Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> 2.0*cos(t) + cos(2.0*t);
+        g := (t : DoubleFloat) : DoubleFloat +-> 2.0*sin(t) - sin(2.0*t);
+        jlParametricPlot(f, g, 0.0..6.283, "Deltoid Curve")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f7421:
 
@@ -432,70 +866,143 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, c..d)`\  adds the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlPlot!(f, a..b, c..d)`\  adds the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Example (Inverted Gaussian Potential):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> -exp(-(u^2 + v^2)/2.0);
+        jlPlot!(g, -3.0..3.0, -3.0..3.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, c..d, n)`\  adds the graph of \ :code:`z = f(x, y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlPlot!(f, a..b, c..d, n)`\  adds the graph of \ :code:`z = f(x, y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Elliptic Paraboloid Bowl):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (u^2 + v^2)/4.0;
+        jlPlot!(g, -2.0..2.0, -2.0..2.0, 40)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, c..d, n, title)`\  adds the graph of \ :code:`z = f(x, y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlPlot!(f, a..b, c..d, n, title)`\  adds the graph of \ :code:`z = f(x, y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Chladni Standing Wave):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(u)*sin(v);
+        jlPlot!(g, -4.0..4.0, -4.0..4.0, 40, "Chladni Standing Wave (40x40)")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, c..d, title)`\  adds the graph of \ :code:`z = f(x, y)`\  with title.
+  \ :code:`jlPlot!(f, a..b, c..d, title)`\  adds the graph of \ :code:`z = f(x, y)`\  with title. Example (Egg Carton Surface):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(u) + cos(v);
+        jlPlot!(g, -5.0..5.0, -5.0..5.0, "Egg Carton Surface")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b)`\  adds the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  to the existing graph object.
+  \ :code:`jlPlot!(f, a..b)`\  adds the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  to the existing graph object. Example (Damped Sine Wave):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> exp(-t/5.0)*sin(2.0*t);
+        jlPlot!(g, 0.0..20.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, n)`\  adds the graph of \ :code:`y = f(x)`\  using \ :code:`n`\  points.
+  \ :code:`jlPlot!(f, a..b, n)`\  adds the graph of \ :code:`y = f(x)`\  using \ :code:`n`\  points. Example (Exponential Decay Envelope):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> exp(-t/5.0);
+        jlPlot!(g, 0.0..20.0, 100)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, n, title)`\  adds the graph of \ :code:`y = f(x)`\  with title using \ :code:`n`\  points.
+  \ :code:`jlPlot!(f, a..b, n, title)`\  adds the graph of \ :code:`y = f(x)`\  with title using \ :code:`n`\  points. Example (Modulated Sinc):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(3.0*t)/(1.0 + t^2);
+        jlPlot!(g, -6.0..6.0, 150, "Modulated Sinc (150 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(f, a..b, title)`\  adds the graph of \ :code:`y = f(x)`\  with title.
+  \ :code:`jlPlot!(f, a..b, title)`\  adds the graph of \ :code:`y = f(x)`\  with title. Example (Gaussian Bell Curve):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> exp(-t^2/2.0);
+        jlPlot!(g, -4.0..4.0, "Gaussian Bell Curve")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(x,y)`\  draws a plot using elements of \ :code:`x`\  and \ :code:`y`\  on the existing graph object.
+  \ :code:`jlPlot!(x,y)`\  draws a plot using elements of \ :code:`x`\  and \ :code:`y`\  on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vz := map(x +-> coerce(cos(x pretend DoubleFloat))@JF64, vx);
+        jlPlot!(vx, vz)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot!
 
 :spadfun:`jlPlot!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot!(x,y,z)`\  draws a plot using elements of \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\  on the existing graph object.
+  \ :code:`jlPlot!(x,y,z)`\  draws a plot using elements of \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\  on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vy := map(x +-> coerce(sin(x pretend DoubleFloat))@JF64, vx);
+        vz := map(x +-> coerce(cos(x pretend DoubleFloat))@JF64, vx);
+        jlPlot!(vx, vz, vy)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f743364506f696e7473:
 
@@ -503,7 +1010,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlot3dPoints
 
 :spadfun:`jlPlot3dPoints`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ :code:`jlPlot3dPoints()`\  returns the default number of grid points per axis used for 3D surface, wireframe and contour plots.
+  \ :code:`jlPlot3dPoints()`\  returns the default number of grid points per axis used for 3D surface, wireframe and contour plots. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlot3dPoints()
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74:
 
@@ -511,76 +1024,143 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlPlot(f, a..b, c..d)`\  draws the graph of \ :code:`z = f(x, y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Example (Hyperbolic Paraboloid / Saddle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^2 - v^2;
+        jlPlot(f, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, c..d, n)`\  draws the graph of \ :code:`z = f(x, y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlPlot(f, a..b, c..d, n)`\  draws the graph of \ :code:`z = f(x, y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Monkey Saddle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 - 3.0*u*v^2;
+        jlPlot(f, -2.0..2.0, -2.0..2.0, 40)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, c..d, n, title)`\  draws the graph of \ :code:`z = f(x, y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlPlot(f, a..b, c..d, n, title)`\  draws the graph of \ :code:`z = f(x, y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Concentric Circular Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(u^2 + v^2);
+        jlPlot(f, -3.0..3.0, -3.0..3.0, 40, "Concentric Circular Waves (40x40)")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, c..d, title)`\  draws the graph of \ :code:`z = f(x, y)`\  with title.
+  \ :code:`jlPlot(f, a..b, c..d, title)`\  draws the graph of \ :code:`z = f(x, y)`\  with title. Example (Bivariate Gaussian Bell):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-(u^2 + v^2)/2.0);
+        jlPlot(f, -3.0..3.0, -3.0..3.0, "Bivariate Gaussian Bell")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . For example:
+  \ :code:`jlPlot(f, a..b)`\  draws the graph of \ :code:`y = f(x)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\ . Example (Witch of Agnesi):
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        jlPlot(x+->sinc(x),-15..15)
+        f := (t : DoubleFloat) : DoubleFloat +-> 8.0/(t^2 + 4.0);
+        jlPlot(f, -5.0..5.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, n)`\  draws the graph of \ :code:`y = f(x)`\  using \ :code:`n`\  points.
+  \ :code:`jlPlot(f, a..b, n)`\  draws the graph of \ :code:`y = f(x)`\  using \ :code:`n`\  points. Example (Runge's Function):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> 1.0/(1.0 + 25.0*t^2);
+        jlPlot(f, -1.0..1.0, 100)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, n, title)`\  draws the graph of \ :code:`y = f(x)`\  with title using \ :code:`n`\  points.
+  \ :code:`jlPlot(f, a..b, n, title)`\  draws the graph of \ :code:`y = f(x)`\  with title using \ :code:`n`\  points. Example (Damped Harmonic Oscillator):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> exp(-t/5.0)*cos(2.0*t);
+        jlPlot(f, 0.0..20.0, 200, "Damped Oscillator (200 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(f, a..b, title)`\  draws the graph of \ :code:`y = f(x)`\  with title.
+  \ :code:`jlPlot(f, a..b, title)`\  draws the graph of \ :code:`y = f(x)`\  with title. Example (Mexican Hat Wavelet):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> (1.0 - t^2)*exp(-t^2/2.0);
+        jlPlot(f, -4.0..4.0, "Mexican Hat Wavelet")
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(x,y)`\  draws a plot using elements of \ :code:`x`\  and \ :code:`y`\ .
+  \ :code:`jlPlot(x,y)`\  draws a plot using elements of \ :code:`x`\  and \ :code:`y`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vy := map(x +-> coerce(sin(x pretend DoubleFloat))@JF64, vx);
+        jlPlot(vx, vy)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlot
 
 :spadfun:`jlPlot`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlot(x,y,z)`\  draws a plot using elements of \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ .
+  \ :code:`jlPlot(x,y,z)`\  draws a plot using elements of \ :code:`x`\ , \ :code:`y`\  and \ :code:`z`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        vx := jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100);
+        vy := map(x +-> coerce(sin(x pretend DoubleFloat))@JF64, vx);
+        vz := map(x +-> coerce(cos(x pretend DoubleFloat))@JF64, vx);
+        jlPlot(vx, vy, vz)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74436f6c6f724d617021:
 
@@ -588,7 +1168,14 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotColorMap!
 
 :spadfun:`jlPlotColorMap!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotColorMap!(palette)`\  sets the color \ :code:`palette`\  / colormap (e.g. "viridis", "plasma", "inferno", "turbo", "coolwarm", "cividis").
+  \ :code:`jlPlotColorMap!(palette)`\  sets the color \ :code:`palette`\  / colormap (e.g. "viridis", "plasma", "inferno", "turbo", "coolwarm", "cividis"). Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotColorMap!("plasma")
+        jlPlotColorMap!("viridis")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f7444706921:
 
@@ -596,7 +1183,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotDpi!
 
 :spadfun:`jlPlotDpi!`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotDpi!(dpi)`\  sets the figure rendering resolution in DPI (dots per inch).
+  \ :code:`jlPlotDpi!(dpi)`\  sets the figure rendering resolution in DPI (dots per inch). Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotDpi!(150)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f744772696421:
 
@@ -604,7 +1197,14 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotGrid!
 
 :spadfun:`jlPlotGrid!`\: \ :ref:`Boolean <l426f6f6c65616e>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotGrid!(flag)`\  enables or disables grid lines on the plot.
+  \ :code:`jlPlotGrid!(flag)`\  enables or disables grid lines on the plot. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotGrid!(false)
+        jlPlotGrid!(true)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f744c6567656e6421:
 
@@ -612,7 +1212,15 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotLegend!
 
 :spadfun:`jlPlotLegend!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotLegend!(pos)`\  sets the legend position ("topleft", "topright", "bottomleft", "bottomright", "outertopright", "none", "false").
+  \ :code:`jlPlotLegend!(pos)`\  sets the legend position ("topleft", "topright", "bottomleft", "bottomright", "outertopright", "none", "false"). Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotLegend!("bottomright")
+        jlPlotLegend!("topleft")
+        jlPlotLegend!("none")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74506f696e7473:
 
@@ -620,7 +1228,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotPoints
 
 :spadfun:`jlPlotPoints`\: () -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ :code:`jlPlotPoints()`\  returns the default number of points used for 1D and 2D curves.
+  \ :code:`jlPlotPoints()`\  returns the default number of points used for 1D and 2D curves. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotPoints()
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f7453697a6521:
 
@@ -628,7 +1242,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotSize!
 
 :spadfun:`jlPlotSize!`\: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotSize!(w, h)`\  sets the plot window dimensions in pixels (width, height).
+  \ :code:`jlPlotSize!(w, h)`\  sets the plot window dimensions in pixels (width, height). Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotSize!(800, 600)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c6521:
 
@@ -636,12 +1256,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotTitle!
 
 :spadfun:`jlPlotTitle!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotTitle!(title)`\  draws \ :code:`title`\  as plot \ :code:`title`\  in the current plot. For example:
+  \ :code:`jlPlotTitle!(title)`\  draws \ :code:`title`\  as plot \ :code:`title`\  in the current plot. Example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
+        jlPlotTitle!("Exhaustive jlFriCAS Plotting Verification")
         jlPlotTitle! "sin(x)"
 
   if you have the LaTeXStrings Julia package
@@ -674,7 +1295,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotXlabel!
 
 :spadfun:`jlPlotXlabel!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotXlabel!(str)`\  sets \ :code:`x`\  label. See \ :ref:`jlPlotTitle <l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c65>`\  for more informations on the different supported formats.
+  \ :code:`jlPlotXlabel!(str)`\  sets \ :code:`x`\  label. See \ :ref:`jlPlotTitle <l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c65>`\  for more informations on the different supported formats. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotXlabel!("X Axis")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74586c696d7321:
 
@@ -682,28 +1309,52 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotXlims!
 
 :spadfun:`jlPlotXlims!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits.
+  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotXlims!(-4.0, 4.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotXlims!
 
 :spadfun:`jlPlotXlims!`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits.
+  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotXlims!(-4.0::Float, 4.0::Float)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotXlims!
 
 :spadfun:`jlPlotXlims!`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits.
+  \ :code:`jlPlotXlims!(x1,x2)`\  sets \ :code:`x`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotXlims!(-4.0@JF64, 4.0@JF64)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotXlims!
 
 :spadfun:`jlPlotXlims!`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotXlims!(range)`\  sets \ :code:`x`\  plot limits.
+  \ :code:`jlPlotXlims!(range)`\  sets \ :code:`x`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotXlims!(-4.0..4.0)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74587363616c6521:
 
@@ -711,7 +1362,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotXscale!
 
 :spadfun:`jlPlotXscale!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotXscale!(scale)`\  sets the \ :code:`x`\ -axis \ :code:`scale`\  ("identity", "log10", "log2", "ln").
+  \ :code:`jlPlotXscale!(scale)`\  sets the \ :code:`x`\ -axis \ :code:`scale`\  ("identity", "log10", "log2", "ln"). Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotXscale!("identity")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74596c6162656c21:
 
@@ -719,7 +1376,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotYlabel!
 
 :spadfun:`jlPlotYlabel!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotYlabel!(str)`\  sets \ :code:`y`\  label. See \ :ref:`jlPlotTitle <l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c65>`\  for more informations on the different supported formats.
+  \ :code:`jlPlotYlabel!(str)`\  sets \ :code:`y`\  label. See \ :ref:`jlPlotTitle <l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c65>`\  for more informations on the different supported formats. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotYlabel!("Y Axis")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74596c696d7321:
 
@@ -727,28 +1390,52 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotYlims!
 
 :spadfun:`jlPlotYlims!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits.
+  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotYlims!(-4.0, 4.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotYlims!
 
 :spadfun:`jlPlotYlims!`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits.
+  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotYlims!(-4.0::Float, 4.0::Float)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotYlims!
 
 :spadfun:`jlPlotYlims!`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits.
+  \ :code:`jlPlotYlims!(y1,y2)`\  sets \ :code:`y`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotYlims!(-4.0@JF64, 4.0@JF64)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotYlims!
 
 :spadfun:`jlPlotYlims!`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotYlims!(range)`\  sets \ :code:`y`\  plot limits.
+  \ :code:`jlPlotYlims!(range)`\  sets \ :code:`y`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotYlims!(-4.0..4.0)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f74597363616c6521:
 
@@ -756,7 +1443,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotYscale!
 
 :spadfun:`jlPlotYscale!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotYscale!(scale)`\  sets the \ :code:`y`\ -axis \ :code:`scale`\  ("identity", "log10", "log2", "ln").
+  \ :code:`jlPlotYscale!(scale)`\  sets the \ :code:`y`\ -axis \ :code:`scale`\  ("identity", "log10", "log2", "ln"). Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotYscale!("identity")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745a6c6162656c21:
 
@@ -764,7 +1457,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotZlabel!
 
 :spadfun:`jlPlotZlabel!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotZlabel!(str)`\  sets \ :code:`z`\  label. See \ :ref:`jlPlotTitle <l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c65>`\  for more informations on the different supported formats.
+  \ :code:`jlPlotZlabel!(str)`\  sets \ :code:`z`\  label. See \ :ref:`jlPlotTitle <l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745469746c65>`\  for more informations on the different supported formats. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotZlabel!("Z Axis")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506c6f745a6c696d7321:
 
@@ -772,28 +1471,52 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPlotZlims!
 
 :spadfun:`jlPlotZlims!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits.
+  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotZlims!(-2.0, 2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotZlims!
 
 :spadfun:`jlPlotZlims!`\: (\ :ref:`Float <l466c6f6174>`\ , \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits.
+  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotZlims!(-2.0::Float, 2.0::Float)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotZlims!
 
 :spadfun:`jlPlotZlims!`\: (\ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ , \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits.
+  \ :code:`jlPlotZlims!(z1,z2)`\  sets \ :code:`z`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotZlims!(-2.0@JF64, 2.0@JF64)
 
 
 .. index::
    pair: JLPlotFunctions; jlPlotZlims!
 
 :spadfun:`jlPlotZlims!`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPlotZlims!(range)`\  sets \ :code:`z`\  plot limits.
+  \ :code:`jlPlotZlims!(range)`\  sets \ :code:`z`\  plot limits. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlPlotZlims!(-2.0..2.0)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506f6c617221:
 
@@ -801,28 +1524,56 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPolar!
 
 :spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar!(f, a..b)`\  adds the polar curve on existing plot.
+  \ :code:`jlPolar!(f, a..b)`\  adds the polar curve on existing plot. Example (Dimpled Limaçon):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> 2.0 + cos(t);
+        jlPolar!(g, 0.0..6.283)
 
 
 .. index::
    pair: JLPlotFunctions; jlPolar!
 
 :spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar!(f, a..b, n)`\  adds the polar curve using \ :code:`n`\  points.
+  \ :code:`jlPolar!(f, a..b, n)`\  adds the polar curve using \ :code:`n`\  points. Example (Archimedean Spiral):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> t / 2.0;
+        jlPolar!(g, 0.0..18.85, 200)
 
 
 .. index::
    pair: JLPlotFunctions; jlPolar!
 
 :spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar!(f, a..b, n, title)`\  adds the polar curve with title using \ :code:`n`\  points.
+  \ :code:`jlPolar!(f, a..b, n, title)`\  adds the polar curve with title using \ :code:`n`\  points. Example (Logarithmic Spiral):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> exp(t / 8.0);
+        jlPolar!(g, 0.0..18.85, 250, "Logarithmic Spiral (250 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlPolar!
 
 :spadfun:`jlPolar!`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar!(f, a..b, title)`\  adds the polar curve with title.
+  \ :code:`jlPolar!(f, a..b, title)`\  adds the polar curve with title. Example (3-Petal Rose / Trifolium):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (t : DoubleFloat) : DoubleFloat +-> sin(3.0*t);
+        jlPolar!(g, 0.0..3.142, "3-Petal Rose")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c506f6c6172:
 
@@ -830,28 +1581,56 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlPolar
 
 :spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar(f, a..b)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta).
+  \ :code:`jlPolar(f, a..b)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta). Example (Cardioid):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> 1.0 + cos(t);
+        jlPolar(f, 0.0..6.283)
 
 
 .. index::
    pair: JLPlotFunctions; jlPolar
 
 :spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar(f, a..b, n)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta) using \ :code:`n`\  points.
+  \ :code:`jlPolar(f, a..b, n)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta) using \ :code:`n`\  points. Example (4-Petal Rose / Rhodonea):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> cos(2.0*t);
+        jlPolar(f, 0.0..6.283, 160)
 
 
 .. index::
    pair: JLPlotFunctions; jlPolar
 
 :spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar(f, a..b, n, title)`\  draws the polar curve with title using \ :code:`n`\  points.
+  \ :code:`jlPolar(f, a..b, n, title)`\  draws the polar curve with title using \ :code:`n`\  points. Example (8-Petal Rose):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> cos(4.0*t);
+        jlPolar(f, 0.0..6.283, 200, "8-Petal Rose (200 pts)")
 
 
 .. index::
    pair: JLPlotFunctions; jlPolar
 
 :spadfun:`jlPolar`\: (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlPolar(f, a..b, title)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta) with title.
+  \ :code:`jlPolar(f, a..b, title)`\  draws the polar curve \ :code:`r`\  = \ :code:`f`\ (theta) with title. Example (Limaçon with Inner Loop):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (t : DoubleFloat) : DoubleFloat +-> 1.0 + 2.0*cos(t);
+        jlPolar(f, 0.0..6.283, "Limaçon with Inner Loop")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c52616e6765:
 
@@ -859,14 +1638,26 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlRange
 
 :spadfun:`jlRange`\: (\ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\  
-  \ :code:`jlRange(range, n)`\  is a utility function that returns a JLFloat64Vector with \ :code:`n`\  points from \ :code:`low(range)`\  to \ :code:`high(range)`\ .
+  \ :code:`jlRange(range, n)`\  is a utility function that returns a JLFloat64Vector with \ :code:`n`\  points from \ :code:`low(range)`\  to \ :code:`high(range)`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ , 100)
 
 
 .. index::
    pair: JLPlotFunctions; jlRange
 
 :spadfun:`jlRange`\: \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\  -> \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\  
-  \ :code:`jlRange(range)`\  is a utility function that returns a JLFloat64Vector with jlPlotPoints() points from \ :code:`low(range)`\  to \ :code:`high(range)`\ .
+  \ :code:`jlRange(range)`\  is a utility function that returns a JLFloat64Vector with jlPlotPoints() points from \ :code:`low(range)`\  to \ :code:`high(range)`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlRange(-\%\ :code:`pi`\ ..\%\ :code:`pi`\ )
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c53617665506c6f74:
 
@@ -874,7 +1665,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSavePlot
 
 :spadfun:`jlSavePlot`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSavePlot(file)`\  saves the current plot in \ :code:`file`\ . Supported formats: \ :code:`png`\  (default), \ :code:`PDF`\ , \ :code:`svg`\  and more. See https://docs.juliaplots.org/latest/output/\#savefig-/-format
+  \ :code:`jlSavePlot(file)`\  saves the current plot in \ :code:`file`\ . Supported formats: \ :code:`png`\  (default), \ :code:`PDF`\ , \ :code:`svg`\  and more. See https://docs.juliaplots.org/latest/output/\#savefig-/-format Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlSavePlot("exhaustive_test_result.png")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c536574506c6f743364506f696e747321:
 
@@ -882,7 +1679,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSetPlot3dPoints!
 
 :spadfun:`jlSetPlot3dPoints!`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ :code:`jlSetPlot3dPoints!(n)`\  sets the default number of grid points per axis used for 3D plots and returns the previous value.
+  \ :code:`jlSetPlot3dPoints!(n)`\  sets the default number of grid points per axis used for 3D plots and returns the previous value. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlSetPlot3dPoints!(75)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c536574506c6f74506f696e747321:
 
@@ -890,7 +1693,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSetPlotPoints!
 
 :spadfun:`jlSetPlotPoints!`\: \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  -> \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\  
-  \ :code:`jlSetPlotPoints!(n)`\  sets the default number of points used for 1D and 2D curves and returns the previous value.
+  \ :code:`jlSetPlotPoints!(n)`\  sets the default number of points used for 1D and 2D curves and returns the previous value. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlSetPlotPoints!(350)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c536574506c6f74734261636b656e6421:
 
@@ -898,7 +1707,13 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSetPlotsBackend!
 
 :spadfun:`jlSetPlotsBackend!`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSetPlotsBackend!(backend)`\  sets the \ :code:`backend`\  for plotting. The available backends are "gr", "gaston", "plotly", "plotlyjs", "pythonplot", "pgfplotsx", "unicodeplots" and "inspectdr".
+  \ :code:`jlSetPlotsBackend!(backend)`\  sets the \ :code:`backend`\  for plotting. The available backends are "gr", "gaston", "plotly", "plotlyjs", "pythonplot", "pgfplotsx", "unicodeplots" and "inspectdr". Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        jlSetPlotsBackend!("gr")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c5375726661636521:
 
@@ -906,35 +1721,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(f, a..b, c..d)`\  adds the surface of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlSurface!(f, a..b, c..d)`\  adds the surface of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Example (Gaussian Hill):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-(u^2 + v^2)/2.0);
+        jlSurface!(g, -3.0..3.0, -3.0..3.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(f, a..b, c..d, n)`\  adds the surface of \ :code:`z = f(x,y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlSurface!(f, a..b, c..d, n)`\  adds the surface of \ :code:`z = f(x,y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Chladni Nodal Plate):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(2.0*u)*cos(3.0*v);
+        jlSurface!(g, -3.0..3.0, -3.0..3.0, 40)
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(f, a..b, c..d, n, title)`\  adds the surface of \ :code:`z = f(x,y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlSurface!(f, a..b, c..d, n, title)`\  adds the surface of \ :code:`z = f(x,y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Damped Ripple Wave):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(u^2 + v^2)/(1.0 + u^2 + v^2);
+        jlSurface!(g, -3.0..3.0, -3.0..3.0, 40, "Damped Ripple Wave (40x40)")
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(f, a..b, c..d, title)`\  adds the surface of \ :code:`z = f(x,y)`\  with title.
+  \ :code:`jlSurface!(f, a..b, c..d, title)`\  adds the surface of \ :code:`z = f(x,y)`\  with title. Example (Rosenbrock Banana Surface):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - u)^2 + 10.0*(v - u^2)^2;
+        jlSurface!(g, -2.0..2.0, -1.0..3.0, "Rosenbrock Banana Surface")
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface!
 
 :spadfun:`jlSurface!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface!(x,y,mat)`\  draws the plot surface of \ :code:`mat`\  on the existing graph object.
+  \ :code:`jlSurface!(x,y,mat)`\  draws the plot surface of \ :code:`mat`\  on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlSurface!(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c53757266616365:
 
@@ -942,35 +1793,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlSurface
 
 :spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f, a..b, c..d)`\  draws the surface of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlSurface(f, a..b, c..d)`\  draws the surface of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Example (Sombrero / Circular Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> exp(-(u^2 + v^2)/4.0)*cos(sqrt(u^2 + v^2));
+        jlSurface(f, -5.0..5.0, -5.0..5.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface
 
 :spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f, a..b, c..d, n)`\  draws the surface of \ :code:`z = f(x,y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlSurface(f, a..b, c..d, n)`\  draws the surface of \ :code:`z = f(x,y)`\  using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Monkey Saddle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 - 3.0*u*v^2;
+        jlSurface(f, -2.0..2.0, -2.0..2.0, 40)
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface
 
 :spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f, a..b, c..d, n, title)`\  draws the surface of \ :code:`z = f(x,y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlSurface(f, a..b, c..d, n, title)`\  draws the surface of \ :code:`z = f(x,y)`\  with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Hyperbolic Paraboloid):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^2 - v^2;
+        jlSurface(f, -2.0..2.0, -2.0..2.0, 40, "Hyperbolic Paraboloid (40x40)")
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface
 
 :spadfun:`jlSurface`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(f, a..b, c..d, title)`\  draws the surface of \ :code:`z = f(x,y)`\  with title.
+  \ :code:`jlSurface(f, a..b, c..d, title)`\  draws the surface of \ :code:`z = f(x,y)`\  with title. Example (Egg Carton Surface):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(u)*cos(v);
+        jlSurface(f, -4.0..4.0, -4.0..4.0, "Egg Carton Surface")
 
 
 .. index::
    pair: JLPlotFunctions; jlSurface
 
 :spadfun:`jlSurface`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlSurface(x,y,mat)`\  draws the plot surface of \ :code:`mat`\ .
+  \ :code:`jlSurface(x,y,mat)`\  draws the plot surface of \ :code:`mat`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlSurface(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c566563746f724669656c64:
 
@@ -978,28 +1865,60 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlVectorField
 
 :spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlVectorField(u, v, a..b, c..d)`\  draws the 2D vector field (\ :code:`u`\ (\ :code:`x`\ , \ :code:`y`\ ), \ :code:`v`\ (\ :code:`x`\ , \ :code:`y`\ )).
+  \ :code:`jlVectorField(u, v, a..b, c..d)`\  draws the 2D vector field (\ :code:`u`\ (\ :code:`x`\ , \ :code:`y`\ ), \ :code:`v`\ (\ :code:`x`\ , \ :code:`y`\ )). Example (Rotational Vortex / Harmonic Oscillator):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> -v;
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u;
+        jlVectorField(f, g, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlVectorField
 
 :spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlVectorField(u, v, a..b, c..d, n)`\  draws the 2D vector field using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlVectorField(u, v, a..b, c..d, n)`\  draws the 2D vector field using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Hyperbolic Saddle Field):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u;
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> -v;
+        jlVectorField(f, g, -2.0..2.0, -2.0..2.0, 20)
 
 
 .. index::
    pair: JLPlotFunctions; jlVectorField
 
 :spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlVectorField(u, v, a..b, c..d, n, title)`\  draws the 2D vector field with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlVectorField(u, v, a..b, c..d, n, title)`\  draws the 2D vector field with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Lotka-Volterra Predator-Prey Field):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u*(1.5 - v);
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> -v*(3.0 - u);
+        jlVectorField(f, g, 0.0..5.0, 0.0..5.0, 20, "Lotka-Volterra Field (20x20)")
 
 
 .. index::
    pair: JLPlotFunctions; jlVectorField
 
 :spadfun:`jlVectorField`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , (\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlVectorField(u, v, a..b, c..d, title)`\  draws the 2D vector field with title.
+  \ :code:`jlVectorField(u, v, a..b, c..d, title)`\  draws the 2D vector field with title. Example (Van der Pol Oscillator Field):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> v;
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - u^2)*v - u;
+        jlVectorField(f, g, -3.0..3.0, -3.0..3.0, "Van der Pol Oscillator")
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c576972656672616d6521:
 
@@ -1007,35 +1926,71 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(f, a..b, c..d)`\  adds the wireframe of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object.
+  \ :code:`jlWireframe!(f, a..b, c..d)`\  adds the wireframe of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\  on the existing graph object. Example (Paraboloid Bowl):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (u^2 + v^2)/2.0;
+        jlWireframe!(g, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(f, a..b, c..d, n)`\  adds the wireframe using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlWireframe!(f, a..b, c..d, n)`\  adds the wireframe using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Circular Cosine Wave):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> cos(sqrt(u^2 + v^2));
+        jlWireframe!(g, -5.0..5.0, -5.0..5.0, 30)
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(f, a..b, c..d, n, title)`\  adds the wireframe with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlWireframe!(f, a..b, c..d, n, title)`\  adds the wireframe with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Rosenbrock Banana Valley):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - u)^2 + 10.0*(v - u^2)^2;
+        jlWireframe!(g, -2.0..2.0, -1.0..3.0, 30, "Rosenbrock Banana Valley (30x30)")
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(f, a..b, c..d, title)`\  adds the wireframe with title.
+  \ :code:`jlWireframe!(f, a..b, c..d, title)`\  adds the wireframe with title. Example (Cone Surface):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        g := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sqrt(u^2 + v^2);
+        jlWireframe!(g, -3.0..3.0, -3.0..3.0, "Cone Surface")
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe!
 
 :spadfun:`jlWireframe!`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe!(x,y,mat)`\  draws the wireframe surface of \ :code:`mat`\  on the existing graph object.
+  \ :code:`jlWireframe!(x,y,mat)`\  draws the wireframe surface of \ :code:`mat`\  on the existing graph object. Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlWireframe!(xGrid, yGrid, zMat)
 
 .. _l4a4c506c6f7446756e6374696f6e73-6a6c576972656672616d65:
 
@@ -1043,34 +1998,70 @@ low level plotting functions using the Plots package for Julia.
    pair: JLPlotFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f, a..b, c..d)`\  draws the wireframe of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ .
+  \ :code:`jlWireframe(f, a..b, c..d)`\  draws the wireframe of \ :code:`z = f(x,y)`\  as \ :code:`x`\  ranges from \ :code:`min(a, b)`\  to \ :code:`max(a, b)`\  and \ :code:`y`\  ranges from \ :code:`min(c, d)`\  to \ :code:`max(c, d)`\ . Example (Monkey Saddle):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^3 - 3.0*u*v^2;
+        jlWireframe(f, -2.0..2.0, -2.0..2.0)
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f, a..b, c..d, n)`\  draws the wireframe using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlWireframe(f, a..b, c..d, n)`\  draws the wireframe using an \ :code:`n`\  by \ :code:`n`\  grid. Example (2D Mexican Hat Wavelet):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> (1.0 - (u^2 + v^2)/2.0)*exp(-(u^2 + v^2)/2.0);
+        jlWireframe(f, -3.0..3.0, -3.0..3.0, 30)
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f, a..b, c..d, n, title)`\  draws the wireframe with title using an \ :code:`n`\  by \ :code:`n`\  grid.
+  \ :code:`jlWireframe(f, a..b, c..d, n, title)`\  draws the wireframe with title using an \ :code:`n`\  by \ :code:`n`\  grid. Example (Circular Ripple Waves):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> sin(u^2 + v^2);
+        jlWireframe(f, -3.0..3.0, -3.0..3.0, 30, "Circular Ripple Waves (30x30)")
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: ((\ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ ) -> \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`Segment <l5365676d656e74>`\  \ :ref:`Float <l466c6f6174>`\ , \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(f, a..b, c..d, title)`\  draws the wireframe with title.
+  \ :code:`jlWireframe(f, a..b, c..d, title)`\  draws the wireframe with title. Example (Hyperbolic Paraboloid):
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        f := (u : DoubleFloat, v : DoubleFloat) : DoubleFloat +-> u^2 - v^2;
+        jlWireframe(f, -2.0..2.0, -2.0..2.0, "Hyperbolic Paraboloid")
 
 
 .. index::
    pair: JLPlotFunctions; jlWireframe
 
 :spadfun:`jlWireframe`\: (\ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Vector <l4a4c466c6f61743634566563746f72>`\ , \ :ref:`JLFloat64Matrix <l4a4c466c6f617436344d6174726978>`\ ) -> \ :ref:`Void <l566f6964>`\  
-  \ :code:`jlWireframe(x,y,mat)`\  draws the wireframe surface of \ :code:`mat`\ .
+  \ :code:`jlWireframe(x,y,mat)`\  draws the wireframe surface of \ :code:`mat`\ . Example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        xGrid := jlRange(-3.0..3.0, 40); yGrid := jlRange(-3.0..3.0, 40);
+        zMat := qnew(40, 40)$JF64MAT;
+        jlWireframe(xGrid, yGrid, zMat)
 
 
