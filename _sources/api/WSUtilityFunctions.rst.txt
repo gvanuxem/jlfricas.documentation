@@ -82,7 +82,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 
      .. code-block:: text
 
-        jlWSDateString(jWSExpr("Now"), jWSExpr("Entity[_"Language_", _"French::367gk_"]"))
+        jlWSDateString(jWSExpression("Now"), jWSExpression("Entity[_"Language_", _"French::367gk_"]"))
 
 
 .. index::
@@ -95,7 +95,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 
      .. code-block:: text
 
-        jlWSDateString jWSExpr "Tomorrow"
+        jlWSDateString jWSExpression "Tomorrow"
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c5753446f63756d656e746174696f6e:
 
@@ -124,7 +124,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 
      .. code-block:: text
 
-        x:=jWSExpr(x);jlWSExport("legendreP.png", legendreP(7, x))
+        x:=jWSExpression(x);jlWSExport("legendreP.png", legendreP(7, x))
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c57534578706f7274537472696e67:
 
@@ -138,8 +138,8 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 
      .. code-block:: text
 
-        jWSExpr \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"
-        jWSExpr \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"
+        jWSExpression \"Probability[x < 0, x \\[Distributed] NormalDistribution[]]\"
+        jWSExpression \"Probability[x < 1, x \\[Distributed] NormalDistribution[]]\"
         string jlWSExportString(\%,jWSString "TeX")
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c575346696c65466f726d6174:
@@ -148,7 +148,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
    pair: WSUtilityFunctions; jlWSFileFormat
 
 :spadfun:`jlWSFileFormat`\: (\ :ref:`WSString <l5753537472696e67>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ :code:`jlWSFileFormat(src, list(form))`\  tries to determine the format of the source \ :code:`src`\  from its content using the list of formats form. Returns \ :code:`WS`\  None if no format is found. Can be used with jWSImport. For example: \ :code:`jlWSFileFormat("examples/customers-100.csv",jWSExpr "{_"CSV_",_"TSV_"}")`\ 
+  \ :code:`jlWSFileFormat(src, list(form))`\  tries to determine the format of the source \ :code:`src`\  from its content using the list of formats form. Returns \ :code:`WS`\  None if no format is found. Can be used with jWSImport. For example: \ :code:`jlWSFileFormat("examples/customers-100.csv",jWSExpression "{_"CSV_",_"TSV_"}")`\ 
 
 
 .. index::
@@ -203,7 +203,7 @@ Julia Wolfram Symbolic utility functions using the MathLink Julia package.
 
      .. code-block:: text
 
-        x:=jWSExpr(x);opt:=jWSList [x,-5,5]
+        x:=jWSExpression(x);opt:=jWSList [x,-5,5]
         jlWSExport("sin.png", jlWSPlot(sin(x),opt))
 
 .. _l57535574696c69747946756e6374696f6e73-6a6c57535365656452616e646f6d21:

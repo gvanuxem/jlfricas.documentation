@@ -8,7 +8,7 @@ WSExpression
 :viewcode:`jwsexpr.spad line 1 <jwsexpr.spad#L1>` :editcode:`[edit on github] <jwsexpr.spad#L1>`
 
 
-Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports the Eltable category (interface) so, for example using Fibonacci polynomials fibonacci(12,jWSExpr \ :code:`x`\ ) \ :code:`=>`\  3 5 7 9 11 6 \ :code:`x`\  + 35 \ :code:`x`\  + 56 \ :code:`x`\  + 36 \ :code:`x`\  + 10 \ :code:`x`\  + \ :code:`x`\  \%.5 \ :code:`=>`\  10*x^9
+Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports the Eltable category (interface) so, for example using Fibonacci polynomials fibonacci(12,jWSExpression \ :code:`x`\ ) \ :code:`=>`\  3 5 7 9 11 6 \ :code:`x`\  + 35 \ :code:`x`\  + 56 \ :code:`x`\  + 36 \ :code:`x`\  + 10 \ :code:`x`\  + \ :code:`x`\  \%.5 \ :code:`=>`\  10*x^9
 
 
 .. _l575345787072657373696f6e-30:
@@ -526,7 +526,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:= jWSExpr x
+        x:= jWSExpression x
         coefficient((x - y)^4, x * y^3)
 
 
@@ -1018,7 +1018,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x := jWSExpr x
+        x := jWSExpression x
         fprimex:=derivative(operator('f),1,x)
 
 .. _l575345787072657373696f6e-646966666572656e7469617465:
@@ -1137,7 +1137,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        distribute(jWSExpr "(x + y) * (a + b + c)")
+        distribute(jWSExpression "(x + y) * (a + b + c)")
 
 
 .. index::
@@ -1163,7 +1163,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr x;
+        x:=jWSExpression x;
         fx:=derivative(operator('f),0,x)
         fprimex:=derivative(operator('f),1,x)
         dSolve(jWSEqual(fprimex + fx , a *sin(x)),fx,x)
@@ -1179,7 +1179,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr x;
+        x:=jWSExpression x;
         fx:=derivative(operator('f),0,x)
         fprimex:=derivative(operator('f),1,x)
         dSolve(fprimex + fx = a * sin(x)/cos(x),fx,x)
@@ -1196,12 +1196,12 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr x;
+        x:=jWSExpression x;
         f:=derivative(operator('f),0)
         f0:=derivative(operator('f),0,0)
         fx:=derivative(operator('f),0,x)
         fprimex:=derivative(operator('f),1,x)
-        dSolveValue(jWSExpr([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)
+        dSolveValue(jWSExpression([jWSEqual(fprimex + fx , a *sin(x)/cos(x)), jWSEqual(f0,0)]),f,x)
 
 
 .. index::
@@ -1547,7 +1547,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:= jWSExpr x;y := jWSExpr y
+        x:= jWSExpression x;y := jWSExpression y
         p:=(x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y)
         exponent(\%,(x^2-2))
 
@@ -1562,7 +1562,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:= jWSExpr x;y := jWSExpr y
+        x:= jWSExpression x;y := jWSExpression y
         p:=expand((x^2-2)^3*(y*x^3+x^11*y^7)*(y^5+x*y^2+x^11+y))
         exponent(p,x,"Min")
 
@@ -1613,7 +1613,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:= jWSExpr x
+        x:= jWSExpression x
         expr := Gamma(x)/Gamma(x-1)
 
   Compare with simplify(\ :code:`expr`\ ).
@@ -1666,7 +1666,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x := jWSExpr x;
+        x := jWSExpression x;
         factor(1 + x^2, "GaussianIntegers -> True")
 
 .. _l575345787072657373696f6e-666163746f7269616c:
@@ -1682,6 +1682,21 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
 \ :ref:`factorials <l436f6d62696e61746f7269616c4f707343617465676f7279-666163746f7269616c73>`\ \: (%, \ :ref:`Symbol <l53796d626f6c>`\ ) -> % 
   from \ :ref:`CombinatorialOpsCategory <l436f6d62696e61746f7269616c4f707343617465676f7279>`\ 
+
+.. _l575345787072657373696f6e-666163746f72496e7465676572:
+
+.. index::
+   pair: WSExpression; factorInteger
+
+:spadfun:`factorInteger`\: % -> % 
+  \ :code:`factorInteger(n)`\  factorizes the integer \ :code:`n`\  into its prime factors. For example:
+
+  .. container:: fricas-example
+
+     .. code-block:: text
+
+        n := jWSExpression 70421676397833365421106577172389167104000000000000
+        factorInteger n
 
 .. _l575345787072657373696f6e-666163746f724c697374:
 
@@ -1703,7 +1718,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x := jWSExpr x
+        x := jWSExpression x
         p:=expand(chebyshevT(7,x)* chebyshevU(9,x))
         factorPolynomial p
 
@@ -1832,7 +1847,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:= jWSExpr x
+        x:= jWSExpression x
         findRoot(sin(x) + cos(x), "\{x, 0\}")
 
 .. _l575345787072657373696f6e-6669727374:
@@ -1913,9 +1928,9 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:= jWSExpr x;y := jWSExpr y
-        coefficientRules((x + y)^2+x^11,jWSExpr [x,y])
-        fromCoefficientRules(\%, jWSExpr [x,y])
+        x:= jWSExpression x;y := jWSExpression y
+        coefficientRules((x + y)^2+x^11,jWSExpression [x,y])
+        fromCoefficientRules(\%, jWSExpression [x,y])
 
 .. _l575345787072657373696f6e-66756e6374696f6e457870616e64:
 
@@ -2049,7 +2064,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        guessGeneratingFunction(jWSExpr("{1,2,4,8}"),x)
+        guessGeneratingFunction(jWSExpression("{1,2,4,8}"),x)
 
 
 .. index::
@@ -2076,7 +2091,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        guessSequenceFunction(jWSExpr("{1,2,4,8}"))
+        guessSequenceFunction(jWSExpression("{1,2,4,8}"))
 
 
 .. index::
@@ -2102,7 +2117,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        guessSequenceFunction(jWSExpr("{1,2,4,8}"))
+        guessSequenceFunction(jWSExpression("{1,2,4,8}"))
 
 .. _l575345787072657373696f6e-6861686e5f70:
 
@@ -2276,7 +2291,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr x;integrate(1/(x^4-1),x)
+        x:=jWSExpression x;integrate(1/(x^4-1),x)
         opt:=jWSList [x,-1,1]
         integrate(cos(x),opt)
 
@@ -2566,7 +2581,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jlDisplay
 
 :spadfun:`jlDisplay`\: \ :ref:`WSExpression <l575345787072657373696f6e>`\  -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
-  \ :code:`jlDisplay(expr)`\  returns the traditional form of \ :code:`expr`\ . This is equivalent to: jWSExpr "Format[Sin[\ :code:`x`\ ]]" \ :code:`=>`\  sin(\ :code:`x`\ )
+  \ :code:`jlDisplay(expr)`\  returns the traditional form of \ :code:`expr`\ . This is equivalent to: jWSExpression "Format[Sin[\ :code:`x`\ ]]" \ :code:`=>`\  sin(\ :code:`x`\ )
 
 .. _l575345787072657373696f6e-6a6c44756d70:
 
@@ -2589,7 +2604,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr("x");jlEval(sqrt(x),"x=2.0")
+        x:=jWSExpression("x");jlEval(sqrt(x),"x=2.0")
 
 
 .. index::
@@ -2602,7 +2617,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        a:=jWSExpr("a");b:=jWSExpr("b");
+        a:=jWSExpression("a");b:=jWSExpression("b");
         jlEval(sqrt(a^2+b^2),"a=1.0","b=1.0")
 
 
@@ -2827,80 +2842,80 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`jWSEqual`\: (%, %) -> % 
   \ :code:`jWSEqual(lhs,rhs)`\  returns the Julia \ :code:`WS`\  equality \ :code:`lhs`\  \ :code:`==`\  \ :code:`rhs`\ .
 
-.. _l575345787072657373696f6e-6a575345787072:
+.. _l575345787072657373696f6e-6a575345787072657373696f6e:
 
 .. index::
-   pair: WSExpression; jWSExpr
+   pair: WSExpression; jWSExpression
 
-:spadfun:`jWSExpr`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
-  \ :code:`jWSExpr(r)`\  returns the DoubleFloat as a WSExpression.
-
-
-.. index::
-   pair: WSExpression; jWSExpr
-
-:spadfun:`jWSExpr`\: \ :ref:`Float <l466c6f6174>`\  -> % 
-  \ :code:`jWSExpr(r)`\  returns the Float \ :code:`r`\  as a WSExpression.
+:spadfun:`jWSExpression`\: \ :ref:`DoubleFloat <l446f75626c65466c6f6174>`\  -> % 
+  \ :code:`jWSExpression(r)`\  returns the DoubleFloat as a WSExpression.
 
 
 .. index::
-   pair: WSExpression; jWSExpr
+   pair: WSExpression; jWSExpression
 
-:spadfun:`jWSExpr`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ :code:`jWSExpr(q)`\  returns the Fraction(Integer) \ :code:`q`\  as a WSExpression.
-
-
-.. index::
-   pair: WSExpression; jWSExpr
-
-:spadfun:`jWSExpr`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
-  \ :code:`jWSExpr(z)`\  returns the Integer \ :code:`z`\  as a WSExpression.
+:spadfun:`jWSExpression`\: \ :ref:`Float <l466c6f6174>`\  -> % 
+  \ :code:`jWSExpression(r)`\  returns the Float \ :code:`r`\  as a WSExpression.
 
 
 .. index::
-   pair: WSExpression; jWSExpr
+   pair: WSExpression; jWSExpression
 
-:spadfun:`jWSExpr`\: \ :ref:`JLFloat <l4a4c466c6f6174>`\  -> % 
-  \ :code:`jWSExpr(r)`\  returns the JLFloat \ :code:`r`\  as a WSExpression.
-
-
-.. index::
-   pair: WSExpression; jWSExpr
-
-:spadfun:`jWSExpr`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
-  \ :code:`jWSExpr(r)`\  returns the \ :code:`JLFloat64`\  as a WSExpression.
+:spadfun:`jWSExpression`\: \ :ref:`Fraction <l4672616374696f6e>`\  \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`jWSExpression(q)`\  returns the Fraction(Integer) \ :code:`q`\  as a WSExpression.
 
 
 .. index::
-   pair: WSExpression; jWSExpr
+   pair: WSExpression; jWSExpression
 
-:spadfun:`jWSExpr`\: \ :ref:`List <l4c697374>`\  % -> % 
-  \ :code:`jWSExpr(list)`\  returns the \ :code:`list`\  of WSExpression as a WSExpression.
+:spadfun:`jWSExpression`\: \ :ref:`Integer <l496e7465676572>`\  -> % 
+  \ :code:`jWSExpression(z)`\  returns the Integer \ :code:`z`\  as a WSExpression.
 
 
 .. index::
-   pair: WSExpression; jWSExpr
+   pair: WSExpression; jWSExpression
 
-:spadfun:`jWSExpr`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jWSExpr(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language expression. For example:
+:spadfun:`jWSExpression`\: \ :ref:`JLFloat <l4a4c466c6f6174>`\  -> % 
+  \ :code:`jWSExpression(r)`\  returns the JLFloat \ :code:`r`\  as a WSExpression.
+
+
+.. index::
+   pair: WSExpression; jWSExpression
+
+:spadfun:`jWSExpression`\: \ :ref:`JLFloat64 <l4a4c466c6f61743634>`\  -> % 
+  \ :code:`jWSExpression(r)`\  returns the \ :code:`JLFloat64`\  as a WSExpression.
+
+
+.. index::
+   pair: WSExpression; jWSExpression
+
+:spadfun:`jWSExpression`\: \ :ref:`List <l4c697374>`\  % -> % 
+  \ :code:`jWSExpression(list)`\  returns the \ :code:`list`\  of WSExpression as a WSExpression.
+
+
+.. index::
+   pair: WSExpression; jWSExpression
+
+:spadfun:`jWSExpression`\: \ :ref:`String <l537472696e67>`\  -> % 
+  \ :code:`jWSExpression(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language expression. For example:
 
   .. container:: fricas-example
 
      .. code-block:: text
 
-        jWSExpr "Factorial[5]"
-        jWSExpr "3.14159"
-        jlWSDateString(jWSExpr "Tomorrow")
-        toString jWSExpr "TextSentences[WikipediaData[_"Sun_"]][[;; 40]]"
+        jWSExpression "Factorial[5]"
+        jWSExpression "3.14159"
+        jlWSDateString(jWSExpression "Tomorrow")
+        toString jWSExpression "TextSentences[WikipediaData[_"Sun_"]][[;; 40]]"
 
-  Example: jWSExpr "Probability[\ :code:`x`\  < 1, \ :code:`x`\  \ :code:`\[`\ Distributed] NormalDistribution[]]"
+  Example: jWSExpression "Probability[\ :code:`x`\  < 1, \ :code:`x`\  \ :code:`\[`\ Distributed] NormalDistribution[]]"
 
 
 .. index::
-   pair: WSExpression; jWSExpr
+   pair: WSExpression; jWSExpression
 
-:spadfun:`jWSExpr`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
-  \ :code:`jWSExpr(sym)`\  coerces \ :code:`sym`\  to a WSExpression. For example: \ :code:`x`\  \ :code:`:=`\  jWSExpr \ :code:`x`\ 
+:spadfun:`jWSExpression`\: \ :ref:`Symbol <l53796d626f6c>`\  -> % 
+  \ :code:`jWSExpression(sym)`\  coerces \ :code:`sym`\  to a WSExpression. For example: \ :code:`x`\  \ :code:`:=`\  jWSExpression \ :code:`x`\ 
 
 .. _l575345787072657373696f6e-6a575347726561746572:
 
@@ -3001,9 +3016,9 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x := jWSExpr x
+        x := jWSExpression x
         p := 1/2 * legendreQ(5,x)
-        replaceAll(p, jWSRule(x = jWSExpr "1.55555556444883838383833777333333333"))
+        replaceAll(p, jWSRule(x = jWSExpression "1.55555556444883838383833777333333333"))
 
 .. _l575345787072657373696f6e-6a57535461626c65:
 
@@ -3109,7 +3124,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        laguerreL(5, jWSExpr x)
+        laguerreL(5, jWSExpression x)
 
 
 .. index::
@@ -3195,7 +3210,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        legendreQ(3,jWSExpr x)
+        legendreQ(3,jWSExpression x)
 
 
 .. index::
@@ -3261,7 +3276,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr x; limit(sin(x)-sin(x-1/x),"x->Infinity")
+        x:=jWSExpression x; limit(sin(x)-sin(x-1/x),"x->Infinity")
 
 .. _l575345787072657373696f6e-6c6f673130:
 
@@ -3576,8 +3591,8 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr x
-        s:=series(exp(x),jWSExpr "\{x,0,10\}")
+        x:=jWSExpression x
+        s:=series(exp(x),jWSExpression "\{x,0,10\}")
         normal(s)::EXPR INT
 
 
@@ -3751,7 +3766,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x := jWSExpr(x);y:=jWSExpr y;
+        x := jWSExpression(x);y:=jWSExpression y;
         expr := exp(sin(50*x))+sin(60*exp(y))+ sin(70*sin(x))+ sin(sin(80*y))-sin(10*(x+y))+(x^2+y^2)/4
         numericMinimize(expr, jWSList [x,y])
 
@@ -3781,7 +3796,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        jWSExpr("\{i, imin, imax\}")
+        jWSExpression("\{i, imin, imax\}")
 
   . See Wolfram language specifications.
 
@@ -3819,7 +3834,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        jWSExpr("\{i, imin, imax\}")
+        jWSExpression("\{i, imin, imax\}")
 
   . See Wolfram language specifications.
 
@@ -3888,7 +3903,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        percentForm jWSExpr 0.50
+        percentForm jWSExpression 0.50
 
 
 .. index::
@@ -4103,7 +4118,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        jWSExpr("\{i, imin, imax\}")
+        jWSExpression("\{i, imin, imax\}")
 
   . See Wolfram language specifications.
 
@@ -4796,7 +4811,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr(x);a:=jWSExpr(a);
+        x:=jWSExpression(x);a:=jWSExpression(a);
         opt:=jWSList [x,\ :code:`pi`\ ()$WSEXPR/4,7]
         series(sin(a*x),opt)
         series(cos(x),"\{x, 0, 12\}")
@@ -4859,7 +4874,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr("x"); simplify(sqrt(x^2)^2)
+        x:=jWSExpression("x"); simplify(sqrt(x^2)^2)
 
 
 .. index::
@@ -4872,7 +4887,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        x:=jWSExpr("x"); simplify(sqrt(x^2), "x>0")
+        x:=jWSExpression("x"); simplify(sqrt(x^2), "x>0")
 
 .. _l575345787072657373696f6e-73696e:
 
@@ -5079,7 +5094,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
      .. code-block:: text
 
-        jWSExpr("\{i, imin, imax\}")
+        jWSExpression("\{i, imin, imax\}")
 
   . See Wolfram Language specifications.
 
