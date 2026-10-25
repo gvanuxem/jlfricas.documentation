@@ -50,8 +50,8 @@
             
   <section id="jlobjpy">
 <span id="l4a4c4f626a5079"></span><span id="index-0"></span><h1>JLObjPy<a class="headerlink" href="#jlobjpy" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L532">jobject.spad line 532</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L532">[edit on github]</a></p>
-<p>Convenience domain for Julia Python objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The PythonCall package has to be installed in Julia. Note that the PythonCall Julia package uses a similar scheme for Julia Python objects to the one of jlFriCAS for JLObjectType references.</p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jobject.spad#L533">jobject.spad line 533</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jobject.spad#L533">[edit on github]</a></p>
+<p>Convenience domain for Julia Python objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The PythonCall package must be installed in Julia. Note that the PythonCall Julia package uses a similar scheme for Julia Python objects to the one of jlFriCAS for JLObjectType references.</p>
 <dl class="simple" id="l4a4c4f626a5079-23">
 <dt><a class="reference internal" href="Aggregate.html#l416767726567617465-23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
@@ -91,18 +91,13 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a5079-656c74"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">ind)</span></code> returns the element at index ind of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. It can be used, for example, with a Tuple or a Vector.</p>
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">ind)</span></code> returns the element at index ind of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 </dd>
 </dl>
-<dl id="index-5">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. For example:</p>
-<div class="fricas-example docutils container">
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ret := jlApply(&quot;svd&quot;, jobject(&quot;rand(4,4)&quot;)); ret.U
-</pre></div>
-</div>
-</div>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">elt(obj,</span> <span class="pre">sym)</span></code> returns the property/element <code class="code docutils literal notranslate"><span class="pre">sym</span></code> of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="JLSymbol.html#l4a4c53796d626f6c"><span class="std std-ref">JLSymbol</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 </dd>
@@ -314,7 +309,7 @@
 </dd>
 </dl>
 <span id="l4a4c4f626a5079-71656c74"></span><dl class="simple" id="index-28">
-<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">qelt(obj,</span> <span class="pre">ind)</span></code> returns the element at index ind of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>. It can be used, for example, with a Tuple or a Vector.</p>
+<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">qelt(obj,</span> <span class="pre">ind)</span></code> returns the element at index ind of <code class="code docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465-71656c74"><span class="std std-ref">qelt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectAggregate.html#l4a4c4f626a656374416767726567617465"><span class="std std-ref">JLObjectAggregate</span></a></p>
 </dd>

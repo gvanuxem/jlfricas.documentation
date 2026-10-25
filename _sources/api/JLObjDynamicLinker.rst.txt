@@ -143,8 +143,8 @@ Generic Julia objects used for dynamically linking shared libraries.
         libm:= jlDlOpen "libopenlibm"
         squareRoot:= jlDlSym(libm,jsym(sqrt))
         jlDlCApply(squareRoot, "Cdouble", jobject("2."), "Cdouble")
-        sinus:=jlDlSym(libm,jsym(sin))
-        jlDlCApply(sinus,"Float64", jobject("2."), "Float64")
+        sine:=jlDlSym(libm,jsym(sin))
+        jlDlCApply(sine,"Float64", jobject("2."), "Float64")
 
 
 .. index::

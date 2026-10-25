@@ -51,7 +51,7 @@ Category for arbitrary Julia aggregates.
    pair: JLObjectAggregate; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`elt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+  \ :code:`elt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a JLObjTuple or a JLVector.
 
 
 .. index::
@@ -64,7 +64,8 @@ Category for arbitrary Julia aggregates.
 
      .. code-block:: text
 
-        ret := jlApply("svd", jobject("rand(4,4)")); ret.U
+        ret := jlApply("svd", jobject("rand(4,4)"));
+        (ret.U,ret.S,ret.Vt)
 
 .. _l4a4c4f626a656374416767726567617465-656d7074793f:
 
@@ -218,7 +219,7 @@ Category for arbitrary Julia aggregates.
    pair: JLObjectAggregate; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
-  \ :code:`qelt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+  \ :code:`qelt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a JLObjTuple or a JLVector.
 
 
 .. index::

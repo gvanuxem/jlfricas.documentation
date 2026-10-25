@@ -5,10 +5,10 @@
 JLObjPy
 =======
 
-:viewcode:`jobject.spad line 532 <jobject.spad#L532>` :editcode:`[edit on github] <jobject.spad#L532>`
+:viewcode:`jobject.spad line 533 <jobject.spad#L533>` :editcode:`[edit on github] <jobject.spad#L533>`
 
 
-Convenience domain for Julia Python objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The PythonCall package has to be installed in Julia. Note that the PythonCall Julia package uses a similar scheme for Julia Python objects to the one of jlFriCAS for JLObjectType references.
+Convenience domain for Julia Python objects that are used within Julia, and not directly by the underlying FriCAS Common Lisp. The PythonCall package must be installed in Julia. Note that the PythonCall Julia package uses a similar scheme for Julia Python objects to the one of jlFriCAS for JLObjectType references.
 
 
 .. _l4a4c4f626a5079-23:
@@ -72,7 +72,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; elt
 
 :spadfun:`elt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ :code:`elt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+  \ :code:`elt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ .
 
 
 \ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -83,13 +83,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; elt
 
 :spadfun:`elt`\: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> % 
-  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ . For example:
-
-  .. container:: fricas-example
-
-     .. code-block:: text
-
-        ret := jlApply("svd", jobject("rand(4,4)")); ret.U
+  \ :code:`elt(obj, sym)`\  returns the property/element \ :code:`sym`\  of \ :code:`obj`\ .
 
 
 \ :ref:`elt <l4a4c4f626a656374416767726567617465-656c74>`\ \: (%, \ :ref:`JLSymbol <l4a4c53796d626f6c>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -416,7 +410,7 @@ Convenience domain for Julia Python objects that are used within Julia, and not 
    pair: JLObjPy; qelt
 
 :spadfun:`qelt`\: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> % 
-  \ :code:`qelt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ . It can be used, for example, with a Tuple or a Vector.
+  \ :code:`qelt(obj, ind)`\  returns the element at index ind of \ :code:`obj`\ .
 
 
 \ :ref:`qelt <l4a4c4f626a656374416767726567617465-71656c74>`\ \: (%, \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
