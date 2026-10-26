@@ -52,6 +52,7 @@ To build FriCAS with Julia support, the <code>julia</code> executable needs to b
  - [SpecialFunctions](https://specialfunctions.juliamath.org/stable/) 
  
  And optionnally:
+  - [About](https://code.tecosaur.net/tec/About.jl)
   - [MathLink](https://github.com/JuliaInterop/MathLink.jl) (use the option `--enable-mathlink` at configure time)
   - [PythonCall](https://juliapy.github.io/PythonCall.jl/stable/) (and CondaPkg if you want to install some Python® packages, use Julia for this)
   - [RCall](https://juliainterop.github.io/RCall.jl/stable/)
