@@ -665,7 +665,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; coerce
 
 :spadfun:`coerce`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language Expression. For example:
+  \ :code:`coerce(str)`\  coerces the string \ :code:`str`\  to a WSExpression evaluating \ :code:`str`\  as a \ :code:`WS`\  Language Expression. For example:
 
   .. container:: fricas-example
 
@@ -2710,6 +2710,73 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 :spadfun:`jlWSAccuracy`\: % -> % 
   \ :code:`jlWSAccuracy(expr)`\  get accuracy of \ :code:`expr`\ .
 
+.. _l575345787072657373696f6e-6a6c57534170706c79:
+
+.. index::
+   pair: WSExpression; jlWSApply
+
+:spadfun:`jlWSApply`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ :code:`jlWSApply(sym, x)`\  creates an unevaluated \ :code:`WS`\  expression \ :code:`sym`\ [\ :code:`x`\ ].
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSApply
+
+:spadfun:`jlWSApply`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ :code:`jlWSApply(sym, x, y)`\  creates an unevaluated \ :code:`WS`\  expression \ :code:`sym`\ [\ :code:`x`\ , \ :code:`y`\ ].
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSApply
+
+:spadfun:`jlWSApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ :code:`jlWSApply(sym, x, y, z)`\  creates an unevaluated \ :code:`WS`\  expression \ :code:`sym`\ [\ :code:`x`\ , \ :code:`y`\ , \ :code:`z`\ ].
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSApply
+
+:spadfun:`jlWSApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  \ :code:`jlWSApply(sym, a, b, c, d)`\  creates an unevaluated \ :code:`WS`\  expression on 4 arguments.
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSApply
+
+:spadfun:`jlWSApply`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  \ :code:`jlWSApply(sym, a, b, c, d, e)`\  creates an unevaluated \ :code:`WS`\  expression on 5 arguments.
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSApply
+
+:spadfun:`jlWSApply`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
+  \ :code:`jlWSApply(sym, list)`\  creates an unevaluated \ :code:`WS`\  expression \ :code:`sym`\ [list...].
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
 .. _l575345787072657373696f6e-6a6c5753446566696e65643f:
 
 .. index::
@@ -2725,6 +2792,73 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
         jlWSDefined? "Sin"
 
   \ :code:`=>`\  \ :code:`true`\ 
+
+.. _l575345787072657373696f6e-6a6c57534576616c:
+
+.. index::
+   pair: WSExpression; jlWSEval
+
+:spadfun:`jlWSEval`\: (\ :ref:`String <l537472696e67>`\ , %) -> % 
+  \ :code:`jlWSEval(func, x)`\  evaluates the \ :code:`WS`\  function \ :code:`func`\  on \ :code:`x`\ .
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSEval
+
+:spadfun:`jlWSEval`\: (\ :ref:`String <l537472696e67>`\ , %, %) -> % 
+  \ :code:`jlWSEval(func, x, y)`\  evaluates the \ :code:`WS`\  function \ :code:`func`\  on \ :code:`x`\  and \ :code:`y`\ .
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSEval
+
+:spadfun:`jlWSEval`\: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> % 
+  \ :code:`jlWSEval(func, x, y, z)`\  evaluates the \ :code:`WS`\  function \ :code:`func`\  on \ :code:`x`\ , \ :code:`y`\ , and \ :code:`z`\ .
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSEval
+
+:spadfun:`jlWSEval`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> % 
+  \ :code:`jlWSEval(func, a, b, c, d)`\  evaluates the \ :code:`WS`\  function \ :code:`func`\  on 4 arguments.
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSEval
+
+:spadfun:`jlWSEval`\: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> % 
+  \ :code:`jlWSEval(func, a, b, c, d, e)`\  evaluates the \ :code:`WS`\  function \ :code:`func`\  on 5 arguments.
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+.. index::
+   pair: WSExpression; jlWSEval
+
+:spadfun:`jlWSEval`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> % 
+  \ :code:`jlWSEval(func, list)`\  evaluates the \ :code:`WS`\  function \ :code:`func`\  on a list of arguments.
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
 
 .. _l575345787072657373696f6e-6a6c57534772656564794576616c:
 
@@ -2897,7 +3031,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
    pair: WSExpression; jWSExpression
 
 :spadfun:`jWSExpression`\: \ :ref:`String <l537472696e67>`\  -> % 
-  \ :code:`jWSExpression(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a Wolfram Symbolic Language expression. For example:
+  \ :code:`jWSExpression(str)`\  constructs \ :code:`str`\  as a WSExpression evaluating \ :code:`str`\  as a \ :code:`WS`\  Symbolic Language expression. For example:
 
   .. container:: fricas-example
 
@@ -3798,7 +3932,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         jWSExpression("\{i, imin, imax\}")
 
-  . See Wolfram language specifications.
+  . See \ :code:`WS`\  language specifications.
 
 
 .. index::
@@ -3836,7 +3970,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         jWSExpression("\{i, imin, imax\}")
 
-  . See Wolfram language specifications.
+  . See \ :code:`WS`\  language specifications.
 
 
 .. index::
@@ -4120,7 +4254,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         jWSExpression("\{i, imin, imax\}")
 
-  . See Wolfram language specifications.
+  . See \ :code:`WS`\  language specifications.
 
 
 .. index::
@@ -5096,7 +5230,7 @@ Julia Wolfram Symbolic expressions using the MathLink Julia package. It supports
 
         jWSExpression("\{i, imin, imax\}")
 
-  . See Wolfram Language specifications.
+  . See \ :code:`WS`\  Language specifications.
 
 
 .. index::

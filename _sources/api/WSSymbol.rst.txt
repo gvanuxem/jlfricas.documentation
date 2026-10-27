@@ -5,7 +5,7 @@
 WSSymbol
 ========
 
-:viewcode:`jws.spad line 114 <jws.spad#L114>` :editcode:`[edit on github] <jws.spad#L114>`
+:viewcode:`jws.spad line 153 <jws.spad#L153>` :editcode:`[edit on github] <jws.spad#L153>`
 
 
 Julia Wolfram Symbolic symbols using the MathLink Julia package.
@@ -73,6 +73,49 @@ Julia Wolfram Symbolic symbols using the MathLink Julia package.
 
 \ :ref:`convert <l436f6e7665727469626c65546f-636f6e76657274>`\ \: % -> \ :ref:`String <l537472696e67>`\  
   from \ :ref:`ConvertibleTo <l436f6e7665727469626c65546f>`\  \ :ref:`String <l537472696e67>`\ 
+
+.. _l575353796d626f6c-656c74:
+
+.. index::
+   pair: WSSymbol; elt
+
+:spadfun:`elt`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`elt(sym, list)`\  applies the symbol \ :code:`sym`\  to a list of arguments, evaluating it.
+
+
+.. index::
+   pair: WSSymbol; elt
+
+:spadfun:`elt`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`elt(sym, x)`\  applies the symbol \ :code:`sym`\  to \ :code:`x`\ , evaluating it.
+
+
+.. index::
+   pair: WSSymbol; elt
+
+:spadfun:`elt`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`elt(sym, x, y)`\  applies the symbol \ :code:`sym`\  to \ :code:`x`\  and \ :code:`y`\ , evaluating it.
+
+
+.. index::
+   pair: WSSymbol; elt
+
+:spadfun:`elt`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`elt(sym, x, y, z)`\  applies the symbol \ :code:`sym`\  to \ :code:`x`\ , \ :code:`y`\ , and \ :code:`z`\ , evaluating it.
+
+
+.. index::
+   pair: WSSymbol; elt
+
+:spadfun:`elt`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`elt(sym, a, b, c, d)`\  applies the symbol \ :code:`sym`\  to 4 arguments, evaluating it.
+
+
+.. index::
+   pair: WSSymbol; elt
+
+:spadfun:`elt`\: (%, \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ , \ :ref:`WSExpression <l575345787072657373696f6e>`\ ) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  \ :code:`elt(sym, a, b, c, d, e)`\  applies the symbol \ :code:`sym`\  to 5 arguments, evaluating it.
 
 .. _l575353796d626f6c-6a6c41626f7574:
 
@@ -189,6 +232,56 @@ Julia Wolfram Symbolic symbols using the MathLink Julia package.
 
 \ :ref:`jlType <l4a4c4f626a65637454797065-6a6c54797065>`\ \: % -> \ :ref:`Symbol <l53796d626f6c>`\  
   from \ :ref:`JLObjectType <l4a4c4f626a65637454797065>`\ 
+
+.. _l575353796d626f6c-6a6c57534170706c79:
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSApply <l57534f626a656374-6a6c57534170706c79>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+.. _l575353796d626f6c-6a6c57534576616c:
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , %, %, %, %, %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
+
+
+\ :ref:`jlWSEval <l57534f626a656374-6a6c57534576616c>`\ \: (\ :ref:`String <l537472696e67>`\ , \ :ref:`List <l4c697374>`\  %) -> \ :ref:`WSExpression <l575345787072657373696f6e>`\  
+  from \ :ref:`WSObject <l57534f626a656374>`\ 
 
 .. _l575353796d626f6c-6a5753496e74657270726574:
 
