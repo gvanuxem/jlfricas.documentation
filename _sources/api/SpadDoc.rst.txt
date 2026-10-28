@@ -35,6 +35,21 @@ This package provides simple Spad documentation for the interpreter and the \ :c
 :spadfun:`getOperationDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`List <l4c697374>`\  Record(origin: \ :ref:`String <l537472696e67>`\ , signature: \ :ref:`String <l537472696e67>`\ , doc: \ :ref:`String <l537472696e67>`\ ) 
   \ :code:`getOperationDocumentation(op)`\  returns a list of records containing the origin constructor, signature, and documentation for operation \ :code:`op`\ .
 
+.. _l53706164446f63-676574536561726368446f63756d656e746174696f6e:
+
+.. index::
+   pair: SpadDoc; getSearchDocumentation
+
+:spadfun:`getSearchDocumentation`\: \ :ref:`String <l537472696e67>`\  -> Record(constructors: Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ), operations: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , origin: \ :ref:`String <l537472696e67>`\ , signature: \ :ref:`String <l537472696e67>`\ , doc: \ :ref:`String <l537472696e67>`\ )) 
+  \ :code:`getSearchDocumentation(pat)`\  returns structured matching constructors and operations with cleaned documentation and formatted signatures.
+
+
+.. index::
+   pair: SpadDoc; getSearchDocumentation
+
+:spadfun:`getSearchDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> Record(constructors: Record(categories: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , domains: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ , packages: \ :ref:`List <l4c697374>`\  \ :ref:`Symbol <l53796d626f6c>`\ ), operations: \ :ref:`List <l4c697374>`\  Record(name: \ :ref:`Symbol <l53796d626f6c>`\ , origin: \ :ref:`String <l537472696e67>`\ , signature: \ :ref:`String <l537472696e67>`\ , doc: \ :ref:`String <l537472696e67>`\ )) 
+  \ :code:`getSearchDocumentation(pat)`\  returns structured matching constructors and operations with cleaned documentation and formatted signatures.
+
 .. _l53706164446f63-6c69737443617465676f72696573:
 
 .. index::
@@ -81,5 +96,34 @@ This package provides simple Spad documentation for the interpreter and the \ :c
 
 :spadfun:`operationDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
   \ :code:`operationDocumentation(op)`\  displays the documentation of the operation \ :code:`op`\ .
+
+.. _l53706164446f63-736561726368446f63756d656e746174696f6e:
+
+.. index::
+   pair: SpadDoc; searchDocumentation
+
+:spadfun:`searchDocumentation`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`searchDocumentation(pat, max_ops)`\  searches for constructors and operations matching \ :code:`pat`\ , displaying at most max_ops operations.
+
+
+.. index::
+   pair: SpadDoc; searchDocumentation
+
+:spadfun:`searchDocumentation`\: (\ :ref:`Symbol <l53796d626f6c>`\ , \ :ref:`Integer <l496e7465676572>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`searchDocumentation(pat, max_ops)`\  searches for constructors and operations matching \ :code:`pat`\ , displaying at most max_ops operations.
+
+
+.. index::
+   pair: SpadDoc; searchDocumentation
+
+:spadfun:`searchDocumentation`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`searchDocumentation(pat)`\  searches for constructors and operations whose documentation matches \ :code:`pat`\  and displays the results.
+
+
+.. index::
+   pair: SpadDoc; searchDocumentation
+
+:spadfun:`searchDocumentation`\: \ :ref:`Symbol <l53796d626f6c>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`searchDocumentation(pat)`\  searches for constructors and operations whose documentation matches \ :code:`pat`\  and displays the results.
 
 
