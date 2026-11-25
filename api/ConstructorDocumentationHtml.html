@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ConstructorDocumentationHtml &#8212; jlFriCAS</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=3e69a11e" />
+    <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=8a112ea8" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=4625253d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script src="../_static/documentation_options.js?v=f68b1870"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/fricas.js?v=df604430"></script>
+    
+    <script src="../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CoordinateSystems R" href="CoordinateSystems.html" />
+    <link rel="prev" title="ConstantLODE(R, F, L)" href="ConstantLODE.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CoordinateSystems.html" title="CoordinateSystems R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ConstantLODE.html" title="ConstantLODE(R, F, L)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ConstructorDocumentationHtml</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="constructordocumentationhtml">
+<span id="l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c"></span><span id="index-0"></span><h1>ConstructorDocumentationHtml<a class="headerlink" href="#constructordocumentationhtml" title="Link to this heading">¶</a></h1>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/api2.spad#L1">api2.spad line 1</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/api2.spad#L1">[edit on github]</a></p>
+<p>This package generaters Html pages describing all constructors. It is a rewrite of a package by Ralf Hemmecke generating REST form.</p>
+<span id="l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c-646f63756d656e74416c6c"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">documentAll</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">documentAll(path)</span></code> takes as argument a <code class="code docutils literal notranslate"><span class="pre">path</span></code> to a file that contains lines in the form: “FILENAME LINENUMBER KIND ABBREV CONSTRUCTOR” which looks, for example, like this “acplot 48 domain ACPLOT PlaneAlgebraicCurvePlot” and writes out for each constructor <code class="code docutils literal notranslate"><span class="pre">X</span></code> a file with name <code class="code docutils literal notranslate"><span class="pre">X</span></code>.html that contains the API description, i.e. docstring and a list of exported function names together with their types. Additionally, the following 3 files will be output: Categories.html <code class="code docutils literal notranslate"><span class="pre">--</span></code> a list of all categories Domains.html <code class="code docutils literal notranslate"><span class="pre">--</span></code> a list of all domains Packages.html <code class="code docutils literal notranslate"><span class="pre">--</span></code> a list of all packages.</p>
+</dd>
+</dl>
+<span id="l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c-646f63756d656e74436f6e7374727563746f7273"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">documentConstructors</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="XHashTable.html#l58486173685461626c65"><span class="std std-ref">XHashTable</span></a>(<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, Record(fn: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, pos: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, ckind: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>)), <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">documentConstructors(title,</span> <span class="pre">kind,</span> <span class="pre">csl,</span> <span class="pre">cnl)</span></code> documents all constructors of a certain <code class="code docutils literal notranslate"><span class="pre">kind</span></code> (category, package, domain). <code class="code docutils literal notranslate"><span class="pre">csl</span></code> is basic info about constructors, <code class="code docutils literal notranslate"><span class="pre">cnl</span></code> is list of constructor names.</p>
+</dd>
+</dl>
+<span id="l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c-72656164436f6e7374727563746f7273"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">readConstructors</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="XHashTable.html#l58486173685461626c65"><span class="std std-ref">XHashTable</span></a>(<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, Record(fn: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, pos: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, ckind: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>))</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">readConstructors(path)</span></code> read the file given by <code class="code docutils literal notranslate"><span class="pre">path</span></code> and store it in a hashtable indexed by the full constructor name. That gives us a structure that can tell for each constructor, in which source file it is defined, and at which line it starts, as well as its kind, i.e. whether it is a category, a domain or a package.</p>
+</dd>
+</dl>
+<span class="target" id="jlfricas-mailing-list"></span></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">jlFriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+<div id="sidebarbutton" title="Collapse sidebar">
+<span>«</span>
+</div>
+
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CoordinateSystems.html" title="CoordinateSystems R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ConstantLODE.html" title="ConstantLODE(R, F, L)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">jlFriCAS</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >jlFriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ConstructorDocumentationHtml</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2007-2026, FriCAS Team.
+    </div>
+  </body>
+</html>

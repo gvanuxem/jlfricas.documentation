@@ -1,0 +1,38 @@
+.. index:: ConstructorDocumentationHtml
+
+.. _l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c:
+
+ConstructorDocumentationHtml
+============================
+
+:viewcode:`api2.spad line 1 <api2.spad#L1>` :editcode:`[edit on github] <api2.spad#L1>`
+
+
+This package generaters Html pages describing all constructors. It is a rewrite of a package by Ralf Hemmecke generating REST form.
+
+
+.. _l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c-646f63756d656e74416c6c:
+
+.. index::
+   pair: ConstructorDocumentationHtml; documentAll
+
+:spadfun:`documentAll`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`documentAll(path)`\  takes as argument a \ :code:`path`\  to a file that contains lines in the form: "FILENAME LINENUMBER KIND ABBREV CONSTRUCTOR" which looks, for example, like this "acplot 48 domain ACPLOT PlaneAlgebraicCurvePlot" and writes out for each constructor \ :code:`X`\  a file with name \ :code:`X`\ .html that contains the API description, i.e. docstring and a list of exported function names together with their types. Additionally, the following 3 files will be output: Categories.html \ :code:`--`\  a list of all categories Domains.html \ :code:`--`\  a list of all domains Packages.html \ :code:`--`\  a list of all packages.
+
+.. _l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c-646f63756d656e74436f6e7374727563746f7273:
+
+.. index::
+   pair: ConstructorDocumentationHtml; documentConstructors
+
+:spadfun:`documentConstructors`\: (\ :ref:`String <l537472696e67>`\ , \ :ref:`String <l537472696e67>`\ , \ :ref:`XHashTable <l58486173685461626c65>`\ (\ :ref:`String <l537472696e67>`\ , Record(fn: \ :ref:`String <l537472696e67>`\ , pos: \ :ref:`String <l537472696e67>`\ , ckind: \ :ref:`String <l537472696e67>`\ )), \ :ref:`List <l4c697374>`\  \ :ref:`String <l537472696e67>`\ ) -> \ :ref:`Void <l566f6964>`\  
+  \ :code:`documentConstructors(title, kind, csl, cnl)`\  documents all constructors of a certain \ :code:`kind`\  (category, package, domain). \ :code:`csl`\  is basic info about constructors, \ :code:`cnl`\  is list of constructor names.
+
+.. _l436f6e7374727563746f72446f63756d656e746174696f6e48746d6c-72656164436f6e7374727563746f7273:
+
+.. index::
+   pair: ConstructorDocumentationHtml; readConstructors
+
+:spadfun:`readConstructors`\: \ :ref:`String <l537472696e67>`\  -> \ :ref:`XHashTable <l58486173685461626c65>`\ (\ :ref:`String <l537472696e67>`\ , Record(fn: \ :ref:`String <l537472696e67>`\ , pos: \ :ref:`String <l537472696e67>`\ , ckind: \ :ref:`String <l537472696e67>`\ )) 
+  \ :code:`readConstructors(path)`\  read the file given by \ :code:`path`\  and store it in a hashtable indexed by the full constructor name. That gives us a structure that can tell for each constructor, in which source file it is defined, and at which line it starts, as well as its kind, i.e. whether it is a category, a domain or a package.
+
+
