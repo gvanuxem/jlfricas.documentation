@@ -5,7 +5,7 @@
 NMUnivariateLaurentPolynomial(R, x)
 ===================================
 
-:viewcode:`jnpoly.spad line 391 <jnpoly.spad#L391>` :editcode:`[edit on github] <jnpoly.spad#L391>`
+:viewcode:`jnpoly.spad line 407 <jnpoly.spad#L407>` :editcode:`[edit on github] <jnpoly.spad#L407>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -259,6 +259,14 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 
 \ :ref:`conditionP <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-636f6e646974696f6e50>`\ \: \ :ref:`Matrix <l4d6174726978>`\  % -> Union(\ :ref:`Vector <l566563746f72>`\  %, failed) if % has \ :ref:`CharacteristicNonZero <l43686172616374657269737469634e6f6e5a65726f>`\  and R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
+
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-636f6e7374616e743f:
+
+.. index::
+   pair: NMUnivariateLaurentPolynomial; constant?
+
+:spadfun:`constant?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`constant?(p)`\  checks whether or not \ :code:`p`\  is a constant polynomial.
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-636f6e7374616e74436f656666696369656e74:
 
@@ -798,6 +806,14 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 \ :ref:`leftRecip <l4d61676d6157697468556e6974-6c6566745265636970>`\ \: % -> Union(%, failed) 
   from \ :ref:`MagmaWithUnit <l4d61676d6157697468556e6974>`\ 
 
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6c656e677468:
+
+.. index::
+   pair: NMUnivariateLaurentPolynomial; length
+
+:spadfun:`length`\: % -> \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
+  \ :code:`length(p)`\  returns the number of coefficients in its dense representation. It includes zero coefficients.
+
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6c696e656172457874656e64:
 
 \ :ref:`linearExtend <l467265654d6f64756c6543617465676f7279-6c696e656172457874656e64>`\ \: (\ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  -> R, %) -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
@@ -895,14 +911,6 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 
 \ :ref:`monomials <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73>`\ \: % -> \ :ref:`List <l4c697374>`\  % 
   from \ :ref:`MaybeSkewPolynomialCategory <l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ , \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ )
-
-.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d756c6c6f77:
-
-.. index::
-   pair: NMUnivariateLaurentPolynomial; mullow
-
-:spadfun:`mullow`\: (%, %, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ :code:`mullow(p1,p2,n)`\  is the truncated multiplication of \ :code:`p1`\  and \ :code:`p2`\  by \ :code:`n`\ .
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-6d756c74694575636c696465616e:
 
@@ -1110,21 +1118,6 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 \ :ref:`retractIfCan <l5265747261637461626c65546f-72657472616374496643616e>`\ \: % -> Union(\ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ , failed) 
   from \ :ref:`RetractableTo <l5265747261637461626c65546f>`\  \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ 
 
-.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-72657665727365:
-
-.. index::
-   pair: NMUnivariateLaurentPolynomial; reverse
-
-:spadfun:`reverse`\: % -> % 
-  \ :code:`reverse the`\  coefficients of \ :code:`p`\  (the leading becomes the trailing) and normalise the resulting polynomial.
-
-
-.. index::
-   pair: NMUnivariateLaurentPolynomial; reverse
-
-:spadfun:`reverse`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ :code:`reverse the`\  coefficients of \ :code:`p`\  (the leading becomes the trailing) and normalise the resulting polynomial. Adjust the length to \ :code:`n`\  so the resulting polynomial is truncated or padded with zeroes before the leading term if necessary
-
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7269676874506f776572:
 
 \ :ref:`rightPower <l4d61676d6157697468556e6974-7269676874506f776572>`\ \: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
@@ -1174,6 +1167,14 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 \ :ref:`solveLinearPolynomialEquation <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e>`\ \: (\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %) -> Union(\ :ref:`List <l4c697374>`\  \ :ref:`SparseUnivariatePolynomial <l537061727365556e6976617269617465506f6c796e6f6d69616c>`\  %, failed) if R has \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
   from \ :ref:`PolynomialFactorizationExplicit <l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974>`\ 
 
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7371756172653f:
+
+.. index::
+   pair: NMUnivariateLaurentPolynomial; square?
+
+:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`square?(p)`\  checks whether or not \ :code:`p`\  is a perfect square.
+
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-73717561726546726565:
 
 \ :ref:`squareFree <l506f6c796e6f6d69616c43617465676f7279-73717561726546726565>`\ \: % -> \ :ref:`Factored <l466163746f726564>`\  % if R has \ :ref:`GcdDomain <l476364446f6d61696e>`\ 
@@ -1209,6 +1210,14 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 \ :ref:`support <l467265654d6f64756c6543617465676f7279-737570706f7274>`\ \: % -> \ :ref:`List <l4c697374>`\  \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\  
   from \ :ref:`FreeModuleCategory <l467265654d6f64756c6543617465676f7279>`\ (R, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ )
 
+.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7465726d3f:
+
+.. index::
+   pair: NMUnivariateLaurentPolynomial; term?
+
+:spadfun:`term?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
+  \ :code:`term?(p)`\  checks whether or not \ :code:`p`\  is a one term polynomial.
+
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7465726d5265637572736976653f:
 
 .. index::
@@ -1238,14 +1247,6 @@ Univariate laurent polynomial domain using the AbstractAlgebra Julia package Aut
 
 :spadfun:`trailingCoefficient`\: % -> R 
   \ :code:`trailingCoefficient(p)`\  returns the trailing coefficient of \ :code:`p`\ .
-
-.. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-7472756e63617465:
-
-.. index::
-   pair: NMUnivariateLaurentPolynomial; truncate
-
-:spadfun:`truncate`\: (%, \ :ref:`NonNegativeInteger <l4e6f6e4e65676174697665496e7465676572>`\ ) -> % 
-  \ :code:`truncate(p, n)`\  returns \ :code:`p`\  truncated to \ :code:`n`\  terms. It's the remainder of the division by \ :code:`x^n`\ .
 
 .. _l4e4d556e69766172696174654c617572656e74506f6c796e6f6d69616c-756e69743f:
 

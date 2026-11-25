@@ -5,7 +5,7 @@
 InnerNMMultivariatePolynomial(R, VarSet, Ordering)
 ==================================================
 
-:viewcode:`jnpoly.spad line 1051 <jnpoly.spad#L1051>` :editcode:`[edit on github] <jnpoly.spad#L1051>`
+:viewcode:`jnpoly.spad line 1037 <jnpoly.spad#L1037>` :editcode:`[edit on github] <jnpoly.spad#L1037>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -373,20 +373,32 @@ This type is a basic representation of sparse, distributed multivariate polynomi
   from \ :ref:`Evalable <l4576616c61626c65>`\  %
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`List <l4c697374>`\  %) -> % 
-  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, %)
+.. index::
+   pair: InnerNMMultivariatePolynomial; eval
+
+:spadfun:`eval`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`List <l4c697374>`\  %) -> % 
+  \ :code:`eval(p, vars, vals)`\  evaluates \ :code:`p`\  substituting vals for \ :code:`vars`\ .
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`List <l4c697374>`\  R) -> % 
-  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R)
+.. index::
+   pair: InnerNMMultivariatePolynomial; eval
+
+:spadfun:`eval`\: (%, \ :ref:`List <l4c697374>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`List <l4c697374>`\  R) -> % 
+  \ :code:`eval(p, vars, vals)`\  evaluates \ :code:`p`\  substituting vals for \ :code:`vars`\ .
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, %) -> % 
-  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, %)
+.. index::
+   pair: InnerNMMultivariatePolynomial; eval
+
+:spadfun:`eval`\: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, %) -> % 
+  \ :code:`eval(p, v, val)`\  evaluates \ :code:`p`\  substituting val for \ :code:`v`\ .
 
 
-\ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R) -> % 
-  from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (\ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R)
+.. index::
+   pair: InnerNMMultivariatePolynomial; eval
+
+:spadfun:`eval`\: (%, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, R) -> % 
+  \ :code:`eval(p, v, val)`\  evaluates \ :code:`p`\  substituting val for \ :code:`v`\ .
 
 .. _l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-65786163743f:
 
@@ -903,8 +915,18 @@ This type is a basic representation of sparse, distributed multivariate polynomi
 
 .. _l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-726573756c74616e74:
 
-\ :ref:`resultant <l506f6c796e6f6d69616c43617465676f7279-726573756c74616e74>`\ \: (%, %, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  from \ :ref:`PolynomialCategory <l506f6c796e6f6d69616c43617465676f7279>`\ (R, \ :ref:`IndexedExponents <l496e64657865644578706f6e656e7473>`\  \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet)
+.. index::
+   pair: InnerNMMultivariatePolynomial; resultant
+
+:spadfun:`resultant`\: (%, %, \ :ref:`OrderedVariableList <l4f7264657265645661726961626c654c697374>`\  VarSet) -> % 
+  \ :code:`resultant(p, q, v)`\  returns the resultant of \ :code:`p`\  and \ :code:`q`\  with respect to \ :code:`v`\ .
+
+
+.. index::
+   pair: InnerNMMultivariatePolynomial; resultant
+
+:spadfun:`resultant`\: (%, %, \ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ ) -> % 
+  \ :code:`resultant(p, q, i)`\  returns the resultant of \ :code:`p`\  and \ :code:`q`\  with respect to the \ :code:`i`\ -th variable.
 
 .. _l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-72657472616374:
 

@@ -5,7 +5,7 @@
 NMUnivariatePolynomial(R, x)
 ============================
 
-:viewcode:`jnpoly.spad line 19 <jnpoly.spad#L19>` :editcode:`[edit on github] <jnpoly.spad#L19>`
+:viewcode:`jnpoly.spad line 29 <jnpoly.spad#L29>` :editcode:`[edit on github] <jnpoly.spad#L29>`
 
 * R: \ :ref:`NMRing <l4e4d52696e67>`\ 
 
@@ -523,6 +523,13 @@ Univariate polynomial domain using the Nemo Julia package Author: \ :code:`G`\ .
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-6576616c:
+
+.. index::
+   pair: NMUnivariatePolynomial; eval
+
+:spadfun:`eval`\: (%, %) -> % 
+  \ :code:`eval(p, q)`\  returns the composition \ :code:`p`\ (\ :code:`q`\ (\ :code:`x`\ )).
+
 
 \ :ref:`eval <l496e6e65724576616c61626c65-6576616c>`\ \: (%, %, %) -> % 
   from \ :ref:`InnerEvalable <l496e6e65724576616c61626c65>`\ (%, %)
@@ -1141,8 +1148,11 @@ Univariate polynomial domain using the Nemo Julia package Author: \ :code:`G`\ .
 
 .. _l4e4d556e6976617269617465506f6c796e6f6d69616c-726573756c74616e74:
 
-\ :ref:`resultant <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279-726573756c74616e74>`\ \: (%, %) -> R if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 
-  from \ :ref:`UnivariatePolynomialCategory <l556e6976617269617465506f6c796e6f6d69616c43617465676f7279>`\  R
+.. index::
+   pair: NMUnivariatePolynomial; resultant
+
+:spadfun:`resultant`\: (%, %) -> R 
+  \ :code:`resultant(p, q)`\  returns the resultant of \ :code:`p`\  and \ :code:`q`\ .
 
 
 \ :ref:`resultant <l506f6c796e6f6d69616c43617465676f7279-726573756c74616e74>`\ \: (%, %, \ :ref:`SingletonAsOrderedSet <l53696e676c65746f6e41734f726465726564536574>`\ ) -> % if R has \ :ref:`CommutativeRing <l436f6d6d7574617469766552696e67>`\ 

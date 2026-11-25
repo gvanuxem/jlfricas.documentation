@@ -50,7 +50,7 @@
             
   <section id="innernmmultivariatepolynomial-r-varset-ordering">
 <span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c"></span><span id="index-0"></span><h1>InnerNMMultivariatePolynomial(R, VarSet, Ordering)<a class="headerlink" href="#innernmmultivariatepolynomial-r-varset-ordering" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpoly.spad#L1051">jnpoly.spad line 1051</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpoly.spad#L1051">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnpoly.spad#L1037">jnpoly.spad line 1037</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnpoly.spad#L1037">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p></li>
 <li><p>VarSet: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p></li>
@@ -286,24 +286,32 @@
 </dd>
 <dt><a class="reference internal" href="Evalable.html#l4576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> %</p>
 </dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, %)</p>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">eval</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">eval(p,</span> <span class="pre">vars,</span> <span class="pre">vals)</span></code> evaluates <code class="code docutils literal notranslate"><span class="pre">p</span></code> substituting vals for <code class="code docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, R)</p>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">eval</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">eval(p,</span> <span class="pre">vars,</span> <span class="pre">vals)</span></code> evaluates <code class="code docutils literal notranslate"><span class="pre">p</span></code> substituting vals for <code class="code docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, %)</p>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">eval</span>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">eval(p,</span> <span class="pre">v,</span> <span class="pre">val)</span></code> evaluates <code class="code docutils literal notranslate"><span class="pre">p</span></code> substituting val for <code class="code docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65-6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, R)</p>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">eval</span>: (%, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, R) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">eval(p,</span> <span class="pre">v,</span> <span class="pre">val)</span></code> evaluates <code class="code docutils literal notranslate"><span class="pre">p</span></code> substituting val for <code class="code docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-65786163743f">
 <dt><a class="reference internal" href="NMRing.html#l4e4d52696e67-65786163743f"><span class="std std-ref">exact?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="NMRing.html#l4e4d52696e67"><span class="std std-ref">NMRing</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6578616374446976696465"></span><dl class="simple" id="index-11">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6578616374446976696465"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">exactDivide</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">exactDivide(p,q)</span></code> divides <code class="code docutils literal notranslate"><span class="pre">p</span></code> by <code class="code docutils literal notranslate"><span class="pre">q</span></code> if the division is exact.</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6578706f6e656e745f766563746f7273"></span><dl class="simple" id="index-12">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6578706f6e656e745f766563746f7273"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">exponent_vectors</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLObjInt64.html#l4a4c4f626a496e743634"><span class="std std-ref">JLObjInt64</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">exponent_vectors(lp)</span></code> returns the exponent vectors.</p>
 </dd>
 </dl>
@@ -317,7 +325,7 @@
 <dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> % if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-13">
+<dl class="simple" id="index-17">
 <dt><span class="spadfun">factor</span>: % -&gt; <a class="reference internal" href="NMFactored.html#l4e4d466163746f726564"><span class="std std-ref">NMFactored</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">factor(p)</span></code> returns the factorization of <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -359,7 +367,7 @@
 <dt><a class="reference internal" href="Hashable.html#l4861736861626c65-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a> if R has <a class="reference internal" href="Hashable.html#l4861736861626c65"><span class="std std-ref">Hashable</span></a></dt><dd><p>from <a class="reference internal" href="Hashable.html#l4861736861626c65"><span class="std std-ref">Hashable</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-696e7465726e616c4f72646572696e67"></span><dl class="simple" id="index-14">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-696e7465726e616c4f72646572696e67"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">internalOrdering</span>: () -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">internalOrdering()</span></code> returns the internal ordering used by Nemo. It is determined at instantiation time.</p>
 </dd>
 </dl>
@@ -459,7 +467,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6d70326e6d70"></span><dl class="simple" id="index-15">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6a6d70326e6d70"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">jmp2nmp</span>: <a class="reference internal" href="MultivariatePolynomial.html#l4d756c746976617269617465506f6c796e6f6d69616c"><span class="std std-ref">MultivariatePolynomial</span></a>(VarSet, R) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jmp2nmp(p)</span></code> converts the multivariate polynomial <code class="code docutils literal notranslate"><span class="pre">p</span></code> to a Nemo multivariate polynomial.</p>
 </dd>
 </dl>
@@ -477,11 +485,11 @@
 <dt><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67-6c636d436f6566"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %) if R has <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6c656164696e675f6578706f6e656e745f766563746f72"></span><dl class="simple" id="index-16">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6c656164696e675f6578706f6e656e745f766563746f72"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">leading_exponent_vector</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> <a class="reference internal" href="JLObjInt64.html#l4a4c4f626a496e743634"><span class="std std-ref">JLObjInt64</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">leading_exponent_vector(lp)</span></code> returns the of leading exponent.</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6c656164696e675f6d6f6e6f6d69616c"></span><dl class="simple" id="index-17">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6c656164696e675f6d6f6e6f6d69616c"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">leading_monomial</span>: % -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">leading_monomial(lp)</span></code> returns the leading monomial.</p>
 </dd>
 </dl>
@@ -511,7 +519,7 @@
 <dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6c656e677468"></span><dl class="simple" id="index-18">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6c656e677468"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">length</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">length(p)</span></code> retruns the number of terms of <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -551,7 +559,7 @@
 <dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-6d6f6e6963446976696465"><span class="std std-ref">monicDivide</span></a>: (%, %, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c3f"></span><dl class="simple" id="index-19">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c3f"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">monomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">monomial?(p)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">p</span></code> is a monomial.</p>
 </dd>
 </dl>
@@ -563,11 +571,11 @@
 <dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c"><span class="std std-ref">monomial</span></a>: (R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c5265637572736976653f"></span><dl class="simple" id="index-20">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c5265637572736976653f"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">monomialRecursive?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">monomialRecursive?(p)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">p</span></code> is monomial recurisvely (all scalar types).</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c73"></span><dl class="simple" id="index-21">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6d6f6e6f6d69616c73"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">monomials</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">monomials(p)</span></code> returns the list of non-zero monomials of <code class="code docutils literal notranslate"><span class="pre">p</span></code> includind its coefficients.</p>
 </dd>
 <dt><a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-6d6f6e6f6d69616c73"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">MaybeSkewPolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
@@ -583,7 +591,7 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d757461626c653f"><span class="std std-ref">mutable?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6e656d6f4d505072696e74"></span><dl class="simple" id="index-22">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-6e656d6f4d505072696e74"></span><dl class="simple" id="index-26">
 <dt><span class="spadfun">nemoMPPrint</span>: <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">nemoMPPrint(bool)</span></code> set the output mode. If set to <code class="code docutils literal notranslate"><span class="pre">false</span></code> (default), use the FriCAS output mode if possible. Otherwise use the Nemo one.</p>
 </dd>
 </dl>
@@ -621,7 +629,7 @@
 <dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-7072696d653f"><span class="std std-ref">prime?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7072696d69746976654d6f6e6f6d69616c73"></span><dl class="simple" id="index-23">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7072696d69746976654d6f6e6f6d69616c73"></span><dl class="simple" id="index-27">
 <dt><span class="spadfun">primitiveMonomials</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">primitiveMonomials(p)</span></code> returns the list of non-zero primitive monomials of <code class="code docutils literal notranslate"><span class="pre">p</span></code> i.e. not including its coefficients.</p>
 </dd>
 <dt><a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7072696d69746976654d6f6e6f6d69616c73"><span class="std std-ref">primitiveMonomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">MaybeSkewPolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
@@ -651,8 +659,12 @@
 <dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-726564756374756d"><span class="std std-ref">reductum</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
-<dl class="simple" id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-726573756c74616e74">
-<dt><a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279-726573756c74616e74"><span class="std std-ref">resultant</span></a>: (%, %, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-726573756c74616e74"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">resultant</span>: (%, %, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">resultant(p,</span> <span class="pre">q,</span> <span class="pre">v)</span></code> returns the resultant of <code class="code docutils literal notranslate"><span class="pre">p</span></code> and <code class="code docutils literal notranslate"><span class="pre">q</span></code> with respect to <code class="code docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">resultant</span>: (%, %, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">resultant(p,</span> <span class="pre">q,</span> <span class="pre">i)</span></code> returns the resultant of <code class="code docutils literal notranslate"><span class="pre">p</span></code> and <code class="code docutils literal notranslate"><span class="pre">q</span></code> with respect to the <code class="code docutils literal notranslate"><span class="pre">i</span></code>-th variable.</p>
 </dd>
 </dl>
 <dl class="simple" id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-72657472616374">
@@ -689,19 +701,19 @@
 <dt><a class="reference internal" href="SetWithZero.html#l536574576974685a65726f-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="SetWithZero.html#l536574576974685a65726f"><span class="std std-ref">SetWithZero</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966744c65667421"></span><dl class="simple" id="index-24">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966744c65667421"></span><dl class="simple" id="index-30">
 <dt><span class="spadfun">shiftLeft!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>shiftLeft(<code class="code docutils literal notranslate"><span class="pre">p</span></code>) left shift <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966744c656674"></span><dl class="simple" id="index-25">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966744c656674"></span><dl class="simple" id="index-31">
 <dt><span class="spadfun">shiftLeft</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">shiftLeft(p)</span></code> left shift <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7368696674526967687421"></span><dl class="simple" id="index-26">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7368696674526967687421"></span><dl class="simple" id="index-32">
 <dt><span class="spadfun">shiftRight!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>shiftRight(<code class="code docutils literal notranslate"><span class="pre">p</span></code>) right shift <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966745269676874"></span><dl class="simple" id="index-27">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-73686966745269676874"></span><dl class="simple" id="index-33">
 <dt><span class="spadfun">shiftRight</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">shiftRight(p)</span></code> right shift <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -713,7 +725,7 @@
 <dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974-736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e"><span class="std std-ref">solveLinearPolynomialEquation</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, failed) if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7371756172653f"></span><dl class="simple" id="index-28">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7371756172653f"></span><dl class="simple" id="index-34">
 <dt><span class="spadfun">square?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">square?(p)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">p</span></code> is a perfect square.</p>
 </dd>
 </dl>
@@ -741,11 +753,11 @@
 <dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-737570706f7274"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7465726d3f"></span><dl class="simple" id="index-29">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7465726d3f"></span><dl class="simple" id="index-35">
 <dt><span class="spadfun">term?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">term?(p)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">p</span></code> is a one term polynomial.</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7465726d5265637572736976653f"></span><dl class="simple" id="index-30">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-7465726d5265637572736976653f"></span><dl class="simple" id="index-36">
 <dt><span class="spadfun">termRecursive?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">termRecursive?(p)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">p</span></code> as one term polynomial recursively on all scalar types.</p>
 </dd>
 </dl>
@@ -759,7 +771,7 @@
 <dt><a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-746f74616c446567726565536f72746564"><span class="std std-ref">totalDegreeSorted</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">MaybeSkewPolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-747261696c696e67436f656666696369656e74"></span><dl class="simple" id="index-31">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-747261696c696e67436f656666696369656e74"></span><dl class="simple" id="index-37">
 <dt><span class="spadfun">trailingCoefficient</span>: % -&gt; R</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">trailingCoefficient(p)</span></code> returns the trailing coefficientof <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
@@ -775,7 +787,7 @@
 <dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e67-756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %) if R has <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-756e69766172696174653f"></span><dl class="simple" id="index-32">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-756e69766172696174653f"></span><dl class="simple" id="index-38">
 <dt><span class="spadfun">univariate?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">univariate?(p)</span></code> checks whether or not <code class="code docutils literal notranslate"><span class="pre">p</span></code> is a univariate polynomial.</p>
 </dd>
 </dl>
@@ -791,7 +803,7 @@
 <dt><a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279-7661726961626c6573"><span class="std std-ref">variables</span></a>: (%, %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="MaybeSkewPolynomialCategory.html#l4d61796265536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">MaybeSkewPolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet, <a class="reference internal" href="OrderedVariableList.html#l4f7264657265645661726961626c654c697374"><span class="std std-ref">OrderedVariableList</span></a> VarSet)</p>
 </dd>
 </dl>
-<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-766563746f724f665465726d73"></span><dl class="simple" id="index-33">
+<span id="l496e6e65724e4d4d756c746976617269617465506f6c796e6f6d69616c-766563746f724f665465726d73"></span><dl class="simple" id="index-39">
 <dt><span class="spadfun">vectorOfTerms</span>: % -&gt; <a class="reference internal" href="JLVector.html#l4a4c566563746f72"><span class="std std-ref">JLVector</span></a> %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">vectorOfTerms(p)</span></code> returns the Julia vector whose elements are terms of <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
