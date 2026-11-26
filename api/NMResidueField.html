@@ -50,7 +50,7 @@
             
   <section id="nmresiduefield-r-p-poly">
 <span id="l4e4d526573696475654669656c64"></span><span id="index-0"></span><h1>NMResidueField(R, P, poly)<a class="headerlink" href="#nmresiduefield-r-p-poly" title="Link to this heading">¶</a></h1>
-<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L751">jnemo.spad line 751</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L751">[edit on github]</a></p>
+<p><a class="extlink-viewcode reference external" href="https://github.com/gvanuxem/jlfricas/blob/master/src/algebra/jnemo.spad#L781">jnemo.spad line 781</a> <a class="extlink-editcode reference external" href="https://github.com/gvanuxem/jlfricas/edit/master/src/algebra/jnemo.spad#L781">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="NMField.html#l4e4d4669656c64"><span class="std std-ref">NMField</span></a></p></li>
 <li><p>P: <a class="reference internal" href="NMUnivariatePolynomialCategory.html#l4e4d556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">NMUnivariatePolynomialCategory</span></a> R</p></li>
@@ -76,13 +76,27 @@
 <dl class="simple" id="index-2">
 <dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x*i</span></code> is the multiplication by a Nemo integer.</p>
 </dd>
-<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">*</span>: (%, R) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">x*r</span></code> is scalar multiplication.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">i*x</span></code> is the multiplication by an integer.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">i*x</span></code> is the multiplication by a Nemo integer.</p>
 </dd>
 <dt><a class="reference internal" href="JLObjectRing.html#l4a4c4f626a65637452696e67-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a>, %) -&gt; <a class="reference internal" href="JLObject.html#l4a4c4f626a656374"><span class="std std-ref">JLObject</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectRing.html#l4a4c4f626a65637452696e67"><span class="std std-ref">JLObjectRing</span></a></p>
 </dd>
 <dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 <dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">*</span>: (R, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">r*x</span></code> is scalar multiplication.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d526573696475654669656c64-2b">
@@ -143,16 +157,20 @@
 <dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="index-3">
+<dl class="simple" id="index-7">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(i)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">i</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-4">
+<dl class="simple" id="index-8">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(i)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">i</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-5">
+<dl class="simple" id="index-9">
 <dt><span class="spadfun">coerce</span>: P -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(p)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">coerce</span>: R -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">coerce(r)</span></code> coerces <code class="code docutils literal notranslate"><span class="pre">r</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d526573696475654669656c64-636f6d6d757461746f72">
@@ -163,7 +181,7 @@
 <dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d526573696475654669656c64-64617461"></span><dl class="simple" id="index-6">
+<span id="l4e4d526573696475654669656c64-64617461"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">data</span>: % -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">data(x)</span></code> returns the data of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. See <a class="reference external" href="https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/">https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/</a> for more information for the difference with lift.</p>
 </dd>
 </dl>
@@ -201,7 +219,7 @@
 <dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-657874656e6465644575636c696465616e"><span class="std std-ref">extendedEuclidean</span></a>: (%, %, %) -&gt; Union(Record(coef1: %, coef2: %), failed)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d526573696475654669656c64-657874656e646564476364"></span><dl class="simple" id="index-7">
+<span id="l4e4d526573696475654669656c64-657874656e646564476364"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">extendedGcd</span>: (%, %) -&gt; Record(g: %, s: %, t: %)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">extendedGcd(x,</span> <span class="pre">y)</span></code> returns the extended <code class="code docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
@@ -209,7 +227,7 @@
 <dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e-666163746f72"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d526573696475654669656c64-676364"></span><dl class="simple" id="index-8">
+<span id="l4e4d526573696475654669656c64-676364"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">gcd</span>: (%, %) -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">gcd(x,</span> <span class="pre">y)</span></code> returns a greatest common divisor of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code> using the data and modulus associated.</p>
 </dd>
 <dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e-676364"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
@@ -307,16 +325,20 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6a6c54797065"><span class="std std-ref">jlType</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d526573696475654669656c64-6a6e72657369647565"></span><dl class="simple" id="index-9">
+<span id="l4e4d526573696475654669656c64-6a6e72657369647565"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">jnresidue</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(i)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">i</span></code> as an element of the residue field NMResidueField.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-10">
+<dl class="simple" id="index-15">
 <dt><span class="spadfun">jnresidue</span>: <a class="reference internal" href="NMInteger.html#l4e4d496e7465676572"><span class="std std-ref">NMInteger</span></a> -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(i)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">i</span></code> as an element of the residue field NMResidueField.</p>
 </dd>
 </dl>
-<dl class="simple" id="index-11">
+<dl class="simple" id="index-16">
 <dt><span class="spadfun">jnresidue</span>: P -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(p)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">p</span></code> as an element of the residue field NMResidueField.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">jnresidue</span>: R -&gt; %</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">jnresidue(r)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">r</span></code> as an element of the residue field NMResidueField.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d526573696475654669656c64-6c61746578">
@@ -343,7 +365,7 @@
 <dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d526573696475654669656c64-6c696674"></span><dl class="simple" id="index-12">
+<span id="l4e4d526573696475654669656c64-6c696674"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">lift</span>: % -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">lift(x)</span></code> returns the lift of <code class="code docutils literal notranslate"><span class="pre">x</span></code>. See <a class="reference external" href="https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/">https://nemocas.github.io/AbstractAlgebra.jl/stable/residue_interface/</a> for more information for the difference with data.</p>
 </dd>
 </dl>
@@ -351,8 +373,8 @@
 <dt><a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065-6d697373696e673f"><span class="std std-ref">missing?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JLObjectType.html#l4a4c4f626a65637454797065"><span class="std std-ref">JLObjectType</span></a></p>
 </dd>
 </dl>
-<span id="l4e4d526573696475654669656c64-6d6f64756c7573"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">modulus</span>: () -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">modulus</span> <span class="pre">returns</span></code> the modulus of the residue ring.</p>
+<span id="l4e4d526573696475654669656c64-6d6f64756c7573"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">modulus</span>: () -&gt; P</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">modulus</span> <span class="pre">returns</span></code> the modulus of the residue field.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d526573696475654669656c64-6d756c74694575636c696465616e">
@@ -415,14 +437,6 @@
 </dl>
 <dl class="simple" id="l4e4d526573696475654669656c64-73697a654c6573733f">
 <dt><a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e-73697a654c6573733f"><span class="std std-ref">sizeLess?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p>
-</dd>
-</dl>
-<span id="l4e4d526573696475654669656c64-73717274"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">sqrt</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="code docutils literal notranslate"><span class="pre">sqrt(x)</span></code> returns the square root of <code class="code docutils literal notranslate"><span class="pre">x</span></code> if possible. Only for ResFieldElem.</p>
-</dd>
-</dl>
-<span id="l4e4d526573696475654669656c64-7371756172653f"></span><dl class="simple" id="index-15">
-<dt><span class="spadfun">square?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="code docutils literal notranslate"><span class="pre">square?(x)</span></code> returns <code class="code docutils literal notranslate"><span class="pre">true</span></code> if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a square in the field. Only for ResFieldElem.</p>
 </dd>
 </dl>
 <dl class="simple" id="l4e4d526573696475654669656c64-73717561726546726565">

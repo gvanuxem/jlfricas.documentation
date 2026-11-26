@@ -5,7 +5,7 @@
 NMResidueField(R, P, poly)
 ==========================
 
-:viewcode:`jnemo.spad line 751 <jnemo.spad#L751>` :editcode:`[edit on github] <jnemo.spad#L751>`
+:viewcode:`jnemo.spad line 781 <jnemo.spad#L781>` :editcode:`[edit on github] <jnemo.spad#L781>`
 
 * R: \ :ref:`NMField <l4e4d4669656c64>`\ 
 
@@ -47,8 +47,25 @@ This domain allows the manipulation of Nemo residue field elements using the Abs
   \ :code:`x*i`\  is the multiplication by a Nemo integer.
 
 
-\ :ref:`\* <l4162656c69616e47726f7570-2a>`\ \: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
-  from \ :ref:`AbelianGroup <l4162656c69616e47726f7570>`\ 
+.. index::
+   pair: NMResidueField; *
+
+:spadfun:`\*`\: (%, R) -> % 
+  \ :code:`x*r`\  is scalar multiplication.
+
+
+.. index::
+   pair: NMResidueField; *
+
+:spadfun:`\*`\: (\ :ref:`Integer <l496e7465676572>`\ , %) -> % 
+  \ :code:`i*x`\  is the multiplication by an integer.
+
+
+.. index::
+   pair: NMResidueField; *
+
+:spadfun:`\*`\: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> % 
+  \ :code:`i*x`\  is the multiplication by a Nemo integer.
 
 
 \ :ref:`\* <l4a4c4f626a65637452696e67-2a>`\ \: (\ :ref:`NMInteger <l4e4d496e7465676572>`\ , %) -> \ :ref:`JLObject <l4a4c4f626a656374>`\  
@@ -61,6 +78,13 @@ This domain allows the manipulation of Nemo residue field elements using the Abs
 
 \ :ref:`\* <l4162656c69616e53656d6947726f7570-2a>`\ \: (\ :ref:`PositiveInteger <l506f736974697665496e7465676572>`\ , %) -> % 
   from \ :ref:`AbelianSemiGroup <l4162656c69616e53656d6947726f7570>`\ 
+
+
+.. index::
+   pair: NMResidueField; *
+
+:spadfun:`\*`\: (R, %) -> % 
+  \ :code:`r*x`\  is scalar multiplication.
 
 .. _l4e4d526573696475654669656c64-2b:
 
@@ -162,6 +186,13 @@ This domain allows the manipulation of Nemo residue field elements using the Abs
 
 :spadfun:`coerce`\: P -> % 
   \ :code:`coerce(p)`\  coerces \ :code:`p`\ .
+
+
+.. index::
+   pair: NMResidueField; coerce
+
+:spadfun:`coerce`\: R -> % 
+  \ :code:`coerce(r)`\  coerces \ :code:`r`\ .
 
 .. _l4e4d526573696475654669656c64-636f6d6d757461746f72:
 
@@ -393,6 +424,13 @@ This domain allows the manipulation of Nemo residue field elements using the Abs
 :spadfun:`jnresidue`\: P -> % 
   \ :code:`jnresidue(p)`\  returns \ :code:`p`\  as an element of the residue field NMResidueField.
 
+
+.. index::
+   pair: NMResidueField; jnresidue
+
+:spadfun:`jnresidue`\: R -> % 
+  \ :code:`jnresidue(r)`\  returns \ :code:`r`\  as an element of the residue field NMResidueField.
+
 .. _l4e4d526573696475654669656c64-6c61746578:
 
 \ :ref:`latex <l53657443617465676f7279-6c61746578>`\ \: % -> \ :ref:`String <l537472696e67>`\  
@@ -445,7 +483,7 @@ This domain allows the manipulation of Nemo residue field elements using the Abs
    pair: NMResidueField; modulus
 
 :spadfun:`modulus`\: () -> P 
-  \ :code:`modulus returns`\  the modulus of the residue ring.
+  \ :code:`modulus returns`\  the modulus of the residue field.
 
 .. _l4e4d526573696475654669656c64-6d756c74694575636c696465616e:
 
@@ -525,22 +563,6 @@ This domain allows the manipulation of Nemo residue field elements using the Abs
 
 \ :ref:`sizeLess? <l4575636c696465616e446f6d61696e-73697a654c6573733f>`\ \: (%, %) -> \ :ref:`Boolean <l426f6f6c65616e>`\  
   from \ :ref:`EuclideanDomain <l4575636c696465616e446f6d61696e>`\ 
-
-.. _l4e4d526573696475654669656c64-73717274:
-
-.. index::
-   pair: NMResidueField; sqrt
-
-:spadfun:`sqrt`\: % -> Union(%, failed) 
-  \ :code:`sqrt(x)`\  returns the square root of \ :code:`x`\  if possible. Only for ResFieldElem.
-
-.. _l4e4d526573696475654669656c64-7371756172653f:
-
-.. index::
-   pair: NMResidueField; square?
-
-:spadfun:`square?`\: % -> \ :ref:`Boolean <l426f6f6c65616e>`\  
-  \ :code:`square?(x)`\  returns \ :code:`true`\  if \ :code:`x`\  is a square in the field. Only for ResFieldElem.
 
 .. _l4e4d526573696475654669656c64-73717561726546726565:
 
